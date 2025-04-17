@@ -198,9 +198,9 @@ namespace EthanTheHero
 		{
 			Vector3 tem = transform.localScale;
 			if (!isMovingRight)
-				tem.x = -1f;
+				tem.x = -3f;
 			else
-				tem.x = 1f;
+				tem.x = 3f;
 			transform.localScale = tem;
 		}
 		#endregion
