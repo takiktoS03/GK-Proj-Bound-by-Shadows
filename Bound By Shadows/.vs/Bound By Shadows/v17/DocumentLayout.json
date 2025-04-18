@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\script\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\characters\\ethan the hero\\script\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playermovement\\playermovementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\characters\\ethan the hero\\script\\playermovement\\playermovementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playermovement\\playermovementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\characters\\ethan the hero\\script\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "CameraController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\CameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\CameraController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\CameraController.cs",
+              "RelativeToolTip": "Assets\\Script\\CameraController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAADCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T14:27:36.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PlayerMovementData.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
               "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
@@ -38,25 +55,24 @@
               "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T19:27:22.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T19:27:22.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAABRwA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T16:08:46.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerAttackMethod.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
               "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T17:33:47.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T17:33:47.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerAnimation.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:05:11.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T16:05:11.318Z"
             }
           ]
         }
