@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 /**
@@ -17,8 +18,11 @@ public class Barrel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        UnityEngine.Debug.Log("Dotkni?cie beczki przez: " + other.name + " | tag: " + other.tag);
+
         if (!destroyed && other.CompareTag("PlayerAttack"))
         {
+            UnityEngine.Debug.Log("Beczka rozwalana!");
             destroyed = true;
             anim.SetTrigger("Destroy");
             Destroy(gameObject, 0.5f); // zniknie po animacji
