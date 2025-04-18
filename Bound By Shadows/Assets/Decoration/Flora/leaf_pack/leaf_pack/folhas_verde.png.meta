@@ -1,10 +1,43 @@
 fileFormatVersion: 2
-guid: a1c5083c5fb1b0f40b9161d7679c6a4e
+guid: 56d87b3edbd46f84a95fad4e249b787c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4783541382768867625
-    second: Bricks1BG_0
+      213: 832716277261571183
+    second: folhas_verde_0
+  - first:
+      213: -4369733020434704879
+    second: folhas_verde_1
+  - first:
+      213: -6359520851860852375
+    second: folhas_verde_2
+  - first:
+      213: -8259933127703895147
+    second: folhas_verde_3
+  - first:
+      213: -995723954473556616
+    second: folhas_verde_4
+  - first:
+      213: 7409241147890347796
+    second: folhas_verde_5
+  - first:
+      213: -2251731690866801563
+    second: folhas_verde_6
+  - first:
+      213: 4598634680445641265
+    second: folhas_verde_7
+  - first:
+      213: 6789883818694100066
+    second: folhas_verde_8
+  - first:
+      213: 42063255701430331
+    second: folhas_verde_9
+  - first:
+      213: -627420127755288008
+    second: folhas_verde_10
+  - first:
+      213: 3206268076887992464
+    second: folhas_verde_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +129,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bricks1BG_0
+      name: folhas_verde_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 7
+        y: 34
+        width: 580
+        height: 554
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929b1581b8d826240800000000000000
-      internalID: 4783541382768867625
+      spriteID: f649cd0da076e8b00800000000000000
+      internalID: 832716277261571183
       vertices: []
       indices: 
       edges: []
@@ -138,7 +158,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e165edbacd9af9249a5b7c8cc02b92a2
+    spriteID: c4bcb62186f8b6c45b66451f9eb8d189
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +168,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bricks1BG_0: 4783541382768867625
+      folhas_verde_0: 832716277261571183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

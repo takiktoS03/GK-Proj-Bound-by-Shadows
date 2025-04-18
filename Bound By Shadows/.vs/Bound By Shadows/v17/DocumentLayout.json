@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\LeafRevealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\LeafRevealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\RevealHiddenLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\RevealHiddenLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playermovement\\playermovementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playermovement\\playermovementdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\characters\\ethan the hero\\script\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\characters\\ethan the hero\\script\\playeranimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SetOrderInLayerForChildren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\SetOrderInLayerForChildren.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerMovementData.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovementData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T19:27:22.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Title": "LeafRevealer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\LeafRevealer.cs",
+              "RelativeDocumentMoniker": "Assets\\LeafRevealer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\LeafRevealer.cs",
+              "RelativeToolTip": "Assets\\LeafRevealer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:08:46.079Z",
+              "WhenOpened": "2025-04-18T14:57:49.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerAttackMethod.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAPAAAAAAAAAA==",
+              "Title": "RevealHiddenLocation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\RevealHiddenLocation.cs",
+              "RelativeDocumentMoniker": "Assets\\RevealHiddenLocation.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\RevealHiddenLocation.cs",
+              "RelativeToolTip": "Assets\\RevealHiddenLocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T17:33:47.905Z",
+              "WhenOpened": "2025-04-18T14:38:05.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerAnimation.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SetOrderInLayerForChildren.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SetOrderInLayerForChildren.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SetOrderInLayerForChildren.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SetOrderInLayerForChildren.cs",
+              "RelativeToolTip": "Assets\\Script\\SetOrderInLayerForChildren.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:05:11.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T12:00:38.36Z"
             }
           ]
         }

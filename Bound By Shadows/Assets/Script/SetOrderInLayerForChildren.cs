@@ -6,7 +6,7 @@ using UnityEngine;
  **/
 public class SetOrderInLayerForChildren : MonoBehaviour
 {
-    public int orderInLayer = 3;
+    public int orderInLayer = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

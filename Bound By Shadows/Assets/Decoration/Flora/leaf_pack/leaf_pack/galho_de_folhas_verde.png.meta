@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1c5083c5fb1b0f40b9161d7679c6a4e
+guid: 25e379db0e94afa41a3fbab6207760ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4783541382768867625
-    second: Bricks1BG_0
+      213: -3683868705858339288
+    second: galho_de_folhas_verde_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bricks1BG_0
+      name: galho_de_folhas_verde_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 512
-        height: 512
+        width: 586
+        height: 594
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929b1581b8d826240800000000000000
-      internalID: 4783541382768867625
+      spriteID: 82eb2241ee440ecc0800000000000000
+      internalID: -3683868705858339288
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e165edbacd9af9249a5b7c8cc02b92a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bricks1BG_0: 4783541382768867625
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
