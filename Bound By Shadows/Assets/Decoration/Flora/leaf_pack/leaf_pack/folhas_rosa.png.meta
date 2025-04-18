@@ -129,6 +129,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -409,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      folhas_rosa_0: 3812459173366280622
+      folhas_rosa_1: 4708086182246223695
+      folhas_rosa_10: 5333015535658677741
+      folhas_rosa_11: -100581046025493426
+      folhas_rosa_2: -2505890805092859427
+      folhas_rosa_3: 5873856958700460996
+      folhas_rosa_4: 5747152908372181548
+      folhas_rosa_5: 3289904119052579078
+      folhas_rosa_6: -1518528253642332079
+      folhas_rosa_7: -8168031931963517077
+      folhas_rosa_8: 2496356043503840704
+      folhas_rosa_9: 2871481454419334166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -162,7 +162,8 @@ namespace EthanTheHero
 		#region Wall Sliding and Wall Jump
 		private void WallSlidngMechanic()
 		{
-			wall = Physics2D.Raycast(WallCheck.position, new Vector2(data.wallDistance, 0f), data.wallDistance, wallLayer);
+            Vector2 checkDir = move.x > 0 ? Vector2.right : Vector2.left;
+            wall = Physics2D.Raycast(WallCheck.position, checkDir, data.wallDistance, wallLayer);
 			Debug.DrawRay(WallCheck.position, new Vector2(data.wallDistance, 0f), Color.red);
 
 
@@ -184,7 +185,7 @@ namespace EthanTheHero
 		private IEnumerator wallJumpMechanic()
 		{
 			wallJump = true;
-			if (transform.localScale.x == -1f)
+			if (transform.localScale.x == -3f)
 				myBody.linearVelocity = new Vector2(data.wallJumpingXPower, data.wallJumpingYPower);
 			else
 				myBody.linearVelocity = new Vector2(-data.wallJumpingXPower, data.wallJumpingYPower);
