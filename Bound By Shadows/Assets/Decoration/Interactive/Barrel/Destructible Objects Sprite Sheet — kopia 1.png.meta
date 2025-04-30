@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: aaaa2b8cf3ca1ba4cbfd8ae6c0b67160
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 430260967280426670
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_0"
+  - first:
+      213: 3732377005188265522
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_1"
+  - first:
+      213: -761558480576177601
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_2"
+  - first:
+      213: 7081126113354704787
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_3"
+  - first:
+      213: -901806046624510354
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_4"
+  - first:
+      213: -6497633891763713098
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_5"
+  - first:
+      213: -7931737245099522384
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_6"
+  - first:
+      213: -40367122205730853
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_7"
+  - first:
+      213: -613650796214676482
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_8"
+  - first:
+      213: 1165859354198128330
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_9"
+  - first:
+      213: -8745853072412552635
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_10"
+  - first:
+      213: -9016054612231136440
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_11"
+  - first:
+      213: 2449418419369344784
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_12"
+  - first:
+      213: 5471099741898802673
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_13"
+  - first:
+      213: 6972013500071656065
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_14"
+  - first:
+      213: 3093242127988035753
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_15"
+  - first:
+      213: -4033379343939719082
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_16"
+  - first:
+      213: 7718353939272598149
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_17"
+  - first:
+      213: 3952676193311659138
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_18"
+  - first:
+      213: 8711572102637043130
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_19"
+  - first:
+      213: 5405690033555903396
+    second: "Destructible Objects Sprite Sheet \u2014 kopia_20"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_0"
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae3773f11898f500800000000000000
+      internalID: 430260967280426670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_1"
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 69
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236351a7c111cc330800000000000000
+      internalID: 3732377005188265522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_2"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 69
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a1299c8966e65f0800000000000000
+      internalID: -761558480576177601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_3"
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397ef34cea6354260800000000000000
+      internalID: 7081126113354704787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_4"
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 5
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e85a6bd242c73f0800000000000000
+      internalID: -901806046624510354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_5"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 5
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb82e0c664c3d5a0800000000000000
+      internalID: -6497633891763713098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_6"
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 4
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b68b1eeffecce190800000000000000
+      internalID: -7931737245099522384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_10"
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5425719d7fc70a680800000000000000
+      internalID: -8745853072412552635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_15"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 58
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a01003a3576dea20800000000000000
+      internalID: 3093242127988035753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Destructible Objects Sprite Sheet \u2014 kopia_19"
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 3
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd32e4eba8b5e870800000000000000
+      internalID: 8711572102637043130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b8aec2c3058146244a60f11a2113a23d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "Destructible Objects Sprite Sheet \u2014 kopia_0": 430260967280426670
+      "Destructible Objects Sprite Sheet \u2014 kopia_1": 3732377005188265522
+      "Destructible Objects Sprite Sheet \u2014 kopia_10": -8745853072412552635
+      "Destructible Objects Sprite Sheet \u2014 kopia_11": -9016054612231136440
+      "Destructible Objects Sprite Sheet \u2014 kopia_12": 2449418419369344784
+      "Destructible Objects Sprite Sheet \u2014 kopia_13": 5471099741898802673
+      "Destructible Objects Sprite Sheet \u2014 kopia_14": 6972013500071656065
+      "Destructible Objects Sprite Sheet \u2014 kopia_15": 3093242127988035753
+      "Destructible Objects Sprite Sheet \u2014 kopia_16": -4033379343939719082
+      "Destructible Objects Sprite Sheet \u2014 kopia_17": 7718353939272598149
+      "Destructible Objects Sprite Sheet \u2014 kopia_18": 3952676193311659138
+      "Destructible Objects Sprite Sheet \u2014 kopia_19": 8711572102637043130
+      "Destructible Objects Sprite Sheet \u2014 kopia_2": -761558480576177601
+      "Destructible Objects Sprite Sheet \u2014 kopia_20": 5405690033555903396
+      "Destructible Objects Sprite Sheet \u2014 kopia_3": 7081126113354704787
+      "Destructible Objects Sprite Sheet \u2014 kopia_4": -901806046624510354
+      "Destructible Objects Sprite Sheet \u2014 kopia_5": -6497633891763713098
+      "Destructible Objects Sprite Sheet \u2014 kopia_6": -7931737245099522384
+      "Destructible Objects Sprite Sheet \u2014 kopia_7": -40367122205730853
+      "Destructible Objects Sprite Sheet \u2014 kopia_8": -613650796214676482
+      "Destructible Objects Sprite Sheet \u2014 kopia_9": 1165859354198128330
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

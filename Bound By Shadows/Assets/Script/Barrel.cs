@@ -10,28 +10,26 @@ public class Barrel : MonoBehaviour
     private Animator anim;
     private bool destroyed = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        anim = GetComponent<Animator>();   
+        anim = GetComponent<Animator>();
+        UnityEngine.Debug.Log("Start: Destroy = " + anim.GetBool("Destroy")); // sprawdü stan na poczπtku
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnHit()
     {
-        UnityEngine.Debug.Log("Dotkni?cie beczki przez: " + other.name + " | tag: " + other.tag);
-
-        if (!destroyed && other.CompareTag("PlayerAttack"))
+        if (!destroyed)
         {
-            UnityEngine.Debug.Log("Beczka rozwalana!");
             destroyed = true;
-            anim.SetTrigger("Destroy");
-            Destroy(gameObject, 0.5f); // zniknie po animacji
+            anim.SetBool("Destroy", true);
+            UnityEngine.Debug.Log("Beczka trafiona i niszczona!");
+            Destroy(gameObject, 1.5f); // dopasuj czas
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
