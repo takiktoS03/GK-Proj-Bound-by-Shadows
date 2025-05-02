@@ -1,11 +1,10 @@
-using System.Diagnostics;
 using UnityEngine;
 
 /**
  Julia Bigaj
 Logika niszczenia beczki 
  **/
-public class Barrel : MonoBehaviour
+public class Barrel : MonoBehaviour, IDamageable
 {
     private Animator anim;
     private bool destroyed = false;
@@ -13,7 +12,6 @@ public class Barrel : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        UnityEngine.Debug.Log("Start: Destroy = " + anim.GetBool("Destroy")); // sprawdü stan na poczπtku
     }
 
     public void OnHit()
@@ -22,14 +20,7 @@ public class Barrel : MonoBehaviour
         {
             destroyed = true;
             anim.SetBool("Destroy", true);
-            UnityEngine.Debug.Log("Beczka trafiona i niszczona!");
-            Destroy(gameObject, 1.5f); // dopasuj czas
+            Destroy(gameObject, 1.2f);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

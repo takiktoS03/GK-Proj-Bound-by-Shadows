@@ -1,16 +1,19 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class BarrelHitbox : MonoBehaviour
 {
-     public Barrel parentBarrel;
+    private IDamageable target;
+
+    private void Awake()
+    {
+        target = GetComponentInParent<IDamageable>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hitbox wykry³ coœ: " + other.name + " | tag: " + other.tag);
-        if (other.CompareTag("PlayerAttack"))
+        if (other.CompareTag("PlayerAttack "))
         {
-            Debug.Log("Hitbox wykry³ atak gracza!");
-            parentBarrel.OnHit();
+            target?.OnHit();
         }
     }
 }
