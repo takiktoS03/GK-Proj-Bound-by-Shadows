@@ -127,7 +127,7 @@ namespace EthanTheHero
 		{
 
 			//Move player if player is in attacking state
-			if (transform.localScale.x == 1)
+			if (transform.localScale.x == 3)
 			{
 				if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 					myBody.linearVelocity = new Vector2(basicAttack01Power, myBody.linearVelocity.y);

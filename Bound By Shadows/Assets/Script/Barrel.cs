@@ -20,7 +20,7 @@ public class Barrel : MonoBehaviour, IDamageable
         {
             destroyed = true;
             anim.SetBool("Destroy", true);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.9f);
         }
     }
 }
