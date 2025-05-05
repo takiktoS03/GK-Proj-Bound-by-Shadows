@@ -1,22 +1,27 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+
+/**
+ * Filip Kudła
+ * Logika Hitboxu aktywowanego w momencie ataku gracza
+ **/
 
 public class PlayerAttackTrigger : MonoBehaviour
 {
     public GameObject attackHitbox;
-    public Vector2 offsetRight = new Vector2(0.5f, 0f);
-    public Vector2 offsetLeft = new Vector2(-0.5f, 0f);
 
     void Update()
     {
         UpdateHitboxPosition();
+        Debug.DrawLine(transform.position, attackHitbox.transform.position, Color.red);
     }
 
     void UpdateHitboxPosition()
     {
-        bool facingRight = transform.localScale.x > 0;
-        Vector2 offset = facingRight ? offsetRight : offsetLeft;
-        attackHitbox.transform.localPosition = offset;
+        float direction = Mathf.Sign(transform.localScale.x);
+        Vector3 scale = attackHitbox.transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * direction;
+        attackHitbox.transform.localScale = scale;
     }
 
     public void ActivateHitbox() => StartCoroutine(ActivateHitboxCoroutine());
