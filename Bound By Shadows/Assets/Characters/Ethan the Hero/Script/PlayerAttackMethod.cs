@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static PauseMenu;
 
 namespace EthanTheHero
 {
 	public class PlayerAttackMethod : MonoBehaviour
 	{
-		#region FIELD
+        public static bool isPaused = false;
 
-		private PlayerAnimation playerAnim;
+        #region FIELD
+
+        private PlayerAnimation playerAnim;
 		private PlayerMovement playerMv;
 		private Animator myAnim;
 		private Rigidbody2D myBody;
@@ -37,9 +41,17 @@ namespace EthanTheHero
 			playerMv = GetComponent<PlayerMovement>();
 		}
 
-		void Update()
+        void Start()
+        {
+            myAnim.Play("Idle");
+        }
+
+        void Update()
 		{
-			if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding)
+            if (PauseMenu.isPaused)
+                return;
+
+            if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding)
 				return;
 
 

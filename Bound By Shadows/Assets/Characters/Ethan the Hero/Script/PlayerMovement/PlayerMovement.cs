@@ -45,7 +45,19 @@ namespace EthanTheHero
 			myBody = GetComponent<Rigidbody2D>();
 			myAnim = GetComponent<Animator>();
 		}
-		void Update()
+		//metoda do wczytania bohatera po zapisie gry
+        void Start()
+        {
+            if (PlayerPrefs.GetInt("shouldLoad", 0) == 1)
+            {
+                float x = PlayerPrefs.GetFloat("loadX");
+                float y = PlayerPrefs.GetFloat("loadY");
+                float z = PlayerPrefs.GetFloat("loadZ");
+                transform.position = new Vector3(x, y, z);
+                PlayerPrefs.SetInt("shouldLoad", 0);
+            }
+        }
+        void Update()
 		{
 			if (isDashing || wallJump || myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01") || myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02") || myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
 				return;
