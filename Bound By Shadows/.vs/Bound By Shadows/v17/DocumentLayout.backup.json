@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\ISaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\ISaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\EventSystemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\EventSystemController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PlayerAttackTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\PlayerAttackTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Barrel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Barrel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,94 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventSystemController.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\EventSystemController.cs",
-              "RelativeDocumentMoniker": "Assets\\EventSystemController.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\EventSystemController.cs",
-              "RelativeToolTip": "Assets\\EventSystemController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ISaveable.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\ISaveable.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ISaveable.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\ISaveable.cs",
+              "RelativeToolTip": "Assets\\Script\\ISaveable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T18:06:01.342Z",
+              "WhenOpened": "2025-05-06T23:29:23.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PauseMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\PauseMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\PauseMenu.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\PauseMenu.cs",
-              "RelativeToolTip": "Assets\\PauseMenu.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T17:37:30.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Barrel.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Barrel.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Barrel.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Barrel.cs",
-              "RelativeToolTip": "Assets\\Script\\Barrel.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Script\\PauseMenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T19:22:05.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerAnimation.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAnimation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:35:00.035Z",
+              "WhenOpened": "2025-05-06T23:25:02.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerMovement\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAACAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Script\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:34:58.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerAttackTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PlayerAttackTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\PlayerAttackTrigger.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PlayerAttackTrigger.cs",
-              "RelativeToolTip": "Assets\\Script\\PlayerAttackTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:33:59.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerAttackMethod.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "RelativeDocumentMoniker": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "RelativeToolTip": "Assets\\Characters\\Ethan the Hero\\Script\\PlayerAttackMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:17:43.81Z"
+              "WhenOpened": "2025-05-06T21:08:26.323Z",
+              "EditorCaption": ""
             }
           ]
         }

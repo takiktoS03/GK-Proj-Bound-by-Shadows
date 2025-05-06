@@ -41,7 +41,6 @@ public class PauseMenu : MonoBehaviour
 
     public void SaveGame()
     {
-        Debug.Log("Zapisano grê (tu dodamy zapis)");
-        // Tu póŸniej dodamy zapis
+        SaveManager.Instance.SaveGame();
     }
 }

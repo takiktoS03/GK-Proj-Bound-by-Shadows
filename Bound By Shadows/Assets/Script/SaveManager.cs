@@ -1,17 +1,11 @@
 using UnityEngine;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.IO;
 
 public class SaveManager : MonoBehaviour
 {
-    public static SaveManager Instance;
-
-    public GameObject player;
-    private string path;
-
-    private List<string> destroyedBarrels = new List<string>();
+    public static SaveManager Instance { get; private set; }
+    private string SavePath => Path.Combine(Application.persistentDataPath, "save.json");
 
     private void Awake()
     {
@@ -24,57 +18,68 @@ public class SaveManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        path = Application.persistentDataPath + "/save.dat";
     }
 
-    public void AddDestroyedBarrel(string id)
-    {
-        if (!destroyedBarrels.Contains(id))
-            destroyedBarrels.Add(id);
-    }
-
-    public bool IsBarrelDestroyed(string id)
-    {
-        return destroyedBarrels.Contains(id);
-    }
-
+    #region Public API
     public void SaveGame()
     {
-        SaveData data = new SaveData();
-        data.playerX = player.transform.position.x;
-        data.playerY = player.transform.position.y;
-        data.playerZ = player.transform.position.z;
-        data.sceneName = SceneManager.GetActiveScene().name;
-
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Create(path);
-        formatter.Serialize(file, data);
-        file.Close();
-
-        Debug.Log("Gra zapisana");
+        var saveFile = new SaveFile();
+        foreach (var mono in FindObjectsOfType<MonoBehaviour>(true))
+        {
+            if (mono is ISaveable saveable)
+            {
+                var id = mono.GetComponent<UniqueID>()?.ID;
+                if (string.IsNullOrEmpty(id))
+                {
+                    Debug.LogWarning($"[SaveManager] Object {mono.name} implements ISaveable but has no UniqueID component.");
+                    continue;
+                }
+                saveFile.entries.Add(new SaveEntry { id = id, json = saveable.CaptureState() });
+            }
+        }
+        File.WriteAllText(SavePath, JsonUtility.ToJson(saveFile, prettyPrint: true));
+        PlayerPrefs.SetString("LastScene", UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        Debug.Log($"[SaveManager] Game saved to: {SavePath}");
     }
 
     public void LoadGame()
     {
-        if (File.Exists(path))
+        if (!File.Exists(SavePath))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(path, FileMode.Open);
-            SaveData data = (SaveData)formatter.Deserialize(file);
-            file.Close();
+            Debug.LogWarning("[SaveManager] No save file found!");
+            return;
+        }
 
-            SceneManager.LoadScene(data.sceneName);
-            PlayerPrefs.SetFloat("loadX", data.playerX);
-            PlayerPrefs.SetFloat("loadY", data.playerY);
-            PlayerPrefs.SetFloat("loadZ", data.playerZ);
-            PlayerPrefs.SetInt("shouldLoad", 1);
-        }
-        else
+        var saveFile = JsonUtility.FromJson<SaveFile>(File.ReadAllText(SavePath));
+        var lookup = new Dictionary<string, string>();
+        foreach (var entry in saveFile.entries) lookup[entry.id] = entry.json;
+
+        foreach (var mono in FindObjectsOfType<MonoBehaviour>(true))
         {
-            Debug.LogWarning("Nie znaleziono zapisu gry");
+            if (mono is ISaveable saveable)
+            {
+                var id = mono.GetComponent<UniqueID>()?.ID;
+                if (string.IsNullOrEmpty(id)) continue;
+                if (lookup.TryGetValue(id, out var json))
+                    saveable.RestoreState(json);
+            }
         }
-        Time.timeScale = 1f;
-        PauseMenu.isPaused = false;
+        Debug.Log("[SaveManager] Game loaded");
     }
+    #endregion
+
+    #region Internal data structures
+    [System.Serializable]
+    private class SaveEntry
+    {
+        public string id;
+        public string json;
+    }
+
+    [System.Serializable]
+    private class SaveFile
+    {
+        public List<SaveEntry> entries = new();
+    }
+    #endregion
 }
