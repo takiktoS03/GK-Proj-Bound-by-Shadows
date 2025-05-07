@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerAttack
+  - Lava
   layers:
   - Default
   - TransparentFX

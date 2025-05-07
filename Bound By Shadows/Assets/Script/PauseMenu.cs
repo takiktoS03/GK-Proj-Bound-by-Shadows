@@ -20,7 +20,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Klikniêto WZNÓW");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;

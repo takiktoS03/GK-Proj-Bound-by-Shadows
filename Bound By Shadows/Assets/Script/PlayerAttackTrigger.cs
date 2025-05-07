@@ -13,7 +13,6 @@ public class PlayerAttackTrigger : MonoBehaviour
     void Update()
     {
         UpdateHitboxPosition();
-        Debug.DrawLine(transform.position, attackHitbox.transform.position, Color.red);
     }
 
     void UpdateHitboxPosition()
