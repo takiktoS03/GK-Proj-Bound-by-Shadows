@@ -1,9 +1,5 @@
-ï»¿using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
-
 public interface ISaveable
 {
-    string CaptureState();
-    void RestoreState(string state);
+    object CaptureState();     // zwraca dowoln¹ strukturê danych opisuj¹c¹ stan
+    void RestoreState(object state);  // przywraca stan z tej struktury
 }

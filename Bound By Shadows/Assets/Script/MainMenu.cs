@@ -6,30 +6,31 @@ public class MainMenu : MonoBehaviour
 {
     public void StartNewGame()
     {
-        SceneManager.LoadScene("Level 1 - Cave");
+        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
     }
 
     public void LoadGame()
     {
-        if (System.IO.File.Exists(Application.persistentDataPath + "/save.dat"))
-        {
-            string scene = PlayerPrefs.GetString("LastScene", "Level 1 - Cave");
-            SceneManager.LoadScene(scene);
-            StartCoroutine(LoadAfterSceneLoad());
-        }
-        else
-        {
-            Debug.LogWarning("Brak zapisu do wczytywania!");
-        }
+        Debug.Log("[UI] LoadGame clicked");
+        StartCoroutine(LoadAndRestore());
     }
 
-    private IEnumerator LoadAfterSceneLoad()
+    private IEnumerator LoadAndRestore()
     {
-        yield return new WaitForSeconds(0.1f);
-        Debug.Log("[MainMenu] Wczytywanie SaveManagera...");
-        SaveManager.Instance.LoadGame();
-    }
+        Debug.Log("[LOAD] Coroutine started");
 
+        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+
+        // Poczekaj 0.5–1 sekundy zanim szukasz obiektu
+        yield return new WaitForSeconds(4f);
+
+        var found = GameObject.FindObjectOfType<PlayerSaveData>();
+        Debug.Log(found == null
+            ? "[LOAD]  NIE znaleziono PlayerSaveData po 1s!"
+            : $"[LOAD]  Znaleziono PlayerSaveData: {found.name}");
+
+        SaveSystem.LoadCurrentScene();
+    }
 
     public void QuitGame()
     {

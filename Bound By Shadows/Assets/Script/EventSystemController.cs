@@ -7,6 +7,13 @@ public class EventSystemController : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        // natychmiastowa dezaktywacja nadmiarowego EventSystemu
+        if (EventSystem.current != null && EventSystem.current != GetComponent<EventSystem>())
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
         UpdateEventSystemState();
     }
 
@@ -22,7 +29,14 @@ public class EventSystemController : MonoBehaviour
 
     void UpdateEventSystemState()
     {
-        // Aktywuj tylko jeœli EventSystem nale¿y do aktywnej sceny
-        gameObject.SetActive(gameObject.scene == SceneManager.GetActiveScene());
+        // Aktywuj tylko jeœli nie ma innego aktywnego EventSystemu
+        if (EventSystem.current != null && EventSystem.current != GetComponent<EventSystem>())
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 }
