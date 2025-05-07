@@ -24,7 +24,7 @@ public class Barrel : MonoBehaviour
             destroyed = true;
             anim.SetTrigger("Destroy");
 
-            Destroy(gameObject, 1.5f); // dopasuj do d³ugoœci animacji
+            Destroy(gameObject, 0.9f);
         }
     }
     // ZAPIS stanu beczki
@@ -40,7 +40,7 @@ public class Barrel : MonoBehaviour
 
         if (destroyed)
         {
-            gameObject.SetActive(false); // beczka zosta³a ju¿ zniszczona
+            gameObject.SetActive(false);
         }
     }
 }
