@@ -1,20 +1,13 @@
 using Microlight.MicroBar;
 using UnityEngine;
 
-/// <summary>
-///  Przechowuje i aktualizuje punkty zdrowia.
-///  Teraz wystawia w³aœciwoœæ <c>CurrentHealth</c> oraz metodê <c>SetHealth</c> –
-///  potrzebne do systemu zapisu.
-/// </summary>
 public class Health : MonoBehaviour
 {
     [SerializeField] private MicroBar healthBar;
     [SerializeField] private MicroBar staminaBar;
-    [SerializeField] private float startingHealth = 100f;
+    [SerializeField] private float startingHealth;
 
-    private float currentHealth;
-    /// <summary>Bie¿¹ca wartoœæ HP (tylko do odczytu).</summary>
-    public float CurrentHealth => currentHealth;
+    public float currentHealth { get; private set; }
 
     private void Awake()
     {
@@ -26,21 +19,26 @@ public class Health : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
+        {
             TakeDamage(20);
+        }
         else if (Input.GetKeyDown(KeyCode.R))
+        {
             Heal(20);
+        }
     }
 
-    public void TakeDamage(float amount) => SetHealth(currentHealth - amount);
-    public void Heal(float amount) => SetHealth(currentHealth + amount);
-
-    /// <summary>Ustawia HP i odœwie¿a oba paski.</summary>
-    public void SetHealth(float value)
+    public void TakeDamage(float amount)
     {
-        currentHealth = Mathf.Clamp(value, 0, startingHealth);
+        currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
+        healthBar.UpdateBar(healthBar.CurrentValue - amount);
+        staminaBar.UpdateBar(staminaBar.CurrentValue - amount);
+    }
 
-        // MicroBar.UpdateBar oczekuje docelowej wartoœci, a nie delty
-        healthBar.UpdateBar(currentHealth);
-        staminaBar.UpdateBar(currentHealth);
+    public void Heal(float amount)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
+        healthBar.UpdateBar(healthBar.CurrentValue + amount);
+        staminaBar.UpdateBar(staminaBar.CurrentValue + amount);
     }
 }
