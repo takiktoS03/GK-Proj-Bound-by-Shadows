@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\script\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\script\\health\\lavadamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\health\\lavadamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:Assets\\Script\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:Assets\\Script\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +50,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Health\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Health\\Health.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Health\\Health.cs",
+              "RelativeToolTip": "Assets\\Script\\Health\\Health.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T20:49:55.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LavaDamage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Health\\LavaDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Health\\LavaDamage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\Health\\LavaDamage.cs",
+              "RelativeToolTip": "Assets\\Script\\Health\\LavaDamage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T20:47:50.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\UIManager.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\UIManager.cs",
               "RelativeToolTip": "Assets\\UIManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T20:30:22.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SaveSystem.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SaveSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SaveSystem.cs",
@@ -67,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SaveableObject.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SaveableObject.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SaveableObject.cs",
@@ -79,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SceneSaveData.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\SceneSaveData.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SceneSaveData.cs",
@@ -91,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
@@ -103,15 +137,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PauseMenu.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Script\\PauseMenu.cs",
               "RelativeToolTip": "Assets\\Script\\PauseMenu.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T23:25:02.365Z"
+              "WhenOpened": "2025-05-06T23:25:02.365Z",
+              "EditorCaption": ""
             }
           ]
         }
