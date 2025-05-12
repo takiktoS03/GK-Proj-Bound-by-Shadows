@@ -61,6 +61,8 @@ public class Health : MonoBehaviour
             StartCoroutine(FreezeOnDeath());
             playerSprite.sprite = deathSprite;
             dead = true;
+
+            FindObjectOfType<PauseMenu>().ShowGameOver();
         }
         
         healthBar.UpdateBar(healthBar.CurrentValue - amount);

@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class EventSystemController : MonoBehaviour
 {
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -29,14 +30,9 @@ public class EventSystemController : MonoBehaviour
 
     void UpdateEventSystemState()
     {
-        // Aktywuj tylko jeœli nie ma innego aktywnego EventSystemu
         if (EventSystem.current != null && EventSystem.current != GetComponent<EventSystem>())
         {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }
