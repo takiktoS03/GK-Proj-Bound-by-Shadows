@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3b80d6972838c4680f69d63390b74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrelID: 
 --- !u!50 &406001094517502889
 Rigidbody2D:
   serializedVersion: 5
@@ -214,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 2464a104-983a-46ea-b6c6-0a130f9c4fb9
+  uniqueId: e393ba87-f7da-42a7-8f78-d654b9eb6ed9
 --- !u!114 &5936397543325964157
 MonoBehaviour:
   m_ObjectHideFlags: 0
