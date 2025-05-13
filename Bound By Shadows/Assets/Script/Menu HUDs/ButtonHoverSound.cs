@@ -9,7 +9,7 @@ public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
     void Start()
     {
         // Szuka AudioSource w obiekcie nadrzêdnym (np. Menu lub MainMenu)
-        audioSource = FindObjectOfType<AudioSource>();
+        audioSource = FindFirstObjectByType<AudioSource>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

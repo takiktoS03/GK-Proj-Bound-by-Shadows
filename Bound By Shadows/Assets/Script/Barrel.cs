@@ -6,8 +6,6 @@ Logika niszczenia beczki
  **/
 public class Barrel : MonoBehaviour
 {
-    public string barrelID;
-
     private Animator anim;
     private bool destroyed = false;
 
@@ -20,27 +18,11 @@ public class Barrel : MonoBehaviour
     {
         if (!destroyed && other.CompareTag("PlayerAttack"))
         {
-            Debug.Log("Niszczenie beczki: " + gameObject.name);
             destroyed = true;
+            var saveable = GetComponent<SaveableObject>();
+            BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);
             anim.SetTrigger("Destroy");
-
             Destroy(gameObject, 0.9f);
-        }
-    }
-    // ZAPIS stanu beczki
-    public object CaptureState()
-    {
-        return destroyed;
-    }
-
-    // ODTWORZENIE stanu beczki
-    public void RestoreState(object state)
-    {
-        destroyed = (bool)state;
-
-        if (destroyed)
-        {
-            gameObject.SetActive(false);
         }
     }
 }

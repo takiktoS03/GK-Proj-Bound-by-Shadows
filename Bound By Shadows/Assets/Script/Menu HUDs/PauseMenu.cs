@@ -45,6 +45,16 @@ public class PauseMenu : MonoBehaviour
     public void LoadGame()
     {
         Debug.Log("[UI] LoadGame clicked");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("[LOAD] Scene loaded from PauseMenu: " + scene.name);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        SaveSystem.LoadCurrentScene();
     }
 
     public void Pause()

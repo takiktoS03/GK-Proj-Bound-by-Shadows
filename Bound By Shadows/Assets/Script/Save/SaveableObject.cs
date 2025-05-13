@@ -23,7 +23,7 @@ public class SaveableObject : MonoBehaviour
 
     private bool IsUnique(string candidate)
     {
-        var all = FindObjectsOfType<SaveableObject>();
+        var all = FindObjectsByType<SaveableObject>(FindObjectsSortMode.None);
         foreach (var so in all)
         {
             if (so == this) continue;
