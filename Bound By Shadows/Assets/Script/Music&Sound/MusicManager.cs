@@ -6,8 +6,12 @@ public class MusicManager : MonoBehaviour
     public static MusicManager Instance { get; private set; }
 
     public AudioSource audioSource;
+    public AudioSource narrationSource;
+
     public AudioClip menuMusic;
     public AudioClip gameplayMusic;
+    public AudioClip introNarration;
+    public AudioClip introMusic;
 
     private void Awake()
     {
@@ -25,13 +29,20 @@ public class MusicManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MainMenu")
+
+        StopMusic();
+
+        if (scene.name == "Intro")
+        {
+            return;
+        }
+        else if (scene.name == "MainMenu")
         {
             PlayMenuMusic();
         }
         else if (scene.name == "Level 1 - Cave")
         {
-            PlayGameplayMusic(0.3f); // np. 30% g³oœnoœci
+            PlayGameplayMusic(0.3f);
         }
     }
 
@@ -56,8 +67,27 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void PlayIntroAudio()
+    {
+        // MUZYKA
+        audioSource.clip = introMusic;
+        audioSource.loop = true;
+        audioSource.volume = 0.6f;
+        audioSource.Play();
+        Debug.Log("introMusic PLAY");
+
+        // NARRACJA
+        narrationSource.clip = introNarration;
+        narrationSource.loop = false;
+        narrationSource.volume = 1f;
+        narrationSource.Play();
+        Debug.Log("introNarration PLAY");
+    }
+
+
     public void StopMusic()
     {
-        audioSource.Stop();
+        if (audioSource.isPlaying) audioSource.Stop();
+        if (narrationSource.isPlaying) narrationSource.Stop();
     }
 }

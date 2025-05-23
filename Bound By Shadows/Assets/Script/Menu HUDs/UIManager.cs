@@ -6,7 +6,6 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        // Poprawny Singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -14,6 +13,6 @@ public class UIManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // poprawnie na GameObject na root poziomie
+        DontDestroyOnLoad(gameObject); 
     }
 }
