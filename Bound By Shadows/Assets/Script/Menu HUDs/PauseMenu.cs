@@ -28,6 +28,11 @@ public class PauseMenu : MonoBehaviour
             if (isGameOver)
                 return;
 
+            if (ChestPanelManager.Instance != null && ChestPanelManager.Instance.IsChestOpen()) {
+                ChestPanelManager.Instance.CloseChest();
+                return;
+            } 
+
             if (isPaused)
                 Resume();
             else

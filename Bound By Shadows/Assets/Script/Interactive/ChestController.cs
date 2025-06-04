@@ -1,19 +1,29 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ChestController : MonoBehaviour
 {
     private Animator animator;
     private bool isOpen = false;
     private bool isPlayerNear = false;
+    public GameObject chestPanel;
 
     public TextMeshPro promptUI;
+
+    [Header("Letter Icon")]
+    public Image letterIcon;
+    public bool isLetterTaken = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        if(promptUI != null)
+        if (promptUI != null)
             promptUI.gameObject.SetActive(false);
+        if (chestPanel != null)
+            chestPanel.SetActive(false);
+        if(letterIcon != null)
+            letterIcon.gameObject.SetActive(true);
     }
 
     void Update()
@@ -24,14 +34,22 @@ public class ChestController : MonoBehaviour
             isOpen = true;
             if (promptUI != null)
                 promptUI.gameObject.SetActive(false);
+            if (chestPanel != null)
+                chestPanel.SetActive(true);
+        }
+
+        else if (isOpen && !isLetterTaken && Input.GetKeyDown(KeyCode.F))
+        {
+            TakeLetter();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isOpen){
+        if (other.CompareTag("Player") && !isOpen)
+        {
             isPlayerNear = true;
-            if(promptUI != null)
+            if (promptUI != null)
                 promptUI.gameObject.SetActive(true);
         }
     }
@@ -44,5 +62,20 @@ public class ChestController : MonoBehaviour
             if (promptUI != null)
                 promptUI.gameObject.SetActive(false);
         }
+    }
+
+    void TakeLetter()
+    {
+        if (letterIcon != null)
+        {
+            letterIcon.gameObject.SetActive(false);
+            isLetterTaken = true;
+            Debug.Log("List zosta³ zabrany!");
+        }
+    }
+
+    public void CloseChestFromOutside()
+    {
+        isOpen = false;
     }
 }

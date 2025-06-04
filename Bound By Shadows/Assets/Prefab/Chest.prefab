@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 9111019561740472753}
   - component: {fileID: 2457896842008902185}
   - component: {fileID: 4194798053126427892}
-  - component: {fileID: 994029789332927923}
   - component: {fileID: 2637960884870790054}
   - component: {fileID: 4063578705787235570}
   - component: {fileID: -2908581070602758985}
+  - component: {fileID: -6146146431255692661}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -116,19 +116,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &994029789332927923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871795892909252677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d0d46fce6d8984b97fbc3ad4c1876f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptUI: {fileID: 8162653864856828296}
 --- !u!50 &2637960884870790054
 Rigidbody2D:
   serializedVersion: 5
@@ -248,6 +235,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.24}
   m_EdgeRadius: 0
+--- !u!114 &-6146146431255692661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871795892909252677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d0d46fce6d8984b97fbc3ad4c1876f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestPanel: {fileID: 0}
+  promptUI: {fileID: 0}
+  letterIcon: {fileID: 0}
+  isLetterTaken: 0
 --- !u!1 &2157178516520982169
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0049, y: 0.0317}
+  m_AnchoredPosition: {x: 0.0043, y: 0.09}
   m_SizeDelta: {x: 0.05432, y: 0.06294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6664997006950577407
