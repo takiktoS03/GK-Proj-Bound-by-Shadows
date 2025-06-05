@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float startingStamina;
     [SerializeField] private float staminaRegenRate = 1f;
     [SerializeField] private float staminaRegenTimeRate = 1f;
+    [SerializeField] private float damageCooldown = 0.75f;
 
     public float currentHealth { get; private set; }
     public float currentStamina { get; private set; }
@@ -28,6 +29,7 @@ public class Health : MonoBehaviour
 
     private bool dead = false;
     private bool hasConsumedStamina = false;
+    private bool canTakeDamage = true;
 
     private void Awake()
     {
@@ -74,28 +76,28 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (dead)
+        if (dead || !canTakeDamage)
         {
             return;
         }
+        StartCoroutine(DamageCooldownCoroutine());
+
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
 
         if (currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
         }
-        else if (!dead)
+        else 
         {
             anim.SetTrigger("Death");
             GetComponent<PlayerMovement>().enabled = false;
-            StartCoroutine(FreezeOnDeath());
-            playerSprite.sprite = deathSprite;
-            dead = true;
-
-            FindFirstObjectByType<PauseMenu>().ShowGameOver();
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f) // chyba zbedne
+                anim.SetTrigger("DeathEnded");
+            StartCoroutine(FindFirstObjectByType<PauseMenu>().ShowGameOver());
         }
         
-        healthBar.UpdateBar(healthBar.CurrentValue - amount);
+        healthBar.UpdateBar(currentHealth);
     }
 
     public void TakeStamina(float amount)
@@ -130,13 +132,6 @@ public class Health : MonoBehaviour
         staminaBar.UpdateBar(currentStamina);
     }
 
-    private IEnumerator FreezeOnDeath()
-    {
-        yield return new WaitForSeconds(0.5f);
-        anim.enabled = false;
-        playerSprite.sprite = deathSprite;
-    }
-
     private IEnumerator RegenerateStaminaCoroutine()
     {
         while (true)
@@ -147,5 +142,14 @@ public class Health : MonoBehaviour
             }
             yield return new WaitForSeconds(staminaRegenTimeRate);
         }
+    }
+    private IEnumerator DamageCooldownCoroutine()
+    {
+        canTakeDamage = false;
+        playerSprite.color = new Color(1, 0, 0, 0.8f);
+        yield return new WaitForSeconds(damageCooldown);
+        playerSprite.color = Color.white;
+        canTakeDamage = true;
+        anim.SetTrigger("HurtEnded");
     }
 }

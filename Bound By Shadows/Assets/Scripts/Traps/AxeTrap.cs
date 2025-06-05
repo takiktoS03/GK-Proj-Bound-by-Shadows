@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using EthanTheHero;
+using System.Collections;
+using UnityEngine;
 
 /**
  * Skrypt obslugujacy zmiane kierunku i polozenia pulapki (toporu) o zadany kat
@@ -10,6 +12,7 @@ public class AxeTrap : MonoBehaviour
     [SerializeField] private float speed = 5f; // predkosc obrotu
     [SerializeField] private float damage = 30f;
     [SerializeField] private float ropeLength = 4.7f; // dlugosc lancucha
+    [SerializeField] private float damping = 0.95f; // tłumienie
 
     private float currentAngle;
     private float angularVelocity = 0f;
@@ -26,6 +29,7 @@ public class AxeTrap : MonoBehaviour
         // prosty model ruchu wahadla: przyspieszenie zależy od sin(kata)
         float angularAcceleration = -speed * Mathf.Sin(currentAngle);
         angularVelocity += angularAcceleration * Time.deltaTime;
+        angularVelocity *= Mathf.Pow(damping, Time.deltaTime);
         currentAngle += angularVelocity * Time.deltaTime;
 
         // ogranicz wychylenie
