@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -85,14 +86,16 @@ public class PauseMenu : MonoBehaviour
         SaveSystem.SaveCurrentScene();
     }
 
-    public void ShowGameOver()
+    public IEnumerator ShowGameOver()
     {
-        gameOverUI.SetActive(true);
+        yield return new WaitForSeconds(1.3f);
+        PlayGameOverSound();
+        yield return new WaitForSeconds(0.4f);
         pauseMenuUI.SetActive(false);
+        gameOverUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
         isGameOver = true;
-        PlayGameOverSound();
     }
     private void PlayGameOverSound()
     {

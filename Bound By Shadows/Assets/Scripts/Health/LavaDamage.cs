@@ -3,7 +3,7 @@ using UnityEngine;
 public class LavaDamage : MonoBehaviour
 {
     private Health health;
-    [SerializeField] private float damageInterval = 1f;
+    [SerializeField] private float damageInterval = 0.5f;
     [SerializeField] private float nextDamageTime = 0f;
 
     private void Awake()
@@ -15,7 +15,7 @@ public class LavaDamage : MonoBehaviour
     {
         if (other.CompareTag("Lava") && Time.time >= nextDamageTime)
         {
-            health.TakeDamage(10);
+            health.TakeDamage(15);
             nextDamageTime = Time.time + damageInterval;
         }
     }
