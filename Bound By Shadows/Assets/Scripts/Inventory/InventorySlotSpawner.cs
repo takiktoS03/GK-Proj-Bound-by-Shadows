@@ -30,12 +30,14 @@ public class InventorySlotSpawner : MonoBehaviour
             Button button = slot.transform.GetChild(0).GetComponent<Button>();
             if (button != null)
             {
-                LetterData capturedLetter = letter;
+                LetterData capturedLetter = letter; // Lokalna kopia dla lambdy
                 button.onClick.AddListener(() => {
                     Debug.Log("Klikniêto w list: " + capturedLetter.icon.name);
-                    InventoryUI.Instance.ShowLetterContent(capturedLetter.content); // wyœwietl notkê
+                    // Przekazujesz ca³e LetterData
+                    InventoryUI.Instance.ShowLetterContent(capturedLetter);
                 });
             }
+
             if (button == null)
             {
                 Debug.LogError("Nie znaleziono Button w slocie!");

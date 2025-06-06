@@ -50,11 +50,15 @@ public class IntroController : MonoBehaviour
 
         image5.SetActive(true);
         originalScale = image5.transform.localScale;
-        StartCoroutine(ZoomImage(image5.transform, originalScale, originalScale*zoomScale, zoomDuration));
-        yield return new WaitForSeconds(8f);
-        image5.SetActive(false);
+        StartCoroutine(ZoomImage(image5.transform, originalScale, originalScale * zoomScale, zoomDuration));
+        yield return new WaitForSeconds(7f);
+
+        // fade out
+        CanvasGroup cg = image5.GetComponent<CanvasGroup>();
+        yield return StartCoroutine(FadeOutImage(cg, 3f)); // np. 1 sekunda fade out
 
         SceneManager.LoadScene("Level 1 - Cave");
+
     }
 
     IEnumerator ZoomImage(Transform target, Vector3 fromScale, Vector3 toScale, float duration)
@@ -68,5 +72,21 @@ public class IntroController : MonoBehaviour
         }
         target.localScale = toScale;
     }
+
+    IEnumerator FadeOutImage(CanvasGroup canvasGroup, float duration)
+    {
+        float startAlpha = canvasGroup.alpha;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        canvasGroup.alpha = 0f;
+    }
+
 }
 

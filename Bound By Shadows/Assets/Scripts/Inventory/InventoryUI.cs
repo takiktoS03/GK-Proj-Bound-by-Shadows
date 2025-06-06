@@ -11,17 +11,8 @@ public class InventoryUI : MonoBehaviour
 
     private bool isOpen = false;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ToggleInventory();
-        }
-    }
-
     void Awake()
     {
-        Debug.Log("InventoryUI Awake wywo³ane!");
         if (Instance == null)
         {
             Instance = this;
@@ -29,6 +20,14 @@ public class InventoryUI : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ToggleInventory();
         }
     }
 
@@ -47,21 +46,16 @@ public class InventoryUI : MonoBehaviour
     {
         Debug.Log("Odœwie¿am ekwipunek...");
 
-        // Poka¿ zawartoœæ listów z collectedLetters
-        foreach (var letter in InventoryManager.Instance.collectedLetters)
-        {
-            Debug.Log("List w ekwipunku: " + letter.icon.name);
-            // Tutaj mo¿esz wstawiaæ miniaturki w UI, np. jako sloty
-        }
-
+        // Odœwie¿ sloty w UI
         slotSpawner.RefreshSlots();
-
     }
 
-    public void ShowLetterContent(Sprite content)
+    public void ShowLetterContent(LetterData letterData)
     {
-        Debug.Log("ShowLetterContent wywo³ane!");
-        letterContentImage.sprite = content;
+        Debug.Log("Otwarto list: " + letterData.icon.name);
+
+        // Poka¿ zawartoœæ
+        letterContentImage.sprite = letterData.content;
         letterContentImage.gameObject.SetActive(true);
     }
 }
