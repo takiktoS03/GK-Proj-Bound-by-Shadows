@@ -60,6 +60,7 @@ public class InventoryUI : MonoBehaviour
 
     public void ShowLetterContent(Sprite content)
     {
+        Debug.Log("ShowLetterContent wywo³ane!");
         letterContentImage.sprite = content;
         letterContentImage.gameObject.SetActive(true);
     }

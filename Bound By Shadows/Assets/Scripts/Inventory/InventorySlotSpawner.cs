@@ -22,21 +22,27 @@ public class InventorySlotSpawner : MonoBehaviour
             GameObject slot = Instantiate(slotPrefab, slotsParent);
             slot.SetActive(true);
 
-            // Ustaw ikonkê w slocie (zak³adam, ¿e w InventoryButton jest Image jako pierwsze dziecko)
-            Image iconImage = slot.transform.GetChild(0).GetComponent<Image>();
+            // ZnajdŸ ikonê
+            Image iconImage = slot.transform.GetChild(0).Find("IconImage").GetComponent<Image>();
             iconImage.sprite = letter.icon;
 
-            // Obs³uga klikniêcia – znajdŸ komponent Button
+            // Obs³uga klikniêcia
             Button button = slot.transform.GetChild(0).GetComponent<Button>();
             if (button != null)
             {
-                // Potrzebujesz lokalnej kopii zmiennej "letter" w tej iteracji!
                 LetterData capturedLetter = letter;
-
                 button.onClick.AddListener(() => {
-                    Debug.Log("Klikniêto w slot listu: " + capturedLetter.icon.name);
-                    InventoryUI.Instance.ShowLetterContent(capturedLetter.content);
+                    Debug.Log("Klikniêto w list: " + capturedLetter.icon.name);
+                    InventoryUI.Instance.ShowLetterContent(capturedLetter.content); // wyœwietl notkê
                 });
+            }
+            if (button == null)
+            {
+                Debug.LogError("Nie znaleziono Button w slocie!");
+            }
+            else
+            {
+                Debug.Log("Znaleziono Button, przypisujê listener...");
             }
         }
     }
