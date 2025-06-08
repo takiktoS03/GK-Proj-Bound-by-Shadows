@@ -37,6 +37,10 @@ namespace EthanTheHero
 		private RaycastHit2D wall;
 		private float jumpTime;
 
+        [SerializeField] private AudioClip runAudioClip;
+
+        private AudioSource runAudioSource;
+
         #endregion
 
         #region MONOBEHAVIOUR
@@ -44,7 +48,12 @@ namespace EthanTheHero
 		{
 			myBody = GetComponent<Rigidbody2D>();
 			myAnim = GetComponent<Animator>();
-		}
+
+            // Dodajemy AudioSource i przypisujemy mu AudioClip
+            runAudioSource = gameObject.AddComponent<AudioSource>();
+            runAudioSource.clip = runAudioClip;
+            runAudioSource.loop = true; // zapętlony dźwięk biegania
+        }
 
         void Update()
 		{
@@ -78,8 +87,19 @@ namespace EthanTheHero
 
 			if (!wallSliding)
 				run(1);
-			//checks if set box overlaps with ground
-			if (Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer))
+
+            // Audio biegania
+            if (move.x != 0 && grounded && !runAudioSource.isPlaying)
+            {
+                runAudioSource.Play();
+            }
+            else if ((move.x == 0 || !grounded) && runAudioSource.isPlaying)
+            {
+                runAudioSource.Stop();
+            }
+
+            //checks if set box overlaps with ground
+            if (Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer))
 			{
 				lastOnGroundTime = 0.1f;
 				grounded = true;
