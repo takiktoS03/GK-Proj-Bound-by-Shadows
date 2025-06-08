@@ -88,12 +88,12 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Hurt");
         }
-        else 
+        else
         {
             anim.SetTrigger("Death");
             GetComponent<PlayerMovement>().enabled = false;
-            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f) // chyba zbedne
-                anim.SetTrigger("DeathEnded");
+            anim.SetTrigger("DeathEnded");
+            dead = true;
             StartCoroutine(FindFirstObjectByType<PauseMenu>().ShowGameOver());
         }
         
