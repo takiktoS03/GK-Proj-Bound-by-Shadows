@@ -15,7 +15,7 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
         var health = GetComponent<Health>();
         return new PlayerData
         {
-            hp = health.currentHealth,
+            //hp = health.currentHealth,
             //level = this.level  id sceny np.
         };
     }
