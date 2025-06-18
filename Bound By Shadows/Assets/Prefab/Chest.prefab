@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2637960884870790054}
   - component: {fileID: 4063578705787235570}
   - component: {fileID: -2908581070602758985}
-  - component: {fileID: -6146146431255692661}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -235,22 +234,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.35703728, y: 0.19417247}
   m_EdgeRadius: 0
---- !u!114 &-6146146431255692661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871795892909252677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91d0d46fce6d8984b97fbc3ad4c1876f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestPanel: {fileID: 0}
-  promptUI: {fileID: 8162653864856828296}
-  letterIcon: {fileID: 0}
-  isLetterTaken: 0
 --- !u!1 &2157178516520982169
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +245,7 @@ GameObject:
   - component: {fileID: 7413033661123083863}
   - component: {fileID: 6664997006950577407}
   - component: {fileID: 8162653864856828296}
+  - component: {fileID: 7346895576908183818}
   m_Layer: 0
   m_Name: FPrompt
   m_TagString: Untagged
@@ -427,6 +411,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6664997006950577407}
   m_maskType: 0
+--- !u!210 &7346895576908183818
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157178516520982169}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1 &2185378249113730756
 GameObject:
   m_ObjectHideFlags: 0

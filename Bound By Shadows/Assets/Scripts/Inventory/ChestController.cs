@@ -7,10 +7,11 @@ public class ChestController : MonoBehaviour
     private Animator animator;
     [SerializeField] private bool isOpen = false;
     private bool isPlayerNear = false;
+
     public GameObject chestPanel;
     public LetterData letterData;
 
-    public TextMeshPro promptUI;
+    public GameObject promptUI;
 
     [Header("Letter Icon")]
     public Image letterIcon;
@@ -23,7 +24,7 @@ public class ChestController : MonoBehaviour
             promptUI.gameObject.SetActive(false);
         if (chestPanel != null)
             chestPanel.SetActive(false);
-        if(letterIcon != null)
+        if (letterIcon != null)
             letterIcon.gameObject.SetActive(true);
     }
 
@@ -47,11 +48,13 @@ public class ChestController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Trigger enter: " + other.name);
+
         if (other.CompareTag("Player") && !isOpen)
         {
             isPlayerNear = true;
             if (promptUI != null)
-                promptUI.gameObject.SetActive(true);
+                promptUI.SetActive(true);
         }
     }
 
@@ -72,7 +75,7 @@ public class ChestController : MonoBehaviour
             //InventoryUI.Instance.ShowLetterContent(letterData.content);
             InventoryManager.Instance.AddLetter(letterData);
 
-            letterIcon.gameObject.SetActive(false);
+            letterIcon.transform.parent.gameObject.SetActive(false); // jeœli ikona ma rodzica np. slot
             isLetterTaken = true;
             Debug.Log("List zosta³ zabrany!");
         }
