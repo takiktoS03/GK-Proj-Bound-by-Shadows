@@ -37,10 +37,18 @@ namespace EthanTheHero
         private RaycastHit2D wall;
         private float jumpTime;
 
-        [SerializeField] private AudioClip runAudioClip;
+        //[SerializeField] private AudioClip runAudioClip;
 
-        private AudioSource runAudioSource;
+        //private AudioSource runAudioSource;
         private PlayerHealth healthComponent;
+        private bool stepSoundPlaying = false;
+
+        private IEnumerator ResetStepSound()
+        {
+            yield return new WaitForSeconds(0.3f); // dostosuj do długości kroku
+            stepSoundPlaying = false;
+        }
+
 
         #endregion
 
@@ -52,9 +60,9 @@ namespace EthanTheHero
             healthComponent = GetComponent<PlayerHealth>();
 
             // Dodajemy AudioSource i przypisujemy mu AudioClip
-            runAudioSource = gameObject.AddComponent<AudioSource>();
-            runAudioSource.clip = runAudioClip;
-            runAudioSource.loop = true; // zapętlony dźwięk biegania
+            //runAudioSource = gameObject.AddComponent<AudioSource>();
+            //runAudioSource.clip = runAudioClip;
+            //runAudioSource.loop = true; // zapętlony dźwięk biegania
         }
 
         void Update()
@@ -96,15 +104,16 @@ namespace EthanTheHero
             if (!wallSliding)
                 run(1);
 
-            // Audio biegania
-            if (move.x != 0 && grounded && !runAudioSource.isPlaying)
+            // running
+            if (move.x != 0 && grounded)
             {
-                runAudioSource.Play();
+                SoundManager.Instance?.StartSteps();
             }
-            else if ((move.x == 0 || !grounded) && runAudioSource.isPlaying)
+            else
             {
-                runAudioSource.Stop();
+                SoundManager.Instance?.StopSteps();
             }
+
 
             //checks if set box overlaps with ground
             if (Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer))
