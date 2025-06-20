@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cool water texture_0: 5875185925009467997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

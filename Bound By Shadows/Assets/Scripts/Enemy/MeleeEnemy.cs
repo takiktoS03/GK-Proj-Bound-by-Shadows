@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 /**
  *  Skrypt obsługujący przeciwników atakujących wręcz
@@ -9,6 +10,7 @@
 public class MeleeEnemy : MonoBehaviour
 {
     [Header("Attack Parameters")]
+    [SerializeField] private AttackData data;
     [SerializeField] private float range;
 
     [Header("Collider Parameters")]
@@ -18,8 +20,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
     private Animator anim;
-
     private PatrolEnemy patrolEnemy;
+    private bool isAttacking;
 
     private void Awake()
     {
@@ -27,16 +29,20 @@ public class MeleeEnemy : MonoBehaviour
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (PlayerInSight())
+        if (isAttacking) return;
+
+        bool playerDetected = PlayerInSight();
+
+        if (playerDetected)
         {
-            anim.SetTrigger("Attack");
-            Debug.Log("Attack szkieletora");
+            StartCoroutine(DamagePlayer());
         }
+
         if (patrolEnemy != null)
         {
-            patrolEnemy.enabled = !PlayerInSight();
+            patrolEnemy.enabled = !playerDetected;
         }
     }
 
@@ -55,4 +61,18 @@ public class MeleeEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
+
+    private IEnumerator DamagePlayer()
+    {
+        isAttacking = true;
+        anim.SetTrigger("Attack");
+
+        if (patrolEnemy != null)
+            patrolEnemy.enabled = false;
+
+        yield return new WaitForSeconds(data.cooldown);
+
+        isAttacking = false;
+    }
+
 }

@@ -15,6 +15,6 @@ MonoBehaviour:
   attackName: SkeletonAttack
   damage: 25
   knockback: 0
-  cooldown: 0
+  cooldown: 2
   hitboxPrefab: {fileID: 3797838022515269639, guid: f3e94deefac37874e9e97c1274c1634f, type: 3}
   duration: 0.2

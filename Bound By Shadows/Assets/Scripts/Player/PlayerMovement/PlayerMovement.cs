@@ -85,7 +85,6 @@ namespace EthanTheHero
 
             if (dashButtonPressed && canDash && !wallSliding && healthComponent.currentStamina >= data.dashCost)
             {
-                //dashButtonPressed = false;
                 healthComponent.TakeStamina(data.dashCost);
                 StartCoroutine(dash());
             }
@@ -156,18 +155,6 @@ namespace EthanTheHero
         #endregion
 
         #region DASH
-
-        private void TryDash()
-        {
-            //if (!canDash || wallSliding || healthComponent.currentStamina < data.dashCost)
-            //    return;
-            if (dashButtonPressed && canDash && !wallSliding && healthComponent.currentStamina >= data.dashCost)
-            {
-                dashButtonPressed = false;
-                healthComponent.TakeStamina(data.dashCost);
-                StartCoroutine(dash());
-            }
-        }
 
         private IEnumerator dash()
         {
