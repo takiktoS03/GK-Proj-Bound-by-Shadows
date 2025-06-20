@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 7413033661123083863}
   - component: {fileID: 6664997006950577407}
   - component: {fileID: 8162653864856828296}
+  - component: {fileID: 7346895576908183818}
   m_Layer: 0
   m_Name: FPrompt
   m_TagString: Untagged
@@ -410,6 +411,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6664997006950577407}
   m_maskType: 0
+--- !u!210 &7346895576908183818
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157178516520982169}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1 &2185378249113730756
 GameObject:
   m_ObjectHideFlags: 0

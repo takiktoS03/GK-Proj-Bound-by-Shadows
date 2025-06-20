@@ -1,4 +1,4 @@
-using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class LeafRevealer : MonoBehaviour
@@ -9,7 +9,7 @@ public class LeafRevealer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            UnityEngine.Debug.Log("Gracz wszed? w li?cie!");
+            Debug.Log("Gracz wszed³ w liœcie!");
             hiddenLocation.SetActive(true);
         }
     }
