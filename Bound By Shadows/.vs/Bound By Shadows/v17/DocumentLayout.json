@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\HintArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu HUDs\\HintArea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Inventory\\ChestPanelUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Inventory\\ChestController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu HUDs\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Menu HUDs\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Health\\Health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Traps\\SpikesTrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Traps\\SpikesTrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\LetterData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Inventory\\LetterData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,102 +35,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HintArea.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\HintArea.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\HintArea.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\HintArea.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\HintArea.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Title": "Level1FadeIn.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\Level1FadeIn.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T18:09:41.361Z",
+              "WhenOpened": "2025-06-19T20:45:25.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PersistentAudioListener.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Music\u0026Sound\\PersistentAudioListener.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Title": "ChestPanelUI.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestPanelUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\ChestPanelUI.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestPanelUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\ChestPanelUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T18:09:31.05Z",
+              "WhenOpened": "2025-06-19T19:00:01.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T17:15:40.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LetterData.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\LetterData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\LetterData.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\LetterData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\LetterData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T21:20:09.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RevealHiddenLocation.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Map and locations\\RevealHiddenLocation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "ChestController.cs",
+              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\ChestController.cs",
+              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Inventory\\ChestController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\ChestController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T17:57:48.132Z",
+              "WhenOpened": "2025-06-18T20:05:19.21Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T21:53:17.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Health.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Health.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Health\\Health.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAApwFoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T17:45:57.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerMovementData.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovementData.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T17:10:39.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T17:10:38.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SpikesTrap.cs",
-              "DocumentMoniker": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Traps\\SpikesTrap.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Traps\\SpikesTrap.cs",
-              "ToolTip": "C:\\Users\\Bigajka\\Desktop\\ProjektGrafika\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Traps\\SpikesTrap.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Traps\\SpikesTrap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T16:23:07.94Z"
             }
           ]
         }
