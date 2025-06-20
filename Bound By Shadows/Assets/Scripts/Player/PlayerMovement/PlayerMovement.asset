@@ -18,9 +18,9 @@ MonoBehaviour:
   runDecceleration: 1
   runDeccelAmount: 7.142857
   accelInAir: 0.5
-  deccelInAir: 0.5
+  deccelInAir: 0.7
   doConserveMomentum: 1
-  jumpHeight: 9
+  jumpHeight: 10
   dashPower: 8
   dashingCoolDown: 0.5
   dashingTime: 0.2

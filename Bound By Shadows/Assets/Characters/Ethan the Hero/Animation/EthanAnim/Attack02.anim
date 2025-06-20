@@ -146,9 +146,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.125
-    functionName: ActivateHitbox
+    functionName: PerformAttack
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: 64fa47c4a6355614eb251d67556972e4, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
