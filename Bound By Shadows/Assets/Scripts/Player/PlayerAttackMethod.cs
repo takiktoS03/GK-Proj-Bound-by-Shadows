@@ -22,8 +22,9 @@ namespace EthanTheHero
 		private bool atkButtonClickedOnAtk01;
 		private bool atkButtonClickedOnAtk02;
 		private bool atkButtonClickedOnAtk03;
+		private bool fireballButtonPressed;
 
-		private const string attack01 = "Attack01";
+        private const string attack01 = "Attack01";
 		private const string attack02 = "Attack02";
 		private const string attack03 = "Attack03";
 		private const string notAttacking = "NotAttacking";
@@ -45,10 +46,13 @@ namespace EthanTheHero
 
         void Update()
 		{
+            fireballButtonPressed = Input.GetKeyDown(KeyCode.Q);
+
             if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
 				return;
 
 			BasicAttackCombo();
+			//FireballAttack();
 		}
 
 		void FixedUpdate()
@@ -124,6 +128,15 @@ namespace EthanTheHero
 					myAnim.SetTrigger(notAttacking);
 			}
 		}
+
+		private void FireballAttack()
+		{
+            if (fireballButtonPressed && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
+                myAnim.SetTrigger("FireballAttack");
+
+            if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+                myAnim.SetTrigger(notAttacking);
+        }
 
 		private void BasicAttackMethod()
 		{

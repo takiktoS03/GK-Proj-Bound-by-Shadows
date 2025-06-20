@@ -76,6 +76,7 @@ namespace EthanTheHero
             move.x = Input.GetAxisRaw("Horizontal");
             dashButtonPressed = Input.GetKeyDown(KeyCode.W);
             jumpButtonPressed = Input.GetButtonDown("Jump");
+            
 
             jump();
 
