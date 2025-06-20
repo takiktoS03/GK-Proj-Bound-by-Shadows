@@ -1,6 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 
+/**
+ *  ScriptableObject z danymi o ataku, jego hitboxie i parametrach
+ *  
+ *  Autor: Filip Kudła
+ */
 [CreateAssetMenu(fileName = "NewAttackData", menuName = "Combat/Attack Data")]
 public class AttackData : ScriptableObject
 {

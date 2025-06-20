@@ -2,7 +2,8 @@
 
 
 /* 
- * Skrypt kamery podlaczony do gracza
+ * Skrypt kamery podążającej za graczem, lekko wyprzedzająca kierunek patrzenia gracza
+ * 
  * Autor: Filip Kudła
 */
 

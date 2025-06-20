@@ -1,13 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using EthanTheHero;
 using Microlight.MicroBar;
 using UnityEngine;
 
 
-/**
- * Filip Kudla
+/** 
+ * Skrypt obsługujący zdrowie gracza i paski zdrowia oraz staminy
  * 
- * Skrypt obslugujacy zdrowie gracza i paski zdrowia oraz staminy
+ * Autor: Filip Kudła
  */
 public class PlayerHealth : Health
 {
@@ -38,6 +38,7 @@ public class PlayerHealth : Health
 
     private void Update()
     {
+        // Testowo, np. szybki heal w celach diagnostycznych
         if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(20);
@@ -53,7 +54,7 @@ public class PlayerHealth : Health
     //public override void TakeDamage(float amount)
     //{
     //    base.TakeDamage(amount);
-    //    healthBar.UpdateBar(currentHealth);        
+    //    dodanie dzwiekow Hurt     
     //}
 
     public override void Die()
@@ -71,13 +72,13 @@ public class PlayerHealth : Health
             return;
         }
         currentStamina = Mathf.Clamp(currentStamina - amount, 0, startingStamina);
-        staminaBar.UpdateBar(currentStamina - amount);
+        staminaBar.UpdateBar(currentStamina);
     }
 
     //public override void Heal(float amount)
     //{
     //    base.Heal(amount);
-    //    healthBar.UpdateBar(currentHealth);
+    //    dodanie dzwiekow Heal
     //}
 
     public void HealStamina(float amount)

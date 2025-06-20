@@ -1,5 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
+
+/**
+ *  Skrypt inicjujący collider służący do ataku, zadający uszkodzenia jeśli przeciwnik jest w strefie
+ *  
+ *  Autor: Filip Kudła
+ */
 public class AttackHitbox : MonoBehaviour
 {
     [SerializeField] private LayerMask enemyLayer;

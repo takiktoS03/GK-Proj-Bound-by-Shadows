@@ -1,17 +1,14 @@
-using UnityEngine;
-
+﻿using UnityEngine;
 
 /**
- *  Skrypt obslugujacy przeciwnikow atakujacych wrecz
- *  Korzysta z RaycastHit2D aby wykryc czy gracz jest w poblizu za pomoca boxCollider
+ *  Skrypt obsługujący przeciwników atakujących wręcz
+ *  Korzysta z RaycastHit2D aby wykryć czy gracz jest w pobliżu za pomocą boxCollider
  *
- *  Autor: Filip Kudla  
+ *  Autor: Filip Kudła  
  */
 public class MeleeEnemy : MonoBehaviour
 {
-    [Header ("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
-    //[SerializeField] private float damage;
+    [Header("Attack Parameters")]
     [SerializeField] private float range;
 
     [Header("Collider Parameters")]
@@ -20,10 +17,7 @@ public class MeleeEnemy : MonoBehaviour
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
 
-    private float cooldownTimer;
     private Animator anim;
-    private Health playerHealth;
-    private Health enemyHealth;
 
     private PatrolEnemy patrolEnemy;
 
@@ -31,25 +25,15 @@ public class MeleeEnemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
-        enemyHealth = GetComponent<Health>();
     }
 
     void Update()
     {
-        cooldownTimer += Time.deltaTime;
-
-        if (PlayerInSight()) 
+        if (PlayerInSight())
         {
-            if(cooldownTimer >= attackCooldown)
-            {
-                //Attack
-                cooldownTimer = 0;
-                //DamagePlayer();
-                anim.SetTrigger("Attack");
-
-            }
+            anim.SetTrigger("Attack");
+            Debug.Log("Attack szkieletora");
         }
-
         if (patrolEnemy != null)
         {
             patrolEnemy.enabled = !PlayerInSight();
@@ -58,14 +42,10 @@ public class MeleeEnemy : MonoBehaviour
 
     private bool PlayerInSight()
     {
+        // Raycast z boxCollidera wykrywający gracza
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
-
-        if(hit.collider != null)
-        {
-            playerHealth = hit.transform.GetComponent<Health>();
-        }
 
         return hit.collider != null;
     }
@@ -74,13 +54,5 @@ public class MeleeEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-    }
-
-    private void DamagePlayer()
-    {
-        if (PlayerInSight()) 
-        {
-            anim.SetTrigger("Attack");
-        }    
     }
 }

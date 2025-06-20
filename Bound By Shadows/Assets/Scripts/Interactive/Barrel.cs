@@ -9,7 +9,7 @@ public class Barrel : MonoBehaviour
     private Animator anim;
     private bool destroyed = false;
 
-    void Start()
+    void Awake()
     {
         anim = GetComponent<Animator>();
     }

@@ -2,34 +2,34 @@
 using UnityEngine;
 
 /**
- * Filip Kudła
- * Logika ataku aktywowanego w animacji, uzywajaca info o ataku z AttackData
+ * Logika ataku aktywowanego w animacji, używająca info o ataku z AttackData
+ * 
+ * Autor: Filip Kudła
  **/
 public class AttackController : MonoBehaviour
 {
-    //public GameObject attackHitbox;
-    //[Header ("Spawn point musi być z prawej!")]
-    [SerializeField] private Transform attack01HitboxSpawnPoint;
+    [Header ("Lista Spawn-Pointów Ataków Postaci")]
+    [SerializeField] private Transform attackHitboxSpawnPoint;
+
     private bool canAttack = true;
 
     public void PerformAttack(AttackData data)
     {
         if (!canAttack) return;
-
-        //UpdateHitboxPosition(data);
-        AttackCoroutine(data);
+        
+        AttackMethod(data);
         StartCoroutine(AttackCooldownRoutine(data.cooldown));
     }
 
-    private void AttackCoroutine(AttackData data)
+    private void AttackMethod(AttackData data)
     {
         GameObject hitboxObj = Instantiate(
             data.hitboxPrefab,
-            attack01HitboxSpawnPoint.position,
+            attackHitboxSpawnPoint.position,
             Quaternion.identity,
             transform);
 
-        // Skala w zaleznosci od kierunku postaci
+        // Skala w zależności od kierunku postaci
         float direction = Mathf.Sign(transform.localScale.x);
         Vector3 scale = hitboxObj.transform.localScale;
         scale.x = Mathf.Abs(scale.x) * direction;
@@ -37,7 +37,6 @@ public class AttackController : MonoBehaviour
 
         AttackHitbox hitbox = hitboxObj.GetComponent<AttackHitbox>();
         hitbox.Init(data.damage, data.knockback, gameObject);
-        //yield return new WaitForSeconds(data.duration);
         Destroy(hitboxObj, data.duration);
     }
 
@@ -46,18 +45,5 @@ public class AttackController : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
-    }
-
-    void UpdateHitboxPosition(AttackData data)
-    {
-        float direction = Mathf.Sign(transform.localScale.x);
-        Vector3 scale = data.hitboxPrefab.transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * direction;
-        data.hitboxPrefab.transform.localScale = scale;
-        if (direction == -1) 
-        {
-            var pos = attack01HitboxSpawnPoint.localPosition.x * direction;
-            attack01HitboxSpawnPoint.localPosition = new Vector3(attack01HitboxSpawnPoint.localPosition.x * direction, attack01HitboxSpawnPoint.localPosition.y, attack01HitboxSpawnPoint.localPosition.z);
-        }
     }
 }

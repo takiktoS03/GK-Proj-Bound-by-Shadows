@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 
 /**
- *  Skrypt obslugujacy patrolowanie przez przeciwnika od punktu do punktu
+ *  Skrypt obsługujący patrolowanie obszaru przez przeciwnika od punktu do punktu
  *  
- *  Autor: Filip Kudla
+ *  Autor: Filip Kudła
  */
 public class PatrolEnemy : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
 
-    [Header("Enemy")]
+    [Header("Patrolling Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] private Animator anim;
 
@@ -23,14 +23,14 @@ public class PatrolEnemy : MonoBehaviour
     private float idleTimer;
     private Vector3 initScale;
     private bool movingLeft;
-    private Rigidbody2D rb;
+    //private Rigidbody2D rb;
 
 
     private void Awake()
     {
         initScale = enemy.localScale;
         //anim = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnDisable()

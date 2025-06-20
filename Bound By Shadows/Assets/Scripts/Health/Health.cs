@@ -1,13 +1,11 @@
 ﻿using System.Collections;
-using EthanTheHero;
 using Microlight.MicroBar;
 using UnityEngine;
-
 
 /**
  * Filip Kudla
  * 
- * Skrypt obslugujacy zdrowie wszystkich 'zyjacych' istot
+ * Skrypt obsługujący zdrowie wszystkich 'żyjących' istot
  */
 public class Health : MonoBehaviour
 {

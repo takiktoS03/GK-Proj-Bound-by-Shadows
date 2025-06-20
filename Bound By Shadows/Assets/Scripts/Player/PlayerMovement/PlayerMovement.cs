@@ -77,7 +77,7 @@ namespace EthanTheHero
 
             if (dashButtonPressed && canDash && !wallSliding && healthComponent.currentStamina >= data.dashCost)
             {
-                dashButtonPressed = false;
+                //dashButtonPressed = false;
                 healthComponent.TakeStamina(data.dashCost);
                 StartCoroutine(dash());
             }
