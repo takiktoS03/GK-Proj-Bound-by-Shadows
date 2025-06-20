@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static PauseMenu;
 
 namespace EthanTheHero
 {
@@ -17,7 +14,7 @@ namespace EthanTheHero
 		private Animator myAnim;
 		private Rigidbody2D myBody;
 
-		[Header("Basic Attack")]
+        [Header("Basic Attack")]
 		public float basicAttack01Power = 0.5f;
 		public float basicAttack02Power = 0.5f;
 		public float basicAttack03Power = 0.9f;
@@ -48,25 +45,18 @@ namespace EthanTheHero
 
         void Update()
 		{
-            if (PauseMenu.isPaused)
-                return;
-
-            if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding)
+            if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
 				return;
 
-
 			BasicAttackCombo();
-
-
 		}
 
 		void FixedUpdate()
 		{
-			if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding)
+			if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
 				return;
 
 			BasicAttackMethod();
-
 		}
 
 		#region BASIC ATTACK
@@ -137,9 +127,8 @@ namespace EthanTheHero
 
 		private void BasicAttackMethod()
 		{
-
 			//Move player if player is in attacking state
-			if (transform.localScale.x == 3)
+			if (transform.localScale.x > 0)
 			{
 				if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 					myBody.linearVelocity = new Vector2(basicAttack01Power, myBody.linearVelocity.y);
@@ -165,7 +154,5 @@ namespace EthanTheHero
 		}
 
 		#endregion
-
-
 	}
 }

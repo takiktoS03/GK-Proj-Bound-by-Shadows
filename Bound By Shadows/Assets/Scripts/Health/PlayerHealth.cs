@@ -11,15 +11,16 @@ using UnityEngine;
  */
 public class PlayerHealth : Health
 {
-    [SerializeField] private MicroBar healthBar;
+    [Header ("Additional bars")]
     [SerializeField] private MicroBar staminaBar;
+
+    [Header("Stamina Parameters")]
     [SerializeField] private float startingStamina;
     [SerializeField] private float staminaRegenRate = 1f;
     [SerializeField] private float staminaRegenTimeRate = 1f;
 
-    public float currentStamina { get; private set; } //private?
+    [HideInInspector] public float currentStamina { get; private set; }
     private PlayerMovement playerMovement;
-    private bool hasConsumedStamina = false;
 
     protected override void Awake()
     {
@@ -47,26 +48,13 @@ public class PlayerHealth : Health
             Heal(20);
             HealStamina(20);
         }
-
-        if (playerMovement.isDashing)
-        {
-            if (!hasConsumedStamina)
-            {
-                TakeStamina(20);
-                hasConsumedStamina = true;
-            }
-        }
-        else
-        {
-            hasConsumedStamina = false;
-        }
     }
 
-    public override void TakeDamage(float amount)
-    {
-        base.TakeDamage(amount);
-        healthBar.UpdateBar(currentHealth);        
-    }
+    //public override void TakeDamage(float amount)
+    //{
+    //    base.TakeDamage(amount);
+    //    healthBar.UpdateBar(currentHealth);        
+    //}
 
     public override void Die()
     {
@@ -76,22 +64,21 @@ public class PlayerHealth : Health
         StartCoroutine(FindFirstObjectByType<PauseMenu>().ShowGameOver());
     }
 
-
     public void TakeStamina(float amount)
     {
-        if (currentStamina <= 0)
+        if (currentStamina < amount)
         {
             return;
         }
         currentStamina = Mathf.Clamp(currentStamina - amount, 0, startingStamina);
-        staminaBar.UpdateBar(staminaBar.CurrentValue - amount);
+        staminaBar.UpdateBar(currentStamina - amount);
     }
 
-    public override void Heal(float amount)
-    {
-        base.Heal(amount);
-        healthBar.UpdateBar(currentHealth);
-    }
+    //public override void Heal(float amount)
+    //{
+    //    base.Heal(amount);
+    //    healthBar.UpdateBar(currentHealth);
+    //}
 
     public void HealStamina(float amount)
     {
@@ -99,12 +86,10 @@ public class PlayerHealth : Health
         staminaBar.UpdateBar(currentStamina);
     }
 
-    public override void SetHealth(float value)
+    public override void SetBarsValue(float value)
     {
-        base.SetHealth(value);
-        healthBar.Initialize(currentHealth);
+        base.SetBarsValue(value);
         staminaBar.Initialize(currentStamina);
-        healthBar.UpdateBar(currentHealth);
         staminaBar.UpdateBar(currentStamina);
     }
 

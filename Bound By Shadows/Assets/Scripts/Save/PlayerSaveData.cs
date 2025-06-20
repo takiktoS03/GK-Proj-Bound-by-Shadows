@@ -26,7 +26,7 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
         string json = state as string;
         var data = JsonUtility.FromJson<PlayerData>(json);
         var health = GetComponent<Health>();
-        health.SetHealth(data.hp);
+        health.SetBarsValue(data.hp);
         //this.level = data.level;
     }
 }

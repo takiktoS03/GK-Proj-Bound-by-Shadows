@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: bffb4eaf8de8ee34b8ca6f7cdedaa35e
+guid: 4a388764bbd67834f826ba3422645118
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1708997961419951014
     second: skeleton_idle_0
+  - first:
+      213: 2148123082584908
+    second: skeleton_idle_1
+  - first:
+      213: -3835917868862761571
+    second: skeleton_idle_2
+  - first:
+      213: 8813561051025670744
+    second: skeleton_idle_3
+  - first:
+      213: -6930698019378787929
+    second: skeleton_idle_4
+  - first:
+      213: 3255168480103273601
+    second: skeleton_idle_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,20 +131,20 @@ TextureImporter:
       name: skeleton_idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 326
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 14
+        y: 10
+        width: 269
+        height: 410
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 72586803062479540b85d78e1b610aa9
-      internalID: -1672055150
+      spriteID: a5472b3a86b6848e0800000000000000
+      internalID: -1708997961419951014
       vertices: []
       indices: 
       edges: []
@@ -138,20 +153,20 @@ TextureImporter:
       name: skeleton_idle_1
       rect:
         serializedVersion: 2
-        x: 326
-        y: 0
-        width: 326
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 300
+        y: 10
+        width: 268
+        height: 410
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 61d780742e8311b4aa6ec4fa98b8b216
-      internalID: 1162552999
+      spriteID: c437541e4b1a70000800000000000000
+      internalID: 2148123082584908
       vertices: []
       indices: 
       edges: []
@@ -160,20 +175,20 @@ TextureImporter:
       name: skeleton_idle_2
       rect:
         serializedVersion: 2
-        x: 654
-        y: 0
-        width: 343
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 581
+        y: 9
+        width: 261
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 84bf703112aa96842b49ad32927c2ccf
-      internalID: 1378084786
+      spriteID: d959cd6950514cac0800000000000000
+      internalID: -3835917868862761571
       vertices: []
       indices: 
       edges: []
@@ -182,20 +197,20 @@ TextureImporter:
       name: skeleton_idle_3
       rect:
         serializedVersion: 2
-        x: 1013
-        y: 0
-        width: 328
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 858
+        y: 7
+        width: 259
+        height: 413
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d88ef8ef41b97754f9548afdb0bbedfa
-      internalID: 844392901
+      spriteID: 8528a94641f005a70800000000000000
+      internalID: 8813561051025670744
       vertices: []
       indices: 
       edges: []
@@ -204,20 +219,20 @@ TextureImporter:
       name: skeleton_idle_4
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 0
-        width: 291
-        height: 499
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1134
+        y: 10
+        width: 270
+        height: 410
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8ad99fe53087eba44811621a71860a27
-      internalID: 999681560
+      spriteID: 7a98c6d2fd631df90800000000000000
+      internalID: -6930698019378787929
       vertices: []
       indices: 
       edges: []
@@ -226,20 +241,20 @@ TextureImporter:
       name: skeleton_idle_5
       rect:
         serializedVersion: 2
-        x: 1666
-        y: 0
-        width: 356
-        height: 501
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1418
+        y: 9
+        width: 268
+        height: 411
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a55cd014715756d40b6a8eb023049089
-      internalID: -1597733233
+      spriteID: 1849a9c6c7eac2d20800000000000000
+      internalID: 3255168480103273601
       vertices: []
       indices: 
       edges: []
@@ -248,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fbcc94ce7a83656438a5e8dc803bb20b
+    spriteID: cbf471b95c53dc748a32e419f458fd9e
     internalID: 0
     vertices: []
     indices: 
@@ -258,12 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      skeleton_idle_0: -1672055150
-      skeleton_idle_1: 1162552999
-      skeleton_idle_2: 1378084786
-      skeleton_idle_3: 844392901
-      skeleton_idle_4: 999681560
-      skeleton_idle_5: -1597733233
+      skeleton_idle_0: -1708997961419951014
+      skeleton_idle_1: 2148123082584908
+      skeleton_idle_2: -3835917868862761571
+      skeleton_idle_3: 8813561051025670744
+      skeleton_idle_4: -6930698019378787929
+      skeleton_idle_5: 3255168480103273601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

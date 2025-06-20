@@ -28,6 +28,7 @@ namespace EthanTheHero
 		public float dashPower = 30f;
 		public float dashingCoolDown = 1f;
 		public float dashingTime = 0.2f;
+		public float dashCost = 20f;
 
 		[Space(20)]
 

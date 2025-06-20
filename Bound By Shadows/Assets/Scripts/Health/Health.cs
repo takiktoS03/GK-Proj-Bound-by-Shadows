@@ -11,7 +11,13 @@ using UnityEngine;
  */
 public class Health : MonoBehaviour
 {
+    [Header("Health of Entity")]
     [SerializeField] protected float startingHealth;
+
+    [Header("Health Bar")]
+    [SerializeField] protected MicroBar healthBar;
+
+    [Header("Invulnerability Parameters")]
     [SerializeField] protected float damageCooldown = 0.75f;
 
     protected float currentHealth;
@@ -24,6 +30,7 @@ public class Health : MonoBehaviour
     protected virtual void Awake()
     {
         currentHealth = startingHealth;
+        healthBar.Initialize(startingHealth);
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
     }
@@ -37,7 +44,7 @@ public class Health : MonoBehaviour
         StartCoroutine(DamageCooldownCoroutine());
 
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
-
+        healthBar.UpdateBar(currentHealth);
         if (currentHealth > 0)
         {
             anim.SetTrigger("Hurt");
@@ -45,6 +52,7 @@ public class Health : MonoBehaviour
         else
         {
             Die();
+            dead = true;
         }
     }
     public virtual void Die()
@@ -56,12 +64,16 @@ public class Health : MonoBehaviour
     public virtual void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
+        healthBar.UpdateBar(currentHealth);
     }
 
-    public virtual void SetHealth(float value)
+    public virtual void SetBarsValue(float value)
     {
         Debug.Log(value);
         currentHealth = Mathf.Clamp(value, 0, startingHealth);
+
+        healthBar.Initialize(currentHealth);
+        healthBar.UpdateBar(currentHealth);
     }
 
     protected virtual IEnumerator DamageCooldownCoroutine()
