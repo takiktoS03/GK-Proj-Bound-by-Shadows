@@ -81,6 +81,13 @@ public class PlayerHealth : Health
     //    dodanie dzwiekow Heal
     //}
 
+    public override void TakeDamage(float amount)
+    {
+        base.TakeDamage(amount);
+        SoundManager.Instance?.PlayHurt(); // ← DŹWIĘK OBRAŻEŃ
+    }
+
+
     public void HealStamina(float amount)
     {
         currentStamina = Mathf.Clamp(currentStamina + amount, 0, startingStamina);

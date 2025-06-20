@@ -10,6 +10,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip chestOpenSound;
     public AudioClip jumpSound;
     public AudioClip dashSound;
+    public AudioClip hurtSound;
+    public AudioClip destroyBarrelSound;
 
     private AudioSource audioSource;
 
@@ -58,8 +60,10 @@ public class SoundManager : MonoBehaviour
 
     // Skróty:
     public void PlayStep() => PlaySound(stepSound);
-    public void PlayDoor() => PlaySound(doorOpenSound);
     public void PlayChest() => PlaySound(chestOpenSound);
     public void PlayJump() => PlaySound(jumpSound);
     public void PlayDash() => PlaySound(dashSound);
+    public void PlayHurt() => PlaySound(hurtSound);
+    public void PlayDoor() => PlaySound(doorOpenSound);
+    public void PlayBarrel() => PlaySound(destroyBarrelSound);
 }

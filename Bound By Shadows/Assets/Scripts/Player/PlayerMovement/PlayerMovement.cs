@@ -76,7 +76,6 @@ namespace EthanTheHero
             move.x = Input.GetAxisRaw("Horizontal");
             dashButtonPressed = Input.GetKeyDown(KeyCode.W);
             jumpButtonPressed = Input.GetButtonDown("Jump");
-            
 
             jump();
 
@@ -161,6 +160,10 @@ namespace EthanTheHero
         {
             canDash = false;
             isDashing = true;
+
+            //sound
+            SoundManager.Instance?.PlayDash();
+
             float oriGrav = myBody.gravityScale;
             myBody.gravityScale = 0f;
 
@@ -179,6 +182,9 @@ namespace EthanTheHero
             isDashing = false;
             yield return new WaitForSeconds(data.dashingCoolDown);
             canDash = true;
+
+
+
         }
         #endregion
 
@@ -190,9 +196,13 @@ namespace EthanTheHero
                 isJumping = false;
 
 
+
             if (jumpButtonPressed && grounded)
             {
                 isJumping = true;
+
+                SoundManager.Instance?.PlayJump();
+
                 myBody.linearVelocity = new Vector2(myBody.linearVelocity.x, data.jumpHeight);
             }
         }

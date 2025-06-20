@@ -25,6 +25,8 @@ public class DoorTrigger : MonoBehaviour
                 spriteRenderer.sprite = openDoorSprite;
             }
 
+            SoundManager.Instance?.PlayDoor();
+
             if (player != null && teleportTarget != null)
             {
                 player.transform.position = teleportTarget.position;

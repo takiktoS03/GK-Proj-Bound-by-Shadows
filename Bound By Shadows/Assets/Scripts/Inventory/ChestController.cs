@@ -34,6 +34,9 @@ public class ChestController : MonoBehaviour
         {
             animator.SetTrigger("Open");
             isOpen = true;
+
+            SoundManager.Instance?.PlayChest();
+
             if (promptUI != null)
                 promptUI.gameObject.SetActive(false);
             if (chestPanel != null)

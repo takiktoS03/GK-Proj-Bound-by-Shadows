@@ -52639,9 +52639,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b1dd3279cb49cd468791717f5b052ed, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 17f758258e0baea44a148e3bfced3e29, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 87a4b92f92f5d164fa64f2264b9bad55, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
       propertyPath: stepSound
       value: 
       objectReference: {fileID: 8300000, guid: 51734eeaa24bddb49a11330cafb8d108, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: doorOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e562247749a98e44fb6815e5dde6757c, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: chestOpenSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ca330b4b8042e4749b83aead152444c8, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: destroyBarrelSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f7c46411e40629a44b9c8519c2d0bbbb, type: 3}
     - target: {fileID: 7875478684098875918, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -52905,11 +52929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -109.69023
+      value: -102.41
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.687
+      value: 51.91
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.z

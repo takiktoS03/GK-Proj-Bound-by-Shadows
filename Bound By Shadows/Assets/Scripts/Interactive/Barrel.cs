@@ -19,6 +19,9 @@ public class Barrel : MonoBehaviour
         if (!destroyed && other.CompareTag("PlayerAttack"))
         {
             destroyed = true;
+
+            SoundManager.Instance?.PlayBarrel();
+
             var saveable = GetComponent<SaveableObject>();
             BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);
             anim.SetTrigger("Destroy");
