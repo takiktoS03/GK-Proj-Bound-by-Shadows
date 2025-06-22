@@ -28,15 +28,19 @@ namespace EthanTheHero
 		private const string attack03 = "Attack03";
 		private const string notAttacking = "NotAttacking";
 
-		#endregion
+		// dzwiek
+        private SoundManager soundManager;
 
-		void Awake()
+        #endregion
+
+        void Awake()
 		{
 			myAnim = GetComponent<Animator>();
 			playerAnim = GetComponent<PlayerAnimation>();
 			myBody = GetComponent<Rigidbody2D>();
 			playerMv = GetComponent<PlayerMovement>();
-		}
+            soundManager = SoundManager.Instance;
+        }
 
         void Start()
         {
@@ -66,6 +70,7 @@ namespace EthanTheHero
 			//Combo attack mechanic
 			if (Input.GetMouseButtonDown(0) && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
 				myAnim.SetTrigger(attack01);
+			soundManager?.PlayLightAttack();
 
 			//Set combo attack 01 
 			if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
@@ -79,6 +84,7 @@ namespace EthanTheHero
 				{
 					myAnim.SetTrigger(attack02);
 					atkButtonClickedOnAtk01 = false;
+					soundManager?.PlayLightAttack();
 
 				}
 				//Set if attack 01 animation is ended playying and attack button is not clicked while attack 01 animation is playing
@@ -98,7 +104,7 @@ namespace EthanTheHero
 				{
 					myAnim.SetTrigger(attack03);
 					atkButtonClickedOnAtk02 = false;
-
+					soundManager?.PlayHeavyAttack();
 				}
 				//Set if attack 02 animation is ended playying and attack button is not clicked while attack 02 animation is playing
 				else if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !atkButtonClickedOnAtk02)

@@ -4,14 +4,18 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [Header("DŸwiêki")]
-    public AudioClip stepSound;
+    [Header("Dzwieki otoczenia")]
     public AudioClip doorOpenSound;
     public AudioClip chestOpenSound;
+
+    public AudioClip destroyBarrelSound;
+    [Header("Bohater")]
+    public AudioClip lightAttackSound;
+    public AudioClip heavyAttackSound;
     public AudioClip jumpSound;
     public AudioClip dashSound;
     public AudioClip hurtSound;
-    public AudioClip destroyBarrelSound;
+    public AudioClip stepSound;
 
     private AudioSource audioSource;
 
@@ -66,4 +70,6 @@ public class SoundManager : MonoBehaviour
     public void PlayHurt() => PlaySound(hurtSound);
     public void PlayDoor() => PlaySound(doorOpenSound);
     public void PlayBarrel() => PlaySound(destroyBarrelSound);
+    public void PlayLightAttack() => PlaySound(lightAttackSound);
+    public void PlayHeavyAttack() => PlaySound(heavyAttackSound);
 }

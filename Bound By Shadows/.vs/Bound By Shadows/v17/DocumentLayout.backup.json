@@ -42,8 +42,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Interactive\\Barrel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:20:44.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T22:20:44.572Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\ChestController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAowCUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T22:07:38.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T22:07:38.701Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAAAowMsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T21:53:35.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T21:53:35.447Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\MeleeEnemy.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T19:47:01.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T19:47:01.175Z"
             }
           ]
         }
