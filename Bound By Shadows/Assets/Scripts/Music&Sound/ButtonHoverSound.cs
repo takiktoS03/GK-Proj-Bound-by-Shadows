@@ -1,6 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/* Odtwarza dŸwiêk najechania na przycisk UI.
+   - Wykrywa zdarzenie `OnPointerEnter` i odtwarza przypisany dŸwiêk hover.
+   - Wyszukuje AudioSource w scenie dynamicznie.
+
+   Autor: Julia Bigaj
+*/
+
 public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
 {
     public AudioClip hoverSound;

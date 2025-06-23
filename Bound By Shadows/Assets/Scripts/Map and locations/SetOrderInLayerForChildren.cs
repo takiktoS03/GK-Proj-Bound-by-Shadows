@@ -1,9 +1,12 @@
 using UnityEngine;
 
-/**
- Julia Bigaj
- Ustawianie u rodzica (Dekoracje) automatycznie warstwy 3 u jego dzieci
- **/
+/* Skrypt przypisuje wszystkim dzieciom (z komponentem SpriteRenderer) okreœlony `sortingOrder`.
+   - U¿ywany g³ównie przy dekoracjach, aby ustawiæ odpowiedni¹ warstwê renderowania sprite'ów.
+   - Mo¿e byæ przypisany do obiektu nadrzêdnego (np. "Dekoracje").
+
+   Autor: Julia Bigaj
+*/
+
 public class SetOrderInLayerForChildren : MonoBehaviour
 {
     public int orderInLayer = 2;
@@ -15,11 +18,5 @@ public class SetOrderInLayerForChildren : MonoBehaviour
         {
             sr.sortingOrder = orderInLayer;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

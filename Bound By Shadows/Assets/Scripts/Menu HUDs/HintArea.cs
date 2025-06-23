@@ -1,6 +1,12 @@
 using UnityEngine;
 using TMPro;
 
+/* Wyœwietla podpowiedŸ tekstow¹, gdy gracz wchodzi w okreœlon¹ strefê (trigger).
+   - Wspó³pracuje z `HintController`, by pokazaæ/ukryæ wiadomoœæ.
+
+   Autor: Julia Bigaj
+*/
+
 public class HintArea : MonoBehaviour
 {
     public string message;

@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
+/* Obs³uguje wprowadzenie do gry w postaci sekwencji obrazów i narracji.
+   - Odtwarza dŸwiêk, animacje i przejœcia.
+   - Na koñcu automatycznie ³aduje poziom gry (`Level 1 - Cave`).
+
+   Autor: Julia Bigaj
+*/
+
 public class IntroController : MonoBehaviour
 {
     public GameObject image1;

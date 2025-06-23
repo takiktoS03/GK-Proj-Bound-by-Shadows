@@ -2,6 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/* Zarz¹dza menu pauzy i ekranem koñca gry.
+   - Obs³uguje pauzowanie, wznawianie, zapisywanie, wczytywanie i wyjœcie do menu g³ównego.
+   - Zatrzymuje czas gry i blokuje interakcje UI w odpowiednich momentach.
+
+   Autor: Julia Bigaj
+*/
+
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;

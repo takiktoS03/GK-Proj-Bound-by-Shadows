@@ -1,5 +1,13 @@
 using UnityEngine;
 
+/* Centralny mened¿er efektów dŸwiêkowych w grze.
+   - Zawiera skrócone metody do odtwarzania konkretnych dŸwiêków (atak, beczka, skrzynia, itp.).
+   - Rozdziela dŸwiêki kroków i inne efekty na osobne Ÿród³a AudioSource.
+   - Singleton dzia³aj¹cy globalnie.
+
+   Autor: Julia Bigaj
+*/
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
@@ -7,8 +15,8 @@ public class SoundManager : MonoBehaviour
     [Header("Dzwieki otoczenia")]
     public AudioClip doorOpenSound;
     public AudioClip chestOpenSound;
-
     public AudioClip destroyBarrelSound;
+
     [Header("Bohater")]
     public AudioClip lightAttackSound;
     public AudioClip heavyAttackSound;
@@ -16,6 +24,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip dashSound;
     public AudioClip hurtSound;
     public AudioClip stepSound;
+
+    [Header("£amig³ówki")]
+    public AudioClip leverPullSound;
+    public AudioClip moveStoneSound;
+
 
     private AudioSource audioSource;
 
@@ -72,4 +85,6 @@ public class SoundManager : MonoBehaviour
     public void PlayBarrel() => PlaySound(destroyBarrelSound);
     public void PlayLightAttack() => PlaySound(lightAttackSound);
     public void PlayHeavyAttack() => PlaySound(heavyAttackSound);
+    public void PlayLever() => PlaySound(leverPullSound);
+    public void PlayStone() => PlaySound(moveStoneSound);
 }

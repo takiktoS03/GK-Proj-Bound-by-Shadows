@@ -2,6 +2,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/* Ten skrypt obs³uguje interakcjê gracza ze skrzyni¹ zawieraj¹c¹ list.
+   - Gracz mo¿e otworzyæ skrzyniê klawiszem "F", gdy jest w pobli¿u.
+   - Po otwarciu wyœwietlany jest interfejs z listem, a UI zostaje zablokowane.
+   - Po ponownym naciœniêciu "F" list trafia do ekwipunku.
+   - Komponent wspó³pracuje z InventoryManager i UIStateManager.
+
+   Autor: Julia Bigaj
+*/
+
 public class ChestController : MonoBehaviour
 {
     private Animator animator;
@@ -41,6 +50,8 @@ public class ChestController : MonoBehaviour
                 promptUI.gameObject.SetActive(false);
             if (chestPanel != null)
                 chestPanel.SetActive(true);
+
+            UIStateManager.isUIOpen = true;
         }
 
         else if (isOpen && !isLetterTaken && Input.GetKeyDown(KeyCode.F))
@@ -81,6 +92,8 @@ public class ChestController : MonoBehaviour
             letterIcon.transform.parent.gameObject.SetActive(false); // jeœli ikona ma rodzica np. slot
             isLetterTaken = true;
             Debug.Log("List zosta³ zabrany!");
+
+            UIStateManager.isUIOpen = false;
         }
     }
 

@@ -1,6 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+
+/* Skrypt zarz¹dza systemem ekwipunku:
+   - Przechowuje zwyk³e przedmioty i zebrane listy.
+   - Zapewnia singleton, dziêki czemu mo¿na siê do niego ³atwo odwo³ywaæ z innych klas.
+   - Umo¿liwia dodawanie i usuwanie przedmiotów oraz list.
+
+   Autor: Julia Bigaj
+*/
+
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;

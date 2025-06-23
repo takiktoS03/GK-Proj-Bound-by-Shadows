@@ -1,6 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/* Globalny mened¿er muzyki i narracji.
+   - Odtwarza odpowiedni¹ muzykê w zale¿noœci od sceny (menu, intro, gameplay).
+   - Obs³uguje oddzielne Ÿród³a dŸwiêku dla narracji i muzyki.
+   - Singleton dzia³aj¹cy miêdzy scenami.
+
+   Autor: Julia Bigaj
+*/
+
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance { get; private set; }

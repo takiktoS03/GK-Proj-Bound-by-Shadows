@@ -2,6 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+/* Obs³uguje przyciski menu g³ównego: rozpocznij grê, wczytaj grê, wyjdŸ.
+   - Wczytuje scenê gry i inicjalizuje system zapisu przy wczytaniu.
+
+   Autor: Julia Bigaj
+*/
+
 public class MainMenu : MonoBehaviour
 {
     public void StartNewGame()

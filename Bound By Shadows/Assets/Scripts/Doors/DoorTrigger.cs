@@ -1,14 +1,26 @@
 using UnityEngine;
 using TMPro;
 
+/* Ten skrypt obs³uguje interakcjê gracza z drzwiami w grze 2D w Unity.
+   Gdy gracz wejdzie w strefê kolizji drzwi (trigger), pojawia siê komunikat zachêcaj¹cy do interakcji.
+   Naciœniêcie klawisza "F" powoduje:
+   - zmianê sprite'a drzwi na otwarte (jeœli przypisano grafikê),
+   - odtworzenie dŸwiêku drzwi (jeœli SoundManager istnieje),
+   - teleportacjê gracza w okreœlone miejsce (teleportTarget).
+
+   Skrypt oparty jest na systemie kolizji 2D (OnTriggerEnter2D / OnTriggerExit2D), a tekst promptu jest ukrywany/ujawniany dynamicznie.
+
+   Autor: Julia Bigaj
+*/
+
 public class DoorTrigger : MonoBehaviour
 {
-    public GameObject promptText;
-    public Sprite openDoorSprite;
-    public Transform teleportTarget;
-    private SpriteRenderer spriteRenderer;
-    private bool playerInTrigger = false;
-    private GameObject player;
+    public GameObject promptText;           // Obiekt z tekstem informuj¹cym gracza o mo¿liwoœci interakcji
+    public Sprite openDoorSprite;           // Sprite drzwi po otwarciu
+    public Transform teleportTarget;        // Pozycja, do której teleportowany jest gracz
+    private SpriteRenderer spriteRenderer;  // Komponent renderuj¹cy sprite drzwi
+    private bool playerInTrigger = false;   // Czy gracz znajduje siê w triggerze
+    private GameObject player;              // Referencja do obiektu gracza
 
     private void Start()
     {

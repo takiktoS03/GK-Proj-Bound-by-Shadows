@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using static UIStateManager;
 
 namespace EthanTheHero
 {
@@ -49,7 +50,7 @@ namespace EthanTheHero
 
         void Update()
 		{
-            if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
+            if (isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
 				return;
 
 			BasicAttackCombo();
@@ -57,7 +58,7 @@ namespace EthanTheHero
 
 		void FixedUpdate()
 		{
-			if (playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
+			if (isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
 				return;
 
 			BasicAttackMethod();
@@ -69,11 +70,14 @@ namespace EthanTheHero
 		{
 			//Combo attack mechanic
 			if (Input.GetMouseButtonDown(0) && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02") && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
-				myAnim.SetTrigger(attack01);
-			soundManager?.PlayLightAttack();
+            {
+                myAnim.SetTrigger(attack01);
+                soundManager?.PlayLightAttack(); // ✅ odpalany tylko przy rozpoczęciu ataku
+            }
 
-			//Set combo attack 01 
-			if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
+
+            //Set combo attack 01 
+            if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
 			{
 				//See if attak button is clicked
 				if (Input.GetMouseButtonDown(0))

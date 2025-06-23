@@ -1,6 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/* Odpowiada za zarz¹dzanie interfejsem u¿ytkownika ekwipunku.
+   - Otwiera/zamyka panel ekwipunku po naciœniêciu klawisza "E".
+   - Odœwie¿a sloty oraz umo¿liwia wyœwietlanie treœci listów.
+   - Korzysta z InventoryManager i InventorySlotSpawner.
+
+   Autor: Julia Bigaj
+*/
+
 public class InventoryUI : MonoBehaviour
 {
     public static InventoryUI Instance;
@@ -35,6 +43,8 @@ public class InventoryUI : MonoBehaviour
     {
         isOpen = !isOpen;
         inventoryPanel.SetActive(isOpen);
+
+        UIStateManager.isUIOpen = isOpen;
 
         if (isOpen)
         {
