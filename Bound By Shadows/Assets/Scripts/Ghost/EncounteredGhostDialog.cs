@@ -10,6 +10,14 @@ public class EncounteredGhostDialog : MonoBehaviour
     [TextArea] public string dialog3 = "Tak po prostu mi pomożesz? Nie mam nic co mógłbym ci dać w zamian";
     [TextArea] public string dialog4 = "Masz ale jeszcze o tym nie wiesz. Chodź, musimy sie spieszyć";
 
+    [Header("Nagrania dialogów")]
+    public AudioClip dialog1Audio;
+    public AudioClip dialog2Audio;
+    public AudioClip dialog3Audio;
+    public AudioClip dialog4Audio;
+
+    private AudioSource audioSource;
+
     public GameObject encounteredGhost; // Duszek, który znika
     public GameObject ghostWithCam;     // Duszek, który pojawi się po dialogu
 
@@ -22,6 +30,9 @@ public class EncounteredGhostDialog : MonoBehaviour
     {
         if (hasTriggered) return; // zapobiega powtórnemu wywołaniu
         if (!other.CompareTag("Player")) return;
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+
 
         hasTriggered = true;
         SoundManager.Instance?.StopSteps();
@@ -63,17 +74,21 @@ public class EncounteredGhostDialog : MonoBehaviour
 
     private IEnumerator DialogSequence(TextUI textUI)
     {
-        textUI.ShowTextDialog(dialog1, 3f);
-        yield return new WaitForSeconds(3f);
+        textUI.ShowTextDialog(dialog1, 2f);
+        PlayVoice(dialog1Audio);
+        yield return new WaitForSeconds(2f);
 
-        textUI.ShowTextDialog(dialog2, 3f);
-        yield return new WaitForSeconds(3f);
+        textUI.ShowTextDialog(dialog2, 10f);
+        PlayVoice(dialog2Audio);
+        yield return new WaitForSeconds(10f);
 
-        textUI.ShowTextDialog(dialog3, 3f);
-        yield return new WaitForSeconds(3f);
+        textUI.ShowTextDialog(dialog3, 6f);
+        PlayVoice(dialog3Audio);
+        yield return new WaitForSeconds(6f);
 
-        textUI.ShowTextDialog(dialog4, 3f);
-        yield return new WaitForSeconds(3f);
+        textUI.ShowTextDialog(dialog4, 10f);
+        PlayVoice(dialog4Audio);
+        yield return new WaitForSeconds(10f);
 
         if (encounteredGhost != null)
             encounteredGhost.SetActive(false);
@@ -92,4 +107,14 @@ public class EncounteredGhostDialog : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private void PlayVoice(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
 }
