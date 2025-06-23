@@ -14060,7 +14060,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1024
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -14127,7 +14127,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -39107,12 +39107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca9461aeb07684458f0ab10bffbb0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog1: "Kim jeste\u015B?"
-  dialog2: "Kim\u015B kto pomo\u017Ce ci wydosta\u0107 si\u0119 z tego zamku. Tak
-    si\u0119 sk\u0142ada, \u017Ce jestem jednym z mieszka\u0144c\xF3w"
-  dialog3: "Tak po prostu mi pomo\u017Cesz? Nie mam nic co m\xF3g\u0142bym ci da\u0107
-    w zamian"
-  dialog4: "Masz ale jeszcze o tym nie wiesz. Chod\u017A, musimy sie spieszy\u0107"
+  dialog1: "Ethan: Kim jeste\u015B?"
+  dialog2: "Ghost: Kim\u015B kto pomo\u017Ce ci wydosta\u0107 si\u0119 z tego zamku.
+    Tak si\u0119 sk\u0142ada, \u017Ce jestem jednym z mieszka\u0144c\xF3w"
+  dialog3: "Ethan: Tak po prostu mi pomo\u017Cesz? Nie mam nic co m\xF3g\u0142bym
+    ci da\u0107 w zamian"
+  dialog4: "Ghost: Masz ale jeszcze o tym nie wiesz. Chod\u017A, musimy sie spieszy\u0107"
   encounteredGhost: {fileID: 1098256756}
   ghostWithCam: {fileID: 2140825071}
 --- !u!61 &1114141232
@@ -47107,11 +47107,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2949536448734561830, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -171.22
+      value: -181.96
       objectReference: {fileID: 0}
     - target: {fileID: 2949536448734561830, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.56
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2949536448734561830, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -72865,11 +72865,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -133.83
+      value: -132.55
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.87
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.z

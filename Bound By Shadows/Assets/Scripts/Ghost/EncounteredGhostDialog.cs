@@ -15,6 +15,7 @@ public class EncounteredGhostDialog : MonoBehaviour
 
     private PlayerMovement movement;
     private PlayerAnimation animation;
+    private PlayerAttackMethod attackMethod;
     private bool hasTriggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +24,7 @@ public class EncounteredGhostDialog : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         hasTriggered = true;
+        SoundManager.Instance?.StopSteps();
 
         // Wyłącz ruch gracza
         movement = other.GetComponent<PlayerMovement>();
@@ -37,12 +39,17 @@ public class EncounteredGhostDialog : MonoBehaviour
         if (animation != null)
             animation.enabled = false;
 
+        attackMethod = other.GetComponent<PlayerAttackMethod>();
+        if(attackMethod != null)
+            attackMethod.enabled = false;
+
         Animator playerAnim = other.GetComponent<Animator>();
         if (playerAnim != null)
         {
             playerAnim.SetFloat("Speed", 0f);
             playerAnim.SetBool("RunIdlePlayying", false);
             playerAnim.SetBool("Grounded", true);
+            playerAnim.SetBool("Dashing", false);
             playerAnim.SetTrigger("NotAttacking");
         }
 
@@ -79,6 +86,9 @@ public class EncounteredGhostDialog : MonoBehaviour
 
         if (animation != null)
             animation.enabled = true;
+
+        if (attackMethod != null)
+            attackMethod.enabled = true;
 
         Destroy(gameObject);
     }
