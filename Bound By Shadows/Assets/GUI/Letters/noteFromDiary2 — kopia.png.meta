@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "noteFromDiary2 \u2014 kopia_0": -6526563923821975670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

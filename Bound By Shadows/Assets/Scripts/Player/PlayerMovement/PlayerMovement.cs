@@ -32,6 +32,7 @@ namespace EthanTheHero
         private bool jumpButtonPressed;
 
         //Wall Sliding and Wall Jump
+        [HideInInspector] public bool wallSlidingEnabled = true;
         [HideInInspector] public bool wallJump;
         [HideInInspector] public bool wallSliding;
         private RaycastHit2D wall;
@@ -211,6 +212,12 @@ namespace EthanTheHero
         #region Wall Sliding and Wall Jump
         private void WallSlidngMechanic()
         {
+            if (!wallSlidingEnabled)
+            {
+                wallSliding = false;
+                return;
+            }
+
             Vector2 checkDir = move.x > 0 ? Vector2.right : Vector2.left;
             wall = Physics2D.Raycast(WallCheck.position, checkDir, data.wallDistance, wallLayer);
             Debug.DrawRay(WallCheck.position, new Vector2(data.wallDistance, 0f), Color.red);

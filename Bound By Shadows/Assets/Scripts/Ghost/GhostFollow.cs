@@ -1,27 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class GhostFollow : MonoBehaviour
 {
     public Transform player;          // Obiekt gracza
-    public Vector3 offset = new Vector3(0.5f, 2.2f, 0f); // Wzglêdna pozycja nad graczem
-    public float smoothSpeed = 2f;    // Jak szybko duszek siê porusza
-    public float floatAmplitude = 0.5f;  // Amplituda p³ywania góra-dó³
-    public float floatFrequency = 1f;    // Czêstotliwoœæ
+    public Vector3 offset; // WzglÄ™dna pozycja nad graczem
+    public float smoothSpeed = 2f;
+    public float floatAmplitude = 0.5f;  // Amplituda 'pÅ‚ywania' gÃ³ra-dÃ³Å‚
+    public float floatFrequency = 1f;    // CzÄ™stotliwoÅ›Ä‡ 'pÅ‚ywania'
 
     private Vector3 initialOffset;
+    private Vector3 initialScale;
+    Vector3 desiredPosition;
 
     void Start()
     {
         initialOffset = offset;
+        initialScale = transform.localScale;
     }
 
     void Update()
     {
         if (player == null) return;
 
+        // Dostosowanie pozycji i skali duszka do skali gracza
+        float playerDir = Mathf.Sign(player.localScale.x);
+        Vector3 currentOffset = initialOffset;
+        currentOffset.x *= playerDir;
+
+        Vector3 currentScale = initialScale;
+        currentScale.x *= playerDir;
+        transform.localScale = currentScale;
+
         // Dodanie efektu falowania w osi Y
         float floatY = Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
-        Vector3 desiredPosition = player.position + initialOffset + new Vector3(0, floatY, 0);
+        desiredPosition = player.position + currentOffset + new Vector3(0, floatY, 0);
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
     }
 }

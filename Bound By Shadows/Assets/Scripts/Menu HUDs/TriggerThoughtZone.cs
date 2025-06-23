@@ -1,29 +1,32 @@
+ï»¿using EthanTheHero;
 using UnityEngine;
 
 /*
- Skrypt do wyœwietlania myœli bohatera po wejœciu do specjalnej strefy.
- - Pokazuje podany tekst nad g³ow¹ postaci (np. dialog, przemyœlenie).
- - Bazuje na systemie `ThoughtUI`, który zarz¹dza widocznoœci¹ napisu.
- - Tekst jest wyœwietlany na kilka sekund i automatycznie znika.
+ Skrypt do wyÅ“wietlania myÅ“li bohatera po wejÅ“ciu do specjalnej strefy.
+ - Pokazuje podany tekst nad gÂ³owÂ¹ postaci (np. dialog, przemyÅ“lenie).
+ - Bazuje na systemie `ThoughtUI`, ktÃ³ry zarzÂ¹dza widocznoÅ“ciÂ¹ napisu.
+ - Tekst jest wyÅ“wietlany na kilka sekund i automatycznie znika.
 
  Autor: Julia Bigaj
 */
 
 public class TriggerThoughtZone : MonoBehaviour
 {
-    [SerializeField] GameObject player;
     [TextArea]
-    public string thought = "Nie ma innego wyjœcia... \r\nChyba musze po prostu tam skoczyæ i zobaczyæ co siê stanie";
+    public string thought = "Nie ma innego wyjÅ›cia... \r\nChyba musze po prostu tam skoczyÄ‡ i zobaczyÄ‡ co siÄ™ stanie";
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //player.GetComponent<PlayerMovement>().disable;
-            ThoughtUI thoughtUI = FindObjectOfType<ThoughtUI>();
+            PlayerMovement movement = other.GetComponent<PlayerMovement>();
+            if (movement != null)
+                movement.wallSlidingEnabled = false;
+
+            TextUI thoughtUI = FindObjectOfType<TextUI>();
             if (thoughtUI != null)
             {
-                thoughtUI.ShowThought(thought, 3f); // poka¿ na 3 sekundy
+                thoughtUI.ShowTextDialog(thought, 3f, 1); // pokaÅ¼ na 3 sekundy
             }
         }
     }

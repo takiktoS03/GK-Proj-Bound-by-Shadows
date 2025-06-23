@@ -35,7 +35,10 @@ public class PatrolEnemy : MonoBehaviour
 
     private void OnDisable()
     {
-        anim.SetBool("Moving", false);
+        if (anim != null)
+        {
+            anim.SetBool("Moving", false);
+        }
     }
 
     private void Update()
@@ -43,6 +46,7 @@ public class PatrolEnemy : MonoBehaviour
         if (enemy == null) // poprawka, gdy przeciwnik zginie
         {
             Destroy(gameObject);
+            return;
         }
         if (movingLeft)
         {
