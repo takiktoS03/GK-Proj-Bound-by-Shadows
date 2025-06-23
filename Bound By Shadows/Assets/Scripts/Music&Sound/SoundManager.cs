@@ -25,13 +25,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip hurtSound;
     public AudioClip stepSound;
 
-    [Header("£amig³ówki")]
+    [Header("Lamiglowki")]
     public AudioClip leverPullSound;
     public AudioClip moveStoneSound;
 
-
     private AudioSource audioSource;
-
     private AudioSource stepSource;
 
     private void Awake()
@@ -47,10 +45,10 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // G³ówne Ÿród³o do pojedynczych dŸwiêków
+        // Glówne do pojedynczych dzwieków
         audioSource = gameObject.AddComponent<AudioSource>();
 
-        // Osobne Ÿród³o do dŸwiêku kroków (loopowane)
+        // Osobne do dzwieku kroków (loopowane)
         stepSource = gameObject.AddComponent<AudioSource>();
         stepSource.loop = true;
         stepSource.clip = stepSound;
@@ -73,7 +71,6 @@ public class SoundManager : MonoBehaviour
         if (stepSource.isPlaying)
             stepSource.Stop();
     }
-
 
     // Skróty:
     public void PlayStep() => PlaySound(stepSound);

@@ -27619,6 +27619,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4297617746898934239, guid: e76c477cf94574a43a14683917a0a40d, type: 3}
+      propertyPath: stepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 165a83c89869ea049b785233f0ca2afe, type: 3}
     - target: {fileID: 7711086644470604074, guid: e76c477cf94574a43a14683917a0a40d, type: 3}
       propertyPath: startingHealth
       value: 150
@@ -72573,6 +72577,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 7867a1079cc31fd4bbd23f18cf26a6ca, type: 3}
     - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: skeletonStepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: daa4b12a2415c5346b09f27a7f476bd7, type: 3}
+    - target: {fileID: 6289602758939103015, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
       propertyPath: destroyBarrelSound
       value: 
       objectReference: {fileID: 8300000, guid: f7c46411e40629a44b9c8519c2d0bbbb, type: 3}
@@ -72833,6 +72841,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: MinDistance
+      value: 1.0577278
+      objectReference: {fileID: 0}
     - target: {fileID: 2047684291826734871, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: uniqueId
       value: e9bdbbe2-3e32-430c-9d3b-fd9d19a87367
@@ -72851,11 +72863,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -132.55
+      value: -80.28
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.75
+      value: 53.48
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.z

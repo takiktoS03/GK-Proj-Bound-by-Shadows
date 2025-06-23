@@ -20,9 +20,14 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float idleDuration;
 
+    [SerializeField] private AudioSource stepAudioSource;
+    private bool isMoving = false;
+
+
     private float idleTimer;
     private Vector3 initScale;
     private bool movingLeft;
+
     //private Rigidbody2D rb;
 
 
@@ -39,6 +44,10 @@ public class PatrolEnemy : MonoBehaviour
         {
             anim.SetBool("Moving", false);
         }
+
+        if (stepAudioSource != null)
+            stepAudioSource.Stop();
+
     }
 
     private void Update()
@@ -75,6 +84,15 @@ public class PatrolEnemy : MonoBehaviour
     private void ChangeDirection()
     {
         anim.SetBool("Moving", false);
+
+        if (isMoving)
+        {
+            if (stepAudioSource != null && stepAudioSource.isPlaying)
+                stepAudioSource.Stop();
+            isMoving = false;
+        }
+
+
         idleTimer += Time.deltaTime;
         
         if(idleTimer > idleDuration)
@@ -88,6 +106,13 @@ public class PatrolEnemy : MonoBehaviour
     {
         anim.SetBool("Moving", true);
         //idleTimer = 0;
+
+        if (!isMoving)
+        {
+            if (stepAudioSource != null && !stepAudioSource.isPlaying)
+                stepAudioSource.Play();
+            isMoving = true;
+        }
 
         //Facing in direction
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
