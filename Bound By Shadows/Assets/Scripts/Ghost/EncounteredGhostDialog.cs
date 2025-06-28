@@ -22,7 +22,7 @@ public class EncounteredGhostDialog : MonoBehaviour
     public GameObject ghostWithCam;     // Duszek, który pojawi się po dialogu
 
     private PlayerMovement movement;
-    private PlayerAnimation animation;
+    private PlayerAnimation anim;
     private PlayerAttackMethod attackMethod;
     private bool hasTriggered = false;
 
@@ -46,9 +46,9 @@ public class EncounteredGhostDialog : MonoBehaviour
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
 
-        animation = other.GetComponent<PlayerAnimation>();
-        if (animation != null)
-            animation.enabled = false;
+        anim = other.GetComponent<PlayerAnimation>();
+        if (anim != null)
+            anim.enabled = false;
 
         attackMethod = other.GetComponent<PlayerAttackMethod>();
         if(attackMethod != null)
@@ -99,8 +99,8 @@ public class EncounteredGhostDialog : MonoBehaviour
         if (movement != null)
             movement.enabled = true;
 
-        if (animation != null)
-            animation.enabled = true;
+        if (anim != null)
+            anim.enabled = true;
 
         if (attackMethod != null)
             attackMethod.enabled = true;
