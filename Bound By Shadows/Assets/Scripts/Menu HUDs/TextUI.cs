@@ -1,28 +1,28 @@
-using TMPro;
+Ôªøusing TMPro;
 using System.Collections;
 using UnityEngine;
 
 /**
  * @class TextUI
- * @brief Wyúwietla tymczasowe wiadomoúci dialogowe na ekranie w komponentach TextMeshProUGUI.
+ * @brief Wy≈õwietla tymczasowe wiadomo≈õci dialogowe na ekranie w komponentach TextMeshProUGUI.
  *
- * Umoøliwia prezentacjÍ tekstu w jednym z wielu okien dialogowych (np. powiadomieÒ, opisÛw, wskazÛwek).
- * Tekst znika automatycznie po okreúlonym czasie.
+ * Umo≈ºliwia prezentacjƒô tekstu w jednym z wielu okien dialogowych (np. powiadomie≈Ñ, opis√≥w, wskaz√≥wek).
+ * Tekst znika automatycznie po okre≈õlonym czasie.
  *
- * @author Filip Kud≥a
+ * @author Filip Kud≈Ça
  */
 public class TextUI : MonoBehaviour
 {
-    /// @brief Tablica okien dialogowych (TextMeshProUGUI), w ktÛrych moøe pojawiÊ siÍ tekst.
+    /// @brief Tablica okien dialogowych (TextMeshProUGUI), w kt√≥rych mo≈ºe pojawiƒá siƒô tekst.
     public TextMeshProUGUI[] dialogBoxes;
 
-    /// @brief Referencja do aktualnie dzia≥ajπcej coroutine dialogu.
+    /// @brief Referencja do aktualnie dzia≈ÇajƒÖcej coroutine dialogu.
     private Coroutine currentRoutine;
 
     /**
-     * @brief Wyúwietla wiadomoúÊ tekstowπ w okreúlonym oknie dialogowym na okreúlony czas.
-     * @param text Tekst do wyúwietlenia.
-     * @param duration Czas trwania wyúwietlania tekstu (domyúlnie 3 sekundy).
+     * @brief Wy≈õwietla wiadomo≈õƒá tekstowƒÖ w okre≈õlonym oknie dialogowym na okre≈õlony czas.
+     * @param text Tekst do wy≈õwietlenia.
+     * @param duration Czas trwania wy≈õwietlania tekstu (domy≈õlnie 3 sekundy).
      * @param boxIndex Indeks okna dialogowego z tablicy `dialogBoxes`.
      */
     public void ShowTextDialog(string text, float duration = 3f, int boxIndex = 0)
@@ -36,11 +36,11 @@ public class TextUI : MonoBehaviour
     }
 
     /**
-     * @brief Coroutine wyúwietlajπca tekst i ukrywajπca go po up≥ywie czasu.
-     * @param text Tekst do wyúwietlenia.
-     * @param duration Czas trwania wyúwietlania.
-     * @param box Komponent TMP, w ktÛrym tekst ma zostaÊ pokazany.
-     * @return Enumerator uøywany przez `StartCoroutine`.
+     * @brief Coroutine wy≈õwietlajƒÖca tekst i ukrywajƒÖca go po up≈Çywie czasu.
+     * @param text Tekst do wy≈õwietlenia.
+     * @param duration Czas trwania wy≈õwietlania.
+     * @param box Komponent TMP, w kt√≥rym tekst ma zostaƒá pokazany.
+     * @return Enumerator u≈ºywany przez `StartCoroutine`.
      */
     private IEnumerator ShowRoutine(string text, float duration, TextMeshProUGUI box)
     {
@@ -53,3 +53,4 @@ public class TextUI : MonoBehaviour
         box.text = "";
     }
 }
+

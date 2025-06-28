@@ -1,36 +1,36 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 
 /**
  * @class ButtonHoverSound
- * @brief Odtwarza dŸwiêk najechania na przycisk w interfejsie u¿ytkownika.
+ * @brief Odtwarza dÅºwiÄ™k najechania na przycisk w interfejsie uÅ¼ytkownika.
  *
- * Implementuje interfejs `IPointerEnterHandler`, aby reagowaæ na zdarzenie najechania kursorem na element UI.
- * Przy wejœciu kursora na przycisk odtwarzany jest przypisany dŸwiêk typu "hover".
- * ród³o dŸwiêku (`AudioSource`) wyszukiwane jest dynamicznie w scenie przy starcie.
+ * Implementuje interfejs `IPointerEnterHandler`, aby reagowaÄ‡ na zdarzenie najechania kursorem na element UI.
+ * Przy wejÅ›ciu kursora na przycisk odtwarzany jest przypisany dÅºwiÄ™k typu "hover".
+ * Å¹rÃ³dÅ‚o dÅºwiÄ™ku (`AudioSource`) wyszukiwane jest dynamicznie w scenie przy starcie.
  *
  * @author Julia Bigaj
  */
 public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
 {
-    /// @brief DŸwiêk odtwarzany przy najechaniu na przycisk.
+    /// @brief DÅºwiÄ™k odtwarzany przy najechaniu na przycisk.
     public AudioClip hoverSound;
 
-    /// @brief Referencja do komponentu AudioSource, przez który dŸwiêk zostanie odtworzony.
+    /// @brief Referencja do komponentu AudioSource, przez ktÃ³ry dÅºwiÄ™k zostanie odtworzony.
     private AudioSource audioSource;
 
     /**
-     * @brief Inicjalizuje komponent — wyszukuje pierwszy aktywny AudioSource w scenie.
+     * @brief Inicjalizuje komponent â€” wyszukuje pierwszy aktywny AudioSource w scenie.
      */
     void Start()
     {
-        // Szuka AudioSource w obiekcie nadrzêdnym (np. Menu lub MainMenu)
+        // Szuka AudioSource w obiekcie nadrzÄ™dnym (np. Menu lub MainMenu)
         audioSource = FindFirstObjectByType<AudioSource>();
     }
 
     /**
-     * @brief Reaguje na najechanie kursorem na komponent UI — odtwarza dŸwiêk.
-     * @param eventData Dane dotycz¹ce zdarzenia wskaŸnika (myszy).
+     * @brief Reaguje na najechanie kursorem na komponent UI â€” odtwarza dÅºwiÄ™k.
+     * @param eventData Dane dotyczÄ…ce zdarzenia wskaÅºnika (myszy).
      */
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -40,3 +40,4 @@ public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
         }
     }
 }
+

@@ -1,12 +1,12 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
  * @class EndGameTrigger
- * @brief Obs³uguje zakoñczenie gry po dotarciu gracza do punktu koñcowego.
+ * @brief ObsÅ‚uguje zakoÅ„czenie gry po dotarciu gracza do punktu koÅ„cowego.
  *
- * Po wejœciu gracza w trigger, rozpoczyna animacjê przyciemniania ekranu
- * (poprzez zmianê `alpha` komponentu `CanvasGroup`) i ³aduje scenê g³ównego menu.
+ * Po wejÅ›ciu gracza w trigger, rozpoczyna animacjÄ™ przyciemniania ekranu
+ * (poprzez zmianÄ™ `alpha` komponentu `CanvasGroup`) i Å‚aduje scenÄ™ gÅ‚Ã³wnego menu.
  *
  * Wymaga na scenie obiektu z czarnym `Image` (UI) oraz komponentem `CanvasGroup`.
  *
@@ -20,15 +20,15 @@ public class EndGameTrigger : MonoBehaviour
     /// @brief Czas trwania animacji przyciemnienia.
     public float fadeDuration = 1.5f;
 
-    /// @brief Nazwa sceny g³ównego menu, do której nastêpuje powrót po zakoñczeniu gry.
+    /// @brief Nazwa sceny gÅ‚Ã³wnego menu, do ktÃ³rej nastÄ™puje powrÃ³t po zakoÅ„czeniu gry.
     public string mainMenuSceneName = "MainMenu";
 
     /// @brief Czy aktualnie trwa proces przyciemniania.
     private bool isFading = false;
 
     /**
-     * @brief Reaguje na wejœcie gracza w trigger koñcowy.
-     * @param other Obiekt koliduj¹cy (np. gracz).
+     * @brief Reaguje na wejÅ›cie gracza w trigger koÅ„cowy.
+     * @param other Obiekt kolidujÄ…cy (np. gracz).
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,8 +39,8 @@ public class EndGameTrigger : MonoBehaviour
     }
 
     /**
-     * @brief Wykonuje efekt przyciemnienia ekranu i ³aduje scenê g³ównego menu.
-     * @return Enumerator do obs³ugi coroutine.
+     * @brief Wykonuje efekt przyciemnienia ekranu i Å‚aduje scenÄ™ gÅ‚Ã³wnego menu.
+     * @return Enumerator do obsÅ‚ugi coroutine.
      */
     private System.Collections.IEnumerator FadeAndLoadMenu()
     {
@@ -59,3 +59,4 @@ public class EndGameTrigger : MonoBehaviour
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }
+

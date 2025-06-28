@@ -2,7 +2,7 @@
 \hypertarget{class_music_manager}{}\label{class_music_manager}\index{MusicManager@{MusicManager}}
 
 
-Globalny menedøer muzyki i narracji dzia≥ajπcy miÍdzy scenami.  
+Globalny mened≈ºer muzyki i narracji dzia≈ÇajƒÖcy miƒôdzy scenami.  
 
 
 Diagram dziedziczenia dla Music\+Manager\begin{figure}[H]
@@ -15,26 +15,26 @@ Diagram dziedziczenia dla Music\+Manager\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_music_manager_a8b68a2fe4de10e8c7b85933e329dc147}{Play\+Menu\+Music}} ()
-\begin{DoxyCompactList}\small\item\em Odtwarza muzykÍ menu, jeúli jeszcze nie jest aktywna. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Odtwarza muzykƒô menu, je≈õli jeszcze nie jest aktywna. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_music_manager_a22ca29f66250e3ea784c73ab3ca71ff9}{Play\+Gameplay\+Music}} (float volume=1f)
-\begin{DoxyCompactList}\small\item\em Odtwarza muzykÍ t≥a do rozgrywki z domyúlnπ lub okreúlonπ g≥oúnoúciπ. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Odtwarza muzykƒô t≈Ça do rozgrywki z domy≈õlnƒÖ lub okre≈õlonƒÖ g≈Ço≈õno≈õciƒÖ. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_music_manager_acae13bdcf94095412d2fcf16379e651a}{Play\+Intro\+Audio}} ()
-\begin{DoxyCompactList}\small\item\em Odtwarza narracjÍ i muzykÍ w scenie Intro. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Odtwarza narracjƒô i muzykƒô w scenie Intro. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_music_manager_afd8db0dc2b2d05e92924944ad9401035}{Stop\+Music}} ()
 \begin{DoxyCompactList}\small\item\em Zatrzymuje odtwarzanie aktualnej muzyki i narracji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 Audio\+Source \mbox{\hyperlink{class_music_manager_a1c16d18fde1107fe755075dc84b92803}{audio\+Source}}
-\begin{DoxyCompactList}\small\item\em èrÛd≥o audio odpowiedzialne za t≥o muzyczne. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em ≈πr√≥d≈Ço audio odpowiedzialne za t≈Ço muzyczne. \end{DoxyCompactList}\item 
 Audio\+Source \mbox{\hyperlink{class_music_manager_a862b24e4b30e2c01aebb61747b13bc51}{narration\+Source}}
-\begin{DoxyCompactList}\small\item\em èrÛd≥o audio odpowiedzialne za narracjÍ (np. intro). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em ≈πr√≥d≈Ço audio odpowiedzialne za narracjƒô (np. intro). \end{DoxyCompactList}\item 
 Audio\+Clip \mbox{\hyperlink{class_music_manager_a70fde195586da5258e6d3aa86ec0cd40}{menu\+Music}}
-\begin{DoxyCompactList}\small\item\em Muzyka odtwarzana w menu g≥Ûwnym. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Muzyka odtwarzana w menu g≈Ç√≥wnym. \end{DoxyCompactList}\item 
 Audio\+Clip \mbox{\hyperlink{class_music_manager_a632d2343252b16e3fc90bf0e065fc9e6}{gameplay\+Music}}
 \begin{DoxyCompactList}\small\item\em Muzyka odtwarzana podczas gry. \end{DoxyCompactList}\item 
 Audio\+Clip \mbox{\hyperlink{class_music_manager_a817b9d0cb669b3515c0789b61a5290da}{intro\+Narration}}
-\begin{DoxyCompactList}\small\item\em Narracja g≥osowa odtwarzana w scenie Intro. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Narracja g≈Çosowa odtwarzana w scenie Intro. \end{DoxyCompactList}\item 
 Audio\+Clip \mbox{\hyperlink{class_music_manager_a08fc5ed42b7503210e6742fadefee3a4}{intro\+Music}}
 \begin{DoxyCompactList}\small\item\em Muzyka odtwarzana w scenie Intro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{W≈Ça≈õciwo≈õci}
@@ -45,11 +45,11 @@ static \mbox{\hyperlink{class_music_manager}{Music\+Manager}} \mbox{\hyperlink{c
 
 
 \doxysubsection{Opis szczeg√≥≈Çowy}
-Globalny menedøer muzyki i narracji dzia≥ajπcy miÍdzy scenami. 
+Globalny mened≈ºer muzyki i narracji dzia≈ÇajƒÖcy miƒôdzy scenami. 
 
-Zarzπdza odtwarzaniem odpowiednich úcieøek düwiÍkowych i narracji w zaleønoúci od aktualnie za≥adowanej sceny. Implementuje wzorzec singletonu, aby zapewniÊ dostÍpnoúÊ miÍdzy scenami ({\ttfamily Dont\+Destroy\+On\+Load}).
+ZarzƒÖdza odtwarzaniem odpowiednich ≈õcie≈ºek d≈∫wiƒôkowych i narracji w zale≈ºno≈õci od aktualnie za≈Çadowanej sceny. Implementuje wzorzec singletonu, aby zapewniƒá dostƒôpno≈õƒá miƒôdzy scenami ({\ttfamily Dont\+Destroy\+On\+Load}).
 
-Obs≥uguje oddzielne ürÛd≥a düwiÍku\+: jedno dla muzyki ({\ttfamily audio\+Source}), drugie dla narracji ({\ttfamily narration\+Source}).
+Obs≈Çuguje oddzielne ≈∫r√≥d≈Ça d≈∫wiƒôku\+: jedno dla muzyki ({\ttfamily audio\+Source}), drugie dla narracji ({\ttfamily narration\+Source}).
 
 \begin{DoxyAuthor}{Autor}
 Julia Bigaj 
@@ -67,11 +67,11 @@ void Music\+Manager.\+Play\+Gameplay\+Music (\begin{DoxyParamCaption}\item[{floa
 
 
 
-Odtwarza muzykÍ t≥a do rozgrywki z domyúlnπ lub okreúlonπ g≥oúnoúciπ. 
+Odtwarza muzykƒô t≈Ça do rozgrywki z domy≈õlnƒÖ lub okre≈õlonƒÖ g≈Ço≈õno≈õciƒÖ. 
 
 
 \begin{DoxyParams}{Parametry}
-{\em volume} & Poziom g≥oúnoúci muzyki (domyúlnie 1f). \\
+{\em volume} & Poziom g≈Ço≈õno≈õci muzyki (domy≈õlnie 1f). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_music_manager_acae13bdcf94095412d2fcf16379e651a}\index{MusicManager@{MusicManager}!PlayIntroAudio@{PlayIntroAudio}}
@@ -82,7 +82,7 @@ void Music\+Manager.\+Play\+Intro\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyP
 
 
 
-Odtwarza narracjÍ i muzykÍ w scenie Intro. 
+Odtwarza narracjƒô i muzykƒô w scenie Intro. 
 
 \Hypertarget{class_music_manager_a8b68a2fe4de10e8c7b85933e329dc147}\index{MusicManager@{MusicManager}!PlayMenuMusic@{PlayMenuMusic}}
 \index{PlayMenuMusic@{PlayMenuMusic}!MusicManager@{MusicManager}}
@@ -92,7 +92,7 @@ void Music\+Manager.\+Play\+Menu\+Music (\begin{DoxyParamCaption}{}{}\end{DoxyPa
 
 
 
-Odtwarza muzykÍ menu, jeúli jeszcze nie jest aktywna. 
+Odtwarza muzykƒô menu, je≈õli jeszcze nie jest aktywna. 
 
 \Hypertarget{class_music_manager_afd8db0dc2b2d05e92924944ad9401035}\index{MusicManager@{MusicManager}!StopMusic@{StopMusic}}
 \index{StopMusic@{StopMusic}!MusicManager@{MusicManager}}
@@ -117,7 +117,7 @@ Audio\+Source Music\+Manager.\+audio\+Source}
 
 
 
-èrÛd≥o audio odpowiedzialne za t≥o muzyczne. 
+≈πr√≥d≈Ço audio odpowiedzialne za t≈Ço muzyczne. 
 
 \Hypertarget{class_music_manager_a632d2343252b16e3fc90bf0e065fc9e6}\index{MusicManager@{MusicManager}!gameplayMusic@{gameplayMusic}}
 \index{gameplayMusic@{gameplayMusic}!MusicManager@{MusicManager}}
@@ -147,7 +147,7 @@ Audio\+Clip Music\+Manager.\+intro\+Narration}
 
 
 
-Narracja g≥osowa odtwarzana w scenie Intro. 
+Narracja g≈Çosowa odtwarzana w scenie Intro. 
 
 \Hypertarget{class_music_manager_a70fde195586da5258e6d3aa86ec0cd40}\index{MusicManager@{MusicManager}!menuMusic@{menuMusic}}
 \index{menuMusic@{menuMusic}!MusicManager@{MusicManager}}
@@ -157,7 +157,7 @@ Audio\+Clip Music\+Manager.\+menu\+Music}
 
 
 
-Muzyka odtwarzana w menu g≥Ûwnym. 
+Muzyka odtwarzana w menu g≈Ç√≥wnym. 
 
 \Hypertarget{class_music_manager_a862b24e4b30e2c01aebb61747b13bc51}\index{MusicManager@{MusicManager}!narrationSource@{narrationSource}}
 \index{narrationSource@{narrationSource}!MusicManager@{MusicManager}}
@@ -167,7 +167,7 @@ Audio\+Source Music\+Manager.\+narration\+Source}
 
 
 
-èrÛd≥o audio odpowiedzialne za narracjÍ (np. intro). 
+≈πr√≥d≈Ço audio odpowiedzialne za narracjƒô (np. intro). 
 
 
 

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
@@ -6,14 +6,14 @@ using UnityEngine.EventSystems;
  * @class EventSystemController
  * @brief Kontroluje istnienie tylko jednego aktywnego EventSystemu po zmianie sceny.
  * 
- * Skrypt zapobiega duplikowaniu EventSystemów po wczytywaniu scen i dba o ich poprawn¹ aktywacjê.
+ * Skrypt zapobiega duplikowaniu EventSystemÃ³w po wczytywaniu scen i dba o ich poprawnÄ… aktywacjÄ™.
  * 
  * @author Julia Bigaj
  */
 public class EventSystemController : MonoBehaviour
 {
     /**
-    * @brief Subskrybuje zdarzenie za³adowania sceny i wykonuje kontrolê EventSystemu.
+    * @brief Subskrybuje zdarzenie zaÅ‚adowania sceny i wykonuje kontrolÄ™ EventSystemu.
     */
     private void OnEnable()
     {
@@ -29,7 +29,7 @@ public class EventSystemController : MonoBehaviour
     }
 
     /**
-    * @brief Usuwa subskrypcjê po dezaktywacji.
+    * @brief Usuwa subskrypcjÄ™ po dezaktywacji.
     */
     private void OnDisable()
     {
@@ -37,9 +37,9 @@ public class EventSystemController : MonoBehaviour
     }
 
     /**
-    * @brief Metoda wywo³ywana po za³adowaniu sceny.
-    * @param scene Za³adowana scena.
-    * @param mode Tryb ³adowania sceny.
+    * @brief Metoda wywoÅ‚ywana po zaÅ‚adowaniu sceny.
+    * @param scene ZaÅ‚adowana scena.
+    * @param mode Tryb Å‚adowania sceny.
     */
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -47,7 +47,7 @@ public class EventSystemController : MonoBehaviour
     }
 
     /**
-     * @brief Sprawdza i usuwa zbêdny EventSystem z hierarchii, jeœli ju¿ istnieje aktywny.
+     * @brief Sprawdza i usuwa zbÄ™dny EventSystem z hierarchii, jeÅ›li juÅ¼ istnieje aktywny.
      */
     void UpdateEventSystemState()
     {
@@ -57,3 +57,4 @@ public class EventSystemController : MonoBehaviour
         }
     }
 }
+

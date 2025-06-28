@@ -110,3 +110,4 @@ public class Health : MonoBehaviour
         anim.SetTrigger("HurtEnded");
     }
 }
+

@@ -33,3 +33,4 @@ public class GhostFloating : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smoothSpeed);
     }
 }
+

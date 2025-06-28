@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class ChestPanelManager
- * @brief Globalny mened¿er odpowiedzialny za stan panelu skrzyni.
+ * @brief Globalny menedÅ¼er odpowiedzialny za stan panelu skrzyni.
  *
- * Umo¿liwia sprawdzenie, czy skrzynia jest aktualnie otwarta, oraz jej zamkniêcie z zewnêtrznych skryptów (np. z menu pauzy).
- * Implementuje wzorzec singletonu do globalnego dostêpu.
+ * UmoÅ¼liwia sprawdzenie, czy skrzynia jest aktualnie otwarta, oraz jej zamkniÄ™cie z zewnÄ™trznych skryptÃ³w (np. z menu pauzy).
+ * Implementuje wzorzec singletonu do globalnego dostÄ™pu.
  *
  * @author Julia Bigaj
  */
@@ -17,7 +17,7 @@ public class ChestPanelManager : MonoBehaviour
     /// @brief Referencja do panelu skrzyni w UI.
     public GameObject chestPanel;
 
-    /// @brief Referencja do skryptu kontroluj¹cego logikê skrzyni.
+    /// @brief Referencja do skryptu kontrolujÄ…cego logikÄ™ skrzyni.
     public ChestController chestController;
 
     /**
@@ -30,7 +30,7 @@ public class ChestPanelManager : MonoBehaviour
 
     /**
      * @brief Sprawdza, czy skrzynia jest aktualnie otwarta.
-     * @return `true` jeœli panel skrzyni jest aktywny, w przeciwnym razie `false`.
+     * @return `true` jeÅ›li panel skrzyni jest aktywny, w przeciwnym razie `false`.
      */
     public bool IsChestOpen()
     {
@@ -38,7 +38,7 @@ public class ChestPanelManager : MonoBehaviour
     }
 
     /**
-     * @brief Zamyka skrzyniê i jej panel z poziomu zewnêtrznych systemów (np. menu pauzy).
+     * @brief Zamyka skrzyniÄ™ i jej panel z poziomu zewnÄ™trznych systemÃ³w (np. menu pauzy).
      */
     public void CloseChest()
     {
@@ -49,3 +49,4 @@ public class ChestPanelManager : MonoBehaviour
             chestController.CloseChestFromOutside();
     }
 }
+

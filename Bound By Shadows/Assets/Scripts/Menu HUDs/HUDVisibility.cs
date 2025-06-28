@@ -1,19 +1,19 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
  * @class HUDVisibility
- * @brief Ukrywa interfejs HUD w scenie menu g³ównego.
+ * @brief Ukrywa interfejs HUD w scenie menu gÅ‚Ã³wnego.
  *
- * Skrypt automatycznie dezaktywuje obiekt HUD, jeœli aktualnie aktywna scena to `"MainMenu"`.
- * Zapewnia, ¿e elementy interfejsu nie s¹ widoczne podczas przebywania w menu.
+ * Skrypt automatycznie dezaktywuje obiekt HUD, jeÅ›li aktualnie aktywna scena to `"MainMenu"`.
+ * Zapewnia, Å¼e elementy interfejsu nie sÄ… widoczne podczas przebywania w menu.
  *
  * @author Julia Bigaj
  */
 public class HUDVisibility : MonoBehaviour
 {
     /**
-     * @brief Sprawdza aktywn¹ scenê i wy³¹cza HUD w menu g³ównym.
+     * @brief Sprawdza aktywnÄ… scenÄ™ i wyÅ‚Ä…cza HUD w menu gÅ‚Ã³wnym.
      */
     void Start()
     {
@@ -24,3 +24,4 @@ public class HUDVisibility : MonoBehaviour
         }
     }
 }
+

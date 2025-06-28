@@ -1,12 +1,12 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 
 /**
  * @class InventorySlotSpawner
- * @brief Generuje dynamiczne sloty listÛw w UI ekwipunku.
+ * @brief Generuje dynamiczne sloty list√≥w w UI ekwipunku.
  *
- * Usuwa stare sloty, tworzy nowe na podstawie zebranych listÛw
- * oraz przypisuje odpowiednie przyciski do wyúwietlania ich zawartoúci.
+ * Usuwa stare sloty, tworzy nowe na podstawie zebranych list√≥w
+ * oraz przypisuje odpowiednie przyciski do wy≈õwietlania ich zawarto≈õci.
  *
  * @author Julia Bigaj
  */
@@ -14,42 +14,42 @@ public class InventorySlotSpawner : MonoBehaviour
 {
     /// @brief Prefab pojedynczego slotu listu.
     public GameObject slotPrefab;
-    /// @brief Rodzic (kontener) dla wygenerowanych slotÛw.
+    /// @brief Rodzic (kontener) dla wygenerowanych slot√≥w.
     public Transform slotsParent;
 
     /**
-     * @brief Odúwieøa wszystkie sloty z listami w interfejsie uøytkownika.
+     * @brief Od≈õwie≈ºa wszystkie sloty z listami w interfejsie u≈ºytkownika.
      *
      * Usuwa poprzednie sloty i generuje nowe na podstawie aktualnego stanu ekwipunku.
      */
     public void RefreshSlots()
     {
-        Debug.Log("Odúwieøam sloty w ekwipunku!");
+        Debug.Log("Od≈õwie≈ºam sloty w ekwipunku!");
 
-        // UsuÒ stare sloty
+        // Usu≈Ñ stare sloty
         foreach (Transform child in slotsParent)
         {
             Destroy(child.gameObject);
         }
 
-        // Dla kaødego listu generujemy slot
+        // Dla ka≈ºdego listu generujemy slot
         foreach (var letter in InventoryManager.Instance.collectedLetters)
         {
             GameObject slot = Instantiate(slotPrefab, slotsParent);
             slot.SetActive(true);
 
-            // Znajdü ikonÍ
+            // Znajd≈∫ ikonƒô
             Image iconImage = slot.transform.GetChild(0).Find("IconImage").GetComponent<Image>();
             iconImage.sprite = letter.icon;
 
-            // Obs≥uga klikniÍcia
+            // Obs≈Çuga klikniƒôcia
             Button button = slot.transform.GetChild(0).GetComponent<Button>();
             if (button != null)
             {
                 LetterData capturedLetter = letter; // Lokalna kopia dla lambdy
                 button.onClick.AddListener(() => {
-                    Debug.Log("KlikniÍto w list: " + capturedLetter.icon.name);
-                    // Przekazujesz ca≥e LetterData
+                    Debug.Log("Klikniƒôto w list: " + capturedLetter.icon.name);
+                    // Przekazujesz ca≈Çe LetterData
                     InventoryUI.Instance.ShowLetterContent(capturedLetter);
                 });
             }
@@ -60,8 +60,9 @@ public class InventorySlotSpawner : MonoBehaviour
             }
             else
             {
-                Debug.Log("Znaleziono Button, przypisujÍ listener...");
+                Debug.Log("Znaleziono Button, przypisujƒô listener...");
             }
         }
     }
 }
+

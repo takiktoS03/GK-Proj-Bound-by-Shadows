@@ -1,24 +1,24 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
 
 /**
  * @class ButtonHoverUnderline
- * @brief Dodaje i usuwa podkreúlenie tekstu przycisku podczas najechania kursorem myszy.
+ * @brief Dodaje i usuwa podkre≈õlenie tekstu przycisku podczas najechania kursorem myszy.
  *
- * Skrypt wykorzystuje interfejsy `IPointerEnterHandler` i `IPointerExitHandler`, aby reagowaÊ na zdarzenia
- * interfejsu uøytkownika i umoøliwiaÊ wizualne wyrÛønienie aktywnego elementu.
+ * Skrypt wykorzystuje interfejsy `IPointerEnterHandler` i `IPointerExitHandler`, aby reagowaƒá na zdarzenia
+ * interfejsu u≈ºytkownika i umo≈ºliwiaƒá wizualne wyr√≥≈ºnienie aktywnego elementu.
  *
  * Autor: Julia Bigaj
  */
 public class ButtonHoverUnderline : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    /// @brief Referencja do komponentu tekstowego (TextMeshProUGUI), ktÛry bÍdzie podkreúlany.
+    /// @brief Referencja do komponentu tekstowego (TextMeshProUGUI), kt√≥ry bƒôdzie podkre≈õlany.
     public TextMeshProUGUI label;
 
     /**
-     * @brief Dodaje podkreúlenie tekstu po najechaniu kursorem.
-     * @param eventData Dane zdarzenia wskaünika (myszy).
+     * @brief Dodaje podkre≈õlenie tekstu po najechaniu kursorem.
+     * @param eventData Dane zdarzenia wska≈∫nika (myszy).
      */
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -26,11 +26,12 @@ public class ButtonHoverUnderline : MonoBehaviour, IPointerEnterHandler, IPointe
     }
 
     /**
-     * @brief Usuwa podkreúlenie tekstu po opuszczeniu obszaru przycisku przez kursor.
-     * @param eventData Dane zdarzenia wskaünika (myszy).
+     * @brief Usuwa podkre≈õlenie tekstu po opuszczeniu obszaru przycisku przez kursor.
+     * @param eventData Dane zdarzenia wska≈∫nika (myszy).
      */
     public void OnPointerExit(PointerEventData eventData)
     {
         label.fontStyle &= ~FontStyles.Underline;
     }
 }
+

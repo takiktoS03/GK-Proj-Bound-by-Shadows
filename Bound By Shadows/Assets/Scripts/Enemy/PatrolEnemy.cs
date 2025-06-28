@@ -110,3 +110,4 @@ public class PatrolEnemy : MonoBehaviour
         //rb.MovePosition(new Vector2(transform.position.x + Time.deltaTime * direction * speed, transform.position.y));
     }
 }
+

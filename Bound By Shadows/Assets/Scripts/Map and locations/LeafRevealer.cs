@@ -1,30 +1,31 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class LeafRevealer
- * @brief Ods³ania ukryt¹ lokalizacjê, gdy gracz wejdzie w obszar kolizji z liœæmi.
+ * @brief OdsÅ‚ania ukrytÄ… lokalizacjÄ™, gdy gracz wejdzie w obszar kolizji z liÅ›Ä‡mi.
  *
- * Skrypt przypisany do obiektu z liœæmi. Gdy gracz wejdzie w trigger,
- * zostaje aktywowany wskazany obiekt `hiddenLocation` (np. ukryte przejœcie).
- * Mo¿e byæ czêœci¹ zagadki logicznej lub ukrytego obszaru w grze.
+ * Skrypt przypisany do obiektu z liÅ›Ä‡mi. Gdy gracz wejdzie w trigger,
+ * zostaje aktywowany wskazany obiekt `hiddenLocation` (np. ukryte przejÅ›cie).
+ * MoÅ¼e byÄ‡ czÄ™Å›ciÄ… zagadki logicznej lub ukrytego obszaru w grze.
  *
  * @author Julia Bigaj
  */
 public class LeafRevealer : MonoBehaviour
 {
-    /// @brief Obiekt, który zostanie ujawniony po wejœciu gracza w trigger (np. ukryta œcie¿ka).
+    /// @brief Obiekt, ktÃ³ry zostanie ujawniony po wejÅ›ciu gracza w trigger (np. ukryta Å›cieÅ¼ka).
     public GameObject hiddenLocation;
 
     /**
-     * @brief Wykrywany jest gracz wchodz¹cy w trigger — ujawnienie ukrytej lokalizacji.
-     * @param other Obiekt koliduj¹cy (np. gracz).
+     * @brief Wykrywany jest gracz wchodzÄ…cy w trigger â€” ujawnienie ukrytej lokalizacji.
+     * @param other Obiekt kolidujÄ…cy (np. gracz).
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Gracz wszed³ w liœcie!");
+            Debug.Log("Gracz wszedÅ‚ w liÅ›cie!");
             hiddenLocation.SetActive(true);
         }
     }
 }
+

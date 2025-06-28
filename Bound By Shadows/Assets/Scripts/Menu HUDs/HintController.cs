@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 /**
@@ -12,7 +12,7 @@ using TMPro;
  */
 public class HintController : MonoBehaviour
 {
-    /// @brief Referencja do komponentu TextMeshProUGUI wyświetlającego podpowiedź.
+    /// @brief Referencja do komponentu TextMeshProUGUI wyświelającego podpowiedzi.
     public TextMeshProUGUI hintText;
 
     /**
@@ -37,3 +37,4 @@ public class HintController : MonoBehaviour
         hintText.gameObject.SetActive(false);
     }
 }
+

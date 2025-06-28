@@ -177,3 +177,4 @@ public static class SaveSystem
         Debug.Log("[LOAD] Wczytano grę.");
     }
 }
+

@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class Barrel
- * @brief Obs³uguje niszczenie beczki po uderzeniu atakiem gracza.
+ * @brief ObsÅ‚uguje niszczenie beczki po uderzeniu atakiem gracza.
  *
- * Po kolizji z atakiem, uruchamia animacjê zniszczenia, odtwarza dŸwiêk i zapisuje stan w systemie zapisu.
- * Beczka jest niszczona po 0.9s, co pozwala dokoñczyæ animacjê.
+ * Po kolizji z atakiem, uruchamia animacjÄ™ zniszczenia, odtwarza dÅºwiÄ™k i zapisuje stan w systemie zapisu.
+ * Beczka jest niszczona po 0.9s, co pozwala dokoÅ„czyÄ‡ animacjÄ™.
  *
  * @author Julia Bigaj
  */
@@ -17,7 +17,7 @@ public class Barrel : MonoBehaviour
     /**
      * @brief Inicjalizuje komponent Animator przypisany do beczki.
      *
-     * Wywo³ywane automatycznie przy aktywacji obiektu.
+     * WywoÅ‚ywane automatycznie przy aktywacji obiektu.
      */
     void Awake()
     {
@@ -25,15 +25,15 @@ public class Barrel : MonoBehaviour
     }
 
     /**
-     * @brief Reaguje na kolizjê z atakiem gracza.
+     * @brief Reaguje na kolizjÄ™ z atakiem gracza.
      *
-     * Jeœli obiekt nie zosta³ jeszcze zniszczony i wykryto uderzenie przez tag `PlayerAttack`:
-     * - odtwarza dŸwiêk zniszczenia,
-     * - zapisuje unikalny identyfikator beczki jako zniszczon¹ (dla systemu zapisu),
-     * - uruchamia animacjê,
+     * JeÅ›li obiekt nie zostaÅ‚ jeszcze zniszczony i wykryto uderzenie przez tag `PlayerAttack`:
+     * - odtwarza dÅºwiÄ™k zniszczenia,
+     * - zapisuje unikalny identyfikator beczki jako zniszczonÄ… (dla systemu zapisu),
+     * - uruchamia animacjÄ™,
      * - niszczy obiekt po 0.9 sekundy.
      *
-     * @param other Obiekt koliduj¹cy z beczk¹.
+     * @param other Obiekt kolidujÄ…cy z beczkÄ….
      */
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -50,4 +50,5 @@ public class Barrel : MonoBehaviour
         }
     }
 }
+
 

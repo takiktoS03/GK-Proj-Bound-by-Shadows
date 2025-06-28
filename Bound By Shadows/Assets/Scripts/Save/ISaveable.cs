@@ -1,11 +1,11 @@
-/**
+ï»¿/**
  * @interface ISaveable
- * @brief Interfejs do obs³ugi zapisu i odczytu stanu obiektów w grze.
+ * @brief Interfejs do obsÅ‚ugi zapisu i odczytu stanu obiektÃ³w w grze.
  *
- * Ka¿dy obiekt, który implementuje ten interfejs, mo¿e byæ automatycznie zapisany i odtworzony
- * przez globalny system zapisu. Przechowywany stan musi byæ mo¿liwy do serializacji.
+ * KaÅ¼dy obiekt, ktÃ³ry implementuje ten interfejs, moÅ¼e byÄ‡ automatycznie zapisany i odtworzony
+ * przez globalny system zapisu. Przechowywany stan musi byÄ‡ moÅ¼liwy do serializacji.
  *
- * Przyk³ad u¿ycia:
+ * PrzykÅ‚ad uÅ¼ycia:
  * @code
  * public class MyObject : MonoBehaviour, ISaveable
  * {
@@ -21,13 +21,13 @@
  * }
  * @endcode
  * 
- * @author Filip Kud³a
+ * @author Filip KudÅ‚a
  */
 public interface ISaveable
 {
     /**
-     * @brief Zbiera dane reprezentuj¹ce stan obiektu do zapisania.
-     * @return Obiekt serializowalny reprezentuj¹cy aktualny stan.
+     * @brief Zbiera dane reprezentujÄ…ce stan obiektu do zapisania.
+     * @return Obiekt serializowalny reprezentujÄ…cy aktualny stan.
      */
     object CaptureState();
 
@@ -37,3 +37,4 @@ public interface ISaveable
      */
     void RestoreState(object state);
 }
+

@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class UIManager
- * @brief Singleton odpowiedzialny za zarz¹dzanie elementami interfejsu u¿ytkownika w ca³ej grze.
+ * @brief Singleton odpowiedzialny za zarzÄ…dzanie elementami interfejsu uÅ¼ytkownika w caÅ‚ej grze.
  *
- * Obiekt jest przenoszony miêdzy scenami za pomoc¹ `DontDestroyOnLoad`, zapewniaj¹c trwa³oœæ UI
- * i centralny dostêp do zarz¹dzania elementami interfejsu w wielu scenach.
+ * Obiekt jest przenoszony miÄ™dzy scenami za pomocÄ… `DontDestroyOnLoad`, zapewniajÄ…c trwaÅ‚oÅ›Ä‡ UI
+ * i centralny dostÄ™p do zarzÄ…dzania elementami interfejsu w wielu scenach.
  *
  * @author Julia Bigaj
  */
@@ -29,3 +29,4 @@ public class UIManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 }
+

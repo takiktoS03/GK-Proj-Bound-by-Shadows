@@ -63,3 +63,4 @@ public class BarrelSaveData : MonoBehaviour, ISaveable
         destroyedBarrels = new HashSet<string>(list);
     }
 }
+

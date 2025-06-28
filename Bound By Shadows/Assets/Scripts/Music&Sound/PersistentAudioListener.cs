@@ -1,23 +1,23 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class PersistentAudioListener
- * @brief Zapewnia, ¿e w scenie znajduje siê tylko jeden aktywny `AudioListener`.
+ * @brief Zapewnia, Å¼e w scenie znajduje siÄ™ tylko jeden aktywny `AudioListener`.
  *
- * Skrypt usuwa siê automatycznie, jeœli w scenie istnieje ju¿ inny `AudioListener`,
- * zapobiegaj¹c konfliktom audio w Unity (komunikat: "There are 2 AudioListeners").
- * Ustawiony jako trwa³y miêdzy scenami dziêki `DontDestroyOnLoad`.
+ * Skrypt usuwa siÄ™ automatycznie, jeÅ›li w scenie istnieje juÅ¼ inny `AudioListener`,
+ * zapobiegajÄ…c konfliktom audio w Unity (komunikat: "There are 2 AudioListeners").
+ * Ustawiony jako trwaÅ‚y miÄ™dzy scenami dziÄ™ki `DontDestroyOnLoad`.
  *
  * @author Julia Bigaj
  */
 public class PersistentAudioListener : MonoBehaviour
 {
     /**
-     * @brief Sprawdza, czy istnieje ju¿ inny `AudioListener`. Jeœli tak — usuwa siebie.
+     * @brief Sprawdza, czy istnieje juÅ¼ inny `AudioListener`. JeÅ›li tak â€” usuwa siebie.
      */
     private void Awake()
     {
-        // Usuwa ten listener, jeœli ju¿ istnieje inny (bezpiecznie)
+        // Usuwa ten listener, jeÅ›li juÅ¼ istnieje inny (bezpiecznie)
         if (FindObjectsOfType<AudioListener>().Length > 1)
         {
             Destroy(this.gameObject);
@@ -27,3 +27,4 @@ public class PersistentAudioListener : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 }
+

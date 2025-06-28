@@ -1,0 +1,453 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Indeks przestrzeni nazw}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lista przestrzeni nazw}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Indeks hierarchiczny}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Hierarchia klas}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Indeks klas}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lista klas}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Indeks plików}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lista plików}{9}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Dokumentacja przestrzeni nazw}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Dokumentacja przestrzeni nazw Ethan\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}The\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hero}{11}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Dokumentacja klas}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Dokumentacja klasy Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{13}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Opis szczegółowy}{13}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Dokumentacja funkcji składowych}{13}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}PerformAttack()}{13}{subsubsection.6.1.2.1}%
+\contentsline {section}{\numberline {6.2}Dokumentacja klasy Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{14}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Opis szczegółowy}{14}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Dokumentacja atrybutów składowych}{15}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}attackName}{15}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}cooldown}{15}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}damage}{15}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}duration}{15}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}hitboxPrefab}{15}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}knockback}{15}{subsubsection.6.2.2.6}%
+\contentsline {section}{\numberline {6.3}Dokumentacja klasy Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hitbox}{16}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Opis szczegółowy}{16}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Dokumentacja funkcji składowych}{16}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Init()}{16}{subsubsection.6.3.2.1}%
+\contentsline {section}{\numberline {6.4}Dokumentacja klasy Axe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trap}{17}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Opis szczegółowy}{17}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Dokumentacja klasy Barrel}{17}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Opis szczegółowy}{17}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Dokumentacja klasy Barrel\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{18}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Opis szczegółowy}{18}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Dokumentacja funkcji składowych}{18}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}CaptureState()}{18}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}RegisterDestroyedBarrel()}{18}{subsubsection.6.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.3}RestoreState()}{19}{subsubsection.6.6.2.3}%
+\contentsline {section}{\numberline {6.7}Dokumentacja klasy Bootstrapper}{19}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Opis szczegółowy}{19}{subsection.6.7.1}%
+\contentsline {section}{\numberline {6.8}Dokumentacja klasy Button\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hover\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sound}{20}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Opis szczegółowy}{20}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Dokumentacja funkcji składowych}{20}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}OnPointerEnter()}{20}{subsubsection.6.8.2.1}%
+\contentsline {subsection}{\numberline {6.8.3}Dokumentacja atrybutów składowych}{21}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}hoverSound}{21}{subsubsection.6.8.3.1}%
+\contentsline {section}{\numberline {6.9}Dokumentacja klasy Button\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hover\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Underline}{21}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Opis szczegółowy}{21}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Dokumentacja funkcji składowych}{21}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}OnPointerEnter()}{21}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}OnPointerExit()}{22}{subsubsection.6.9.2.2}%
+\contentsline {subsection}{\numberline {6.9.3}Dokumentacja atrybutów składowych}{22}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}label}{22}{subsubsection.6.9.3.1}%
+\contentsline {section}{\numberline {6.10}Dokumentacja klasy Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{22}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Opis szczegółowy}{22}{subsection.6.10.1}%
+\contentsline {section}{\numberline {6.11}Dokumentacja klasy Chest\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{23}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Opis szczegółowy}{23}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Dokumentacja funkcji składowych}{23}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}CloseChestFromOutside()}{23}{subsubsection.6.11.2.1}%
+\contentsline {subsection}{\numberline {6.11.3}Dokumentacja atrybutów składowych}{24}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}chestPanel}{24}{subsubsection.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.3.2}isLetterTaken}{24}{subsubsection.6.11.3.2}%
+\contentsline {subsubsection}{\numberline {6.11.3.3}letterData}{24}{subsubsection.6.11.3.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.4}letterIcon}{24}{subsubsection.6.11.3.4}%
+\contentsline {subsubsection}{\numberline {6.11.3.5}promptUI}{24}{subsubsection.6.11.3.5}%
+\contentsline {section}{\numberline {6.12}Dokumentacja klasy Chest\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Panel\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{24}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Opis szczegółowy}{25}{subsection.6.12.1}%
+\contentsline {subsection}{\numberline {6.12.2}Dokumentacja funkcji składowych}{25}{subsection.6.12.2}%
+\contentsline {subsubsection}{\numberline {6.12.2.1}CloseChest()}{25}{subsubsection.6.12.2.1}%
+\contentsline {subsubsection}{\numberline {6.12.2.2}IsChestOpen()}{25}{subsubsection.6.12.2.2}%
+\contentsline {subsection}{\numberline {6.12.3}Dokumentacja atrybutów składowych}{26}{subsection.6.12.3}%
+\contentsline {subsubsection}{\numberline {6.12.3.1}chestController}{26}{subsubsection.6.12.3.1}%
+\contentsline {subsubsection}{\numberline {6.12.3.2}chestPanel}{26}{subsubsection.6.12.3.2}%
+\contentsline {subsubsection}{\numberline {6.12.3.3}Instance}{26}{subsubsection.6.12.3.3}%
+\contentsline {section}{\numberline {6.13}Dokumentacja klasy Door\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger}{26}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Opis szczegółowy}{27}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Dokumentacja atrybutów składowych}{27}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}openDoorSprite}{27}{subsubsection.6.13.2.1}%
+\contentsline {subsubsection}{\numberline {6.13.2.2}promptText}{27}{subsubsection.6.13.2.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.3}teleportTarget}{27}{subsubsection.6.13.2.3}%
+\contentsline {section}{\numberline {6.14}Dokumentacja klasy Encountered\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialog}{27}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Opis szczegółowy}{28}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Dokumentacja atrybutów składowych}{28}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}dialog1}{28}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}dialog1Audio}{28}{subsubsection.6.14.2.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.3}dialog2}{28}{subsubsection.6.14.2.3}%
+\contentsline {subsubsection}{\numberline {6.14.2.4}dialog2Audio}{28}{subsubsection.6.14.2.4}%
+\contentsline {subsubsection}{\numberline {6.14.2.5}dialog3}{29}{subsubsection.6.14.2.5}%
+\contentsline {subsubsection}{\numberline {6.14.2.6}dialog3Audio}{29}{subsubsection.6.14.2.6}%
+\contentsline {subsubsection}{\numberline {6.14.2.7}dialog4}{29}{subsubsection.6.14.2.7}%
+\contentsline {subsubsection}{\numberline {6.14.2.8}dialog4Audio}{29}{subsubsection.6.14.2.8}%
+\contentsline {subsubsection}{\numberline {6.14.2.9}encounteredGhost}{29}{subsubsection.6.14.2.9}%
+\contentsline {subsubsection}{\numberline {6.14.2.10}ghostWithCam}{29}{subsubsection.6.14.2.10}%
+\contentsline {section}{\numberline {6.15}Dokumentacja klasy End\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger}{29}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Opis szczegółowy}{30}{subsection.6.15.1}%
+\contentsline {subsection}{\numberline {6.15.2}Dokumentacja atrybutów składowych}{30}{subsection.6.15.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.1}fadeDuration}{30}{subsubsection.6.15.2.1}%
+\contentsline {subsubsection}{\numberline {6.15.2.2}fadeOverlay}{30}{subsubsection.6.15.2.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.3}mainMenuSceneName}{30}{subsubsection.6.15.2.3}%
+\contentsline {section}{\numberline {6.16}Dokumentacja klasy Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{31}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Opis szczegółowy}{31}{subsection.6.16.1}%
+\contentsline {section}{\numberline {6.17}Dokumentacja klasy Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Follow}{31}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Opis szczegółowy}{31}{subsection.6.17.1}%
+\contentsline {subsection}{\numberline {6.17.2}Dokumentacja atrybutów składowych}{32}{subsection.6.17.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.1}mainCamera}{32}{subsubsection.6.17.2.1}%
+\contentsline {section}{\numberline {6.18}Dokumentacja klasy Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Floating}{32}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Opis szczegółowy}{32}{subsection.6.18.1}%
+\contentsline {subsection}{\numberline {6.18.2}Dokumentacja atrybutów składowych}{32}{subsection.6.18.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.1}floatAmplitude}{32}{subsubsection.6.18.2.1}%
+\contentsline {subsubsection}{\numberline {6.18.2.2}floatFrequency}{33}{subsubsection.6.18.2.2}%
+\contentsline {subsubsection}{\numberline {6.18.2.3}smoothSpeed}{33}{subsubsection.6.18.2.3}%
+\contentsline {section}{\numberline {6.19}Dokumentacja klasy Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Follow}{33}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Opis szczegółowy}{33}{subsection.6.19.1}%
+\contentsline {subsection}{\numberline {6.19.2}Dokumentacja atrybutów składowych}{34}{subsection.6.19.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.1}floatAmplitude}{34}{subsubsection.6.19.2.1}%
+\contentsline {subsubsection}{\numberline {6.19.2.2}floatFrequency}{34}{subsubsection.6.19.2.2}%
+\contentsline {subsubsection}{\numberline {6.19.2.3}offset}{34}{subsubsection.6.19.2.3}%
+\contentsline {subsubsection}{\numberline {6.19.2.4}player}{34}{subsubsection.6.19.2.4}%
+\contentsline {subsubsection}{\numberline {6.19.2.5}smoothSpeed}{34}{subsubsection.6.19.2.5}%
+\contentsline {section}{\numberline {6.20}Dokumentacja klasy Health}{34}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Opis szczegółowy}{35}{subsection.6.20.1}%
+\contentsline {subsection}{\numberline {6.20.2}Dokumentacja funkcji składowych}{35}{subsection.6.20.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.1}Awake()}{35}{subsubsection.6.20.2.1}%
+\contentsline {subsubsection}{\numberline {6.20.2.2}DamageCooldownCoroutine()}{36}{subsubsection.6.20.2.2}%
+\contentsline {subsubsection}{\numberline {6.20.2.3}Die()}{36}{subsubsection.6.20.2.3}%
+\contentsline {subsubsection}{\numberline {6.20.2.4}Heal()}{36}{subsubsection.6.20.2.4}%
+\contentsline {subsubsection}{\numberline {6.20.2.5}SetBarsValue()}{36}{subsubsection.6.20.2.5}%
+\contentsline {subsubsection}{\numberline {6.20.2.6}TakeDamage()}{36}{subsubsection.6.20.2.6}%
+\contentsline {subsection}{\numberline {6.20.3}Dokumentacja atrybutów składowych}{36}{subsection.6.20.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.1}anim}{36}{subsubsection.6.20.3.1}%
+\contentsline {subsubsection}{\numberline {6.20.3.2}canTakeDamage}{37}{subsubsection.6.20.3.2}%
+\contentsline {subsubsection}{\numberline {6.20.3.3}currentHealth}{37}{subsubsection.6.20.3.3}%
+\contentsline {subsubsection}{\numberline {6.20.3.4}damageCooldown}{37}{subsubsection.6.20.3.4}%
+\contentsline {subsubsection}{\numberline {6.20.3.5}healthBar}{37}{subsubsection.6.20.3.5}%
+\contentsline {subsubsection}{\numberline {6.20.3.6}spriteRend}{37}{subsubsection.6.20.3.6}%
+\contentsline {subsubsection}{\numberline {6.20.3.7}startingHealth}{37}{subsubsection.6.20.3.7}%
+\contentsline {section}{\numberline {6.21}Dokumentacja klasy Health\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collectible}{37}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Opis szczegółowy}{38}{subsection.6.21.1}%
+\contentsline {section}{\numberline {6.22}Dokumentacja klasy Hint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Area}{38}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Opis szczegółowy}{38}{subsection.6.22.1}%
+\contentsline {subsection}{\numberline {6.22.2}Dokumentacja atrybutów składowych}{39}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}message}{39}{subsubsection.6.22.2.1}%
+\contentsline {section}{\numberline {6.23}Dokumentacja klasy Hint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{39}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Opis szczegółowy}{39}{subsection.6.23.1}%
+\contentsline {subsection}{\numberline {6.23.2}Dokumentacja funkcji składowych}{40}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}HideHint()}{40}{subsubsection.6.23.2.1}%
+\contentsline {subsubsection}{\numberline {6.23.2.2}ShowHint()}{40}{subsubsection.6.23.2.2}%
+\contentsline {subsection}{\numberline {6.23.3}Dokumentacja atrybutów składowych}{40}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}hintText}{40}{subsubsection.6.23.3.1}%
+\contentsline {section}{\numberline {6.24}Dokumentacja klasy HUDVisibility}{40}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Opis szczegółowy}{41}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}Dokumentacja klasy Intro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{41}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Opis szczegółowy}{41}{subsection.6.25.1}%
+\contentsline {subsection}{\numberline {6.25.2}Dokumentacja atrybutów składowych}{42}{subsection.6.25.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.1}image1}{42}{subsubsection.6.25.2.1}%
+\contentsline {subsubsection}{\numberline {6.25.2.2}image3}{42}{subsubsection.6.25.2.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.3}image4}{42}{subsubsection.6.25.2.3}%
+\contentsline {subsubsection}{\numberline {6.25.2.4}image5}{42}{subsubsection.6.25.2.4}%
+\contentsline {subsubsection}{\numberline {6.25.2.5}zoomDuration}{42}{subsubsection.6.25.2.5}%
+\contentsline {subsubsection}{\numberline {6.25.2.6}zoomScale}{42}{subsubsection.6.25.2.6}%
+\contentsline {section}{\numberline {6.26}Dokumentacja klasy Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{43}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Opis szczegółowy}{43}{subsection.6.26.1}%
+\contentsline {subsection}{\numberline {6.26.2}Dokumentacja funkcji składowych}{43}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}AddItem()}{43}{subsubsection.6.26.2.1}%
+\contentsline {subsubsection}{\numberline {6.26.2.2}AddLetter()}{44}{subsubsection.6.26.2.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.3}RemoveItem()}{44}{subsubsection.6.26.2.3}%
+\contentsline {subsection}{\numberline {6.26.3}Dokumentacja atrybutów składowych}{44}{subsection.6.26.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.1}collectedLetters}{44}{subsubsection.6.26.3.1}%
+\contentsline {subsubsection}{\numberline {6.26.3.2}Instance}{44}{subsubsection.6.26.3.2}%
+\contentsline {subsubsection}{\numberline {6.26.3.3}items}{44}{subsubsection.6.26.3.3}%
+\contentsline {section}{\numberline {6.27}Dokumentacja klasy Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Slot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spawner}{45}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Opis szczegółowy}{45}{subsection.6.27.1}%
+\contentsline {subsection}{\numberline {6.27.2}Dokumentacja funkcji składowych}{45}{subsection.6.27.2}%
+\contentsline {subsubsection}{\numberline {6.27.2.1}RefreshSlots()}{45}{subsubsection.6.27.2.1}%
+\contentsline {subsection}{\numberline {6.27.3}Dokumentacja atrybutów składowych}{46}{subsection.6.27.3}%
+\contentsline {subsubsection}{\numberline {6.27.3.1}slotPrefab}{46}{subsubsection.6.27.3.1}%
+\contentsline {subsubsection}{\numberline {6.27.3.2}slotsParent}{46}{subsubsection.6.27.3.2}%
+\contentsline {section}{\numberline {6.28}Dokumentacja klasy Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI}{46}{section.6.28}%
+\contentsline {subsection}{\numberline {6.28.1}Opis szczegółowy}{47}{subsection.6.28.1}%
+\contentsline {subsection}{\numberline {6.28.2}Dokumentacja funkcji składowych}{47}{subsection.6.28.2}%
+\contentsline {subsubsection}{\numberline {6.28.2.1}ShowLetterContent()}{47}{subsubsection.6.28.2.1}%
+\contentsline {subsection}{\numberline {6.28.3}Dokumentacja atrybutów składowych}{47}{subsection.6.28.3}%
+\contentsline {subsubsection}{\numberline {6.28.3.1}Instance}{47}{subsubsection.6.28.3.1}%
+\contentsline {subsubsection}{\numberline {6.28.3.2}inventoryPanel}{47}{subsubsection.6.28.3.2}%
+\contentsline {subsubsection}{\numberline {6.28.3.3}letterContentImage}{47}{subsubsection.6.28.3.3}%
+\contentsline {subsubsection}{\numberline {6.28.3.4}slotSpawner}{48}{subsubsection.6.28.3.4}%
+\contentsline {section}{\numberline {6.29}Dokumentacja interfejsu ISaveable}{48}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Opis szczegółowy}{48}{subsection.6.29.1}%
+\contentsline {subsection}{\numberline {6.29.2}Dokumentacja funkcji składowych}{49}{subsection.6.29.2}%
+\contentsline {subsubsection}{\numberline {6.29.2.1}CaptureState()}{49}{subsubsection.6.29.2.1}%
+\contentsline {subsubsection}{\numberline {6.29.2.2}RestoreState()}{49}{subsubsection.6.29.2.2}%
+\contentsline {section}{\numberline {6.30}Dokumentacja klasy Lava\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Damage}{49}{section.6.30}%
+\contentsline {subsection}{\numberline {6.30.1}Opis szczegółowy}{50}{subsection.6.30.1}%
+\contentsline {section}{\numberline {6.31}Dokumentacja klasy Leaf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Revealer}{50}{section.6.31}%
+\contentsline {subsection}{\numberline {6.31.1}Opis szczegółowy}{50}{subsection.6.31.1}%
+\contentsline {subsection}{\numberline {6.31.2}Dokumentacja atrybutów składowych}{51}{subsection.6.31.2}%
+\contentsline {subsubsection}{\numberline {6.31.2.1}hiddenLocation}{51}{subsubsection.6.31.2.1}%
+\contentsline {section}{\numberline {6.32}Dokumentacja klasy Letter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{51}{section.6.32}%
+\contentsline {subsection}{\numberline {6.32.1}Opis szczegółowy}{51}{subsection.6.32.1}%
+\contentsline {subsection}{\numberline {6.32.2}Dokumentacja atrybutów składowych}{51}{subsection.6.32.2}%
+\contentsline {subsubsection}{\numberline {6.32.2.1}content}{51}{subsubsection.6.32.2.1}%
+\contentsline {subsubsection}{\numberline {6.32.2.2}icon}{52}{subsubsection.6.32.2.2}%
+\contentsline {section}{\numberline {6.33}Dokumentacja klasy Level1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In}{52}{section.6.33}%
+\contentsline {subsection}{\numberline {6.33.1}Opis szczegółowy}{52}{subsection.6.33.1}%
+\contentsline {subsection}{\numberline {6.33.2}Dokumentacja atrybutów składowych}{52}{subsection.6.33.2}%
+\contentsline {subsubsection}{\numberline {6.33.2.1}fadeDuration}{52}{subsubsection.6.33.2.1}%
+\contentsline {subsubsection}{\numberline {6.33.2.2}fadeOverlay}{53}{subsubsection.6.33.2.2}%
+\contentsline {section}{\numberline {6.34}Dokumentacja klasy Lever\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Riddle}{53}{section.6.34}%
+\contentsline {subsection}{\numberline {6.34.1}Opis szczegółowy}{53}{subsection.6.34.1}%
+\contentsline {subsection}{\numberline {6.34.2}Dokumentacja funkcji składowych}{53}{subsection.6.34.2}%
+\contentsline {subsubsection}{\numberline {6.34.2.1}CheckCorrectness()}{53}{subsubsection.6.34.2.1}%
+\contentsline {section}{\numberline {6.35}Dokumentacja klasy Lever\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger}{54}{section.6.35}%
+\contentsline {subsection}{\numberline {6.35.1}Opis szczegółowy}{54}{subsection.6.35.1}%
+\contentsline {subsection}{\numberline {6.35.2}Dokumentacja atrybutów składowych}{54}{subsection.6.35.2}%
+\contentsline {subsubsection}{\numberline {6.35.2.1}leverAnimator}{54}{subsubsection.6.35.2.1}%
+\contentsline {subsubsection}{\numberline {6.35.2.2}leverIsOn}{54}{subsubsection.6.35.2.2}%
+\contentsline {section}{\numberline {6.36}Dokumentacja klasy Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{55}{section.6.36}%
+\contentsline {subsection}{\numberline {6.36.1}Opis szczegółowy}{55}{subsection.6.36.1}%
+\contentsline {subsection}{\numberline {6.36.2}Dokumentacja funkcji składowych}{55}{subsection.6.36.2}%
+\contentsline {subsubsection}{\numberline {6.36.2.1}LoadGame()}{55}{subsubsection.6.36.2.1}%
+\contentsline {subsubsection}{\numberline {6.36.2.2}QuitGame()}{55}{subsubsection.6.36.2.2}%
+\contentsline {subsubsection}{\numberline {6.36.2.3}StartNewGame()}{56}{subsubsection.6.36.2.3}%
+\contentsline {section}{\numberline {6.37}Dokumentacja klasy Melee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy}{56}{section.6.37}%
+\contentsline {subsection}{\numberline {6.37.1}Opis szczegółowy}{56}{subsection.6.37.1}%
+\contentsline {section}{\numberline {6.38}Dokumentacja klasy Music\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{56}{section.6.38}%
+\contentsline {subsection}{\numberline {6.38.1}Opis szczegółowy}{57}{subsection.6.38.1}%
+\contentsline {subsection}{\numberline {6.38.2}Dokumentacja funkcji składowych}{57}{subsection.6.38.2}%
+\contentsline {subsubsection}{\numberline {6.38.2.1}PlayGameplayMusic()}{57}{subsubsection.6.38.2.1}%
+\contentsline {subsubsection}{\numberline {6.38.2.2}PlayIntroAudio()}{58}{subsubsection.6.38.2.2}%
+\contentsline {subsubsection}{\numberline {6.38.2.3}PlayMenuMusic()}{58}{subsubsection.6.38.2.3}%
+\contentsline {subsubsection}{\numberline {6.38.2.4}StopMusic()}{58}{subsubsection.6.38.2.4}%
+\contentsline {subsection}{\numberline {6.38.3}Dokumentacja atrybutów składowych}{58}{subsection.6.38.3}%
+\contentsline {subsubsection}{\numberline {6.38.3.1}audioSource}{58}{subsubsection.6.38.3.1}%
+\contentsline {subsubsection}{\numberline {6.38.3.2}gameplayMusic}{58}{subsubsection.6.38.3.2}%
+\contentsline {subsubsection}{\numberline {6.38.3.3}introMusic}{58}{subsubsection.6.38.3.3}%
+\contentsline {subsubsection}{\numberline {6.38.3.4}introNarration}{59}{subsubsection.6.38.3.4}%
+\contentsline {subsubsection}{\numberline {6.38.3.5}menuMusic}{59}{subsubsection.6.38.3.5}%
+\contentsline {subsubsection}{\numberline {6.38.3.6}narrationSource}{59}{subsubsection.6.38.3.6}%
+\contentsline {subsection}{\numberline {6.38.4}Dokumentacja właściwości}{59}{subsection.6.38.4}%
+\contentsline {subsubsection}{\numberline {6.38.4.1}Instance}{59}{subsubsection.6.38.4.1}%
+\contentsline {section}{\numberline {6.39}Dokumentacja klasy Patrol\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy}{59}{section.6.39}%
+\contentsline {subsection}{\numberline {6.39.1}Opis szczegółowy}{60}{subsection.6.39.1}%
+\contentsline {section}{\numberline {6.40}Dokumentacja klasy Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{60}{section.6.40}%
+\contentsline {subsection}{\numberline {6.40.1}Opis szczegółowy}{61}{subsection.6.40.1}%
+\contentsline {subsection}{\numberline {6.40.2}Dokumentacja funkcji składowych}{61}{subsection.6.40.2}%
+\contentsline {subsubsection}{\numberline {6.40.2.1}LoadGame()}{61}{subsubsection.6.40.2.1}%
+\contentsline {subsubsection}{\numberline {6.40.2.2}Pause()}{61}{subsubsection.6.40.2.2}%
+\contentsline {subsubsection}{\numberline {6.40.2.3}QuitGame()}{61}{subsubsection.6.40.2.3}%
+\contentsline {subsubsection}{\numberline {6.40.2.4}Resume()}{61}{subsubsection.6.40.2.4}%
+\contentsline {subsubsection}{\numberline {6.40.2.5}SaveGame()}{62}{subsubsection.6.40.2.5}%
+\contentsline {subsubsection}{\numberline {6.40.2.6}ShowGameOver()}{62}{subsubsection.6.40.2.6}%
+\contentsline {subsection}{\numberline {6.40.3}Dokumentacja atrybutów składowych}{62}{subsection.6.40.3}%
+\contentsline {subsubsection}{\numberline {6.40.3.1}gameOverAudio}{62}{subsubsection.6.40.3.1}%
+\contentsline {subsubsection}{\numberline {6.40.3.2}gameOverUI}{62}{subsubsection.6.40.3.2}%
+\contentsline {subsubsection}{\numberline {6.40.3.3}isGameOver}{62}{subsubsection.6.40.3.3}%
+\contentsline {subsubsection}{\numberline {6.40.3.4}isPaused}{62}{subsubsection.6.40.3.4}%
+\contentsline {subsubsection}{\numberline {6.40.3.5}pauseMenuUI}{63}{subsubsection.6.40.3.5}%
+\contentsline {section}{\numberline {6.41}Dokumentacja klasy Persistent\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Audio\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Listener}{63}{section.6.41}%
+\contentsline {subsection}{\numberline {6.41.1}Opis szczegółowy}{63}{subsection.6.41.1}%
+\contentsline {section}{\numberline {6.42}Dokumentacja klasy Ethan\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}The\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hero.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Animation}{63}{section.6.42}%
+\contentsline {subsection}{\numberline {6.42.1}Opis szczegółowy}{64}{subsection.6.42.1}%
+\contentsline {section}{\numberline {6.43}Dokumentacja klasy Ethan\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}The\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hero.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Method}{64}{section.6.43}%
+\contentsline {subsection}{\numberline {6.43.1}Opis szczegółowy}{64}{subsection.6.43.1}%
+\contentsline {subsection}{\numberline {6.43.2}Dokumentacja atrybutów składowych}{65}{subsection.6.43.2}%
+\contentsline {subsubsection}{\numberline {6.43.2.1}basicAttack01Power}{65}{subsubsection.6.43.2.1}%
+\contentsline {subsubsection}{\numberline {6.43.2.2}basicAttack02Power}{65}{subsubsection.6.43.2.2}%
+\contentsline {subsubsection}{\numberline {6.43.2.3}basicAttack03Power}{65}{subsubsection.6.43.2.3}%
+\contentsline {subsubsection}{\numberline {6.43.2.4}isPaused}{65}{subsubsection.6.43.2.4}%
+\contentsline {section}{\numberline {6.44}Dokumentacja struktury Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{65}{section.6.44}%
+\contentsline {subsection}{\numberline {6.44.1}Opis szczegółowy}{65}{subsection.6.44.1}%
+\contentsline {subsection}{\numberline {6.44.2}Dokumentacja atrybutów składowych}{66}{subsection.6.44.2}%
+\contentsline {subsubsection}{\numberline {6.44.2.1}hp}{66}{subsubsection.6.44.2.1}%
+\contentsline {section}{\numberline {6.45}Dokumentacja klasy Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health}{66}{section.6.45}%
+\contentsline {subsection}{\numberline {6.45.1}Opis szczegółowy}{67}{subsection.6.45.1}%
+\contentsline {subsection}{\numberline {6.45.2}Dokumentacja funkcji składowych}{67}{subsection.6.45.2}%
+\contentsline {subsubsection}{\numberline {6.45.2.1}Awake()}{67}{subsubsection.6.45.2.1}%
+\contentsline {subsubsection}{\numberline {6.45.2.2}Die()}{67}{subsubsection.6.45.2.2}%
+\contentsline {subsubsection}{\numberline {6.45.2.3}HealStamina()}{68}{subsubsection.6.45.2.3}%
+\contentsline {subsubsection}{\numberline {6.45.2.4}SetBarsValue()}{68}{subsubsection.6.45.2.4}%
+\contentsline {subsubsection}{\numberline {6.45.2.5}TakeDamage()}{68}{subsubsection.6.45.2.5}%
+\contentsline {subsubsection}{\numberline {6.45.2.6}TakeStamina()}{68}{subsubsection.6.45.2.6}%
+\contentsline {subsection}{\numberline {6.45.3}Dokumentacja właściwości}{68}{subsection.6.45.3}%
+\contentsline {subsubsection}{\numberline {6.45.3.1}currentStamina}{68}{subsubsection.6.45.3.1}%
+\contentsline {section}{\numberline {6.46}Dokumentacja klasy Ethan\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}The\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hero.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement}{69}{section.6.46}%
+\contentsline {subsection}{\numberline {6.46.1}Opis szczegółowy}{69}{subsection.6.46.1}%
+\contentsline {subsection}{\numberline {6.46.2}Dokumentacja atrybutów składowych}{69}{subsection.6.46.2}%
+\contentsline {subsubsection}{\numberline {6.46.2.1}grounded}{69}{subsubsection.6.46.2.1}%
+\contentsline {subsubsection}{\numberline {6.46.2.2}isDashing}{69}{subsubsection.6.46.2.2}%
+\contentsline {subsubsection}{\numberline {6.46.2.3}isJumping}{69}{subsubsection.6.46.2.3}%
+\contentsline {subsubsection}{\numberline {6.46.2.4}move}{70}{subsubsection.6.46.2.4}%
+\contentsline {subsubsection}{\numberline {6.46.2.5}wallJump}{70}{subsubsection.6.46.2.5}%
+\contentsline {subsubsection}{\numberline {6.46.2.6}wallSliding}{70}{subsubsection.6.46.2.6}%
+\contentsline {subsubsection}{\numberline {6.46.2.7}wallSlidingEnabled}{70}{subsubsection.6.46.2.7}%
+\contentsline {section}{\numberline {6.47}Dokumentacja klasy Ethan\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}The\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hero.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{70}{section.6.47}%
+\contentsline {subsection}{\numberline {6.47.1}Opis szczegółowy}{71}{subsection.6.47.1}%
+\contentsline {subsection}{\numberline {6.47.2}Dokumentacja atrybutów składowych}{72}{subsection.6.47.2}%
+\contentsline {subsubsection}{\numberline {6.47.2.1}accelInAir}{72}{subsubsection.6.47.2.1}%
+\contentsline {subsubsection}{\numberline {6.47.2.2}dashCost}{72}{subsubsection.6.47.2.2}%
+\contentsline {subsubsection}{\numberline {6.47.2.3}dashingCoolDown}{72}{subsubsection.6.47.2.3}%
+\contentsline {subsubsection}{\numberline {6.47.2.4}dashingTime}{72}{subsubsection.6.47.2.4}%
+\contentsline {subsubsection}{\numberline {6.47.2.5}dashPower}{72}{subsubsection.6.47.2.5}%
+\contentsline {subsubsection}{\numberline {6.47.2.6}deccelInAir}{72}{subsubsection.6.47.2.6}%
+\contentsline {subsubsection}{\numberline {6.47.2.7}doConserveMomentum}{72}{subsubsection.6.47.2.7}%
+\contentsline {subsubsection}{\numberline {6.47.2.8}jumpHeight}{73}{subsubsection.6.47.2.8}%
+\contentsline {subsubsection}{\numberline {6.47.2.9}runAccelAmount}{73}{subsubsection.6.47.2.9}%
+\contentsline {subsubsection}{\numberline {6.47.2.10}runAcceleration}{73}{subsubsection.6.47.2.10}%
+\contentsline {subsubsection}{\numberline {6.47.2.11}runDeccelAmount}{73}{subsubsection.6.47.2.11}%
+\contentsline {subsubsection}{\numberline {6.47.2.12}runDecceleration}{73}{subsubsection.6.47.2.12}%
+\contentsline {subsubsection}{\numberline {6.47.2.13}runMaxSpeed}{73}{subsubsection.6.47.2.13}%
+\contentsline {subsubsection}{\numberline {6.47.2.14}wallDistance}{73}{subsubsection.6.47.2.14}%
+\contentsline {subsubsection}{\numberline {6.47.2.15}wallJumpingXPower}{73}{subsubsection.6.47.2.15}%
+\contentsline {subsubsection}{\numberline {6.47.2.16}wallJumpingYPower}{74}{subsubsection.6.47.2.16}%
+\contentsline {subsubsection}{\numberline {6.47.2.17}wallJumpTime}{74}{subsubsection.6.47.2.17}%
+\contentsline {subsubsection}{\numberline {6.47.2.18}WallJumpTimeInSecond}{74}{subsubsection.6.47.2.18}%
+\contentsline {subsubsection}{\numberline {6.47.2.19}wallSlideSpeed}{74}{subsubsection.6.47.2.19}%
+\contentsline {section}{\numberline {6.48}Dokumentacja klasy Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{74}{section.6.48}%
+\contentsline {subsection}{\numberline {6.48.1}Opis szczegółowy}{75}{subsection.6.48.1}%
+\contentsline {subsection}{\numberline {6.48.2}Dokumentacja funkcji składowych}{75}{subsection.6.48.2}%
+\contentsline {subsubsection}{\numberline {6.48.2.1}CaptureState()}{75}{subsubsection.6.48.2.1}%
+\contentsline {subsubsection}{\numberline {6.48.2.2}RestoreState()}{75}{subsubsection.6.48.2.2}%
+\contentsline {section}{\numberline {6.49}Dokumentacja klasy Saveable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{76}{section.6.49}%
+\contentsline {subsection}{\numberline {6.49.1}Opis szczegółowy}{76}{subsection.6.49.1}%
+\contentsline {subsection}{\numberline {6.49.2}Dokumentacja właściwości}{76}{subsection.6.49.2}%
+\contentsline {subsubsection}{\numberline {6.49.2.1}UniqueId}{76}{subsubsection.6.49.2.1}%
+\contentsline {section}{\numberline {6.50}Dokumentacja klasy Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{77}{section.6.50}%
+\contentsline {subsection}{\numberline {6.50.1}Opis szczegółowy}{77}{subsection.6.50.1}%
+\contentsline {subsection}{\numberline {6.50.2}Dokumentacja atrybutów składowych}{77}{subsection.6.50.2}%
+\contentsline {subsubsection}{\numberline {6.50.2.1}entries}{77}{subsubsection.6.50.2.1}%
+\contentsline {section}{\numberline {6.51}Dokumentacja klasy Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry}{77}{section.6.51}%
+\contentsline {subsection}{\numberline {6.51.1}Opis szczegółowy}{77}{subsection.6.51.1}%
+\contentsline {subsection}{\numberline {6.51.2}Dokumentacja atrybutów składowych}{77}{subsection.6.51.2}%
+\contentsline {subsubsection}{\numberline {6.51.2.1}id}{77}{subsubsection.6.51.2.1}%
+\contentsline {subsubsection}{\numberline {6.51.2.2}jsonData}{78}{subsubsection.6.51.2.2}%
+\contentsline {subsubsection}{\numberline {6.51.2.3}type}{78}{subsubsection.6.51.2.3}%
+\contentsline {section}{\numberline {6.52}Dokumentacja klasy Serialization\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wrapper}{78}{section.6.52}%
+\contentsline {subsection}{\numberline {6.52.1}Opis szczegółowy}{79}{subsection.6.52.1}%
+\contentsline {subsection}{\numberline {6.52.2}Dokumentacja funkcji składowych}{79}{subsection.6.52.2}%
+\contentsline {subsubsection}{\numberline {6.52.2.1}OnAfterDeserialize()}{79}{subsubsection.6.52.2.1}%
+\contentsline {subsubsection}{\numberline {6.52.2.2}OnBeforeSerialize()}{79}{subsubsection.6.52.2.2}%
+\contentsline {subsection}{\numberline {6.52.3}Dokumentacja atrybutów składowych}{79}{subsection.6.52.3}%
+\contentsline {subsubsection}{\numberline {6.52.3.1}data}{79}{subsubsection.6.52.3.1}%
+\contentsline {subsubsection}{\numberline {6.52.3.2}jsonValues}{80}{subsubsection.6.52.3.2}%
+\contentsline {subsubsection}{\numberline {6.52.3.3}keys}{80}{subsubsection.6.52.3.3}%
+\contentsline {section}{\numberline {6.53}Dokumentacja klasy Set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Layer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}For\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Children}{80}{section.6.53}%
+\contentsline {subsection}{\numberline {6.53.1}Opis szczegółowy}{80}{subsection.6.53.1}%
+\contentsline {subsection}{\numberline {6.53.2}Dokumentacja atrybutów składowych}{81}{subsection.6.53.2}%
+\contentsline {subsubsection}{\numberline {6.53.2.1}orderInLayer}{81}{subsubsection.6.53.2.1}%
+\contentsline {section}{\numberline {6.54}Dokumentacja klasy Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager}{81}{section.6.54}%
+\contentsline {subsection}{\numberline {6.54.1}Opis szczegółowy}{82}{subsection.6.54.1}%
+\contentsline {subsection}{\numberline {6.54.2}Dokumentacja funkcji składowych}{82}{subsection.6.54.2}%
+\contentsline {subsubsection}{\numberline {6.54.2.1}PlayBarrel()}{82}{subsubsection.6.54.2.1}%
+\contentsline {subsubsection}{\numberline {6.54.2.2}PlayChest()}{83}{subsubsection.6.54.2.2}%
+\contentsline {subsubsection}{\numberline {6.54.2.3}PlayDash()}{83}{subsubsection.6.54.2.3}%
+\contentsline {subsubsection}{\numberline {6.54.2.4}PlayDoor()}{83}{subsubsection.6.54.2.4}%
+\contentsline {subsubsection}{\numberline {6.54.2.5}PlayHeavyAttack()}{83}{subsubsection.6.54.2.5}%
+\contentsline {subsubsection}{\numberline {6.54.2.6}PlayHurt()}{83}{subsubsection.6.54.2.6}%
+\contentsline {subsubsection}{\numberline {6.54.2.7}PlayJump()}{83}{subsubsection.6.54.2.7}%
+\contentsline {subsubsection}{\numberline {6.54.2.8}PlayLever()}{83}{subsubsection.6.54.2.8}%
+\contentsline {subsubsection}{\numberline {6.54.2.9}PlayLightAttack()}{83}{subsubsection.6.54.2.9}%
+\contentsline {subsubsection}{\numberline {6.54.2.10}PlaySound()}{83}{subsubsection.6.54.2.10}%
+\contentsline {subsubsection}{\numberline {6.54.2.11}PlayStep()}{84}{subsubsection.6.54.2.11}%
+\contentsline {subsubsection}{\numberline {6.54.2.12}PlayStone()}{84}{subsubsection.6.54.2.12}%
+\contentsline {subsubsection}{\numberline {6.54.2.13}StartSteps()}{84}{subsubsection.6.54.2.13}%
+\contentsline {subsubsection}{\numberline {6.54.2.14}StopSteps()}{84}{subsubsection.6.54.2.14}%
+\contentsline {subsection}{\numberline {6.54.3}Dokumentacja atrybutów składowych}{84}{subsection.6.54.3}%
+\contentsline {subsubsection}{\numberline {6.54.3.1}chestOpenSound}{84}{subsubsection.6.54.3.1}%
+\contentsline {subsubsection}{\numberline {6.54.3.2}dashSound}{84}{subsubsection.6.54.3.2}%
+\contentsline {subsubsection}{\numberline {6.54.3.3}destroyBarrelSound}{85}{subsubsection.6.54.3.3}%
+\contentsline {subsubsection}{\numberline {6.54.3.4}doorOpenSound}{85}{subsubsection.6.54.3.4}%
+\contentsline {subsubsection}{\numberline {6.54.3.5}heavyAttackSound}{85}{subsubsection.6.54.3.5}%
+\contentsline {subsubsection}{\numberline {6.54.3.6}hurtSound}{85}{subsubsection.6.54.3.6}%
+\contentsline {subsubsection}{\numberline {6.54.3.7}Instance}{85}{subsubsection.6.54.3.7}%
+\contentsline {subsubsection}{\numberline {6.54.3.8}jumpSound}{85}{subsubsection.6.54.3.8}%
+\contentsline {subsubsection}{\numberline {6.54.3.9}leverPullSound}{85}{subsubsection.6.54.3.9}%
+\contentsline {subsubsection}{\numberline {6.54.3.10}lightAttackSound}{85}{subsubsection.6.54.3.10}%
+\contentsline {subsubsection}{\numberline {6.54.3.11}moveStoneSound}{86}{subsubsection.6.54.3.11}%
+\contentsline {subsubsection}{\numberline {6.54.3.12}stepSound}{86}{subsubsection.6.54.3.12}%
+\contentsline {section}{\numberline {6.55}Dokumentacja klasy Spikes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trap}{86}{section.6.55}%
+\contentsline {subsection}{\numberline {6.55.1}Opis szczegółowy}{86}{subsection.6.55.1}%
+\contentsline {section}{\numberline {6.56}Dokumentacja klasy Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI}{87}{section.6.56}%
+\contentsline {subsection}{\numberline {6.56.1}Opis szczegółowy}{87}{subsection.6.56.1}%
+\contentsline {subsection}{\numberline {6.56.2}Dokumentacja funkcji składowych}{87}{subsection.6.56.2}%
+\contentsline {subsubsection}{\numberline {6.56.2.1}ShowTextDialog()}{87}{subsubsection.6.56.2.1}%
+\contentsline {subsection}{\numberline {6.56.3}Dokumentacja atrybutów składowych}{88}{subsection.6.56.3}%
+\contentsline {subsubsection}{\numberline {6.56.3.1}dialogBoxes}{88}{subsubsection.6.56.3.1}%
+\contentsline {section}{\numberline {6.57}Dokumentacja klasy Trigger\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Thought\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zone}{88}{section.6.57}%
+\contentsline {subsection}{\numberline {6.57.1}Opis szczegółowy}{88}{subsection.6.57.1}%
+\contentsline {subsection}{\numberline {6.57.2}Dokumentacja atrybutów składowych}{89}{subsection.6.57.2}%
+\contentsline {subsubsection}{\numberline {6.57.2.1}thought}{89}{subsubsection.6.57.2.1}%
+\contentsline {section}{\numberline {6.58}Dokumentacja klasy UIManager}{89}{section.6.58}%
+\contentsline {subsection}{\numberline {6.58.1}Opis szczegółowy}{89}{subsection.6.58.1}%
+\contentsline {subsection}{\numberline {6.58.2}Dokumentacja właściwości}{89}{subsection.6.58.2}%
+\contentsline {subsubsection}{\numberline {6.58.2.1}Instance}{89}{subsubsection.6.58.2.1}%
+\contentsline {chapter}{\numberline {7}Dokumentacja plików}{91}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{91}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cs}{91}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hitbox.cs}{91}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{91}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{92}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Camera\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Follow.cs}{92}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Doors/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Door\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger.cs}{92}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Melee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.cs}{92}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Patrol\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.cs}{92}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Encountered\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dialog.cs}{92}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Floating.cs}{93}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Follow.cs}{93}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health.cs}{93}{section.7.13}%
+\contentsline {section}{\numberline {7.14}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collectible.cs}{93}{section.7.14}%
+\contentsline {section}{\numberline {7.15}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lava\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Damage.cs}{93}{section.7.15}%
+\contentsline {section}{\numberline {7.16}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health.cs}{93}{section.7.16}%
+\contentsline {section}{\numberline {7.17}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interactive/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Barrel.cs}{94}{section.7.17}%
+\contentsline {section}{\numberline {7.18}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interactive/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lever\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Riddle.cs}{94}{section.7.18}%
+\contentsline {section}{\numberline {7.19}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interactive/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lever\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger.cs}{94}{section.7.19}%
+\contentsline {section}{\numberline {7.20}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chest\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{94}{section.7.20}%
+\contentsline {section}{\numberline {7.21}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cs}{94}{section.7.21}%
+\contentsline {section}{\numberline {7.22}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Slot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spawner.cs}{94}{section.7.22}%
+\contentsline {section}{\numberline {7.23}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI.cs}{95}{section.7.23}%
+\contentsline {section}{\numberline {7.24}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inventory/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Letter\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cs}{95}{section.7.24}%
+\contentsline {section}{\numberline {7.25}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map and locations/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Leaf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Revealer.cs}{95}{section.7.25}%
+\contentsline {section}{\numberline {7.26}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map and locations/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Set\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Layer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}For\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Children.cs}{95}{section.7.26}%
+\contentsline {section}{\numberline {7.27}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bootstrapper.cs}{95}{section.7.27}%
+\contentsline {section}{\numberline {7.28}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hover\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Underline.cs}{95}{section.7.28}%
+\contentsline {section}{\numberline {7.29}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chest\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Panel\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cs}{96}{section.7.29}%
+\contentsline {section}{\numberline {7.30}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}End\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger.cs}{96}{section.7.30}%
+\contentsline {section}{\numberline {7.31}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Area.cs}{96}{section.7.31}%
+\contentsline {section}{\numberline {7.32}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hint\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{96}{section.7.32}%
+\contentsline {section}{\numberline {7.33}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HUDVisibility.cs}{96}{section.7.33}%
+\contentsline {section}{\numberline {7.34}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Level1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fade\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In.cs}{96}{section.7.34}%
+\contentsline {section}{\numberline {7.35}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu.cs}{97}{section.7.35}%
+\contentsline {section}{\numberline {7.36}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pause\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu.cs}{97}{section.7.36}%
+\contentsline {section}{\numberline {7.37}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI.cs}{97}{section.7.37}%
+\contentsline {section}{\numberline {7.38}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Thought\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zone.cs}{97}{section.7.38}%
+\contentsline {section}{\numberline {7.39}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UIManager.cs}{97}{section.7.39}%
+\contentsline {section}{\numberline {7.40}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu HUDs/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UIState\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cs}{97}{section.7.40}%
+\contentsline {section}{\numberline {7.41}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\&Sound/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hover\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sound.cs}{98}{section.7.41}%
+\contentsline {section}{\numberline {7.42}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\&Sound/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Intro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{98}{section.7.42}%
+\contentsline {section}{\numberline {7.43}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\&Sound/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cs}{98}{section.7.43}%
+\contentsline {section}{\numberline {7.44}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\&Sound/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persistent\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Audio\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Listener.cs}{98}{section.7.44}%
+\contentsline {section}{\numberline {7.45}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Music\&Sound/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sound\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.cs}{98}{section.7.45}%
+\contentsline {section}{\numberline {7.46}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Animation.cs}{98}{section.7.46}%
+\contentsline {section}{\numberline {7.47}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Attack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Method.cs}{99}{section.7.47}%
+\contentsline {section}{\numberline {7.48}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement.cs}{99}{section.7.48}%
+\contentsline {section}{\numberline {7.49}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Movement\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cs}{99}{section.7.49}%
+\contentsline {section}{\numberline {7.50}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Barrel\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sava\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cs}{99}{section.7.50}%
+\contentsline {section}{\numberline {7.51}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ISaveable.cs}{100}{section.7.51}%
+\contentsline {section}{\numberline {7.52}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.cs}{100}{section.7.52}%
+\contentsline {section}{\numberline {7.53}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Saveable\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.cs}{100}{section.7.53}%
+\contentsline {section}{\numberline {7.54}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System.cs}{100}{section.7.54}%
+\contentsline {section}{\numberline {7.55}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Save/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Serialization\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wrapper.cs}{100}{section.7.55}%
+\contentsline {section}{\numberline {7.56}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Traps/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Axe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trap.cs}{101}{section.7.56}%
+\contentsline {section}{\numberline {7.57}Dokumentacja pliku Assets/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scripts/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Traps/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Spikes\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trap.cs}{101}{section.7.57}%

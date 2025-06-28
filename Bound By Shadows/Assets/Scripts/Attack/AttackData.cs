@@ -33,3 +33,4 @@ public class AttackData : ScriptableObject
     /// @brief Czas trwania hitboxa w sekundach.
     public float duration;
 }
+

@@ -1,18 +1,18 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
 /**
  * @class LeverRiddle
- * @brief Sprawdza poprawnoúÊ u≥oøenia düwigni i aktywuje ukrytπ platformÍ.
+ * @brief Sprawdza poprawno≈õƒá u≈Ço≈ºenia d≈∫wigni i aktywuje ukrytƒÖ platformƒô.
  *
- * Gdy düwignie zostanπ ustawione w odpowiedniej kombinacji, aktywuje ukryte kafelki (np. kamieÒ, most).
+ * Gdy d≈∫wignie zostanƒÖ ustawione w odpowiedniej kombinacji, aktywuje ukryte kafelki (np. kamie≈Ñ, most).
  *
- * @author Filip Kud≥a
+ * @author Filip Kud≈Ça
  */
 public class LeverRiddle : MonoBehaviour
 {
     /// @brief Obiekt z ukrytymi kafelkami do aktywacji.
     [SerializeField] private GameObject hiddenTiles;
-    /// @brief Referencje do 3 düwigni w zagadce.
+    /// @brief Referencje do 3 d≈∫wigni w zagadce.
     [SerializeField] private GameObject lever1;
     [SerializeField] private GameObject lever2;
     [SerializeField] private GameObject lever3;
@@ -22,7 +22,7 @@ public class LeverRiddle : MonoBehaviour
     private bool lever3On;
 
     /**
-     * @brief Sprawdza aktualny stan düwigni i aktywuje ukryte kafelki, jeúli warunek jest spe≥niony.
+     * @brief Sprawdza aktualny stan d≈∫wigni i aktywuje ukryte kafelki, je≈õli warunek jest spe≈Çniony.
      */
     public void CheckCorrectness()
     {
@@ -39,3 +39,4 @@ public class LeverRiddle : MonoBehaviour
         }
     }
 }
+

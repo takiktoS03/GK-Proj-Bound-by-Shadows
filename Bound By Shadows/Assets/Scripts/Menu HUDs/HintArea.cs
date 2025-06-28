@@ -1,30 +1,30 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using TMPro;
 
 /**
  * @class HintArea
- * @brief Wyœwietla wiadomoœæ podpowiedzi, gdy gracz znajdzie siê w okreœlonym obszarze.
+ * @brief WyÅ›wietla wiadomoÅ›Ä‡ podpowiedzi, gdy gracz znajdzie siÄ™ w okreÅ›lonym obszarze.
  *
- * Wykrywa obecnoœæ gracza w triggerze i przekazuje tekst do `HintController`,
- * który zarz¹dza wyœwietlaniem wiadomoœci na ekranie.
+ * Wykrywa obecnoÅ›Ä‡ gracza w triggerze i przekazuje tekst do `HintController`,
+ * ktÃ³ry zarzÄ…dza wyÅ›wietlaniem wiadomoÅ›ci na ekranie.
  *
- * Wspiera mechaniki eksploracji i nawigacji poprzez wskazówki œrodowiskowe.
+ * Wspiera mechaniki eksploracji i nawigacji poprzez wskazÃ³wki Å›rodowiskowe.
  *
  * @author Julia Bigaj
  */
 public class HintArea : MonoBehaviour
 {
-    /// @brief Tekst wiadomoœci, która ma byæ wyœwietlona graczowi.
+    /// @brief Tekst wiadomoÅ›ci, ktÃ³ra ma byÄ‡ wyÅ›wietlona graczowi.
     public string message;
 
-    /// @brief Czy gracz aktualnie znajduje siê w triggerze.
+    /// @brief Czy gracz aktualnie znajduje siÄ™ w triggerze.
     private bool playerInside = false;
 
     /// @brief Referencja do kontrolera podpowiedzi (`HintController`).
     private HintController hintController;
 
     /**
-     * @brief Inicjalizuje referencjê do HintController.
+     * @brief Inicjalizuje referencjÄ™ do HintController.
      */
     private void Start()
     {
@@ -32,8 +32,8 @@ public class HintArea : MonoBehaviour
     }
 
     /**
-     * @brief Pokazuje wiadomoœæ, gdy gracz wejdzie w obszar podpowiedzi.
-     * @param other Obiekt koliduj¹cy (np. gracz).
+     * @brief Pokazuje wiadomoÅ›Ä‡, gdy gracz wejdzie w obszar podpowiedzi.
+     * @param other Obiekt kolidujÄ…cy (np. gracz).
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,8 +45,8 @@ public class HintArea : MonoBehaviour
     }
 
     /**
-     * @brief Ukrywa wiadomoœæ, gdy gracz opuœci obszar podpowiedzi.
-     * @param other Obiekt koliduj¹cy (np. gracz).
+     * @brief Ukrywa wiadomoÅ›Ä‡, gdy gracz opuÅ›ci obszar podpowiedzi.
+     * @param other Obiekt kolidujÄ…cy (np. gracz).
      */
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -57,3 +57,4 @@ public class HintArea : MonoBehaviour
         }
     }
 }
+

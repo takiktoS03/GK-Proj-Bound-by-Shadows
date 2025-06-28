@@ -1,14 +1,14 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
  * @class PauseMenu
- * @brief Zarzπdza stanem pauzy i koÒca gry w trakcie rozgrywki.
+ * @brief ZarzƒÖdza stanem pauzy i ko≈Ñca gry w trakcie rozgrywki.
  *
- * Obs≥uguje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu,
- * powrÛt do menu g≥Ûwnego oraz ekran koÒca gry. Blokuje czas gry i interakcje
- * UI w odpowiednich momentach. Dzia≥a tylko w scenie `"Level 1 - Cave"`.
+ * Obs≈Çuguje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu,
+ * powr√≥t do menu g≈Ç√≥wnego oraz ekran ko≈Ñca gry. Blokuje czas gry i interakcje
+ * UI w odpowiednich momentach. Dzia≈Ça tylko w scenie `"Level 1 - Cave"`.
  *
  * @author Julia Bigaj
  */
@@ -17,13 +17,13 @@ public class PauseMenu : MonoBehaviour
     /// @brief Panel UI menu pauzy.
     public GameObject pauseMenuUI;
 
-    /// @brief Czy gra zakoÒczy≥a siÍ (np. przegrana).
+    /// @brief Czy gra zako≈Ñczy≈Ça siƒô (np. przegrana).
     public static bool isGameOver = false;
 
-    /// @brief Panel UI ekranu koÒca gry.
+    /// @brief Panel UI ekranu ko≈Ñca gry.
     public GameObject gameOverUI;
 
-    /// @brief èrÛd≥o düwiÍku odtwarzanego przy przegranej.
+    /// @brief ≈πr√≥d≈Ço d≈∫wiƒôku odtwarzanego przy przegranej.
     public AudioSource gameOverAudio;
 
     /// @brief Czy gra jest aktualnie zapauzowana.
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Obs≥uguje skrÛt klawiaturowy (Escape) i logikÍ pauzy.
+     * @brief Obs≈Çuguje skr√≥t klawiaturowy (Escape) i logikƒô pauzy.
      */
     void Update()
     {
@@ -68,7 +68,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Wznawia grÍ po pauzie.
+     * @brief Wznawia grƒô po pauzie.
      */
     public void Resume()
     {
@@ -78,7 +78,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Wczytuje bieøπcπ scenÍ i odtwarza zapisany stan.
+     * @brief Wczytuje bie≈ºƒÖcƒÖ scenƒô i odtwarza zapisany stan.
      */
     public void LoadGame()
     {
@@ -87,9 +87,9 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Callback wykonywany po zakoÒczeniu ≥adowania sceny ñ uruchamia system zapisu.
-     * @param scene Nowo za≥adowana scena.
-     * @param mode Tryb ≥adowania sceny.
+     * @brief Callback wykonywany po zako≈Ñczeniu ≈Çadowania sceny ‚Äì uruchamia system zapisu.
+     * @param scene Nowo za≈Çadowana scena.
+     * @param mode Tryb ≈Çadowania sceny.
      */
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -98,7 +98,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Wstrzymuje grÍ i aktywuje menu pauzy.
+     * @brief Wstrzymuje grƒô i aktywuje menu pauzy.
      */
     public void Pause()
     {
@@ -112,7 +112,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief KoÒczy grÍ i wraca do menu g≥Ûwnego.
+     * @brief Ko≈Ñczy grƒô i wraca do menu g≈Ç√≥wnego.
      */
     public void QuitGame()
     {
@@ -123,7 +123,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Zapisuje bieøπcy stan gry.
+     * @brief Zapisuje bie≈ºƒÖcy stan gry.
      */
     public void SaveGame()
     {
@@ -131,7 +131,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Coroutine wyúwietlajπca ekran koÒca gry po krÛtkim opÛünieniu.
+     * @brief Coroutine wy≈õwietlajƒÖca ekran ko≈Ñca gry po kr√≥tkim op√≥≈∫nieniu.
      * @return Enumerator dla StartCoroutine.
      */
     public IEnumerator ShowGameOver()
@@ -148,7 +148,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     /**
-     * @brief Odtwarza düwiÍk koÒca gry, jeúli jeszcze nie gra.
+     * @brief Odtwarza d≈∫wiƒôk ko≈Ñca gry, je≈õli jeszcze nie gra.
      */
     private void PlayGameOverSound()
     {
@@ -158,3 +158,4 @@ public class PauseMenu : MonoBehaviour
         }
     }
 }
+

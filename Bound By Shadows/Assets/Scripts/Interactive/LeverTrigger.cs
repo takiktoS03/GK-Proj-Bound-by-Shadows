@@ -1,29 +1,29 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class LeverTrigger
- * @brief Obs³uguje interakcjê gracza z dŸwigni¹ i zmienia jej stan.
+ * @brief ObsÅ‚uguje interakcjÄ™ gracza z dÅºwigniÄ… i zmienia jej stan.
  *
- * Gracz mo¿e aktywowaæ lub dezaktywowaæ dŸwigniê po naciœniêciu klawisza F, jeœli znajduje siê w zasiêgu.
- * DŸwignia uruchamia animacjê i dŸwiêk oraz przekazuje informacjê do skryptu zagadki.
+ * Gracz moÅ¼e aktywowaÄ‡ lub dezaktywowaÄ‡ dÅºwigniÄ™ po naciÅ›niÄ™ciu klawisza F, jeÅ›li znajduje siÄ™ w zasiÄ™gu.
+ * DÅºwignia uruchamia animacjÄ™ i dÅºwiÄ™k oraz przekazuje informacjÄ™ do skryptu zagadki.
  *
  * @author Julia Bigaj
  */
 public class LeverTrigger : MonoBehaviour
 {
-    /// @brief Animator przypisany do dŸwigni (obs³uguje stan On/Off).
+    /// @brief Animator przypisany do dÅºwigni (obsÅ‚uguje stan On/Off).
     public Animator leverAnimator;
 
     private bool playerInRange;
 
-    /// @brief Aktualny stan dŸwigni (czy w³¹czona).
+    /// @brief Aktualny stan dÅºwigni (czy wÅ‚Ä…czona).
     [HideInInspector] public bool leverIsOn;
 
     /**
-     * @brief Wykrywa naciœniêcie klawisza F, gdy gracz znajduje siê w zasiêgu.
+     * @brief Wykrywa naciÅ›niÄ™cie klawisza F, gdy gracz znajduje siÄ™ w zasiÄ™gu.
      *
-     * W zale¿noœci od obecnego stanu dŸwigni aktywuje odpowiedni¹ animacjê, dŸwiêk oraz aktualizuje flagê `leverIsOn`.
-     * Nie wywo³uje `CheckRiddle()` – powinno byæ dodane, jeœli dŸwignia nale¿y do zagadki.
+     * W zaleÅ¼noÅ›ci od obecnego stanu dÅºwigni aktywuje odpowiedniÄ… animacjÄ™, dÅºwiÄ™k oraz aktualizuje flagÄ™ `leverIsOn`.
+     * Nie wywoÅ‚uje `CheckRiddle()` â€“ powinno byÄ‡ dodane, jeÅ›li dÅºwignia naleÅ¼y do zagadki.
      */
     void Update()
     {
@@ -45,8 +45,8 @@ public class LeverTrigger : MonoBehaviour
     }
 
     /**
-     * @brief Wykrywa wejœcie gracza w zasiêg kolizji.
-     * @param other Obiekt koliduj¹cy z dŸwigni¹.
+     * @brief Wykrywa wejÅ›cie gracza w zasiÄ™g kolizji.
+     * @param other Obiekt kolidujÄ…cy z dÅºwigniÄ….
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -55,8 +55,8 @@ public class LeverTrigger : MonoBehaviour
     }
 
     /**
-     * @brief Wykrywa wyjœcie gracza z zasiêgu kolizji.
-     * @param other Obiekt opuszczaj¹cy obszar kolizji.
+     * @brief Wykrywa wyjÅ›cie gracza z zasiÄ™gu kolizji.
+     * @param other Obiekt opuszczajÄ…cy obszar kolizji.
      */
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -65,7 +65,7 @@ public class LeverTrigger : MonoBehaviour
     }
 
     /**
-     * @brief Wywo³uje sprawdzenie poprawnoœci zagadki przez nadrzêdny obiekt LeverRiddle.
+     * @brief WywoÅ‚uje sprawdzenie poprawnoÅ›ci zagadki przez nadrzÄ™dny obiekt LeverRiddle.
      */
     private void CheckRiddle()
     {

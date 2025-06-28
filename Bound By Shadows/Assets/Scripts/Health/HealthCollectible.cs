@@ -1,20 +1,20 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class HealthCollectible
- * @brief Skrypt odpowiedzialny za przedmiot przywracaj¹cy zdrowie graczowi.
+ * @brief Skrypt odpowiedzialny za przedmiot przywracajÄ…cy zdrowie graczowi.
  *
- * Po zebraniu przez gracza, przywraca okreœlon¹ iloœæ zdrowia i usuwa siê ze sceny.
+ * Po zebraniu przez gracza, przywraca okreÅ›lonÄ… iloÅ›Ä‡ zdrowia i usuwa siÄ™ ze sceny.
  *
- * @author Filip Kud³a
+ * @author Filip KudÅ‚a
  */
 public class HealthCollectible : MonoBehaviour
 {
-    /// @brief Iloœæ zdrowia do przywrócenia.
+    /// @brief IloÅ›Ä‡ zdrowia do przywrÃ³cenia.
     [SerializeField] private float healthValue;
 
     /**
-     * Wykrywa wejœcie gracza i przywraca mu zdrowie.
+     * Wykrywa wejÅ›cie gracza i przywraca mu zdrowie.
      */
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,3 +22,4 @@ public class HealthCollectible : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+

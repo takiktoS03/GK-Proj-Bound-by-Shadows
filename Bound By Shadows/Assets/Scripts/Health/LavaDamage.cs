@@ -1,20 +1,20 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class LavaDamage
- * @brief Skrypt zadaj¹cy obra¿enia graczowi przy kontakcie z law¹.
+ * @brief Skrypt zadajÄ…cy obraÅ¼enia graczowi przy kontakcie z lawÄ….
  *
- * Po wejœciu w strefê lawy, odejmuje graczowi okreœlon¹ iloœæ zdrowia i odrzuca go.
+ * Po wejÅ›ciu w strefÄ™ lawy, odejmuje graczowi okreÅ›lonÄ… iloÅ›Ä‡ zdrowia i odrzuca go.
  *
- * @author Filip Kud³a
+ * @author Filip KudÅ‚a
  */
 public class LavaDamage : MonoBehaviour
 {
-    /// @brief Iloœæ obra¿eñ zadanych przez lawê.
+    /// @brief IloÅ›Ä‡ obraÅ¼eÅ„ zadanych przez lawÄ™.
     [SerializeField] private float damage = 25f;
-    /// @brief Minimalny odstêp czasowy miêdzy kolejnymi obra¿eniami.
+    /// @brief Minimalny odstÄ™p czasowy miÄ™dzy kolejnymi obraÅ¼eniami.
     [SerializeField] private float damageInterval = 0.25f;
-    /// @brief Czas, po którym mo¿liwe bêdzie kolejne zadanie obra¿eñ.
+    /// @brief Czas, po ktÃ³rym moÅ¼liwe bÄ™dzie kolejne zadanie obraÅ¼eÅ„.
     [SerializeField] private float nextDamageTime = 0f;
 
     private Health health;
@@ -25,7 +25,7 @@ public class LavaDamage : MonoBehaviour
 
     /**
      * Inicjalizacja komponentu Health przypisanego do obiektu.
-     * Umo¿liwia póŸniejsze wywo³ywanie metody TakeDamage().
+     * UmoÅ¼liwia pÃ³Åºniejsze wywoÅ‚ywanie metody TakeDamage().
      */
     private void Awake()
     {
@@ -33,9 +33,9 @@ public class LavaDamage : MonoBehaviour
     }
 
     /**
-     * Reakcja na przebywanie w strefie lawy — cykliczne odbieranie zdrowia.
+     * Reakcja na przebywanie w strefie lawy â€” cykliczne odbieranie zdrowia.
      *
-     * @param collision Obiekt koliduj¹cy z law¹.
+     * @param collision Obiekt kolidujÄ…cy z lawÄ….
      */
     private void OnTriggerStay2D(Collider2D collision)
     {

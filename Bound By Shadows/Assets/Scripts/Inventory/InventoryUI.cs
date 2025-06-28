@@ -1,34 +1,34 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 /**
  * @class InventoryUI
- * @brief Zarz¹dza interfejsem ekwipunku oraz wyœwietlaniem treœci listów.
+ * @brief ZarzÄ…dza interfejsem ekwipunku oraz wyÅ›wietlaniem treÅ›ci listÃ³w.
  *
- * Umo¿liwia otwieranie/zamykanie ekwipunku, odœwie¿anie jego zawartoœci
- * oraz pokazywanie treœci wybranego listu (LetterData).
+ * UmoÅ¼liwia otwieranie/zamykanie ekwipunku, odÅ›wieÅ¼anie jego zawartoÅ›ci
+ * oraz pokazywanie treÅ›ci wybranego listu (LetterData).
  *
  * @author Julia Bigaj
  */
 public class InventoryUI : MonoBehaviour
 {
-    /// @brief Singleton zapewniaj¹cy dostêp do UI ekwipunku.
+    /// @brief Singleton zapewniajÄ…cy dostÄ™p do UI ekwipunku.
     public static InventoryUI Instance;
 
-    /// @brief Panel g³ówny UI ekwipunku.
+    /// @brief Panel gÅ‚Ã³wny UI ekwipunku.
     public GameObject inventoryPanel;
 
-    /// @brief Obraz prezentuj¹cy treœæ listu.
+    /// @brief Obraz prezentujÄ…cy treÅ›Ä‡ listu.
     public Image letterContentImage;
 
-    /// @brief Komponent odpowiedzialny za generowanie slotów.
+    /// @brief Komponent odpowiedzialny za generowanie slotÃ³w.
     public InventorySlotSpawner slotSpawner;
 
     /// @brief Czy panel ekwipunku jest aktualnie otwarty.
     private bool isOpen = false;
 
     /**
-     * @brief Ustawia instancjê singletonu.
+     * @brief Ustawia instancjÄ™ singletonu.
      */
     void Awake()
     {
@@ -43,7 +43,7 @@ public class InventoryUI : MonoBehaviour
     }
 
     /**
-    * @brief Sprawdza naciœniêcie klawisza otwieraj¹cego ekwipunek.
+    * @brief Sprawdza naciÅ›niÄ™cie klawisza otwierajÄ…cego ekwipunek.
     */
     void Update()
     {
@@ -54,7 +54,7 @@ public class InventoryUI : MonoBehaviour
     }
 
     /**
-     * @brief Prze³¹cza widocznoœæ panelu ekwipunku.
+     * @brief PrzeÅ‚Ä…cza widocznoÅ›Ä‡ panelu ekwipunku.
      */
     void ToggleInventory()
     {
@@ -70,26 +70,27 @@ public class InventoryUI : MonoBehaviour
     }
 
     /**
-     * @brief Odœwie¿a ekwipunek przy jego otwarciu.
+     * @brief OdÅ›wieÅ¼a ekwipunek przy jego otwarciu.
      */
     void RefreshInventory()
     {
-        Debug.Log("Odœwie¿am ekwipunek...");
+        Debug.Log("OdÅ›wieÅ¼am ekwipunek...");
 
-        // Odœwie¿ sloty w UI
+        // OdÅ›wieÅ¼ sloty w UI
         slotSpawner.RefreshSlots();
     }
 
     /**
-     * @brief Wyœwietla treœæ wybranego listu.
-     * @param letter Obiekt `LetterData`, którego treœæ ma zostaæ pokazana.
+     * @brief WyÅ›wietla treÅ›Ä‡ wybranego listu.
+     * @param letter Obiekt `LetterData`, ktÃ³rego treÅ›Ä‡ ma zostaÄ‡ pokazana.
      */
     public void ShowLetterContent(LetterData letterData)
     {
         Debug.Log("Otwarto list: " + letterData.icon.name);
 
-        // Poka¿ zawartoœæ
+        // PokaÅ¼ zawartoÅ›Ä‡
         letterContentImage.sprite = letterData.content;
         letterContentImage.gameObject.SetActive(true);
     }
 }
+

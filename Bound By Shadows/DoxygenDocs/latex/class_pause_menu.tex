@@ -2,7 +2,7 @@
 \hypertarget{class_pause_menu}{}\label{class_pause_menu}\index{PauseMenu@{PauseMenu}}
 
 
-Zarzπdza stanem pauzy i koÒca gry w trakcie rozgrywki.  
+ZarzƒÖdza stanem pauzy i ko≈Ñca gry w trakcie rozgrywki.  
 
 
 Diagram dziedziczenia dla Pause\+Menu\begin{figure}[H]
@@ -15,39 +15,39 @@ Diagram dziedziczenia dla Pause\+Menu\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_pause_menu_a4416b25e65dfadf57cd8657eaf94f7df}{Resume}} ()
-\begin{DoxyCompactList}\small\item\em Wznawia grÍ po pauzie. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Wznawia grƒô po pauzie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pause_menu_a5c9d4ead4d30cdf4fda4acbb3002da36}{Load\+Game}} ()
-\begin{DoxyCompactList}\small\item\em Wczytuje bieøπcπ scenÍ i odtwarza zapisany stan. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Wczytuje bie≈ºƒÖcƒÖ scenƒô i odtwarza zapisany stan. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pause_menu_a712dac1268693262de144337e2835ea7}{Pause}} ()
-\begin{DoxyCompactList}\small\item\em Wstrzymuje grÍ i aktywuje menu pauzy. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Wstrzymuje grƒô i aktywuje menu pauzy. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pause_menu_a833077a2752465d59d0e7e5ad756b7ab}{Quit\+Game}} ()
-\begin{DoxyCompactList}\small\item\em KoÒczy grÍ i wraca do menu g≥Ûwnego. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Ko≈Ñczy grƒô i wraca do menu g≈Ç√≥wnego. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pause_menu_a07316b6d4c8530d1140d0344862c2f71}{Save\+Game}} ()
-\begin{DoxyCompactList}\small\item\em Zapisuje bieøπcy stan gry. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Zapisuje bie≈ºƒÖcy stan gry. \end{DoxyCompactList}\item 
 IEnumerator \mbox{\hyperlink{class_pause_menu_aec12219ce5017ba8468877c7fb3d5406}{Show\+Game\+Over}} ()
-\begin{DoxyCompactList}\small\item\em Coroutine wyúwietlajπca ekran koÒca gry po krÛtkim opÛünieniu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Coroutine wy≈õwietlajƒÖca ekran ko≈Ñca gry po kr√≥tkim op√≥≈∫nieniu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 Game\+Object \mbox{\hyperlink{class_pause_menu_a49305f37ccebc2342ea009f5cb259fee}{pause\+Menu\+UI}}
 \begin{DoxyCompactList}\small\item\em Panel UI menu pauzy. \end{DoxyCompactList}\item 
 Game\+Object \mbox{\hyperlink{class_pause_menu_a5913d279cb675a26d4110ce3fc3635c2}{game\+Over\+UI}}
-\begin{DoxyCompactList}\small\item\em Panel UI ekranu koÒca gry. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Panel UI ekranu ko≈Ñca gry. \end{DoxyCompactList}\item 
 Audio\+Source \mbox{\hyperlink{class_pause_menu_afe3053026a4bd08feda8614be59f1519}{game\+Over\+Audio}}
-\begin{DoxyCompactList}\small\item\em èrÛd≥o düwiÍku odtwarzanego przy przegranej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ≈πr√≥d≈Ço d≈∫wiƒôku odtwarzanego przy przegranej. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 static bool \mbox{\hyperlink{class_pause_menu_a442d2d7274f52983f9f7fedf91a74e64}{is\+Game\+Over}} = false
-\begin{DoxyCompactList}\small\item\em Czy gra zakoÒczy≥a siÍ (np. przegrana). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Czy gra zako≈Ñczy≈Ça siƒô (np. przegrana). \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{class_pause_menu_a3d0a43917cf3e488852b47d1b755b377}{is\+Paused}} = false
 \begin{DoxyCompactList}\small\item\em Czy gra jest aktualnie zapauzowana. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczeg√≥≈Çowy}
-Zarzπdza stanem pauzy i koÒca gry w trakcie rozgrywki. 
+ZarzƒÖdza stanem pauzy i ko≈Ñca gry w trakcie rozgrywki. 
 
-Obs≥uguje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu, powrÛt do menu g≥Ûwnego oraz ekran koÒca gry. Blokuje czas gry i interakcje UI w odpowiednich momentach. Dzia≥a tylko w scenie {\ttfamily "{}\+Level 1 -\/ Cave"{}}.
+Obs≈Çuguje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu, powr√≥t do menu g≈Ç√≥wnego oraz ekran ko≈Ñca gry. Blokuje czas gry i interakcje UI w odpowiednich momentach. Dzia≈Ça tylko w scenie {\ttfamily "{}\+Level 1 -\/ Cave"{}}.
 
 \begin{DoxyAuthor}{Autor}
 Julia Bigaj 
@@ -65,7 +65,7 @@ void Pause\+Menu.\+Load\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 
-Wczytuje bieøπcπ scenÍ i odtwarza zapisany stan. 
+Wczytuje bie≈ºƒÖcƒÖ scenƒô i odtwarza zapisany stan. 
 
 \Hypertarget{class_pause_menu_a712dac1268693262de144337e2835ea7}\index{PauseMenu@{PauseMenu}!Pause@{Pause}}
 \index{Pause@{Pause}!PauseMenu@{PauseMenu}}
@@ -75,7 +75,7 @@ void Pause\+Menu.\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hs
 
 
 
-Wstrzymuje grÍ i aktywuje menu pauzy. 
+Wstrzymuje grƒô i aktywuje menu pauzy. 
 
 \Hypertarget{class_pause_menu_a833077a2752465d59d0e7e5ad756b7ab}\index{PauseMenu@{PauseMenu}!QuitGame@{QuitGame}}
 \index{QuitGame@{QuitGame}!PauseMenu@{PauseMenu}}
@@ -85,7 +85,7 @@ void Pause\+Menu.\+Quit\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 
-KoÒczy grÍ i wraca do menu g≥Ûwnego. 
+Ko≈Ñczy grƒô i wraca do menu g≈Ç√≥wnego. 
 
 \Hypertarget{class_pause_menu_a4416b25e65dfadf57cd8657eaf94f7df}\index{PauseMenu@{PauseMenu}!Resume@{Resume}}
 \index{Resume@{Resume}!PauseMenu@{PauseMenu}}
@@ -95,7 +95,7 @@ void Pause\+Menu.\+Resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\h
 
 
 
-Wznawia grÍ po pauzie. 
+Wznawia grƒô po pauzie. 
 
 \Hypertarget{class_pause_menu_a07316b6d4c8530d1140d0344862c2f71}\index{PauseMenu@{PauseMenu}!SaveGame@{SaveGame}}
 \index{SaveGame@{SaveGame}!PauseMenu@{PauseMenu}}
@@ -105,7 +105,7 @@ void Pause\+Menu.\+Save\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 
 
-Zapisuje bieøπcy stan gry. 
+Zapisuje bie≈ºƒÖcy stan gry. 
 
 \Hypertarget{class_pause_menu_aec12219ce5017ba8468877c7fb3d5406}\index{PauseMenu@{PauseMenu}!ShowGameOver@{ShowGameOver}}
 \index{ShowGameOver@{ShowGameOver}!PauseMenu@{PauseMenu}}
@@ -115,7 +115,7 @@ IEnumerator Pause\+Menu.\+Show\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 
-Coroutine wyúwietlajπca ekran koÒca gry po krÛtkim opÛünieniu. 
+Coroutine wy≈õwietlajƒÖca ekran ko≈Ñca gry po kr√≥tkim op√≥≈∫nieniu. 
 
 \begin{DoxyReturn}{Zwraca}
 Enumerator dla Start\+Coroutine. 
@@ -133,7 +133,7 @@ Audio\+Source Pause\+Menu.\+game\+Over\+Audio}
 
 
 
-èrÛd≥o düwiÍku odtwarzanego przy przegranej. 
+≈πr√≥d≈Ço d≈∫wiƒôku odtwarzanego przy przegranej. 
 
 \Hypertarget{class_pause_menu_a5913d279cb675a26d4110ce3fc3635c2}\index{PauseMenu@{PauseMenu}!gameOverUI@{gameOverUI}}
 \index{gameOverUI@{gameOverUI}!PauseMenu@{PauseMenu}}
@@ -143,7 +143,7 @@ Game\+Object Pause\+Menu.\+game\+Over\+UI}
 
 
 
-Panel UI ekranu koÒca gry. 
+Panel UI ekranu ko≈Ñca gry. 
 
 \Hypertarget{class_pause_menu_a442d2d7274f52983f9f7fedf91a74e64}\index{PauseMenu@{PauseMenu}!isGameOver@{isGameOver}}
 \index{isGameOver@{isGameOver}!PauseMenu@{PauseMenu}}
@@ -153,7 +153,7 @@ bool Pause\+Menu.\+is\+Game\+Over = false\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Czy gra zakoÒczy≥a siÍ (np. przegrana). 
+Czy gra zako≈Ñczy≈Ça siƒô (np. przegrana). 
 
 \Hypertarget{class_pause_menu_a3d0a43917cf3e488852b47d1b755b377}\index{PauseMenu@{PauseMenu}!isPaused@{isPaused}}
 \index{isPaused@{isPaused}!PauseMenu@{PauseMenu}}

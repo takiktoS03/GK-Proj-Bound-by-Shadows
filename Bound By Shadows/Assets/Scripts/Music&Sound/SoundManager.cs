@@ -1,12 +1,12 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class SoundManager
- * @brief Centralny mened¿er efektów dŸwiêkowych w grze.
+ * @brief Centralny menedÅ¼er efektÃ³w dÅºwiÄ™kowych w grze.
  *
- * Implementuje wzorzec singletonu. Udostêpnia metody do odtwarzania konkretnych efektów dŸwiêkowych,
- * takich jak ataki, otwieranie skrzyni, dŸwiêki ³amig³ówek czy kroki bohatera.
- * Kroki obs³ugiwane s¹ osobnym Ÿród³em dŸwiêku (`stepSource`) jako dŸwiêk zapêtlony.
+ * Implementuje wzorzec singletonu. UdostÄ™pnia metody do odtwarzania konkretnych efektÃ³w dÅºwiÄ™kowych,
+ * takich jak ataki, otwieranie skrzyni, dÅºwiÄ™ki Å‚amigÅ‚Ã³wek czy kroki bohatera.
+ * Kroki obsÅ‚ugiwane sÄ… osobnym ÅºrÃ³dÅ‚em dÅºwiÄ™ku (`stepSource`) jako dÅºwiÄ™k zapÄ™tlony.
  *
  * @author Julia Bigaj
  */
@@ -15,50 +15,50 @@ public class SoundManager : MonoBehaviour
     /// @brief Instancja singletonu SoundManager.
     public static SoundManager Instance;
 
-    [Header("DŸwiêki otoczenia")]
-    /// @brief DŸwiêk otwierania drzwi.
+    [Header("DÅºwiÄ™ki otoczenia")]
+    /// @brief DÅºwiÄ™k otwierania drzwi.
     public AudioClip doorOpenSound;
 
-    /// @brief DŸwiêk otwierania skrzyni.
+    /// @brief DÅºwiÄ™k otwierania skrzyni.
     public AudioClip chestOpenSound;
 
-    /// @brief DŸwiêk zniszczenia beczki.
+    /// @brief DÅºwiÄ™k zniszczenia beczki.
     public AudioClip destroyBarrelSound;
 
     [Header("Bohater")]
-    /// @brief DŸwiêk lekkiego ataku.
+    /// @brief DÅºwiÄ™k lekkiego ataku.
     public AudioClip lightAttackSound;
 
-    /// @brief DŸwiêk ciê¿kiego ataku.
+    /// @brief DÅºwiÄ™k ciÄ™Å¼kiego ataku.
     public AudioClip heavyAttackSound;
 
-    /// @brief DŸwiêk skoku.
+    /// @brief DÅºwiÄ™k skoku.
     public AudioClip jumpSound;
 
-    /// @brief DŸwiêk dashowania.
+    /// @brief DÅºwiÄ™k dashowania.
     public AudioClip dashSound;
 
-    /// @brief DŸwiêk otrzymania obra¿eñ.
+    /// @brief DÅºwiÄ™k otrzymania obraÅ¼eÅ„.
     public AudioClip hurtSound;
 
-    /// @brief DŸwiêk kroków bohatera.
+    /// @brief DÅºwiÄ™k krokÃ³w bohatera.
     public AudioClip stepSound;
 
-    [Header("£amig³ówki")]
-    /// @brief DŸwiêk poci¹gniêcia za dŸwigniê.
+    [Header("ÅamigÅ‚Ã³wki")]
+    /// @brief DÅºwiÄ™k pociÄ…gniÄ™cia za dÅºwigniÄ™.
     public AudioClip leverPullSound;
 
-    /// @brief DŸwiêk przesuwania kamienia.
+    /// @brief DÅºwiÄ™k przesuwania kamienia.
     public AudioClip moveStoneSound;
 
-    /// @brief G³ówne Ÿród³o dŸwiêków do jednorazowych efektów.
+    /// @brief GÅ‚Ã³wne ÅºrÃ³dÅ‚o dÅºwiÄ™kÃ³w do jednorazowych efektÃ³w.
     private AudioSource audioSource;
 
-    /// @brief Oddzielne Ÿród³o dŸwiêku do kroków (loopowane).
+    /// @brief Oddzielne ÅºrÃ³dÅ‚o dÅºwiÄ™ku do krokÃ³w (loopowane).
     private AudioSource stepSource;
 
     /**
-     * @brief Inicjalizacja singletonu i Ÿróde³ dŸwiêku.
+     * @brief Inicjalizacja singletonu i ÅºrÃ³deÅ‚ dÅºwiÄ™ku.
      */
     private void Awake()
     {
@@ -73,18 +73,18 @@ public class SoundManager : MonoBehaviour
             return;
         }
 
-        // G³ówne Ÿród³o dŸwiêków
+        // GÅ‚Ã³wne ÅºrÃ³dÅ‚o dÅºwiÄ™kÃ³w
         audioSource = gameObject.AddComponent<AudioSource>();
 
-        // ród³o kroków
+        // Å¹rÃ³dÅ‚o krokÃ³w
         stepSource = gameObject.AddComponent<AudioSource>();
         stepSource.loop = true;
         stepSource.clip = stepSound;
     }
 
     /**
-     * @brief Odtwarza pojedynczy dŸwiêk z podanego AudioClip.
-     * @param clip DŸwiêk do odtworzenia.
+     * @brief Odtwarza pojedynczy dÅºwiÄ™k z podanego AudioClip.
+     * @param clip DÅºwiÄ™k do odtworzenia.
      */
     public void PlaySound(AudioClip clip)
     {
@@ -93,7 +93,7 @@ public class SoundManager : MonoBehaviour
     }
 
     /**
-     * @brief Rozpoczyna zapêtlone odtwarzanie dŸwiêku kroków.
+     * @brief Rozpoczyna zapÄ™tlone odtwarzanie dÅºwiÄ™ku krokÃ³w.
      */
     public void StartSteps()
     {
@@ -102,7 +102,7 @@ public class SoundManager : MonoBehaviour
     }
 
     /**
-     * @brief Zatrzymuje zapêtlony dŸwiêk kroków.
+     * @brief Zatrzymuje zapÄ™tlony dÅºwiÄ™k krokÃ³w.
      */
     public void StopSteps()
     {
@@ -110,38 +110,39 @@ public class SoundManager : MonoBehaviour
             stepSource.Stop();
     }
 
-    // --- Skrócone metody do efektów dŸwiêkowych ---
+    // --- SkrÃ³cone metody do efektÃ³w dÅºwiÄ™kowych ---
 
-    /// @brief Odtwarza dŸwiêk kroku.
+    /// @brief Odtwarza dÅºwiÄ™k kroku.
     public void PlayStep() => PlaySound(stepSound);
 
-    /// @brief Odtwarza dŸwiêk otwierania skrzyni.
+    /// @brief Odtwarza dÅºwiÄ™k otwierania skrzyni.
     public void PlayChest() => PlaySound(chestOpenSound);
 
-    /// @brief Odtwarza dŸwiêk skoku.
+    /// @brief Odtwarza dÅºwiÄ™k skoku.
     public void PlayJump() => PlaySound(jumpSound);
 
-    /// @brief Odtwarza dŸwiêk dashowania.
+    /// @brief Odtwarza dÅºwiÄ™k dashowania.
     public void PlayDash() => PlaySound(dashSound);
 
-    /// @brief Odtwarza dŸwiêk obra¿eñ.
+    /// @brief Odtwarza dÅºwiÄ™k obraÅ¼eÅ„.
     public void PlayHurt() => PlaySound(hurtSound);
 
-    /// @brief Odtwarza dŸwiêk otwierania drzwi.
+    /// @brief Odtwarza dÅºwiÄ™k otwierania drzwi.
     public void PlayDoor() => PlaySound(doorOpenSound);
 
-    /// @brief Odtwarza dŸwiêk zniszczenia beczki.
+    /// @brief Odtwarza dÅºwiÄ™k zniszczenia beczki.
     public void PlayBarrel() => PlaySound(destroyBarrelSound);
 
-    /// @brief Odtwarza dŸwiêk lekkiego ataku.
+    /// @brief Odtwarza dÅºwiÄ™k lekkiego ataku.
     public void PlayLightAttack() => PlaySound(lightAttackSound);
 
-    /// @brief Odtwarza dŸwiêk ciê¿kiego ataku.
+    /// @brief Odtwarza dÅºwiÄ™k ciÄ™Å¼kiego ataku.
     public void PlayHeavyAttack() => PlaySound(heavyAttackSound);
 
-    /// @brief Odtwarza dŸwiêk u¿ycia dŸwigni.
+    /// @brief Odtwarza dÅºwiÄ™k uÅ¼ycia dÅºwigni.
     public void PlayLever() => PlaySound(leverPullSound);
 
-    /// @brief Odtwarza dŸwiêk przesuwania kamienia.
+    /// @brief Odtwarza dÅºwiÄ™k przesuwania kamienia.
     public void PlayStone() => PlaySound(moveStoneSound);
 }
+

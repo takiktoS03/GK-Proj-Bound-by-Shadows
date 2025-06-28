@@ -1,12 +1,12 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 /**
  * @class GhostCameraFollow
- * @brief Prosty skrypt do pod¹¿ania obiektu (np. kamery) za wskazanym celem.
+ * @brief Prosty skrypt do podÄ…Å¼ania obiektu (np. kamery) za wskazanym celem.
  * 
- * Mo¿e byæ u¿yty przez ducha lub inny obiekt œledz¹cy pozycjê gracza.
+ * MoÅ¼e byÄ‡ uÅ¼yty przez ducha lub inny obiekt Å›ledzÄ…cy pozycjÄ™ gracza.
  * 
- * @author Filip Kud³a 
+ * @author Filip KudÅ‚a 
  */
 public class GhostCameraFollow : MonoBehaviour
 {
@@ -21,3 +21,4 @@ public class GhostCameraFollow : MonoBehaviour
         transform.rotation = mainCamera.rotation;
     }
 }
+

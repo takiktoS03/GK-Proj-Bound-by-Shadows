@@ -1,22 +1,22 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 /**
  * @class MainMenu
- * @brief Obs³uguje przyciski menu g³ównego: rozpoczêcie gry, wczytanie stanu i wyjœcie.
+ * @brief ObsÅ‚uguje przyciski menu gÅ‚Ã³wnego: rozpoczÄ™cie gry, wczytanie stanu i wyjÅ›cie.
  *
- * Klasa odpowiada za przechodzenie do odpowiednich scen oraz inicjalizacjê systemu zapisu
- * podczas wczytywania gry. Umo¿liwia równie¿ zakoñczenie dzia³ania aplikacji.
+ * Klasa odpowiada za przechodzenie do odpowiednich scen oraz inicjalizacjÄ™ systemu zapisu
+ * podczas wczytywania gry. UmoÅ¼liwia rÃ³wnieÅ¼ zakoÅ„czenie dziaÅ‚ania aplikacji.
  *
  * @author Julia Bigaj
  */
 public class MainMenu : MonoBehaviour
 {
     /**
-     * @brief Rozpoczyna now¹ grê, ³aduj¹c scenê wprowadzaj¹c¹.
+     * @brief Rozpoczyna nowÄ… grÄ™, Å‚adujÄ…c scenÄ™ wprowadzajÄ…cÄ….
      *
-     * Zamiast poziomu g³ównego ³adowana jest scena `"Intro"`.
+     * Zamiast poziomu gÅ‚Ã³wnego Å‚adowana jest scena `"Intro"`.
      */
     public void StartNewGame()
     {
@@ -25,9 +25,9 @@ public class MainMenu : MonoBehaviour
     }
 
     /**
-     * @brief Wczytuje grê i ustawia callback na zakoñczenie ³adowania sceny.
+     * @brief Wczytuje grÄ™ i ustawia callback na zakoÅ„czenie Å‚adowania sceny.
      *
-     * Po za³adowaniu sceny `"Level 1 - Cave"` nastêpuje automatyczne wywo³anie systemu zapisu.
+     * Po zaÅ‚adowaniu sceny `"Level 1 - Cave"` nastÄ™puje automatyczne wywoÅ‚anie systemu zapisu.
      */
     public void LoadGame()
     {
@@ -37,9 +37,9 @@ public class MainMenu : MonoBehaviour
     }
 
     /**
-     * @brief Callback wywo³ywany po za³adowaniu sceny – inicjalizuje system zapisu.
-     * @param scene Obiekt reprezentuj¹cy nowo za³adowan¹ scenê.
-     * @param mode Tryb ³adowania sceny (Single/Additive).
+     * @brief Callback wywoÅ‚ywany po zaÅ‚adowaniu sceny â€“ inicjalizuje system zapisu.
+     * @param scene Obiekt reprezentujÄ…cy nowo zaÅ‚adowanÄ… scenÄ™.
+     * @param mode Tryb Å‚adowania sceny (Single/Additive).
      */
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -50,9 +50,9 @@ public class MainMenu : MonoBehaviour
     }
 
     /**
-     * @brief Zamyka aplikacjê.
+     * @brief Zamyka aplikacjÄ™.
      *
-     * Wywo³uje `Application.Quit()` i wypisuje debug log.
+     * WywoÅ‚uje `Application.Quit()` i wypisuje debug log.
      */
     public void QuitGame()
     {
@@ -60,3 +60,4 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Exit called");
     }
 }
+

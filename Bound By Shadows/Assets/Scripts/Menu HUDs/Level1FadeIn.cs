@@ -1,27 +1,27 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections;
 
 /**
  * @class Level1FadeIn
- * @brief Realizuje efekt p³ynnego zanikania czarnego ekranu po uruchomieniu poziomu.
+ * @brief Realizuje efekt pÅ‚ynnego zanikania czarnego ekranu po uruchomieniu poziomu.
  *
- * Skrypt przy starcie uruchamia animacjê `fade-in` przy u¿yciu `CanvasGroup`, stopniowo ujawniaj¹c widok gry.
- * Po zakoñczeniu efektu wy³¹cza obiekt z komponentem `CanvasGroup`.
+ * Skrypt przy starcie uruchamia animacjÄ™ `fade-in` przy uÅ¼yciu `CanvasGroup`, stopniowo ujawniajÄ…c widok gry.
+ * Po zakoÅ„czeniu efektu wyÅ‚Ä…cza obiekt z komponentem `CanvasGroup`.
  *
- * Przeznaczony do u¿ytku jako efekt przejœcia przy rozpoczêciu sceny (np. poziomu 1).
+ * Przeznaczony do uÅ¼ytku jako efekt przejÅ›cia przy rozpoczÄ™ciu sceny (np. poziomu 1).
  *
  * @author Julia Bigaj
  */
 public class Level1FadeIn : MonoBehaviour
 {
-    /// @brief Referencja do `CanvasGroup`, który kontroluje przezroczystoœæ czarnego overlaya.
+    /// @brief Referencja do `CanvasGroup`, ktÃ³ry kontroluje przezroczystoÅ›Ä‡ czarnego overlaya.
     public CanvasGroup fadeOverlay;
 
     /// @brief Czas trwania efektu zanikania (w sekundach).
     public float fadeDuration = 1f;
 
     /**
-     * @brief Rozpoczyna efekt fade-in zaraz po za³adowaniu sceny.
+     * @brief Rozpoczyna efekt fade-in zaraz po zaÅ‚adowaniu sceny.
      */
     void Start()
     {
@@ -29,7 +29,7 @@ public class Level1FadeIn : MonoBehaviour
     }
 
     /**
-     * @brief Coroutine odpowiedzialna za stopniowe zmniejszanie przezroczystoœci `fadeOverlay`.
+     * @brief Coroutine odpowiedzialna za stopniowe zmniejszanie przezroczystoÅ›ci `fadeOverlay`.
      * @return Enumerator wymagany przez `StartCoroutine`.
      */
     IEnumerator FadeIn()
@@ -43,6 +43,7 @@ public class Level1FadeIn : MonoBehaviour
         }
 
         fadeOverlay.alpha = 0f;
-        gameObject.SetActive(false); ///< Wy³¹cza obiekt z overlayem po zakoñczeniu animacji.
+        gameObject.SetActive(false); ///< WyÅ‚Ä…cza obiekt z overlayem po zakoÅ„czeniu animacji.
     }
 }
+

@@ -1,14 +1,14 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
  * @class MusicManager
- * @brief Globalny menedøer muzyki i narracji dzia≥ajπcy miÍdzy scenami.
+ * @brief Globalny mened≈ºer muzyki i narracji dzia≈ÇajƒÖcy miƒôdzy scenami.
  *
- * Zarzπdza odtwarzaniem odpowiednich úcieøek düwiÍkowych i narracji w zaleønoúci od aktualnie za≥adowanej sceny.
- * Implementuje wzorzec singletonu, aby zapewniÊ dostÍpnoúÊ miÍdzy scenami (`DontDestroyOnLoad`).
+ * ZarzƒÖdza odtwarzaniem odpowiednich ≈õcie≈ºek d≈∫wiƒôkowych i narracji w zale≈ºno≈õci od aktualnie za≈Çadowanej sceny.
+ * Implementuje wzorzec singletonu, aby zapewniƒá dostƒôpno≈õƒá miƒôdzy scenami (`DontDestroyOnLoad`).
  *
- * Obs≥uguje oddzielne ürÛd≥a düwiÍku: jedno dla muzyki (`audioSource`), drugie dla narracji (`narrationSource`).
+ * Obs≈Çuguje oddzielne ≈∫r√≥d≈Ça d≈∫wiƒôku: jedno dla muzyki (`audioSource`), drugie dla narracji (`narrationSource`).
  *
  * @author Julia Bigaj
  */
@@ -17,26 +17,26 @@ public class MusicManager : MonoBehaviour
     /// @brief Instancja singletonu.
     public static MusicManager Instance { get; private set; }
 
-    /// @brief èrÛd≥o audio odpowiedzialne za t≥o muzyczne.
+    /// @brief ≈πr√≥d≈Ço audio odpowiedzialne za t≈Ço muzyczne.
     public AudioSource audioSource;
 
-    /// @brief èrÛd≥o audio odpowiedzialne za narracjÍ (np. intro).
+    /// @brief ≈πr√≥d≈Ço audio odpowiedzialne za narracjƒô (np. intro).
     public AudioSource narrationSource;
 
-    /// @brief Muzyka odtwarzana w menu g≥Ûwnym.
+    /// @brief Muzyka odtwarzana w menu g≈Ç√≥wnym.
     public AudioClip menuMusic;
 
     /// @brief Muzyka odtwarzana podczas gry.
     public AudioClip gameplayMusic;
 
-    /// @brief Narracja g≥osowa odtwarzana w scenie Intro.
+    /// @brief Narracja g≈Çosowa odtwarzana w scenie Intro.
     public AudioClip introNarration;
 
     /// @brief Muzyka odtwarzana w scenie Intro.
     public AudioClip introMusic;
 
     /**
-     * @brief Inicjalizacja singletonu i rejestracja zdarzenia ≥adowania sceny.
+     * @brief Inicjalizacja singletonu i rejestracja zdarzenia ≈Çadowania sceny.
      */
     private void Awake()
     {
@@ -53,9 +53,9 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Reaguje na za≥adowanie nowej sceny i odtwarza odpowiedniπ muzykÍ.
-     * @param scene Za≥adowana scena.
-     * @param mode Tryb ≥adowania sceny (Single/Additive).
+     * @brief Reaguje na za≈Çadowanie nowej sceny i odtwarza odpowiedniƒÖ muzykƒô.
+     * @param scene Za≈Çadowana scena.
+     * @param mode Tryb ≈Çadowania sceny (Single/Additive).
      */
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -76,7 +76,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Odtwarza muzykÍ menu, jeúli jeszcze nie jest aktywna.
+     * @brief Odtwarza muzykƒô menu, je≈õli jeszcze nie jest aktywna.
      */
     public void PlayMenuMusic()
     {
@@ -89,8 +89,8 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Odtwarza muzykÍ t≥a do rozgrywki z domyúlnπ lub okreúlonπ g≥oúnoúciπ.
-     * @param volume Poziom g≥oúnoúci muzyki (domyúlnie 1f).
+     * @brief Odtwarza muzykƒô t≈Ça do rozgrywki z domy≈õlnƒÖ lub okre≈õlonƒÖ g≈Ço≈õno≈õciƒÖ.
+     * @param volume Poziom g≈Ço≈õno≈õci muzyki (domy≈õlnie 1f).
      */
     public void PlayGameplayMusic(float volume = 1f)
     {
@@ -104,7 +104,7 @@ public class MusicManager : MonoBehaviour
     }
 
     /**
-     * @brief Odtwarza narracjÍ i muzykÍ w scenie Intro.
+     * @brief Odtwarza narracjƒô i muzykƒô w scenie Intro.
      */
     public void PlayIntroAudio()
     {
@@ -132,3 +132,4 @@ public class MusicManager : MonoBehaviour
         if (narrationSource.isPlaying) narrationSource.Stop();
     }
 }
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.28)  28 JUN 2025 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.6.28)  28 JUN 2025 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -784,8 +784,7 @@ dftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count346
 \l__pdf_internal_box=\box123
-)
-No file refman.aux.
+) (refman.aux)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
@@ -868,12 +867,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package backref Info: ** backref set up for natbib ** on input line 211.
 Package hyperref Info: Link coloring ON on input line 211.
+(refman.out) (refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-No file refman.toc.
+\Etoc@tf=\read5
 Package hyperref Info: Option `pageanchor' set `false' on input line 219.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 219.
 
@@ -882,7 +882,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 224.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 226.
-[1
+ [1
 
 
 {C:/Users/Bigajka/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Bi
@@ -1210,16 +1210,6 @@ e 5.
 LaTeX Warning: Reference `class_axe_trap' on page 5 undefined on input line 6.
 
 
-! LaTeX Error: Invalid UTF-8 byte "B3.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ... atakiem gracza }{\pageref{class_barrel}}{}
-                                                  
-? 
-
 LaTeX Warning: Reference `class_barrel' on page 5 undefined on input line 7.
 
 
@@ -1227,48 +1217,6005 @@ LaTeX Warning: Reference `class_barrel_save_data' on page 5 undefined on input
 line 8.
 
 
-! LaTeX Error: Invalid UTF-8 byte "A3.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...aplikacji }{\pageref{class_bootstrapper}}{}
-                                                  
-? 
-
 LaTeX Warning: Reference `class_bootstrapper' on page 5 undefined on input line
  9.
 
 
-! LaTeX Error: Invalid UTF-8 byte "9F.
+LaTeX Warning: Reference `class_button_hover_sound' on page 5 undefined on inpu
+t line 10.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 ...ka }{\pageref{class_button_hover_sound}}{}
-                                                  
-? end
- 
+
+LaTeX Warning: Reference `class_button_hover_underline' on page 5 undefined on 
+input line 11.
+
+
+LaTeX Warning: Reference `class_camera_controller' on page 5 undefined on input
+ line 12.
+
+
+LaTeX Warning: Reference `class_chest_controller' on page 5 undefined on input 
+line 13.
+
+
+LaTeX Warning: Reference `class_chest_panel_manager' on page 5 undefined on inp
+ut line 14.
+
+
+LaTeX Warning: Reference `class_door_trigger' on page 5 undefined on input line
+ 15.
+
+
+LaTeX Warning: Reference `class_encountered_ghost_dialog' on page 5 undefined o
+n input line 16.
+
+
+LaTeX Warning: Reference `class_end_game_trigger' on page 5 undefined on input 
+line 17.
+
+
+LaTeX Warning: Reference `class_event_system_controller' on page 5 undefined on
+ input line 18.
+
+
+LaTeX Warning: Reference `class_ghost_camera_follow' on page 5 undefined on inp
+ut line 19.
+
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+0.
+(C:\Users\Bigajka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 20.
+
+
+LaTeX Warning: Reference `class_ghost_floating' on page 5 undefined on input li
+ne 20.
+
+
+LaTeX Warning: Reference `class_ghost_follow' on page 5 undefined on input line
+ 21.
+
+
+LaTeX Warning: Reference `class_health' on page 5 undefined on input line 22.
+
+[5
+
+]
+
+LaTeX Warning: Reference `class_health_collectible' on page 6 undefined on inpu
+t line 23.
+
+
+LaTeX Warning: Reference `class_hint_area' on page 6 undefined on input line 24
+.
+
+
+LaTeX Warning: Reference `class_hint_controller' on page 6 undefined on input l
+ine 25.
+
+
+LaTeX Warning: Reference `class_h_u_d_visibility' on page 6 undefined on input 
+line 26.
+
+
+LaTeX Warning: Reference `class_intro_controller' on page 6 undefined on input 
+line 27.
+
+
+LaTeX Warning: Reference `class_inventory_manager' on page 6 undefined on input
+ line 28.
+
+
+LaTeX Warning: Reference `class_inventory_slot_spawner' on page 6 undefined on 
+input line 29.
+
+
+LaTeX Warning: Reference `class_inventory_u_i' on page 6 undefined on input lin
+e 30.
+
+
+LaTeX Warning: Reference `interface_i_saveable' on page 6 undefined on input li
+ne 31.
+
+
+LaTeX Warning: Reference `class_lava_damage' on page 6 undefined on input line 
+32.
+
+
+LaTeX Warning: Reference `class_leaf_revealer' on page 6 undefined on input lin
+e 33.
+
+
+LaTeX Warning: Reference `class_letter_data' on page 6 undefined on input line 
+34.
+
+
+LaTeX Warning: Reference `class_level1_fade_in' on page 6 undefined on input li
+ne 35.
+
+
+LaTeX Warning: Reference `class_lever_riddle' on page 6 undefined on input line
+ 36.
+
+
+LaTeX Warning: Reference `class_lever_trigger' on page 6 undefined on input lin
+e 37.
+
+
+LaTeX Warning: Reference `class_main_menu' on page 6 undefined on input line 38
+.
+
+
+LaTeX Warning: Reference `class_melee_enemy' on page 6 undefined on input line 
+39.
+
+
+LaTeX Warning: Reference `class_music_manager' on page 6 undefined on input lin
+e 40.
+
+
+LaTeX Warning: Reference `class_patrol_enemy' on page 6 undefined on input line
+ 41.
+
+
+LaTeX Warning: Reference `class_pause_menu' on page 6 undefined on input line 4
+2.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 43
+.
+(C:\Users\Bigajka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+LaTeX Warning: Reference `class_persistent_audio_listener' on page 6 undefined 
+on input line 43.
+
+
+LaTeX Warning: Reference `class_ethan_the_hero_1_1_player_animation' on page 6 
+undefined on input line 44.
+
+
+LaTeX Warning: Reference `class_ethan_the_hero_1_1_player_attack_method' on pag
+e 6 undefined on input line 45.
+
+
+LaTeX Warning: Reference `class_player_data' on page 6 undefined on input line 
+46.
+
+
+LaTeX Warning: Reference `class_player_health' on page 6 undefined on input lin
+e 47.
+
+
+LaTeX Warning: Reference `class_ethan_the_hero_1_1_player_movement' on page 6 u
+ndefined on input line 48.
+
+
+LaTeX Warning: Reference `class_ethan_the_hero_1_1_player_movement_data' on pag
+e 6 undefined on input line 49.
+
+
+LaTeX Warning: Reference `class_player_save_data' on page 6 undefined on input 
+line 50.
+
+[6]
+
+LaTeX Warning: Reference `class_saveable_object' on page 7 undefined on input l
+ine 51.
+
+
+LaTeX Warning: Reference `class_save_system_1_1_save_data' on page 7 undefined 
+on input line 52.
+
+
+LaTeX Warning: Reference `class_save_system_1_1_save_entry' on page 7 undefined
+ on input line 53.
+
+
+LaTeX Warning: Reference `class_serialization_wrapper' on page 7 undefined on i
+nput line 54.
+
+
+LaTeX Warning: Reference `class_set_order_in_layer_for_children' on page 7 unde
+fined on input line 55.
+
+
+LaTeX Warning: Reference `class_sound_manager' on page 7 undefined on input lin
+e 56.
+
+
+LaTeX Warning: Reference `class_spikes_trap' on page 7 undefined on input line 
+57.
+
+
+LaTeX Warning: Reference `class_text_u_i' on page 7 undefined on input line 58.
+
+
+
+LaTeX Warning: Reference `class_trigger_thought_zone' on page 7 undefined on in
+put line 59.
+
+
+LaTeX Warning: Reference `class_u_i_manager' on page 7 undefined on input line 
+60.
+
+) [7] [8
+
+]
+Rozdzia\l  4.
+(files.tex
+
+LaTeX Warning: Reference `_attack_controller_8cs' on page 9 undefined on input 
+line 3.
+
+
+LaTeX Warning: Reference `_attack_data_8cs' on page 9 undefined on input line 4
+.
+
+
+LaTeX Warning: Reference `_attack_hitbox_8cs' on page 9 undefined on input line
+ 5.
+
+
+LaTeX Warning: Reference `_camera_controller_8cs' on page 9 undefined on input 
+line 6.
+
+
+LaTeX Warning: Reference `_event_system_controller_8cs' on page 9 undefined on 
+input line 7.
+
+
+LaTeX Warning: Reference `_ghost_camera_follow_8cs' on page 9 undefined on inpu
+t line 8.
+
+
+LaTeX Warning: Reference `_door_trigger_8cs' on page 9 undefined on input line 
+9.
+
+
+LaTeX Warning: Reference `_melee_enemy_8cs' on page 9 undefined on input line 1
+0.
+
+
+LaTeX Warning: Reference `_patrol_enemy_8cs' on page 9 undefined on input line 
+11.
+
+
+LaTeX Warning: Reference `_encountered_ghost_dialog_8cs' on page 9 undefined on
+ input line 12.
+
+
+LaTeX Warning: Reference `_ghost_floating_8cs' on page 9 undefined on input lin
+e 13.
+
+
+LaTeX Warning: Reference `_ghost_follow_8cs' on page 9 undefined on input line 
+14.
+
+
+LaTeX Warning: Reference `_health_8cs' on page 9 undefined on input line 15.
+
+
+LaTeX Warning: Reference `_health_collectible_8cs' on page 9 undefined on input
+ line 16.
+
+
+LaTeX Warning: Reference `_lava_damage_8cs' on page 9 undefined on input line 1
+7.
+
+
+LaTeX Warning: Reference `_player_health_8cs' on page 9 undefined on input line
+ 18.
+
+
+LaTeX Warning: Reference `_barrel_8cs' on page 9 undefined on input line 19.
+
+
+LaTeX Warning: Reference `_lever_riddle_8cs' on page 9 undefined on input line 
+20.
+
+
+LaTeX Warning: Reference `_lever_trigger_8cs' on page 9 undefined on input line
+ 21.
+
+
+LaTeX Warning: Reference `_chest_controller_8cs' on page 9 undefined on input l
+ine 22.
+
+
+LaTeX Warning: Reference `_inventory_manager_8cs' on page 9 undefined on input 
+line 23.
+
+
+LaTeX Warning: Reference `_inventory_slot_spawner_8cs' on page 9 undefined on i
+nput line 24.
+
+
+LaTeX Warning: Reference `_inventory_u_i_8cs' on page 9 undefined on input line
+ 25.
+
+
+LaTeX Warning: Reference `_letter_data_8cs' on page 9 undefined on input line 2
+6.
+
+
+LaTeX Warning: Reference `_leaf_revealer_8cs' on page 9 undefined on input line
+ 27.
+
+
+LaTeX Warning: Reference `_set_order_in_layer_for_children_8cs' on page 9 undef
+ined on input line 28.
+
+
+LaTeX Warning: Reference `_bootstrapper_8cs' on page 9 undefined on input line 
+29.
+
+
+LaTeX Warning: Reference `_button_hover_underline_8cs' on page 9 undefined on i
+nput line 30.
+
+
+LaTeX Warning: Reference `_chest_panel_manager_8cs' on page 9 undefined on inpu
+t line 31.
+
+
+LaTeX Warning: Reference `_end_game_trigger_8cs' on page 9 undefined on input l
+ine 32.
+
+
+LaTeX Warning: Reference `_hint_area_8cs' on page 9 undefined on input line 33.
+
+
+
+LaTeX Warning: Reference `_hint_controller_8cs' on page 9 undefined on input li
+ne 34.
+
+
+LaTeX Warning: Reference `_h_u_d_visibility_8cs' on page 9 undefined on input l
+ine 35.
+
+
+LaTeX Warning: Reference `_level1_fade_in_8cs' on page 9 undefined on input lin
+e 36.
+
+
+LaTeX Warning: Reference `_main_menu_8cs' on page 9 undefined on input line 37.
+
+
+
+LaTeX Warning: Reference `_pause_menu_8cs' on page 9 undefined on input line 38
+.
+
+
+LaTeX Warning: Reference `_text_u_i_8cs' on page 9 undefined on input line 39.
+
+
+LaTeX Warning: Reference `_trigger_thought_zone_8cs' on page 9 undefined on inp
+ut line 40.
+
+
+LaTeX Warning: Reference `_u_i_manager_8cs' on page 9 undefined on input line 4
+1.
+
+[9]
+
+LaTeX Warning: Reference `_u_i_state_manager_8cs' on page 10 undefined on input
+ line 42.
+
+
+LaTeX Warning: Reference `_button_hover_sound_8cs' on page 10 undefined on inpu
+t line 43.
+
+
+LaTeX Warning: Reference `_intro_controller_8cs' on page 10 undefined on input 
+line 44.
+
+
+LaTeX Warning: Reference `_music_manager_8cs' on page 10 undefined on input lin
+e 45.
+
+
+LaTeX Warning: Reference `_persistent_audio_listener_8cs' on page 10 undefined 
+on input line 46.
+
+
+LaTeX Warning: Reference `_sound_manager_8cs' on page 10 undefined on input lin
+e 47.
+
+
+LaTeX Warning: Reference `_player_animation_8cs' on page 10 undefined on input 
+line 48.
+
+
+LaTeX Warning: Reference `_player_attack_method_8cs' on page 10 undefined on in
+put line 49.
+
+
+LaTeX Warning: Reference `_player_movement_8cs' on page 10 undefined on input l
+ine 50.
+
+
+LaTeX Warning: Reference `_player_movement_data_8cs' on page 10 undefined on in
+put line 51.
+
+
+LaTeX Warning: Reference `_barrel_sava_data_8cs' on page 10 undefined on input 
+line 52.
+
+
+LaTeX Warning: Reference `_i_saveable_8cs' on page 10 undefined on input line 5
+3.
+
+
+LaTeX Warning: Reference `_player_save_data_8cs' on page 10 undefined on input 
+line 54.
+
+
+LaTeX Warning: Reference `_saveable_object_8cs' on page 10 undefined on input l
+ine 55.
+
+
+LaTeX Warning: Reference `_save_system_8cs' on page 10 undefined on input line 
+56.
+
+
+LaTeX Warning: Reference `_serialization_wrapper_8cs' on page 10 undefined on i
+nput line 57.
+
+
+LaTeX Warning: Reference `_axe_trap_8cs' on page 10 undefined on input line 58.
+
+
+
+LaTeX Warning: Reference `_spikes_trap_8cs' on page 10 undefined on input line 
+59.
+
+) [10]
+Rozdzia\l  5.
+(namespace_ethan_the_hero.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 13.
+) [11
+
+] [12
+
+]
+Rozdzia\l  6.
+(class_attack_controller.tex <./class_attack_controller.pdf>
+<class_attack_controller.pdf, id=326, 501.875pt x 362.35374pt>
+File: class_attack_controller.pdf Graphic file (type pdf)
+<use class_attack_controller.pdf>
+Package pdftex.def Info: class_attack_controller.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.81598pt x 56.9055pt.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 21.
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 26.
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 37.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 38.
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.45 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.45 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.48 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.48 \end{DoxyParams}
+                     
+
+? 
+[13]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.1 on input line 48.
+
+) (class_attack_data.tex <./class_attack_data.pdf>
+<class_attack_data.pdf, id=354, 501.875pt x 352.31625pt>
+File: class_attack_data.pdf Graphic file (type pdf)
+<use class_attack_data.pdf>
+Package pdftex.def Info: class_attack_data.pdf  used on input line 11.
+(pdftex.def)             Requested size: 81.05977pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+[14]) (class_attack_hitbox.tex <./class_attack_hitbox.pdf>
+<class_attack_hitbox.pdf, id=383, 501.875pt x 365.365pt>
+File: class_attack_hitbox.pdf Graphic file (type pdf)
+<use class_attack_hitbox.pdf>
+Package pdftex.def Info: class_attack_hitbox.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [15]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.45 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.45 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.2 on input line 52.
+
+) (class_axe_trap.tex <./class_axe_trap.pdf>
+<class_axe_trap.pdf, id=403, 501.875pt x 365.365pt>
+File: class_axe_trap.pdf Graphic file (type pdf)
+<use class_axe_trap.pdf>
+Package pdftex.def Info: class_axe_trap.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [16]
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_barrel.tex <./class_barrel.pdf>
+<class_barrel.pdf, id=423, 501.875pt x 365.365pt>
+File: class_barrel.pdf Graphic file (type pdf)
+<use class_barrel.pdf>
+Package pdftex.def Info: class_barrel.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_barrel_save_data.tex <./class_barrel_save_data.pdf>
+<class_barrel_save_data.pdf, id=430, 501.875pt x 182.6825pt>
+File: class_barrel_save_data.pdf Graphic file (type pdf)
+<use class_barrel_save_data.pdf>
+Package pdftex.def Info: class_barrel_save_data.pdf  used on input line 11.
+(pdftex.def)             Requested size: 156.33012pt x 56.9055pt.
+ [17]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 64.
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.71 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.71 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.74 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.74 \end{DoxyParams}
+                     
+
+? 
+[18]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.3 on input line 74.
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.86 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.86 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.89 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.89 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.4 on input line 89.
+
+) (class_bootstrapper.tex <./class_bootstrapper.pdf>
+<class_bootstrapper.pdf, id=472, 501.875pt x 365.365pt>
+File: class_bootstrapper.pdf Graphic file (type pdf)
+<use class_bootstrapper.pdf>
+Package pdftex.def Info: class_bootstrapper.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 23
+[][][]
+ []
+
+) (class_button_hover_sound.tex <./class_button_hover_sound.pdf>
+<class_button_hover_sound.pdf, id=480, 501.875pt x 145.54375pt>
+File: class_button_hover_sound.pdf Graphic file (type pdf)
+<use class_button_hover_sound.pdf>
+Package pdftex.def Info: class_button_hover_sound.pdf  used on input line 11.
+(pdftex.def)             Requested size: 196.22057pt x 56.9055pt.
+ [19]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.50 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.50 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.53 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.53 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.5 on input line 53.
+
+) (class_button_hover_underline.tex [20] <./class_button_hover_underline.pdf>
+<class_button_hover_underline.pdf, id=518, 501.875pt x 93.34875pt>
+File: class_button_hover_underline.pdf Graphic file (type pdf)
+<use class_button_hover_underline.pdf>
+Package pdftex.def Info: class_button_hover_underline.pdf  used on input line 1
+1.
+(pdftex.def)             Requested size: 305.94418pt x 56.9055pt.
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.49 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.49 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.52 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.52 \end{DoxyParams}
+                     
+
+? 
+[21]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.6 on input line 52.
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.64 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.64 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.67 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.67 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.7 on input line 67.
+
+) (class_camera_controller.tex <./class_camera_controller.pdf>
+<class_camera_controller.pdf, id=545, 501.875pt x 335.2525pt>
+File: class_camera_controller.pdf Graphic file (type pdf)
+<use class_camera_controller.pdf>
+Package pdftex.def Info: class_camera_controller.pdf  used on input line 11.
+(pdftex.def)             Requested size: 85.18742pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_chest_controller.tex [22] <./class_chest_controller.pdf>
+<class_chest_controller.pdf, id=565, 501.875pt x 365.365pt>
+File: class_chest_controller.pdf Graphic file (type pdf)
+<use class_chest_controller.pdf>
+Package pdftex.def Info: class_chest_controller.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+[23]) (class_chest_panel_manager.tex <./class_chest_panel_manager.pdf>
+<class_chest_panel_manager.pdf, id=600, 501.875pt x 298.11375pt>
+File: class_chest_panel_manager.pdf Graphic file (type pdf)
+<use class_chest_panel_manager.pdf>
+Package pdftex.def Info: class_chest_panel_manager.pdf  used on input line 11.
+(pdftex.def)             Requested size: 95.80139pt x 56.9055pt.
+ [24]
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+[25]) (class_door_trigger.tex <./class_door_trigger.pdf>
+<class_door_trigger.pdf, id=648, 501.875pt x 365.365pt>
+File: class_door_trigger.pdf Graphic file (type pdf)
+<use class_door_trigger.pdf>
+Package pdftex.def Info: class_door_trigger.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[26]) (class_encountered_ghost_dialog.tex <./class_encountered_ghost_dialog.pdf
+>
+<class_encountered_ghost_dialog.pdf, id=672, 501.875pt x 250.9375pt>
+File: class_encountered_ghost_dialog.pdf Graphic file (type pdf)
+<use class_encountered_ghost_dialog.pdf>
+Package pdftex.def Info: class_encountered_ghost_dialog.pdf  used on input line
+ 11.
+(pdftex.def)             Requested size: 113.80533pt x 56.9055pt.
+ [27]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+\T1/pcr/m/n/8 string Encountered[]Ghost[]Dialog.[]dialog2 = "Kim± kto pomo»e ci
+ wydosta¢ si¦ z tego zamku. Tak si¦
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/pcr/m/n/8 string Encountered[]Ghost[]Dialog.[]dialog3 = "Tak po prostu mi p
+omo»esz? Nie mam nic co mógªbym ci
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/pcr/m/n/8 string Encountered[]Ghost[]Dialog.[]dialog4 = "Masz ale jeszcze o
+ tym nie wiesz. Chod¹, musimy sie
+ []
+
+[28]) (class_end_game_trigger.tex <./class_end_game_trigger.pdf>
+<class_end_game_trigger.pdf, id=723, 501.875pt x 349.305pt>
+File: class_end_game_trigger.pdf Graphic file (type pdf)
+<use class_end_game_trigger.pdf>
+Package pdftex.def Info: class_end_game_trigger.pdf  used on input line 11.
+(pdftex.def)             Requested size: 81.75665pt x 56.9055pt.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 18.
+ [29]
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+) (class_event_system_controller.tex <./class_event_system_controller.pdf>
+<class_event_system_controller.pdf, id=746, 501.875pt x 272.01625pt>
+File: class_event_system_controller.pdf Graphic file (type pdf)
+<use class_event_system_controller.pdf>
+Package pdftex.def Info: class_event_system_controller.pdf  used on input line 
+11.
+(pdftex.def)             Requested size: 104.99098pt x 56.9055pt.
+
+[30]
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_ghost_camera_follow.tex <./class_ghost_camera_follow.pdf>
+<class_ghost_camera_follow.pdf, id=767, 501.875pt x 302.12875pt>
+File: class_ghost_camera_follow.pdf Graphic file (type pdf)
+<use class_ghost_camera_follow.pdf>
+Package pdftex.def Info: class_ghost_camera_follow.pdf  used on input line 11.
+(pdftex.def)             Requested size: 94.5225pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+[31]) (class_ghost_floating.tex <./class_ghost_floating.pdf>
+<class_ghost_floating.pdf, id=788, 501.875pt x 365.365pt>
+File: class_ghost_floating.pdf Graphic file (type pdf)
+<use class_ghost_floating.pdf>
+Package pdftex.def Info: class_ghost_floating.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[32]) (class_ghost_follow.tex <./class_ghost_follow.pdf>
+<class_ghost_follow.pdf, id=814, 501.875pt x 365.365pt>
+File: class_ghost_follow.pdf Graphic file (type pdf)
+<use class_ghost_follow.pdf>
+Package pdftex.def Info: class_ghost_follow.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 24.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 24.
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+[33]) (class_health.tex <./class_health.pdf>
+<class_health.pdf, id=842, 501.875pt x 548.0475pt>
+File: class_health.pdf Graphic file (type pdf)
+<use class_health.pdf>
+Package pdftex.def Info: class_health.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 85.35826pt.
+ [34]
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+[35] [36]) (class_health_collectible.tex <./class_health_collectible.pdf>
+<class_health_collectible.pdf, id=920, 501.875pt x 349.305pt>
+File: class_health_collectible.pdf Graphic file (type pdf)
+<use class_health_collectible.pdf>
+Package pdftex.def Info: class_health_collectible.pdf  used on input line 11.
+(pdftex.def)             Requested size: 81.75665pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_hint_area.tex [37] <./class_hint_area.pdf>
+<class_hint_area.pdf, id=939, 501.875pt x 365.365pt>
+File: class_hint_area.pdf Graphic file (type pdf)
+<use class_hint_area.pdf>
+Package pdftex.def Info: class_hint_area.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+) (class_hint_controller.tex <./class_hint_controller.pdf>
+<class_hint_controller.pdf, id=948, 501.875pt x 365.365pt>
+File: class_hint_controller.pdf Graphic file (type pdf)
+<use class_hint_controller.pdf>
+Package pdftex.def Info: class_hint_controller.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [38]
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+[39]
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.62 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.62 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.65 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.65 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.8 on input line 65.
+
+) (class_h_u_d_visibility.tex <./class_h_u_d_visibility.pdf>
+<class_h_u_d_visibility.pdf, id=985, 501.875pt x 365.365pt>
+File: class_h_u_d_visibility.pdf Graphic file (type pdf)
+<use class_h_u_d_visibility.pdf>
+Package pdftex.def Info: class_h_u_d_visibility.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_intro_controller.tex [40] <./class_intro_controller.pdf>
+<class_intro_controller.pdf, id=1005, 501.875pt x 365.365pt>
+File: class_intro_controller.pdf Graphic file (type pdf)
+<use class_intro_controller.pdf>
+Package pdftex.def Info: class_intro_controller.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+[41]) (class_inventory_manager.tex <./class_inventory_manager.pdf>
+<class_inventory_manager.pdf, id=1036, 501.875pt x 324.21124pt>
+File: class_inventory_manager.pdf Graphic file (type pdf)
+<use class_inventory_manager.pdf>
+Package pdftex.def Info: class_inventory_manager.pdf  used on input line 11.
+(pdftex.def)             Requested size: 88.0898pt x 56.9055pt.
+ [42]
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.61 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.61 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.64 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.64 \end{DoxyParams}
+                     
+
+? 
+[43]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.9 on input line 64.
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.76 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.76 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.79 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.79 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.10 on input line 79.
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.91 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.91 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.94 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.94 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.11 on input line 94.
+
+) (class_inventory_slot_spawner.tex <./class_inventory_slot_spawner.pdf>
+<class_inventory_slot_spawner.pdf, id=1092, 501.875pt x 279.0425pt>
+File: class_inventory_slot_spawner.pdf Graphic file (type pdf)
+<use class_inventory_slot_spawner.pdf>
+Package pdftex.def Info: class_inventory_slot_spawner.pdf  used on input line 1
+1.
+(pdftex.def)             Requested size: 102.34897pt x 56.9055pt.
+
+[44]
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+[45]) (class_inventory_u_i.tex <./class_inventory_u_i.pdf>
+<class_inventory_u_i.pdf, id=1133, 501.875pt x 365.365pt>
+File: class_inventory_u_i.pdf Graphic file (type pdf)
+<use class_inventory_u_i.pdf>
+Package pdftex.def Info: class_inventory_u_i.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [46]
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.59 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.59 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.62 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.62 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.12 on input line 62.
+
+) (interface_i_saveable.tex <./interface_i_saveable.pdf>
+<interface_i_saveable.pdf, id=1172, 501.875pt x 179.67125pt>
+File: interface_i_saveable.pdf Graphic file (type pdf)
+<use interface_i_saveable.pdf>
+Package pdftex.def Info: interface_i_saveable.pdf  used on input line 11.
+(pdftex.def)             Requested size: 158.94914pt x 56.9055pt.
+ [47]
+Underfull \hbox (badness 10000) detected at line 46
+[][][]
+ []
+
+[48]
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.82 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.82 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.85 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.85 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.13 on input line 85.
+
+) (class_lava_damage.tex <./class_lava_damage.pdf>
+<class_lava_damage.pdf, id=1212, 501.875pt x 365.365pt>
+File: class_lava_damage.pdf Graphic file (type pdf)
+<use class_lava_damage.pdf>
+Package pdftex.def Info: class_lava_damage.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_leaf_revealer.tex <./class_leaf_revealer.pdf>
+<class_leaf_revealer.pdf, id=1219, 501.875pt x 365.365pt>
+File: class_leaf_revealer.pdf Graphic file (type pdf)
+<use class_leaf_revealer.pdf>
+Package pdftex.def Info: class_leaf_revealer.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [49]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+) (class_letter_data.tex [50]
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+) (class_level1_fade_in.tex <./class_level1_fade_in.pdf>
+<class_level1_fade_in.pdf, id=1253, 501.875pt x 365.365pt>
+File: class_level1_fade_in.pdf Graphic file (type pdf)
+<use class_level1_fade_in.pdf>
+Package pdftex.def Info: class_level1_fade_in.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [51]
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+) (class_lever_riddle.tex [52] <./class_lever_riddle.pdf>
+<class_lever_riddle.pdf, id=1290, 501.875pt x 365.365pt>
+File: class_lever_riddle.pdf Graphic file (type pdf)
+<use class_lever_riddle.pdf>
+Package pdftex.def Info: class_lever_riddle.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+) (class_lever_trigger.tex <./class_lever_trigger.pdf>
+<class_lever_trigger.pdf, id=1298, 501.875pt x 365.365pt>
+File: class_lever_trigger.pdf Graphic file (type pdf)
+<use class_lever_trigger.pdf>
+Package pdftex.def Info: class_lever_trigger.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [53]
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+) (class_main_menu.tex <./class_main_menu.pdf>
+<class_main_menu.pdf, id=1321, 501.875pt x 365.365pt>
+File: class_main_menu.pdf Graphic file (type pdf)
+<use class_main_menu.pdf>
+Package pdftex.def Info: class_main_menu.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [54]
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+) (class_melee_enemy.tex [55] <./class_melee_enemy.pdf>
+<class_melee_enemy.pdf, id=1360, 501.875pt x 365.365pt>
+File: class_melee_enemy.pdf Graphic file (type pdf)
+<use class_melee_enemy.pdf>
+Package pdftex.def Info: class_melee_enemy.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_music_manager.tex <./class_music_manager.pdf>
+<class_music_manager.pdf, id=1367, 501.875pt x 365.365pt>
+File: class_music_manager.pdf Graphic file (type pdf)
+<use class_music_manager.pdf>
+Package pdftex.def Info: class_music_manager.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [56]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.73 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.73 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.76 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.76 \end{DoxyParams}
+                     
+
+? 
+[57]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.14 on input line 76.
+
+[58]) (class_patrol_enemy.tex <./class_patrol_enemy.pdf>
+<class_patrol_enemy.pdf, id=1432, 501.875pt x 365.365pt>
+File: class_patrol_enemy.pdf Graphic file (type pdf)
+<use class_patrol_enemy.pdf>
+Package pdftex.def Info: class_patrol_enemy.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_pause_menu.tex [59] <./class_pause_menu.pdf>
+<class_pause_menu.pdf, id=1452, 501.875pt x 365.365pt>
+File: class_pause_menu.pdf Graphic file (type pdf)
+<use class_pause_menu.pdf>
+Package pdftex.def Info: class_pause_menu.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [60]
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 120
+[][][]
+ []
+
+[61]) (class_persistent_audio_listener.tex <./class_persistent_audio_listener.p
+df>
+<class_persistent_audio_listener.pdf, id=1502, 501.875pt x 262.9825pt>
+File: class_persistent_audio_listener.pdf Graphic file (type pdf)
+<use class_persistent_audio_listener.pdf>
+Package pdftex.def Info: class_persistent_audio_listener.pdf  used on input lin
+e 11.
+(pdftex.def)             Requested size: 108.59789pt x 56.9055pt.
+ [62]
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+) (class_ethan_the_hero_1_1_player_animation.tex <./class_ethan_the_hero_1_1_pl
+ayer_animation.pdf>
+<class_ethan_the_hero_1_1_player_animation.pdf, id=1521, 501.875pt x 204.765pt>
+
+File: class_ethan_the_hero_1_1_player_animation.pdf Graphic file (type pdf)
+<use class_ethan_the_hero_1_1_player_animation.pdf>
+Package pdftex.def Info: class_ethan_the_hero_1_1_player_animation.pdf  used on
+ input line 11.
+(pdftex.def)             Requested size: 139.47488pt x 56.9055pt.
+
+Underfull \hbox (badness 1448) in paragraph at lines 19--20
+[]\T1/phv/m/n/10 Komunikuje si¦ z kom-po-nen-tem Ani-ma-tor, by dy-na-micz-nie 
+usta-wia¢ ani-ma-cje biegu, skoku, da-sza, zsu-
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 19--20
+\T1/phv/m/n/10 wa-nia si¦ po ±cia-nie i in-nych za-cho-wa«. Po-biera dane z kla
+s [], \T1/pcr/m/n/10 Rigidbody2D \T1/phv/m/n/10 i
+ []
+
+[63]) (class_ethan_the_hero_1_1_player_attack_method.tex <./class_ethan_the_her
+o_1_1_player_attack_method.pdf>
+<class_ethan_the_hero_1_1_player_attack_method.pdf, id=1540, 501.875pt x 183.68
+625pt>
+File: class_ethan_the_hero_1_1_player_attack_method.pdf Graphic file (type pdf)
+
+<use class_ethan_the_hero_1_1_player_attack_method.pdf>
+Package pdftex.def Info: class_ethan_the_hero_1_1_player_attack_method.pdf  use
+d on input line 11.
+(pdftex.def)             Requested size: 155.48009pt x 56.9055pt.
+ [64]) (class_player_data.tex
+Underfull \hbox (badness 10000) detected at line 20
+[][][]
+ []
+
+[65]) (class_player_health.tex <./class_player_health.pdf>
+<class_player_health.pdf, id=1584, 501.875pt x 548.0475pt>
+File: class_player_health.pdf Graphic file (type pdf)
+<use class_player_health.pdf>
+Package pdftex.def Info: class_player_health.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 85.35826pt.
+ [66]
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+[67]) (class_ethan_the_hero_1_1_player_movement.tex <./class_ethan_the_hero_1_1
+_player_movement.pdf>
+<class_ethan_the_hero_1_1_player_movement.pdf, id=1642, 501.875pt x 200.75pt>
+File: class_ethan_the_hero_1_1_player_movement.pdf Graphic file (type pdf)
+<use class_ethan_the_hero_1_1_player_movement.pdf>
+Package pdftex.def Info: class_ethan_the_hero_1_1_player_movement.pdf  used on 
+input line 11.
+(pdftex.def)             Requested size: 142.26239pt x 56.9055pt.
+ [68] [69])
+(class_ethan_the_hero_1_1_player_movement_data.tex <./class_ethan_the_hero_1_1_
+player_movement_data.pdf>
+<class_ethan_the_hero_1_1_player_movement_data.pdf, id=1688, 501.875pt x 177.66
+376pt>
+File: class_ethan_the_hero_1_1_player_movement_data.pdf Graphic file (type pdf)
+
+<use class_ethan_the_hero_1_1_player_movement_data.pdf>
+Package pdftex.def Info: class_ethan_the_hero_1_1_player_movement_data.pdf  use
+d on input line 11.
+(pdftex.def)             Requested size: 160.74878pt x 56.9055pt.
+ [70] [71] [72] [73]) (class_player_save_data.tex <./class_player_save_data.pdf
+>
+<class_player_save_data.pdf, id=1775, 501.875pt x 179.67125pt>
+File: class_player_save_data.pdf Graphic file (type pdf)
+<use class_player_save_data.pdf>
+Package pdftex.def Info: class_player_save_data.pdf  used on input line 11.
+(pdftex.def)             Requested size: 158.94914pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+[74]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.67 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.67 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.70 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.70 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.15 on input line 70.
+
+) (class_saveable_object.tex <./class_saveable_object.pdf>
+<class_saveable_object.pdf, id=1801, 501.875pt x 365.365pt>
+File: class_saveable_object.pdf Graphic file (type pdf)
+<use class_saveable_object.pdf>
+Package pdftex.def Info: class_saveable_object.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [75]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
+
+) (class_save_system_1_1_save_data.tex [76])
+(class_save_system_1_1_save_entry.tex) (class_serialization_wrapper.tex
+[77] <./class_serialization_wrapper.pdf>
+<class_serialization_wrapper.pdf, id=1865, 501.875pt x 209.78375pt>
+File: class_serialization_wrapper.pdf Graphic file (type pdf)
+<use class_serialization_wrapper.pdf>
+Package pdftex.def Info: class_serialization_wrapper.pdf  used on input line 11
+.
+(pdftex.def)             Requested size: 136.136pt x 56.9055pt.
+
+Overfull \hbox (26.84671pt too wide) in paragraph at lines 35--36
+[]\T1/phv/m/n/10 Unity nie ob-sªu-guje bez-po-±red-nio se-ria-li-za-cji sªow-ni
+-ków i ty-pów ogól-nych (ge-ne-rics), dla-tego []
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[78]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+) (class_set_order_in_layer_for_children.tex [79] <./class_set_order_in_layer_f
+or_children.pdf>
+<class_set_order_in_layer_for_children.pdf, id=1907, 501.875pt x 219.82124pt>
+File: class_set_order_in_layer_for_children.pdf Graphic file (type pdf)
+<use class_set_order_in_layer_for_children.pdf>
+Package pdftex.def Info: class_set_order_in_layer_for_children.pdf  used on inp
+ut line 11.
+(pdftex.def)             Requested size: 129.91772pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+) (class_sound_manager.tex <./class_sound_manager.pdf>
+<class_sound_manager.pdf, id=1915, 501.875pt x 365.365pt>
+File: class_sound_manager.pdf Graphic file (type pdf)
+<use class_sound_manager.pdf>
+Package pdftex.def Info: class_sound_manager.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [80] [81]
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+[82]
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.191 \begin{DoxyParams}{Parametry}
+                                   
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.191 \begin{DoxyParams}{Parametry}
+                                   
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.194 \end{DoxyParams}
+                      
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.194 \end{DoxyParams}
+                      
+
+? 
+[83]
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.16 on input line 194.
+
+[84] [85]) (class_spikes_trap.tex <./class_spikes_trap.pdf>
+<class_spikes_trap.pdf, id=2048, 501.875pt x 365.365pt>
+File: class_spikes_trap.pdf Graphic file (type pdf)
+<use class_spikes_trap.pdf>
+Package pdftex.def Info: class_spikes_trap.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+) (class_text_u_i.tex <./class_text_u_i.pdf>
+<class_text_u_i.pdf, id=2056, 501.875pt x 365.365pt>
+File: class_text_u_i.pdf Graphic file (type pdf)
+<use class_text_u_i.pdf>
+Package pdftex.def Info: class_text_u_i.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+ [86]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.50 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Undefined control sequence.
+<argument> ...rtpbox {\@nextchar }\insert@pcolumn 
+                                                  \@endpbox \do@row@strut \o...
+l.50 \begin{DoxyParams}{Parametry}
+                                  
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   &
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \CT@LT@sep \multispan...
+l.57 \end{DoxyParams}
+                     
+
+? 
+! Undefined control sequence.
+\LT@@hline ... \tag_mc_end: \tbl_gdecr_row_count: 
+                                                  }\cr \noalign {\penalty \@...
+l.57 \end{DoxyParams}
+                     
+
+? 
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 6.17 on input line 57.
+
+[87]) (class_trigger_thought_zone.tex <./class_trigger_thought_zone.pdf>
+<class_trigger_thought_zone.pdf, id=2090, 501.875pt x 296.10625pt>
+File: class_trigger_thought_zone.pdf Graphic file (type pdf)
+<use class_trigger_thought_zone.pdf>
+Package pdftex.def Info: class_trigger_thought_zone.pdf  used on input line 11.
+
+(pdftex.def)             Requested size: 96.44467pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+\T1/pcr/m/n/8 string Trigger[]Thought[]Zone.[]thought = "Nie ma innego wyj±cia.
+.. \r\n[]Chyba musz¦ po prostu tam
+ []
+
+) (class_u_i_manager.tex [88] <./class_u_i_manager.pdf>
+<class_u_i_manager.pdf, id=2111, 501.875pt x 365.365pt>
+File: class_u_i_manager.pdf Graphic file (type pdf)
+<use class_u_i_manager.pdf>
+Package pdftex.def Info: class_u_i_manager.pdf  used on input line 11.
+(pdftex.def)             Requested size: 78.16505pt x 56.9055pt.
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+) [89] [90
+
+]
+Rozdzia\l  7.
+(_attack_controller_8cs.tex) (_attack_data_8cs.tex) (_attack_hitbox_8cs.tex)
+(_camera_controller_8cs.tex) (_event_system_controller_8cs.tex)
+(_ghost_camera_follow_8cs.tex [91]) (_door_trigger_8cs.tex)
+(_melee_enemy_8cs.tex) (_patrol_enemy_8cs.tex)
+(_encountered_ghost_dialog_8cs.tex) (_ghost_floating_8cs.tex)
+(_ghost_follow_8cs.tex [92]) (_health_8cs.tex) (_health_collectible_8cs.tex)
+(_lava_damage_8cs.tex) (_player_health_8cs.tex) (_barrel_8cs.tex)
+(_lever_riddle_8cs.tex [93]) (_lever_trigger_8cs.tex)
+(_chest_controller_8cs.tex) (_inventory_manager_8cs.tex)
+(_inventory_slot_spawner_8cs.tex) (_inventory_u_i_8cs.tex)
+(_letter_data_8cs.tex [94]) (_leaf_revealer_8cs.tex)
+(_set_order_in_layer_for_children_8cs.tex) (_bootstrapper_8cs.tex)
+(_button_hover_underline_8cs.tex) (_chest_panel_manager_8cs.tex [95])
+(_end_game_trigger_8cs.tex) (_hint_area_8cs.tex) (_hint_controller_8cs.tex)
+(_h_u_d_visibility_8cs.tex) (_level1_fade_in_8cs.tex) (_main_menu_8cs.tex)
+(_pause_menu_8cs.tex [96]) (_text_u_i_8cs.tex) (_trigger_thought_zone_8cs.tex)
+(_u_i_manager_8cs.tex) (_u_i_state_manager_8cs.tex)
+(_button_hover_sound_8cs.tex) (_intro_controller_8cs.tex [97])
+(_music_manager_8cs.tex) (_persistent_audio_listener_8cs.tex)
+(_sound_manager_8cs.tex) (_player_animation_8cs.tex)
+(_player_attack_method_8cs.tex [98]) (_player_movement_8cs.tex)
+(_player_movement_data_8cs.tex) (_barrel_sava_data_8cs.tex)
+(_i_saveable_8cs.tex) (_player_save_data_8cs.tex [99])
+(_saveable_object_8cs.tex) (_save_system_8cs.tex)
+(_serialization_wrapper_8cs.tex) (_axe_trap_8cs.tex) (_spikes_trap_8cs.tex
+[100]) [101] [102
+
+]
+No file refman.ind.
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+(refman.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `refman.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `refman.out':
+(rerunfilecheck)             Before: 07DD28B2463350273D8F5A6CC65FBD9C;684
+(rerunfilecheck)             After:  7A6E8144CA65F5C1805DE46E7D17212B;104072.
+ ) 
 Here is how much of TeX's memory you used:
- 18964 strings out of 474486
- 310771 string characters out of 5742811
- 1947542 words of memory out of 5000000
- 40925 multiletter control sequences out of 15000+600000
- 587087 words of font info for 67 fonts, out of 8000000 for 9000
+ 21793 strings out of 474486
+ 407336 string characters out of 5742811
+ 1958542 words of memory out of 5000000
+ 42344 multiletter control sequences out of 15000+600000
+ 613529 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,11n,117p,329b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{namespace_ethan_the_hero} has been referenced but d
-oes not exist, replaced by a fixed one
-
-<C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a
-.pfb><C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/u
-hvr8a.pfb>
-Output written on refman.pdf (6 pages, 28581 bytes).
+ 101i,16n,117p,709b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Bigajka/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Bigajka/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Bigajka/AppData/
+Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Bigajka/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/Bigajka
+/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Bi
+gajka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Us
+ers/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><
+C:/Users/Bigajka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a
+.pfb>
+Output written on refman.pdf (104 pages, 786104 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2657 PDF objects out of 2984 (max. 8388607)
+ 1144 named destinations out of 1200 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

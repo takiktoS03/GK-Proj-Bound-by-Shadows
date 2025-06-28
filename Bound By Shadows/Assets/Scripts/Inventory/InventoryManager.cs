@@ -1,25 +1,25 @@
-using UnityEngine;
+锘縰sing UnityEngine;
 using System.Collections.Generic;
 
 
 /**
  * @class InventoryManager
- * @brief Zarz筪za systemem ekwipunku gracza.
+ * @brief Zarz膮dza systemem ekwipunku gracza.
  *
- * Przechowuje zebrane przedmioty oraz listy, zapewnia singleton do globalnego dost阷u
+ * Przechowuje zebrane przedmioty oraz listy, zapewnia singleton do globalnego dost臋pu
  * i pozwala na ich dodawanie i usuwanie.
  *
  * @author Julia Bigaj
  */
 public class InventoryManager : MonoBehaviour
 {
-    /// @brief Singleton umo縧iwiaj筩y dost阷 do instancji klasy z innych skrypt體.
+    /// @brief Singleton umo偶liwiaj膮cy dost臋p do instancji klasy z innych skrypt贸w.
     public static InventoryManager Instance;
 
-    /// @brief Lista nazw zwyk硑ch przedmiot體 w ekwipunku.
+    /// @brief Lista nazw zwyk艂ych przedmiot贸w w ekwipunku.
     public List<string> items = new List<string> ();
 
-    /// @brief Lista zebranych list體 (LetterData).
+    /// @brief Lista zebranych list贸w (LetterData).
     public List<LetterData> collectedLetters = new List<LetterData>();
 
     /**
@@ -39,7 +39,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     /**
-     * @brief Dodaje przedmiot do listy przedmiot體.
+     * @brief Dodaje przedmiot do listy przedmiot贸w.
      * @param item Nazwa przedmiotu do dodania.
      */
     public void AddItem(string item)
@@ -49,18 +49,18 @@ public class InventoryManager : MonoBehaviour
     }
 
     /**
-     * @brief Usuwa przedmiot z listy przedmiot體.
-     * @param item Nazwa przedmiotu do usuni阠ia.
+     * @brief Usuwa przedmiot z listy przedmiot贸w.
+     * @param item Nazwa przedmiotu do usuni臋cia.
      */
     public void RemoveItem(string item) 
     {  
         items.Remove(item);
-        Debug.Log("Usuni阾o z ekwipunku: " + item);
+        Debug.Log("Usuni臋to z ekwipunku: " + item);
     }
 
     /**
-     * @brief Dodaje list do listy zebranych list體.
-     * @param newLetter Obiekt LetterData reprezentuj筩y nowy list.
+     * @brief Dodaje list do listy zebranych list贸w.
+     * @param newLetter Obiekt LetterData reprezentuj膮cy nowy list.
      */
     public void AddLetter(LetterData newLetter)
     {
@@ -68,3 +68,4 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Dodano list do ekwipunku: " + newLetter.icon.name);
     }
 }
+

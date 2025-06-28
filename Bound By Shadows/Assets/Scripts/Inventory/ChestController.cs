@@ -1,13 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 /**
  * @class ChestController
- * @brief Otwiera skrzyniê po interakcji gracza i dodaje przedmiot (list) do ekwipunku.
+ * @brief Otwiera skrzyniÄ™ po interakcji gracza i dodaje przedmiot (list) do ekwipunku.
  *
- * Odpowiada za animacjê otwierania skrzyni, interakcjê z graczem,
- * wyœwietlanie UI oraz dodanie listu do systemu ekwipunku.
+ * Odpowiada za animacjÄ™ otwierania skrzyni, interakcjÄ™ z graczem,
+ * wyÅ›wietlanie UI oraz dodanie listu do systemu ekwipunku.
  *
  * @author Julia Bigaj
  */
@@ -17,25 +17,25 @@ public class ChestController : MonoBehaviour
     private Animator animator;
     /// @brief Czy skrzynia jest otwarta.
     [SerializeField] private bool isOpen = false;
-    /// @brief Czy gracz znajduje siê w pobli¿u skrzyni.
+    /// @brief Czy gracz znajduje siÄ™ w pobliÅ¼u skrzyni.
     private bool isPlayerNear = false;
 
-    /// @brief Panel UI wyœwietlany po otwarciu skrzyni.
+    /// @brief Panel UI wyÅ›wietlany po otwarciu skrzyni.
     public GameObject chestPanel;
     /// @brief Dane przechowywanego listu.
     public LetterData letterData;
 
-    /// @brief UI z podpowiedzi¹ do interakcji (np. naciœnij "F").
+    /// @brief UI z podpowiedziÄ… do interakcji (np. naciÅ›nij "F").
     public GameObject promptUI;
 
     [Header("Letter Icon")]
-    /// @brief Ikona reprezentuj¹ca list w UI skrzyni.
+    /// @brief Ikona reprezentujÄ…ca list w UI skrzyni.
     public Image letterIcon;
-    /// @brief Czy list zosta³ ju¿ zabrany przez gracza.
+    /// @brief Czy list zostaÅ‚ juÅ¼ zabrany przez gracza.
     public bool isLetterTaken = false;
 
     /**
-     * @brief Inicjalizacja komponentów i domyœlnych stanów UI.
+     * @brief Inicjalizacja komponentÃ³w i domyÅ›lnych stanÃ³w UI.
      */
     void Start()
     {
@@ -49,7 +49,7 @@ public class ChestController : MonoBehaviour
     }
 
     /**
-     * @brief Obs³uga interakcji gracza z obiektem (otwieranie skrzyni, zabieranie listu).
+     * @brief ObsÅ‚uga interakcji gracza z obiektem (otwieranie skrzyni, zabieranie listu).
      */
     void Update()
     {
@@ -75,8 +75,8 @@ public class ChestController : MonoBehaviour
     }
 
     /**
-     * @brief Wykrywa wejœcie gracza w obszar interakcji.
-     * @param other Obiekt koliduj¹cy z triggerem.
+     * @brief Wykrywa wejÅ›cie gracza w obszar interakcji.
+     * @param other Obiekt kolidujÄ…cy z triggerem.
      */
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -92,7 +92,7 @@ public class ChestController : MonoBehaviour
 
     /**
      * @brief Wykrywa opuszczenie obszaru interakcji przez gracza.
-     * @param other Obiekt opuszczaj¹cy trigger.
+     * @param other Obiekt opuszczajÄ…cy trigger.
      */
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -114,19 +114,20 @@ public class ChestController : MonoBehaviour
             //InventoryUI.Instance.ShowLetterContent(letterData.content);
             InventoryManager.Instance.AddLetter(letterData);
 
-            letterIcon.transform.parent.gameObject.SetActive(false); // jeœli ikona ma rodzica np. slot
+            letterIcon.transform.parent.gameObject.SetActive(false); // jeÅ›li ikona ma rodzica np. slot
             isLetterTaken = true;
-            Debug.Log("List zosta³ zabrany!");
+            Debug.Log("List zostaÅ‚ zabrany!");
 
             UIStateManager.isUIOpen = false;
         }
     }
 
     /**
-     * @brief Zamyka skrzyniê z zewnêtrznych skryptów.
+     * @brief Zamyka skrzyniÄ™ z zewnÄ™trznych skryptÃ³w.
      */
     public void CloseChestFromOutside()
     {
         isOpen = false;
     }
 }
+

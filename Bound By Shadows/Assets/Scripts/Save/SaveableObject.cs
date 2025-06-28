@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System;
 
 #if UNITY_EDITOR
@@ -7,16 +7,16 @@ using UnityEditor;
 
 /**
  * @class SaveableObject
- * @brief Przypisuje unikalny identyfikator (`UniqueId`) do obiektu gry, aby umoøliwiÊ jego zapis i odtworzenie.
+ * @brief Przypisuje unikalny identyfikator (`UniqueId`) do obiektu gry, aby umo≈ºliwiƒá jego zapis i odtworzenie.
  *
- * Klasa ta zapewnia, øe kaødy obiekt w scenie posiada unikalny identyfikator, ktÛry moøe byÊ wykorzystany
- * w systemie zapisu stanu gry. Jeúli identyfikator nie jest unikalny, zostaje wygenerowany nowy.
- * Dzia≥a tylko w edytorze Unity ó podczas dzia≥ania gry identyfikator nie jest zmieniany.
+ * Klasa ta zapewnia, ≈ºe ka≈ºdy obiekt w scenie posiada unikalny identyfikator, kt√≥ry mo≈ºe byƒá wykorzystany
+ * w systemie zapisu stanu gry. Je≈õli identyfikator nie jest unikalny, zostaje wygenerowany nowy.
+ * Dzia≈Ça tylko w edytorze Unity ‚Äî podczas dzia≈Çania gry identyfikator nie jest zmieniany.
  *
- * @note WspÛ≥pracuje z interfejsem `ISaveable`.
- * @note `DisallowMultipleComponent` gwarantuje, øe komponent nie zostanie dodany wielokrotnie do jednego obiektu.
+ * @note Wsp√≥≈Çpracuje z interfejsem `ISaveable`.
+ * @note `DisallowMultipleComponent` gwarantuje, ≈ºe komponent nie zostanie dodany wielokrotnie do jednego obiektu.
  *
- * @author Filip Kud≥a
+ * @author Filip Kud≈Ça
  */
 [DisallowMultipleComponent]
 public class SaveableObject : MonoBehaviour
@@ -25,16 +25,16 @@ public class SaveableObject : MonoBehaviour
     [SerializeField] private string uniqueId = Guid.NewGuid().ToString();
 
     /**
-     * @brief Publiczny dostÍp do unikalnego ID.
+     * @brief Publiczny dostƒôp do unikalnego ID.
      * @return Niezmienny identyfikator GUID.
      */
     public string UniqueId => uniqueId;
 
 #if UNITY_EDITOR
     /**
-     * @brief Weryfikuje poprawnoúÊ ID w edytorze Unity.
+     * @brief Weryfikuje poprawno≈õƒá ID w edytorze Unity.
      *
-     * Jeúli ID jest puste lub nieunikalne, przypisuje nowy `GUID` i oznacza obiekt jako zmodyfikowany.
+     * Je≈õli ID jest puste lub nieunikalne, przypisuje nowy `GUID` i oznacza obiekt jako zmodyfikowany.
      */
     private void OnValidate()
     {
@@ -48,7 +48,7 @@ public class SaveableObject : MonoBehaviour
     /**
      * @brief Sprawdza, czy dany identyfikator jest unikalny w scenie.
      * @param candidate Kandydat na identyfikator.
-     * @return `true` jeúli unikalny, `false` jeúli duplikat.
+     * @return `true` je≈õli unikalny, `false` je≈õli duplikat.
      */
     private bool IsUnique(string candidate)
     {
@@ -64,7 +64,7 @@ public class SaveableObject : MonoBehaviour
 #endif
 
     /**
-     * @brief Gwarantuje, øe obiekt zawsze ma przypisany identyfikator po za≥adowaniu.
+     * @brief Gwarantuje, ≈ºe obiekt zawsze ma przypisany identyfikator po za≈Çadowaniu.
      */
     private void Awake()
     {
@@ -72,3 +72,4 @@ public class SaveableObject : MonoBehaviour
             uniqueId = Guid.NewGuid().ToString();
     }
 }
+

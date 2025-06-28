@@ -1,24 +1,24 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
  * @class Bootstrapper
- * @brief £aduje sceny startowe gry przy uruchomieniu aplikacji.
+ * @brief Åaduje sceny startowe gry przy uruchomieniu aplikacji.
  *
- * Skrypt sprawdza, czy scena inicjalizacyjna (`InitScene`) jest za³adowana.
- * Jeœli nie — ³aduje j¹ jako scenê dodatkow¹ (Additive), a nastêpnie ³aduje
- * scenê g³ówn¹ (`MainMenu`) jako podstawow¹ (Single).
+ * Skrypt sprawdza, czy scena inicjalizacyjna (`InitScene`) jest zaÅ‚adowana.
+ * JeÅ›li nie â€” Å‚aduje jÄ… jako scenÄ™ dodatkowÄ… (Additive), a nastÄ™pnie Å‚aduje
+ * scenÄ™ gÅ‚Ã³wnÄ… (`MainMenu`) jako podstawowÄ… (Single).
  *
- * U¿ywany jako punkt wejœciowy aplikacji.
+ * UÅ¼ywany jako punkt wejÅ›ciowy aplikacji.
  *
  * @author Julia Bigaj
  */
 public class Bootstrapper : MonoBehaviour
 {
     /**
-     * @brief Inicjuje ³adowanie scen startowych po uruchomieniu gry.
+     * @brief Inicjuje Å‚adowanie scen startowych po uruchomieniu gry.
      *
-     * £aduje InitScene (jeœli nie jest ju¿ za³adowana) i prze³¹cza do MainMenu.
+     * Åaduje InitScene (jeÅ›li nie jest juÅ¼ zaÅ‚adowana) i przeÅ‚Ä…cza do MainMenu.
      */
     void Start()
     {
@@ -30,3 +30,4 @@ public class Bootstrapper : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
+

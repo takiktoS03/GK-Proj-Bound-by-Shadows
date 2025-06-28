@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
@@ -7,31 +7,31 @@ using System.Collections;
  * @class IntroController
  * @brief Odpowiada za odtwarzanie sekwencji wprowadzenia do gry (intro).
  *
- * Skrypt pokazuje kolejne obrazy, odtwarza narracjê i dŸwiêki za pomoc¹ `MusicManager`,
- * a na koñcu wykonuje efekt przybli¿enia i zanikania ostatniego obrazu, po czym ³aduje scenê `"Level 1 - Cave"`.
+ * Skrypt pokazuje kolejne obrazy, odtwarza narracjÄ™ i dÅºwiÄ™ki za pomocÄ… `MusicManager`,
+ * a na koÅ„cu wykonuje efekt przybliÅ¼enia i zanikania ostatniego obrazu, po czym Å‚aduje scenÄ™ `"Level 1 - Cave"`.
  *
- * Przeznaczony do u¿ycia wy³¹cznie w scenie `"Intro"`.
+ * Przeznaczony do uÅ¼ycia wyÅ‚Ä…cznie w scenie `"Intro"`.
  *
  * @author Julia Bigaj
  */
 public class IntroController : MonoBehaviour
 {
-    /// @brief Obraz nr 1 wyœwietlany na pocz¹tku sekwencji.
+    /// @brief Obraz nr 1 wyÅ›wietlany na poczÄ…tku sekwencji.
     public GameObject image1;
 
-    /// @brief Obraz nr 3 wyœwietlany w dalszej czêœci sekwencji.
+    /// @brief Obraz nr 3 wyÅ›wietlany w dalszej czÄ™Å›ci sekwencji.
     public GameObject image3;
 
-    /// @brief Obraz nr 4 wyœwietlany w dalszej czêœci sekwencji.
+    /// @brief Obraz nr 4 wyÅ›wietlany w dalszej czÄ™Å›ci sekwencji.
     public GameObject image4;
 
-    /// @brief Obraz nr 5 – koñcowy, na którym wykonywany jest efekt zoom i fade out.
+    /// @brief Obraz nr 5 â€“ koÅ„cowy, na ktÃ³rym wykonywany jest efekt zoom i fade out.
     public GameObject image5;
 
     /// @brief Czas trwania efektu zoom.
     public float zoomDuration = 8f;
 
-    /// @brief Wspó³czynnik przybli¿enia koñcowego obrazu.
+    /// @brief WspÃ³Å‚czynnik przybliÅ¼enia koÅ„cowego obrazu.
     public float zoomScale = 1.3f;
 
     /// @brief Oryginalna skala obrazu image5.
@@ -49,7 +49,7 @@ public class IntroController : MonoBehaviour
     }
 
     /**
-     * @brief Rozpoczyna odtwarzanie sekwencji intro, jeœli aktywna scena to "Intro".
+     * @brief Rozpoczyna odtwarzanie sekwencji intro, jeÅ›li aktywna scena to "Intro".
      */
     void Start()
     {
@@ -63,7 +63,7 @@ public class IntroController : MonoBehaviour
     }
 
     /**
-     * @brief Coroutine odpowiedzialna za przebieg ca³ej sekwencji wprowadzenia.
+     * @brief Coroutine odpowiedzialna za przebieg caÅ‚ej sekwencji wprowadzenia.
      * @return Enumerator dla `StartCoroutine`.
      */
     IEnumerator PlayIntro()
@@ -93,11 +93,11 @@ public class IntroController : MonoBehaviour
     }
 
     /**
-     * @brief Wykonuje efekt p³ynnego przybli¿enia obrazu.
-     * @param target Transform obiektu do przybli¿enia.
-     * @param fromScale Skala pocz¹tkowa.
+     * @brief Wykonuje efekt pÅ‚ynnego przybliÅ¼enia obrazu.
+     * @param target Transform obiektu do przybliÅ¼enia.
+     * @param fromScale Skala poczÄ…tkowa.
      * @param toScale Skala docelowa.
-     * @param duration Czas trwania przybli¿enia.
+     * @param duration Czas trwania przybliÅ¼enia.
      * @return Enumerator dla `StartCoroutine`.
      */
     IEnumerator ZoomImage(Transform target, Vector3 fromScale, Vector3 toScale, float duration)
@@ -133,3 +133,4 @@ public class IntroController : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 }
+
