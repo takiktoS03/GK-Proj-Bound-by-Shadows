@@ -1,23 +1,47 @@
 ﻿using UnityEngine;
 
+/**
+ * @class GhostFollow
+ * @brief Skrypt do płynnego śledzenia gracza przez duszka.
+ *
+ * Obiekt przypisany do tego skryptu podąża za graczem, unosząc się nad nim i zmieniając kierunek w zależności od skali gracza.
+ * Dodaje także efekt sinusoidalnego 'pływania' w osi Y.
+ *
+ * @author Filip Kudła
+ */
 public class GhostFollow : MonoBehaviour
 {
-    public Transform player;          // Obiekt gracza
-    public Vector3 offset; // Względna pozycja nad graczem
+    /// @brief Transform gracza do śledzenia.
+    public Transform player;
+
+    /// @brief Względna pozycja duszka nad graczem.
+    public Vector3 offset;
+
+    /// @brief Prędkość płynnego podążania.
     public float smoothSpeed = 2f;
-    public float floatAmplitude = 0.5f;  // Amplituda 'pływania' góra-dół
-    public float floatFrequency = 1f;    // Częstotliwość 'pływania'
+
+    /// @brief Amplituda 'pływania' duszka.
+    public float floatAmplitude = 0.5f;
+
+    /// @brief Częstotliwość pływania.
+    public float floatFrequency = 1f;
 
     private Vector3 initialOffset;
     private Vector3 initialScale;
     Vector3 desiredPosition;
 
+    /**
+     * @brief Inicjalizuje pozycję początkową i skalę.
+     */
     void Start()
     {
         initialOffset = offset;
         initialScale = transform.localScale;
     }
 
+    /**
+     * @brief Aktualizuje pozycję duszka względem gracza z uwzględnieniem efektu falowania.
+     */
     void Update()
     {
         if (player == null) return;

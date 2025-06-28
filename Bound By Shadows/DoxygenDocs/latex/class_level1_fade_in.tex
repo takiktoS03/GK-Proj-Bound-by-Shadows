@@ -1,0 +1,62 @@
+\doxysection{Dokumentacja klasy Level1\+Fade\+In}
+\hypertarget{class_level1_fade_in}{}\label{class_level1_fade_in}\index{Level1FadeIn@{Level1FadeIn}}
+
+
+Realizuje efekt p³ynnego zanikania czarnego ekranu po uruchomieniu poziomu.  
+
+
+Diagram dziedziczenia dla Level1\+Fade\+In\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level1_fade_in}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Canvas\+Group \mbox{\hyperlink{class_level1_fade_in_a0c1b651ecdb3386d971d02d3bdab1de0}{fade\+Overlay}}
+\begin{DoxyCompactList}\small\item\em Referencja do {\ttfamily Canvas\+Group}, który kontroluje przezroczystoœæ czarnego overlaya. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_level1_fade_in_ac0596d0e9e5e0daa4de92dc8a79420b5}{fade\+Duration}} = 1f
+\begin{DoxyCompactList}\small\item\em Czas trwania efektu zanikania (w sekundach). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Realizuje efekt p³ynnego zanikania czarnego ekranu po uruchomieniu poziomu. 
+
+Skrypt przy starcie uruchamia animacjê {\ttfamily fade-\/in} przy u¿yciu {\ttfamily Canvas\+Group}, stopniowo ujawniaj¹c widok gry. Po zakoñczeniu efektu wy³¹cza obiekt z komponentem {\ttfamily Canvas\+Group}.
+
+Przeznaczony do u¿ytku jako efekt przejœcia przy rozpoczêciu sceny (np. poziomu 1).
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_level1_fade_in_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_level1_fade_in_ac0596d0e9e5e0daa4de92dc8a79420b5}\index{Level1FadeIn@{Level1FadeIn}!fadeDuration@{fadeDuration}}
+\index{fadeDuration@{fadeDuration}!Level1FadeIn@{Level1FadeIn}}
+\doxysubsubsection{\texorpdfstring{fadeDuration}{fadeDuration}}
+{\footnotesize\ttfamily \label{class_level1_fade_in_ac0596d0e9e5e0daa4de92dc8a79420b5} 
+float Level1\+Fade\+In.\+fade\+Duration = 1f}
+
+
+
+Czas trwania efektu zanikania (w sekundach). 
+
+\Hypertarget{class_level1_fade_in_a0c1b651ecdb3386d971d02d3bdab1de0}\index{Level1FadeIn@{Level1FadeIn}!fadeOverlay@{fadeOverlay}}
+\index{fadeOverlay@{fadeOverlay}!Level1FadeIn@{Level1FadeIn}}
+\doxysubsubsection{\texorpdfstring{fadeOverlay}{fadeOverlay}}
+{\footnotesize\ttfamily \label{class_level1_fade_in_a0c1b651ecdb3386d971d02d3bdab1de0} 
+Canvas\+Group Level1\+Fade\+In.\+fade\+Overlay}
+
+
+
+Referencja do {\ttfamily Canvas\+Group}, który kontroluje przezroczystoœæ czarnego overlaya. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Menu HUDs/\mbox{\hyperlink{_level1_fade_in_8cs}{Level1\+Fade\+In.\+cs}}\end{DoxyCompactItemize}

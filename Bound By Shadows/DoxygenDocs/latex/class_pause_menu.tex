@@ -1,0 +1,182 @@
+\doxysection{Dokumentacja klasy Pause\+Menu}
+\hypertarget{class_pause_menu}{}\label{class_pause_menu}\index{PauseMenu@{PauseMenu}}
+
+
+Zarzπdza stanem pauzy i koÒca gry w trakcie rozgrywki.  
+
+
+Diagram dziedziczenia dla Pause\+Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pause_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pause_menu_a4416b25e65dfadf57cd8657eaf94f7df}{Resume}} ()
+\begin{DoxyCompactList}\small\item\em Wznawia grÍ po pauzie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_a5c9d4ead4d30cdf4fda4acbb3002da36}{Load\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Wczytuje bieøπcπ scenÍ i odtwarza zapisany stan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_a712dac1268693262de144337e2835ea7}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em Wstrzymuje grÍ i aktywuje menu pauzy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_a833077a2752465d59d0e7e5ad756b7ab}{Quit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em KoÒczy grÍ i wraca do menu g≥Ûwnego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pause_menu_a07316b6d4c8530d1140d0344862c2f71}{Save\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Zapisuje bieøπcy stan gry. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_pause_menu_aec12219ce5017ba8468877c7fb3d5406}{Show\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Coroutine wyúwietlajπca ekran koÒca gry po krÛtkim opÛünieniu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_pause_menu_a49305f37ccebc2342ea009f5cb259fee}{pause\+Menu\+UI}}
+\begin{DoxyCompactList}\small\item\em Panel UI menu pauzy. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_pause_menu_a5913d279cb675a26d4110ce3fc3635c2}{game\+Over\+UI}}
+\begin{DoxyCompactList}\small\item\em Panel UI ekranu koÒca gry. \end{DoxyCompactList}\item 
+Audio\+Source \mbox{\hyperlink{class_pause_menu_afe3053026a4bd08feda8614be59f1519}{game\+Over\+Audio}}
+\begin{DoxyCompactList}\small\item\em èrÛd≥o düwiÍku odtwarzanego przy przegranej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_pause_menu_a442d2d7274f52983f9f7fedf91a74e64}{is\+Game\+Over}} = false
+\begin{DoxyCompactList}\small\item\em Czy gra zakoÒczy≥a siÍ (np. przegrana). \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_pause_menu_a3d0a43917cf3e488852b47d1b755b377}{is\+Paused}} = false
+\begin{DoxyCompactList}\small\item\em Czy gra jest aktualnie zapauzowana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczeg√≥≈Çowy}
+Zarzπdza stanem pauzy i koÒca gry w trakcie rozgrywki. 
+
+Obs≥uguje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu, powrÛt do menu g≥Ûwnego oraz ekran koÒca gry. Blokuje czas gry i interakcje UI w odpowiednich momentach. Dzia≥a tylko w scenie {\ttfamily "{}\+Level 1 -\/ Cave"{}}.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_pause_menu_doc-func-members}
+\doxysubsection{Dokumentacja funkcji sk≈Çadowych}
+\Hypertarget{class_pause_menu_a5c9d4ead4d30cdf4fda4acbb3002da36}\index{PauseMenu@{PauseMenu}!LoadGame@{LoadGame}}
+\index{LoadGame@{LoadGame}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{LoadGame()}{LoadGame()}}
+{\footnotesize\ttfamily \label{class_pause_menu_a5c9d4ead4d30cdf4fda4acbb3002da36} 
+void Pause\+Menu.\+Load\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wczytuje bieøπcπ scenÍ i odtwarza zapisany stan. 
+
+\Hypertarget{class_pause_menu_a712dac1268693262de144337e2835ea7}\index{PauseMenu@{PauseMenu}!Pause@{Pause}}
+\index{Pause@{Pause}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily \label{class_pause_menu_a712dac1268693262de144337e2835ea7} 
+void Pause\+Menu.\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wstrzymuje grÍ i aktywuje menu pauzy. 
+
+\Hypertarget{class_pause_menu_a833077a2752465d59d0e7e5ad756b7ab}\index{PauseMenu@{PauseMenu}!QuitGame@{QuitGame}}
+\index{QuitGame@{QuitGame}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{QuitGame()}{QuitGame()}}
+{\footnotesize\ttfamily \label{class_pause_menu_a833077a2752465d59d0e7e5ad756b7ab} 
+void Pause\+Menu.\+Quit\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KoÒczy grÍ i wraca do menu g≥Ûwnego. 
+
+\Hypertarget{class_pause_menu_a4416b25e65dfadf57cd8657eaf94f7df}\index{PauseMenu@{PauseMenu}!Resume@{Resume}}
+\index{Resume@{Resume}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily \label{class_pause_menu_a4416b25e65dfadf57cd8657eaf94f7df} 
+void Pause\+Menu.\+Resume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wznawia grÍ po pauzie. 
+
+\Hypertarget{class_pause_menu_a07316b6d4c8530d1140d0344862c2f71}\index{PauseMenu@{PauseMenu}!SaveGame@{SaveGame}}
+\index{SaveGame@{SaveGame}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{SaveGame()}{SaveGame()}}
+{\footnotesize\ttfamily \label{class_pause_menu_a07316b6d4c8530d1140d0344862c2f71} 
+void Pause\+Menu.\+Save\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zapisuje bieøπcy stan gry. 
+
+\Hypertarget{class_pause_menu_aec12219ce5017ba8468877c7fb3d5406}\index{PauseMenu@{PauseMenu}!ShowGameOver@{ShowGameOver}}
+\index{ShowGameOver@{ShowGameOver}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{ShowGameOver()}{ShowGameOver()}}
+{\footnotesize\ttfamily \label{class_pause_menu_aec12219ce5017ba8468877c7fb3d5406} 
+IEnumerator Pause\+Menu.\+Show\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Coroutine wyúwietlajπca ekran koÒca gry po krÛtkim opÛünieniu. 
+
+\begin{DoxyReturn}{Zwraca}
+Enumerator dla Start\+Coroutine. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_pause_menu_doc-variable-members}
+\doxysubsection{Dokumentacja atrybut√≥w sk≈Çadowych}
+\Hypertarget{class_pause_menu_afe3053026a4bd08feda8614be59f1519}\index{PauseMenu@{PauseMenu}!gameOverAudio@{gameOverAudio}}
+\index{gameOverAudio@{gameOverAudio}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{gameOverAudio}{gameOverAudio}}
+{\footnotesize\ttfamily \label{class_pause_menu_afe3053026a4bd08feda8614be59f1519} 
+Audio\+Source Pause\+Menu.\+game\+Over\+Audio}
+
+
+
+èrÛd≥o düwiÍku odtwarzanego przy przegranej. 
+
+\Hypertarget{class_pause_menu_a5913d279cb675a26d4110ce3fc3635c2}\index{PauseMenu@{PauseMenu}!gameOverUI@{gameOverUI}}
+\index{gameOverUI@{gameOverUI}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{gameOverUI}{gameOverUI}}
+{\footnotesize\ttfamily \label{class_pause_menu_a5913d279cb675a26d4110ce3fc3635c2} 
+Game\+Object Pause\+Menu.\+game\+Over\+UI}
+
+
+
+Panel UI ekranu koÒca gry. 
+
+\Hypertarget{class_pause_menu_a442d2d7274f52983f9f7fedf91a74e64}\index{PauseMenu@{PauseMenu}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{isGameOver}{isGameOver}}
+{\footnotesize\ttfamily \label{class_pause_menu_a442d2d7274f52983f9f7fedf91a74e64} 
+bool Pause\+Menu.\+is\+Game\+Over = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czy gra zakoÒczy≥a siÍ (np. przegrana). 
+
+\Hypertarget{class_pause_menu_a3d0a43917cf3e488852b47d1b755b377}\index{PauseMenu@{PauseMenu}!isPaused@{isPaused}}
+\index{isPaused@{isPaused}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{isPaused}{isPaused}}
+{\footnotesize\ttfamily \label{class_pause_menu_a3d0a43917cf3e488852b47d1b755b377} 
+bool Pause\+Menu.\+is\+Paused = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czy gra jest aktualnie zapauzowana. 
+
+\Hypertarget{class_pause_menu_a49305f37ccebc2342ea009f5cb259fee}\index{PauseMenu@{PauseMenu}!pauseMenuUI@{pauseMenuUI}}
+\index{pauseMenuUI@{pauseMenuUI}!PauseMenu@{PauseMenu}}
+\doxysubsubsection{\texorpdfstring{pauseMenuUI}{pauseMenuUI}}
+{\footnotesize\ttfamily \label{class_pause_menu_a49305f37ccebc2342ea009f5cb259fee} 
+Game\+Object Pause\+Menu.\+pause\+Menu\+UI}
+
+
+
+Panel UI menu pauzy. 
+
+
+
+Dokumentacja dla tej klasy zosta≈Ça wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Menu HUDs/\mbox{\hyperlink{_pause_menu_8cs}{Pause\+Menu.\+cs}}\end{DoxyCompactItemize}

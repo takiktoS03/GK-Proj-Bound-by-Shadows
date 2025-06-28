@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bound by Shadows: Dokumentacja klasy SaveableObject</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bound by Shadows
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocÄ… Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_saveable_object.html','','class_saveable_object-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowaÅ„</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy SaveableObject</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Przypisuje unikalny identyfikator (<span class="tt">UniqueId</span>) do obiektu gry, aby umo¿liwiæ jego zapis i odtworzenie.  
+ <a href="#details">WiÄ™cej...</a></p>
+<div class="dynheader">
+Diagram dziedziczenia dla SaveableObject</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_saveable_object.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
+WÅ‚aÅ›ciwoÅ›ci</h2></td></tr>
+<tr class="memitem:a00fbe40790565bf7ed86c1ba81547777" id="r_a00fbe40790565bf7ed86c1ba81547777"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00fbe40790565bf7ed86c1ba81547777">UniqueId</a><code> [get]</code></td></tr>
+<tr class="memdesc:a00fbe40790565bf7ed86c1ba81547777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publiczny dostêp do unikalnego ID.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegÃ³Å‚owy</h2>
+<div class="textblock"><p>Przypisuje unikalny identyfikator (<span class="tt">UniqueId</span>) do obiektu gry, aby umo¿liwiæ jego zapis i odtworzenie. </p>
+<p>Klasa ta zapewnia, ¿e ka¿dy obiekt w scenie posiada unikalny identyfikator, który mo¿e byæ wykorzystany w systemie zapisu stanu gry. Jeœli identyfikator nie jest unikalny, zostaje wygenerowany nowy. Dzia³a tylko w edytorze Unity — podczas dzia³ania gry identyfikator nie jest zmieniany.</p>
+<dl class="section note"><dt>Nota</dt><dd>Wspó³pracuje z interfejsem <span class="tt"><a class="el" href="interface_i_saveable.html" title="Interfejs do obs³ugi zapisu i odczytu stanu obiektów w grze.">ISaveable</a></span>. </dd>
+<dd>
+<span class="tt">DisallowMultipleComponent</span> gwarantuje, ¿e komponent nie zostanie dodany wielokrotnie do jednego obiektu.</dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Filip Kud³a </dd></dl>
+</div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Dokumentacja wÅ‚aÅ›ciwoÅ›ci</h2>
+<a id="a00fbe40790565bf7ed86c1ba81547777" name="a00fbe40790565bf7ed86c1ba81547777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fbe40790565bf7ed86c1ba81547777">&#9670;&#160;</a></span>UniqueId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SaveableObject.UniqueId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publiczny dostêp do unikalnego ID. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Niezmienny identyfikator GUID. </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku:<ul>
+<li>Assets/Scripts/Save/<a class="el" href="_saveable_object_8cs.html">SaveableObject.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_saveable_object.html">SaveableObject</a></li>
+    <li class="footer">Wygenerowano za pomocÄ… <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

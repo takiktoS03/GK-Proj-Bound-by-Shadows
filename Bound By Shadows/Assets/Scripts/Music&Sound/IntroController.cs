@@ -3,25 +3,43 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
-/* Obs³uguje wprowadzenie do gry w postaci sekwencji obrazów i narracji.
-   - Odtwarza dŸwiêk, animacje i przejœcia.
-   - Na koñcu automatycznie ³aduje poziom gry (`Level 1 - Cave`).
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class IntroController
+ * @brief Odpowiada za odtwarzanie sekwencji wprowadzenia do gry (intro).
+ *
+ * Skrypt pokazuje kolejne obrazy, odtwarza narracjê i dŸwiêki za pomoc¹ `MusicManager`,
+ * a na koñcu wykonuje efekt przybli¿enia i zanikania ostatniego obrazu, po czym ³aduje scenê `"Level 1 - Cave"`.
+ *
+ * Przeznaczony do u¿ycia wy³¹cznie w scenie `"Intro"`.
+ *
+ * @author Julia Bigaj
+ */
 public class IntroController : MonoBehaviour
 {
+    /// @brief Obraz nr 1 wyœwietlany na pocz¹tku sekwencji.
     public GameObject image1;
+
+    /// @brief Obraz nr 3 wyœwietlany w dalszej czêœci sekwencji.
     public GameObject image3;
+
+    /// @brief Obraz nr 4 wyœwietlany w dalszej czêœci sekwencji.
     public GameObject image4;
+
+    /// @brief Obraz nr 5 – koñcowy, na którym wykonywany jest efekt zoom i fade out.
     public GameObject image5;
 
+    /// @brief Czas trwania efektu zoom.
     public float zoomDuration = 8f;
+
+    /// @brief Wspó³czynnik przybli¿enia koñcowego obrazu.
     public float zoomScale = 1.3f;
 
+    /// @brief Oryginalna skala obrazu image5.
     private Vector3 originalScale;
 
+    /**
+     * @brief Dezaktywuje wszystkie obrazy przy uruchomieniu obiektu.
+     */
     void Awake()
     {
         image1.SetActive(false);
@@ -30,8 +48,11 @@ public class IntroController : MonoBehaviour
         image5.SetActive(false);
     }
 
+    /**
+     * @brief Rozpoczyna odtwarzanie sekwencji intro, jeœli aktywna scena to "Intro".
+     */
     void Start()
-    { 
+    {
         if (SceneManager.GetActiveScene().name != "Intro")
             return;
 
@@ -41,6 +62,10 @@ public class IntroController : MonoBehaviour
         StartCoroutine(PlayIntro());
     }
 
+    /**
+     * @brief Coroutine odpowiedzialna za przebieg ca³ej sekwencji wprowadzenia.
+     * @return Enumerator dla `StartCoroutine`.
+     */
     IEnumerator PlayIntro()
     {
         image1.SetActive(true);
@@ -62,12 +87,19 @@ public class IntroController : MonoBehaviour
 
         // fade out
         CanvasGroup cg = image5.GetComponent<CanvasGroup>();
-        yield return StartCoroutine(FadeOutImage(cg, 3f)); // np. 1 sekunda fade out
+        yield return StartCoroutine(FadeOutImage(cg, 3f));
 
         SceneManager.LoadScene("Level 1 - Cave");
-
     }
 
+    /**
+     * @brief Wykonuje efekt p³ynnego przybli¿enia obrazu.
+     * @param target Transform obiektu do przybli¿enia.
+     * @param fromScale Skala pocz¹tkowa.
+     * @param toScale Skala docelowa.
+     * @param duration Czas trwania przybli¿enia.
+     * @return Enumerator dla `StartCoroutine`.
+     */
     IEnumerator ZoomImage(Transform target, Vector3 fromScale, Vector3 toScale, float duration)
     {
         float elapsed = 0f;
@@ -80,6 +112,12 @@ public class IntroController : MonoBehaviour
         target.localScale = toScale;
     }
 
+    /**
+     * @brief Wykonuje efekt stopniowego zanikania obrazu (`CanvasGroup.alpha`).
+     * @param canvasGroup CanvasGroup z przypisanym obrazem.
+     * @param duration Czas trwania efektu zanikania.
+     * @return Enumerator dla `StartCoroutine`.
+     */
     IEnumerator FadeOutImage(CanvasGroup canvasGroup, float duration)
     {
         float startAlpha = canvasGroup.alpha;
@@ -94,6 +132,4 @@ public class IntroController : MonoBehaviour
 
         canvasGroup.alpha = 0f;
     }
-
 }
-

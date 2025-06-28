@@ -1,0 +1,112 @@
+\doxysection{Dokumentacja klasy Inventory\+UI}
+\hypertarget{class_inventory_u_i}{}\label{class_inventory_u_i}\index{InventoryUI@{InventoryUI}}
+
+
+Zarz¹dza interfejsem ekwipunku oraz wyœwietlaniem treœci listów.  
+
+
+Diagram dziedziczenia dla Inventory\+UI\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inventory_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_inventory_u_i_a1ab6e61b6574fe1f46e123c8a3bc3818}{Show\+Letter\+Content}} (\mbox{\hyperlink{class_letter_data}{Letter\+Data}} letter\+Data)
+\begin{DoxyCompactList}\small\item\em Wyœwietla treœæ wybranego listu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_inventory_u_i_a22d4568e88c271e4e61e9df9d56208c8}{inventory\+Panel}}
+\begin{DoxyCompactList}\small\item\em Panel g³ówny UI ekwipunku. \end{DoxyCompactList}\item 
+Image \mbox{\hyperlink{class_inventory_u_i_ae2b0d96f90d03760c75b8fecebb69bb0}{letter\+Content\+Image}}
+\begin{DoxyCompactList}\small\item\em Obraz prezentuj¹cy treœæ listu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_inventory_slot_spawner}{Inventory\+Slot\+Spawner}} \mbox{\hyperlink{class_inventory_u_i_ad6a307ef2b6bcca4dcc60ab4a248e55b}{slot\+Spawner}}
+\begin{DoxyCompactList}\small\item\em Komponent odpowiedzialny za generowanie slotów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_inventory_u_i}{Inventory\+UI}} \mbox{\hyperlink{class_inventory_u_i_a1a7cd9f1febcd38d191d986db08b1d72}{Instance}}
+\begin{DoxyCompactList}\small\item\em Singleton zapewniaj¹cy dostêp do UI ekwipunku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Zarz¹dza interfejsem ekwipunku oraz wyœwietlaniem treœci listów. 
+
+Umo¿liwia otwieranie/zamykanie ekwipunku, odœwie¿anie jego zawartoœci oraz pokazywanie treœci wybranego listu (\doxylink{class_letter_data}{Letter\+Data}).
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_inventory_u_i_doc-func-members}
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{class_inventory_u_i_a1ab6e61b6574fe1f46e123c8a3bc3818}\index{InventoryUI@{InventoryUI}!ShowLetterContent@{ShowLetterContent}}
+\index{ShowLetterContent@{ShowLetterContent}!InventoryUI@{InventoryUI}}
+\doxysubsubsection{\texorpdfstring{ShowLetterContent()}{ShowLetterContent()}}
+{\footnotesize\ttfamily \label{class_inventory_u_i_a1ab6e61b6574fe1f46e123c8a3bc3818} 
+void Inventory\+UI.\+Show\+Letter\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_letter_data}{Letter\+Data}}}]{letter\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wyœwietla treœæ wybranego listu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em letter} & Obiekt {\ttfamily \doxylink{class_letter_data}{Letter\+Data}}, którego treœæ ma zostaæ pokazana. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_inventory_u_i_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_inventory_u_i_a1a7cd9f1febcd38d191d986db08b1d72}\index{InventoryUI@{InventoryUI}!Instance@{Instance}}
+\index{Instance@{Instance}!InventoryUI@{InventoryUI}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_inventory_u_i_a1a7cd9f1febcd38d191d986db08b1d72} 
+\mbox{\hyperlink{class_inventory_u_i}{Inventory\+UI}} Inventory\+UI.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton zapewniaj¹cy dostêp do UI ekwipunku. 
+
+\Hypertarget{class_inventory_u_i_a22d4568e88c271e4e61e9df9d56208c8}\index{InventoryUI@{InventoryUI}!inventoryPanel@{inventoryPanel}}
+\index{inventoryPanel@{inventoryPanel}!InventoryUI@{InventoryUI}}
+\doxysubsubsection{\texorpdfstring{inventoryPanel}{inventoryPanel}}
+{\footnotesize\ttfamily \label{class_inventory_u_i_a22d4568e88c271e4e61e9df9d56208c8} 
+Game\+Object Inventory\+UI.\+inventory\+Panel}
+
+
+
+Panel g³ówny UI ekwipunku. 
+
+\Hypertarget{class_inventory_u_i_ae2b0d96f90d03760c75b8fecebb69bb0}\index{InventoryUI@{InventoryUI}!letterContentImage@{letterContentImage}}
+\index{letterContentImage@{letterContentImage}!InventoryUI@{InventoryUI}}
+\doxysubsubsection{\texorpdfstring{letterContentImage}{letterContentImage}}
+{\footnotesize\ttfamily \label{class_inventory_u_i_ae2b0d96f90d03760c75b8fecebb69bb0} 
+Image Inventory\+UI.\+letter\+Content\+Image}
+
+
+
+Obraz prezentuj¹cy treœæ listu. 
+
+\Hypertarget{class_inventory_u_i_ad6a307ef2b6bcca4dcc60ab4a248e55b}\index{InventoryUI@{InventoryUI}!slotSpawner@{slotSpawner}}
+\index{slotSpawner@{slotSpawner}!InventoryUI@{InventoryUI}}
+\doxysubsubsection{\texorpdfstring{slotSpawner}{slotSpawner}}
+{\footnotesize\ttfamily \label{class_inventory_u_i_ad6a307ef2b6bcca4dcc60ab4a248e55b} 
+\mbox{\hyperlink{class_inventory_slot_spawner}{Inventory\+Slot\+Spawner}} Inventory\+UI.\+slot\+Spawner}
+
+
+
+Komponent odpowiedzialny za generowanie slotów. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Inventory/\mbox{\hyperlink{_inventory_u_i_8cs}{Inventory\+UI.\+cs}}\end{DoxyCompactItemize}

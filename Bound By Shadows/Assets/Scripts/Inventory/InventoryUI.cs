@@ -1,24 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-/* Odpowiada za zarz¹dzanie interfejsem u¿ytkownika ekwipunku.
-   - Otwiera/zamyka panel ekwipunku po naciœniêciu klawisza "E".
-   - Odœwie¿a sloty oraz umo¿liwia wyœwietlanie treœci listów.
-   - Korzysta z InventoryManager i InventorySlotSpawner.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class InventoryUI
+ * @brief Zarz¹dza interfejsem ekwipunku oraz wyœwietlaniem treœci listów.
+ *
+ * Umo¿liwia otwieranie/zamykanie ekwipunku, odœwie¿anie jego zawartoœci
+ * oraz pokazywanie treœci wybranego listu (LetterData).
+ *
+ * @author Julia Bigaj
+ */
 public class InventoryUI : MonoBehaviour
 {
+    /// @brief Singleton zapewniaj¹cy dostêp do UI ekwipunku.
     public static InventoryUI Instance;
 
+    /// @brief Panel g³ówny UI ekwipunku.
     public GameObject inventoryPanel;
+
+    /// @brief Obraz prezentuj¹cy treœæ listu.
     public Image letterContentImage;
+
+    /// @brief Komponent odpowiedzialny za generowanie slotów.
     public InventorySlotSpawner slotSpawner;
 
+    /// @brief Czy panel ekwipunku jest aktualnie otwarty.
     private bool isOpen = false;
 
+    /**
+     * @brief Ustawia instancjê singletonu.
+     */
     void Awake()
     {
         if (Instance == null)
@@ -31,6 +42,9 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    /**
+    * @brief Sprawdza naciœniêcie klawisza otwieraj¹cego ekwipunek.
+    */
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -39,6 +53,9 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Prze³¹cza widocznoœæ panelu ekwipunku.
+     */
     void ToggleInventory()
     {
         isOpen = !isOpen;
@@ -52,6 +69,9 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Odœwie¿a ekwipunek przy jego otwarciu.
+     */
     void RefreshInventory()
     {
         Debug.Log("Odœwie¿am ekwipunek...");
@@ -60,6 +80,10 @@ public class InventoryUI : MonoBehaviour
         slotSpawner.RefreshSlots();
     }
 
+    /**
+     * @brief Wyœwietla treœæ wybranego listu.
+     * @param letter Obiekt `LetterData`, którego treœæ ma zostaæ pokazana.
+     */
     public void ShowLetterContent(LetterData letterData)
     {
         Debug.Log("Otwarto list: " + letterData.icon.name);

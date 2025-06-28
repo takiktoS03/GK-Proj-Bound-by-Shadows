@@ -1,0 +1,151 @@
+\doxysection{Dokumentacja klasy Player\+Health}
+\hypertarget{class_player_health}{}\label{class_player_health}\index{PlayerHealth@{PlayerHealth}}
+
+
+Klasa zarządzająca zdrowiem i wytrzymałością gracza.  
+
+
+Diagram dziedziczenia dla Player\+Health\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player_health}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_player_health_a56c5102705a28ef57414c38f6417e325}{Die}} ()
+\item 
+void \mbox{\hyperlink{class_player_health_a07715a85c02a50b1e5576b896f303b68}{Take\+Stamina}} (float amount)
+\item 
+override void \mbox{\hyperlink{class_player_health_af30955e99e5a54554a4689efc4ecebc5}{Take\+Damage}} (float amount)
+\item 
+void \mbox{\hyperlink{class_player_health_a222a7ef59b436aefd832b99cca859bf6}{Heal\+Stamina}} (float amount)
+\item 
+override void \mbox{\hyperlink{class_player_health_aebf46293d02d48ee3805741738e32e87}{Set\+Bars\+Value}} (float value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_health}{Health}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_a66ff66ed2817ec226833844eaa86856f}{Heal}} (float amount)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_player_health_a4a8c79acce7b32dc5ae4141972678ba4}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody chronione dziedziczone z \mbox{\hyperlink{class_health}{Health}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual IEnumerator \mbox{\hyperlink{class_health_a1e37f6db4154dbbc6d21da0c61f60830}{Damage\+Cooldown\+Coroutine}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_health_aaa5826bea14b56573cb05dc12fdffc5a}{current\+Stamina}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Aktualna ilość staminy (dostępna tylko do odczytu). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe dziedziczone składowe}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_health}{Health}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_ab15d2074557eb3928283a20ee8fdfae0}{starting\+Health}}
+\begin{DoxyCompactList}\small\item\em Początkowa wartość zdrowia. \end{DoxyCompactList}\item 
+Micro\+Bar \mbox{\hyperlink{class_health_a9d95d73ea2fe61bb519dc68d56256d0b}{health\+Bar}}
+\begin{DoxyCompactList}\small\item\em Pasek zdrowia. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_health_a1fb8f952bb1f1ae7bafe8e40a2bff915}{damage\+Cooldown}} = 0.\+75f
+\begin{DoxyCompactList}\small\item\em Czas nieśmiertelności po otrzymaniu obrażeń. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_health_a68c8d8201a5d0117cfc647c6a6c0c454}{current\+Health}}
+\item 
+Animator \mbox{\hyperlink{class_health_a5d1b172e609d6b0735338c870f3e1fa4}{anim}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_health_a51747c8a7f565c7943000ffb57942950}{sprite\+Rend}}
+\item 
+bool \mbox{\hyperlink{class_health_af16733759c81da0e3100b1f13bf8e036}{can\+Take\+Damage}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa zarządzająca zdrowiem i wytrzymałością gracza. 
+
+Dziedziczy po klasie {\ttfamily \doxylink{class_health}{Health}} i rozszerza ją o obsługę paska staminy, jej zużywania i regeneracji. Integruje się z paskami zdrowia i staminy z Microlight.\+Micro\+Bar, a także zatrzymuje ruch gracza po śmierci.
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_health_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_player_health_a4a8c79acce7b32dc5ae4141972678ba4}\index{PlayerHealth@{PlayerHealth}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_player_health_a4a8c79acce7b32dc5ae4141972678ba4} 
+override void Player\+Health.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Inicjalizuje zdrowie i staminy oraz komponent ruchu. 
+
+Reimplementowana z \mbox{\hyperlink{class_health_ae8aec5063add1fb2ab581726c862a199}{Health}}.
+
+\Hypertarget{class_player_health_a56c5102705a28ef57414c38f6417e325}\index{PlayerHealth@{PlayerHealth}!Die@{Die}}
+\index{Die@{Die}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{Die()}{Die()}}
+{\footnotesize\ttfamily \label{class_player_health_a56c5102705a28ef57414c38f6417e325} 
+override void Player\+Health.\+Die (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Przeciąża metodę śmierci\+: animacja i ekran końcowy. 
+
+Reimplementowana z \mbox{\hyperlink{class_health_a754cdffef8b9f959807bd7bc6f2825f0}{Health}}.
+
+\Hypertarget{class_player_health_a222a7ef59b436aefd832b99cca859bf6}\index{PlayerHealth@{PlayerHealth}!HealStamina@{HealStamina}}
+\index{HealStamina@{HealStamina}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{HealStamina()}{HealStamina()}}
+{\footnotesize\ttfamily \label{class_player_health_a222a7ef59b436aefd832b99cca859bf6} 
+void Player\+Health.\+Heal\+Stamina (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lepsza wersja odzyskiwania staminy. \Hypertarget{class_player_health_aebf46293d02d48ee3805741738e32e87}\index{PlayerHealth@{PlayerHealth}!SetBarsValue@{SetBarsValue}}
+\index{SetBarsValue@{SetBarsValue}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{SetBarsValue()}{SetBarsValue()}}
+{\footnotesize\ttfamily \label{class_player_health_aebf46293d02d48ee3805741738e32e87} 
+override void Player\+Health.\+Set\+Bars\+Value (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Ustawia wartość pasków zdrowia i staminy. 
+
+Reimplementowana z \mbox{\hyperlink{class_health_a7d003a57aecf4b98387d506af9f4cd50}{Health}}.
+
+\Hypertarget{class_player_health_af30955e99e5a54554a4689efc4ecebc5}\index{PlayerHealth@{PlayerHealth}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{class_player_health_af30955e99e5a54554a4689efc4ecebc5} 
+override void Player\+Health.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Odbieranie HP wraz z zaimplementowanym dźwiękiem. 
+
+Reimplementowana z \mbox{\hyperlink{class_health_a5b8086440bcdd5f793988b71fa128655}{Health}}.
+
+\Hypertarget{class_player_health_a07715a85c02a50b1e5576b896f303b68}\index{PlayerHealth@{PlayerHealth}!TakeStamina@{TakeStamina}}
+\index{TakeStamina@{TakeStamina}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{TakeStamina()}{TakeStamina()}}
+{\footnotesize\ttfamily \label{class_player_health_a07715a85c02a50b1e5576b896f303b68} 
+void Player\+Health.\+Take\+Stamina (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Odbiera określoną ilość staminy, aktualizując pasek. 
+
+\label{doc-property-members}
+\Hypertarget{class_player_health_doc-property-members}
+\doxysubsection{Dokumentacja właściwości}
+\Hypertarget{class_player_health_aaa5826bea14b56573cb05dc12fdffc5a}\index{PlayerHealth@{PlayerHealth}!currentStamina@{currentStamina}}
+\index{currentStamina@{currentStamina}!PlayerHealth@{PlayerHealth}}
+\doxysubsubsection{\texorpdfstring{currentStamina}{currentStamina}}
+{\footnotesize\ttfamily \label{class_player_health_aaa5826bea14b56573cb05dc12fdffc5a} 
+float Player\+Health.\+current\+Stamina\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Aktualna ilość staminy (dostępna tylko do odczytu). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Health/\mbox{\hyperlink{_player_health_8cs}{Player\+Health.\+cs}}\end{DoxyCompactItemize}

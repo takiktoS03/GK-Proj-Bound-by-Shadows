@@ -2,16 +2,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-/* Ten skrypt zarz¹dza aktywnoœci¹ obiektów EventSystem w scenach Unity.
-   Zapewnia, ¿e w danym momencie aktywny jest tylko jeden EventSystem — nadmiarowe zostaj¹ dezaktywowane lub zniszczone.
-   Dziêki temu unika siê konfliktów podczas prze³¹czania scen lub ³adowania ich asynchronicznie.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class EventSystemController
+ * @brief Kontroluje istnienie tylko jednego aktywnego EventSystemu po zmianie sceny.
+ * 
+ * Skrypt zapobiega duplikowaniu EventSystemów po wczytywaniu scen i dba o ich poprawn¹ aktywacjê.
+ * 
+ * @author Julia Bigaj
+ */
 public class EventSystemController : MonoBehaviour
 {
-
+    /**
+    * @brief Subskrybuje zdarzenie za³adowania sceny i wykonuje kontrolê EventSystemu.
+    */
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -25,16 +28,27 @@ public class EventSystemController : MonoBehaviour
         UpdateEventSystemState();
     }
 
+    /**
+    * @brief Usuwa subskrypcjê po dezaktywacji.
+    */
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    /**
+    * @brief Metoda wywo³ywana po za³adowaniu sceny.
+    * @param scene Za³adowana scena.
+    * @param mode Tryb ³adowania sceny.
+    */
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         UpdateEventSystemState();
     }
 
+    /**
+     * @brief Sprawdza i usuwa zbêdny EventSystem z hierarchii, jeœli ju¿ istnieje aktywny.
+     */
     void UpdateEventSystemState()
     {
         if (EventSystem.current != null && EventSystem.current != GetComponent<EventSystem>())

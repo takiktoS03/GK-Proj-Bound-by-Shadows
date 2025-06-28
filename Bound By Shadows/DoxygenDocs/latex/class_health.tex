@@ -1,0 +1,179 @@
+\doxysection{Dokumentacja klasy Health}
+\hypertarget{class_health}{}\label{class_health}\index{Health@{Health}}
+
+
+Bazowa klasa obsługująca zdrowie dla wszelkich istot w grze.  
+
+
+Diagram dziedziczenia dla Health\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_health}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_a5b8086440bcdd5f793988b71fa128655}{Take\+Damage}} (float amount)
+\item 
+virtual void \mbox{\hyperlink{class_health_a754cdffef8b9f959807bd7bc6f2825f0}{Die}} ()
+\item 
+virtual void \mbox{\hyperlink{class_health_a66ff66ed2817ec226833844eaa86856f}{Heal}} (float amount)
+\item 
+virtual void \mbox{\hyperlink{class_health_a7d003a57aecf4b98387d506af9f4cd50}{Set\+Bars\+Value}} (float value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_health_ae8aec5063add1fb2ab581726c862a199}{Awake}} ()
+\item 
+virtual IEnumerator \mbox{\hyperlink{class_health_a1e37f6db4154dbbc6d21da0c61f60830}{Damage\+Cooldown\+Coroutine}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_health_ab15d2074557eb3928283a20ee8fdfae0}{starting\+Health}}
+\begin{DoxyCompactList}\small\item\em Początkowa wartość zdrowia. \end{DoxyCompactList}\item 
+Micro\+Bar \mbox{\hyperlink{class_health_a9d95d73ea2fe61bb519dc68d56256d0b}{health\+Bar}}
+\begin{DoxyCompactList}\small\item\em Pasek zdrowia. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_health_a1fb8f952bb1f1ae7bafe8e40a2bff915}{damage\+Cooldown}} = 0.\+75f
+\begin{DoxyCompactList}\small\item\em Czas nieśmiertelności po otrzymaniu obrażeń. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_health_a68c8d8201a5d0117cfc647c6a6c0c454}{current\+Health}}
+\item 
+Animator \mbox{\hyperlink{class_health_a5d1b172e609d6b0735338c870f3e1fa4}{anim}}
+\item 
+Sprite\+Renderer \mbox{\hyperlink{class_health_a51747c8a7f565c7943000ffb57942950}{sprite\+Rend}}
+\item 
+bool \mbox{\hyperlink{class_health_af16733759c81da0e3100b1f13bf8e036}{can\+Take\+Damage}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Bazowa klasa obsługująca zdrowie dla wszelkich istot w grze. 
+
+Oferuje podstawową logikę odbierania/leczenia obrażeń, obsługę nieśmiertelności oraz pasek zdrowia. Może być dziedziczona przez inne klasy (np. {\ttfamily \doxylink{class_player_health}{Player\+Health}}, {\ttfamily Enemy\+Health}).
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_health_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_health_ae8aec5063add1fb2ab581726c862a199}\index{Health@{Health}!Awake@{Awake}}
+\index{Awake@{Awake}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_health_ae8aec5063add1fb2ab581726c862a199} 
+virtual void Health.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Inicjalizuje komponenty i pasek zdrowia. 
+
+Reimplementowana w \mbox{\hyperlink{class_player_health_a4a8c79acce7b32dc5ae4141972678ba4}{Player\+Health}}.
+
+\Hypertarget{class_health_a1e37f6db4154dbbc6d21da0c61f60830}\index{Health@{Health}!DamageCooldownCoroutine@{DamageCooldownCoroutine}}
+\index{DamageCooldownCoroutine@{DamageCooldownCoroutine}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{DamageCooldownCoroutine()}{DamageCooldownCoroutine()}}
+{\footnotesize\ttfamily \label{class_health_a1e37f6db4154dbbc6d21da0c61f60830} 
+virtual IEnumerator Health.\+Damage\+Cooldown\+Coroutine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Coroutine -\/ krótki czas nieśmiertelności po otrzymaniu obrażeń. \Hypertarget{class_health_a754cdffef8b9f959807bd7bc6f2825f0}\index{Health@{Health}!Die@{Die}}
+\index{Die@{Die}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{Die()}{Die()}}
+{\footnotesize\ttfamily \label{class_health_a754cdffef8b9f959807bd7bc6f2825f0} 
+virtual void Health.\+Die (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Domyślna logika śmierci -\/ usunięcie obiektu. 
+
+Reimplementowana w \mbox{\hyperlink{class_player_health_a56c5102705a28ef57414c38f6417e325}{Player\+Health}}.
+
+\Hypertarget{class_health_a66ff66ed2817ec226833844eaa86856f}\index{Health@{Health}!Heal@{Heal}}
+\index{Heal@{Heal}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily \label{class_health_a66ff66ed2817ec226833844eaa86856f} 
+virtual void Health.\+Heal (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Leczy postać o podaną wartość. \Hypertarget{class_health_a7d003a57aecf4b98387d506af9f4cd50}\index{Health@{Health}!SetBarsValue@{SetBarsValue}}
+\index{SetBarsValue@{SetBarsValue}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{SetBarsValue()}{SetBarsValue()}}
+{\footnotesize\ttfamily \label{class_health_a7d003a57aecf4b98387d506af9f4cd50} 
+virtual void Health.\+Set\+Bars\+Value (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Ustawia konkretną wartość na pasku zdrowia. 
+
+Reimplementowana w \mbox{\hyperlink{class_player_health_aebf46293d02d48ee3805741738e32e87}{Player\+Health}}.
+
+\Hypertarget{class_health_a5b8086440bcdd5f793988b71fa128655}\index{Health@{Health}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily \label{class_health_a5b8086440bcdd5f793988b71fa128655} 
+virtual void Health.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Odbiera obrażenia, aktualizuje pasek zdrowia i wywołuje śmierć, jeśli HP spadnie do zera. 
+
+Reimplementowana w \mbox{\hyperlink{class_player_health_af30955e99e5a54554a4689efc4ecebc5}{Player\+Health}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_health_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_health_a5d1b172e609d6b0735338c870f3e1fa4}\index{Health@{Health}!anim@{anim}}
+\index{anim@{anim}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{anim}{anim}}
+{\footnotesize\ttfamily \label{class_health_a5d1b172e609d6b0735338c870f3e1fa4} 
+Animator Health.\+anim\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_health_af16733759c81da0e3100b1f13bf8e036}\index{Health@{Health}!canTakeDamage@{canTakeDamage}}
+\index{canTakeDamage@{canTakeDamage}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{canTakeDamage}{canTakeDamage}}
+{\footnotesize\ttfamily \label{class_health_af16733759c81da0e3100b1f13bf8e036} 
+bool Health.\+can\+Take\+Damage = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_health_a68c8d8201a5d0117cfc647c6a6c0c454}\index{Health@{Health}!currentHealth@{currentHealth}}
+\index{currentHealth@{currentHealth}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{currentHealth}{currentHealth}}
+{\footnotesize\ttfamily \label{class_health_a68c8d8201a5d0117cfc647c6a6c0c454} 
+float Health.\+current\+Health\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_health_a1fb8f952bb1f1ae7bafe8e40a2bff915}\index{Health@{Health}!damageCooldown@{damageCooldown}}
+\index{damageCooldown@{damageCooldown}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{damageCooldown}{damageCooldown}}
+{\footnotesize\ttfamily \label{class_health_a1fb8f952bb1f1ae7bafe8e40a2bff915} 
+float Health.\+damage\+Cooldown = 0.\+75f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Czas nieśmiertelności po otrzymaniu obrażeń. 
+
+\Hypertarget{class_health_a9d95d73ea2fe61bb519dc68d56256d0b}\index{Health@{Health}!healthBar@{healthBar}}
+\index{healthBar@{healthBar}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{healthBar}{healthBar}}
+{\footnotesize\ttfamily \label{class_health_a9d95d73ea2fe61bb519dc68d56256d0b} 
+Micro\+Bar Health.\+health\+Bar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pasek zdrowia. 
+
+\Hypertarget{class_health_a51747c8a7f565c7943000ffb57942950}\index{Health@{Health}!spriteRend@{spriteRend}}
+\index{spriteRend@{spriteRend}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{spriteRend}{spriteRend}}
+{\footnotesize\ttfamily \label{class_health_a51747c8a7f565c7943000ffb57942950} 
+Sprite\+Renderer Health.\+sprite\+Rend\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_health_ab15d2074557eb3928283a20ee8fdfae0}\index{Health@{Health}!startingHealth@{startingHealth}}
+\index{startingHealth@{startingHealth}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{startingHealth}{startingHealth}}
+{\footnotesize\ttfamily \label{class_health_ab15d2074557eb3928283a20ee8fdfae0} 
+float Health.\+starting\+Health\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Początkowa wartość zdrowia. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Health/\mbox{\hyperlink{_health_8cs}{Health.\+cs}}\end{DoxyCompactItemize}

@@ -1,18 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-/* Skrypt generuje dynamicznie sloty z listami w interfejsie ekwipunku.
-   - Usuwa stare sloty i tworzy nowe na podstawie aktualnie zebranych list.
-   - Ka¿dy slot zawiera ikonê listu oraz przypisany przycisk, który wyœwietla treœæ listu po klikniêciu.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class InventorySlotSpawner
+ * @brief Generuje dynamiczne sloty listów w UI ekwipunku.
+ *
+ * Usuwa stare sloty, tworzy nowe na podstawie zebranych listów
+ * oraz przypisuje odpowiednie przyciski do wyœwietlania ich zawartoœci.
+ *
+ * @author Julia Bigaj
+ */
 public class InventorySlotSpawner : MonoBehaviour
 {
+    /// @brief Prefab pojedynczego slotu listu.
     public GameObject slotPrefab;
+    /// @brief Rodzic (kontener) dla wygenerowanych slotów.
     public Transform slotsParent;
 
+    /**
+     * @brief Odœwie¿a wszystkie sloty z listami w interfejsie u¿ytkownika.
+     *
+     * Usuwa poprzednie sloty i generuje nowe na podstawie aktualnego stanu ekwipunku.
+     */
     public void RefreshSlots()
     {
         Debug.Log("Odœwie¿am sloty w ekwipunku!");

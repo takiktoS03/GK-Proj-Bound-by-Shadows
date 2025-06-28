@@ -1,0 +1,96 @@
+\doxysection{Dokumentacja klasy Ghost\+Follow}
+\hypertarget{class_ghost_follow}{}\label{class_ghost_follow}\index{GhostFollow@{GhostFollow}}
+
+
+Skrypt do płynnego śledzenia gracza przez duszka.  
+
+
+Diagram dziedziczenia dla Ghost\+Follow\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ghost_follow}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_ghost_follow_a105b08b2de5f9d1163cf5634422c8144}{player}}
+\begin{DoxyCompactList}\small\item\em Transform gracza do śledzenia. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_ghost_follow_ade33546ad08ed10679cecdc4d2f29f43}{offset}}
+\begin{DoxyCompactList}\small\item\em Względna pozycja duszka nad graczem. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_follow_a09bda88da44f6d54c07781153a664363}{smooth\+Speed}} = 2f
+\begin{DoxyCompactList}\small\item\em Prędkość płynnego podążania. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_follow_a426a9f96bb64c5388d2827fba81fee67}{float\+Amplitude}} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Amplituda \textquotesingle{}pływania\textquotesingle{} duszka. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ghost_follow_a3a493c11261c3b95dd6a4d0d02bf63af}{float\+Frequency}} = 1f
+\begin{DoxyCompactList}\small\item\em Częstotliwość pływania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Skrypt do płynnego śledzenia gracza przez duszka. 
+
+Obiekt przypisany do tego skryptu podąża za graczem, unosząc się nad nim i zmieniając kierunek w zależności od skali gracza. Dodaje także efekt sinusoidalnego \textquotesingle{}pływania\textquotesingle{} w osi Y.
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ghost_follow_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_ghost_follow_a426a9f96bb64c5388d2827fba81fee67}\index{GhostFollow@{GhostFollow}!floatAmplitude@{floatAmplitude}}
+\index{floatAmplitude@{floatAmplitude}!GhostFollow@{GhostFollow}}
+\doxysubsubsection{\texorpdfstring{floatAmplitude}{floatAmplitude}}
+{\footnotesize\ttfamily \label{class_ghost_follow_a426a9f96bb64c5388d2827fba81fee67} 
+float Ghost\+Follow.\+float\+Amplitude = 0.\+5f}
+
+
+
+Amplituda \textquotesingle{}pływania\textquotesingle{} duszka. 
+
+\Hypertarget{class_ghost_follow_a3a493c11261c3b95dd6a4d0d02bf63af}\index{GhostFollow@{GhostFollow}!floatFrequency@{floatFrequency}}
+\index{floatFrequency@{floatFrequency}!GhostFollow@{GhostFollow}}
+\doxysubsubsection{\texorpdfstring{floatFrequency}{floatFrequency}}
+{\footnotesize\ttfamily \label{class_ghost_follow_a3a493c11261c3b95dd6a4d0d02bf63af} 
+float Ghost\+Follow.\+float\+Frequency = 1f}
+
+
+
+Częstotliwość pływania. 
+
+\Hypertarget{class_ghost_follow_ade33546ad08ed10679cecdc4d2f29f43}\index{GhostFollow@{GhostFollow}!offset@{offset}}
+\index{offset@{offset}!GhostFollow@{GhostFollow}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \label{class_ghost_follow_ade33546ad08ed10679cecdc4d2f29f43} 
+Vector3 Ghost\+Follow.\+offset}
+
+
+
+Względna pozycja duszka nad graczem. 
+
+\Hypertarget{class_ghost_follow_a105b08b2de5f9d1163cf5634422c8144}\index{GhostFollow@{GhostFollow}!player@{player}}
+\index{player@{player}!GhostFollow@{GhostFollow}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{class_ghost_follow_a105b08b2de5f9d1163cf5634422c8144} 
+Transform Ghost\+Follow.\+player}
+
+
+
+Transform gracza do śledzenia. 
+
+\Hypertarget{class_ghost_follow_a09bda88da44f6d54c07781153a664363}\index{GhostFollow@{GhostFollow}!smoothSpeed@{smoothSpeed}}
+\index{smoothSpeed@{smoothSpeed}!GhostFollow@{GhostFollow}}
+\doxysubsubsection{\texorpdfstring{smoothSpeed}{smoothSpeed}}
+{\footnotesize\ttfamily \label{class_ghost_follow_a09bda88da44f6d54c07781153a664363} 
+float Ghost\+Follow.\+smooth\+Speed = 2f}
+
+
+
+Prędkość płynnego podążania. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Ghost/\mbox{\hyperlink{_ghost_follow_8cs}{Ghost\+Follow.\+cs}}\end{DoxyCompactItemize}

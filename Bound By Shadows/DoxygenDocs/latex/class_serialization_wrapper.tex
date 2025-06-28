@@ -1,0 +1,111 @@
+\doxysection{Dokumentacja klasy Serialization\+Wrapper}
+\hypertarget{class_serialization_wrapper}{}\label{class_serialization_wrapper}\index{SerializationWrapper@{SerializationWrapper}}
+
+
+Pomocnicza klasa do serializacji słownika {\ttfamily Dictionary\texorpdfstring{$<$}{<}string, object\texorpdfstring{$>$}{>}} w Unity.  
+
+
+Diagram dziedziczenia dla Serialization\+Wrapper\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_serialization_wrapper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_serialization_wrapper_a038ecc86a0dcdf4d1e218bd1f3151df4}{On\+Before\+Serialize}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana automatycznie przed serializacją. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serialization_wrapper_a3af0bb36e8f8d2cebf04ebae5852e6a8}{On\+After\+Deserialize}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana automatycznie po deserializacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_serialization_wrapper_a4544b971143f546237e5fd41927538ed}{keys}} = new List$<$string$>$()
+\begin{DoxyCompactList}\small\item\em Klucze (typów komponentów \doxylink{interface_i_saveable}{ISaveable}) jako listy stringów. \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_serialization_wrapper_ad73963c779cef2338279ea75b80b27da}{json\+Values}} = new List$<$string$>$()
+\begin{DoxyCompactList}\small\item\em Dane w postaci stringów (JSON) powiązane z każdym kluczem. \end{DoxyCompactList}\item 
+Dictionary$<$ string, object $>$ \mbox{\hyperlink{class_serialization_wrapper_a104b95bd1330b06003d71fe0dc7e984e}{data}} = new Dictionary$<$string, object$>$()
+\begin{DoxyCompactList}\small\item\em Faktyczne dane zmapowane przez typy komponentów jako string (key) i obiekt (value). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Pomocnicza klasa do serializacji słownika {\ttfamily Dictionary\texorpdfstring{$<$}{<}string, object\texorpdfstring{$>$}{>}} w Unity. 
+
+Unity nie obsługuje bezpośrednio serializacji słowników i typów ogólnych (generics), dlatego {\ttfamily \doxylink{class_serialization_wrapper}{Serialization\+Wrapper}} konwertuje dane do dwóch list\+: {\ttfamily keys} i {\ttfamily json\+Values}.
+
+Umożliwia bezpieczne zapisanie i odczytanie złożonych danych w systemie zapisu gry.
+
+Zawiera implementację interfejsu {\ttfamily ISerialization\+Callback\+Receiver} do obsługi procesów serializacji i deserializacji w edytorze i czasie działania.
+
+\begin{DoxySeeAlso}{Zobacz również}
+Save\+System
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_serialization_wrapper_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_serialization_wrapper_a3af0bb36e8f8d2cebf04ebae5852e6a8}\index{SerializationWrapper@{SerializationWrapper}!OnAfterDeserialize@{OnAfterDeserialize}}
+\index{OnAfterDeserialize@{OnAfterDeserialize}!SerializationWrapper@{SerializationWrapper}}
+\doxysubsubsection{\texorpdfstring{OnAfterDeserialize()}{OnAfterDeserialize()}}
+{\footnotesize\ttfamily \label{class_serialization_wrapper_a3af0bb36e8f8d2cebf04ebae5852e6a8} 
+void Serialization\+Wrapper.\+On\+After\+Deserialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda wywoływana automatycznie po deserializacji. 
+
+Odtwarza strukturę słownika z danych zawartych w {\ttfamily keys} i {\ttfamily json\+Values}. Wartości pozostają jako string (JSON) — konwersja do konkretnego typu musi być wykonana później ręcznie. \Hypertarget{class_serialization_wrapper_a038ecc86a0dcdf4d1e218bd1f3151df4}\index{SerializationWrapper@{SerializationWrapper}!OnBeforeSerialize@{OnBeforeSerialize}}
+\index{OnBeforeSerialize@{OnBeforeSerialize}!SerializationWrapper@{SerializationWrapper}}
+\doxysubsubsection{\texorpdfstring{OnBeforeSerialize()}{OnBeforeSerialize()}}
+{\footnotesize\ttfamily \label{class_serialization_wrapper_a038ecc86a0dcdf4d1e218bd1f3151df4} 
+void Serialization\+Wrapper.\+On\+Before\+Serialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda wywoływana automatycznie przed serializacją. 
+
+Przekształca dane z {\ttfamily Dictionary\texorpdfstring{$<$}{<}string, object\texorpdfstring{$>$}{>}} do dwóch list\+: {\ttfamily keys} i {\ttfamily json\+Values}, gdzie każdy obiekt serializowany jest jako JSON. 
+
+\label{doc-variable-members}
+\Hypertarget{class_serialization_wrapper_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_serialization_wrapper_a104b95bd1330b06003d71fe0dc7e984e}\index{SerializationWrapper@{SerializationWrapper}!data@{data}}
+\index{data@{data}!SerializationWrapper@{SerializationWrapper}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{class_serialization_wrapper_a104b95bd1330b06003d71fe0dc7e984e} 
+Dictionary$<$string, object$>$ Serialization\+Wrapper.\+data = new Dictionary$<$string, object$>$()}
+
+
+
+Faktyczne dane zmapowane przez typy komponentów jako string (key) i obiekt (value). 
+
+To pole jest oznaczone jako \mbox{[}Non\+Serialized\mbox{]} i uzupełniane podczas {\ttfamily On\+After\+Deserialize}. \Hypertarget{class_serialization_wrapper_ad73963c779cef2338279ea75b80b27da}\index{SerializationWrapper@{SerializationWrapper}!jsonValues@{jsonValues}}
+\index{jsonValues@{jsonValues}!SerializationWrapper@{SerializationWrapper}}
+\doxysubsubsection{\texorpdfstring{jsonValues}{jsonValues}}
+{\footnotesize\ttfamily \label{class_serialization_wrapper_ad73963c779cef2338279ea75b80b27da} 
+List$<$string$>$ Serialization\+Wrapper.\+json\+Values = new List$<$string$>$()}
+
+
+
+Dane w postaci stringów (JSON) powiązane z każdym kluczem. 
+
+\Hypertarget{class_serialization_wrapper_a4544b971143f546237e5fd41927538ed}\index{SerializationWrapper@{SerializationWrapper}!keys@{keys}}
+\index{keys@{keys}!SerializationWrapper@{SerializationWrapper}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily \label{class_serialization_wrapper_a4544b971143f546237e5fd41927538ed} 
+List$<$string$>$ Serialization\+Wrapper.\+keys = new List$<$string$>$()}
+
+
+
+Klucze (typów komponentów \doxylink{interface_i_saveable}{ISaveable}) jako listy stringów. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Save/\mbox{\hyperlink{_serialization_wrapper_8cs}{Serialization\+Wrapper.\+cs}}\end{DoxyCompactItemize}

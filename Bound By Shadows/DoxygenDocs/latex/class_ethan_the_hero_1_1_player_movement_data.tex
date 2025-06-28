@@ -1,0 +1,259 @@
+\doxysection{Dokumentacja klasy Ethan\+The\+Hero.\+Player\+Movement\+Data}
+\hypertarget{class_ethan_the_hero_1_1_player_movement_data}{}\label{class_ethan_the_hero_1_1_player_movement_data}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+
+
+Scriptable\+Object przechowujący dane konfiguracyjne ruchu gracza.  
+
+
+Diagram dziedziczenia dla Ethan\+The\+Hero.\+Player\+Movement\+Data\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ethan_the_hero_1_1_player_movement_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a89f5661fd40a1086bca01a00b558792f}{run\+Max\+Speed}}
+\begin{DoxyCompactList}\small\item\em Docelowa maksymalna prędkość biegu gracza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a0ccf51a055c44f46000a0fa3a86990f0}{run\+Acceleration}}
+\begin{DoxyCompactList}\small\item\em Czas, po którym gracz powinien osiągnąć prędkość maksymalną (z pozycji spoczynkowej). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a612f13245640df3001ab679a3ad836a3}{run\+Accel\+Amount}}
+\begin{DoxyCompactList}\small\item\em Obliczona siła przyspieszenia (na podstawie {\ttfamily run\+Acceleration}). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a4dea9fa171cb6c4249aaf74dc73b07cd}{run\+Decceleration}}
+\begin{DoxyCompactList}\small\item\em Czas potrzebny do wytracenia prędkości (zatrzymania). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a6a6153e684d89e5dc3276f823993436c}{run\+Deccel\+Amount}}
+\begin{DoxyCompactList}\small\item\em Obliczona siła wytracenia prędkości (na podstawie {\ttfamily run\+Decceleration}). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_ab470df4d4105f3d9cced8728b5c3e5bc}{accel\+In\+Air}}
+\begin{DoxyCompactList}\small\item\em Mnożnik przyspieszenia w powietrzu. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_aa2f09df535bbe25fb66305bc2593d63c}{deccel\+In\+Air}}
+\begin{DoxyCompactList}\small\item\em Mnożnik wytracenia prędkości w powietrzu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a1966d7b276bd11cefd17793682a74d06}{do\+Conserve\+Momentum}}
+\begin{DoxyCompactList}\small\item\em Czy gracz ma zachowywać pęd przy nagłych zmianach kierunku. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a0175e37538cdd77df9258320713023c0}{jump\+Height}}
+\begin{DoxyCompactList}\small\item\em Wysokość skoku gracza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_aeb18931c297d670a44fba1c866f499f0}{dash\+Power}} = 30f
+\begin{DoxyCompactList}\small\item\em Siła dasza (poziomy impuls). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a85d73617c58482797770ed36ee2ab391}{dashing\+Cool\+Down}} = 1f
+\begin{DoxyCompactList}\small\item\em Czas oczekiwania na ponowne użycie dasza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a2ae5eede8fa961c691ad7991da571fa8}{dashing\+Time}} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em Czas trwania dasza. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a5278dd920c829b5d1408df05d6dc8ed3}{dash\+Cost}} = 20f
+\begin{DoxyCompactList}\small\item\em Koszt dasza w punktach staminy. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a5cac57bbacfa3277f67c452658229246}{wall\+Distance}} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em Odległość od ściany, przy której wykrywana jest możliwość zsuwania się. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_af0b598792bc6c4041a88a86906fb5188}{wall\+Jump\+Time}} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em Czas okna wejścia w wall jump. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a536e6a48c06d480ab87b1ac4dd6bf267}{wall\+Slide\+Speed}} = 0.\+3f
+\begin{DoxyCompactList}\small\item\em Maksymalna prędkość zsuwania się po ścianie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a4093dcabc2ae23466e0e1927d5790e99}{wall\+Jumping\+YPower}} = 6.\+5f
+\begin{DoxyCompactList}\small\item\em Siła skoku w pionie przy wall jumpie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_a4659245587ee6078e2dd2085a4e775b7}{wall\+Jumping\+XPower}} = 5f
+\begin{DoxyCompactList}\small\item\em Siła skoku w poziomie przy wall jumpie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_data_afdc37222ae45a5f1a73fe3ff10b51288}{Wall\+Jump\+Time\+In\+Second}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Czas trwania animacji/efektu wall jumpa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Scriptable\+Object przechowujący dane konfiguracyjne ruchu gracza. 
+
+Zawiera ustawienia prędkości biegu, przyspieszenia, skoku, daszu oraz interakcji ze ścianami. Obliczenia siły przyspieszenia i wytracania prędkości wykonywane są automatycznie w metodzie {\ttfamily On\+Validate()}. Umożliwia łatwe dostosowanie balansu postaci bez modyfikacji kodu. 
+
+\label{doc-variable-members}
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_ab470df4d4105f3d9cced8728b5c3e5bc}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!accelInAir@{accelInAir}}
+\index{accelInAir@{accelInAir}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{accelInAir}{accelInAir}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_ab470df4d4105f3d9cced8728b5c3e5bc} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+accel\+In\+Air}
+
+
+
+Mnożnik przyspieszenia w powietrzu. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a5278dd920c829b5d1408df05d6dc8ed3}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!dashCost@{dashCost}}
+\index{dashCost@{dashCost}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{dashCost}{dashCost}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a5278dd920c829b5d1408df05d6dc8ed3} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+dash\+Cost = 20f}
+
+
+
+Koszt dasza w punktach staminy. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a85d73617c58482797770ed36ee2ab391}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!dashingCoolDown@{dashingCoolDown}}
+\index{dashingCoolDown@{dashingCoolDown}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{dashingCoolDown}{dashingCoolDown}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a85d73617c58482797770ed36ee2ab391} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+dashing\+Cool\+Down = 1f}
+
+
+
+Czas oczekiwania na ponowne użycie dasza. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a2ae5eede8fa961c691ad7991da571fa8}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!dashingTime@{dashingTime}}
+\index{dashingTime@{dashingTime}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{dashingTime}{dashingTime}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a2ae5eede8fa961c691ad7991da571fa8} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+dashing\+Time = 0.\+2f}
+
+
+
+Czas trwania dasza. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_aeb18931c297d670a44fba1c866f499f0}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!dashPower@{dashPower}}
+\index{dashPower@{dashPower}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{dashPower}{dashPower}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_aeb18931c297d670a44fba1c866f499f0} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+dash\+Power = 30f}
+
+
+
+Siła dasza (poziomy impuls). 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_aa2f09df535bbe25fb66305bc2593d63c}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!deccelInAir@{deccelInAir}}
+\index{deccelInAir@{deccelInAir}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{deccelInAir}{deccelInAir}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_aa2f09df535bbe25fb66305bc2593d63c} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+deccel\+In\+Air}
+
+
+
+Mnożnik wytracenia prędkości w powietrzu. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a1966d7b276bd11cefd17793682a74d06}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!doConserveMomentum@{doConserveMomentum}}
+\index{doConserveMomentum@{doConserveMomentum}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{doConserveMomentum}{doConserveMomentum}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a1966d7b276bd11cefd17793682a74d06} 
+bool Ethan\+The\+Hero.\+Player\+Movement\+Data.\+do\+Conserve\+Momentum}
+
+
+
+Czy gracz ma zachowywać pęd przy nagłych zmianach kierunku. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a0175e37538cdd77df9258320713023c0}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!jumpHeight@{jumpHeight}}
+\index{jumpHeight@{jumpHeight}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{jumpHeight}{jumpHeight}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a0175e37538cdd77df9258320713023c0} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+jump\+Height}
+
+
+
+Wysokość skoku gracza. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a612f13245640df3001ab679a3ad836a3}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!runAccelAmount@{runAccelAmount}}
+\index{runAccelAmount@{runAccelAmount}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{runAccelAmount}{runAccelAmount}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a612f13245640df3001ab679a3ad836a3} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+run\+Accel\+Amount}
+
+
+
+Obliczona siła przyspieszenia (na podstawie {\ttfamily run\+Acceleration}). 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a0ccf51a055c44f46000a0fa3a86990f0}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!runAcceleration@{runAcceleration}}
+\index{runAcceleration@{runAcceleration}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{runAcceleration}{runAcceleration}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a0ccf51a055c44f46000a0fa3a86990f0} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+run\+Acceleration}
+
+
+
+Czas, po którym gracz powinien osiągnąć prędkość maksymalną (z pozycji spoczynkowej). 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a6a6153e684d89e5dc3276f823993436c}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!runDeccelAmount@{runDeccelAmount}}
+\index{runDeccelAmount@{runDeccelAmount}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{runDeccelAmount}{runDeccelAmount}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a6a6153e684d89e5dc3276f823993436c} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+run\+Deccel\+Amount}
+
+
+
+Obliczona siła wytracenia prędkości (na podstawie {\ttfamily run\+Decceleration}). 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a4dea9fa171cb6c4249aaf74dc73b07cd}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!runDecceleration@{runDecceleration}}
+\index{runDecceleration@{runDecceleration}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{runDecceleration}{runDecceleration}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a4dea9fa171cb6c4249aaf74dc73b07cd} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+run\+Decceleration}
+
+
+
+Czas potrzebny do wytracenia prędkości (zatrzymania). 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a89f5661fd40a1086bca01a00b558792f}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!runMaxSpeed@{runMaxSpeed}}
+\index{runMaxSpeed@{runMaxSpeed}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{runMaxSpeed}{runMaxSpeed}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a89f5661fd40a1086bca01a00b558792f} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+run\+Max\+Speed}
+
+
+
+Docelowa maksymalna prędkość biegu gracza. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a5cac57bbacfa3277f67c452658229246}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!wallDistance@{wallDistance}}
+\index{wallDistance@{wallDistance}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{wallDistance}{wallDistance}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a5cac57bbacfa3277f67c452658229246} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+wall\+Distance = 0.\+05f}
+
+
+
+Odległość od ściany, przy której wykrywana jest możliwość zsuwania się. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a4659245587ee6078e2dd2085a4e775b7}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!wallJumpingXPower@{wallJumpingXPower}}
+\index{wallJumpingXPower@{wallJumpingXPower}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{wallJumpingXPower}{wallJumpingXPower}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a4659245587ee6078e2dd2085a4e775b7} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+wall\+Jumping\+XPower = 5f}
+
+
+
+Siła skoku w poziomie przy wall jumpie. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a4093dcabc2ae23466e0e1927d5790e99}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!wallJumpingYPower@{wallJumpingYPower}}
+\index{wallJumpingYPower@{wallJumpingYPower}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{wallJumpingYPower}{wallJumpingYPower}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a4093dcabc2ae23466e0e1927d5790e99} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+wall\+Jumping\+YPower = 6.\+5f}
+
+
+
+Siła skoku w pionie przy wall jumpie. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_af0b598792bc6c4041a88a86906fb5188}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!wallJumpTime@{wallJumpTime}}
+\index{wallJumpTime@{wallJumpTime}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{wallJumpTime}{wallJumpTime}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_af0b598792bc6c4041a88a86906fb5188} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+wall\+Jump\+Time = 0.\+2f}
+
+
+
+Czas okna wejścia w wall jump. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_afdc37222ae45a5f1a73fe3ff10b51288}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!WallJumpTimeInSecond@{WallJumpTimeInSecond}}
+\index{WallJumpTimeInSecond@{WallJumpTimeInSecond}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{WallJumpTimeInSecond}{WallJumpTimeInSecond}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_afdc37222ae45a5f1a73fe3ff10b51288} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+Wall\+Jump\+Time\+In\+Second = 0.\+1f}
+
+
+
+Czas trwania animacji/efektu wall jumpa. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_data_a536e6a48c06d480ab87b1ac4dd6bf267}\index{EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}!wallSlideSpeed@{wallSlideSpeed}}
+\index{wallSlideSpeed@{wallSlideSpeed}!EthanTheHero.PlayerMovementData@{EthanTheHero.PlayerMovementData}}
+\doxysubsubsection{\texorpdfstring{wallSlideSpeed}{wallSlideSpeed}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_data_a536e6a48c06d480ab87b1ac4dd6bf267} 
+float Ethan\+The\+Hero.\+Player\+Movement\+Data.\+wall\+Slide\+Speed = 0.\+3f}
+
+
+
+Maksymalna prędkość zsuwania się po ścianie. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Player/\+Player\+Movement/\mbox{\hyperlink{_player_movement_data_8cs}{Player\+Movement\+Data.\+cs}}\end{DoxyCompactItemize}

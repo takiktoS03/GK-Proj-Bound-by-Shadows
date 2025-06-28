@@ -1,0 +1,110 @@
+\doxysection{Dokumentacja klasy Chest\+Panel\+Manager}
+\hypertarget{class_chest_panel_manager}{}\label{class_chest_panel_manager}\index{ChestPanelManager@{ChestPanelManager}}
+
+
+Globalny mened¿er odpowiedzialny za stan panelu skrzyni.  
+
+
+Diagram dziedziczenia dla Chest\+Panel\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_chest_panel_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_chest_panel_manager_a2f68880568cfc5842c92a461f8d35261}{Is\+Chest\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy skrzynia jest aktualnie otwarta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_chest_panel_manager_a2e17c4310818490b81da23de6d1b3138}{Close\+Chest}} ()
+\begin{DoxyCompactList}\small\item\em Zamyka skrzyniê i jej panel z poziomu zewnêtrznych systemów (np. menu pauzy). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_chest_panel_manager_ae2ddda4d4504e0f02d303fc1c20504f6}{chest\+Panel}}
+\begin{DoxyCompactList}\small\item\em Referencja do panelu skrzyni w UI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_chest_controller}{Chest\+Controller}} \mbox{\hyperlink{class_chest_panel_manager_a1f51454b6764c85c8a60318bac684b84}{chest\+Controller}}
+\begin{DoxyCompactList}\small\item\em Referencja do skryptu kontroluj¹cego logikê skrzyni. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_chest_panel_manager}{Chest\+Panel\+Manager}} \mbox{\hyperlink{class_chest_panel_manager_a7458c8ee5aed66d93abd65cf8188867a}{Instance}}
+\begin{DoxyCompactList}\small\item\em Statyczna instancja singletonu \doxylink{class_chest_panel_manager}{Chest\+Panel\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Globalny mened¿er odpowiedzialny za stan panelu skrzyni. 
+
+Umo¿liwia sprawdzenie, czy skrzynia jest aktualnie otwarta, oraz jej zamkniêcie z zewnêtrznych skryptów (np. z menu pauzy). Implementuje wzorzec singletonu do globalnego dostêpu.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_chest_panel_manager_doc-func-members}
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{class_chest_panel_manager_a2e17c4310818490b81da23de6d1b3138}\index{ChestPanelManager@{ChestPanelManager}!CloseChest@{CloseChest}}
+\index{CloseChest@{CloseChest}!ChestPanelManager@{ChestPanelManager}}
+\doxysubsubsection{\texorpdfstring{CloseChest()}{CloseChest()}}
+{\footnotesize\ttfamily \label{class_chest_panel_manager_a2e17c4310818490b81da23de6d1b3138} 
+void Chest\+Panel\+Manager.\+Close\+Chest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zamyka skrzyniê i jej panel z poziomu zewnêtrznych systemów (np. menu pauzy). 
+
+\Hypertarget{class_chest_panel_manager_a2f68880568cfc5842c92a461f8d35261}\index{ChestPanelManager@{ChestPanelManager}!IsChestOpen@{IsChestOpen}}
+\index{IsChestOpen@{IsChestOpen}!ChestPanelManager@{ChestPanelManager}}
+\doxysubsubsection{\texorpdfstring{IsChestOpen()}{IsChestOpen()}}
+{\footnotesize\ttfamily \label{class_chest_panel_manager_a2f68880568cfc5842c92a461f8d35261} 
+bool Chest\+Panel\+Manager.\+Is\+Chest\+Open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sprawdza, czy skrzynia jest aktualnie otwarta. 
+
+\begin{DoxyReturn}{Zwraca}
+{\ttfamily true} jeœli panel skrzyni jest aktywny, w przeciwnym razie {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_chest_panel_manager_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_chest_panel_manager_a1f51454b6764c85c8a60318bac684b84}\index{ChestPanelManager@{ChestPanelManager}!chestController@{chestController}}
+\index{chestController@{chestController}!ChestPanelManager@{ChestPanelManager}}
+\doxysubsubsection{\texorpdfstring{chestController}{chestController}}
+{\footnotesize\ttfamily \label{class_chest_panel_manager_a1f51454b6764c85c8a60318bac684b84} 
+\mbox{\hyperlink{class_chest_controller}{Chest\+Controller}} Chest\+Panel\+Manager.\+chest\+Controller}
+
+
+
+Referencja do skryptu kontroluj¹cego logikê skrzyni. 
+
+\Hypertarget{class_chest_panel_manager_ae2ddda4d4504e0f02d303fc1c20504f6}\index{ChestPanelManager@{ChestPanelManager}!chestPanel@{chestPanel}}
+\index{chestPanel@{chestPanel}!ChestPanelManager@{ChestPanelManager}}
+\doxysubsubsection{\texorpdfstring{chestPanel}{chestPanel}}
+{\footnotesize\ttfamily \label{class_chest_panel_manager_ae2ddda4d4504e0f02d303fc1c20504f6} 
+Game\+Object Chest\+Panel\+Manager.\+chest\+Panel}
+
+
+
+Referencja do panelu skrzyni w UI. 
+
+\Hypertarget{class_chest_panel_manager_a7458c8ee5aed66d93abd65cf8188867a}\index{ChestPanelManager@{ChestPanelManager}!Instance@{Instance}}
+\index{Instance@{Instance}!ChestPanelManager@{ChestPanelManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_chest_panel_manager_a7458c8ee5aed66d93abd65cf8188867a} 
+\mbox{\hyperlink{class_chest_panel_manager}{Chest\+Panel\+Manager}} Chest\+Panel\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Statyczna instancja singletonu \doxylink{class_chest_panel_manager}{Chest\+Panel\+Manager}. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Menu HUDs/\mbox{\hyperlink{_chest_panel_manager_8cs}{Chest\+Panel\+Manager.\+cs}}\end{DoxyCompactItemize}

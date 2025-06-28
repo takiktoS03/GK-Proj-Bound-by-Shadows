@@ -1,0 +1,72 @@
+\doxysection{Dokumentacja klasy Main\+Menu}
+\hypertarget{class_main_menu}{}\label{class_main_menu}\index{MainMenu@{MainMenu}}
+
+
+Obs³uguje przyciski menu g³ównego\+: rozpoczêcie gry, wczytanie stanu i wyjœcie.  
+
+
+Diagram dziedziczenia dla Main\+Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_menu_a3143c8f0ab3fa85c921df38ab3a4d429}{Start\+New\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Rozpoczyna now¹ grê, ³aduj¹c scenê wprowadzaj¹c¹. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_a5e5cf3c9a40d8c3af4a7afb06a4a3f89}{Load\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Wczytuje grê i ustawia callback na zakoñczenie ³adowania sceny. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_menu_a485db7cf60c0b93ecc87b9273bcce78b}{Quit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Zamyka aplikacjê. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Obs³uguje przyciski menu g³ównego\+: rozpoczêcie gry, wczytanie stanu i wyjœcie. 
+
+Klasa odpowiada za przechodzenie do odpowiednich scen oraz inicjalizacjê systemu zapisu podczas wczytywania gry. Umo¿liwia równie¿ zakoñczenie dzia³ania aplikacji.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_main_menu_doc-func-members}
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{class_main_menu_a5e5cf3c9a40d8c3af4a7afb06a4a3f89}\index{MainMenu@{MainMenu}!LoadGame@{LoadGame}}
+\index{LoadGame@{LoadGame}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{LoadGame()}{LoadGame()}}
+{\footnotesize\ttfamily \label{class_main_menu_a5e5cf3c9a40d8c3af4a7afb06a4a3f89} 
+void Main\+Menu.\+Load\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wczytuje grê i ustawia callback na zakoñczenie ³adowania sceny. 
+
+Po za³adowaniu sceny {\ttfamily "{}\+Level 1 -\/ Cave"{}} nastêpuje automatyczne wywo³anie systemu zapisu. \Hypertarget{class_main_menu_a485db7cf60c0b93ecc87b9273bcce78b}\index{MainMenu@{MainMenu}!QuitGame@{QuitGame}}
+\index{QuitGame@{QuitGame}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{QuitGame()}{QuitGame()}}
+{\footnotesize\ttfamily \label{class_main_menu_a485db7cf60c0b93ecc87b9273bcce78b} 
+void Main\+Menu.\+Quit\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zamyka aplikacjê. 
+
+Wywo³uje {\ttfamily Application.\+Quit()} i wypisuje debug log. \Hypertarget{class_main_menu_a3143c8f0ab3fa85c921df38ab3a4d429}\index{MainMenu@{MainMenu}!StartNewGame@{StartNewGame}}
+\index{StartNewGame@{StartNewGame}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{StartNewGame()}{StartNewGame()}}
+{\footnotesize\ttfamily \label{class_main_menu_a3143c8f0ab3fa85c921df38ab3a4d429} 
+void Main\+Menu.\+Start\+New\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpoczyna now¹ grê, ³aduj¹c scenê wprowadzaj¹c¹. 
+
+Zamiast poziomu g³ównego ³adowana jest scena {\ttfamily "{}\+Intro"{}}. 
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Menu HUDs/\mbox{\hyperlink{_main_menu_8cs}{Main\+Menu.\+cs}}\end{DoxyCompactItemize}

@@ -1,18 +1,24 @@
-//using System.Diagnostics;
 using UnityEngine;
 
-/* Ten skrypt zarz¹dza dzia³aniem dŸwigni aktywowanej przez gracza.
-   - Gdy gracz znajduje siê w zasiêgu i naciœnie "F", dŸwignia zmienia swój stan (on/off) i uruchamia odpowiedni¹ animacjê.
-   - Informacja o stanie dŸwigni jest przechowywana w zmiennej `leverIsOn`.
-   - W przysz³oœci funkcja `CheckRiddle()` mo¿e byæ wywo³ywana do sprawdzania poprawnoœci zagadki logicznej (LeverRiddle).
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class LeafRevealer
+ * @brief Ods³ania ukryt¹ lokalizacjê, gdy gracz wejdzie w obszar kolizji z liœæmi.
+ *
+ * Skrypt przypisany do obiektu z liœæmi. Gdy gracz wejdzie w trigger,
+ * zostaje aktywowany wskazany obiekt `hiddenLocation` (np. ukryte przejœcie).
+ * Mo¿e byæ czêœci¹ zagadki logicznej lub ukrytego obszaru w grze.
+ *
+ * @author Julia Bigaj
+ */
 public class LeafRevealer : MonoBehaviour
 {
+    /// @brief Obiekt, który zostanie ujawniony po wejœciu gracza w trigger (np. ukryta œcie¿ka).
     public GameObject hiddenLocation;
 
+    /**
+     * @brief Wykrywany jest gracz wchodz¹cy w trigger — ujawnienie ukrytej lokalizacji.
+     * @param other Obiekt koliduj¹cy (np. gracz).
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

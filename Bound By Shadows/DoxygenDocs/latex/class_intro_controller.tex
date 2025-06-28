@@ -1,0 +1,110 @@
+\doxysection{Dokumentacja klasy Intro\+Controller}
+\hypertarget{class_intro_controller}{}\label{class_intro_controller}\index{IntroController@{IntroController}}
+
+
+Odpowiada za odtwarzanie sekwencji wprowadzenia do gry (intro).  
+
+
+Diagram dziedziczenia dla Intro\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_intro_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_intro_controller_ab4a0e5f50b2e652f6c31f624a3285fef}{image1}}
+\begin{DoxyCompactList}\small\item\em Obraz nr 1 wyœwietlany na pocz¹tku sekwencji. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_intro_controller_ae5401aa654d6bd241836f18a1ed9f903}{image3}}
+\begin{DoxyCompactList}\small\item\em Obraz nr 3 wyœwietlany w dalszej czêœci sekwencji. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_intro_controller_a14b500bb14ccd6f11690ee9ebd0cd5bd}{image4}}
+\begin{DoxyCompactList}\small\item\em Obraz nr 4 wyœwietlany w dalszej czêœci sekwencji. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_intro_controller_a0a728e011f91a3dbdeda76fb07c18491}{image5}}
+\begin{DoxyCompactList}\small\item\em Obraz nr 5 – koñcowy, na którym wykonywany jest efekt zoom i fade out. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_intro_controller_a1bc5a7645029830bce162bffbca6d298}{zoom\+Duration}} = 8f
+\begin{DoxyCompactList}\small\item\em Czas trwania efektu zoom. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_intro_controller_a4d829106f12d2510452cc1f441f973c7}{zoom\+Scale}} = 1.\+3f
+\begin{DoxyCompactList}\small\item\em Wspó³czynnik przybli¿enia koñcowego obrazu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Odpowiada za odtwarzanie sekwencji wprowadzenia do gry (intro). 
+
+Skrypt pokazuje kolejne obrazy, odtwarza narracjê i dŸwiêki za pomoc¹ {\ttfamily \doxylink{class_music_manager}{Music\+Manager}}, a na koñcu wykonuje efekt przybli¿enia i zanikania ostatniego obrazu, po czym ³aduje scenê {\ttfamily "{}\+Level 1 -\/ Cave"{}}.
+
+Przeznaczony do u¿ycia wy³¹cznie w scenie {\ttfamily "{}\+Intro"{}}.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_intro_controller_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_intro_controller_ab4a0e5f50b2e652f6c31f624a3285fef}\index{IntroController@{IntroController}!image1@{image1}}
+\index{image1@{image1}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{image1}{image1}}
+{\footnotesize\ttfamily \label{class_intro_controller_ab4a0e5f50b2e652f6c31f624a3285fef} 
+Game\+Object Intro\+Controller.\+image1}
+
+
+
+Obraz nr 1 wyœwietlany na pocz¹tku sekwencji. 
+
+\Hypertarget{class_intro_controller_ae5401aa654d6bd241836f18a1ed9f903}\index{IntroController@{IntroController}!image3@{image3}}
+\index{image3@{image3}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{image3}{image3}}
+{\footnotesize\ttfamily \label{class_intro_controller_ae5401aa654d6bd241836f18a1ed9f903} 
+Game\+Object Intro\+Controller.\+image3}
+
+
+
+Obraz nr 3 wyœwietlany w dalszej czêœci sekwencji. 
+
+\Hypertarget{class_intro_controller_a14b500bb14ccd6f11690ee9ebd0cd5bd}\index{IntroController@{IntroController}!image4@{image4}}
+\index{image4@{image4}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{image4}{image4}}
+{\footnotesize\ttfamily \label{class_intro_controller_a14b500bb14ccd6f11690ee9ebd0cd5bd} 
+Game\+Object Intro\+Controller.\+image4}
+
+
+
+Obraz nr 4 wyœwietlany w dalszej czêœci sekwencji. 
+
+\Hypertarget{class_intro_controller_a0a728e011f91a3dbdeda76fb07c18491}\index{IntroController@{IntroController}!image5@{image5}}
+\index{image5@{image5}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{image5}{image5}}
+{\footnotesize\ttfamily \label{class_intro_controller_a0a728e011f91a3dbdeda76fb07c18491} 
+Game\+Object Intro\+Controller.\+image5}
+
+
+
+Obraz nr 5 – koñcowy, na którym wykonywany jest efekt zoom i fade out. 
+
+\Hypertarget{class_intro_controller_a1bc5a7645029830bce162bffbca6d298}\index{IntroController@{IntroController}!zoomDuration@{zoomDuration}}
+\index{zoomDuration@{zoomDuration}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{zoomDuration}{zoomDuration}}
+{\footnotesize\ttfamily \label{class_intro_controller_a1bc5a7645029830bce162bffbca6d298} 
+float Intro\+Controller.\+zoom\+Duration = 8f}
+
+
+
+Czas trwania efektu zoom. 
+
+\Hypertarget{class_intro_controller_a4d829106f12d2510452cc1f441f973c7}\index{IntroController@{IntroController}!zoomScale@{zoomScale}}
+\index{zoomScale@{zoomScale}!IntroController@{IntroController}}
+\doxysubsubsection{\texorpdfstring{zoomScale}{zoomScale}}
+{\footnotesize\ttfamily \label{class_intro_controller_a4d829106f12d2510452cc1f441f973c7} 
+float Intro\+Controller.\+zoom\+Scale = 1.\+3f}
+
+
+
+Wspó³czynnik przybli¿enia koñcowego obrazu. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Music\&\+Sound/\mbox{\hyperlink{_intro_controller_8cs}{Intro\+Controller.\+cs}}\end{DoxyCompactItemize}

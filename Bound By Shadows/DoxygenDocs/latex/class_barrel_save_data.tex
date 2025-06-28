@@ -1,0 +1,98 @@
+\doxysection{Dokumentacja klasy Barrel\+Save\+Data}
+\hypertarget{class_barrel_save_data}{}\label{class_barrel_save_data}\index{BarrelSaveData@{BarrelSaveData}}
+
+
+Odpowiada za trwałe przechowywanie informacji o zniszczonych beczkach między sesjami gry.  
+
+
+Diagram dziedziczenia dla Barrel\+Save\+Data\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_barrel_save_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_barrel_save_data_aa1d820712d092abfb69bf41ff7438689}{Capture\+State}} ()
+\begin{DoxyCompactList}\small\item\em Zapisuje listę zniszczonych beczek. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_barrel_save_data_ac0a92c08749570c32f8481075c49e82d}{Restore\+State}} (object state)
+\begin{DoxyCompactList}\small\item\em Przywraca stan listy zniszczonych beczek. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_barrel_save_data_af9ab2e1dd62aaeca611f6fe763de9c4c}{Register\+Destroyed\+Barrel}} (string unique\+Id)
+\begin{DoxyCompactList}\small\item\em Rejestruje beczkę jako zniszczoną w pamięci podręcznej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Odpowiada za trwałe przechowywanie informacji o zniszczonych beczkach między sesjami gry. 
+
+Implementuje interfejs {\ttfamily \doxylink{interface_i_saveable}{ISaveable}} do integracji z globalnym systemem zapisu stanu gry. Przechowuje unikalne identyfikatory ({\ttfamily Unique\+Id}) zniszczonych beczek i usuwa je z sceny podczas wczytywania.
+
+Beczki powinny mieć komponent {\ttfamily \doxylink{class_saveable_object}{Saveable\+Object}} z przypisanym {\ttfamily Unique\+Id}.
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_barrel_save_data_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_barrel_save_data_aa1d820712d092abfb69bf41ff7438689}\index{BarrelSaveData@{BarrelSaveData}!CaptureState@{CaptureState}}
+\index{CaptureState@{CaptureState}!BarrelSaveData@{BarrelSaveData}}
+\doxysubsubsection{\texorpdfstring{CaptureState()}{CaptureState()}}
+{\footnotesize\ttfamily \label{class_barrel_save_data_aa1d820712d092abfb69bf41ff7438689} 
+object Barrel\+Save\+Data.\+Capture\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zapisuje listę zniszczonych beczek. 
+
+\begin{DoxyReturn}{Zwraca}
+Obiekt zawierający listę identyfikatorów zniszczonych beczek. 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{interface_i_saveable_ae7ab551de69147cdec8a503c2774c9af}{ISaveable}}.
+
+\Hypertarget{class_barrel_save_data_af9ab2e1dd62aaeca611f6fe763de9c4c}\index{BarrelSaveData@{BarrelSaveData}!RegisterDestroyedBarrel@{RegisterDestroyedBarrel}}
+\index{RegisterDestroyedBarrel@{RegisterDestroyedBarrel}!BarrelSaveData@{BarrelSaveData}}
+\doxysubsubsection{\texorpdfstring{RegisterDestroyedBarrel()}{RegisterDestroyedBarrel()}}
+{\footnotesize\ttfamily \label{class_barrel_save_data_af9ab2e1dd62aaeca611f6fe763de9c4c} 
+void Barrel\+Save\+Data.\+Register\+Destroyed\+Barrel (\begin{DoxyParamCaption}\item[{string}]{unique\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Rejestruje beczkę jako zniszczoną w pamięci podręcznej. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em unique\+Id} & Unikalny identyfikator obiektu beczki. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_barrel_save_data_ac0a92c08749570c32f8481075c49e82d}\index{BarrelSaveData@{BarrelSaveData}!RestoreState@{RestoreState}}
+\index{RestoreState@{RestoreState}!BarrelSaveData@{BarrelSaveData}}
+\doxysubsubsection{\texorpdfstring{RestoreState()}{RestoreState()}}
+{\footnotesize\ttfamily \label{class_barrel_save_data_ac0a92c08749570c32f8481075c49e82d} 
+void Barrel\+Save\+Data.\+Restore\+State (\begin{DoxyParamCaption}\item[{object}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przywraca stan listy zniszczonych beczek. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em state} & Obiekt zawierający listę identyfikatorów z poprzedniego zapisu. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{interface_i_saveable_afb40b786ddcfcc1f7909601444f0faa9}{ISaveable}}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Save/\mbox{\hyperlink{_barrel_sava_data_8cs}{Barrel\+Sava\+Data.\+cs}}\end{DoxyCompactItemize}
