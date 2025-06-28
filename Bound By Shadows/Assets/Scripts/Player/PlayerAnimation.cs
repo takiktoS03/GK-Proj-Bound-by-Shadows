@@ -4,14 +4,25 @@ using UnityEngine;
 
 namespace EthanTheHero
 {
+    /**
+     * @class PlayerAnimation
+     * @brief Steruje animacjami gracza na podstawie jego stanu ruchu i fizyki.
+     *
+     * Komunikuje się z komponentem Animator, by dynamicznie ustawiać animacje biegu, skoku, dasza,
+     * zsuwania się po ścianie i innych zachowań. Pobiera dane z klas `PlayerMovement`, `Rigidbody2D` i `PlayerAttackMethod`.
+     *
+     * Obsługuje również logikę sprawdzania zakończenia animacji przejścia oraz może być rozszerzony o animacje obrażeń i śmierci.
+     */
     public class PlayerAnimation : MonoBehaviour
     {
         #region FIELD
+
         private PlayerMovement playerMv;
         private Animator myAnim;
         private Rigidbody2D myBody;
         private PlayerAttackMethod playerAtt;
 
+        // Nazwy parametrów animacji
         private const string speed = "Speed";
         private const string runIdle = "RunIdlePlayying";
         private const string jump = "Grounded";
@@ -24,10 +35,14 @@ namespace EthanTheHero
         private const string death = "Death";
         private const string deathEnded = "DeathEnded";
 
+        /// @brief Czy animacja przejścia Run→Idle jest obecnie odtwarzana.
         private bool runIdleIsPlayying;
 
         #endregion
 
+        /**
+         * @brief Inicjalizacja referencji do komponentów.
+         */
         void Awake()
         {
             playerMv = GetComponent<PlayerMovement>();
@@ -36,13 +51,17 @@ namespace EthanTheHero
             playerAtt = GetComponent<PlayerAttackMethod>();
         }
 
+        /**
+         * @brief Ustawia odpowiednie parametry animatora na podstawie aktualnego stanu gracza.
+         */
         void Update()
         {
             #region IDLE & RUN
 
+            // Ustaw animację biegu na podstawie ruchu poziomego
             myAnim.SetFloat(speed, Mathf.Abs(playerMv.move.x));
 
-            //Set Run Animation
+            // Sprawdza i aktualizuje, czy przejście Run→Idle się zakończyło
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("RunIdleTrans"))
             {
                 runIdleIsPlayying = true;
@@ -73,38 +92,37 @@ namespace EthanTheHero
 
             #endregion
 
-            #region HURT&DEATH
+            #region HURT & DEATH (do aktywacji ręcznej lub przez logikę zdrowia)
 
-            //Set hurt animation 
-            //if (Input.GetKeyDown(KeyCode.H))
-            //{
-            //    myAnim.SetTrigger(hurt);
-            //    myBody.linearVelocity = new Vector2(0f, 0f);
-            //}
+            /*
+            // Przykładowe uruchomienie animacji obrażeń
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                myAnim.SetTrigger(hurt);
+                myBody.linearVelocity = Vector2.zero;
+            }
 
-            //if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Hurt"))
-            //{
-            //    if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-            //        myAnim.SetTrigger(hurtEnded);
-            //}
+            if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Hurt") &&
+                myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            {
+                myAnim.SetTrigger(hurtEnded);
+            }
 
-            //Set death animation
-            //if (Input.GetKeyDown(KeyCode.X))
-            //{
-            //    myAnim.SetTrigger(death);
-            //    myBody.linearVelocity = new Vector2(0f, 0f);
-            //}
+            // Przykładowe uruchomienie animacji śmierci
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                myAnim.SetTrigger(death);
+                myBody.linearVelocity = Vector2.zero;
+            }
 
-            //if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
-            //{
-            //    if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-            //        myAnim.SetTrigger(deathEnded);
-            //}
+            if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Death") &&
+                myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            {
+                myAnim.SetTrigger(deathEnded);
+            }
+            */
 
             #endregion
         }
-
     }
 }
-
-

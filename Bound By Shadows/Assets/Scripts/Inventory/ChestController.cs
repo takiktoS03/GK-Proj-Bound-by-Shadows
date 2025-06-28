@@ -2,30 +2,41 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-/* Ten skrypt obs³uguje interakcjê gracza ze skrzyni¹ zawieraj¹c¹ list.
-   - Gracz mo¿e otworzyæ skrzyniê klawiszem "F", gdy jest w pobli¿u.
-   - Po otwarciu wyœwietlany jest interfejs z listem, a UI zostaje zablokowane.
-   - Po ponownym naciœniêciu "F" list trafia do ekwipunku.
-   - Komponent wspó³pracuje z InventoryManager i UIStateManager.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class ChestController
+ * @brief Otwiera skrzyniê po interakcji gracza i dodaje przedmiot (list) do ekwipunku.
+ *
+ * Odpowiada za animacjê otwierania skrzyni, interakcjê z graczem,
+ * wyœwietlanie UI oraz dodanie listu do systemu ekwipunku.
+ *
+ * @author Julia Bigaj
+ */
 public class ChestController : MonoBehaviour
 {
+    /// @brief Referencja do komponentu Animator.
     private Animator animator;
+    /// @brief Czy skrzynia jest otwarta.
     [SerializeField] private bool isOpen = false;
+    /// @brief Czy gracz znajduje siê w pobli¿u skrzyni.
     private bool isPlayerNear = false;
 
+    /// @brief Panel UI wyœwietlany po otwarciu skrzyni.
     public GameObject chestPanel;
+    /// @brief Dane przechowywanego listu.
     public LetterData letterData;
 
+    /// @brief UI z podpowiedzi¹ do interakcji (np. naciœnij "F").
     public GameObject promptUI;
 
     [Header("Letter Icon")]
+    /// @brief Ikona reprezentuj¹ca list w UI skrzyni.
     public Image letterIcon;
+    /// @brief Czy list zosta³ ju¿ zabrany przez gracza.
     public bool isLetterTaken = false;
 
+    /**
+     * @brief Inicjalizacja komponentów i domyœlnych stanów UI.
+     */
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -37,6 +48,9 @@ public class ChestController : MonoBehaviour
             letterIcon.gameObject.SetActive(true);
     }
 
+    /**
+     * @brief Obs³uga interakcji gracza z obiektem (otwieranie skrzyni, zabieranie listu).
+     */
     void Update()
     {
         if (isPlayerNear && !isOpen && Input.GetKeyDown(KeyCode.F))
@@ -60,6 +74,10 @@ public class ChestController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Wykrywa wejœcie gracza w obszar interakcji.
+     * @param other Obiekt koliduj¹cy z triggerem.
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger enter: " + other.name);
@@ -72,6 +90,10 @@ public class ChestController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Wykrywa opuszczenie obszaru interakcji przez gracza.
+     * @param other Obiekt opuszczaj¹cy trigger.
+     */
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -82,6 +104,9 @@ public class ChestController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Zbiera list i dodaje go do ekwipunku.
+     */
     void TakeLetter()
     {
         if (letterIcon != null)
@@ -97,6 +122,9 @@ public class ChestController : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Zamyka skrzyniê z zewnêtrznych skryptów.
+     */
     public void CloseChestFromOutside()
     {
         isOpen = false;

@@ -1,17 +1,24 @@
 using UnityEngine;
 using TMPro;
 
-/* Zarz�dza wy�wietlaniem tekstowych podpowiedzi na UI.
-   - Pokazuje wiadomo�� przekazan� przez `HintArea`.
-   - Chowa podpowied�, gdy gracz opu�ci stref�.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class HintController
+ * @brief Zarządza wyświetlaniem tekstowych podpowiedzi w interfejsie użytkownika.
+ *
+ * Współpracuje z komponentami takimi jak `HintArea`, umożliwiając dynamiczne
+ * pokazywanie i ukrywanie wiadomości dla gracza.
+ *
+ * @author Julia Bigaj
+ */
 public class HintController : MonoBehaviour
 {
+    /// @brief Referencja do komponentu TextMeshProUGUI wyświetlającego podpowiedź.
     public TextMeshProUGUI hintText;
 
+    /**
+     * @brief Wyświetla wiadomość podpowiedzi na ekranie.
+     * @param message Tekst wiadomości do wyświetlenia.
+     */
     public void ShowHint(string message)
     {
         if (hintText == null) return;
@@ -20,6 +27,9 @@ public class HintController : MonoBehaviour
         hintText.gameObject.SetActive(true);
     }
 
+    /**
+     * @brief Ukrywa aktualnie wyświetlaną podpowiedź.
+     */
     public void HideHint()
     {
         if (hintText == null) return;

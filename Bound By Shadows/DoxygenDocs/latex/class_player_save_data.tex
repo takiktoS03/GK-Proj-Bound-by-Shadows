@@ -1,0 +1,79 @@
+\doxysection{Dokumentacja klasy Player\+Save\+Data}
+\hypertarget{class_player_save_data}{}\label{class_player_save_data}\index{PlayerSaveData@{PlayerSaveData}}
+
+
+Klasa odpowiedzialna za zapis i odczyt stanu gracza.  
+
+
+Diagram dziedziczenia dla Player\+Save\+Data\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_save_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_player_save_data_af0c2785f3e47a3f2cd2b078803b26f15}{Capture\+State}} ()
+\begin{DoxyCompactList}\small\item\em Tworzy obiekt stanu gracza do zapisania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_save_data_a0b96bb71991edeeb44b55d5f61e71fd5}{Restore\+State}} (object state)
+\begin{DoxyCompactList}\small\item\em Przywraca stan gracza na podstawie zapisanych danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczeg√≥≈Çowy}
+Klasa odpowiedzialna za zapis i odczyt stanu gracza. 
+
+Implementuje interfejs {\ttfamily \doxylink{interface_i_saveable}{ISaveable}}, integrujπc siÍ z globalnym systemem zapisu gry. Pobiera i przywraca stan komponentu {\ttfamily \doxylink{class_health}{Health}} przypisanego do gracza.
+
+\begin{DoxyNote}{Nota}
+Wymaga obecnoúci komponentu {\ttfamily \doxylink{class_health}{Health}} w tym samym obiekcie.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Autor}
+Filip Kud≥a 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_save_data_doc-func-members}
+\doxysubsection{Dokumentacja funkcji sk≈Çadowych}
+\Hypertarget{class_player_save_data_af0c2785f3e47a3f2cd2b078803b26f15}\index{PlayerSaveData@{PlayerSaveData}!CaptureState@{CaptureState}}
+\index{CaptureState@{CaptureState}!PlayerSaveData@{PlayerSaveData}}
+\doxysubsubsection{\texorpdfstring{CaptureState()}{CaptureState()}}
+{\footnotesize\ttfamily \label{class_player_save_data_af0c2785f3e47a3f2cd2b078803b26f15} 
+object Player\+Save\+Data.\+Capture\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tworzy obiekt stanu gracza do zapisania. 
+
+\begin{DoxyReturn}{Zwraca}
+Obiekt {\ttfamily \doxylink{class_player_data}{Player\+Data}} reprezentujπcy aktualne dane gracza. 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{interface_i_saveable_ae7ab551de69147cdec8a503c2774c9af}{ISaveable}}.
+
+\Hypertarget{class_player_save_data_a0b96bb71991edeeb44b55d5f61e71fd5}\index{PlayerSaveData@{PlayerSaveData}!RestoreState@{RestoreState}}
+\index{RestoreState@{RestoreState}!PlayerSaveData@{PlayerSaveData}}
+\doxysubsubsection{\texorpdfstring{RestoreState()}{RestoreState()}}
+{\footnotesize\ttfamily \label{class_player_save_data_a0b96bb71991edeeb44b55d5f61e71fd5} 
+void Player\+Save\+Data.\+Restore\+State (\begin{DoxyParamCaption}\item[{object}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przywraca stan gracza na podstawie zapisanych danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em state} & Obiekt w formacie JSON zawierajπcy dane gracza. \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje \mbox{\hyperlink{interface_i_saveable_afb40b786ddcfcc1f7909601444f0faa9}{ISaveable}}.
+
+
+
+Dokumentacja dla tej klasy zosta≈Ça wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Save/\mbox{\hyperlink{_player_save_data_8cs}{Player\+Save\+Data.\+cs}}\end{DoxyCompactItemize}

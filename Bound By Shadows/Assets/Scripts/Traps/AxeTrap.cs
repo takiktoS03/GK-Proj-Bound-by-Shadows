@@ -1,53 +1,74 @@
-﻿using EthanTheHero;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 /**
- * Skrypt obslugujacy zmiane kierunku i polozenia pulapki (toporu) o zadany kat
- * Autor skryptu: Filip Kudla
-*/
+ * @class AxeTrap
+ * @brief Obsługuje ruchome pułapki typu wahadłowy topór.
+ *
+ * Topór porusza się jak fizyczne wahadło (z tłumieniem) pomiędzy dwoma wychyleniami.
+ * Po kolizji z graczem zadaje obrażenia.
+ *
+ * @author Filip Kudla
+ */
 public class AxeTrap : MonoBehaviour
 {
-    [SerializeField] private float deflectionAngle = 45f; // maksymalne wychylenie w stopniach
-    [SerializeField] private float speed = 5f; // predkosc obrotu
+    /** @brief Maksymalny kąt wychylenia (w stopniach) od pionu. */
+    [SerializeField] private float deflectionAngle = 45f;
+
+    /** @brief Prędkość obrotu wahadła (wpływa na przyspieszenie kątowe). */
+    [SerializeField] private float speed = 5f;
+
+    /** @brief Ilość obrażeń zadawanych graczowi przy kolizji. */
     [SerializeField] private float damage = 30f;
-    [SerializeField] private float ropeLength = 4.7f; // dlugosc lancucha
-    [SerializeField] private float damping = 0.95f; // tłumienie
 
-    private float currentAngle;
-    private float angularVelocity = 0f;
-    private Vector3 pivotPosition;
+    /** @brief Długość łańcucha, czyli promień wahadła. */
+    [SerializeField] private float ropeLength = 4.7f;
 
+    /** @brief Współczynnik tłumienia wahadła (1 = brak tłumienia). */
+    [SerializeField] private float damping = 0.95f;
+
+    private float currentAngle;              ///< Aktualny kąt wychylenia (w radianach).
+    private float angularVelocity = 0f;      ///< Prędkość kątowa wahadła.
+    private Vector3 pivotPosition;           ///< Stała pozycja punktu zawieszenia (pivot).
+
+    /**
+     * @brief Ustawia początkowy kąt i pozycję pivotu.
+     */
     private void Start()
     {
         pivotPosition = transform.position;
-        currentAngle = deflectionAngle * Mathf.Deg2Rad; // start z maksymalnego wychyłu
+        currentAngle = deflectionAngle * Mathf.Deg2Rad;
     }
 
+    /**
+     * @brief Oblicza ruch wahadła, tłumienie oraz obrót obiektu.
+     */
     private void Update()
     {
-        // prosty model ruchu wahadla: przyspieszenie zależy od sin(kata)
         float angularAcceleration = -speed * Mathf.Sin(currentAngle);
         angularVelocity += angularAcceleration * Time.deltaTime;
         angularVelocity *= Mathf.Pow(damping, Time.deltaTime);
         currentAngle += angularVelocity * Time.deltaTime;
 
-        // ogranicz wychylenie
         float maxRadians = deflectionAngle * Mathf.Deg2Rad;
         currentAngle = Mathf.Clamp(currentAngle, -maxRadians, maxRadians);
 
-        // pozycja na koncu 'lancucha'
         float offsetX = Mathf.Sin(currentAngle) * ropeLength;
         float offsetY = -Mathf.Cos(currentAngle) * ropeLength;
+
         transform.position = pivotPosition + new Vector3(offsetX / 2.2f, offsetY / 2.2f + 2.2f, 0f);
         transform.eulerAngles = new Vector3(0f, 0f, currentAngle * Mathf.Rad2Deg);
     }
 
+    /**
+     * @brief Zadaje obrażenia graczowi po wejściu w collider pułapki.
+     * 
+     * @param collision Obiekt, który wszedł w obszar pułapki.
+     */
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
+            collision.GetComponent<Health>()?.TakeDamage(damage);
         }
     }
 }

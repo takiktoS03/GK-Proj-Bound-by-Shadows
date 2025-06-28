@@ -1,0 +1,134 @@
+\doxysection{Dokumentacja klasy Inventory\+Manager}
+\hypertarget{class_inventory_manager}{}\label{class_inventory_manager}\index{InventoryManager@{InventoryManager}}
+
+
+Zarz¹dza systemem ekwipunku gracza.  
+
+
+Diagram dziedziczenia dla Inventory\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inventory_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_inventory_manager_ac25005aa6b37f8dad8ff0bfabecf0fbe}{Add\+Item}} (string item)
+\begin{DoxyCompactList}\small\item\em Dodaje przedmiot do listy przedmiotów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_manager_a937df4821650af8f60cfb28d2cb6095c}{Remove\+Item}} (string item)
+\begin{DoxyCompactList}\small\item\em Usuwa przedmiot z listy przedmiotów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_manager_ac895ad4ca832f4c11362b3d706a38877}{Add\+Letter}} (\mbox{\hyperlink{class_letter_data}{Letter\+Data}} new\+Letter)
+\begin{DoxyCompactList}\small\item\em Dodaje list do listy zebranych listów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_inventory_manager_ad38ec7e24b34779cb7d0e18dea2ceb2d}{items}} = new List$<$string$>$ ()
+\begin{DoxyCompactList}\small\item\em Lista nazw zwyk³ych przedmiotów w ekwipunku. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_letter_data}{Letter\+Data}} $>$ \mbox{\hyperlink{class_inventory_manager_ac8126475e07f02b2f202d7c4c39e4f00}{collected\+Letters}} = new List$<$\mbox{\hyperlink{class_letter_data}{Letter\+Data}}$>$()
+\begin{DoxyCompactList}\small\item\em Lista zebranych listów (\doxylink{class_letter_data}{Letter\+Data}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_inventory_manager}{Inventory\+Manager}} \mbox{\hyperlink{class_inventory_manager_a2c5229368dec66fff8c77903bcf8a68e}{Instance}}
+\begin{DoxyCompactList}\small\item\em Singleton umo¿liwiaj¹cy dostêp do instancji klasy z innych skryptów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Zarz¹dza systemem ekwipunku gracza. 
+
+Przechowuje zebrane przedmioty oraz listy, zapewnia singleton do globalnego dostêpu i pozwala na ich dodawanie i usuwanie.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_inventory_manager_doc-func-members}
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{class_inventory_manager_ac25005aa6b37f8dad8ff0bfabecf0fbe}\index{InventoryManager@{InventoryManager}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ac25005aa6b37f8dad8ff0bfabecf0fbe} 
+void Inventory\+Manager.\+Add\+Item (\begin{DoxyParamCaption}\item[{string}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodaje przedmiot do listy przedmiotów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em item} & Nazwa przedmiotu do dodania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_inventory_manager_ac895ad4ca832f4c11362b3d706a38877}\index{InventoryManager@{InventoryManager}!AddLetter@{AddLetter}}
+\index{AddLetter@{AddLetter}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{AddLetter()}{AddLetter()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ac895ad4ca832f4c11362b3d706a38877} 
+void Inventory\+Manager.\+Add\+Letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_letter_data}{Letter\+Data}}}]{new\+Letter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dodaje list do listy zebranych listów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+Letter} & Obiekt \doxylink{class_letter_data}{Letter\+Data} reprezentuj¹cy nowy list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_inventory_manager_a937df4821650af8f60cfb28d2cb6095c}\index{InventoryManager@{InventoryManager}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{RemoveItem()}{RemoveItem()}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a937df4821650af8f60cfb28d2cb6095c} 
+void Inventory\+Manager.\+Remove\+Item (\begin{DoxyParamCaption}\item[{string}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Usuwa przedmiot z listy przedmiotów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em item} & Nazwa przedmiotu do usuniêcia. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_inventory_manager_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_inventory_manager_ac8126475e07f02b2f202d7c4c39e4f00}\index{InventoryManager@{InventoryManager}!collectedLetters@{collectedLetters}}
+\index{collectedLetters@{collectedLetters}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{collectedLetters}{collectedLetters}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ac8126475e07f02b2f202d7c4c39e4f00} 
+List$<$\mbox{\hyperlink{class_letter_data}{Letter\+Data}}$>$ Inventory\+Manager.\+collected\+Letters = new List$<$\mbox{\hyperlink{class_letter_data}{Letter\+Data}}$>$()}
+
+
+
+Lista zebranych listów (\doxylink{class_letter_data}{Letter\+Data}). 
+
+\Hypertarget{class_inventory_manager_a2c5229368dec66fff8c77903bcf8a68e}\index{InventoryManager@{InventoryManager}!Instance@{Instance}}
+\index{Instance@{Instance}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_inventory_manager_a2c5229368dec66fff8c77903bcf8a68e} 
+\mbox{\hyperlink{class_inventory_manager}{Inventory\+Manager}} Inventory\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton umo¿liwiaj¹cy dostêp do instancji klasy z innych skryptów. 
+
+\Hypertarget{class_inventory_manager_ad38ec7e24b34779cb7d0e18dea2ceb2d}\index{InventoryManager@{InventoryManager}!items@{items}}
+\index{items@{items}!InventoryManager@{InventoryManager}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \label{class_inventory_manager_ad38ec7e24b34779cb7d0e18dea2ceb2d} 
+List$<$string$>$ Inventory\+Manager.\+items = new List$<$string$>$ ()}
+
+
+
+Lista nazw zwyk³ych przedmiotów w ekwipunku. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Inventory/\mbox{\hyperlink{_inventory_manager_8cs}{Inventory\+Manager.\+cs}}\end{DoxyCompactItemize}

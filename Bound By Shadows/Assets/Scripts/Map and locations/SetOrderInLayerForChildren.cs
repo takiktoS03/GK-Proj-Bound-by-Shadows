@@ -1,20 +1,27 @@
 using UnityEngine;
 
-/* Skrypt przypisuje wszystkim dzieciom (z komponentem SpriteRenderer) okreœlony `sortingOrder`.
-   - U¿ywany g³ównie przy dekoracjach, aby ustawiæ odpowiedni¹ warstwê renderowania sprite'ów.
-   - Mo¿e byæ przypisany do obiektu nadrzêdnego (np. "Dekoracje").
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class SetOrderInLayerForChildren
+ * @brief Ustawia warstwê rysowania (`sortingOrder`) dla wszystkich dzieci posiadaj¹cych komponent SpriteRenderer.
+ *
+ * Skrypt przeznaczony do kontrolowania kolejnoœci renderowania sprite'ów w hierarchii obiektów.
+ * Mo¿e byæ u¿ywany np. na obiekcie nadrzêdnym zawieraj¹cym elementy dekoracyjne.
+ *
+ * @author Julia Bigaj
+ */
 public class SetOrderInLayerForChildren : MonoBehaviour
 {
+    /// @brief Wartoœæ warstwy renderowania przypisywana wszystkim dzieciom.
     public int orderInLayer = 2;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /**
+     * @brief Ustawia `sortingOrder` wszystkim komponentom SpriteRenderer w obiektach potomnych.
+     *
+     * Wywo³ywana raz po uruchomieniu gry (przy starcie sceny).
+     */
     void Start()
     {
-        foreach(SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
         {
             sr.sortingOrder = orderInLayer;
         }

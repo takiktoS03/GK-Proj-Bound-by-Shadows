@@ -2,7 +2,15 @@
 using System.Collections;
 using UnityEngine;
 
-
+/**
+ * @class EncounteredGhostDialog
+ * @brief Obsługuje dialog pomiędzy graczem a napotkanym duszkiem.
+ *
+ * Wyświetla sekwencję tekstów z opcjonalnym dźwiękiem, zatrzymując ruch gracza.
+ * Po zakończeniu dialogu jeden duszek znika, a inny (z kamerą) się pojawia.
+ *
+ * @author Filip Kudła
+ */
 public class EncounteredGhostDialog : MonoBehaviour
 {
     [TextArea] public string dialog1 = "Kim jesteś?";
@@ -18,14 +26,21 @@ public class EncounteredGhostDialog : MonoBehaviour
 
     private AudioSource audioSource;
 
-    public GameObject encounteredGhost; // Duszek, który znika
-    public GameObject ghostWithCam;     // Duszek, który pojawi się po dialogu
+    /// @brief Duszek do ukrycia po zakończeniu dialogu.
+    public GameObject encounteredGhost;
+
+    /// @brief Duszek z kamerą do pokazania po dialogu.
+    public GameObject ghostWithCam;
 
     private PlayerMovement movement;
     private PlayerAnimation animation;
     private PlayerAttackMethod attackMethod;
     private bool hasTriggered = false;
 
+    /**
+     * @brief Wywołuje dialog, gdy gracz wchodzi w strefę kolizji.
+     * @param other Obiekt kolidujący (oczekiwany: Player).
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (hasTriggered) return; // zapobiega powtórnemu wywołaniu
@@ -72,6 +87,10 @@ public class EncounteredGhostDialog : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Sekwencja dialogu — pokazuje kolejne linie tekstu i zarządza stanami.
+     * @param textUI Obiekt UI odpowiedzialny za wyświetlanie tekstu.
+     */
     private IEnumerator DialogSequence(TextUI textUI)
     {
         textUI.ShowTextDialog(dialog1, 2f);
@@ -108,6 +127,13 @@ public class EncounteredGhostDialog : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /**
+     * @brief Odtwarza dźwięk mowy (głosu) z podanego klipu audio.
+     * 
+     * Jeśli audioSource jest dostępny i klip nie jest pusty, zatrzymuje obecny dźwięk i odtwarza nowy.
+     * 
+     * @param clip Klip audio do odtworzenia.
+     */
     private void PlayVoice(AudioClip clip)
     {
         if (audioSource != null && clip != null)

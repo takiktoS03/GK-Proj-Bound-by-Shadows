@@ -1,0 +1,53 @@
+\doxysection{Dokumentacja klasy Attack\+Controller}
+\hypertarget{class_attack_controller}{}\label{class_attack_controller}\index{AttackController@{AttackController}}
+
+
+Klasa odpowiedzialna za zarządzanie atakiem postaci (tworzeniem hitboxów, cooldownem).  
+
+
+Diagram dziedziczenia dla Attack\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_attack_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attack_controller_a818503eb759b903115d3e9dcb29dfd67}{Perform\+Attack}} (\mbox{\hyperlink{class_attack_data}{Attack\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Wywołuje atak na podstawie danych z \doxylink{class_attack_data}{Attack\+Data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa odpowiedzialna za zarządzanie atakiem postaci (tworzeniem hitboxów, cooldownem). 
+
+Wykorzystywana razem z obiektami typu \doxylink{class_attack_data}{Attack\+Data}, zawiera logikę instancjowania prefabów ataku oraz obsługę czasu odnowienia między atakami.
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_attack_controller_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_attack_controller_a818503eb759b903115d3e9dcb29dfd67}\index{AttackController@{AttackController}!PerformAttack@{PerformAttack}}
+\index{PerformAttack@{PerformAttack}!AttackController@{AttackController}}
+\doxysubsubsection{\texorpdfstring{PerformAttack()}{PerformAttack()}}
+{\footnotesize\ttfamily \label{class_attack_controller_a818503eb759b903115d3e9dcb29dfd67} 
+void Attack\+Controller.\+Perform\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_attack_data}{Attack\+Data}}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wywołuje atak na podstawie danych z \doxylink{class_attack_data}{Attack\+Data}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Obiekt przechowujący informacje o ataku (prefab, obrażenia, knockback, cooldown). \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Attack/\mbox{\hyperlink{_attack_controller_8cs}{Attack\+Controller.\+cs}}\end{DoxyCompactItemize}

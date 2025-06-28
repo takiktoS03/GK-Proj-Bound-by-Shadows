@@ -1,0 +1,84 @@
+\doxysection{Dokumentacja klasy Ethan\+The\+Hero.\+Player\+Attack\+Method}
+\hypertarget{class_ethan_the_hero_1_1_player_attack_method}{}\label{class_ethan_the_hero_1_1_player_attack_method}\index{EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}}
+
+
+Obsługuje podstawowy system ataku postaci gracza (combo 3-\/atakowe).  
+
+
+Diagram dziedziczenia dla Ethan\+The\+Hero.\+Player\+Attack\+Method\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ethan_the_hero_1_1_player_attack_method}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_attack_method_ade2932d62f31486e1d6392b8df57aaaa}{basic\+Attack01\+Power}} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Siła przesunięcia gracza podczas 1 ataku. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_attack_method_a36720f9de91182988a079be699cac2a5}{basic\+Attack02\+Power}} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Siła przesunięcia gracza podczas 2 ataku. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_ethan_the_hero_1_1_player_attack_method_ad44f1d2230aa1bc32bf59d65da390c9a}{basic\+Attack03\+Power}} = 0.\+9f
+\begin{DoxyCompactList}\small\item\em Siła przesunięcia gracza podczas 3 ataku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_attack_method_a916eb0439f682d1daf4bf6e5eb73433c}{is\+Paused}} = false
+\begin{DoxyCompactList}\small\item\em Czy gra jest zapauzowana (globalnie). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Obsługuje podstawowy system ataku postaci gracza (combo 3-\/atakowe). 
+
+Umożliwia wykonywanie sekwencyjnych ataków (combo), reagując na kliknięcia myszy w odpowiednim czasie trwania animacji. Obsługuje również dźwięki i przesunięcia gracza podczas ataku.
+
+Używa animatora oraz komponentów \doxylink{class_ethan_the_hero_1_1_player_movement}{Player\+Movement} i Rigidbody2D. 
+
+\label{doc-variable-members}
+\Hypertarget{class_ethan_the_hero_1_1_player_attack_method_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_ethan_the_hero_1_1_player_attack_method_ade2932d62f31486e1d6392b8df57aaaa}\index{EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}!basicAttack01Power@{basicAttack01Power}}
+\index{basicAttack01Power@{basicAttack01Power}!EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}}
+\doxysubsubsection{\texorpdfstring{basicAttack01Power}{basicAttack01Power}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_attack_method_ade2932d62f31486e1d6392b8df57aaaa} 
+float Ethan\+The\+Hero.\+Player\+Attack\+Method.\+basic\+Attack01\+Power = 0.\+5f}
+
+
+
+Siła przesunięcia gracza podczas 1 ataku. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_attack_method_a36720f9de91182988a079be699cac2a5}\index{EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}!basicAttack02Power@{basicAttack02Power}}
+\index{basicAttack02Power@{basicAttack02Power}!EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}}
+\doxysubsubsection{\texorpdfstring{basicAttack02Power}{basicAttack02Power}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_attack_method_a36720f9de91182988a079be699cac2a5} 
+float Ethan\+The\+Hero.\+Player\+Attack\+Method.\+basic\+Attack02\+Power = 0.\+5f}
+
+
+
+Siła przesunięcia gracza podczas 2 ataku. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_attack_method_ad44f1d2230aa1bc32bf59d65da390c9a}\index{EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}!basicAttack03Power@{basicAttack03Power}}
+\index{basicAttack03Power@{basicAttack03Power}!EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}}
+\doxysubsubsection{\texorpdfstring{basicAttack03Power}{basicAttack03Power}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_attack_method_ad44f1d2230aa1bc32bf59d65da390c9a} 
+float Ethan\+The\+Hero.\+Player\+Attack\+Method.\+basic\+Attack03\+Power = 0.\+9f}
+
+
+
+Siła przesunięcia gracza podczas 3 ataku. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_attack_method_a916eb0439f682d1daf4bf6e5eb73433c}\index{EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}!isPaused@{isPaused}}
+\index{isPaused@{isPaused}!EthanTheHero.PlayerAttackMethod@{EthanTheHero.PlayerAttackMethod}}
+\doxysubsubsection{\texorpdfstring{isPaused}{isPaused}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_attack_method_a916eb0439f682d1daf4bf6e5eb73433c} 
+bool Ethan\+The\+Hero.\+Player\+Attack\+Method.\+is\+Paused = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Czy gra jest zapauzowana (globalnie). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Player/\mbox{\hyperlink{_player_attack_method_8cs}{Player\+Attack\+Method.\+cs}}\end{DoxyCompactItemize}

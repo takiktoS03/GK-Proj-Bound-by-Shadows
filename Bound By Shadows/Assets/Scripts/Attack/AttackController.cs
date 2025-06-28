@@ -2,17 +2,29 @@
 using UnityEngine;
 
 /**
- * Logika ataku aktywowanego w animacji, używająca info o ataku z AttackData
+ * @class AttackController
+ * @brief Klasa odpowiedzialna za zarządzanie atakiem postaci (tworzeniem hitboxów, cooldownem).
  * 
- * Autor: Filip Kudła
- **/
+ * Wykorzystywana razem z obiektami typu AttackData, zawiera logikę instancjowania prefabów ataku
+ * oraz obsługę czasu odnowienia między atakami.
+ * 
+ * @author Filip Kudła
+ */
 public class AttackController : MonoBehaviour
 {
+    /**
+     * @brief Punkt w którym pojawi się hitbox ataku.
+     */
     [Header ("Lista Spawn-Pointów Ataków Postaci")]
     [SerializeField] private Transform attackHitboxSpawnPoint;
 
     private bool canAttack = true;
 
+    /**
+     * @brief Wywołuje atak na podstawie danych z AttackData.
+     * 
+     * @param data Obiekt przechowujący informacje o ataku (prefab, obrażenia, knockback, cooldown).
+     */
     public void PerformAttack(AttackData data)
     {
         if (!canAttack) return;
@@ -21,6 +33,11 @@ public class AttackController : MonoBehaviour
         StartCoroutine(AttackCooldownRoutine(data.cooldown));
     }
 
+    /**
+     * @brief Tworzy obiekt hitboxa i ustawia jego parametry.
+     * 
+     * @param data Dane ataku do zaaplikowania hitboxowi.
+     */
     private void AttackMethod(AttackData data)
     {
         GameObject hitboxObj = Instantiate(
@@ -40,6 +57,11 @@ public class AttackController : MonoBehaviour
         Destroy(hitboxObj, data.duration);
     }
 
+    /**
+     * @brief Coroutine blokująca możliwość ataku na czas cooldownu.
+     * 
+     * @param attackCooldown Czas w sekundach przez który atak jest niedostępny.
+     */
     IEnumerator AttackCooldownRoutine(float attackCooldown)
     {
         canAttack = false;

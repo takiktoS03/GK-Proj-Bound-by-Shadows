@@ -1,0 +1,91 @@
+\doxysection{Dokumentacja klasy Ethan\+The\+Hero.\+Player\+Movement}
+\hypertarget{class_ethan_the_hero_1_1_player_movement}{}\label{class_ethan_the_hero_1_1_player_movement}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+
+
+Odpowiada za ruch postaci gracza (bieganie, skok, dash, wall slide, wall jump).  
+
+
+Diagram dziedziczenia dla Ethan\+The\+Hero.\+Player\+Movement\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ethan_the_hero_1_1_player_movement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_adede8074dd163ee96a5b66eaa56edff5}{move}}
+\begin{DoxyCompactList}\small\item\em Kierunek ruchu gracza. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_a477923697b0a8843752bc01d65d4edb0}{is\+Dashing}}
+\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_a12294d040788014a48a2493d62113d73}{grounded}}
+\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_a48b358a7ec014a78361180f42b492342}{is\+Jumping}}
+\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_aefa568dc4dcf353d707e07feb6903dc2}{wall\+Sliding\+Enabled}} = true
+\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_a455ff701e552db9a25b8361e58af3711}{wall\+Jump}}
+\item 
+bool \mbox{\hyperlink{class_ethan_the_hero_1_1_player_movement_ad22685ebde8e341c1a6e339b6eda39b7}{wall\+Sliding}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Odpowiada za ruch postaci gracza (bieganie, skok, dash, wall slide, wall jump). 
+
+Bazuje na danych z {\ttfamily \doxylink{class_ethan_the_hero_1_1_player_movement_data}{Player\+Movement\+Data}}. Obsługuje również dźwięki (kroki, dash, skok), stan UI oraz interakcję z kolizjami gruntu i ścian. 
+
+\label{doc-variable-members}
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_a12294d040788014a48a2493d62113d73}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!grounded@{grounded}}
+\index{grounded@{grounded}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{grounded}{grounded}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_a12294d040788014a48a2493d62113d73} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+grounded}
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_a477923697b0a8843752bc01d65d4edb0}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!isDashing@{isDashing}}
+\index{isDashing@{isDashing}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isDashing}{isDashing}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_a477923697b0a8843752bc01d65d4edb0} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+is\+Dashing}
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_a48b358a7ec014a78361180f42b492342}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!isJumping@{isJumping}}
+\index{isJumping@{isJumping}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{isJumping}{isJumping}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_a48b358a7ec014a78361180f42b492342} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+is\+Jumping}
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_adede8074dd163ee96a5b66eaa56edff5}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!move@{move}}
+\index{move@{move}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_adede8074dd163ee96a5b66eaa56edff5} 
+Vector2 Ethan\+The\+Hero.\+Player\+Movement.\+move}
+
+
+
+Kierunek ruchu gracza. 
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_a455ff701e552db9a25b8361e58af3711}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!wallJump@{wallJump}}
+\index{wallJump@{wallJump}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{wallJump}{wallJump}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_a455ff701e552db9a25b8361e58af3711} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+wall\+Jump}
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_ad22685ebde8e341c1a6e339b6eda39b7}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!wallSliding@{wallSliding}}
+\index{wallSliding@{wallSliding}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{wallSliding}{wallSliding}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_ad22685ebde8e341c1a6e339b6eda39b7} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+wall\+Sliding}
+
+\Hypertarget{class_ethan_the_hero_1_1_player_movement_aefa568dc4dcf353d707e07feb6903dc2}\index{EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}!wallSlidingEnabled@{wallSlidingEnabled}}
+\index{wallSlidingEnabled@{wallSlidingEnabled}!EthanTheHero.PlayerMovement@{EthanTheHero.PlayerMovement}}
+\doxysubsubsection{\texorpdfstring{wallSlidingEnabled}{wallSlidingEnabled}}
+{\footnotesize\ttfamily \label{class_ethan_the_hero_1_1_player_movement_aefa568dc4dcf353d707e07feb6903dc2} 
+bool Ethan\+The\+Hero.\+Player\+Movement.\+wall\+Sliding\+Enabled = true}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Player/\+Player\+Movement/\mbox{\hyperlink{_player_movement_8cs}{Player\+Movement.\+cs}}\end{DoxyCompactItemize}

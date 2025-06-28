@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bound by Shadows: Dokumentacja klasy SoundManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bound by Shadows
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocÄ… Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_sound_manager.html','','class_sound_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowaÅ„</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja klasy SoundManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Centralny mened¿er efektów dŸwiêkowych w grze.  
+ <a href="#details">WiÄ™cej...</a></p>
+<div class="dynheader">
+Diagram dziedziczenia dla SoundManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_sound_manager.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ad6da0ba36db9f36c62d26c8e2ab87ea1" id="r_ad6da0ba36db9f36c62d26c8e2ab87ea1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6da0ba36db9f36c62d26c8e2ab87ea1">PlaySound</a> (AudioClip clip)</td></tr>
+<tr class="memdesc:ad6da0ba36db9f36c62d26c8e2ab87ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza pojedynczy dŸwiêk z podanego AudioClip.  <br /></td></tr>
+<tr class="memitem:a41cb370d42c49b066dcd718ee7bef2dc" id="r_a41cb370d42c49b066dcd718ee7bef2dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41cb370d42c49b066dcd718ee7bef2dc">StartSteps</a> ()</td></tr>
+<tr class="memdesc:a41cb370d42c49b066dcd718ee7bef2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rozpoczyna zapêtlone odtwarzanie dŸwiêku kroków.  <br /></td></tr>
+<tr class="memitem:a01b4cf78c0c47d9359b2e4180d20959b" id="r_a01b4cf78c0c47d9359b2e4180d20959b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01b4cf78c0c47d9359b2e4180d20959b">StopSteps</a> ()</td></tr>
+<tr class="memdesc:a01b4cf78c0c47d9359b2e4180d20959b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zatrzymuje zapêtlony dŸwiêk kroków.  <br /></td></tr>
+<tr class="memitem:a189078c294fcc462c5b867fb5bcef62e" id="r_a189078c294fcc462c5b867fb5bcef62e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a189078c294fcc462c5b867fb5bcef62e">PlayStep</a> ()</td></tr>
+<tr class="memdesc:a189078c294fcc462c5b867fb5bcef62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk kroku.  <br /></td></tr>
+<tr class="memitem:a47a0c98e40bbc9143f33d512c0049189" id="r_a47a0c98e40bbc9143f33d512c0049189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a0c98e40bbc9143f33d512c0049189">PlayChest</a> ()</td></tr>
+<tr class="memdesc:a47a0c98e40bbc9143f33d512c0049189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk otwierania skrzyni.  <br /></td></tr>
+<tr class="memitem:ae79707363159c605c3a1e18eb0b158fe" id="r_ae79707363159c605c3a1e18eb0b158fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae79707363159c605c3a1e18eb0b158fe">PlayJump</a> ()</td></tr>
+<tr class="memdesc:ae79707363159c605c3a1e18eb0b158fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk skoku.  <br /></td></tr>
+<tr class="memitem:a194e8a8d6b06168dc78436c4d91c5942" id="r_a194e8a8d6b06168dc78436c4d91c5942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a194e8a8d6b06168dc78436c4d91c5942">PlayDash</a> ()</td></tr>
+<tr class="memdesc:a194e8a8d6b06168dc78436c4d91c5942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk dashowania.  <br /></td></tr>
+<tr class="memitem:a73127458c67bde808b5484986755a8f8" id="r_a73127458c67bde808b5484986755a8f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73127458c67bde808b5484986755a8f8">PlayHurt</a> ()</td></tr>
+<tr class="memdesc:a73127458c67bde808b5484986755a8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk obra¿eñ.  <br /></td></tr>
+<tr class="memitem:a8b083f8d6857cd10265ab3b32dafaed4" id="r_a8b083f8d6857cd10265ab3b32dafaed4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b083f8d6857cd10265ab3b32dafaed4">PlayDoor</a> ()</td></tr>
+<tr class="memdesc:a8b083f8d6857cd10265ab3b32dafaed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk otwierania drzwi.  <br /></td></tr>
+<tr class="memitem:aa1cd55425ae455f966b494d874a1e2fa" id="r_aa1cd55425ae455f966b494d874a1e2fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1cd55425ae455f966b494d874a1e2fa">PlayBarrel</a> ()</td></tr>
+<tr class="memdesc:aa1cd55425ae455f966b494d874a1e2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk zniszczenia beczki.  <br /></td></tr>
+<tr class="memitem:ad7e89123db9cb636bfd59fa7aa04efa7" id="r_ad7e89123db9cb636bfd59fa7aa04efa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e89123db9cb636bfd59fa7aa04efa7">PlayLightAttack</a> ()</td></tr>
+<tr class="memdesc:ad7e89123db9cb636bfd59fa7aa04efa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk lekkiego ataku.  <br /></td></tr>
+<tr class="memitem:ad91354515d2eb78c943604ba2851b0b8" id="r_ad91354515d2eb78c943604ba2851b0b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad91354515d2eb78c943604ba2851b0b8">PlayHeavyAttack</a> ()</td></tr>
+<tr class="memdesc:ad91354515d2eb78c943604ba2851b0b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk ciê¿kiego ataku.  <br /></td></tr>
+<tr class="memitem:a09e84de31fd96a0919498e85ea1e5be7" id="r_a09e84de31fd96a0919498e85ea1e5be7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e84de31fd96a0919498e85ea1e5be7">PlayLever</a> ()</td></tr>
+<tr class="memdesc:a09e84de31fd96a0919498e85ea1e5be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk u¿ycia dŸwigni.  <br /></td></tr>
+<tr class="memitem:a5ac1b4f763535e5f52ccd1ac6f9c50e2" id="r_a5ac1b4f763535e5f52ccd1ac6f9c50e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ac1b4f763535e5f52ccd1ac6f9c50e2">PlayStone</a> ()</td></tr>
+<tr class="memdesc:a5ac1b4f763535e5f52ccd1ac6f9c50e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odtwarza dŸwiêk przesuwania kamienia.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:aa4a330f24c6cc95bcfd23d11c243e7d7" id="r_aa4a330f24c6cc95bcfd23d11c243e7d7"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4a330f24c6cc95bcfd23d11c243e7d7">doorOpenSound</a></td></tr>
+<tr class="memdesc:aa4a330f24c6cc95bcfd23d11c243e7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk otwierania drzwi.  <br /></td></tr>
+<tr class="memitem:a64e18d1b29b3768baff81ba30c162644" id="r_a64e18d1b29b3768baff81ba30c162644"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64e18d1b29b3768baff81ba30c162644">chestOpenSound</a></td></tr>
+<tr class="memdesc:a64e18d1b29b3768baff81ba30c162644"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk otwierania skrzyni.  <br /></td></tr>
+<tr class="memitem:a7a1e295a9929db6995c89b464ab6789e" id="r_a7a1e295a9929db6995c89b464ab6789e"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a1e295a9929db6995c89b464ab6789e">destroyBarrelSound</a></td></tr>
+<tr class="memdesc:a7a1e295a9929db6995c89b464ab6789e"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk zniszczenia beczki.  <br /></td></tr>
+<tr class="memitem:a77668bb952268a8b00fc5d6d36a13b50" id="r_a77668bb952268a8b00fc5d6d36a13b50"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77668bb952268a8b00fc5d6d36a13b50">lightAttackSound</a></td></tr>
+<tr class="memdesc:a77668bb952268a8b00fc5d6d36a13b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk lekkiego ataku.  <br /></td></tr>
+<tr class="memitem:aebc53da3115094a1545824f44b78083b" id="r_aebc53da3115094a1545824f44b78083b"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc53da3115094a1545824f44b78083b">heavyAttackSound</a></td></tr>
+<tr class="memdesc:aebc53da3115094a1545824f44b78083b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk ciê¿kiego ataku.  <br /></td></tr>
+<tr class="memitem:ab7c74720212fd3acbba7f937eb0c1768" id="r_ab7c74720212fd3acbba7f937eb0c1768"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7c74720212fd3acbba7f937eb0c1768">jumpSound</a></td></tr>
+<tr class="memdesc:ab7c74720212fd3acbba7f937eb0c1768"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk skoku.  <br /></td></tr>
+<tr class="memitem:a7b30dbad130fae1ae7ec342f2f55c360" id="r_a7b30dbad130fae1ae7ec342f2f55c360"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b30dbad130fae1ae7ec342f2f55c360">dashSound</a></td></tr>
+<tr class="memdesc:a7b30dbad130fae1ae7ec342f2f55c360"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk dashowania.  <br /></td></tr>
+<tr class="memitem:a82c5cb564b231662724004f10efb98bd" id="r_a82c5cb564b231662724004f10efb98bd"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82c5cb564b231662724004f10efb98bd">hurtSound</a></td></tr>
+<tr class="memdesc:a82c5cb564b231662724004f10efb98bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk otrzymania obra¿eñ.  <br /></td></tr>
+<tr class="memitem:a90d3e4a2f3036c6f77f890a7e1bda789" id="r_a90d3e4a2f3036c6f77f890a7e1bda789"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90d3e4a2f3036c6f77f890a7e1bda789">stepSound</a></td></tr>
+<tr class="memdesc:a90d3e4a2f3036c6f77f890a7e1bda789"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk kroków bohatera.  <br /></td></tr>
+<tr class="memitem:a70c9132cd222384fab7498c4b832ed60" id="r_a70c9132cd222384fab7498c4b832ed60"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c9132cd222384fab7498c4b832ed60">leverPullSound</a></td></tr>
+<tr class="memdesc:a70c9132cd222384fab7498c4b832ed60"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk poci¹gniêcia za dŸwigniê.  <br /></td></tr>
+<tr class="memitem:a398676b21886d576dca16a2caa85e7a5" id="r_a398676b21886d576dca16a2caa85e7a5"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a398676b21886d576dca16a2caa85e7a5">moveStoneSound</a></td></tr>
+<tr class="memdesc:a398676b21886d576dca16a2caa85e7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DŸwiêk przesuwania kamienia.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Statyczne atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a4ceb176bb67059b35136a96fd9221824" id="r_a4ceb176bb67059b35136a96fd9221824"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_sound_manager.html">SoundManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ceb176bb67059b35136a96fd9221824">Instance</a></td></tr>
+<tr class="memdesc:a4ceb176bb67059b35136a96fd9221824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancja singletonu <a class="el" href="class_sound_manager.html" title="Centralny mened¿er efektów dŸwiêkowych w grze.">SoundManager</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegÃ³Å‚owy</h2>
+<div class="textblock"><p>Centralny mened¿er efektów dŸwiêkowych w grze. </p>
+<p>Implementuje wzorzec singletonu. Udostêpnia metody do odtwarzania konkretnych efektów dŸwiêkowych, takich jak ataki, otwieranie skrzyni, dŸwiêki ³amig³ówek czy kroki bohatera. Kroki obs³ugiwane s¹ osobnym Ÿród³em dŸwiêku (<span class="tt">stepSource</span>) jako dŸwiêk zapêtlony.</p>
+<dl class="section author"><dt>Autor</dt><dd>Julia Bigaj </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji skÅ‚adowych</h2>
+<a id="aa1cd55425ae455f966b494d874a1e2fa" name="aa1cd55425ae455f966b494d874a1e2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1cd55425ae455f966b494d874a1e2fa">&#9670;&#160;</a></span>PlayBarrel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayBarrel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk zniszczenia beczki. </p>
+
+</div>
+</div>
+<a id="a47a0c98e40bbc9143f33d512c0049189" name="a47a0c98e40bbc9143f33d512c0049189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a0c98e40bbc9143f33d512c0049189">&#9670;&#160;</a></span>PlayChest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayChest </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk otwierania skrzyni. </p>
+
+</div>
+</div>
+<a id="a194e8a8d6b06168dc78436c4d91c5942" name="a194e8a8d6b06168dc78436c4d91c5942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194e8a8d6b06168dc78436c4d91c5942">&#9670;&#160;</a></span>PlayDash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayDash </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk dashowania. </p>
+
+</div>
+</div>
+<a id="a8b083f8d6857cd10265ab3b32dafaed4" name="a8b083f8d6857cd10265ab3b32dafaed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b083f8d6857cd10265ab3b32dafaed4">&#9670;&#160;</a></span>PlayDoor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayDoor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk otwierania drzwi. </p>
+
+</div>
+</div>
+<a id="ad91354515d2eb78c943604ba2851b0b8" name="ad91354515d2eb78c943604ba2851b0b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91354515d2eb78c943604ba2851b0b8">&#9670;&#160;</a></span>PlayHeavyAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayHeavyAttack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk ciê¿kiego ataku. </p>
+
+</div>
+</div>
+<a id="a73127458c67bde808b5484986755a8f8" name="a73127458c67bde808b5484986755a8f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73127458c67bde808b5484986755a8f8">&#9670;&#160;</a></span>PlayHurt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayHurt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk obra¿eñ. </p>
+
+</div>
+</div>
+<a id="ae79707363159c605c3a1e18eb0b158fe" name="ae79707363159c605c3a1e18eb0b158fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79707363159c605c3a1e18eb0b158fe">&#9670;&#160;</a></span>PlayJump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayJump </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk skoku. </p>
+
+</div>
+</div>
+<a id="a09e84de31fd96a0919498e85ea1e5be7" name="a09e84de31fd96a0919498e85ea1e5be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e84de31fd96a0919498e85ea1e5be7">&#9670;&#160;</a></span>PlayLever()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayLever </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk u¿ycia dŸwigni. </p>
+
+</div>
+</div>
+<a id="ad7e89123db9cb636bfd59fa7aa04efa7" name="ad7e89123db9cb636bfd59fa7aa04efa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e89123db9cb636bfd59fa7aa04efa7">&#9670;&#160;</a></span>PlayLightAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayLightAttack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk lekkiego ataku. </p>
+
+</div>
+</div>
+<a id="ad6da0ba36db9f36c62d26c8e2ab87ea1" name="ad6da0ba36db9f36c62d26c8e2ab87ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6da0ba36db9f36c62d26c8e2ab87ea1">&#9670;&#160;</a></span>PlaySound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlaySound </td>
+          <td>(</td>
+          <td class="paramtype">AudioClip</td>          <td class="paramname"><span class="paramname"><em>clip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Odtwarza pojedynczy dŸwiêk z podanego AudioClip. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clip</td><td>DŸwiêk do odtworzenia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a189078c294fcc462c5b867fb5bcef62e" name="a189078c294fcc462c5b867fb5bcef62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189078c294fcc462c5b867fb5bcef62e">&#9670;&#160;</a></span>PlayStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayStep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk kroku. </p>
+
+</div>
+</div>
+<a id="a5ac1b4f763535e5f52ccd1ac6f9c50e2" name="a5ac1b4f763535e5f52ccd1ac6f9c50e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac1b4f763535e5f52ccd1ac6f9c50e2">&#9670;&#160;</a></span>PlayStone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.PlayStone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odtwarza dŸwiêk przesuwania kamienia. </p>
+
+</div>
+</div>
+<a id="a41cb370d42c49b066dcd718ee7bef2dc" name="a41cb370d42c49b066dcd718ee7bef2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41cb370d42c49b066dcd718ee7bef2dc">&#9670;&#160;</a></span>StartSteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.StartSteps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rozpoczyna zapêtlone odtwarzanie dŸwiêku kroków. </p>
+
+</div>
+</div>
+<a id="a01b4cf78c0c47d9359b2e4180d20959b" name="a01b4cf78c0c47d9359b2e4180d20959b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b4cf78c0c47d9359b2e4180d20959b">&#9670;&#160;</a></span>StopSteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoundManager.StopSteps </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zatrzymuje zapêtlony dŸwiêk kroków. </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentacja atrybutÃ³w skÅ‚adowych</h2>
+<a id="a64e18d1b29b3768baff81ba30c162644" name="a64e18d1b29b3768baff81ba30c162644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e18d1b29b3768baff81ba30c162644">&#9670;&#160;</a></span>chestOpenSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.chestOpenSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk otwierania skrzyni. </p>
+
+</div>
+</div>
+<a id="a7b30dbad130fae1ae7ec342f2f55c360" name="a7b30dbad130fae1ae7ec342f2f55c360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b30dbad130fae1ae7ec342f2f55c360">&#9670;&#160;</a></span>dashSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.dashSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk dashowania. </p>
+
+</div>
+</div>
+<a id="a7a1e295a9929db6995c89b464ab6789e" name="a7a1e295a9929db6995c89b464ab6789e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a1e295a9929db6995c89b464ab6789e">&#9670;&#160;</a></span>destroyBarrelSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.destroyBarrelSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk zniszczenia beczki. </p>
+
+</div>
+</div>
+<a id="aa4a330f24c6cc95bcfd23d11c243e7d7" name="aa4a330f24c6cc95bcfd23d11c243e7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a330f24c6cc95bcfd23d11c243e7d7">&#9670;&#160;</a></span>doorOpenSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.doorOpenSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk otwierania drzwi. </p>
+
+</div>
+</div>
+<a id="aebc53da3115094a1545824f44b78083b" name="aebc53da3115094a1545824f44b78083b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc53da3115094a1545824f44b78083b">&#9670;&#160;</a></span>heavyAttackSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.heavyAttackSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk ciê¿kiego ataku. </p>
+
+</div>
+</div>
+<a id="a82c5cb564b231662724004f10efb98bd" name="a82c5cb564b231662724004f10efb98bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82c5cb564b231662724004f10efb98bd">&#9670;&#160;</a></span>hurtSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.hurtSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk otrzymania obra¿eñ. </p>
+
+</div>
+</div>
+<a id="a4ceb176bb67059b35136a96fd9221824" name="a4ceb176bb67059b35136a96fd9221824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ceb176bb67059b35136a96fd9221824">&#9670;&#160;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sound_manager.html">SoundManager</a> SoundManager.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instancja singletonu <a class="el" href="class_sound_manager.html" title="Centralny mened¿er efektów dŸwiêkowych w grze.">SoundManager</a>. </p>
+
+</div>
+</div>
+<a id="ab7c74720212fd3acbba7f937eb0c1768" name="ab7c74720212fd3acbba7f937eb0c1768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c74720212fd3acbba7f937eb0c1768">&#9670;&#160;</a></span>jumpSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.jumpSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk skoku. </p>
+
+</div>
+</div>
+<a id="a70c9132cd222384fab7498c4b832ed60" name="a70c9132cd222384fab7498c4b832ed60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c9132cd222384fab7498c4b832ed60">&#9670;&#160;</a></span>leverPullSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.leverPullSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk poci¹gniêcia za dŸwigniê. </p>
+
+</div>
+</div>
+<a id="a77668bb952268a8b00fc5d6d36a13b50" name="a77668bb952268a8b00fc5d6d36a13b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77668bb952268a8b00fc5d6d36a13b50">&#9670;&#160;</a></span>lightAttackSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.lightAttackSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk lekkiego ataku. </p>
+
+</div>
+</div>
+<a id="a398676b21886d576dca16a2caa85e7a5" name="a398676b21886d576dca16a2caa85e7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398676b21886d576dca16a2caa85e7a5">&#9670;&#160;</a></span>moveStoneSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.moveStoneSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk przesuwania kamienia. </p>
+
+</div>
+</div>
+<a id="a90d3e4a2f3036c6f77f890a7e1bda789" name="a90d3e4a2f3036c6f77f890a7e1bda789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d3e4a2f3036c6f77f890a7e1bda789">&#9670;&#160;</a></span>stepSound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioClip SoundManager.stepSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DŸwiêk kroków bohatera. </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku:<ul>
+<li>Assets/Scripts/Music&amp;Sound/<a class="el" href="_sound_manager_8cs.html">SoundManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_sound_manager.html">SoundManager</a></li>
+    <li class="footer">Wygenerowano za pomocÄ… <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

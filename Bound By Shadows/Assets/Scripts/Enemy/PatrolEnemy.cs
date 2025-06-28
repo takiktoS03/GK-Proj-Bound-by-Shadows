@@ -2,9 +2,13 @@
 
 
 /**
- *  Skrypt obsługujący patrolowanie obszaru przez przeciwnika od punktu do punktu
- *  
- *  Autor: Filip Kudła
+ * @class PatrolEnemy
+ * @brief Skrypt odpowiedzialny za patrolowanie przeciwnika między dwoma punktami.
+ *
+ * Przeciwnik przemieszcza się w lewo i prawo między dwoma granicami.
+ * Zatrzymuje się na chwilę na krańcach i zmienia kierunek.
+ *
+ * @author Filip Kudła
  */
 public class PatrolEnemy : MonoBehaviour
 {
@@ -20,17 +24,13 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float idleDuration;
 
-    [SerializeField] private AudioSource stepAudioSource;
-    private bool isMoving = false;
-
-
     private float idleTimer;
     private Vector3 initScale;
     private bool movingLeft;
 
     //private Rigidbody2D rb;
 
-
+    /** @brief Zapisuje początkową skalę przeciwnika */
     private void Awake()
     {
         initScale = enemy.localScale;
@@ -38,18 +38,16 @@ public class PatrolEnemy : MonoBehaviour
         //rb = GetComponent<Rigidbody2D>();
     }
 
+    /** @brief Zatrzymuje animację obiektu */
     private void OnDisable()
     {
         if (anim != null)
         {
             anim.SetBool("Moving", false);
         }
-
-        if (stepAudioSource != null)
-            stepAudioSource.Stop();
-
     }
 
+    /** @brief Obsługuje logikę patrolowania i zmianę kierunku */
     private void Update()
     {
         if (enemy == null) // poprawka, gdy przeciwnik zginie
@@ -81,17 +79,10 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
+    /** @brief Zatrzymuje ruch i odlicza czas przed zmianą kierunku */
     private void ChangeDirection()
     {
         anim.SetBool("Moving", false);
-
-        if (isMoving)
-        {
-            if (stepAudioSource != null && stepAudioSource.isPlaying)
-                stepAudioSource.Stop();
-            isMoving = false;
-        }
-
 
         idleTimer += Time.deltaTime;
         
@@ -102,17 +93,14 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Porusza przeciwnika w zadanym kierunku
+     * @param direction -1 dla lewo, 1 dla prawo
+     */
     private void MoveInDirection(int direction)
     {
         anim.SetBool("Moving", true);
         //idleTimer = 0;
-
-        if (!isMoving)
-        {
-            if (stepAudioSource != null && !stepAudioSource.isPlaying)
-                stepAudioSource.Play();
-            isMoving = true;
-        }
 
         //Facing in direction
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);

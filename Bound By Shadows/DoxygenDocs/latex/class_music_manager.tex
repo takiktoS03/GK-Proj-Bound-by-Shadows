@@ -1,0 +1,191 @@
+\doxysection{Dokumentacja klasy Music\+Manager}
+\hypertarget{class_music_manager}{}\label{class_music_manager}\index{MusicManager@{MusicManager}}
+
+
+Globalny menedøer muzyki i narracji dzia≥ajπcy miÍdzy scenami.  
+
+
+Diagram dziedziczenia dla Music\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_music_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_music_manager_a8b68a2fe4de10e8c7b85933e329dc147}{Play\+Menu\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza muzykÍ menu, jeúli jeszcze nie jest aktywna. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_music_manager_a22ca29f66250e3ea784c73ab3ca71ff9}{Play\+Gameplay\+Music}} (float volume=1f)
+\begin{DoxyCompactList}\small\item\em Odtwarza muzykÍ t≥a do rozgrywki z domyúlnπ lub okreúlonπ g≥oúnoúciπ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_music_manager_acae13bdcf94095412d2fcf16379e651a}{Play\+Intro\+Audio}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza narracjÍ i muzykÍ w scenie Intro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_music_manager_afd8db0dc2b2d05e92924944ad9401035}{Stop\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymuje odtwarzanie aktualnej muzyki i narracji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_music_manager_a1c16d18fde1107fe755075dc84b92803}{audio\+Source}}
+\begin{DoxyCompactList}\small\item\em èrÛd≥o audio odpowiedzialne za t≥o muzyczne. \end{DoxyCompactList}\item 
+Audio\+Source \mbox{\hyperlink{class_music_manager_a862b24e4b30e2c01aebb61747b13bc51}{narration\+Source}}
+\begin{DoxyCompactList}\small\item\em èrÛd≥o audio odpowiedzialne za narracjÍ (np. intro). \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_music_manager_a70fde195586da5258e6d3aa86ec0cd40}{menu\+Music}}
+\begin{DoxyCompactList}\small\item\em Muzyka odtwarzana w menu g≥Ûwnym. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_music_manager_a632d2343252b16e3fc90bf0e065fc9e6}{gameplay\+Music}}
+\begin{DoxyCompactList}\small\item\em Muzyka odtwarzana podczas gry. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_music_manager_a817b9d0cb669b3515c0789b61a5290da}{intro\+Narration}}
+\begin{DoxyCompactList}\small\item\em Narracja g≥osowa odtwarzana w scenie Intro. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_music_manager_a08fc5ed42b7503210e6742fadefee3a4}{intro\+Music}}
+\begin{DoxyCompactList}\small\item\em Muzyka odtwarzana w scenie Intro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{W≈Ça≈õciwo≈õci}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_music_manager}{Music\+Manager}} \mbox{\hyperlink{class_music_manager_ac0568155a26e23e2624d19011baf2840}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Instancja singletonu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczeg√≥≈Çowy}
+Globalny menedøer muzyki i narracji dzia≥ajπcy miÍdzy scenami. 
+
+Zarzπdza odtwarzaniem odpowiednich úcieøek düwiÍkowych i narracji w zaleønoúci od aktualnie za≥adowanej sceny. Implementuje wzorzec singletonu, aby zapewniÊ dostÍpnoúÊ miÍdzy scenami ({\ttfamily Dont\+Destroy\+On\+Load}).
+
+Obs≥uguje oddzielne ürÛd≥a düwiÍku\+: jedno dla muzyki ({\ttfamily audio\+Source}), drugie dla narracji ({\ttfamily narration\+Source}).
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_music_manager_doc-func-members}
+\doxysubsection{Dokumentacja funkcji sk≈Çadowych}
+\Hypertarget{class_music_manager_a22ca29f66250e3ea784c73ab3ca71ff9}\index{MusicManager@{MusicManager}!PlayGameplayMusic@{PlayGameplayMusic}}
+\index{PlayGameplayMusic@{PlayGameplayMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{PlayGameplayMusic()}{PlayGameplayMusic()}}
+{\footnotesize\ttfamily \label{class_music_manager_a22ca29f66250e3ea784c73ab3ca71ff9} 
+void Music\+Manager.\+Play\+Gameplay\+Music (\begin{DoxyParamCaption}\item[{float}]{volume}{ = {\ttfamily 1f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odtwarza muzykÍ t≥a do rozgrywki z domyúlnπ lub okreúlonπ g≥oúnoúciπ. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em volume} & Poziom g≥oúnoúci muzyki (domyúlnie 1f). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_music_manager_acae13bdcf94095412d2fcf16379e651a}\index{MusicManager@{MusicManager}!PlayIntroAudio@{PlayIntroAudio}}
+\index{PlayIntroAudio@{PlayIntroAudio}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{PlayIntroAudio()}{PlayIntroAudio()}}
+{\footnotesize\ttfamily \label{class_music_manager_acae13bdcf94095412d2fcf16379e651a} 
+void Music\+Manager.\+Play\+Intro\+Audio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odtwarza narracjÍ i muzykÍ w scenie Intro. 
+
+\Hypertarget{class_music_manager_a8b68a2fe4de10e8c7b85933e329dc147}\index{MusicManager@{MusicManager}!PlayMenuMusic@{PlayMenuMusic}}
+\index{PlayMenuMusic@{PlayMenuMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{PlayMenuMusic()}{PlayMenuMusic()}}
+{\footnotesize\ttfamily \label{class_music_manager_a8b68a2fe4de10e8c7b85933e329dc147} 
+void Music\+Manager.\+Play\+Menu\+Music (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odtwarza muzykÍ menu, jeúli jeszcze nie jest aktywna. 
+
+\Hypertarget{class_music_manager_afd8db0dc2b2d05e92924944ad9401035}\index{MusicManager@{MusicManager}!StopMusic@{StopMusic}}
+\index{StopMusic@{StopMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{StopMusic()}{StopMusic()}}
+{\footnotesize\ttfamily \label{class_music_manager_afd8db0dc2b2d05e92924944ad9401035} 
+void Music\+Manager.\+Stop\+Music (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zatrzymuje odtwarzanie aktualnej muzyki i narracji. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_music_manager_doc-variable-members}
+\doxysubsection{Dokumentacja atrybut√≥w sk≈Çadowych}
+\Hypertarget{class_music_manager_a1c16d18fde1107fe755075dc84b92803}\index{MusicManager@{MusicManager}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily \label{class_music_manager_a1c16d18fde1107fe755075dc84b92803} 
+Audio\+Source Music\+Manager.\+audio\+Source}
+
+
+
+èrÛd≥o audio odpowiedzialne za t≥o muzyczne. 
+
+\Hypertarget{class_music_manager_a632d2343252b16e3fc90bf0e065fc9e6}\index{MusicManager@{MusicManager}!gameplayMusic@{gameplayMusic}}
+\index{gameplayMusic@{gameplayMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{gameplayMusic}{gameplayMusic}}
+{\footnotesize\ttfamily \label{class_music_manager_a632d2343252b16e3fc90bf0e065fc9e6} 
+Audio\+Clip Music\+Manager.\+gameplay\+Music}
+
+
+
+Muzyka odtwarzana podczas gry. 
+
+\Hypertarget{class_music_manager_a08fc5ed42b7503210e6742fadefee3a4}\index{MusicManager@{MusicManager}!introMusic@{introMusic}}
+\index{introMusic@{introMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{introMusic}{introMusic}}
+{\footnotesize\ttfamily \label{class_music_manager_a08fc5ed42b7503210e6742fadefee3a4} 
+Audio\+Clip Music\+Manager.\+intro\+Music}
+
+
+
+Muzyka odtwarzana w scenie Intro. 
+
+\Hypertarget{class_music_manager_a817b9d0cb669b3515c0789b61a5290da}\index{MusicManager@{MusicManager}!introNarration@{introNarration}}
+\index{introNarration@{introNarration}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{introNarration}{introNarration}}
+{\footnotesize\ttfamily \label{class_music_manager_a817b9d0cb669b3515c0789b61a5290da} 
+Audio\+Clip Music\+Manager.\+intro\+Narration}
+
+
+
+Narracja g≥osowa odtwarzana w scenie Intro. 
+
+\Hypertarget{class_music_manager_a70fde195586da5258e6d3aa86ec0cd40}\index{MusicManager@{MusicManager}!menuMusic@{menuMusic}}
+\index{menuMusic@{menuMusic}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{menuMusic}{menuMusic}}
+{\footnotesize\ttfamily \label{class_music_manager_a70fde195586da5258e6d3aa86ec0cd40} 
+Audio\+Clip Music\+Manager.\+menu\+Music}
+
+
+
+Muzyka odtwarzana w menu g≥Ûwnym. 
+
+\Hypertarget{class_music_manager_a862b24e4b30e2c01aebb61747b13bc51}\index{MusicManager@{MusicManager}!narrationSource@{narrationSource}}
+\index{narrationSource@{narrationSource}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{narrationSource}{narrationSource}}
+{\footnotesize\ttfamily \label{class_music_manager_a862b24e4b30e2c01aebb61747b13bc51} 
+Audio\+Source Music\+Manager.\+narration\+Source}
+
+
+
+èrÛd≥o audio odpowiedzialne za narracjÍ (np. intro). 
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_music_manager_doc-property-members}
+\doxysubsection{Dokumentacja w≈Ça≈õciwo≈õci}
+\Hypertarget{class_music_manager_ac0568155a26e23e2624d19011baf2840}\index{MusicManager@{MusicManager}!Instance@{Instance}}
+\index{Instance@{Instance}!MusicManager@{MusicManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_music_manager_ac0568155a26e23e2624d19011baf2840} 
+\mbox{\hyperlink{class_music_manager}{Music\+Manager}} Music\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Instancja singletonu. 
+
+
+
+Dokumentacja dla tej klasy zosta≈Ça wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Music\&\+Sound/\mbox{\hyperlink{_music_manager_8cs}{Music\+Manager.\+cs}}\end{DoxyCompactItemize}

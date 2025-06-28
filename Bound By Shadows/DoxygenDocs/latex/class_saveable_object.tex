@@ -1,0 +1,56 @@
+\doxysection{Dokumentacja klasy Saveable\+Object}
+\hypertarget{class_saveable_object}{}\label{class_saveable_object}\index{SaveableObject@{SaveableObject}}
+
+
+Przypisuje unikalny identyfikator ({\ttfamily Unique\+Id}) do obiektu gry, aby umo¿liwiæ jego zapis i odtworzenie.  
+
+
+Diagram dziedziczenia dla Saveable\+Object\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_saveable_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{WÅ‚aÅ›ciwoÅ›ci}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_saveable_object_a00fbe40790565bf7ed86c1ba81547777}{Unique\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Publiczny dostêp do unikalnego ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Przypisuje unikalny identyfikator ({\ttfamily Unique\+Id}) do obiektu gry, aby umo¿liwiæ jego zapis i odtworzenie. 
+
+Klasa ta zapewnia, ¿e ka¿dy obiekt w scenie posiada unikalny identyfikator, który mo¿e byæ wykorzystany w systemie zapisu stanu gry. Jeœli identyfikator nie jest unikalny, zostaje wygenerowany nowy. Dzia³a tylko w edytorze Unity — podczas dzia³ania gry identyfikator nie jest zmieniany.
+
+\begin{DoxyNote}{Nota}
+Wspó³pracuje z interfejsem {\ttfamily \doxylink{interface_i_saveable}{ISaveable}}. 
+
+{\ttfamily Disallow\+Multiple\+Component} gwarantuje, ¿e komponent nie zostanie dodany wielokrotnie do jednego obiektu.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Autor}
+Filip Kud³a 
+\end{DoxyAuthor}
+
+
+\label{doc-property-members}
+\Hypertarget{class_saveable_object_doc-property-members}
+\doxysubsection{Dokumentacja wÅ‚aÅ›ciwoÅ›ci}
+\Hypertarget{class_saveable_object_a00fbe40790565bf7ed86c1ba81547777}\index{SaveableObject@{SaveableObject}!UniqueId@{UniqueId}}
+\index{UniqueId@{UniqueId}!SaveableObject@{SaveableObject}}
+\doxysubsubsection{\texorpdfstring{UniqueId}{UniqueId}}
+{\footnotesize\ttfamily \label{class_saveable_object_a00fbe40790565bf7ed86c1ba81547777} 
+string Saveable\+Object.\+Unique\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Publiczny dostêp do unikalnego ID. 
+
+\begin{DoxyReturn}{Zwraca}
+Niezmienny identyfikator GUID. 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Save/\mbox{\hyperlink{_saveable_object_8cs}{Saveable\+Object.\+cs}}\end{DoxyCompactItemize}

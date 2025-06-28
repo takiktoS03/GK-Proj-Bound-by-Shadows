@@ -1,0 +1,74 @@
+\doxysection{Dokumentacja klasy End\+Game\+Trigger}
+\hypertarget{class_end_game_trigger}{}\label{class_end_game_trigger}\index{EndGameTrigger@{EndGameTrigger}}
+
+
+Obs³uguje zakoñczenie gry po dotarciu gracza do punktu koñcowego.  
+
+
+Diagram dziedziczenia dla End\+Game\+Trigger\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_end_game_trigger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Canvas\+Group \mbox{\hyperlink{class_end_game_trigger_a0df5db6f44cb3e08b5bcba4763e214bb}{fade\+Overlay}}
+\begin{DoxyCompactList}\small\item\em Referencja do {\ttfamily Canvas\+Group} odpowiedzialnego za przyciemnienie ekranu. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_end_game_trigger_a51854b52aef63677d85946e9dedfaef5}{fade\+Duration}} = 1.\+5f
+\begin{DoxyCompactList}\small\item\em Czas trwania animacji przyciemnienia. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_end_game_trigger_a26c5bf0b20617e49e3c9555845d10a05}{main\+Menu\+Scene\+Name}} = "{}Main\+Menu"{}
+\begin{DoxyCompactList}\small\item\em Nazwa sceny g³ównego menu, do której nastêpuje powrót po zakoñczeniu gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Obs³uguje zakoñczenie gry po dotarciu gracza do punktu koñcowego. 
+
+Po wejœciu gracza w trigger, rozpoczyna animacjê przyciemniania ekranu (poprzez zmianê {\ttfamily alpha} komponentu {\ttfamily Canvas\+Group}) i ³aduje scenê g³ównego menu.
+
+Wymaga na scenie obiektu z czarnym {\ttfamily Image} (UI) oraz komponentem {\ttfamily Canvas\+Group}.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_end_game_trigger_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_end_game_trigger_a51854b52aef63677d85946e9dedfaef5}\index{EndGameTrigger@{EndGameTrigger}!fadeDuration@{fadeDuration}}
+\index{fadeDuration@{fadeDuration}!EndGameTrigger@{EndGameTrigger}}
+\doxysubsubsection{\texorpdfstring{fadeDuration}{fadeDuration}}
+{\footnotesize\ttfamily \label{class_end_game_trigger_a51854b52aef63677d85946e9dedfaef5} 
+float End\+Game\+Trigger.\+fade\+Duration = 1.\+5f}
+
+
+
+Czas trwania animacji przyciemnienia. 
+
+\Hypertarget{class_end_game_trigger_a0df5db6f44cb3e08b5bcba4763e214bb}\index{EndGameTrigger@{EndGameTrigger}!fadeOverlay@{fadeOverlay}}
+\index{fadeOverlay@{fadeOverlay}!EndGameTrigger@{EndGameTrigger}}
+\doxysubsubsection{\texorpdfstring{fadeOverlay}{fadeOverlay}}
+{\footnotesize\ttfamily \label{class_end_game_trigger_a0df5db6f44cb3e08b5bcba4763e214bb} 
+Canvas\+Group End\+Game\+Trigger.\+fade\+Overlay}
+
+
+
+Referencja do {\ttfamily Canvas\+Group} odpowiedzialnego za przyciemnienie ekranu. 
+
+\Hypertarget{class_end_game_trigger_a26c5bf0b20617e49e3c9555845d10a05}\index{EndGameTrigger@{EndGameTrigger}!mainMenuSceneName@{mainMenuSceneName}}
+\index{mainMenuSceneName@{mainMenuSceneName}!EndGameTrigger@{EndGameTrigger}}
+\doxysubsubsection{\texorpdfstring{mainMenuSceneName}{mainMenuSceneName}}
+{\footnotesize\ttfamily \label{class_end_game_trigger_a26c5bf0b20617e49e3c9555845d10a05} 
+string End\+Game\+Trigger.\+main\+Menu\+Scene\+Name = "{}Main\+Menu"{}}
+
+
+
+Nazwa sceny g³ównego menu, do której nastêpuje powrót po zakoñczeniu gry. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Menu HUDs/\mbox{\hyperlink{_end_game_trigger_8cs}{End\+Game\+Trigger.\+cs}}\end{DoxyCompactItemize}

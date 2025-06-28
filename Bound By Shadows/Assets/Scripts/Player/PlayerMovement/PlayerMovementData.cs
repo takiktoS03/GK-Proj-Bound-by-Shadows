@@ -2,57 +2,111 @@
 
 namespace EthanTheHero
 {
-	[CreateAssetMenu(menuName = "Player Movement Data")]
-	public class PlayerMovementData : ScriptableObject
-	{
-		[Header("Run")]
-		public float runMaxSpeed; //Target speed we want the player to reach.
-		public float runAcceleration; //Time (approx.) time we want it to take for the player to accelerate from 0 to the runMaxSpeed.
-		[HideInInspector] public float runAccelAmount; //The actual force (multiplied with speedDiff) applied to the player.
-		public float runDecceleration; //Time (approx.) we want it to take for the player to accelerate from runMaxSpeed to 0.
-		[HideInInspector] public float runDeccelAmount; //Actual force (multiplied with speedDiff) applied to the player .
-		[Space(10)]
-		[Range(0.01f, 1)] public float accelInAir; //Multipliers applied to acceleration rate when airborne.
-		[Range(0.01f, 1)] public float deccelInAir;
-		public bool doConserveMomentum;
+    /**
+     * @class PlayerMovementData
+     * @brief ScriptableObject przechowujący dane konfiguracyjne ruchu gracza.
+     *
+     * Zawiera ustawienia prędkości biegu, przyspieszenia, skoku, daszu oraz interakcji ze ścianami.
+     * Obliczenia siły przyspieszenia i wytracania prędkości wykonywane są automatycznie w metodzie `OnValidate()`.
+     * Umożliwia łatwe dostosowanie balansu postaci bez modyfikacji kodu.
+     */
+    [CreateAssetMenu(menuName = "Player Movement Data")]
+    public class PlayerMovementData : ScriptableObject
+    {
+        // ---------------- RUN ----------------
 
-		[Space(20)]
+        [Header("Run")]
 
-		[Header("Jump")]
-		public float jumpHeight; //Height of the player's jump
+        /// @brief Docelowa maksymalna prędkość biegu gracza.
+        public float runMaxSpeed;
 
+        /// @brief Czas, po którym gracz powinien osiągnąć prędkość maksymalną (z pozycji spoczynkowej).
+        public float runAcceleration;
 
-		[Space(20)]
+        /// @brief Obliczona siła przyspieszenia (na podstawie `runAcceleration`).
+        [HideInInspector] public float runAccelAmount;
 
-		[Header("Dash")]
-		public float dashPower = 30f;
-		public float dashingCoolDown = 1f;
-		public float dashingTime = 0.2f;
-		public float dashCost = 20f;
+        /// @brief Czas potrzebny do wytracenia prędkości (zatrzymania).
+        public float runDecceleration;
 
-		[Space(20)]
+        /// @brief Obliczona siła wytracenia prędkości (na podstawie `runDecceleration`).
+        [HideInInspector] public float runDeccelAmount;
 
-		[Header("Wall Sliding and Wall Jumping")]
-		public float wallDistance = 0.05f;
-		[HideInInspector] public float wallJumpTime = 0.2f;
-		public float wallSlideSpeed = 0.3f;
-		public float wallJumpingYPower = 6.5f;
-		public float wallJumpingXPower = 5f;
-		public float WallJumpTimeInSecond = 0.1f;
+        [Space(10)]
 
+        /// @brief Mnożnik przyspieszenia w powietrzu.
+        [Range(0.01f, 1)] public float accelInAir;
 
+        /// @brief Mnożnik wytracenia prędkości w powietrzu.
+        [Range(0.01f, 1)] public float deccelInAir;
 
-		private void OnValidate()
-		{
+        /// @brief Czy gracz ma zachowywać pęd przy nagłych zmianach kierunku.
+        public bool doConserveMomentum;
 
-			runAccelAmount = (50 * runAcceleration) / runMaxSpeed;
-			runDeccelAmount = (50 * runDecceleration) / runMaxSpeed;
+        [Space(20)]
 
+        // ---------------- JUMP ----------------
 
-			#region Variable Ranges
-			runAcceleration = Mathf.Clamp(runAcceleration, 0.01f, runMaxSpeed);
-			runDecceleration = Mathf.Clamp(runDecceleration, 0.01f, runMaxSpeed);
-			#endregion
-		}
-	}
+        [Header("Jump")]
+
+        /// @brief Wysokość skoku gracza.
+        public float jumpHeight;
+
+        [Space(20)]
+
+        // ---------------- DASH ----------------
+
+        [Header("Dash")]
+
+        /// @brief Siła dasza (poziomy impuls).
+        public float dashPower = 30f;
+
+        /// @brief Czas oczekiwania na ponowne użycie dasza.
+        public float dashingCoolDown = 1f;
+
+        /// @brief Czas trwania dasza.
+        public float dashingTime = 0.2f;
+
+        /// @brief Koszt dasza w punktach staminy.
+        public float dashCost = 20f;
+
+        [Space(20)]
+
+        // ---------------- WALL INTERACTION ----------------
+
+        [Header("Wall Sliding and Wall Jumping")]
+
+        /// @brief Odległość od ściany, przy której wykrywana jest możliwość zsuwania się.
+        public float wallDistance = 0.05f;
+
+        /// @brief Czas okna wejścia w wall jump.
+        [HideInInspector] public float wallJumpTime = 0.2f;
+
+        /// @brief Maksymalna prędkość zsuwania się po ścianie.
+        public float wallSlideSpeed = 0.3f;
+
+        /// @brief Siła skoku w pionie przy wall jumpie.
+        public float wallJumpingYPower = 6.5f;
+
+        /// @brief Siła skoku w poziomie przy wall jumpie.
+        public float wallJumpingXPower = 5f;
+
+        /// @brief Czas trwania animacji/efektu wall jumpa.
+        public float WallJumpTimeInSecond = 0.1f;
+
+        /**
+         * @brief Automatycznie aktualizuje dane zależne i ogranicza wartości w edytorze Unity.
+         */
+        private void OnValidate()
+        {
+            runAccelAmount = (50 * runAcceleration) / runMaxSpeed;
+            runDeccelAmount = (50 * runDecceleration) / runMaxSpeed;
+
+            // Ograniczenia zakresów
+            #region Variable Ranges
+            runAcceleration = Mathf.Clamp(runAcceleration, 0.01f, runMaxSpeed);
+            runDecceleration = Mathf.Clamp(runDecceleration, 0.01f, runMaxSpeed);
+            #endregion
+        }
+    }
 }

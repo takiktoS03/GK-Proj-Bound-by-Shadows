@@ -1,0 +1,57 @@
+\doxysection{Dokumentacja klasy Attack\+Hitbox}
+\hypertarget{class_attack_hitbox}{}\label{class_attack_hitbox}\index{AttackHitbox@{AttackHitbox}}
+
+
+Odpowiada za detekcję kolizji i zadawanie obrażeń.  
+
+
+Diagram dziedziczenia dla Attack\+Hitbox\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_attack_hitbox}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_attack_hitbox_a68fc829753a1ce66438c118f68826855}{Init}} (float dmg, float kb, Game\+Object source)
+\begin{DoxyCompactList}\small\item\em Inicjalizuje hitbox danymi ataku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Odpowiada za detekcję kolizji i zadawanie obrażeń. 
+
+Tworzony dynamicznie prefab hitboxa, który sprawdza kolizję z przeciwnikiem. Gdy wykryje obiekt z komponentem \doxylink{class_health}{Health}, zadaje mu obrażenia.
+
+\begin{DoxyAuthor}{Autor}
+Filip Kudła 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_attack_hitbox_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_attack_hitbox_a68fc829753a1ce66438c118f68826855}\index{AttackHitbox@{AttackHitbox}!Init@{Init}}
+\index{Init@{Init}!AttackHitbox@{AttackHitbox}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_attack_hitbox_a68fc829753a1ce66438c118f68826855} 
+void Attack\+Hitbox.\+Init (\begin{DoxyParamCaption}\item[{float}]{dmg}{, }\item[{float}]{kb}{, }\item[{Game\+Object}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicjalizuje hitbox danymi ataku. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dmg} & Obrażenia do zadania. \\
+\hline
+{\em kb} & Siła odrzutu. \\
+\hline
+{\em source} & Obiekt będący właścicielem ataku. \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Attack/\mbox{\hyperlink{_attack_hitbox_8cs}{Attack\+Hitbox.\+cs}}\end{DoxyCompactItemize}

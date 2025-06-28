@@ -2,10 +2,12 @@
 using UnityEngine;
 
 /**
- *  Skrypt obsługujący przeciwników atakujących wręcz
- *  Korzysta z RaycastHit2D aby wykryć czy gracz jest w pobliżu za pomocą boxCollider
+ * @class MeleeEnemy
+ * @brief Skrypt przeciwnika atakującego wręcz, wykrywającego gracza za pomocą BoxCast.
  *
- *  Autor: Filip Kudła  
+ * Przeciwnik patroluje do momentu wykrycia gracza, a następnie wykonuje animację ataku z określonym cooldownem.
+ * 
+ * @author Filip Kudła
  */
 public class MeleeEnemy : MonoBehaviour
 {
@@ -23,12 +25,14 @@ public class MeleeEnemy : MonoBehaviour
     private PatrolEnemy patrolEnemy;
     private bool isAttacking;
 
+    /** @brief Inicjalizacja referencji do komponentów */
     private void Awake()
     {
         anim = GetComponent<Animator>();
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
     }
 
+    /** @brief Wykrywa gracza i inicjuje atak jeśli jest w zasięgu */
     private void Update()
     {
         if (isAttacking) return;
@@ -46,6 +50,10 @@ public class MeleeEnemy : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Sprawdza obecność gracza przy pomocy BoxCast
+     * @return true jeśli gracz w zasięgu
+     */
     private bool PlayerInSight()
     {
         // Raycast z boxCollidera wykrywający gracza
@@ -56,12 +64,17 @@ public class MeleeEnemy : MonoBehaviour
         return hit.collider != null;
     }
 
+    /** @brief Rysuje gizmo zasięgu wykrywania gracza w edytorze */
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
+    /**
+     * @brief Wykonuje atak z animacją i opóźnieniem (cooldown)
+     * @return IEnumerator do użycia w coroutine
+     */
     private IEnumerator DamagePlayer()
     {
         isAttacking = true;

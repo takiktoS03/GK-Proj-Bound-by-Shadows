@@ -1,0 +1,364 @@
+\doxysection{Dokumentacja klasy Sound\+Manager}
+\hypertarget{class_sound_manager}{}\label{class_sound_manager}\index{SoundManager@{SoundManager}}
+
+
+Centralny mened¿er efektów dŸwiêkowych w grze.  
+
+
+Diagram dziedziczenia dla Sound\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sound_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sound_manager_ad6da0ba36db9f36c62d26c8e2ab87ea1}{Play\+Sound}} (Audio\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Odtwarza pojedynczy dŸwiêk z podanego Audio\+Clip. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a41cb370d42c49b066dcd718ee7bef2dc}{Start\+Steps}} ()
+\begin{DoxyCompactList}\small\item\em Rozpoczyna zapêtlone odtwarzanie dŸwiêku kroków. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a01b4cf78c0c47d9359b2e4180d20959b}{Stop\+Steps}} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymuje zapêtlony dŸwiêk kroków. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a189078c294fcc462c5b867fb5bcef62e}{Play\+Step}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk kroku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a47a0c98e40bbc9143f33d512c0049189}{Play\+Chest}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk otwierania skrzyni. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_ae79707363159c605c3a1e18eb0b158fe}{Play\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk skoku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a194e8a8d6b06168dc78436c4d91c5942}{Play\+Dash}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk dashowania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a73127458c67bde808b5484986755a8f8}{Play\+Hurt}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk obra¿eñ. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a8b083f8d6857cd10265ab3b32dafaed4}{Play\+Door}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk otwierania drzwi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_aa1cd55425ae455f966b494d874a1e2fa}{Play\+Barrel}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk zniszczenia beczki. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_ad7e89123db9cb636bfd59fa7aa04efa7}{Play\+Light\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk lekkiego ataku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_ad91354515d2eb78c943604ba2851b0b8}{Play\+Heavy\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk ciê¿kiego ataku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a09e84de31fd96a0919498e85ea1e5be7}{Play\+Lever}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk u¿ycia dŸwigni. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a5ac1b4f763535e5f52ccd1ac6f9c50e2}{Play\+Stone}} ()
+\begin{DoxyCompactList}\small\item\em Odtwarza dŸwiêk przesuwania kamienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_aa4a330f24c6cc95bcfd23d11c243e7d7}{door\+Open\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk otwierania drzwi. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a64e18d1b29b3768baff81ba30c162644}{chest\+Open\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk otwierania skrzyni. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a7a1e295a9929db6995c89b464ab6789e}{destroy\+Barrel\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk zniszczenia beczki. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a77668bb952268a8b00fc5d6d36a13b50}{light\+Attack\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk lekkiego ataku. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_aebc53da3115094a1545824f44b78083b}{heavy\+Attack\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk ciê¿kiego ataku. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_ab7c74720212fd3acbba7f937eb0c1768}{jump\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk skoku. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a7b30dbad130fae1ae7ec342f2f55c360}{dash\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk dashowania. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a82c5cb564b231662724004f10efb98bd}{hurt\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk otrzymania obra¿eñ. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a90d3e4a2f3036c6f77f890a7e1bda789}{step\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk kroków bohatera. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a70c9132cd222384fab7498c4b832ed60}{lever\+Pull\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk poci¹gniêcia za dŸwigniê. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_sound_manager_a398676b21886d576dca16a2caa85e7a5}{move\+Stone\+Sound}}
+\begin{DoxyCompactList}\small\item\em DŸwiêk przesuwania kamienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \mbox{\hyperlink{class_sound_manager_a4ceb176bb67059b35136a96fd9221824}{Instance}}
+\begin{DoxyCompactList}\small\item\em Instancja singletonu \doxylink{class_sound_manager}{Sound\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegÃ³Å‚owy}
+Centralny mened¿er efektów dŸwiêkowych w grze. 
+
+Implementuje wzorzec singletonu. Udostêpnia metody do odtwarzania konkretnych efektów dŸwiêkowych, takich jak ataki, otwieranie skrzyni, dŸwiêki ³amig³ówek czy kroki bohatera. Kroki obs³ugiwane s¹ osobnym Ÿród³em dŸwiêku ({\ttfamily step\+Source}) jako dŸwiêk zapêtlony.
+
+\begin{DoxyAuthor}{Autor}
+Julia Bigaj 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{class_sound_manager_doc-func-members}
+\doxysubsection{Dokumentacja funkcji skÅ‚adowych}
+\Hypertarget{class_sound_manager_aa1cd55425ae455f966b494d874a1e2fa}\index{SoundManager@{SoundManager}!PlayBarrel@{PlayBarrel}}
+\index{PlayBarrel@{PlayBarrel}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayBarrel()}{PlayBarrel()}}
+{\footnotesize\ttfamily \label{class_sound_manager_aa1cd55425ae455f966b494d874a1e2fa} 
+void Sound\+Manager.\+Play\+Barrel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk zniszczenia beczki. 
+
+\Hypertarget{class_sound_manager_a47a0c98e40bbc9143f33d512c0049189}\index{SoundManager@{SoundManager}!PlayChest@{PlayChest}}
+\index{PlayChest@{PlayChest}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayChest()}{PlayChest()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a47a0c98e40bbc9143f33d512c0049189} 
+void Sound\+Manager.\+Play\+Chest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk otwierania skrzyni. 
+
+\Hypertarget{class_sound_manager_a194e8a8d6b06168dc78436c4d91c5942}\index{SoundManager@{SoundManager}!PlayDash@{PlayDash}}
+\index{PlayDash@{PlayDash}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayDash()}{PlayDash()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a194e8a8d6b06168dc78436c4d91c5942} 
+void Sound\+Manager.\+Play\+Dash (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk dashowania. 
+
+\Hypertarget{class_sound_manager_a8b083f8d6857cd10265ab3b32dafaed4}\index{SoundManager@{SoundManager}!PlayDoor@{PlayDoor}}
+\index{PlayDoor@{PlayDoor}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayDoor()}{PlayDoor()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a8b083f8d6857cd10265ab3b32dafaed4} 
+void Sound\+Manager.\+Play\+Door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk otwierania drzwi. 
+
+\Hypertarget{class_sound_manager_ad91354515d2eb78c943604ba2851b0b8}\index{SoundManager@{SoundManager}!PlayHeavyAttack@{PlayHeavyAttack}}
+\index{PlayHeavyAttack@{PlayHeavyAttack}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayHeavyAttack()}{PlayHeavyAttack()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ad91354515d2eb78c943604ba2851b0b8} 
+void Sound\+Manager.\+Play\+Heavy\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk ciê¿kiego ataku. 
+
+\Hypertarget{class_sound_manager_a73127458c67bde808b5484986755a8f8}\index{SoundManager@{SoundManager}!PlayHurt@{PlayHurt}}
+\index{PlayHurt@{PlayHurt}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayHurt()}{PlayHurt()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a73127458c67bde808b5484986755a8f8} 
+void Sound\+Manager.\+Play\+Hurt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk obra¿eñ. 
+
+\Hypertarget{class_sound_manager_ae79707363159c605c3a1e18eb0b158fe}\index{SoundManager@{SoundManager}!PlayJump@{PlayJump}}
+\index{PlayJump@{PlayJump}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayJump()}{PlayJump()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ae79707363159c605c3a1e18eb0b158fe} 
+void Sound\+Manager.\+Play\+Jump (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk skoku. 
+
+\Hypertarget{class_sound_manager_a09e84de31fd96a0919498e85ea1e5be7}\index{SoundManager@{SoundManager}!PlayLever@{PlayLever}}
+\index{PlayLever@{PlayLever}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayLever()}{PlayLever()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a09e84de31fd96a0919498e85ea1e5be7} 
+void Sound\+Manager.\+Play\+Lever (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk u¿ycia dŸwigni. 
+
+\Hypertarget{class_sound_manager_ad7e89123db9cb636bfd59fa7aa04efa7}\index{SoundManager@{SoundManager}!PlayLightAttack@{PlayLightAttack}}
+\index{PlayLightAttack@{PlayLightAttack}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayLightAttack()}{PlayLightAttack()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ad7e89123db9cb636bfd59fa7aa04efa7} 
+void Sound\+Manager.\+Play\+Light\+Attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk lekkiego ataku. 
+
+\Hypertarget{class_sound_manager_ad6da0ba36db9f36c62d26c8e2ab87ea1}\index{SoundManager@{SoundManager}!PlaySound@{PlaySound}}
+\index{PlaySound@{PlaySound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlaySound()}{PlaySound()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ad6da0ba36db9f36c62d26c8e2ab87ea1} 
+void Sound\+Manager.\+Play\+Sound (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odtwarza pojedynczy dŸwiêk z podanego Audio\+Clip. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em clip} & DŸwiêk do odtworzenia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a189078c294fcc462c5b867fb5bcef62e}\index{SoundManager@{SoundManager}!PlayStep@{PlayStep}}
+\index{PlayStep@{PlayStep}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayStep()}{PlayStep()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a189078c294fcc462c5b867fb5bcef62e} 
+void Sound\+Manager.\+Play\+Step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk kroku. 
+
+\Hypertarget{class_sound_manager_a5ac1b4f763535e5f52ccd1ac6f9c50e2}\index{SoundManager@{SoundManager}!PlayStone@{PlayStone}}
+\index{PlayStone@{PlayStone}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayStone()}{PlayStone()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a5ac1b4f763535e5f52ccd1ac6f9c50e2} 
+void Sound\+Manager.\+Play\+Stone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Odtwarza dŸwiêk przesuwania kamienia. 
+
+\Hypertarget{class_sound_manager_a41cb370d42c49b066dcd718ee7bef2dc}\index{SoundManager@{SoundManager}!StartSteps@{StartSteps}}
+\index{StartSteps@{StartSteps}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{StartSteps()}{StartSteps()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a41cb370d42c49b066dcd718ee7bef2dc} 
+void Sound\+Manager.\+Start\+Steps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rozpoczyna zapêtlone odtwarzanie dŸwiêku kroków. 
+
+\Hypertarget{class_sound_manager_a01b4cf78c0c47d9359b2e4180d20959b}\index{SoundManager@{SoundManager}!StopSteps@{StopSteps}}
+\index{StopSteps@{StopSteps}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{StopSteps()}{StopSteps()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a01b4cf78c0c47d9359b2e4180d20959b} 
+void Sound\+Manager.\+Stop\+Steps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zatrzymuje zapêtlony dŸwiêk kroków. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_sound_manager_doc-variable-members}
+\doxysubsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\Hypertarget{class_sound_manager_a64e18d1b29b3768baff81ba30c162644}\index{SoundManager@{SoundManager}!chestOpenSound@{chestOpenSound}}
+\index{chestOpenSound@{chestOpenSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{chestOpenSound}{chestOpenSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a64e18d1b29b3768baff81ba30c162644} 
+Audio\+Clip Sound\+Manager.\+chest\+Open\+Sound}
+
+
+
+DŸwiêk otwierania skrzyni. 
+
+\Hypertarget{class_sound_manager_a7b30dbad130fae1ae7ec342f2f55c360}\index{SoundManager@{SoundManager}!dashSound@{dashSound}}
+\index{dashSound@{dashSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{dashSound}{dashSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a7b30dbad130fae1ae7ec342f2f55c360} 
+Audio\+Clip Sound\+Manager.\+dash\+Sound}
+
+
+
+DŸwiêk dashowania. 
+
+\Hypertarget{class_sound_manager_a7a1e295a9929db6995c89b464ab6789e}\index{SoundManager@{SoundManager}!destroyBarrelSound@{destroyBarrelSound}}
+\index{destroyBarrelSound@{destroyBarrelSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{destroyBarrelSound}{destroyBarrelSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a7a1e295a9929db6995c89b464ab6789e} 
+Audio\+Clip Sound\+Manager.\+destroy\+Barrel\+Sound}
+
+
+
+DŸwiêk zniszczenia beczki. 
+
+\Hypertarget{class_sound_manager_aa4a330f24c6cc95bcfd23d11c243e7d7}\index{SoundManager@{SoundManager}!doorOpenSound@{doorOpenSound}}
+\index{doorOpenSound@{doorOpenSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{doorOpenSound}{doorOpenSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_aa4a330f24c6cc95bcfd23d11c243e7d7} 
+Audio\+Clip Sound\+Manager.\+door\+Open\+Sound}
+
+
+
+DŸwiêk otwierania drzwi. 
+
+\Hypertarget{class_sound_manager_aebc53da3115094a1545824f44b78083b}\index{SoundManager@{SoundManager}!heavyAttackSound@{heavyAttackSound}}
+\index{heavyAttackSound@{heavyAttackSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{heavyAttackSound}{heavyAttackSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_aebc53da3115094a1545824f44b78083b} 
+Audio\+Clip Sound\+Manager.\+heavy\+Attack\+Sound}
+
+
+
+DŸwiêk ciê¿kiego ataku. 
+
+\Hypertarget{class_sound_manager_a82c5cb564b231662724004f10efb98bd}\index{SoundManager@{SoundManager}!hurtSound@{hurtSound}}
+\index{hurtSound@{hurtSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{hurtSound}{hurtSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a82c5cb564b231662724004f10efb98bd} 
+Audio\+Clip Sound\+Manager.\+hurt\+Sound}
+
+
+
+DŸwiêk otrzymania obra¿eñ. 
+
+\Hypertarget{class_sound_manager_a4ceb176bb67059b35136a96fd9221824}\index{SoundManager@{SoundManager}!Instance@{Instance}}
+\index{Instance@{Instance}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_sound_manager_a4ceb176bb67059b35136a96fd9221824} 
+\mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} Sound\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Instancja singletonu \doxylink{class_sound_manager}{Sound\+Manager}. 
+
+\Hypertarget{class_sound_manager_ab7c74720212fd3acbba7f937eb0c1768}\index{SoundManager@{SoundManager}!jumpSound@{jumpSound}}
+\index{jumpSound@{jumpSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{jumpSound}{jumpSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_ab7c74720212fd3acbba7f937eb0c1768} 
+Audio\+Clip Sound\+Manager.\+jump\+Sound}
+
+
+
+DŸwiêk skoku. 
+
+\Hypertarget{class_sound_manager_a70c9132cd222384fab7498c4b832ed60}\index{SoundManager@{SoundManager}!leverPullSound@{leverPullSound}}
+\index{leverPullSound@{leverPullSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{leverPullSound}{leverPullSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a70c9132cd222384fab7498c4b832ed60} 
+Audio\+Clip Sound\+Manager.\+lever\+Pull\+Sound}
+
+
+
+DŸwiêk poci¹gniêcia za dŸwigniê. 
+
+\Hypertarget{class_sound_manager_a77668bb952268a8b00fc5d6d36a13b50}\index{SoundManager@{SoundManager}!lightAttackSound@{lightAttackSound}}
+\index{lightAttackSound@{lightAttackSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{lightAttackSound}{lightAttackSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a77668bb952268a8b00fc5d6d36a13b50} 
+Audio\+Clip Sound\+Manager.\+light\+Attack\+Sound}
+
+
+
+DŸwiêk lekkiego ataku. 
+
+\Hypertarget{class_sound_manager_a398676b21886d576dca16a2caa85e7a5}\index{SoundManager@{SoundManager}!moveStoneSound@{moveStoneSound}}
+\index{moveStoneSound@{moveStoneSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{moveStoneSound}{moveStoneSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a398676b21886d576dca16a2caa85e7a5} 
+Audio\+Clip Sound\+Manager.\+move\+Stone\+Sound}
+
+
+
+DŸwiêk przesuwania kamienia. 
+
+\Hypertarget{class_sound_manager_a90d3e4a2f3036c6f77f890a7e1bda789}\index{SoundManager@{SoundManager}!stepSound@{stepSound}}
+\index{stepSound@{stepSound}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{stepSound}{stepSound}}
+{\footnotesize\ttfamily \label{class_sound_manager_a90d3e4a2f3036c6f77f890a7e1bda789} 
+Audio\+Clip Sound\+Manager.\+step\+Sound}
+
+
+
+DŸwiêk kroków bohatera. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Music\&\+Sound/\mbox{\hyperlink{_sound_manager_8cs}{Sound\+Manager.\+cs}}\end{DoxyCompactItemize}

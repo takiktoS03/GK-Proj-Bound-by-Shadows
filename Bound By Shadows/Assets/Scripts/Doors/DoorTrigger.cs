@@ -1,33 +1,40 @@
 using UnityEngine;
 using TMPro;
 
-/* Ten skrypt obs³uguje interakcjê gracza z drzwiami w grze 2D w Unity.
-   Gdy gracz wejdzie w strefê kolizji drzwi (trigger), pojawia siê komunikat zachêcaj¹cy do interakcji.
-   Naciœniêcie klawisza "F" powoduje:
-   - zmianê sprite'a drzwi na otwarte (jeœli przypisano grafikê),
-   - odtworzenie dŸwiêku drzwi (jeœli SoundManager istnieje),
-   - teleportacjê gracza w okreœlone miejsce (teleportTarget).
-
-   Skrypt oparty jest na systemie kolizji 2D (OnTriggerEnter2D / OnTriggerExit2D), a tekst promptu jest ukrywany/ujawniany dynamicznie.
-
-   Autor: Julia Bigaj
-*/
-
+/**
+ * @class DoorTrigger
+ * @brief Skrypt obs³uguj¹cy teleportacjê gracza po naciœniêciu klawisza, gdy znajduje siê przy drzwiach.
+ *
+ * Po wejœciu gracza w obszar drzwi, pojawia siê tekst podpowiedzi.
+ * Jeœli gracz naciœnie F, gracz zostaje teleportowany, a drzwi zmieniaj¹ wygl¹d.
+ * 
+ * @author Julia Bigaj
+ */
 public class DoorTrigger : MonoBehaviour
 {
-    public GameObject promptText;           // Obiekt z tekstem informuj¹cym gracza o mo¿liwoœci interakcji
-    public Sprite openDoorSprite;           // Sprite drzwi po otwarciu
-    public Transform teleportTarget;        // Pozycja, do której teleportowany jest gracz
+    [Tooltip("Obiekt z tekstem podpowiedzi")]
+    public GameObject promptText;
+
+    [Tooltip("Sprite przedstawiaj¹cy otwarte drzwi")]
+    public Sprite openDoorSprite;
+
+    [Tooltip("Pozycja docelowa teleportacji gracza")]
+    public Transform teleportTarget;
+
     private SpriteRenderer spriteRenderer;  // Komponent renderuj¹cy sprite drzwi
     private bool playerInTrigger = false;   // Czy gracz znajduje siê w triggerze
     private GameObject player;              // Referencja do obiektu gracza
 
+    /** @brief Inicjalizacja zmiennych i ukrycie podpowiedzi */
     private void Start()
     {
         promptText.SetActive(false);
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    /** 
+     * @brief Sprawdza naciœniêcie klawisza F i teleportuje gracza 
+     */
     private void Update()
     {
         if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
@@ -47,6 +54,10 @@ public class DoorTrigger : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Pokazuje podpowiedŸ po wejœciu gracza w trigger
+     * @param other Obiekt koliduj¹cy (oczekiwany tag: "Player")
+     */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -57,6 +68,10 @@ public class DoorTrigger : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Ukrywa podpowiedŸ po wyjœciu gracza z triggera
+     * @param other Obiekt koliduj¹cy (oczekiwany tag: "Player")
+     */
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
