@@ -74,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fa305bbc1fc1cee4bb32302b595bbcc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -248,9 +248,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 102
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: fa305bbc1fc1cee4bb32302b595bbcc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -327,7 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8121889185970313890}
   - component: {fileID: 2113469772435032290}
-  - component: {fileID: 3498882064619358154}
+  - component: {fileID: 1083835217842292359}
   m_Layer: 5
   m_Name: HP Ghost Bar
   m_TagString: Untagged
@@ -392,9 +392,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c5c71ce0da0fdfe47b0fb9d64f31c43e, type: 3}
   m_Color: {r: 1, g: 0.2, b: 0.20784314, a: 1}
   m_FlipX: 0
@@ -406,7 +406,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
---- !u!210 &3498882064619358154
+--- !u!210 &1083835217842292359
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,7 +416,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1 &5279595509254943234
 GameObject:
@@ -493,9 +493,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 34ba8c01ac70d1c418c6a92d71972fc9, type: 3}
   m_Color: {r: 0.30980393, g: 0.29803923, b: 0.29803923, a: 0.5019608}
   m_FlipX: 0
@@ -590,7 +590,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 198711937
-  m_SortingLayer: 4
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1510828076388047741, guid: d421c6866696d3e46a5c4552d78a130a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -851,6 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4332248222009528137}
   - component: {fileID: 714404907963668514}
+  - component: {fileID: 7381239178706169447}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -896,7 +897,7 @@ MonoBehaviour:
     _uiPrimaryBar: {fileID: 0}
     _uiGhostBar: {fileID: 0}
     _adaptiveColor: 0
-    _barPrimaryColor: {r: 1, g: 0.2, b: 0.20784314, a: 1}
+    _barPrimaryColor: {r: 1, g: 0.19999999, b: 0.28734282, a: 1}
     _barAdaptiveColor: {r: 0, g: 1, b: 0.043819427, a: 1}
     _useGhostBar: 1
     _dualGhostBars: 1
@@ -958,6 +959,18 @@ MonoBehaviour:
       ease: 8
       animAxis: 0
       transformProperty: 0
+--- !u!210 &7381239178706169447
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468837472154033592}
+  m_Enabled: 1
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &6641254185020940018
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8408616131479379926}
   - component: {fileID: 3322797874092925040}
-  - component: {fileID: 4524710673878524994}
+  - component: {fileID: 40440286256007153}
   m_Layer: 5
   m_Name: HP Bar
   m_TagString: Untagged
@@ -1033,9 +1046,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 102
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 9
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: c5c71ce0da0fdfe47b0fb9d64f31c43e, type: 3}
   m_Color: {r: 1, g: 0.2, b: 0.20784314, a: 1}
   m_FlipX: 0
@@ -1047,7 +1060,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
---- !u!210 &4524710673878524994
+--- !u!210 &40440286256007153
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1057,5 +1070,5 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 102
+  m_SortingOrder: 0
   m_SortAtRoot: 0

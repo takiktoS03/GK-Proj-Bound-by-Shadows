@@ -67,5 +67,8 @@ TagManager:
   - name: Effect
     uniqueID: 3472922647
     locked: 0
+  - name: Texts
+    uniqueID: 1592404637
+    locked: 0
   m_RenderingLayers:
   - Default
