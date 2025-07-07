@@ -43,5 +43,29 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2667432411
+    locked: 0
+  - name: Lava
+    uniqueID: 88538199
+    locked: 0
+  - name: Ground
+    uniqueID: 3736417525
+    locked: 0
+  - name: DecorationBehindPlayer
+    uniqueID: 2848059469
+    locked: 0
+  - name: Traps
+    uniqueID: 2242392349
+    locked: 0
+  - name: Barrels
+    uniqueID: 1514557193
+    locked: 0
+  - name: Characters
+    uniqueID: 198711937
+    locked: 0
+  - name: Effect
+    uniqueID: 3472922647
+    locked: 0
   m_RenderingLayers:
   - Default
