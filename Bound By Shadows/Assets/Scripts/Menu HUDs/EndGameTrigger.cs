@@ -21,7 +21,7 @@ public class EndGameTrigger : MonoBehaviour
     public float fadeDuration = 1.5f;
 
     /// @brief Nazwa sceny głównego menu, do której następuje powrót po zakończeniu gry.
-    public string mainMenuSceneName = "MainMenu";
+    public string mainMenuSceneName = "Cave";
 
     /// @brief Czy aktualnie trwa proces przyciemniania.
     private bool isFading = false;
