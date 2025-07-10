@@ -27,7 +27,8 @@ public class Bootstrapper : MonoBehaviour
             SceneManager.LoadScene("InitScene", LoadSceneMode.Additive);
         }
 
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level 1 -Cave", LoadSceneMode.Single); //na potrzeby szybkiego dostania sie do gry
+        //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
 
