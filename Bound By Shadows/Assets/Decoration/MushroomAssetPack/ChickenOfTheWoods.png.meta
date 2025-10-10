@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e66f7744fc2b344895741d4bb65253c
+guid: e7cd19c8f6a9b1b488a755cf22add78e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477269147281975650
-    second: ParallaxCave1_0
+      213: 6138802971920142366
+    second: ChickenOfTheWoods_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave1_0
+      name: ChickenOfTheWoods_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 1088
+        x: 53
+        y: 37
+        width: 327
+        height: 352
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e961170ae6b8dd1c0800000000000000
-      internalID: -4477269147281975650
+      spriteID: e10996737c8613550800000000000000
+      internalID: 6138802971920142366
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParallaxCave1_0: -4477269147281975650
+      ChickenOfTheWoods_0: 6138802971920142366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

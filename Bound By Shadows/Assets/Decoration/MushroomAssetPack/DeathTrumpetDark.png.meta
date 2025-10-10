@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e66f7744fc2b344895741d4bb65253c
+guid: 1825e8eb5d57247409d0ef52d31023c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477269147281975650
-    second: ParallaxCave1_0
+      213: -7647089353646839496
+    second: DeathTrumpetDark_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave1_0
+      name: DeathTrumpetDark_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 1088
+        x: 25
+        y: 30
+        width: 303
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e961170ae6b8dd1c0800000000000000
-      internalID: -4477269147281975650
+      spriteID: 8396536bfb410e590800000000000000
+      internalID: -7647089353646839496
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParallaxCave1_0: -4477269147281975650
+      DeathTrumpetDark_0: -7647089353646839496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

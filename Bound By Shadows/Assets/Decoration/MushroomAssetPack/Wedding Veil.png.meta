@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3e66f7744fc2b344895741d4bb65253c
+guid: c7b470547ec6aa144a14ceead7433b74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477269147281975650
-    second: ParallaxCave1_0
+      213: -6063991973078054722
+    second: Wedding Veil_0
+  - first:
+      213: -8726802974154425265
+    second: Wedding Veil_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave1_0
+      name: Wedding Veil_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 1088
+        x: 22
+        y: 20
+        width: 311
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e961170ae6b8dd1c0800000000000000
-      internalID: -4477269147281975650
+      spriteID: eb8ccdbcd6f58dba0800000000000000
+      internalID: -6063991973078054722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wedding Veil_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 444
+        width: 65
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cf3bc7eea24e680800000000000000
+      internalID: -8726802974154425265
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParallaxCave1_0: -4477269147281975650
+      Wedding Veil_0: -6063991973078054722
+      Wedding Veil_1: -8726802974154425265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

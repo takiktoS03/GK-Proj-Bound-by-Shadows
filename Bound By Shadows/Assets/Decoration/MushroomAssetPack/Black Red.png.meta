@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e66f7744fc2b344895741d4bb65253c
+guid: 7d41e1a191218664b8e597a69d4721c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477269147281975650
-    second: ParallaxCave1_0
+      213: -4072139167326859237
+    second: Black Red_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave1_0
+      name: Black Red_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 1088
+        x: 12
+        y: 13
+        width: 195
+        height: 169
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e961170ae6b8dd1c0800000000000000
-      internalID: -4477269147281975650
+      spriteID: b10178f900bdc77c0800000000000000
+      internalID: -4072139167326859237
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParallaxCave1_0: -4477269147281975650
+      Black Red_0: -4072139167326859237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

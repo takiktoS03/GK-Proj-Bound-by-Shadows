@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e66f7744fc2b344895741d4bb65253c
+guid: b309dfa12299f094ea4a0ec19f8727b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477269147281975650
-    second: ParallaxCave1_0
+      213: -81414859128975589
+    second: phillipsia subpurpurea_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ParallaxCave1_0
+      name: phillipsia subpurpurea_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1152
-        height: 1088
+        x: 50
+        y: 41
+        width: 396
+        height: 409
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e961170ae6b8dd1c0800000000000000
-      internalID: -4477269147281975650
+      spriteID: b1fcd22fd91cedef0800000000000000
+      internalID: -81414859128975589
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ParallaxCave1_0: -4477269147281975650
+      phillipsia subpurpurea_0: -81414859128975589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
