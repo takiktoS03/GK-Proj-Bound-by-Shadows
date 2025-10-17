@@ -65,7 +65,7 @@ namespace EthanTheHero
         public float dashingCoolDown = 1f;
 
         /// @brief Czas trwania dasza.
-        public float dashingTime = 0.2f;
+        public float dashingTime = 0.5f;
 
         /// @brief Koszt dasza w punktach staminy.
         public float dashCost = 20f;
@@ -97,17 +97,17 @@ namespace EthanTheHero
         /**
          * @brief Automatycznie aktualizuje dane zależne i ogranicza wartości w edytorze Unity.
          */
-        private void OnValidate()
-        {
-            runAccelAmount = (50 * runAcceleration) / runMaxSpeed;
-            runDeccelAmount = (50 * runDecceleration) / runMaxSpeed;
+        //private void OnValidate()
+        //{
+        //    runAccelAmount = (50 * runAcceleration) / runMaxSpeed;
+        //    runDeccelAmount = (50 * runDecceleration) / runMaxSpeed;
 
-            // Ograniczenia zakresów
-            #region Variable Ranges
-            runAcceleration = Mathf.Clamp(runAcceleration, 0.01f, runMaxSpeed);
-            runDecceleration = Mathf.Clamp(runDecceleration, 0.01f, runMaxSpeed);
-            #endregion
-        }
+        //    // Ograniczenia zakresów
+        //    #region Variable Ranges
+        //    runAcceleration = Mathf.Clamp(runAcceleration, 0.01f, runMaxSpeed);
+        //    runDecceleration = Mathf.Clamp(runDecceleration, 0.01f, runMaxSpeed);
+        //    #endregion
+        //}
     }
 }
 
