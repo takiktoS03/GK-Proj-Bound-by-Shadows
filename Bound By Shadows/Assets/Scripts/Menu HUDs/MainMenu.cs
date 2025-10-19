@@ -20,7 +20,8 @@ public class MainMenu : MonoBehaviour
      */
     public void StartNewGame()
     {
-        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
     }
 
@@ -33,7 +34,8 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("[UI] LoadGame clicked");
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
     }
 
     /**
