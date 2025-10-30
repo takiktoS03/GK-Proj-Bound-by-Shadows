@@ -46,8 +46,10 @@ public class PauseMenu : MonoBehaviour
      */
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Level 1 - Cave")
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName != "Level 1 - Cave" && sceneName != "Cave")
             return;
+
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 /**
  * @class Bootstrapper
@@ -15,21 +16,25 @@ using UnityEngine.SceneManagement;
  */
 public class Bootstrapper : MonoBehaviour
 {
-    /**
-     * @brief Inicjuje ładowanie scen startowych po uruchomieniu gry.
-     *
-     * Ładuje InitScene (jeśli nie jest już załadowana) i przełącza do MainMenu.
-     */
     void Start()
     {
+        StartCoroutine(InitializeGame());
+    }
+
+    private IEnumerator InitializeGame()
+    {
+        // Jeśli InitScene nie jest jeszcze załadowana, załaduj ją ADDITIVE
         if (!SceneManager.GetSceneByName("InitScene").isLoaded)
         {
-            SceneManager.LoadScene("InitScene", LoadSceneMode.Additive);
+            AsyncOperation asyncInit = SceneManager.LoadSceneAsync("InitScene", LoadSceneMode.Additive);
+            yield return new WaitUntil(() => asyncInit.isDone);
         }
 
-        SceneManager.LoadScene("Cave", LoadSceneMode.Single); //na potrzeby szybkiego dostania sie do gry
-        //SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single); //na potrzeby szybkiego dostania sie do gry
-        //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        // Teraz InitScene jest na pewno w pamięci
+        Debug.Log(" InitScene loaded, now loading Cave...");
+
+        // Wczytaj scenę docelową jako główną
+        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
     }
 }
 

@@ -64,8 +64,21 @@ public class InventoryManager : MonoBehaviour
      */
     public void AddLetter(LetterData newLetter)
     {
+        if (newLetter == null)
+        {
+            Debug.LogError(" AddLetter: newLetter == null!");
+            return;
+        }
+
+        if (newLetter.icon == null)
+        {
+            Debug.LogError(" AddLetter: newLetter.icon == null dla listu: " + newLetter.icon.name);
+            return;
+        }
+
         collectedLetters.Add(newLetter);
-        Debug.Log("Dodano list do ekwipunku: " + newLetter.icon.name);
+        Debug.Log(" Dodano list do ekwipunku: " + newLetter.icon.name);
     }
+
 }
 
