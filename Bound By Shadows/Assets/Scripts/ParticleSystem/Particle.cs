@@ -40,4 +40,16 @@ public class Particle
 
         return true;
     }
+
+    public void ApplyEffects(Gradient colorOverLifetime, AnimationCurve scaleOverLifetime)
+    {
+        float t = age / lifetime;
+
+        Color newColor = colorOverLifetime.Evaluate(t);
+        var sr = sprite.GetComponent <SpriteRenderer>();
+        sr.color = newColor;
+
+        float scale = scaleOverLifetime.Evaluate(t);
+        sprite.transform.localScale = Vector3.one * scale;
+    }
 }

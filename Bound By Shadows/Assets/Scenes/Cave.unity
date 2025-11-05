@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f57b3867709ce3499eb2da93ccd5e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlePrefab: {fileID: 7446646479814326448, guid: a1cbdc1cd3b6fa14abce3613bd2d264b, type: 3}
+  particlePrefab: {fileID: 2139914595399614883, guid: 08ae089481617734d972cf77b297196b, type: 3}
 --- !u!4 &13716050
 Transform:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 13716048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -253.02, y: -37.94, z: 0}
+  m_LocalPosition: {x: -217.6, y: -63.41, z: 0}
   m_LocalScale: {x: -0.5375792, y: -0.42479116, z: -0.095998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7759,6 +7759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundCave
       objectReference: {fileID: 0}
+    - target: {fileID: 540991834003134152, guid: b24201b7cec5017419aed38fa0babcb4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1296623349918641534, guid: b24201b7cec5017419aed38fa0babcb4, type: 3}
       propertyPath: spriteWidth
       value: 30
@@ -7986,11 +7990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -206.44
+      value: -218.72
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -59.22
+      value: -58.98
       objectReference: {fileID: 0}
     - target: {fileID: 2932544384632569568, guid: 476b14df2b4ead44db93ebaf35510620, type: 3}
       propertyPath: m_LocalPosition.z
