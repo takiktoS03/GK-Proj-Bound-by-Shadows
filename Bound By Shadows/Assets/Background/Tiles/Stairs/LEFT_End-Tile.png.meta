@@ -144,8 +144,7 @@ TextureImporter:
     customData: 
     physicsShape:
     - - {x: 512, y: -358}
-      - {x: 512, y: 127}
-      - {x: 442, y: 127}
+      - {x: 512, y: 162}
       - {x: -512, y: -358}
     bones: []
     spriteID: a3847a77b5c3e244380275874225a39c
