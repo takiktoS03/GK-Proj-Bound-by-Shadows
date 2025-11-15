@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\ghost\\ghostrendererfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ghost\\ghostrendererfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\ghost\\ghostmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ghost\\ghostmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\core\\ghostcamerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\ghostcamerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\ghost\\ghostfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ghost\\ghostfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\ghost\\encounteredghostdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ghost\\encounteredghostdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\player\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\lightningsystem\\lightningmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,40 +58,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GhostRendererFeature.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostRendererFeature.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ghost\\GhostRendererFeature.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostRendererFeature.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ghost\\GhostRendererFeature.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "EncounteredGhostDialog.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\EncounteredGhostDialog.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ghost\\EncounteredGhostDialog.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\EncounteredGhostDialog.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ghost\\EncounteredGhostDialog.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAC0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T18:52:02.363Z",
+              "WhenOpened": "2025-11-14T23:43:54.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GhostCameraFollow.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Core\\GhostCameraFollow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\GhostCameraFollow.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Core\\GhostCameraFollow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\GhostCameraFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GhostMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ghost\\GhostMovement.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ghost\\GhostMovement.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwD0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T18:36:15.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GhostFollow.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostFollow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ghost\\GhostFollow.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Ghost\\GhostFollow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ghost\\GhostFollow.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T18:31:55.804Z"
+              "WhenOpened": "2025-11-14T23:40:05.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -105,25 +90,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\PlayerHealth.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\PlayerHealth.cs",
               "RelativeToolTip": "Assets\\Scripts\\Health\\PlayerHealth.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwFMAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowFMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T18:59:48.827Z"
+              "WhenOpened": "2025-11-05T18:59:48.827Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAgwKwAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T18:29:02.801Z"
+              "WhenOpened": "2025-11-05T18:29:02.801Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "LightningManager.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\LightningSystem\\LightningManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LightningSystem\\LightningManager.cs",

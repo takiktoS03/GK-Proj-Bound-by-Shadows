@@ -26,16 +26,25 @@ public class EncounteredGhostDialog : MonoBehaviour
 
     private AudioSource audioSource;
 
-    /// @brief Duszek do ukrycia po zakończeniu dialogu.
-    public GameObject encounteredGhost;
-
-    /// @brief Duszek z kamerą do pokazania po dialogu.
-    public GameObject ghostWithCam;
+    /// @brief Obiekt duszka
+    public GameObject ghost;
+    /// @brief Pozycja gracza
+    public Transform player;
 
     private PlayerMovement movement;
     private PlayerAnimation anim;
     private PlayerAttackMethod attackMethod;
+    private GhostMovement ghostMov;
     private bool hasTriggered = false;
+
+    private KeyCode skipKey = KeyCode.Space;
+    private bool skipPressedThisLine = false; // anti-spam protection
+
+
+    private void Awake()
+    {
+        ghostMov = ghost.GetComponent<GhostMovement>();
+    }
 
     /**
      * @brief Wywołuje dialog, gdy gracz wchodzi w strefę kolizji.
@@ -47,7 +56,6 @@ public class EncounteredGhostDialog : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         audioSource = gameObject.AddComponent<AudioSource>();
-
 
         hasTriggered = true;
         SoundManager.Instance?.StopSteps();
@@ -95,37 +103,34 @@ public class EncounteredGhostDialog : MonoBehaviour
     {
         textUI.ShowTextDialog(dialog1, 2f);
         PlayVoice(dialog1Audio);
-        yield return new WaitForSeconds(2f);
+        yield return StartCoroutine(WaitOrSkip(2f));
 
         textUI.ShowTextDialog(dialog2, 10f);
         PlayVoice(dialog2Audio);
-        yield return new WaitForSeconds(10f);
+        yield return StartCoroutine(WaitOrSkip(10f));
 
         textUI.ShowTextDialog(dialog3, 6f);
         PlayVoice(dialog3Audio);
-        yield return new WaitForSeconds(6f);
+        yield return StartCoroutine(WaitOrSkip(6f));
 
         textUI.ShowTextDialog(dialog4, 10f);
         PlayVoice(dialog4Audio);
-        yield return new WaitForSeconds(10f);
+        yield return StartCoroutine(WaitOrSkip(10f));
 
-        if (encounteredGhost != null)
-            encounteredGhost.SetActive(false);
 
-        if (ghostWithCam != null)
-            ghostWithCam.SetActive(true);
+        // odblokowanie movementu
+        if (ghost != null)
+        {
+            ghostMov.player = player;
+        }
 
-        if (movement != null)
-            movement.enabled = true;
-
-        if (anim != null)
-            anim.enabled = true;
-
-        if (attackMethod != null)
-            attackMethod.enabled = true;
+        if (movement != null) movement.enabled = true;
+        if (anim != null) anim.enabled = true;
+        if (attackMethod != null) attackMethod.enabled = true;
 
         Destroy(gameObject);
     }
+
 
     /**
      * @brief Odtwarza dźwięk mowy (głosu) z podanego klipu audio.
@@ -141,6 +146,30 @@ public class EncounteredGhostDialog : MonoBehaviour
             audioSource.Stop();
             audioSource.PlayOneShot(clip);
         }
+    }
+
+    /**
+     * @brief Pozwala na pominięcie dialogu za pomocą klawisza, lub normalne odtworzenie
+     * 
+     * @param time Czas pojedynczego dialogu
+     */
+    private IEnumerator WaitOrSkip(float time)
+    {
+        skipPressedThisLine = false;
+        float timer = 0f;
+
+        while (timer < time)
+        {
+            if (!skipPressedThisLine && Input.GetKeyDown(skipKey))
+            {
+                skipPressedThisLine = true;
+                break;
+            }
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        yield return null;
     }
 
 }
