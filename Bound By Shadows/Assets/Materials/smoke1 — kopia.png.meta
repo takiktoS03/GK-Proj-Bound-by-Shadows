@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 3d97e22b2f8712f44b966371bbbd0d53
+guid: 7b1c2b5d5341ea44db273ba4bd8d7e1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1446792919685844086
-    second: 48_0
+      213: -8731310172045784265
+    second: "smoke1 \u2014 kopia_0"
   - first:
-      213: 783648166708620988
-    second: 48_1
+      213: 8738598007475384200
+    second: "smoke1 \u2014 kopia_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 48_0
+      name: "smoke1 \u2014 kopia_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 4440
-        height: 2999
+        x: 20
+        y: 1
+        width: 467
+        height: 506
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67ccc69be7a041410800000000000000
-      internalID: 1446792919685844086
+      spriteID: 73bc473b8a724d680800000000000000
+      internalID: -8731310172045784265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 48_1
+      name: "smoke1 \u2014 kopia_1"
       rect:
         serializedVersion: 2
-        x: 3372
-        y: 0
-        width: 8
-        height: 5
+        x: 209
+        y: 504
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbead8d0bd310ea00800000000000000
-      internalID: 783648166708620988
+      spriteID: 88fa186b69cb54970800000000000000
+      internalID: 8738598007475384200
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      48_0: 1446792919685844086
-      48_1: 783648166708620988
+      "smoke1 \u2014 kopia_0": -8731310172045784265
+      "smoke1 \u2014 kopia_1": 8738598007475384200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

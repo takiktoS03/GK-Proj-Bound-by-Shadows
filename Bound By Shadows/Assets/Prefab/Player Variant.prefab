@@ -171,6 +171,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 61006046652737152, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 61006046652737152, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.109375
+      objectReference: {fileID: 0}
     - target: {fileID: 114889116844108038, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
       propertyPath: runAudioClip
       value: 
@@ -184,6 +192,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212310412405186324, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 212310412405186324, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.109375
+      objectReference: {fileID: 0}
+    - target: {fileID: 212310412405186324, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eae25c9ff1b744444b662701b07e1cfa, type: 3}
+    - target: {fileID: 212310412405186324, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -195,9 +215,13 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212310412405186324, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3803758030748878701, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
       propertyPath: uniqueId
-      value: b6bb6750-2c64-42d5-9623-b38d56828bcd
+      value: 9dca2d48-d1eb-411d-adc8-674cf95bb623
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

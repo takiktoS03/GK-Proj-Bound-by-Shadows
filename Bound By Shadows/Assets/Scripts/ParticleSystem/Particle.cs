@@ -8,9 +8,10 @@ public class Particle
     public float lifetime;
     public float age;
     public Color color;
-    public GameObject sprite;
+    public GameObject spriteObject;
+    private SpriteRenderer spriteRenderer;
 
-    public Particle (Vector2 pos, Vector2 vel, float life, Color col, GameObject prefab)
+    public Particle(Vector2 pos, Vector2 vel, float life, Color col, Material material, Sprite sprite = null)
     {
         position = pos;
         velocity = vel;
@@ -18,38 +19,67 @@ public class Particle
         age = 0f;
         color = col;
 
-        sprite = GameObject.Instantiate(prefab, pos, Quaternion.identity);
-        sprite.GetComponent<SpriteRenderer>().color = col;
+        spriteObject = new GameObject("Particle");
+        spriteObject.transform.position = pos;
+
+        spriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
+        spriteRenderer.color = col;
+        if (sprite != null)
+            spriteRenderer.sprite = sprite;
+        if (material != null)
+            spriteRenderer.material = material;
+
     }
 
-    public bool Update(float deltaTime) 
+    public bool Update(float deltaTime, Vector2 gravity, float airResistance, bool enableGroundCollision, float groundY, float bounceFactor, Vector2 wind)
     {
         age += deltaTime;
         if (age > lifetime)
         {
-            GameObject.Destroy(sprite);
+            GameObject.Destroy(spriteObject);
             return false;
         }
 
-        position += velocity * deltaTime;
-        sprite.transform.position = position;
+        velocity += (gravity + wind) * deltaTime;
 
-        float alpha = Mathf.Lerp(1f, 0f, (age / lifetime) * 0.5f);
-        var sr = sprite.GetComponent<SpriteRenderer>();
-        sr.color = new Color(color.r, color.g, color.b, alpha);
+        velocity *= Mathf.Pow(airResistance, deltaTime * 60f);
+
+        position += velocity * deltaTime;
+
+        if (enableGroundCollision && position.y <= groundY) 
+        { 
+            position.y = groundY;
+            velocity.y *= -bounceFactor;
+            if (Mathf.Abs(velocity.y) < 0.1f)
+            {
+                GameObject.Destroy(spriteObject);
+                return false;
+            }
+
+        }
+        spriteObject.transform.position = position;
+
+        //float alpha = Mathf.Lerp(1f, 0f, (age / lifetime) * 0.5f);
+        //var sr = spriteObject.GetComponent<SpriteRenderer>();
+        //sr.color = new Color(color.r, color.g, color.b, alpha);
 
         return true;
     }
 
-    public void ApplyEffects(Gradient colorOverLifetime, AnimationCurve scaleOverLifetime)
+    public void ApplyEffects(Gradient colorOverLifetime, AnimationCurve scaleOverLifetime, AnimationCurve alphaOverLifetime)
     {
         float t = age / lifetime;
 
         Color newColor = colorOverLifetime.Evaluate(t);
-        var sr = sprite.GetComponent <SpriteRenderer>();
-        sr.color = newColor;
+
+        float alpha = alphaOverLifetime.Evaluate(t);
+        newColor.a *= alpha;
+        //var sr = sprite.GetComponent <SpriteRenderer>();
+        //sr.color = newColor;
 
         float scale = scaleOverLifetime.Evaluate(t);
-        sprite.transform.localScale = Vector3.one * scale;
+        spriteRenderer.color = newColor;
+        spriteObject.transform.localScale = Vector3.one * scale;
+        //sprite.transform.localScale = Vector3.one * scale;
     }
 }

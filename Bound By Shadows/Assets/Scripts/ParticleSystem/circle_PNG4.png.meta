@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27f1ac7492794eb4e958c212d95d6740
+guid: ac09c9dddd3cb7744b176b04601e8b1b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      circle_PNG4_0: 2083605746552794672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

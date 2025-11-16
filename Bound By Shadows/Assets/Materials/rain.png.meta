@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 3d97e22b2f8712f44b966371bbbd0d53
+guid: 04f3659e6b7bd664585dedae9aca020b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1446792919685844086
-    second: 48_0
-  - first:
-      213: 783648166708620988
-    second: 48_1
+      213: -6830152201372448578
+    second: rain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 6000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 48_0
+      name: rain_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 4440
-        height: 2999
+        y: 8
+        width: 1024
+        height: 1517
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67ccc69be7a041410800000000000000
-      internalID: 1446792919685844086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 48_1
-      rect:
-        serializedVersion: 2
-        x: 3372
-        y: 0
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbead8d0bd310ea00800000000000000
-      internalID: 783648166708620988
+      spriteID: eb8c753b2cc6631a0800000000000000
+      internalID: -6830152201372448578
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      48_0: 1446792919685844086
-      48_1: 783648166708620988
+      rain_0: -6830152201372448578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

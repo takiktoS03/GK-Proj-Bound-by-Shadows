@@ -2,27 +2,37 @@ using UnityEngine;
 
 public class ParticleSpawner : MonoBehaviour
 {
-    public GameObject particlePrefab;
+    public Material particleMaterial;
+    public Sprite mySprite;
 
     void Start()
     {
         var ps = gameObject.AddComponent<ParticleSystem2D>();
-        ps.particlePrefab = particlePrefab;
+        ps.particleMaterial = particleMaterial;
+        ps.particleSprite = mySprite;
         ps.emissionRate = 50;
-        ps.particleLifetime = 5f;
+        ps.particleLifetime = 8f;
         ps.minSpeed = 1f;
         ps.maxSpeed = 4f;
         ps.directionAngle = 90f;
-        ps.spread = 80f;
+        ps.spread = 50f;
         ps.emissionShape = EmissionShape.Line;
         ps.emissionRadius = 6f;
+        
+        ps.enableGravity = true;
+        ps.gravity = new Vector2(0f, -9.8f);
+        ps.airResistance = 0.99f;
+        ps.enableGroundCollision = true;
+        ps.groundY = -60f;
+        ps.bounceFactor = 0.2f;
+        ps.wind = new Vector2(1f, 0f);
 
         ps.colorOverLifetime = new Gradient
         {
             colorKeys = new GradientColorKey[]
             {
-            new GradientColorKey(Color.red, 0f),
-            new GradientColorKey(Color.yellow, 1f)
+            new GradientColorKey(Color.blue, 0f),
+            new GradientColorKey(Color.blue, 1f)
             },
             alphaKeys = new GradientAlphaKey[]
             {
