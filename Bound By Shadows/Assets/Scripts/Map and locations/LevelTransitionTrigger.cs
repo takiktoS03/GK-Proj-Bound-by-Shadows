@@ -13,12 +13,6 @@ public class LevelTransitionTrigger : MonoBehaviour
     private bool isTransitioning = false;
     private CanvasGroup fadeCanvas;
 
-    private void Start()
-    {
-        // Szukamy obiektu CanvasGroup (np. czarnego overlay)
-        fadeCanvas = FindObjectOfType<CanvasGroup>();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isTransitioning && other.CompareTag("Player"))
@@ -43,7 +37,7 @@ public class LevelTransitionTrigger : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(0.3f); // opcjonalnie
+        yield return new WaitForSeconds(0.3f);
 
         SceneManager.LoadScene(nextSceneName);
     }

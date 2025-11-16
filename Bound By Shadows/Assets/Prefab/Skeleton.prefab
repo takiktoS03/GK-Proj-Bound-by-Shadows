@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 056c156fb30576e46a4ae9212d81a102, type: 2}
-  range: 1.8
+  range: 1.35
   boxCollider: {fileID: 7321484333050501608}
   playerLayer:
     serializedVersion: 2

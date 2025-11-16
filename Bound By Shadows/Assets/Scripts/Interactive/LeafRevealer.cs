@@ -2,15 +2,15 @@
 
 /**
  * @class LeafRevealer
- * @brief Odsłania ukrytą lokalizację, gdy gracz wejdzie w obszar kolizji z liśćmi.
+ * @brief Odsłania ukrytą lokalizację, gdy gracz wejdzie w obszar kolizji.
  *
- * Skrypt przypisany do obiektu z liśćmi. Gdy gracz wejdzie w trigger,
+ * Skrypt przypisany do obiektu. Gdy gracz wejdzie w trigger,
  * zostaje aktywowany wskazany obiekt `hiddenLocation` (np. ukryte przejście).
  * Może być częścią zagadki logicznej lub ukrytego obszaru w grze.
  *
  * @author Julia Bigaj
  */
-public class LeafRevealer : MonoBehaviour
+public class LocationRevealer : MonoBehaviour
 {
     /// @brief Obiekt, który zostanie ujawniony po wejściu gracza w trigger (np. ukryta ścieżka).
     public GameObject hiddenLocation;
@@ -23,7 +23,6 @@ public class LeafRevealer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Gracz wszedł w liście!");
             hiddenLocation.SetActive(true);
         }
     }
