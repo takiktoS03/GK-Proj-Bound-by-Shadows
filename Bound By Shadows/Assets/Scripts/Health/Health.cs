@@ -56,7 +56,7 @@ public class Health : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
         healthBar.UpdateBar(currentHealth);
-        if (currentHealth > 0)
+        if (currentHealth > 0 && !dead)
         {
             anim.SetTrigger("Hurt");
         }
