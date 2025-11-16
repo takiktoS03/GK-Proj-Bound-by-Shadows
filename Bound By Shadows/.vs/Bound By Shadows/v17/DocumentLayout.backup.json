@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\particlesystem\\particle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSpawner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T17:07:21.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T17:07:21.517Z"
             },
             {
               "$type": "Document",
@@ -47,8 +46,7 @@
               "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T17:05:13.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T17:05:13.54Z"
             },
             {
               "$type": "Document",
