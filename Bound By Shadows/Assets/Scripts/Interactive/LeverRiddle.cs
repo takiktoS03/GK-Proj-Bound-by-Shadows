@@ -20,6 +20,7 @@ public class LeverRiddle : MonoBehaviour
     private bool lever1On;
     private bool lever2On;
     private bool lever3On;
+    private bool prevSolved;
 
     /**
      * @brief Sprawdza aktualny stan dźwigni i aktywuje ukryte kafelki, jeśli warunek jest spełniony.
@@ -27,6 +28,7 @@ public class LeverRiddle : MonoBehaviour
     public void CheckCorrectness()
     {
         hiddenTiles.SetActive(false);
+
         lever1On = lever1.GetComponent<LeverTrigger>().leverIsOn;
         lever2On = lever2.GetComponent<LeverTrigger>().leverIsOn;
         lever3On = lever3.GetComponent<LeverTrigger>().leverIsOn;
@@ -34,9 +36,17 @@ public class LeverRiddle : MonoBehaviour
         if (lever1On && !lever2On && lever3On)
         {
             hiddenTiles.SetActive(true);
+            prevSolved = true;
             // dzwiek przesuwania kamienia
             SoundManager.Instance?.PlayStone();
         }
+        else if (prevSolved)
+        {
+            // dodanie dźwięku również, jeśli zagadka była rozwiązana, ale dźwignia została przesunięta w złą pozycję
+            SoundManager.Instance?.PlayStone();
+            prevSolved = false;
+        }
+
     }
 }
 

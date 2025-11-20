@@ -103,10 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  offset: {x: -1, y: 3, z: 0}
+  offset: {x: -1.5, y: 2.5, z: 0}
   floatAmplitude: 0.5
-  floatFrequency: 2
-  smoothSpeed: 3
+  floatFrequency: 1
+  smoothSpeed: 2
 --- !u!1 &2787308047468482039
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +117,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5792201323687042918}
   - component: {fileID: 1088398367112146285}
+  - component: {fileID: 7804860180017876605}
+  - component: {fileID: 2719614922008740361}
+  - component: {fileID: 2875067055226803622}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -191,6 +194,56 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7804860180017876605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787308047468482039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a8e0ddfb3c36c46b83b9ad89687a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2D: {fileID: 1088398367112146285}
+  minIntensity: 0.02
+  maxIntensity: 0.08
+  speed: 2
+  minRadius: 0
+  maxRadius: 2
+--- !u!114 &2719614922008740361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787308047468482039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88dd4872dbeaa4f40b2b0a18986d8c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2D: {fileID: 1088398367112146285}
+  normalColor: {r: 0, g: 0.5803922, b: 1, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  dangerDuration: 3
+  flicker: {fileID: 0}
+--- !u!114 &2875067055226803622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787308047468482039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e722d84a19026499e9c0a4a8279af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light2D: {fileID: 1088398367112146285}
+  intensityVariation: 0.7
+  speed: 5
 --- !u!1 &3817126954668780772
 GameObject:
   m_ObjectHideFlags: 0

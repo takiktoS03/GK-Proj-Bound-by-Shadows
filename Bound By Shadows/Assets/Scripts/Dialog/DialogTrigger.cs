@@ -147,5 +147,6 @@ public class DialogTrigger : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+        yield return null;
     }
 }

@@ -15,6 +15,7 @@ public class AttackHitbox : MonoBehaviour
     /// @brief Warstwa przeciwników, z którymi może kolidować atak.
     [SerializeField] private LayerMask enemyLayer;
 
+    private Health targetHealth;
     private GameObject owner;
     private float damage;
     private float knockback;
@@ -26,9 +27,9 @@ public class AttackHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == owner) return;
-        //if (collision.IsTouchingLayers(enemyLayer))
+        if (((1 << collision.gameObject.layer) & enemyLayer) != 0)
         {
-            Health targetHealth = collision.GetComponent<Health>();
+            targetHealth = collision.GetComponent<Health>();
             if (targetHealth != null)
             {
                 targetHealth.TakeDamage(damage);

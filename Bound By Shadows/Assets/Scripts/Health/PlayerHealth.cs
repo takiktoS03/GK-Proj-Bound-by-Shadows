@@ -27,6 +27,8 @@ public class PlayerHealth : Health
     /// @brief Czas między regeneracjami staminy.
     [SerializeField] private float staminaRegenTimeRate = 1f;
 
+    [SerializeField] private LightColorChange ghostLight;
+
     /// @brief Aktualna ilość staminy (dostępna tylko do odczytu).
     [HideInInspector] public float currentStamina { get; private set; }
     private PlayerMovement playerMovement;
@@ -68,12 +70,6 @@ public class PlayerHealth : Health
         }
     }
 
-    //public override void TakeDamage(float amount)
-    //{
-    //    base.TakeDamage(amount);
-    //    dodanie dzwiekow Hurt     
-    //}
-
     /**
      * Przeciąża metodę śmierci: animacja i ekran końcowy.
      */
@@ -110,7 +106,8 @@ public class PlayerHealth : Health
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
-        SoundManager.Instance?.PlayHurt(); // ← DŹWIĘK OBRAŻEŃ
+        SoundManager.Instance?.PlayHurt();
+        ghostLight.SetDanger();
     }
 
     /**

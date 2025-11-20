@@ -43,7 +43,7 @@ public class LeverTrigger : MonoBehaviour
             }
         }
     }
-
+    
     /**
      * @brief Wykrywa wejście gracza w zasięg kolizji.
      * @param other Obiekt kolidujący z dźwignią.
