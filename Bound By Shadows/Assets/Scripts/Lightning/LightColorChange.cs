@@ -10,8 +10,6 @@ public class LightColorChange : MonoBehaviour
     public Color dangerColor = Color.red;
     public float dangerDuration = 3f;
 
-    public Flickering flicker; // migotanie
-
     private Coroutine changeRoutine;
     private Coroutine dangerRoutine;
 
@@ -19,9 +17,6 @@ public class LightColorChange : MonoBehaviour
     {
         if (light2D == null)
             light2D = GetComponent<Light2D>();
-
-        if (flicker == null)
-            flicker = GetComponent<Flickering>();
     }
 
     /// <summary>
@@ -36,10 +31,6 @@ public class LightColorChange : MonoBehaviour
 
         // natychmiast ustaw pulsujący czerwony
         changeRoutine = StartCoroutine(ChangeColor(dangerColor));
-
-        // włącz migotanie
-        //if (flicker != null)
-        //    flicker.enabled = true;
 
         // reset timera
         if (dangerRoutine != null)
@@ -71,10 +62,6 @@ public class LightColorChange : MonoBehaviour
             StopCoroutine(changeRoutine);
 
         changeRoutine = StartCoroutine(ChangeColor(normalColor));
-
-        // wyłącz migotanie
-        if (flicker != null)
-            flicker.enabled = false;
     }
 
     /// <summary>

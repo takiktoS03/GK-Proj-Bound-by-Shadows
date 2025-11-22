@@ -232,7 +232,13 @@ PrefabInstance:
       addedObject: {fileID: 8331687417059585906}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1821150211701724, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
-      insertIndex: 8
+      insertIndex: 5
+      addedObject: {fileID: 4236567577239285843}
+    - targetCorrespondingSourceObject: {fileID: 1821150211701724, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 3010635414318026387}
+    - targetCorrespondingSourceObject: {fileID: 1821150211701724, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
+      insertIndex: 10
       addedObject: {fileID: 8109023052521597084}
     - targetCorrespondingSourceObject: {fileID: 1821150211701724, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
       insertIndex: -1
@@ -249,6 +255,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1821150211701724, guid: 145c07d78e4332a40bbf42389a7172e5, type: 3}
   m_PrefabInstance: {fileID: 2928324667614253178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4236567577239285843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928755476241460134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 221b7447224e760498b57d56c26ac220, type: 3}
+--- !u!114 &3010635414318026387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928755476241460134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 800314607
 --- !u!114 &8109023052521597084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +317,7 @@ MonoBehaviour:
   startingStamina: 200
   staminaRegenRate: 1
   staminaRegenTimeRate: 1
+  ghostLight: {fileID: 0}
 --- !u!114 &6656147027395194216
 MonoBehaviour:
   m_ObjectHideFlags: 0

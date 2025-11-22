@@ -17,13 +17,14 @@ MonoBehaviour:
   runAccelAmount: 14.285714
   runDecceleration: 1
   runDeccelAmount: 7.142857
-  accelInAir: 0.5
-  deccelInAir: 0.7
+  accelInAir: 0.793
+  deccelInAir: 0.944
   doConserveMomentum: 1
-  jumpHeight: 10
+  jumpHeight: 9
   dashPower: 8
   dashingCoolDown: 0.5
   dashingTime: 0.2
+  dashCost: 20
   wallDistance: 0.03
   wallJumpTime: 0.2
   wallSlideSpeed: 0.5

@@ -138,7 +138,7 @@ public class PauseMenu : MonoBehaviour
      */
     public IEnumerator ShowGameOver()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.5f);
         PlayGameOverSound();
         yield return new WaitForSeconds(0.4f);
 

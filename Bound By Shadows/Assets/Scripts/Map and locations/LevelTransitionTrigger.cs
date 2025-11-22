@@ -1,44 +1,63 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
+
+/**
+ * @class LevelTransitionTrigger
+ * @brief Ładuje scenę po wejściu w trigger i płynnie przechodzi animacją pomiędzy scenami
+ * Używa biblioteki DOTween do animacji: fade in, fade out
+ *
+ * @author Filip Kudła
+ */
 public class LevelTransitionTrigger : MonoBehaviour
 {
     [Header("Ustawienia przejscia")]
-    [Tooltip("Nazwa sceny, do ktorej przechodzimy")]
     public string nextSceneName = "Cave";
 
     [Tooltip("Czas trwania efektu fade")]
     public float fadeDuration = 1.5f;
 
+    [Tooltip("Canvas z czarnym tłem")]
+    public CanvasGroup fadeCanvas;
+
     private bool isTransitioning = false;
-    private CanvasGroup fadeCanvas;
+
+    private void Start()
+    {
+        if (fadeCanvas != null)
+        {
+            fadeCanvas.alpha = 0f;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!isTransitioning && other.CompareTag("Player"))
         {
-            StartCoroutine(FadeAndLoadNextScene());
+            StartTransition();
         }
     }
 
-    private System.Collections.IEnumerator FadeAndLoadNextScene()
+    private void StartTransition()
     {
-        isTransitioning = true;
-
-        // Jesli mamy CanvasGroup, to robimy efekt przyciemnienia
-        if (fadeCanvas != null)
+        if (fadeCanvas == null)
         {
-            float elapsed = 0f;
-            while (elapsed < fadeDuration)
-            {
-                elapsed += Time.deltaTime;
-                fadeCanvas.alpha = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
-                yield return null;
-            }
+            Debug.LogError("Brak CanvasGroup do fade!");
+            return;
         }
 
-        yield return new WaitForSeconds(0.3f);
+        isTransitioning = true;
 
-        SceneManager.LoadScene(nextSceneName);
+        // Fade do czerni
+        fadeCanvas.DOFade(1f, fadeDuration).SetUpdate(true).OnComplete(() =>
+        {
+            // Ładujemy scenę
+            SceneManager.LoadScene(nextSceneName);
+
+            // Po załadowaniu sceny — rozjaśnienie
+            fadeCanvas.alpha = 1f; // nadal czarne po loadzie
+            fadeCanvas.DOFade(0f, fadeDuration).SetUpdate(true);
+        });
     }
 }

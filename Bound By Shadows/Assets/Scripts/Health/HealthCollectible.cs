@@ -18,8 +18,11 @@ public class HealthCollectible : MonoBehaviour
      */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<Health>().Heal(healthValue);
-        gameObject.SetActive(false);
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Health>().Heal(healthValue);
+            gameObject.SetActive(false);
+        }
     }
 }
 

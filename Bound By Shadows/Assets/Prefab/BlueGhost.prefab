@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4318532495624618678}
   - component: {fileID: 7308970418182587227}
+  - component: {fileID: 5010736995048952285}
   m_Layer: 10
   m_Name: Ghost Volume
   m_TagString: Untagged
@@ -293,3 +294,24 @@ MonoBehaviour:
   blendDistance: 1
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 7467c182c21e5e948ad945214c496df5, type: 2}
+--- !u!135 &5010736995048952285
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3817126954668780772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 7
+  m_Center: {x: 0, y: 0, z: 0}
