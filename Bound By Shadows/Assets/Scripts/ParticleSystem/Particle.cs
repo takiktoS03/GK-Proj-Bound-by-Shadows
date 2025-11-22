@@ -1,3 +1,4 @@
+using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,25 +11,22 @@ public class Particle
     public Color color;
     public GameObject spriteObject;
     private SpriteRenderer spriteRenderer;
+    private ParticlePool pool;
 
-    public Particle(Vector2 pos, Vector2 vel, float life, Color col, Material material, Sprite sprite = null)
+    public Particle(Vector2 pos, Vector2 vel, float life, Color col, ParticlePool poolRef)
     {
         position = pos;
         velocity = vel;
         lifetime = life;
         age = 0f;
         color = col;
+        pool = poolRef;
 
-        spriteObject = new GameObject("Particle");
-        spriteObject.transform.position = pos;
-
-        spriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
+        spriteObject = pool.Get();
+        spriteRenderer = spriteObject.GetComponent<SpriteRenderer>();
         spriteRenderer.color = col;
-        if (sprite != null)
-            spriteRenderer.sprite = sprite;
-        if (material != null)
-            spriteRenderer.material = material;
-
+        
+        spriteObject.transform.position = pos;
     }
 
     public bool Update(float deltaTime, Vector2 gravity, float airResistance, bool enableGroundCollision, float groundY, float bounceFactor, Vector2 wind)
@@ -36,7 +34,7 @@ public class Particle
         age += deltaTime;
         if (age > lifetime)
         {
-            GameObject.Destroy(spriteObject);
+            pool.Release(spriteObject);
             return false;
         }
 
@@ -52,7 +50,7 @@ public class Particle
             velocity.y *= -bounceFactor;
             if (Mathf.Abs(velocity.y) < 0.1f)
             {
-                GameObject.Destroy(spriteObject);
+                pool.Release(spriteObject);
                 return false;
             }
 

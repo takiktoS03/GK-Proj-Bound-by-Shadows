@@ -148,17 +148,19 @@ namespace EthanTheHero
             else
                 accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? data.runAccelAmount * data.accelInAir : data.runDeccelAmount * data.deccelInAir;
 
-            if (data.doConserveMomentum &&
-                Mathf.Abs(myBody.linearVelocity.x) > Mathf.Abs(targetSpeed) &&
-                Mathf.Sign(myBody.linearVelocity.x) == Mathf.Sign(targetSpeed) &&
-                Mathf.Abs(targetSpeed) > 0.01f &&
-                lastOnGroundTime < 0)
-                accelRate = 0;
-
             float speedDif = targetSpeed - myBody.linearVelocity.x;
             float movement = speedDif * accelRate;
 
-            myBody.AddForce(movement * Vector2.right, ForceMode2D.Force);
+            // ⭐ Wybór kierunku ruchu
+            Vector2 moveDir;
+
+            if (grounded && slopeAngle < maxSlopeAngle)
+                moveDir = GetSlopeTangent();
+            else
+                moveDir = Vector2.right;
+
+            // ⭐ Ruch po stoku
+            myBody.AddForce(moveDir * movement, ForceMode2D.Force);
         }
         #endregion
 
@@ -204,6 +206,7 @@ namespace EthanTheHero
         #region WALL
         private void WallSlidngMechanic()
         {
+
             if (!wallSlidingEnabled)
             {
                 wallSliding = false;
@@ -293,6 +296,10 @@ namespace EthanTheHero
             groundNormal = Vector2.up;
             slopeAngle = 0f;
         }
+
+        // === Slope / Wall detection based on ground normal ===
+        private bool IsWallSurface => groundNormal.y < 0.1f && Mathf.Abs(groundNormal.x) > 0.7f;
+        private bool IsSlopeSurface => groundNormal.y >= 0.1f;
 
         private Vector2 GetSlopeTangent() => new Vector2(groundNormal.y, -groundNormal.x).normalized;
 
