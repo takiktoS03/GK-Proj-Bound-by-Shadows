@@ -34,7 +34,7 @@ public class Bootstrapper : MonoBehaviour
         Debug.Log(" InitScene loaded, now loading Cave...");
 
         // Wczytaj scenę docelową jako główną
-        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
     }
 }
 
