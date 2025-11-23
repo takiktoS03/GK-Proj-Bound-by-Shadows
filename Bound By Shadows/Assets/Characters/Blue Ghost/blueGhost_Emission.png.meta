@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc35a033fc350ac47abb564d9d30def3
+guid: 2c24f53de8d10b74b984bc0972675e02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7496613901460262382
-    second: blueGhost_0
+      213: -1003997774042686902
+    second: blueGhost_Emission_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blueGhost_0
+      name: blueGhost_Emission_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 212b439106da6f790800000000000000
-      internalID: -7496613901460262382
+      spriteID: a4a17ea08551112f0800000000000000
+      internalID: -1003997774042686902
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blueGhost_0: -7496613901460262382
+      blueGhost_Emission_0: -1003997774042686902
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

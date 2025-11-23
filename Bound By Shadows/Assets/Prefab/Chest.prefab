@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2637960884870790054}
   - component: {fileID: 4063578705787235570}
   - component: {fileID: -2908581070602758985}
+  - component: {fileID: 4860468464385355228}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -234,6 +235,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.35703728, y: 0.19417247}
   m_EdgeRadius: 0
+--- !u!114 &4860468464385355228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871795892909252677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e6da180569fd849aa012bae53dd075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
+  chestPanel: {fileID: 0}
+  letterData:
+    icon: {fileID: 683437199642657450, guid: cc30c8f357c1d46419bd64d458548c43, type: 3}
+    content: {fileID: -8493331718216602408, guid: 0cac1884de26293489b53dc2f569f879, type: 3}
+  promptUI: {fileID: 2157178516520982169}
+  letterIcon: {fileID: 0}
+  isLetterTaken: 0
 --- !u!1 &2157178516520982169
 GameObject:
   m_ObjectHideFlags: 0
