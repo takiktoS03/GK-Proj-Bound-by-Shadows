@@ -22,7 +22,7 @@ MonoBehaviour:
   directionAngle: 90
   spread: 20
   emissionShape: 0
-  emissionRadius: 0.2
+  emissionRadius: 3
   emissionArea: {x: 1, y: 1}
   colorOverLifetime:
     serializedVersion: 2

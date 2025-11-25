@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Reflection;
 
 [CreateAssetMenu(fileName = "ParticleEffectPreset", menuName = "Particles/Effect Preset")]
 public class ParticleEffectPreset : ScriptableObject
@@ -36,6 +37,9 @@ public class ParticleEffectPreset : ScriptableObject
     public float bounceFactor = 0.5f;
     public Vector2 wind = Vector2.zero;
 
+    public void CopyFrom(ParticleEffectPreset other) => CopyFromPreset(other);
+    public void CopyTo(ParticleSystem2D system) => CopyToSystem(system);
+
     private void OnEnable()
     {
         if (colorOverLifetime == null || colorOverLifetime.colorKeys.Length == 0)
@@ -58,5 +62,40 @@ public class ParticleEffectPreset : ScriptableObject
 
         if (alphaOverLifetime == null || alphaOverLifetime.keys.Length == 0)
             alphaOverLifetime = AnimationCurve.Linear(0, 1, 1, 0);
+    }
+    public void CopyFromPreset(ParticleEffectPreset other)
+    {
+        CopyFieldsFrom(other, this);
+    }
+
+    public void CopyToSystem(ParticleSystem2D system)
+    {
+        CopyFieldsFrom(this, system);
+    }
+
+    public void CopyFromSystem(ParticleSystem2D sys)
+    {
+        CopyFieldsFrom(sys, this);
+    }
+
+    private static void CopyFieldsFrom(object source, object target)
+    {
+        var flags = BindingFlags.Public | BindingFlags.Instance;
+
+        foreach (var field in source.GetType().GetFields(flags))
+        {
+            var targetField = target.GetType().GetField(field.Name, flags);
+            if (targetField != null)
+                targetField.SetValue(target, field.GetValue(source));
+        }
+
+        foreach (var prop in source.GetType().GetProperties(flags))
+        {
+            if (!prop.CanRead || !prop.CanWrite) continue;
+
+            var targetProp = target.GetType().GetProperty(prop.Name, flags);
+            if (targetProp != null)
+                targetProp.SetValue(target, prop.GetValue(source));
+        }
     }
 }

@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: ef5b00154bc9be44bb4b4ed65c9db995
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5267533772929800274
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_0
+  - first:
+      213: -8519764711367512969
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_1
+  - first:
+      213: -1052571395069405870
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_2
+  - first:
+      213: -4428216989461328832
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_3
+  - first:
+      213: 8121754493242569785
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_4
+  - first:
+      213: -4421706049632627780
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_5
+  - first:
+      213: 1376467391544879510
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_6
+  - first:
+      213: -8565373485350535831
+    second: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7652e21f5f5e6b0800000000000000
+      internalID: -5267533772929800274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_1
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1353
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ce7097227b3c980800000000000000
+      internalID: -8519764711367512969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_2
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255962894e38461f0800000000000000
+      internalID: -1052571395069405870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04cceca1c10db82c0800000000000000
+      internalID: -4428216989461328832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 82
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934f7a24ea446b070800000000000000
+      internalID: 8121754493242569785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_5
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 82
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3937a66c1f2a2c0800000000000000
+      internalID: -4421706049632627780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699e0fdbcc13a1310800000000000000
+      internalID: 1376467391544879510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251122_1741_Radiant Blue Flare_simple_compose_01kap716y5ed2vjkxvgp0gbq43_7
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96db125423ea12980800000000000000
+      internalID: -8565373485350535831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
