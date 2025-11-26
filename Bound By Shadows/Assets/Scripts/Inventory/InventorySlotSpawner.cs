@@ -50,7 +50,7 @@ public class InventorySlotSpawner : MonoBehaviour
                 button.onClick.AddListener(() => {
                     Debug.Log("Kliknięto w list: " + capturedLetter.icon.name);
                     // Przekazujesz całe LetterData
-                    InventoryUI.Instance.ShowLetterContent(capturedLetter);
+                    //InventoryUI.Instance.ShowLetterContent(capturedLetter);
                 });
             }
 
