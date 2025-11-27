@@ -1,12 +1,69 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\menu huds\\chestpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\chestpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\chest\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\chest\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\music\u0026sound\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\music\u0026sound\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 231,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SoundManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\SoundManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Music\u0026Sound\\SoundManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\SoundManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Music\u0026Sound\\SoundManager.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAzwHwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:58:09.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Chest\\Chest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Chest\\Chest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Chest\\Chest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Chest\\Chest.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwA8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:54:48.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChestPanelManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\ChestPanelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\ChestPanelManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\ChestPanelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\ChestPanelManager.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:08:27.427Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

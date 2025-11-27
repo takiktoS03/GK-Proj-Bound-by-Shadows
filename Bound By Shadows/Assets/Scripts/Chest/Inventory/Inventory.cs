@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -8,6 +11,10 @@ public class Inventory : MonoBehaviour
     [Header("UI")]
     public Transform slotsParent;
     public GameObject slotPrefab;
+
+    public TextMeshProUGUI previewDescriptionText;
+    public Image previewImage;
+    public TextMeshProUGUI previewText;
 
     private List<ItemStack> items = new List<ItemStack>();
 
@@ -39,9 +46,55 @@ public class Inventory : MonoBehaviour
         UpdateUI();
 
     }
+    public void ShowPreview(ItemSO item)
+    {
+        // Reset UI
+        previewImage.gameObject.SetActive(false);
+        previewText.gameObject.SetActive(false);
+        previewDescriptionText.gameObject.SetActive(true);
+
+        // Ustaw tytu?
+        previewDescriptionText.text = item.description;
+
+        // Je?li ma tekst
+        if (item.hasTextPreview)
+        {
+            previewText.text = item.textPreview;
+            previewText.gameObject.SetActive(true);
+
+            // ukryj obrazek
+            var c = previewImage.color;
+            c.a = 0f;
+            previewImage.color = c;
+        }
+        // Je?li ma obrazek
+        else if (item.hasImagePreview)
+        {
+            previewImage.sprite = item.imagePreview;
+            previewImage.preserveAspect = true;
+
+            // poka? obrazek
+            var c = previewImage.color;
+            c.a = 1f;       // ALFA = 100%
+            previewImage.color = c;
+
+            previewImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            previewText.text = "Brak podgl?du";
+            previewText.gameObject.SetActive(true);
+
+            // ukryj obrazek
+            var c = previewImage.color;
+            c.a = 0f;
+            previewImage.color = c;
+        }
+    }
 
     public void UpdateUI()
     {
+
         // usu? stare sloty
         foreach (Transform child in slotsParent)
             Destroy(child.gameObject);
@@ -51,8 +104,12 @@ public class Inventory : MonoBehaviour
         {
             GameObject slot = Instantiate(slotPrefab, slotsParent);
 
-            slot.transform.Find("Icon").GetComponent<UnityEngine.UI.Image>().sprite = stack.item.icon;
+            // ustawianie ikony i licznika
+            slot.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
             slot.transform.Find("Count").GetComponent<TMPro.TextMeshProUGUI>().text = stack.quantity.ToString();
+
+            // powi?zanie slota z danym itemem
+            slot.GetComponent<InventoryItemSlot>().Init(stack);
         }
     }
 }

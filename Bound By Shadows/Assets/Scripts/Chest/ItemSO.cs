@@ -24,6 +24,13 @@ public class ItemSO : ScriptableObject
     // Dodatkowe dane dla listu
     [TextArea(5, 10)]
     public string letterText;
+
+    public bool hasTextPreview;
+    [TextArea(5, 15)]
+    public string textPreview;
+
+    public bool hasImagePreview;
+    public Sprite imagePreview;
 }
 
 [System.Serializable]

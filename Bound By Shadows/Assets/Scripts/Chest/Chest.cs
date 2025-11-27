@@ -13,6 +13,8 @@ public class Chest : MonoBehaviour
 
         isOpened = true;
 
+        SoundManager.Instance.PlayChest();
+
         // wywo?aj animacj?
         GetComponent<Animator>().SetTrigger("Open");
 

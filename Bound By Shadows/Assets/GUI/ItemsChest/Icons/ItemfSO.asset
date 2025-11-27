@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef02024a62a461743aaad903ab6487bf, type: 3}
-  m_Name: NewItem
+  m_Name: ItemfSO
   m_EditorClassIdentifier: 
-  itemName: List
-  icon: {fileID: 683437199642657450, guid: cc30c8f357c1d46419bd64d458548c43, type: 3}
-  itemType: 0
-  description: PIERWSZY LIST DO M
-  healAmount: 0
+  itemName: potion
+  icon: {fileID: 21300000, guid: 4ee5a593a0ea85a45b3a11568cbee7ed, type: 3}
+  itemType: 1
+  description: Lecz sie
+  healAmount: 50
   letterText: 
-  hasTextPreview: 0
+  hasTextPreview: 1
   textPreview: 
-  hasImagePreview: 1
-  imagePreview: {fileID: -656627006676614036, guid: b7e4b827e80c64e47ad1c90fdd011312, type: 3}
+  hasImagePreview: 0
+  imagePreview: {fileID: 0}
