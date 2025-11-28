@@ -11,7 +11,6 @@ using UnityEngine.Jobs;
 using UnityEngine.Scripting;
 
 public enum EmissionShape { Point, Line, Circle, Area }
-public enum ParticleEffectType { Fire, Smoke, Fog, RainDrops, Default }
 
 public struct ParticleData
 {
@@ -76,8 +75,8 @@ public struct ParticleUpdateJob : IJobParallelForTransform
 
 public class ParticleSystem2D : MonoBehaviour
 {
-    [Header("Typ dzwieku")]
-    public ParticleEffectType effectType = ParticleEffectType.RainDrops;
+    //[Header("Typ dzwieku")]
+    //public ParticleEffectType effectType = ParticleEffectType.RainDrops;
 
     [Header("Basic parameters")]
     public Material particleMaterial;
@@ -109,18 +108,25 @@ public class ParticleSystem2D : MonoBehaviour
     public bool enableGroundCollision = true;
     public float groundY = 0f;
     public float bounceFactor = 0.5f;
-    public Vector2 wind = Vector2.zero;
-
-    [Header("Performance")]
-    public int maxParticles = 2000;
+    public Vector2 wind = Vector2.zero; 
 
     [Header("Rendering")]
     [HideInInspector] public string sortingLayer = "Default";
     [HideInInspector] public int orderInLayer = 0;
 
+    [Header("Performance")]
+    [Min(1)]
+    public int maxParticles = 2000;
+
     [Header("Preset")]
     public ParticleEffectPreset preset;
     private bool isRebuilding = false;
+
+    [SerializeField]
+    public ParticleEffectPreset overridePresetData;
+
+
+    private Transform particleRoot;
 
     // JOB SYSTEM – dane
     private NativeArray<ParticleData> particleArray;
@@ -138,49 +144,16 @@ public class ParticleSystem2D : MonoBehaviour
 
     void Start()
     {
-        //particleArray = new NativeArray<ParticleData>(maxParticles, Allocator.Persistent);
-        //transformArray = new TransformAccessArray(maxParticles);
-        //spriteRenderers = new SpriteRenderer[maxParticles];
-        //freeIndices = new Stack<int>(maxParticles);
-
-        //for (int i = 0; i < maxParticles; i++)
-        //{
-        //    GameObject go = new GameObject("Particle_" + i);
-        //    var sr = go.AddComponent<SpriteRenderer>();
-        //    sr.material = particleMaterial;
-        //    sr.sprite = particleSprite;
-        //    sr.enabled = false;
-        //    sr.sortingLayerName = sortingLayer;
-        //    sr.sortingOrder = orderInLayer;
-
-        //    go.transform.position = Vector3.zero;
-        //    go.transform.localScale = Vector3.zero;
-
-        //    spriteRenderers[i] = sr;
-        //    transformArray.Add(go.transform);
-
-        //    freeIndices.Push(i);
-
-        //    ParticleData p = new ParticleData
-        //    {
-        //        position = Vector3.zero,
-        //        velocity = Vector3.zero,
-        //        lifetime = 0f,
-        //        age = 0f,
-        //        alive = 0
-        //    };
-        //    particleArray[i] = p;
-        //}
-
-        if (preset != null)
+        
+        if (overridePresetData == null && preset != null)
         {
-            ApplyPreset();
-        }
-        else
-        {
-            ApplyPresent(effectType);
+            overridePresetData = Instantiate(preset);
         }
 
+        // 2. Skopiuj override warto?ci do systemu - MUSI by? przed inicjalizacj? renderów
+        ApplyPresetFromOverride();
+
+        // 3. Teraz renderer zna poprawne warto?ci (sprite, materiale, wielko?ci)
         InitializeParticleData();
 
         //ApplyPresent(effectType);
@@ -189,7 +162,7 @@ public class ParticleSystem2D : MonoBehaviour
     private void OnDestroy()
     {
         if (particleArray.IsCreated) particleArray.Dispose();
-        if(transformArray.isCreated) transformArray.Dispose();
+        if (transformArray.isCreated) transformArray.Dispose();
     }
     void Update()
     {
@@ -268,6 +241,52 @@ public class ParticleSystem2D : MonoBehaviour
 
         FPSCounter();
     }
+    void OnDrawGizmos()
+    {
+        // ?ród?o danych do Gizmo
+        EmissionShape shape;
+        float radius;
+        Vector2 area;
+
+        if (overridePresetData != null)
+        {
+            shape = overridePresetData.emissionShape;
+            radius = overridePresetData.emissionRadius;
+            area = overridePresetData.emissionArea;
+        }
+        else
+        {
+            shape = emissionShape;
+            radius = emissionRadius;
+            area = emissionArea;
+        }
+
+        Gizmos.color = Color.cyan;
+        Vector3 pos = transform.position;
+
+        switch (shape)
+        {
+            case EmissionShape.Point:
+                Gizmos.DrawWireSphere(pos, 0.1f);
+                break;
+
+            case EmissionShape.Circle:
+                Gizmos.DrawWireSphere(pos, radius);
+                break;
+
+            case EmissionShape.Line:
+                float half = area.x * 0.5f;
+                Gizmos.DrawLine(
+                    pos + new Vector3(-half, 0, 0),
+                    pos + new Vector3(half, 0, 0)
+                );
+                break;
+
+            case EmissionShape.Area:
+                Gizmos.DrawWireCube(pos, new Vector3(area.x, area.y, 0));
+                break;
+        }
+    }
 
 
     void InitializeParticleData()
@@ -277,9 +296,31 @@ public class ParticleSystem2D : MonoBehaviour
         spriteRenderers = new SpriteRenderer[maxParticles];
         freeIndices = new Stack<int>(maxParticles);
 
+        // --- CREATE OR FIND PARTICLE ROOT ---
+        if (particleRoot == null)
+        {
+            // Try to find existing child (important when entering Play mode)
+            var existing = transform.Find("Particles (Children)");
+            if (existing != null)
+            {
+                particleRoot = existing;
+            }
+            else
+            {
+                GameObject root = new GameObject("Particles (Children)");
+                particleRoot = root.transform;
+                particleRoot.SetParent(transform);
+                particleRoot.localPosition = Vector3.zero;
+            }
+        }
+
+        // --- CREATE PARTICLES INSIDE THE ROOT ---
         for (int i = 0; i < maxParticles; i++)
         {
             GameObject go = new GameObject("Particle_" + i);
+
+            go.transform.SetParent(particleRoot);
+
             var sr = go.AddComponent<SpriteRenderer>();
 
             sr.material = particleMaterial;
@@ -327,237 +368,45 @@ public class ParticleSystem2D : MonoBehaviour
 
     Vector2 GetEmissionPosition()
     {
-        Vector2 basePos = transform.position;
+        Vector2 pos = transform.position;
 
         switch (emissionShape)
         {
-            case EmissionShape.Line:
-                return (Vector2)basePos + new Vector2(Random.Range(-emissionRadius, emissionRadius), 0f);
+            case EmissionShape.Point:
+                return pos;
+
             case EmissionShape.Circle:
-                Vector2 dir = Random.insideUnitCircle.normalized * emissionRadius;
-                return (Vector2)basePos + dir;
+                return pos + Random.insideUnitCircle.normalized * emissionRadius;
+
+            case EmissionShape.Line:
+                float half = emissionArea.x / 2f;
+                return pos + new Vector2(Random.Range(-half, half), 0f);
+
             case EmissionShape.Area:
-                return (Vector2)basePos + new Vector2(Random.Range(-emissionArea.x / 2f, emissionArea.x / 2f),
-                    Random.Range(-emissionArea.y / 2f, emissionArea.y / 2f));
+                float halfX = emissionArea.x / 2f;
+                float halfY = emissionArea.y / 2f;
+                return pos + new Vector2(
+                    Random.Range(-halfX, halfX),
+                    Random.Range(-halfY, halfY)
+                );
 
             default:
-                return basePos;
-        }
-    }
-
-    public void ApplyPresent(ParticleEffectType type)
-    {
-        switch (type)
-        {
-            case ParticleEffectType.Fire:
-                emissionShape = EmissionShape.Circle;
-                emissionRadius = 0.3f;
-                emissionRate = 50;
-                minSpeed = 1.5f;
-                maxSpeed = 3f;
-                directionAngle = 90f;
-                spread = 25f;
-                particleLifetime = 2f;
-
-                colorOverLifetime = new Gradient
-                {
-                    colorKeys = new GradientColorKey[]
-                    {
-                        new GradientColorKey(Color.yellow, 0f),
-                        new GradientColorKey(new Color(1f, 0.5f, 0f), 0.5f),
-                        new GradientColorKey(Color.red, 1f),
-                    },
-                    alphaKeys = new GradientAlphaKey[]
-                    {
-                        new GradientAlphaKey(1f, 0f),
-                        new GradientAlphaKey(0f, 1f),
-                    }
-                };
-                scaleOverLifetime = AnimationCurve.EaseInOut(0, 0.3f, 1, 1.2f);
-                alphaOverLifetime = AnimationCurve.EaseInOut(0, 0.6f, 1, 0f);
-                break;
-
-            case ParticleEffectType.Smoke:
-                emissionShape = EmissionShape.Line;
-                emissionRadius = 0.8f;
-                emissionRate = 50;
-                minSpeed = 0.5f;
-                maxSpeed = 1.5f;
-                directionAngle = 90f;
-                spread = 100f;
-                particleLifetime = 5f;
-
-                colorOverLifetime = new Gradient
-                {
-                    colorKeys = new GradientColorKey[]
-                    {
-                        new GradientColorKey(new Color(0.2f, 0.2f, 0.2f), 0f),
-                        new GradientColorKey(new Color(0.5f, 0.5f, 0.5f), 1f)
-                    },
-                    alphaKeys = new GradientAlphaKey[]
-                    {
-                        new GradientAlphaKey(0.4f, 0f),
-                        new GradientAlphaKey(0.2f, 1f)
-                    }
-                };
-                scaleOverLifetime = AnimationCurve.EaseInOut(0, 0.5f, 1, 2f);
-                alphaOverLifetime = AnimationCurve.EaseInOut(0, 0.5f, 1, 0f);
-                break;
-
-            case ParticleEffectType.Fog:
-                emissionShape = EmissionShape.Area;
-                emissionArea = new Vector2(15f, 2f);    
-                emissionRate = 25;                        
-                minSpeed = 0.1f;
-                maxSpeed = 0.3f;                      
-                directionAngle = 0f;                   
-                spread = 50f;                         
-                particleLifetime = 5f;                  
-                particleSize = 2.2f;                     
-
-                enableGravity = false;
-                gravity = Vector2.zero;
-                airResistance = 0.99f;
-
-                enableGroundCollision = false;
-                groundY = 0f;
-                bounceFactor = 0f;
-
-                wind = new Vector2(0.3f, 0f);
-
-                colorOverLifetime = new Gradient
-                {
-                    colorKeys = new GradientColorKey[]
-                    {
-            new GradientColorKey(new Color(0.80f, 0.80f, 0.80f), 0f),
-            new GradientColorKey(new Color(0.95f, 0.95f, 0.95f), 1f)
-                    },
-                    alphaKeys = new GradientAlphaKey[]
-                    {
-            new GradientAlphaKey(0.1f, 0f),
-            new GradientAlphaKey(0.001f, 1f)
-                    }
-                };
-
-                scaleOverLifetime = AnimationCurve.EaseInOut(0, 1.0f, 1, 3.0f);
-                alphaOverLifetime = AnimationCurve.EaseInOut(0, 0.15f, 1, 0f);
-                break;
-
-            case ParticleEffectType.RainDrops:
-                emissionShape = EmissionShape.Area;
-                emissionArea = new Vector2(10f, 5f);
-                emissionRate = 300;
-                minSpeed = 1f;
-                maxSpeed = 2f;
-                directionAngle = -90f;
-                spread = 100f;
-                particleLifetime = 10f;
-                particleSize = 3f;
-
-                enableGravity = true;
-                gravity = new Vector2(0f, -9.8f);
-                airResistance = 0.99f;
-                enableGroundCollision = true;
-                groundY = -0f;
-                bounceFactor = 0.2f;
-                wind = new Vector2(1f, 0f);
-
-                colorOverLifetime = new Gradient
-                {
-                    colorKeys = new GradientColorKey[]
-                    {
-            new GradientColorKey(new Color(0.5f, 0.6f, 1f), 0f),
-            new GradientColorKey(new Color(0.3f, 0.4f, 0.9f), 1f)
-                    },
-                    alphaKeys = new GradientAlphaKey[]
-                    {
-            new GradientAlphaKey(0.7f, 0f),
-            new GradientAlphaKey(0.1f, 1f)
-                    }
-                };
-
-                scaleOverLifetime = AnimationCurve.EaseInOut(0, 1f, 1, 0.3f);
-                alphaOverLifetime = AnimationCurve.EaseInOut(0, 0.8f, 1, 0f);
-                break;
-
-            case ParticleEffectType.Default:
-
-                emissionShape = EmissionShape.Point;
-                emissionArea = new Vector2(1f, 1f);
-                emissionRadius = 0.2f;
-
-                emissionRate = 10;
-                particleLifetime = 2f;
-                particleSize = 1f;
-
-                minSpeed = 0.2f;
-                maxSpeed = 1f;
-                directionAngle = 90f;
-                spread = 20f;
-
-                enableGravity = false;
-                gravity = Vector2.zero;
-                airResistance = 0.98f;
-                enableGroundCollision = false;
-                groundY = 0f;
-                bounceFactor = 0f;
-
-                wind = Vector2.zero;
-
-                colorOverLifetime = new Gradient
-                {
-                    colorKeys = new[]
-                    {
-            new GradientColorKey(Color.white, 0f),
-            new GradientColorKey(Color.white, 1f),
-        },
-                    alphaKeys = new[]
-                    {
-            new GradientAlphaKey(1f, 0f),
-            new GradientAlphaKey(0f, 1f)
-        }
-                };
-
-                scaleOverLifetime = AnimationCurve.Linear(0, 1f, 1, 1f);
-                alphaOverLifetime = AnimationCurve.Linear(0, 1f, 1, 0f);
-                break;
-
+                return pos;
         }
     }
 
     public void ApplyPreset()
     {
-        if (preset == null) return;
-
-        particleMaterial = preset.particleMaterial;
-        particleSprite = preset.particleSprite;
-
-        particleSize = preset.particleSize;
-        emissionRate = preset.emissionRate;
-        particleLifetime = preset.particleLifetime;
-
-        minSpeed = preset.minSpeed;
-        maxSpeed = preset.maxSpeed;
-        directionAngle = preset.directionAngle;
-        spread = preset.spread;
-
-        emissionShape = preset.emissionShape;
-        emissionRadius = preset.emissionRadius;
-        emissionArea = preset.emissionArea;
-
-        colorOverLifetime = preset.colorOverLifetime;
-        scaleOverLifetime = preset.scaleOverLifetime;
-        alphaOverLifetime = preset.alphaOverLifetime;
-
-        enableGravity = preset.enableGravity;
-        gravity = preset.gravity;
-        airResistance = preset.airResistance;
-        enableGroundCollision = preset.enableGroundCollision;
-        groundY = preset.groundY;
-        bounceFactor = preset.bounceFactor;
-        wind = preset.wind;
+        if (preset != null)
+            preset.CopyTo(this);
     }
 
+    public void ApplyPresetFromOverride()
+    {
+        if (overridePresetData != null)
+            overridePresetData.CopyTo(this);
+    }
+    
     void FPSCounter()
     {
         fpsTimer += Time.deltaTime;

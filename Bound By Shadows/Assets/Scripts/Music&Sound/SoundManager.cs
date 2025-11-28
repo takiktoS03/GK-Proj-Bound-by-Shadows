@@ -57,6 +57,12 @@ public class SoundManager : MonoBehaviour
     /// @brief Oddzielne źródło dźwięku do kroków (loopowane).
     private AudioSource stepSource;
 
+    [Header("Torch Puzzle")]
+    public AudioClip torchLightSound;
+
+    public AudioClip puzzleSolvedSound;
+
+
     /**
      * @brief Inicjalizacja singletonu i źródeł dźwięku.
      */

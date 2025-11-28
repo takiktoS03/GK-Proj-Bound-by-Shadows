@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
   m_Name: ParticleEffectPreset
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
-  particleSprite: {fileID: -4736338417329451054, guid: 2235c84077a3805408604424cc586be1, type: 3}
-  particleSize: 2
+  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
+  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
+  particleSize: 0.001
   emissionRate: 5
-  particleLifetime: 0.5
+  particleLifetime: 1
   minSpeed: 1
   maxSpeed: 3
   directionAngle: 90
   spread: 15
-  emissionShape: 0
+  emissionShape: 3
   emissionRadius: 1
   emissionArea: {x: 2, y: 1}
   colorOverLifetime:

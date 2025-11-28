@@ -21,7 +21,7 @@ MonoBehaviour:
   deccelInAir: 0.944
   doConserveMomentum: 1
   jumpHeight: 9
-  dashPower: 8
+  dashPower: 4
   dashingCoolDown: 0.5
   dashingTime: 0.2
   dashCost: 20
