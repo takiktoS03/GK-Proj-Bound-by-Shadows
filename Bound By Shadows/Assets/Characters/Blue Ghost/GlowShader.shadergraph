@@ -845,10 +845,10 @@
     "m_Guid": {
         "m_GuidSerialized": "fc5988a3-bf4d-40db-b4b7-9e7cdd0900b3"
     },
-    "m_Name": "GlowTex",
+    "m_Name": "Emission",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "GlowTex",
-    "m_DefaultReferenceName": "_GlowTex",
+    "m_RefNameGeneratedByDisplayName": "Emission",
+    "m_DefaultReferenceName": "_Emission",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1117,9 +1117,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.9905660152435303,
-        "g": 0.06074228137731552,
-        "b": 0.06074228137731552,
+        "r": 2.0,
+        "g": 0.0,
+        "b": 1.5070476531982422,
         "a": 1.0
     },
     "isMainColor": false,
@@ -1777,7 +1777,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "ad8cbdc23e304898aa716f47c1ddce59",
     "m_Id": 0,
-    "m_DisplayName": "GlowTex",
+    "m_DisplayName": "Emission",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1859,7 +1859,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.5600000023841858,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,

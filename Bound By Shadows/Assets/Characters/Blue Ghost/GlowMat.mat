@@ -41,6 +41,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 2c24f53de8d10b74b984bc0972675e02, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _GlowTex:
         m_Texture: {fileID: 2800000, guid: 2c24f53de8d10b74b984bc0972675e02, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -67,12 +71,12 @@ Material:
     - _Alpha: 0.38
     - _EnableExternalAlpha: 0
     - _FresnelPower: 0.24
-    - _Intensity: 0.11
+    - _Intensity: 0.19
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 0.084590435, g: 1, b: 0, a: 1}
-    - _GlowColor: {r: 0, g: 0.7815788, b: 1, a: 1}
+    - _GlowColor: {r: 1.4980392, g: 0, b: 1.1671586, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
