@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: ParticleEffectewrfPreset
+  m_Name: Smoke
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 0}
-  particleSprite: {fileID: 0}
-  particleSize: 0.2
-  emissionRate: 20
-  particleLifetime: 2
-  minSpeed: 1
-  maxSpeed: 3
+  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
+  particleSprite: {fileID: -4736338417329451054, guid: 2235c84077a3805408604424cc586be1, type: 3}
+  particleSize: 1
+  emissionRate: 30
+  particleLifetime: 5
+  minSpeed: 0.5
+  maxSpeed: 1.5
   directionAngle: 90
-  spread: 30
-  emissionShape: 0
+  spread: 70
+  emissionShape: 1
   emissionRadius: 1
-  emissionArea: {x: 2, y: 1}
+  emissionArea: {x: 40, y: 1}
   colorOverLifetime:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    key1: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -82,30 +82,30 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: -1
-      tangentMode: 0
+      time: 0.010284424
+      value: 0.15030289
+      inSlope: -0.14672504
+      outSlope: -0.14672504
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: 0
-      tangentMode: 0
+      time: 1.011322
+      value: 0.0034255981
+      inSlope: -0.14672504
+      outSlope: -0.14672504
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  enableGravity: 1
+  enableGravity: 0
   gravity: {x: 0, y: -9.81}
   airResistance: 0.98
   enableGroundCollision: 0
   groundY: 0
-  bounceFactor: 0.5
-  wind: {x: 0, y: 0}
+  bounceFactor: 0
+  wind: {x: 1, y: 1}

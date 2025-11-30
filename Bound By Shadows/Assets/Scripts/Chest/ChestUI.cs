@@ -43,6 +43,8 @@ public class ChestUI : MonoBehaviour
 
     public void UpdateUI()
     {
+        if (currentChest == null) return;
+
         // Usu? stare sloty
         foreach (Transform child in slotParent)
             Destroy(child.gameObject);
@@ -53,7 +55,6 @@ public class ChestUI : MonoBehaviour
             var stack = currentChest.items[i];
             GameObject slot = Instantiate(slotPrefab, slotParent);
 
-            // ustaw ikon?
             slot.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
         }
     }

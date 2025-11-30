@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: MysteriousFog
+  m_Name: LightRain
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
-  particleSprite: {fileID: -4736338417329451054, guid: 2235c84077a3805408604424cc586be1, type: 3}
-  particleSize: 0.2
+  particleMaterial: {fileID: 2100000, guid: 982504780716f9b41a7aa9f8b3958ef1, type: 2}
+  particleSprite: {fileID: -6830152201372448578, guid: 04f3659e6b7bd664585dedae9aca020b, type: 3}
+  particleSize: 1
   emissionRate: 20
-  particleLifetime: 2
-  minSpeed: 1
-  maxSpeed: 3
-  directionAngle: 90
-  spread: 30
-  emissionShape: 2
+  particleLifetime: 5
+  minSpeed: 0.5
+  maxSpeed: 1
+  directionAngle: -90
+  spread: 100
+  emissionShape: 1
   emissionRadius: 10
-  emissionArea: {x: 2, y: 1}
+  emissionArea: {x: 8, y: 1}
   colorOverLifetime:
     serializedVersion: 2
-    key0: {r: 0, g: 0.60698193, b: 0.972549, a: 1}
-    key1: {r: 0.57069296, g: 0, b: 0.9150943, a: 1}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -104,8 +104,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   enableGravity: 1
   gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  enableGroundCollision: 0
+  airResistance: 0.99
+  enableGroundCollision: 1
   groundY: 0
-  bounceFactor: 0.5
-  wind: {x: 5, y: 0}
+  bounceFactor: 0.3
+  wind: {x: 1, y: 0}

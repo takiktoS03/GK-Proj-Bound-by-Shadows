@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: NewParticlePreset
+  m_Name: Fire
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
-  particleSprite: {fileID: -8731310172045784265, guid: 7b1c2b5d5341ea44db273ba4bd8d7e1b, type: 3}
-  particleSize: 1
-  emissionRate: 10
-  particleLifetime: 2
-  minSpeed: 0.2
-  maxSpeed: 1
+  particleMaterial: {fileID: 2100000, guid: abbedbff733b91d4d9761ea5a65e52d0, type: 2}
+  particleSprite: {fileID: 1098286324429101383, guid: 1a26d1e6b3b636f4fb7fae094fc7647e, type: 3}
+  particleSize: 0.2
+  emissionRate: 20
+  particleLifetime: 1
+  minSpeed: 1
+  maxSpeed: 2
   directionAngle: 90
   spread: 20
-  emissionShape: 0
-  emissionRadius: 3
-  emissionArea: {x: 1, y: 1}
+  emissionShape: 2
+  emissionRadius: 0.3
+  emissionArea: {x: 2, y: 1}
   colorOverLifetime:
     serializedVersion: 2
-    key0: {r: 0, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 0}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -36,7 +36,7 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 65535
-    ctime2: 0
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   scaleOverLifetime:
@@ -82,10 +82,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
+      time: 0.0083351135
+      value: 0.5047188
       inSlope: 0
-      outSlope: -1
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
       time: 1
       value: 0
       inSlope: -1
-      outSlope: 0
+      outSlope: -1
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -103,9 +103,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   enableGravity: 0
-  gravity: {x: 0, y: 0}
+  gravity: {x: 0, y: -9.81}
   airResistance: 0.98
   enableGroundCollision: 0
   groundY: 0
   bounceFactor: 0
-  wind: {x: 0, y: 0}
+  wind: {x: 1, y: 0}
