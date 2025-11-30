@@ -72,7 +72,6 @@ public struct ParticleUpdateJob : IJobParallelForTransform
 
     }
 }
-
 public class ParticleSystem2D : MonoBehaviour
 {
     //[Header("Typ dzwieku")]
@@ -288,7 +287,6 @@ public class ParticleSystem2D : MonoBehaviour
         }
     }
 
-
     void InitializeParticleData()
     {
         particleArray = new NativeArray<ParticleData>(maxParticles, Allocator.Persistent);
@@ -329,7 +327,7 @@ public class ParticleSystem2D : MonoBehaviour
             sr.sortingLayerName = sortingLayer;
             sr.sortingOrder = orderInLayer;
 
-            go.transform.position = transform.position;  // IMPORTANT FIX
+            go.transform.position = transform.position;
             go.transform.localScale = Vector3.zero;
 
             spriteRenderers[i] = sr;
@@ -395,11 +393,11 @@ public class ParticleSystem2D : MonoBehaviour
         }
     }
 
-    public void ApplyPreset()
-    {
-        if (preset != null)
-            preset.CopyTo(this);
-    }
+    //public void ApplyPreset()
+    //{
+    //    if (preset != null)
+    //        preset.CopyTo(this);
+    //}
 
     public void ApplyPresetFromOverride()
     {
