@@ -71,12 +71,12 @@ Material:
     - _Alpha: 0.38
     - _EnableExternalAlpha: 0
     - _FresnelPower: 0.24
-    - _Intensity: 0.19
+    - _Intensity: 1.73
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 0.084590435, g: 1, b: 0, a: 1}
-    - _GlowColor: {r: 1.4980392, g: 0, b: 1.1671586, a: 1}
+    - _GlowColor: {r: 0.38376558, g: 0.050980363, b: 0.9529412, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
