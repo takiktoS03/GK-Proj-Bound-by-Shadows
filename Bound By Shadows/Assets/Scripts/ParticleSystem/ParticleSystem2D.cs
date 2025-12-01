@@ -51,8 +51,9 @@ public struct ParticleUpdateJob : IJobParallelForTransform
 
         // fizyka
         p.velocity += (gravity + wind) * deltaTime;
-        p.velocity *= Mathf.Pow(airResistance, deltaTime * 60f);
         p.position += p.velocity * deltaTime;
+
+        p.velocity *= Mathf.Pow(airResistance, deltaTime * 60f);
 
         if (enableGroundCollision && p.position.y <= groundY)
         {

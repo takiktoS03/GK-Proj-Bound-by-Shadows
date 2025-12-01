@@ -57,7 +57,7 @@ public class IntroController : MonoBehaviour
             return;
 
         MusicManager.Instance.StopMusic();
-        MusicManager.Instance.PlayIntroAudio();
+        //MusicManager.Instance.PlayIntroAudio();
 
         StartCoroutine(PlayIntro());
     }

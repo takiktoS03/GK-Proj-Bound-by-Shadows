@@ -16,7 +16,7 @@ MonoBehaviour:
   particleSprite: {fileID: -6830152201372448578, guid: 04f3659e6b7bd664585dedae9aca020b, type: 3}
   particleSize: 1
   emissionRate: 20
-  particleLifetime: 5
+  particleLifetime: 3
   minSpeed: 0.5
   maxSpeed: 1
   directionAngle: -90
@@ -106,6 +106,6 @@ MonoBehaviour:
   gravity: {x: 0, y: -9.81}
   airResistance: 0.99
   enableGroundCollision: 1
-  groundY: 0
-  bounceFactor: 0.3
+  groundY: 252.5
+  bounceFactor: 0.1
   wind: {x: 1, y: 0}
