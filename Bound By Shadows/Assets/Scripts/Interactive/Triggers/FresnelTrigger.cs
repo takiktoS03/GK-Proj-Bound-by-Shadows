@@ -14,15 +14,12 @@ public class FresnelTrigger : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         mpb = new MaterialPropertyBlock();
-        PulseFresnel();
     }
-
-    private void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PulseFresnel();
-        }
+        sr.GetPropertyBlock(mpb);
+        mpb.SetFloat(FresnelID, 0);
+        sr.SetPropertyBlock(mpb);
     }
 
     public void PulseFresnel()

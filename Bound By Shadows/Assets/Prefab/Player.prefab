@@ -246,10 +246,10 @@ MonoBehaviour:
   groundCheckSize: {x: 0.1, y: 0.05}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4161
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4161
   WallCheck: {fileID: 199186147309639329}
   move: {x: 0, y: 0}
   isDashing: 0
@@ -369,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5986734798278949397}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
