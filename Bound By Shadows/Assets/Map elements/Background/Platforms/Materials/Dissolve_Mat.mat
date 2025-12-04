@@ -67,7 +67,7 @@ Material:
     - _Dissolve: 0.5
     - _Edge_Width: 0.02
     - _Fresnel: 0.5
-    - _Fresnel_Power: 1.5
+    - _Fresnel_Power: 2
     - _Noise_Scale: 30
     - _QueueControl: 0
     - _QueueOffset: 0

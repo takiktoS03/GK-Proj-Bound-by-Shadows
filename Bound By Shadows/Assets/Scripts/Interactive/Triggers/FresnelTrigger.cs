@@ -9,6 +9,7 @@ public class FresnelTrigger : MonoBehaviour
     SpriteRenderer sr;
     MaterialPropertyBlock mpb;
     static readonly int FresnelID = Shader.PropertyToID("_Fresnel");
+    private bool spotted = false;
 
     void Awake()
     {
@@ -24,8 +25,12 @@ public class FresnelTrigger : MonoBehaviour
 
     public void PulseFresnel()
     {
-        StopAllCoroutines();
-        StartCoroutine(PulseRoutine());
+        if (!spotted)
+        {
+            StopAllCoroutines();
+            StartCoroutine(PulseRoutine());
+            spotted = true;
+        }
     }
 
     IEnumerator PulseRoutine()

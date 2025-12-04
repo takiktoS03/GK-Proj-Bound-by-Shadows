@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
-using static Unity.Collections.AllocatorManager;
+using UnityEngine.Rendering.Universal;
 
 public class WorldScanner : MonoBehaviour
 {
     [Header("Scan Settings")]
-    public float maxRadius = 10f;
+    public float maxRadius = 20f;
     public float scanSpeed = 5f;
-    public int rayCount = 72; // co 5 stopni
+    public int rayCount = 72;
+
+    [Header("Visuals")]
+    public Light2D scanLight;
+    public float visualMultiplier = 1f;
+    public float lightIntensity = 2f;
 
     [Header("Layers")]
     public LayerMask targetMask;
@@ -15,17 +20,17 @@ public class WorldScanner : MonoBehaviour
     [Header("Cooldown")]
     public float abilityCooldown = 5f;
 
-    private SpriteRenderer scanRenderer;
-    private Material scanMat;
     private float scanRadius = 0f;
     private bool isScanning = false;
     private float cooldownTimer = 0f;
 
     void Start()
     {
-        scanRenderer = GetComponent<SpriteRenderer>();
-        scanMat = scanRenderer.material;
-        scanMat.SetFloat("_MaxRadius", maxRadius);
+        if (scanLight != null)
+        {
+            scanLight.enabled = false;
+            scanLight.transform.localPosition = Vector3.zero;
+        }
     }
 
     void Update()
@@ -46,78 +51,88 @@ public class WorldScanner : MonoBehaviour
 
     void TryActivateScan()
     {
-        if (cooldownTimer > 0) return;      // jeszcze trwa cooldown
-        if (isScanning) return;             // już skanujemy
+        if (cooldownTimer > 0 || isScanning) return;
 
-        scanRenderer.enabled = true;
         isScanning = true;
         scanRadius = 0f;
-        cooldownTimer = abilityCooldown;    // ustaw cooldown
+        cooldownTimer = abilityCooldown;
+
+        if (scanLight != null)
+        {
+            scanLight.enabled = true;
+            scanLight.intensity = lightIntensity;
+            scanLight.transform.localScale = Vector3.zero;
+        }
     }
 
     void ScanStep()
     {
         scanRadius += scanSpeed * Time.deltaTime;
-        scanMat.SetFloat("_ScanRadius", scanRadius);
+
+        // Synchronizacja wizualna
+        if (scanLight != null)
+        {
+            float diameter = scanRadius * 2f * visualMultiplier;
+            scanLight.transform.localScale = new Vector3(diameter, diameter, 1f);
+        }
 
         CastRays();
 
-        // koniec skanu
         if (scanRadius >= maxRadius)
         {
-            isScanning = false;
-            scanRadius = 0f;
-            scanMat.SetFloat("_ScanRadius", scanRadius);
-            scanRenderer.enabled = false;
+            StopScan();
+        }
+    }
+
+    void StopScan()
+    {
+        isScanning = false;
+        scanRadius = 0f;
+
+        if (scanLight != null)
+        {
+            scanLight.enabled = false;
+            scanLight.transform.localScale = Vector3.zero;
         }
     }
 
     void CastRays()
     {
         Vector2 origin = transform.position;
+
         for (int i = 0; i < rayCount; i++)
         {
             float angle = i * Mathf.PI * 2f / rayCount;
             Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
-            // jeżeli coś blokuje promień — kończymy ray
+            // Promień do przeszkód
             var hitObstacle = Physics2D.Raycast(origin, dir, scanRadius, obstacleMask);
 
+            // Obliczenie długości promienia
+            float hitDistance = hitObstacle.collider ? hitObstacle.distance : scanRadius;
+            Vector2 hitPoint = origin + (dir * hitDistance);
+
+            // Debug - rysowanie promieni w gizmos
             if (hitObstacle.collider != null)
             {
-                Debug.DrawLine(origin,
-                               origin + dir * hitObstacle.distance,
-                               Color.red);
-
-                continue;
-            }
-
-            // Sprawdź cele (ScanTarget)
-            var hitTarget = Physics2D.Raycast(origin, dir, scanRadius, targetMask);
-
-            if (hitTarget.collider != null)
-            {
-                Debug.DrawLine(origin,
-                               hitTarget.point,
-                               Color.yellow);
-
-                var fresnel = hitTarget.collider.GetComponent<FresnelTrigger>();
-                if (fresnel != null)
-                    fresnel.PulseFresnel();
+                // Przeszkoda - czerwony
+                Debug.DrawLine(origin, hitPoint, Color.red);
             }
             else
             {
-                Debug.DrawLine(origin,
-                               origin + dir * scanRadius,
-                               Color.green);
+                // Brak - zielony
+                Debug.DrawLine(origin, hitPoint, Color.green);
             }
-            float hitDistance = hitTarget.collider ? hitTarget.distance : scanRadius;//hitobstacle
 
-            // sprawdzamy czy bloczek jest W TRAKCIE promienia
-            var hit = Physics2D.Raycast(origin, dir, hitDistance, targetMask);
-            if (hit)
+            // Promień tylko do momentu uderzenia w ścianę (hitDistance)
+            var hitTarget = Physics2D.Raycast(origin, dir, hitDistance, targetMask);
+
+            if (hitTarget.collider != null)
             {
-                FresnelTrigger fresnel = hit.collider.GetComponent<FresnelTrigger>();
+                // promień trafienia
+                Debug.DrawLine(origin, hitTarget.point, Color.yellow);
+
+                FresnelTrigger fresnel = hitTarget.collider.GetComponent<FresnelTrigger>();
                 if (fresnel != null)
                 {
                     fresnel.PulseFresnel();
