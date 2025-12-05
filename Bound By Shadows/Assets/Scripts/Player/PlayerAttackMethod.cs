@@ -36,6 +36,9 @@ namespace EthanTheHero
         private bool atkButtonClickedOnAtk02;
         private bool atkButtonClickedOnAtk03;
 
+        // Flaga dla mobile
+        private bool attackRequested = false;
+
         // Parametry animatora
         private const string attack01 = "Attack01";
         private const string attack02 = "Attack02";
@@ -88,6 +91,10 @@ namespace EthanTheHero
 
             BasicAttackMethod();
         }
+        public void MobileAttackInput()
+        {
+            attackRequested = true;
+        }
 
         #region BASIC ATTACK
 
@@ -99,7 +106,7 @@ namespace EthanTheHero
         private void BasicAttackCombo()
         {
             // Start combo
-            if (Input.GetMouseButtonDown(0) && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
+            if (Input.GetMouseButtonDown(0) || attackRequested && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
             {
@@ -110,7 +117,7 @@ namespace EthanTheHero
             // Przejście: Attack01 → Attack02
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || attackRequested)
                     atkButtonClickedOnAtk01 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f && atkButtonClickedOnAtk01)
@@ -128,7 +135,7 @@ namespace EthanTheHero
             // Przejście: Attack02 → Attack03
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || attackRequested)
                     atkButtonClickedOnAtk02 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f && atkButtonClickedOnAtk02)
@@ -146,7 +153,7 @@ namespace EthanTheHero
             // Zakończenie: Attack03 → Attack01 (pętla combo)
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || attackRequested)
                     atkButtonClickedOnAtk03 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && atkButtonClickedOnAtk03)
@@ -159,6 +166,7 @@ namespace EthanTheHero
                     myAnim.SetTrigger(notAttacking);
                 }
             }
+            attackRequested = false;
         }
 
         /**

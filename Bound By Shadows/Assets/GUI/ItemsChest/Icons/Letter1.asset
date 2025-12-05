@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef02024a62a461743aaad903ab6487bf, type: 3}
-  m_Name: NewItem
+  m_Name: Letter1
   m_EditorClassIdentifier: 
-  itemName: List
+  itemName: Letter
   icon: {fileID: 683437199642657450, guid: cc30c8f357c1d46419bd64d458548c43, type: 3}
   itemType: 0
-  description: PIERWSZY LIST DO M
+  description: Letter
   healAmount: 0
   letterText: 
   hasTextPreview: 0

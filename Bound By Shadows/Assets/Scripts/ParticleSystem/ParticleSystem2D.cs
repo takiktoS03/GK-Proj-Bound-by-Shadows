@@ -15,10 +15,19 @@ public enum EmissionShape { Point, Line, Circle, Area }
 public struct ParticleData
 {
     public Vector2 position;
+    public Vector2 prevPosition;
     public Vector2 velocity;
     public float lifetime;
     public float age;
     public int alive; 
+}
+public enum ParticleCollisionMode
+{
+    None,       // brak kolizji
+    Stop,       // zatrzymanie na powierzchni
+    Bounce,     // odbicie
+    Stick,      // przyklejenie si?
+    Slide       // ?lizganie po powierzchni
 }
 
 [BurstCompile]
@@ -29,8 +38,6 @@ public struct ParticleUpdateJob : IJobParallelForTransform
     public float deltaTime;
     public Vector2 gravity;
     public float airResistance;
-    public bool enableGroundCollision;
-    public float groundY;
     public float bounceFactor;
     public Vector2 wind;
 
@@ -40,6 +47,8 @@ public struct ParticleUpdateJob : IJobParallelForTransform
 
         if (p.alive == 0)
             return;
+
+        p.prevPosition = p.position;
 
         p.age += deltaTime;
         if (p.age > p.lifetime)
@@ -54,19 +63,6 @@ public struct ParticleUpdateJob : IJobParallelForTransform
         p.position += p.velocity * deltaTime;
 
         p.velocity *= Mathf.Pow(airResistance, deltaTime * 60f);
-
-        if (enableGroundCollision && p.position.y <= groundY)
-        {
-            p.position.y = groundY;
-            p.velocity.y *= -bounceFactor;
-
-            if (Mathf.Abs(p.velocity.y) < 0.1f)
-            {
-                p.alive = 0;
-                particles[index] = p;
-                return;
-            }
-        }
 
         transform.position = p.position;
         particles[index] = p;
@@ -105,10 +101,13 @@ public class ParticleSystem2D : MonoBehaviour
     public bool enableGravity = true;
     public Vector2 gravity = new Vector2(0f, -9.81f);
     public float airResistance = 0.98f;
-    public bool enableGroundCollision = true;
-    public float groundY = 0f;
     public float bounceFactor = 0.5f;
-    public Vector2 wind = Vector2.zero; 
+    public Vector2 wind = Vector2.zero;
+
+    [Header("Collision 2D")]
+    public bool useCollision = false;
+    public ParticleCollisionMode collisionMode = ParticleCollisionMode.Stop;
+    public LayerMask collisionMask = ~0;
 
     [Header("Rendering")]
     [HideInInspector] public string sortingLayer = "Default";
@@ -150,13 +149,10 @@ public class ParticleSystem2D : MonoBehaviour
             overridePresetData = Instantiate(preset);
         }
 
-        // 2. Skopiuj override warto?ci do systemu - MUSI by? przed inicjalizacj? renderów
         ApplyPresetFromOverride();
 
-        // 3. Teraz renderer zna poprawne warto?ci (sprite, materiale, wielko?ci)
         InitializeParticleData();
 
-        //ApplyPresent(effectType);
     }
 
     private void OnDestroy()
@@ -188,8 +184,6 @@ public class ParticleSystem2D : MonoBehaviour
             deltaTime = dt,
             gravity = enableGravity ? gravity : Vector2.zero,
             airResistance = airResistance,
-            enableGroundCollision = enableGroundCollision,
-            groundY = groundY,
             bounceFactor = bounceFactor,
             wind = wind,
         };
@@ -215,6 +209,67 @@ public class ParticleSystem2D : MonoBehaviour
                 continue;
             }
 
+            if (useCollision)
+            {
+                Vector2 oldPos = p.prevPosition;
+                Vector2 newPos = p.position;
+                Vector2 dir = newPos - oldPos;
+                float dist = dir.magnitude;
+
+                if (dist > 0.0001f)
+                {
+                    RaycastHit2D hit = Physics2D.Raycast(
+                        oldPos,
+                        dir.normalized,
+                        dist,
+                        collisionMask
+                    );
+
+                    if (hit.collider != null)
+                    {
+                        switch (collisionMode)
+                        {
+                            case ParticleCollisionMode.Stop:
+                                p.position = hit.point;
+                                p.velocity = Vector2.zero;
+                                break;
+
+                            case ParticleCollisionMode.Bounce:
+                                p.position = hit.point;
+                                p.velocity = Vector2.Reflect(
+                                    p.velocity,
+                                    hit.normal.normalized
+                                ) * bounceFactor;
+                                break;
+
+                            case ParticleCollisionMode.Stick:
+                                p.position = hit.point;
+                                p.velocity = Vector2.zero;
+                                p.age = Mathf.Max(p.age, p.lifetime * 0.7f);
+                                break;
+
+                            case ParticleCollisionMode.Slide:
+                                p.position = hit.point;
+                                {
+                                    Vector2 n = hit.normal.normalized;
+                                    Vector2 v = p.velocity;
+                                    Vector2 vn = Vector2.Dot(v, n) * n; // prostopadla
+                                    Vector2 vt = v - vn;                // styczna
+                                    p.velocity = vt;
+                                }
+                                break;
+
+                            case ParticleCollisionMode.None:
+                            default:
+                                // nic nie robimy
+                                break;
+                        }
+                    }
+                }
+            }
+
+            particleArray[i] = p;
+
             aliveCount++;
 
             float t = p.age / Mathf.Max(0.0001f, p.lifetime);
@@ -224,12 +279,12 @@ public class ParticleSystem2D : MonoBehaviour
             float alpha = alphaOverLifetime.Evaluate(t);
             newColor.a *= alpha;
 
-            // skala
             float scale = scaleOverLifetime.Evaluate(t) * particleSize;
 
             var sr = spriteRenderers[i];
             sr.enabled = true;
             sr.color = newColor;
+            sr.transform.position = p.position;                 
             sr.transform.localScale = Vector3.one * scale;
         }
 
@@ -337,7 +392,6 @@ public class ParticleSystem2D : MonoBehaviour
             freeIndices.Push(i);
         }
     }
-
     void EmitParticle()
     {
         if (freeIndices.Count == 0) return;
@@ -352,6 +406,7 @@ public class ParticleSystem2D : MonoBehaviour
 
         var p = particleArray[index];
         p.position = pos;
+        p.prevPosition = pos;
         p.velocity = vel;
         p.lifetime = particleLifetime;
         p.age = 0;

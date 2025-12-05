@@ -32,10 +32,13 @@ public class ParticleEffectPreset : ScriptableObject
     public bool enableGravity = true;
     public Vector2 gravity = new Vector2(0f, -9.81f);
     public float airResistance = 0.98f;
-    public bool enableGroundCollision = false;
-    public float groundY = 0f;
     public float bounceFactor = 0.5f;
     public Vector2 wind = Vector2.zero;
+
+    [Header("Collision")]
+    public bool useCollision = false;
+    public ParticleCollisionMode collisionMode = ParticleCollisionMode.Stop;
+    public LayerMask collisionMask = ~0;
 
     public void CopyFrom(ParticleEffectPreset other) => CopyFromPreset(other);
     public void CopyTo(ParticleSystem2D system) => CopyToSystem(system);

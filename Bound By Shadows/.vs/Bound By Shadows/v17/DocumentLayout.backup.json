@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\music\u0026sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\music\u0026sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\music\u0026sound\\scenemusicdatadrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\music\u0026sound\\scenemusicdatadrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particleeffectpreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particleeffectpreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particleeffectpreseteditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\inz\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\particlesystem\\particleeffectpreseteditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particleeffectpreseteditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlepresetcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\inz\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\particlesystem\\particlepresetcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlepresetcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\inz\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\menu huds\\mobileuihider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\mobileuihider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\player\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\player\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particleeffectpreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particleeffectpreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\menu huds\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,100 +51,114 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SceneMusicDataDrawer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\SceneMusicDataDrawer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Music\u0026Sound\\SceneMusicDataDrawer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\SceneMusicDataDrawer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Music\u0026Sound\\SceneMusicDataDrawer.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Title": "ParticlePresetCreator.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:10:05.376Z",
+              "WhenOpened": "2025-12-05T19:19:12.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MusicManager.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\MusicManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Music\u0026Sound\\MusicManager.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Music\u0026Sound\\MusicManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Music\u0026Sound\\MusicManager.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAkwEoAAAAUAAAAAAAAAA==",
+              "Title": "ParticleEffectPresetEditor.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T11:00:40.556Z",
+              "WhenOpened": "2025-12-05T19:17:41.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PlayerHealth.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\PlayerHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\PlayerHealth.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\PlayerHealth.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Health\\PlayerHealth.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAIBJwG0AAAAfAAAAAAAAAA==",
+              "Title": "MobileUIHider.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MobileUIHider.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\MobileUIHider.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MobileUIHider.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\MobileUIHider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T13:13:43.896Z"
+              "WhenOpened": "2025-12-05T18:50:57.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement\\PlayerMovement.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAQwFkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T09:11:42.222Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ParticleSystem2D_Editor.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PlayerAttackMethod.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwKgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:00:43.053Z"
+              "WhenOpened": "2025-12-05T18:06:22.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bootstrapper.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwCQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T15:16:05.676Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ParticleSystem2D_Editor.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D_Editor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:00:43.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ParticleSystem2D.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
               "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA6wA4AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABkBAAAAAAAAAAAAwCYBAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T11:00:39.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ParticleEffectPreset.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\INZ\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
               "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPreset.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwCEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T10:48:51.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ParticlePresetCreator.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticlePresetCreator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:21:13.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ParticleEffectPresetEditor.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleEffectPresetEditor.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:21:07.725Z"
             }
           ]
         }

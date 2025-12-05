@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace EthanTheHero
 {
@@ -13,6 +14,14 @@ namespace EthanTheHero
         [SerializeField] private LayerMask groundLayer;
         [SerializeField] private LayerMask wallLayer;
         [SerializeField] private Transform WallCheck;
+
+        [Header("Mobile Controls")]
+        public Joystick joystick;
+        [Range(0.1f, 1.0f)]
+        public float jumpThreshold = 0.5f;
+
+        private bool mobileJumpRequest; // Flaga dla przycisku skoku
+        private bool mobileDashRequest; // Flaga dla przycisku dasha
 
         [HideInInspector] public Vector2 move;
 
@@ -38,8 +47,8 @@ namespace EthanTheHero
 
         private PlayerHealth healthComponent;
 
-        // === z 2. skryptu: informacje o podłożu / stokach ===
-        [Header("Slopes (from script 2)")]
+        // == informacje o podłożu / stokach ===
+        [Header("Slopes")]
         [SerializeField] private float maxSlopeAngle = 60f;
         [SerializeField] private float slopeSlideMultiplier = 3f;
 
@@ -69,10 +78,28 @@ namespace EthanTheHero
 
             lastOnGroundTime -= Time.deltaTime;
 
-            // Input
-            move.x = Input.GetAxisRaw("Horizontal");
-            dashButtonPressed = Input.GetKeyDown(KeyCode.W);
-            jumpButtonPressed = Input.GetButtonDown("Jump");
+            // === INPUT (PC + MOBILE) ===
+            float inputX = Input.GetAxisRaw("Horizontal");
+            dashButtonPressed = Input.GetKeyDown(KeyCode.W) || mobileDashRequest;
+            mobileDashRequest = false; // reset flagi
+
+            jumpButtonPressed = Input.GetButtonDown("Jump") || mobileJumpRequest;
+            mobileJumpRequest = false; // reset flagi
+
+            // Ruch (Joystick - nadpisuje klawiaturę, jeśli jest używany)
+            if (joystick != null)
+            {
+                if (Mathf.Abs(joystick.Horizontal) > 0.1f)
+                {
+                    inputX = joystick.Horizontal;
+                }
+                if (joystick.Vertical > jumpThreshold)
+                {
+                    mobileJumpRequest = true;
+                }
+
+            }
+            move.x = inputX;
 
             jump();
 
@@ -100,24 +127,23 @@ namespace EthanTheHero
             // === ground check ===
             bool boxGrounded = Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer);
 
-            // z 2. skryptu: dokładniejsze info o gruncie
+            // dokładniejsze info o gruncie
             GetGroundInfo(); // ustawia groundNormal, slopeAngle, hasGroundSupport
             grounded = boxGrounded || hasGroundSupport;
 
             if (grounded)
             {
                 lastOnGroundTime = 0.1f;
-                // UWAGA: nie dociskamy już „na siłę” na stoku – to powodowało ślizganie w dół
                 // myBody.AddForce(Vector2.down * 10f, ForceMode2D.Force);
             }
 
             myBody.gravityScale = 1f;
 
-            // Ruch poziomy jak w 2. skrypcie (bez sztucznego pchania po stycznej)
+            // Ruch poziomy
             if (!wallSliding)
                 run(1);
 
-            // Zjeżdżanie tylko na zbyt stromych (z 2. skryptu)
+            // Zjeżdżanie tylko na zbyt stromych
             HandleSlopeSliding();
 
             // Dźwięki
@@ -127,11 +153,18 @@ namespace EthanTheHero
             // Wall slide
             WallSlidngMechanic();
 
-            // (opcjonalnie) jeżeli chcesz mieć lokalnie „prędkość po powierzchni”:
             Vector2 worldVel = (transform.position - lastPosition) / Time.fixedDeltaTime;
             lastPosition = transform.position;
             Vector2 tangent = GetSlopeTangent();
             currentSpeed = Mathf.Abs(Vector2.Dot(worldVel, tangent));
+        }
+        #endregion
+
+        #region MOBILE METHODS
+
+        public void MobileDashInput()
+        {
+            mobileDashRequest = true;
         }
         #endregion
 
@@ -256,7 +289,7 @@ namespace EthanTheHero
             transform.localScale = scale;
         }
 
-        // === z 2. skryptu: dokładniejsze próbkowanie gruntu ===
+        // ===  dokładniejsze próbkowanie gruntu ===
         private void GetGroundInfo()
         {
             Vector2 capsuleSize = new Vector2(groundCheckSize.x, Mathf.Max(groundCheckSize.y, 0.10f));
@@ -298,12 +331,12 @@ namespace EthanTheHero
         }
 
         // === Slope / Wall detection based on ground normal ===
-        private bool IsWallSurface => groundNormal.y < 0.1f && Mathf.Abs(groundNormal.x) > 0.7f;
-        private bool IsSlopeSurface => groundNormal.y >= 0.1f;
+        //private bool IsWallSurface => groundNormal.y < 0.1f && Mathf.Abs(groundNormal.x) > 0.7f;
+        //private bool IsSlopeSurface => groundNormal.y >= 0.1f;
 
         private Vector2 GetSlopeTangent() => new Vector2(groundNormal.y, -groundNormal.x).normalized;
 
-        // === z 2. skryptu: ślizg tylko na zbyt stromych ===
+        // === ślizg tylko na zbyt stromych ===
         private void HandleSlopeSliding()
         {
             if (!grounded) return;

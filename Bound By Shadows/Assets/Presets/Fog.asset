@@ -105,7 +105,10 @@ MonoBehaviour:
   enableGravity: 0
   gravity: {x: 0, y: 0}
   airResistance: 0.98
-  enableGroundCollision: 0
-  groundY: 0
   bounceFactor: 0
   wind: {x: 0.3, y: 0}
+  useCollision: 0
+  collisionMode: 2
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
