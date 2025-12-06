@@ -6,7 +6,7 @@ using UnityEngine;
 public class ParticleSystem2DEditor : Editor
 {
     private Editor workingCopyEditor;
-    private ParticleEffectPreset lastPreset = null;
+    // private ParticleEffectPreset lastPreset = null;
 
     public override void OnInspectorGUI()
     {
@@ -39,37 +39,56 @@ public class ParticleSystem2DEditor : Editor
 
         EditorGUILayout.LabelField("Preset", EditorStyles.boldLabel);
         var newPresetObj = EditorGUILayout.ObjectField(
-    "Preset File",
-    presetProp.objectReferenceValue,
-    typeof(ParticleEffectPreset),
-    false
-);
+            "Preset File",
+            presetProp.objectReferenceValue,
+            typeof(ParticleEffectPreset),
+            false
+        );
 
-        if (newPresetObj != presetProp.objectReferenceValue)
+        // Flaga wykrywaj?ca, czy u?ytkownik zmieni? referencj? do Assetu Presetu
+        bool presetAssetReferenceChanged = newPresetObj != presetProp.objectReferenceValue;
+
+        if (presetAssetReferenceChanged)
         {
             presetProp.objectReferenceValue = newPresetObj;
             serializedObject.ApplyModifiedProperties();
         }
 
+        ParticleEffectPreset currentPresetAsset = presetProp.objectReferenceValue as ParticleEffectPreset;
 
-        ParticleEffectPreset newPreset = presetProp.objectReferenceValue as ParticleEffectPreset;
+        // ==========================================================
+        // LOGIKA PERSYSTENCJI (Klucz do rozwi?zania problemu resetu)
+        // ==========================================================
 
-        // =============== TU JEST KLUCZ ===============
-        // wykrywanie zmiany preset file
-        if (newPreset != lastPreset)
+        if (presetAssetReferenceChanged)
         {
-            if (newPreset != null)
+            // KROK 1: Je?li Asset Presetu zosta? zmieniony, nadpisujemy Working Copy
+            if (currentPresetAsset != null)
             {
-                ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
-                ps.overridePresetData.CopyFrom(newPreset);
+                if (ps.overridePresetData == null)
+                {
+                    ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
+                }
+                // ZAWSZE kopiujemy z nowego Assetu do Working Copy
+                ps.overridePresetData.CopyFrom(currentPresetAsset);
                 EditorUtility.SetDirty(ps);
             }
-            else
+            else // U?ytkownik ustawi? Preset na null
             {
                 ps.overridePresetData = null;
             }
 
-            lastPreset = newPreset;
+            GUI.FocusControl(null);
+            Repaint();
+        }
+        // KROK 2: Je?li Asset Presetu istnieje, ale Working Copy jest null
+        // (np. po za?adowaniu sceny lub ponownym klikni?ciu w hierarchii), utwórz kopi?.
+        // Dzi?ki temu, je?li ps.overridePresetData ISTNIEJE (trzymaj?c Twoje zmiany), ten blok si? NIE WYKONA.
+        else if (currentPresetAsset != null && ps.overridePresetData == null)
+        {
+            ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
+            ps.overridePresetData.CopyFrom(currentPresetAsset);
+            EditorUtility.SetDirty(ps);
 
             GUI.FocusControl(null);
             Repaint();
@@ -96,20 +115,24 @@ public class ParticleSystem2DEditor : Editor
 
             if (!string.IsNullOrEmpty(path))
             {
-                // tworzymy i kopiujemy z OBIEKTU
                 var newFile = ScriptableObject.CreateInstance<ParticleEffectPreset>();
                 newFile.CopyFromSystem(ps);
 
                 AssetDatabase.CreateAsset(newFile, path);
                 AssetDatabase.SaveAssets();
 
+                // Ustaw nowo utworzony Asset jako Preset File
                 presetProp.objectReferenceValue = newFile;
                 serializedObject.ApplyModifiedProperties();
 
-                ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
+                // Zaktualizuj Working Copy nowymi danymi
+                if (ps.overridePresetData == null)
+                {
+                    ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
+                }
                 ps.overridePresetData.CopyFrom(newFile);
 
-                lastPreset = newFile;
+                // USUNI?TO: lastPreset = newFile;
 
                 Selection.activeObject = newFile;
             }
@@ -127,21 +150,22 @@ public class ParticleSystem2DEditor : Editor
             if (workingCopyEditor == null || workingCopyEditor.target != ps.overridePresetData)
                 workingCopyEditor = CreateEditor(ps.overridePresetData);
 
+            // To pozwala edytowa? tylko KOPI? ustawie?
             workingCopyEditor.OnInspectorGUI();
 
             EditorGUILayout.Space();
 
-            GUI.color = Color.cyan;
-            if (GUILayout.Button("SAVE SETTINGS TO PRESET"))
+            // Tutaj mo?esz doda? przycisk "Resetuj do Presetu"
+            GUI.color = Color.yellow;
+            if (GUILayout.Button("Reset Settings to Preset Default"))
             {
                 var presetFile = presetProp.objectReferenceValue as ParticleEffectPreset;
-
-                Undo.RecordObject(presetFile, "Save Preset");
-                presetFile.CopyFrom(ps.overridePresetData);
-                EditorUtility.SetDirty(presetFile);
-                AssetDatabase.SaveAssets();
-
-                UpdateAllSceneObjectsUsingPreset(presetFile);
+                if (presetFile != null)
+                {
+                    ps.overridePresetData.CopyFrom(presetFile);
+                    EditorUtility.SetDirty(ps.overridePresetData);
+                    Repaint();
+                }
             }
             GUI.color = Color.white;
         }

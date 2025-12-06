@@ -876,6 +876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7875478684098875918, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8673441110181590047, guid: f7d0d5332d57b8d4eb785ebe82aedcf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -228.8995
@@ -1744,7 +1748,7 @@ MonoBehaviour:
   particleMaterial: {fileID: 2100000, guid: 982504780716f9b41a7aa9f8b3958ef1, type: 2}
   particleSprite: {fileID: -6830152201372448578, guid: 04f3659e6b7bd664585dedae9aca020b, type: 3}
   particleSize: 1
-  emissionRate: 20
+  emissionRate: 10
   particleLifetime: 3
   minSpeed: 0.5
   maxSpeed: 1
