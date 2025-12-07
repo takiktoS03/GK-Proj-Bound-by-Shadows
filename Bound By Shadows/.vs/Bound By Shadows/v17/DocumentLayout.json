@@ -1,13 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAE28F57-2647-64A3-61EB-32AE2A1CB608}|Assembly-CSharp-Editor.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\editor\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\player\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerattackmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\menu huds\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\menu huds\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\bootstrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAE28F57-2647-64A3-61EB-32AE2A1CB608}|Assembly-CSharp-Editor.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\editor\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAE28F57-2647-64A3-61EB-32AE2A1CB608}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\particlesystem2d_editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\in\u017C\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\particlesystem\\particlesystem2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,28 +30,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 231,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bootstrapper.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\Bootstrapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T20:16:53.695Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ParticleSystem2D.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
-              "ViewState": "AgIAACIBAAAAAAAAAAAtwMMBAAAXAAAAAAAAAA==",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T11:04:26.392Z",
+              "WhenOpened": "2025-12-06T20:16:43.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerAttackMethod.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAttackMethod.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwKgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T19:49:01.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ParticleSystem2D.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ParticleSystem\\ParticleSystem2D.cs",
+              "ViewState": "AgIAACIBAAAAAAAAAAAtwMMBAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T11:04:26.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ParticleSystem2D_Editor.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Editor\\ParticleSystem2D_Editor.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Editor\\ParticleSystem2D_Editor.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\ParticleSystem2D_Editor.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\IN\u017B\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Editor\\ParticleSystem2D_Editor.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Editor\\ParticleSystem2D_Editor.cs",
               "RelativeToolTip": "Assets\\Editor\\ParticleSystem2D_Editor.cs",
               "ViewState": "AgIAAH0AAAAAAAAAAAAkwK0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

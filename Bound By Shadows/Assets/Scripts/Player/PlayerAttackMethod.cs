@@ -105,8 +105,21 @@ namespace EthanTheHero
          */
         private void BasicAttackCombo()
         {
+            bool isAttackInput = false;
+
+            // Gra odpalona na telefonie (Android lub iOS)
+            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                // na telefonie tylko flaga z przycisku
+                isAttackInput = attackRequested;
+            }
+            else
+            {
+                // Na PC/Edytorze liczy się Myszka LUB przycisk UI (do testów)
+                isAttackInput = Input.GetMouseButtonDown(0) || attackRequested;
+            }
             // Start combo
-            if (Input.GetMouseButtonDown(0) || attackRequested && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
+            if (isAttackInput && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
             {
@@ -117,7 +130,7 @@ namespace EthanTheHero
             // Przejście: Attack01 → Attack02
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
             {
-                if (Input.GetMouseButtonDown(0) || attackRequested)
+                if (isAttackInput)
                     atkButtonClickedOnAtk01 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f && atkButtonClickedOnAtk01)
@@ -135,7 +148,7 @@ namespace EthanTheHero
             // Przejście: Attack02 → Attack03
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))
             {
-                if (Input.GetMouseButtonDown(0) || attackRequested)
+                if (isAttackInput)
                     atkButtonClickedOnAtk02 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f && atkButtonClickedOnAtk02)
@@ -153,7 +166,7 @@ namespace EthanTheHero
             // Zakończenie: Attack03 → Attack01 (pętla combo)
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
             {
-                if (Input.GetMouseButtonDown(0) || attackRequested)
+                if (isAttackInput)
                     atkButtonClickedOnAtk03 = true;
 
                 if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && atkButtonClickedOnAtk03)
