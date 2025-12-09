@@ -364,16 +364,16 @@ MonoBehaviour:
   audioSource: {fileID: 1825634730}
   narrationSource: {fileID: 1825634727}
   sceneMusicList:
-  - sceneGUID: e57a0b20948e674429dc5dae7e225071
+  - sceneName: Cave
     music: {fileID: 8300000, guid: 834159677be4df643ac2ceffff02945c, type: 3}
     volume: 0.6
-  - sceneGUID: 8de3a9baf0890fd499d126d02d4fd85c
+  - sceneName: Intro
     music: {fileID: 8300000, guid: 05dff6889e975ae4abbd2672f77acbba, type: 3}
     volume: 0.6
-  - sceneGUID: 0400a480945cbd14995adf055ea23935
+  - sceneName: MainMenu
     music: {fileID: 8300000, guid: 72440a501c6ac994e8e753a0c6a19d42, type: 3}
     volume: 0.6
-  - sceneGUID: 8c9cfa26abfee488c85f1582747f6a02
+  - sceneName: Level 1 - Cave
     music: {fileID: 8300000, guid: 97ae8ec8dd37b37499756e202c43d9e5, type: 3}
     volume: 0.01
 --- !u!4 &1825634729

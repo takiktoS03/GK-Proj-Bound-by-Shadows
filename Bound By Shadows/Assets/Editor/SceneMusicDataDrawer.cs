@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(MusicManager.SceneMusicData))]
@@ -8,39 +8,50 @@ public class SceneMusicDataDrawer : PropertyDrawer
     {
         EditorGUI.BeginProperty(position, label, property);
 
-        var sceneGUIDProp = property.FindPropertyRelative("sceneGUID");
+        var sceneNameProp = property.FindPropertyRelative("sceneName");
         var musicProp = property.FindPropertyRelative("music");
         var volumeProp = property.FindPropertyRelative("volume");
 
-        Rect sceneRect = new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight);
+        float lineHeight = EditorGUIUtility.singleLineHeight;
+        float padding = 2f;
 
-        // Pobierz SceneAsset odpowiadaj?cy GUID
+        // --- POLE SCENY ---
+        Rect sceneRect = new Rect(position.x, position.y, position.width, lineHeight);
+
+        // Jeśli scena została wcześniej zapisana, spróbuj załadować SceneAsset
         SceneAsset sceneAsset = null;
-        if (!string.IsNullOrEmpty(sceneGUIDProp.stringValue))
+
+        if (!string.IsNullOrEmpty(sceneNameProp.stringValue))
         {
-            string path = AssetDatabase.GUIDToAssetPath(sceneGUIDProp.stringValue);
-            sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(path);
+            string[] guids = AssetDatabase.FindAssets(sceneNameProp.stringValue + " t:Scene");
+            if (guids.Length > 0)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guids[0]);
+                sceneAsset = AssetDatabase.LoadAssetAtPath<SceneAsset>(path);
+            }
         }
 
-        // Wy?wietl pole sceny
-        var selectedScene = (SceneAsset)EditorGUI.ObjectField(sceneRect, "Scene", sceneAsset, typeof(SceneAsset), false);
+        // Pole wyboru sceny jako obiekt SceneAsset
+        SceneAsset selectedScene = (SceneAsset)EditorGUI.ObjectField(
+            sceneRect, "Scene", sceneAsset, typeof(SceneAsset), false
+        );
 
+        // Jeśli użytkownik przypisał scenę → zapisz nazwę sceny
         if (selectedScene != null)
         {
-            string path = AssetDatabase.GetAssetPath(selectedScene);
-            sceneGUIDProp.stringValue = AssetDatabase.AssetPathToGUID(path);
+            sceneNameProp.stringValue = selectedScene.name;
         }
         else
         {
-            sceneGUIDProp.stringValue = "";
+            sceneNameProp.stringValue = "";
         }
 
-        // Muzyka
-        Rect musicRect = new Rect(position.x, position.y + 20, position.width, EditorGUIUtility.singleLineHeight);
+        // --- POLE MUZYKI ---
+        Rect musicRect = new Rect(position.x, position.y + lineHeight + padding, position.width, lineHeight);
         EditorGUI.PropertyField(musicRect, musicProp);
 
-        // Volume
-        Rect volumeRect = new Rect(position.x, position.y + 40, position.width, EditorGUIUtility.singleLineHeight);
+        // --- POLE GŁOŚNOŚCI ---
+        Rect volumeRect = new Rect(position.x, position.y + 2 * (lineHeight + padding), position.width, lineHeight);
         EditorGUI.PropertyField(volumeRect, volumeProp);
 
         EditorGUI.EndProperty();
@@ -48,6 +59,6 @@ public class SceneMusicDataDrawer : PropertyDrawer
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return 60f; // trzy pola
+        return EditorGUIUtility.singleLineHeight * 3 + 6f;
     }
 }
