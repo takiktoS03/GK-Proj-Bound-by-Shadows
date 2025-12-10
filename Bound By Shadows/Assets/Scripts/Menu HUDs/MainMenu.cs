@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     {
         //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
-        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
     }
 
     /**
@@ -32,9 +32,8 @@ public class MainMenu : MonoBehaviour
      */
     public void LoadGame()
     {
-        Debug.Log("[UI] LoadGame clicked");
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
+        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
         //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
     }
 

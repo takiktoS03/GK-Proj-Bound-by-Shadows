@@ -76,22 +76,6 @@ public class DialogManager : MonoBehaviour
     }
 
     /**
-     * @brief Funkcja czyszcząca wszystkie dialogi
-     */
-    public void ClearAll()
-    {
-        for (int i = 0; i < dialogBoxes.Length; i++)
-        {
-            if (routines[i] != null)
-                StopCoroutine(routines[i]);
-
-            dialogBoxes[i].text = "";
-            dialogBoxes[i].alpha = 0f;
-            routines[i] = null;
-        }
-    }
-
-    /**
      * @brief Funkcja czyszcząca aktualnie wyświetlany dialog (box)
      */
     public void Clear(int boxIndex = 0)
@@ -105,6 +89,22 @@ public class DialogManager : MonoBehaviour
         dialogBoxes[boxIndex].alpha = 0f;
 
         routines[boxIndex] = null;
+    }
+
+    /**
+     * @brief Funkcja czyszcząca wszystkie dialogi
+     */
+    public void ClearAll()
+    {
+        for (int i = 0; i < dialogBoxes.Length; i++)
+        {
+            if (routines[i] != null)
+                StopCoroutine(routines[i]);
+
+            dialogBoxes[i].text = "";
+            dialogBoxes[i].alpha = 0f;
+            routines[i] = null;
+        }
     }
 }
 

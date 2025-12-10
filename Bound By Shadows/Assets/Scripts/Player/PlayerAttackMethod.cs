@@ -16,9 +16,6 @@ namespace EthanTheHero
      */
     public class PlayerAttackMethod : MonoBehaviour
     {
-        /// @brief Czy gra jest zapauzowana (globalnie).
-        public static bool isPaused = false;
-
         #region FIELD
 
         private PlayerAnimation playerAnim;
@@ -108,7 +105,7 @@ namespace EthanTheHero
             bool isAttackInput = false;
 
             // Gra odpalona na telefonie (Android lub iOS)
-            if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
+            if (Application.platform == RuntimePlatform.Android)
             {
                 // na telefonie tylko flaga z przycisku
                 isAttackInput = attackRequested;
@@ -122,10 +119,10 @@ namespace EthanTheHero
             if (isAttackInput && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
-            {
-                myAnim.SetTrigger(attack01);
-                soundManager?.PlayLightAttack();
-            }
+                {
+                    myAnim.SetTrigger(attack01);
+                    soundManager?.PlayLightAttack();
+                }
 
             // Przejście: Attack01 → Attack02
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
