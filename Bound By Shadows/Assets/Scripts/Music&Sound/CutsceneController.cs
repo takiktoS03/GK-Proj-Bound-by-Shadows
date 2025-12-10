@@ -9,30 +9,45 @@ public class CutsceneController : MonoBehaviour
     [System.Serializable]
     public class CutsceneSlide
     {
+        [Header("Visuals")]
         public Sprite image;
-        [TextArea] public string subtitle; // Opcjonalnie napisy
-        public AudioClip voiceOver;        // Dźwięk/Dialog
-        public float duration = 5f;        // Czas trwania (jeśli brak audio)
-        public bool autoDurationByAudio = true; // Czy czas ma zależeć od długości audio?
+
+        [Header("Audio & Text")]
+        [TextArea] public string subtitle;
+        public AudioClip voice;
+
+        [Header("Timing")]
+        public float duration = 5f;
+        public bool autoDurationByAudio = true;
+
+        [Header("Zoom Effect")]
+        public bool enableZoom = false;
+        public float zoomScale = 1.2f;
     }
 
     [Header("Configuration")]
     public string nextSceneName;   // Scena do załadowania po cutscence
-    public Image backgroundImage;     // UI Image na Canvasie w tej scenie
-    public Text subtitleText;      // Opcjonalne UI Text
-    public AudioSource audioSource;
-    public float crossfadeDuration = 1f; // Czas przenikania między obrazkami
+    public Image displayImage;     // UI Image na Canvasie
+    public float fadeDuration = 1f; // Czas przenikania między obrazkami
+
+    private AudioSource voiceSource;
 
     [Header("Content")]
     public List<CutsceneSlide> slides = new List<CutsceneSlide>();
 
+    private void Awake()
+    {
+        voiceSource = GetComponent<AudioSource>();
+        voiceSource.playOnAwake = false;
+        voiceSource.loop = false;
+    }
+
     private void Start()
     {
-        // Upewnij się, że zaczynamy z czystym stanem
-        if (backgroundImage != null)
+        if (displayImage != null)
         {
-            backgroundImage.color = Color.black;
-            backgroundImage.enabled = true;
+            displayImage.color = new Color(1, 1, 1, 0);
+            displayImage.enabled = true;
         }
 
         StartCoroutine(PlaySequence());
@@ -40,51 +55,51 @@ public class CutsceneController : MonoBehaviour
 
     private IEnumerator PlaySequence()
     {
-        // Ukryj muzykę z tła (jeśli chcesz, by cutscenka miała swoje audio)
-        // Możesz tu wyciszyć AudioManager.Instance
-
         foreach (var slide in slides)
         {
-            // 1. Ustawienie zasobów
+            // Konfiguracja
+            displayImage.rectTransform.localScale = Vector3.one;
             if (slide.image != null)
+                displayImage.sprite = slide.image;            
+
+            if (!string.IsNullOrEmpty(slide.subtitle))
             {
-                // Jeśli obrazek ma się zmienić, zróbmy to płynnie
-                // (Tutaj uproszczona wersja: Fade Out -> Zmiana -> Fade In)
-                // Dla pełnego Crossfade (A znika, B się pojawia) potrzebne byłyby 2 obrazy UI
-
-                // Fade out starego
-                if (backgroundImage.sprite != null)
-                    yield return backgroundImage.DOFade(0f, 0.5f).WaitForCompletion();
-
-                backgroundImage.sprite = slide.image;
-
-                // Fade in nowego
-                yield return backgroundImage.DOFade(1f, 1f).WaitForCompletion();
+                DialogManager.Instance.Show(slide.subtitle, slide.duration);
             }
 
-            if (subtitleText != null) subtitleText.text = slide.subtitle;
-
-            // 2. Odtwarzanie dźwięku
-            if (slide.voiceOver != null)
+            // Wyświetlenie obrazu i dźwięku
+            yield return displayImage.DOFade(1f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
+            float waitTime = CalculateSlideDuration(slide);
+            if (slide.enableZoom)
             {
-                audioSource.clip = slide.voiceOver;
-                audioSource.Play();
+                // Obliczamy czas trwania zooma (czas slajdu + margines, żeby nie stanął w miejscu przed końcem)
+                float zoomTime = waitTime + fadeDuration;
+                displayImage.rectTransform.DOScale(slide.zoomScale, zoomTime).SetEase(Ease.InOutSine);
             }
-
-            // 3. Czekanie
-            float waitTime = slide.duration;
-            if (slide.autoDurationByAudio && slide.voiceOver != null)
+            if (slide.voice != null)
             {
-                waitTime = slide.voiceOver.length;
+                AudioManager.Instance.PlaySFX(slide.voice);
             }
-
             yield return new WaitForSeconds(waitTime);
+
+
+            yield return displayImage.DOFade(0f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
         }
 
         // Koniec cutscenki - Fade Out całości
-        if (backgroundImage != null)
-            yield return backgroundImage.DOFade(0f, 1f).WaitForCompletion();
+        //if (displayImage != null)
+        //    yield return displayImage.DOFade(0f, 1f).WaitForCompletion();
 
         GameManager.Instance.LoadLevel(nextSceneName);
+    }
+
+    // Pomocnicza funkcja do liczenia czasu
+    private float CalculateSlideDuration(CutsceneSlide slide)
+    {
+        if (slide.autoDurationByAudio && slide.voice != null)
+        {
+            return slide.voice.length;
+        }
+        return slide.duration;
     }
 }

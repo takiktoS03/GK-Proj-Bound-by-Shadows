@@ -21,8 +21,8 @@ public class MainMenu : MonoBehaviour
     public void StartNewGame()
     {
         //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
-        //SceneManager.LoadScene("Level 1 - Cave", LoadSceneMode.Single);
-        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        SceneManager.LoadScene("Intro", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
     }
 
     /**

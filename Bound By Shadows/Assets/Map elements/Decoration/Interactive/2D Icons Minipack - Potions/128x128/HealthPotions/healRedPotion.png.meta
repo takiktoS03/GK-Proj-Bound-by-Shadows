@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      healRedPotion_0: 5616377868221430161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

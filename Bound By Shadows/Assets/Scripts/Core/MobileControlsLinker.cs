@@ -40,7 +40,7 @@ public class MobileControlsLinker : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MainMenu" || scene.name == "BootScene")
+        if (scene.name == "MainMenu" || scene.name == "BootScene" || scene.name == "Intro")
         {
             visualsContainer.SetActive(false); // Ukryj UI w menu
             return;

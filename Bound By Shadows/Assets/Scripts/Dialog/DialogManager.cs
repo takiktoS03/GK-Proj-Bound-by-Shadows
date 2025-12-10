@@ -14,12 +14,13 @@ using UnityEngine;
 public class DialogManager : MonoBehaviour
 {
     /// @brief Singleton systemu dialogów
-    //public static DialogManager Instance;
+    public static DialogManager Instance;
 
     /// @brief Tablica okien dialogowych (TextMeshProUGUI), w których może pojawić się tekst.
     /// 1 – dialogi fabularne NPC (dół ekranu)
     /// 2 – myśli gracza (nad głową)
     /// 3 - komunikaty UI do skrzynek/drzwi itp.
+    /// 4 - Podpowiedzi
 
     public TextMeshProUGUI[] dialogBoxes;
 
@@ -27,14 +28,13 @@ public class DialogManager : MonoBehaviour
 
     private void Awake()
     {
-        //if (Instance != null)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        //Instance = this;
-        //DontDestroyOnLoad(gameObject);
+        Instance = this;
 
         routines = new Coroutine[dialogBoxes.Length];
     }

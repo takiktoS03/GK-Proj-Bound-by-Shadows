@@ -26,11 +26,8 @@ public class DialogTrigger : MonoBehaviour
     public bool destroyAfter = true;
 
     [Header("References")]
-    public DialogManager dialogManager;
     public Transform ghost;   // optional
     public Transform player;  // optional
-
-    private AudioSource audioSource;
 
     private PlayerMovement movement;
     private PlayerAnimation anim;
@@ -43,8 +40,6 @@ public class DialogTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-
-        audioSource = gameObject.AddComponent<AudioSource>();
 
         SoundManager.Instance?.StopSteps();
 
@@ -90,8 +85,8 @@ public class DialogTrigger : MonoBehaviour
     {
         foreach (var line in lines)
         {
-            dialogManager.Show(line.text, line.duration, textUIType);
-            PlayVoice(line.voice);
+            DialogManager.Instance.Show(line.text, line.duration, textUIType);
+            AudioManager.Instance.PlaySFX(line.voice);
 
             yield return StartCoroutine(WaitOrSkip(line.duration));
         }
@@ -110,22 +105,6 @@ public class DialogTrigger : MonoBehaviour
     }
 
     /**
-    * @brief Odtwarza dźwięk mowy (głosu) z podanego klipu audio.
-    * 
-    * Jeśli audioSource jest dostępny i klip nie jest pusty, zatrzymuje obecny dźwięk i odtwarza nowy.
-    * 
-    * @param clip Klip audio do odtworzenia.
-    */
-    private void PlayVoice(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.Stop();
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
-    /**
      * @brief Pozwala na pominięcie dialogu za pomocą klawisza, lub normalne odtworzenie
      * 
      * @param time Czas pojedynczego dialogu
@@ -140,7 +119,7 @@ public class DialogTrigger : MonoBehaviour
             if (skippable && !skipPressed && Input.GetKeyDown(skipKey))
             {
                 skipPressed = true;
-                dialogManager.Clear();
+                DialogManager.Instance.Clear();
                 break;
             }
 

@@ -37,7 +37,7 @@ public class Teleporter : MonoBehaviour
     {
         isTeleporting = true;
 
-        // 1. Zablokuj sterowanie gracza (opcjonalne, ale zalecane)
+        // Blokada sterowanie gracza
         // var playerScript = player.GetComponent<PlayerController>();
         // if(playerScript) playerScript.enabled = false;
 
@@ -58,7 +58,7 @@ public class Teleporter : MonoBehaviour
 
         yield return GameManager.Instance.FadeOut(1.0f).WaitForCompletion();
 
-        // 5. Odblokuj sterowanie
+        // Odblokowanie sterowania
         // if(playerScript) playerScript.enabled = true;
 
         isTeleporting = false;
