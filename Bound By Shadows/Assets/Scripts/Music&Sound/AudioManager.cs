@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource musicSource; // zapętlona muzyka
     public AudioSource sfxSource;   // krótkie efekty dźwiękowe
+    public AudioSource sfxLoopSource;   // zapętlone efekty
 
     private void Awake()
     {
@@ -27,11 +28,11 @@ public class AudioManager : MonoBehaviour
 
         // Płynne przejście (Crossfade)
         Sequence s = DOTween.Sequence();
-
         s.Append(musicSource.DOFade(0f, 0.5f));
         s.AppendCallback(() =>
         {
             musicSource.clip = clip;
+            musicSource.loop = true;
             musicSource.volume = 0f;
             if (clip != null) musicSource.Play();
             else musicSource.Stop();
@@ -45,8 +46,29 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
-        //audioSource.Stop();
         if (clip != null)
             sfxSource.PlayOneShot(clip, volume);
     }
+
+    public void StartLoopingSFX(AudioClip clip, float volume = 1f)
+    {
+        // Nie resetujemy dźwięku która już gra
+        if (sfxLoopSource.isPlaying && sfxLoopSource.clip == clip) 
+            return;
+
+        sfxLoopSource.clip = clip;
+        sfxLoopSource.loop = true;
+        sfxLoopSource.volume = volume;
+        sfxLoopSource.Play();
+    }
+
+    public void StopLoopingSFX()
+    {
+        if (sfxLoopSource.isPlaying)
+        {
+            sfxLoopSource.Stop();
+            sfxLoopSource.clip = null;
+        }
+    }
+
 }

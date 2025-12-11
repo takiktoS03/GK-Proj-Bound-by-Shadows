@@ -72,7 +72,6 @@ public class CutsceneController : MonoBehaviour
             float waitTime = CalculateSlideDuration(slide);
             if (slide.enableZoom)
             {
-                // Obliczamy czas trwania zooma (czas slajdu + margines, żeby nie stanął w miejscu przed końcem)
                 float zoomTime = waitTime + fadeDuration;
                 displayImage.rectTransform.DOScale(slide.zoomScale, zoomTime).SetEase(Ease.InOutSine);
             }
@@ -85,10 +84,6 @@ public class CutsceneController : MonoBehaviour
 
             yield return displayImage.DOFade(0f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
         }
-
-        // Koniec cutscenki - Fade Out całości
-        //if (displayImage != null)
-        //    yield return displayImage.DOFade(0f, 1f).WaitForCompletion();
 
         GameManager.Instance.LoadLevel(nextSceneName);
     }

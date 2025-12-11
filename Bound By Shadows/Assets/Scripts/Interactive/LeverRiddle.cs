@@ -38,12 +38,12 @@ public class LeverRiddle : MonoBehaviour
             hiddenTiles.SetActive(true);
             prevSolved = true;
             // dzwiek przesuwania kamienia
-            SoundManager.Instance?.PlayStone();
+            SoundLibrary.Instance.PlayStone();
         }
         else if (prevSolved)
         {
             // dodanie dźwięku również, jeśli zagadka była rozwiązana, ale dźwignia została przesunięta w złą pozycję
-            SoundManager.Instance?.PlayStone();
+            SoundLibrary.Instance.PlayStone();
             prevSolved = false;
         }
 

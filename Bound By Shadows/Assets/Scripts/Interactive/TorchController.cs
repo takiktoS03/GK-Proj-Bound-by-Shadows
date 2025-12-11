@@ -36,7 +36,7 @@ public class TorchController : MonoBehaviour
         if (torchLight != null)
             torchLight.enabled = true;
 
-        SoundManager.Instance.PlaySound(SoundManager.Instance.torchLightSound);
+        SoundLibrary.Instance.PlayTorch();
 
         // zapisz kolejno?? zapalenia
         orderIndex = TorchPuzzleManager.Instance.GetNextOrderIndex();

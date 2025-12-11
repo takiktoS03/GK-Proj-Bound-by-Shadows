@@ -23,9 +23,6 @@ public class PauseMenu : MonoBehaviour
     /// @brief Panel UI ekranu końca gry.
     public GameObject gameOverUI;
 
-    /// @brief Źródło dźwięku odtwarzanego przy przegranej.
-    public AudioSource gameOverAudio;
-
     /// @brief Czy gra jest aktualnie zapauzowana.
     public static bool isPaused = false;
 
@@ -139,7 +136,7 @@ public class PauseMenu : MonoBehaviour
     public IEnumerator ShowGameOver()
     {
         yield return new WaitForSeconds(1.5f);
-        PlayGameOverSound();
+        SoundLibrary.Instance.PlayGameOver();
         yield return new WaitForSeconds(0.4f);
 
         pauseMenuUI.SetActive(false);
@@ -147,17 +144,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
         isGameOver = true;
-    }
-
-    /**
-     * @brief Odtwarza dźwięk końca gry, jeśli jeszcze nie gra.
-     */
-    private void PlayGameOverSound()
-    {
-        if (gameOverAudio != null && !gameOverAudio.isPlaying)
-        {
-            gameOverAudio.Play();
-        }
     }
 }
 

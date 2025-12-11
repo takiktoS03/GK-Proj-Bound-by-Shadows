@@ -106,7 +106,7 @@ public class PlayerHealth : Health
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
-        SoundManager.Instance?.PlayHurt();
+        SoundLibrary.Instance.PlayHurt();
         ghostLight.SetDanger();
     }
 

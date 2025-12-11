@@ -147,8 +147,8 @@ namespace EthanTheHero
             HandleSlopeSliding();
 
             // Dźwięki
-            if (grounded && Mathf.Abs(move.x) > 0.1f) SoundManager.Instance?.StartSteps();
-            else SoundManager.Instance?.StopSteps();
+            if (grounded && Mathf.Abs(move.x) > 0.1f) SoundLibrary.Instance.StartSteps();
+            else SoundLibrary.Instance.StopSteps();
 
             // Wall slide
             WallSlidngMechanic();
@@ -203,7 +203,7 @@ namespace EthanTheHero
             canDash = false;
             isDashing = true;
 
-            SoundManager.Instance?.PlayDash();
+            SoundLibrary.Instance.PlayDash();
 
             float originalGravity = myBody.gravityScale;
             myBody.gravityScale = 0f;
@@ -230,7 +230,7 @@ namespace EthanTheHero
             if (jumpButtonPressed && grounded)
             {
                 isJumping = true;
-                SoundManager.Instance?.PlayJump();
+                SoundLibrary.Instance.PlayJump();
                 myBody.linearVelocity = new Vector2(myBody.linearVelocity.x, data.jumpHeight);
             }
         }

@@ -20,8 +20,8 @@ public class MainMenu : MonoBehaviour
      */
     public void StartNewGame()
     {
-        //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
-        SceneManager.LoadScene("Intro", LoadSceneMode.Single);
+        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
         //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
     }
 
@@ -44,7 +44,6 @@ public class MainMenu : MonoBehaviour
      */
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("[LOAD] Scene loaded: " + scene.name);
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
         SaveSystem.LoadCurrentScene();
@@ -53,12 +52,10 @@ public class MainMenu : MonoBehaviour
     /**
      * @brief Zamyka aplikację.
      *
-     * Wywołuje `Application.Quit()` i wypisuje debug log.
      */
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Exit called");
     }
 }
 

@@ -36,7 +36,7 @@ public class TorchPuzzleManager : MonoBehaviour
                 if (objectToAppear != null)
                     objectToAppear.SetActive(false);
 
-                SoundManager.Instance.PlaySound(SoundManager.Instance.puzzleSolvedSound);
+                SoundLibrary.Instance.PlayPuzzleSolved();
             }
             else
             {

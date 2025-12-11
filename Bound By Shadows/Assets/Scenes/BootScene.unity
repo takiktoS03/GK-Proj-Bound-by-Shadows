@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 133005479}
   - component: {fileID: 133005482}
   - component: {fileID: 133005481}
-  - component: {fileID: 133005480}
   m_Layer: 5
   m_Name: DoorsText
   m_TagString: Untagged
@@ -157,18 +156,6 @@ RectTransform:
   m_AnchoredPosition: {x: -146.99988, y: 42.999954}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!210 &133005480
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133005478}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_SortAtRoot: 0
 --- !u!114 &133005481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +267,7 @@ GameObject:
   - component: {fileID: 135216594}
   - component: {fileID: 135216593}
   - component: {fileID: 135216592}
+  - component: {fileID: 135216595}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -510,6 +498,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 135216593}
   sfxSource: {fileID: 135216592}
+  sfxLoopSource: {fileID: 135216595}
+--- !u!82 &135216595
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135216590}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &313358994
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +793,7 @@ GameObject:
   - component: {fileID: 644972843}
   - component: {fileID: 644972842}
   m_Layer: 0
-  m_Name: PersistentAudioListener
+  m_Name: AudioListener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,10 +1110,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1979687515}
   - {fileID: 1908955898}
   - {fileID: 644972843}
   - {fileID: 135216591}
-  - {fileID: 1979687515}
+  - {fileID: 4662758078604588350}
   - {fileID: 1958980301}
   - {fileID: 1707822210331944896}
   m_Father: {fileID: 0}
@@ -1782,6 +1869,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &4662758078604588350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170040735710335791}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.901642, y: -212.41486, z: 0.12793274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1826058392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5344234524507667693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1790,6 +1892,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1214278428}
     m_Modifications:
+    - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
@@ -1903,6 +2009,10 @@ PrefabInstance:
       value: Fixed Joystick
       objectReference: {fileID: 0}
     - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6c56474666ce0647bdb766e9b4764b3, type: 3}
+    - target: {fileID: 2929252285020698103, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Color.a
       value: 0.7058824
       objectReference: {fileID: 0}
@@ -1939,6 +2049,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6170040735710335791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4662758078604588350}
+  - component: {fileID: 8044019485852192262}
+  m_Layer: 0
+  m_Name: SoundLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!224 &6499868602528126251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2137,6 +2264,32 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &8044019485852192262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170040735710335791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b52eb8b1634499419c9de03429b8149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 8300000, guid: e562247749a98e44fb6815e5dde6757c, type: 3}
+  chestOpenSound: {fileID: 8300000, guid: ca330b4b8042e4749b83aead152444c8, type: 3}
+  destroyBarrelSound: {fileID: 8300000, guid: f7c46411e40629a44b9c8519c2d0bbbb, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 62a091a531893074580298f067015d89, type: 3}
+  lightAttackSound: {fileID: 8300000, guid: 7867a1079cc31fd4bbd23f18cf26a6ca, type: 3}
+  heavyAttackSound: {fileID: 8300000, guid: af601b9abe21aeb4c89980052ad0c0e7, type: 3}
+  jumpSound: {fileID: 8300000, guid: 87a4b92f92f5d164fa64f2264b9bad55, type: 3}
+  dashSound: {fileID: 8300000, guid: 1b1dd3279cb49cd468791717f5b052ed, type: 3}
+  hurtSound: {fileID: 8300000, guid: 17f758258e0baea44a148e3bfced3e29, type: 3}
+  stepSound: {fileID: 8300000, guid: 51734eeaa24bddb49a11330cafb8d108, type: 3}
+  leverPullSound: {fileID: 8300000, guid: 45aacabe9ee00ab47a6d49c46de3316e, type: 3}
+  moveStoneSound: {fileID: 8300000, guid: 480a89b58933cf34286acc1cfb1eac30, type: 3}
+  torchLightSound: {fileID: 0}
+  puzzleSolvedSound: {fileID: 0}
 --- !u!1 &8877705677108429659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,7 +2303,7 @@ GameObject:
   - component: {fileID: 7927731266250465484}
   - component: {fileID: 1853929814441352465}
   m_Layer: 5
-  m_Name: UICanvas
+  m_Name: RootCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

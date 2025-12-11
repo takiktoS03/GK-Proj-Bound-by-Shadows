@@ -33,13 +33,13 @@ public class LeverTrigger : MonoBehaviour
             {
                 leverAnimator.SetTrigger("ActiveOn");
                 leverIsOn = true;
-                SoundManager.Instance?.PlayLever();
+                SoundLibrary.Instance.PlayLever();
             }
             else
             {
                 leverAnimator.SetTrigger("ActiveOff");
                 leverIsOn = false;
-                SoundManager.Instance?.PlayLever();
+                SoundLibrary.Instance.PlayLever();
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using static UIStateManager;
 
 namespace EthanTheHero
 {
@@ -42,9 +41,6 @@ namespace EthanTheHero
         private const string attack03 = "Attack03";
         private const string notAttacking = "NotAttacking";
 
-        // Odwołanie do SoundManagera
-        private SoundManager soundManager;
-
         #endregion
 
         /**
@@ -56,7 +52,6 @@ namespace EthanTheHero
             playerAnim = GetComponent<PlayerAnimation>();
             myBody = GetComponent<Rigidbody2D>();
             playerMv = GetComponent<PlayerMovement>();
-            soundManager = SoundManager.Instance;
         }
 
         /**
@@ -72,7 +67,7 @@ namespace EthanTheHero
          */
         void Update()
         {
-            if (isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
+            if (UIStateManager.isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
                 return;
 
             BasicAttackCombo();
@@ -83,7 +78,7 @@ namespace EthanTheHero
          */
         void FixedUpdate()
         {
-            if (isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
+            if (UIStateManager.isUIOpen || playerMv.isDashing || playerMv.wallJump || playerMv.wallSliding || PauseMenu.isPaused)
                 return;
 
             BasicAttackMethod();
@@ -121,7 +116,7 @@ namespace EthanTheHero
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
                 {
                     myAnim.SetTrigger(attack01);
-                    soundManager?.PlayLightAttack();
+                    SoundLibrary.Instance.PlayLightAttack();
                 }
 
             // Przejście: Attack01 → Attack02
@@ -134,7 +129,7 @@ namespace EthanTheHero
                 {
                     myAnim.SetTrigger(attack02);
                     atkButtonClickedOnAtk01 = false;
-                    soundManager?.PlayLightAttack();
+                    SoundLibrary.Instance.PlayLightAttack();
                 }
                 else if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !atkButtonClickedOnAtk01)
                 {
@@ -152,7 +147,7 @@ namespace EthanTheHero
                 {
                     myAnim.SetTrigger(attack03);
                     atkButtonClickedOnAtk02 = false;
-                    soundManager?.PlayHeavyAttack();
+                    SoundLibrary.Instance.PlayHeavyAttack();
                 }
                 else if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !atkButtonClickedOnAtk02)
                 {

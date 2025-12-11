@@ -19,61 +19,36 @@ public class DialogTrigger : MonoBehaviour
 
     [Header("Options")]
     public int textUIType;
-    public bool blockPlayerMovement = false;
-    public bool blockPlayerAnimation = false;
-    public bool blockWallSliding = false;
     public bool skippable = true;
     public bool destroyAfter = true;
+
+    [Header("Blocking Settings")]
+    public bool blockMovement = true;
+    public bool blockAnimation = true;
+    public bool blockAttacks = true;
+    public bool blockWallSliding = true;
+
+    [Tooltip("Czy odblokować sterowanie natychmiast po zakończeniu dialogu?")]
+    public bool restoreControlsAfter = true;
 
     [Header("References")]
     public Transform ghost;   // optional
     public Transform player;  // optional
 
-    private PlayerMovement movement;
-    private PlayerAnimation anim;
-    private PlayerAttackMethod attackMethod;
-
+    private PlayerControlManager controlManager;
     private KeyCode skipKey = KeyCode.Space;
     private bool skipPressed = false;
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
-        SoundManager.Instance?.StopSteps();
+        SoundLibrary.Instance.StopSteps();
 
-        // block movement?
-        movement = other.GetComponent<PlayerMovement>();
-        if (blockPlayerMovement)
-        {
-            movement.enabled = false;
-            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-            if (rb != null) rb.linearVelocity = Vector2.zero;
-            attackMethod = other.GetComponent<PlayerAttackMethod>();
-            attackMethod.enabled = false;
-        }
+        controlManager = other.GetComponent<PlayerControlManager>();
 
-        if (blockWallSliding)
-        {
-            movement.wallSlidingEnabled = false;
-        }
+        controlManager.LockControls(blockMovement, blockAnimation, blockAttacks, blockWallSliding);
 
-        if (blockPlayerAnimation)
-        {
-            anim = other.GetComponent<PlayerAnimation>();
-            anim.enabled = false;
-        }
-        Animator playerAnim = other.GetComponent<Animator>();
-        if (playerAnim != null)
-        {
-            playerAnim.Play("Idle");
-            playerAnim.SetFloat("Speed", 0f);
-            playerAnim.SetBool("RunIdlePlayying", false);
-            playerAnim.SetBool("Grounded", true);
-            playerAnim.SetBool("Dashing", false);
-            playerAnim.SetTrigger("NotAttacking");
-        }
         StartCoroutine(DialogSequence());
     }
 
@@ -91,10 +66,12 @@ public class DialogTrigger : MonoBehaviour
             yield return StartCoroutine(WaitOrSkip(line.duration));
         }
 
-        // restore movement
-        if (blockPlayerMovement && movement != null) movement.enabled = true;
-        if (blockPlayerAnimation && anim != null) anim.enabled = true;
-        if (blockPlayerMovement && attackMethod != null) attackMethod.enabled = true;
+        if (restoreControlsAfter)
+        {
+            controlManager.UnlockControls();
+        }
+
+
         if (ghost != null)
         {
             ghost.GetComponent<GhostMovement>().player = player;

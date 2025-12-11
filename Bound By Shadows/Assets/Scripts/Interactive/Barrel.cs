@@ -41,7 +41,7 @@ public class Barrel : MonoBehaviour
         {
             destroyed = true;
 
-            SoundManager.Instance?.PlayBarrel();
+            SoundLibrary.Instance.PlayBarrel();
 
             var saveable = GetComponent<SaveableObject>();
             BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);

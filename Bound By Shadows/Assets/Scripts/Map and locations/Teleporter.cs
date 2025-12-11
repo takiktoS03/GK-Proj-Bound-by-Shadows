@@ -17,8 +17,10 @@ public class Teleporter : MonoBehaviour
 {
     [Header("Teleport parameters")]
     public Transform targetPoint;           // miejsce docelowe teleportacji
-    public bool automaticTeleport = false;  // brak potrzeby wciskania klawisza
     public KeyCode key = KeyCode.F;         // klawisz aktywacji
+    public bool automaticTeleport = false;  // brak potrzeby wciskania klawisza
+    public bool fadeIn = true;
+    public bool fadeOut = true;
 
     private bool isTeleporting = false;
 
@@ -37,11 +39,7 @@ public class Teleporter : MonoBehaviour
     {
         isTeleporting = true;
 
-        // Blokada sterowanie gracza
-        // var playerScript = player.GetComponent<PlayerController>();
-        // if(playerScript) playerScript.enabled = false;
-
-        yield return GameManager.Instance.FadeIn(1.0f).WaitForCompletion();
+        if (fadeIn) yield return GameManager.Instance.FadeIn(1.0f).WaitForCompletion();
 
         var cam = Camera.main.GetComponent<CameraController>();
         cam.enabled = false;
@@ -56,10 +54,7 @@ public class Teleporter : MonoBehaviour
 
         cam.enabled = true;
 
-        yield return GameManager.Instance.FadeOut(1.0f).WaitForCompletion();
-
-        // Odblokowanie sterowania
-        // if(playerScript) playerScript.enabled = true;
+        if (fadeOut) yield return GameManager.Instance.FadeOut(1.0f).WaitForCompletion();
 
         isTeleporting = false;
     }

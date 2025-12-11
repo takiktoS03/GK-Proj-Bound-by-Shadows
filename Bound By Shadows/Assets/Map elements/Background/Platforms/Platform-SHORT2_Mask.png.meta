@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 95c632e5e88fd0942a86f2fb2e17f860
+guid: b2d7acc227b853c4da1ad0de2e514405
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1345638646976604611
-    second: Platform-SHORT2_0
+      213: -1431519902446957229
+    second: Platform-SHORT2_Mask_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -109,24 +109,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Platform-SHORT2_0
+      name: Platform-SHORT2_Mask_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,19 +121,15 @@ TextureImporter:
         width: 256
         height: 162
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: 128, y: 81}
-        - {x: -128, y: 81}
-        - {x: -128, y: -81}
-        - {x: 128, y: -81}
-      tessellationDetail: 0
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 3c9e31d483baca210800000000000000
-      internalID: 1345638646976604611
+      spriteID: 35d4fb5bb38322ce0800000000000000
+      internalID: -1431519902446957229
       vertices: []
       indices: 
       edges: []
@@ -155,19 +138,16 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f34188d5790aa224f8d1b8b35e02c8cf
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: b2d7acc227b853c4da1ad0de2e514405, type: 3}
-      name: _MaskTex
+    secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Platform-SHORT2_0: 1345638646976604611
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
