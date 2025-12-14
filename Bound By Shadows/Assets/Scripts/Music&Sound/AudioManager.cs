@@ -50,6 +50,11 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(clip, volume);
     }
 
+    public void StopSFX()
+    {
+        sfxSource.Stop();
+    }
+
     public void StartLoopingSFX(AudioClip clip, float volume = 1f)
     {
         // Nie resetujemy dźwięku która już gra

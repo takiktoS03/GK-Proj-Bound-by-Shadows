@@ -46,11 +46,11 @@ public class Health : MonoBehaviour
     /**
      * Odbiera obrażenia, aktualizuje pasek zdrowia i wywołuje śmierć, jeśli HP spadnie do zera.
      */
-    public virtual void TakeDamage(float amount)
+    public virtual bool TakeDamage(float amount)
     {
         if (dead || !canTakeDamage)
         {
-            return;
+            return false;
         }
         StartCoroutine(DamageCooldownCoroutine());
 
@@ -65,6 +65,8 @@ public class Health : MonoBehaviour
             Die();
             dead = true;
         }
+
+        return true;
     }
 
     /**

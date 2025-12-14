@@ -2288,8 +2288,8 @@ MonoBehaviour:
   stepSound: {fileID: 8300000, guid: 51734eeaa24bddb49a11330cafb8d108, type: 3}
   leverPullSound: {fileID: 8300000, guid: 45aacabe9ee00ab47a6d49c46de3316e, type: 3}
   moveStoneSound: {fileID: 8300000, guid: 480a89b58933cf34286acc1cfb1eac30, type: 3}
-  torchLightSound: {fileID: 0}
-  puzzleSolvedSound: {fileID: 0}
+  torchLightSound: {fileID: 8300000, guid: 0b6e9178db9824845990a0cacd41f24f, type: 3}
+  puzzleSolvedSound: {fileID: 8300000, guid: afa73c033006292429f5f95a8a6a9018, type: 3}
 --- !u!1 &8877705677108429659
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,15 +6,17 @@ public class FresnelTrigger : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public float holdTime = 0.2f;
+
+    static readonly int FresnelID = Shader.PropertyToID("_Fresnel");
     SpriteRenderer sr;
     MaterialPropertyBlock mpb;
-    static readonly int FresnelID = Shader.PropertyToID("_Fresnel");
-    private bool spotted = false;
+    DissolveTrigger dissolveTrigger;
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         mpb = new MaterialPropertyBlock();
+        dissolveTrigger = GetComponent<DissolveTrigger>();
     }
     void Start()
     {
@@ -25,11 +27,10 @@ public class FresnelTrigger : MonoBehaviour
 
     public void PulseFresnel()
     {
-        if (!spotted)
+        if (!dissolveTrigger.triggered)
         {
             StopAllCoroutines();
             StartCoroutine(PulseRoutine());
-            spotted = true;
         }
     }
 

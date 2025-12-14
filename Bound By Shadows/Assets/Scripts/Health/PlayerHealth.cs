@@ -103,11 +103,19 @@ public class PlayerHealth : Health
     /**
      * Odbieranie HP wraz z zaimplementowanym dźwiękiem.
      */
-    public override void TakeDamage(float amount)
+    public override bool TakeDamage(float amount)
     {
-        base.TakeDamage(amount);
-        SoundLibrary.Instance.PlayHurt();
-        ghostLight.SetDanger();
+        if (base.TakeDamage(amount))
+        {
+            SoundLibrary.Instance.PlayHurt();
+            if (ghostLight != null)
+            {
+                ghostLight.SetDanger();
+            }
+            return true;
+        }
+
+        return false;
     }
 
     /**

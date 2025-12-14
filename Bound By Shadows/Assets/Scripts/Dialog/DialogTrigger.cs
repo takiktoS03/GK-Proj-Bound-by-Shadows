@@ -97,6 +97,7 @@ public class DialogTrigger : MonoBehaviour
             {
                 skipPressed = true;
                 DialogManager.Instance.Clear();
+                AudioManager.Instance.StopSFX();
                 break;
             }
 

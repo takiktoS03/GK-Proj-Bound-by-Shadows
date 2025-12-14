@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   invert: 0
+  triggered: 0
 --- !u!114 &4403338659653057269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +238,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529f98022973f1944b43539bbd8f4273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   fadeDuration: 1
-  holdTime: 0.2
+  holdTime: 0.1

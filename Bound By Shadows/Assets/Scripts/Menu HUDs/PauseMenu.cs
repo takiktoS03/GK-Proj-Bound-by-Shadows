@@ -43,9 +43,9 @@ public class PauseMenu : MonoBehaviour
      */
     void Update()
     {
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName != "Level 1 - Cave" && sceneName != "Cave")
-            return;
+        //string sceneName = SceneManager.GetActiveScene().name;
+        //if (sceneName == "MainMenu" || sceneName == "BootScene")
+        //    return;
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -101,6 +101,7 @@ public class PauseMenu : MonoBehaviour
      */
     public void Pause()
     {
+        SoundLibrary.Instance.StopSteps();
         if (gameOverUI.activeSelf)
             return;
 
@@ -135,6 +136,7 @@ public class PauseMenu : MonoBehaviour
      */
     public IEnumerator ShowGameOver()
     {
+        SoundLibrary.Instance.StopSteps();
         yield return new WaitForSeconds(1.5f);
         SoundLibrary.Instance.PlayGameOver();
         yield return new WaitForSeconds(0.4f);

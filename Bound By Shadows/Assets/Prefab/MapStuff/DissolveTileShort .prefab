@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 1
   invert: 0
+  triggered: 0
 --- !u!114 &59537064821124614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,4 +239,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 1
-  holdTime: 0.2
+  holdTime: 0.1

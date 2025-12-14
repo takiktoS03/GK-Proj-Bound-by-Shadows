@@ -9,7 +9,7 @@ public class DissolveTrigger : MonoBehaviour
     SpriteRenderer sr;
     MaterialPropertyBlock mpb;
     static readonly int DissolveID = Shader.PropertyToID("_Dissolve");
-    private bool triggered = false;
+    [HideInInspector] public bool triggered = false;
 
     void Awake()
     {
