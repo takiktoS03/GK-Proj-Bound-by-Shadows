@@ -15,5 +15,17 @@ public class InventoryItemSlot : MonoBehaviour
     {
         Debug.Log("CLICKED SLOT: " + itemStack.item.itemName);
         Inventory.Instance.ShowPreview(itemStack.item);
+
+        if (itemStack.item.canBeInHotbar)
+        {
+            Inventory.Instance.SelectItemForHotbar(itemStack.item);
+        }
     }
+
+
+    public ItemSO GetItem()
+    {
+        return itemStack.item;
+    }
+
 }

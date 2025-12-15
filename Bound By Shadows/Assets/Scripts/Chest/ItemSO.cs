@@ -28,6 +28,9 @@ public class ItemSO : ScriptableObject
 
     public bool hasImagePreview;
     public Sprite imagePreview;
+
+    [Header("Hotbar")]
+    public bool canBeInHotbar;
 }
 
 [System.Serializable]

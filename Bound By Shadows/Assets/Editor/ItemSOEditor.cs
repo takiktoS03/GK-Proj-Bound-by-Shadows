@@ -14,6 +14,10 @@ public class ItemSOEditor : Editor
         item.itemType = (ItemType)EditorGUILayout.EnumPopup("Item Type", item.itemType);
 
         EditorGUILayout.Space(10);
+        EditorGUILayout.LabelField("Hotbar Settings", EditorStyles.boldLabel);
+        item.canBeInHotbar = EditorGUILayout.Toggle("Can Be In Hotbar", item.canBeInHotbar);
+
+        EditorGUILayout.Space(10);
 
         // ?? RÓ?NE POLA W ZALE?NO?CI OD TYPU ITEMU
 

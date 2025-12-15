@@ -15,10 +15,10 @@ MonoBehaviour:
   itemName: potion
   icon: {fileID: 21300000, guid: 4ee5a593a0ea85a45b3a11568cbee7ed, type: 3}
   itemType: 1
-  description: Lecz sie
   healAmount: 50
   letterText: 
   hasTextPreview: 1
   textPreview: zxc
   hasImagePreview: 0
   imagePreview: {fileID: 0}
+  canBeInHotbar: 1

@@ -16,8 +16,15 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI previewText;
 
     [Header("Character Preview")]
-    public GameObject previewImageEthan;   // ca?a posta?
+    public GameObject previewImageEthan;
     public Button showCharacterButton;
+
+    [Header("Hotbar")]
+    public HotbarSlot[] hotbarSlots;
+
+    [HideInInspector]
+    public ItemSO selectedItemForHotbar;
+
 
     private List<ItemStack> items = new List<ItemStack>();
 
@@ -52,10 +59,19 @@ public class Inventory : MonoBehaviour
     public void ShowPreview(ItemSO item)
     {
 
-        if (previewImageEthan != null)
-            previewImageEthan.SetActive(false);
+        if (item.itemType == ItemType.Letter)
+        {
+            if (previewImageEthan != null)
+                previewImageEthan.SetActive(false);
+        }
+        else
+        {
+            // dla reszty itemów bohater zostaje
+            if (previewImageEthan != null)
+                previewImageEthan.SetActive(true);
+        }
 
-        // Reset UI
+        // Reset preview UI
         previewImage.gameObject.SetActive(false);
         previewText.gameObject.SetActive(false);
 
@@ -93,6 +109,15 @@ public class Inventory : MonoBehaviour
             c.a = 0f;
             previewImage.color = c;
         }
+    }
+
+    public void SelectItemForHotbar(ItemSO item)
+    {
+        if (!item.canBeInHotbar)
+            return;
+
+        selectedItemForHotbar = item;
+        Debug.Log("Selected for hotbar: " + item.itemName);
     }
 
     public void ShowEthan()

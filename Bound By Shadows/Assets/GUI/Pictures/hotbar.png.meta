@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a610e8a47e3b6554793bef9976e3083e
+guid: 91e347ade5ccb28409fe0134d2bc2319
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4679038871387467597
-    second: proste-serce-wektorowe-wyizolowane-na-przezroczystym-tle-nowoczesna-ilustracja-z-realistycznym-cieniem_1120995-55_0
+      213: 8694576522761170104
+    second: hotbar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: proste-serce-wektorowe-wyizolowane-na-przezroczystym-tle-nowoczesna-ilustracja-z-realistycznym-cieniem_1120995-55_0
+      name: hotbar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 626
-        height: 471
+        x: 131
+        y: 131
+        width: 762
+        height: 762
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4f6b4b10194fe040800000000000000
-      internalID: 4679038871387467597
+      spriteID: 8bc61a7184759a870800000000000000
+      internalID: 8694576522761170104
       vertices: []
       indices: 
       edges: []
@@ -134,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      proste-serce-wektorowe-wyizolowane-na-przezroczystym-tle-nowoczesna-ilustracja-z-realistycznym-cieniem_1120995-55_0: 4679038871387467597
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
