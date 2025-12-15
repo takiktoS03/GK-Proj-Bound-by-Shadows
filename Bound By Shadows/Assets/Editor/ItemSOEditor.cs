@@ -24,8 +24,6 @@ public class ItemSOEditor : Editor
         {
             EditorGUILayout.LabelField("Letter Settings", EditorStyles.boldLabel);
 
-            item.description = EditorGUILayout.TextField("Description", item.description);
-
             item.hasImagePreview = true;
             EditorGUILayout.LabelField("Image Preview:");
             item.imagePreview = (Sprite)EditorGUILayout.ObjectField(item.imagePreview, typeof(Sprite), false);
@@ -41,9 +39,6 @@ public class ItemSOEditor : Editor
         else if (item.itemType == ItemType.Potion)
         {
             EditorGUILayout.LabelField("Potion Settings", EditorStyles.boldLabel);
-
-            // Podstawowy opis
-            item.description = EditorGUILayout.TextField("Description", item.description);
 
             // Heal Amount
             item.healAmount = EditorGUILayout.IntField("Heal Amount", item.healAmount);
@@ -64,8 +59,6 @@ public class ItemSOEditor : Editor
         else
         {
             EditorGUILayout.LabelField("General Item Settings", EditorStyles.boldLabel);
-
-            item.description = EditorGUILayout.TextField("Description", item.description);
 
             // pe?na kontrola
             item.hasTextPreview = EditorGUILayout.Toggle("Has Text Preview", item.hasTextPreview);

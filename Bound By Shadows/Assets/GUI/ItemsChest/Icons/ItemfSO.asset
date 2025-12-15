@@ -19,6 +19,6 @@ MonoBehaviour:
   healAmount: 50
   letterText: 
   hasTextPreview: 1
-  textPreview: 
+  textPreview: zxc
   hasImagePreview: 0
   imagePreview: {fileID: 0}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Letter1
   m_EditorClassIdentifier: 
   itemName: Letter
-  icon: {fileID: 683437199642657450, guid: cc30c8f357c1d46419bd64d458548c43, type: 3}
+  icon: {fileID: 5668723071718756358, guid: 8ed438ffff9d2be4e8f514159dae0609, type: 3}
   itemType: 0
   description: Letter
   healAmount: 0

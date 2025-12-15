@@ -12,9 +12,12 @@ public class Inventory : MonoBehaviour
     public Transform slotsParent;
     public GameObject slotPrefab;
 
-    public TextMeshProUGUI previewDescriptionText;
     public Image previewImage;
     public TextMeshProUGUI previewText;
+
+    [Header("Character Preview")]
+    public GameObject previewImageEthan;   // ca?a posta?
+    public Button showCharacterButton;
 
     private List<ItemStack> items = new List<ItemStack>();
 
@@ -48,13 +51,13 @@ public class Inventory : MonoBehaviour
     }
     public void ShowPreview(ItemSO item)
     {
+
+        if (previewImageEthan != null)
+            previewImageEthan.SetActive(false);
+
         // Reset UI
         previewImage.gameObject.SetActive(false);
         previewText.gameObject.SetActive(false);
-        previewDescriptionText.gameObject.SetActive(true);
-
-        // Ustaw tytu?
-        previewDescriptionText.text = item.description;
 
         // Je?li ma tekst
         if (item.hasTextPreview)
@@ -90,6 +93,17 @@ public class Inventory : MonoBehaviour
             c.a = 0f;
             previewImage.color = c;
         }
+    }
+
+    public void ShowEthan()
+    {
+        // schowaj list
+        previewImage.gameObject.SetActive(false);
+        previewText.gameObject.SetActive(false);
+
+        // poka? bohatera
+        if (previewImageEthan != null)
+            previewImageEthan.SetActive(true);
     }
 
     public void UpdateUI()

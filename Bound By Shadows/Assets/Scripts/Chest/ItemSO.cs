@@ -15,9 +15,6 @@ public class ItemSO : ScriptableObject
     public Sprite icon;
     public ItemType itemType;
 
-    [TextArea]
-    public string description;
-
     // Dodatkowe dane – np. dla mikstur
     public int healAmount;
 
