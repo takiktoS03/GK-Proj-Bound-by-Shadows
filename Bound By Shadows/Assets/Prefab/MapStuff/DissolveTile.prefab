@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3417756431103096134}
   - component: {fileID: 3236336941069687273}
   - component: {fileID: 5523498016376011321}
+  - component: {fileID: 4987857845904751879}
   - component: {fileID: 4403338659653057269}
   m_Layer: 12
   m_Name: DissolveTile
@@ -226,6 +227,18 @@ MonoBehaviour:
   duration: 1
   invert: 0
   triggered: 0
+--- !u!114 &4987857845904751879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573896372599872909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250ef6cc2dd738f4bbfb4dc1635699df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4403338659653057269
 MonoBehaviour:
   m_ObjectHideFlags: 0

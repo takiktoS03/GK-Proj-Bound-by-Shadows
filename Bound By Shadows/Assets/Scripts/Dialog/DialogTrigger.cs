@@ -31,9 +31,9 @@ public class DialogTrigger : MonoBehaviour
     [Tooltip("Czy odblokować sterowanie natychmiast po zakończeniu dialogu?")]
     public bool restoreControlsAfter = true;
 
-    [Header("References")]
-    public Transform ghost;   // optional
-    public Transform player;  // optional
+    [Header("Optional references")]
+    public Transform ghost;
+    public Transform player;
 
     private PlayerControlManager controlManager;
     private KeyCode skipKey = KeyCode.Space;

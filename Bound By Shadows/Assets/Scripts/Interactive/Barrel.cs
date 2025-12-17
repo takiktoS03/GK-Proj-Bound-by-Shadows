@@ -12,7 +12,6 @@
 public class Barrel : MonoBehaviour
 {
     private Animator anim;
-    private bool destroyed = false;
 
     /**
      * @brief Inicjalizuje komponent Animator przypisany do beczki.
@@ -24,7 +23,7 @@ public class Barrel : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    /**
+    /** do przerobienia
      * @brief Reaguje na kolizję z atakiem gracza.
      *
      * Jeśli obiekt nie został jeszcze zniszczony i wykryto uderzenie przez tag `PlayerAttack`:
@@ -35,19 +34,18 @@ public class Barrel : MonoBehaviour
      *
      * @param other Obiekt kolidujący z beczką.
      */
-    void OnTriggerEnter2D(Collider2D other)
+
+
+    public void OnBarrelDestroyed()
     {
-        if (!destroyed && other.CompareTag("PlayerAttack"))
-        {
-            destroyed = true;
+        SoundLibrary.Instance.PlayBarrel();
+        anim.SetTrigger("Destroy");
 
-            SoundLibrary.Instance.PlayBarrel();
+        // Zapis stanu
+        var saveable = GetComponent<SaveableObject>();
+        BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);
 
-            var saveable = GetComponent<SaveableObject>();
-            BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);
-            anim.SetTrigger("Destroy");
-            Destroy(gameObject, 0.9f);
-        }
+        Destroy(gameObject, 0.9f);
     }
 }
 

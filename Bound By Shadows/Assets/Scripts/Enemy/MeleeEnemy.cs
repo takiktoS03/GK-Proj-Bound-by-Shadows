@@ -23,6 +23,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private Animator anim;
     private PatrolEnemy patrolEnemy;
+    private DissolveEffect dissolveEffect;
     private bool isAttacking;
 
     /** @brief Inicjalizacja referencji do komponentów */
@@ -30,6 +31,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         patrolEnemy = GetComponentInParent<PatrolEnemy>();
+        dissolveEffect = GetComponent<DissolveEffect>();
     }
 
     /** @brief Wykrywa gracza i inicjuje atak jeśli jest w zasięgu */
@@ -86,6 +88,16 @@ public class MeleeEnemy : MonoBehaviour
         yield return new WaitForSeconds(data.cooldown);
 
         isAttacking = false;
+    }
+
+    public void onEnemyDeath()
+    {
+        this.enabled = false;
+        // anim.SetTrigger("Die");
+        dissolveEffect.PlayDissolve(2f, true, () =>
+        {
+            Destroy(gameObject);
+        });
     }
 
 }

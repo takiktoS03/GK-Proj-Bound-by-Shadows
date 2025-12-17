@@ -25,6 +25,8 @@ public class Health : MonoBehaviour
     [Header("Invulnerability Parameters")]
     [SerializeField] protected float damageCooldown = 0.75f;
 
+    [Header("Event activate on Death")]
+    public UnityEngine.Events.UnityEvent onDeath;
     protected float currentHealth;
     protected Animator anim;
     protected SpriteRenderer spriteRend;
@@ -38,7 +40,8 @@ public class Health : MonoBehaviour
     protected virtual void Awake()
     {
         currentHealth = startingHealth;
-        healthBar.Initialize(startingHealth);
+        if (healthBar != null )
+            healthBar.Initialize(startingHealth);
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
     }
@@ -55,7 +58,8 @@ public class Health : MonoBehaviour
         StartCoroutine(DamageCooldownCoroutine());
 
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
-        healthBar.UpdateBar(currentHealth);
+        if (healthBar != null)
+            healthBar.UpdateBar(currentHealth);
         if (currentHealth > 0 && !dead)
         {
             anim.SetTrigger("Hurt");
@@ -70,12 +74,11 @@ public class Health : MonoBehaviour
     }
 
     /**
-     * Domyślna logika śmierci - usunięcie obiektu.
+     * Domyślna logika śmierci - wywołanie eventu onDeath
      */
     public virtual void Die()
     {
-        
-        Destroy(gameObject);
+        onDeath.Invoke();
     }
 
     /**
@@ -84,7 +87,8 @@ public class Health : MonoBehaviour
     public virtual void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, startingHealth);
-        healthBar.UpdateBar(currentHealth);
+        if (healthBar != null)
+            healthBar.UpdateBar(currentHealth);
     }
 
     /**
@@ -95,8 +99,11 @@ public class Health : MonoBehaviour
         Debug.Log(value);
         currentHealth = Mathf.Clamp(value, 0, startingHealth);
 
-        healthBar.Initialize(currentHealth);
-        healthBar.UpdateBar(currentHealth);
+        if (healthBar != null)
+        {
+            healthBar.Initialize(currentHealth);
+            healthBar.UpdateBar(currentHealth);
+        }
     }
 
     /**
