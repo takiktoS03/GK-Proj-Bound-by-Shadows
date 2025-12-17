@@ -247,10 +247,10 @@ MonoBehaviour:
   groundCheckSize: {x: 0.1, y: 0.05}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 4161
+    m_Bits: 6209
   wallLayer:
     serializedVersion: 2
-    m_Bits: 4161
+    m_Bits: 6209
   WallCheck: {fileID: 199186147309639329}
   joystick: {fileID: 0}
   jumpThreshold: 0.5
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 3ff723fc-7735-41e9-b248-6a81127eff04
+  uniqueId: 642cbd00-8e28-432c-b533-79b51f977cda
 --- !u!114 &1610109051652021392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +343,9 @@ MonoBehaviour:
   startingHealth: 100
   healthBar: {fileID: 0}
   damageCooldown: 0.7
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
   staminaBar: {fileID: 0}
   startingStamina: 200
   staminaRegenRate: 1

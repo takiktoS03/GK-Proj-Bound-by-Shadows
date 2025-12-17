@@ -116,7 +116,6 @@ namespace EthanTheHero
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)
                 {
                     myAnim.SetTrigger(attack01);
-                    SoundLibrary.Instance.PlayLightAttack();
                 }
 
             // Przejście: Attack01 → Attack02
@@ -129,7 +128,6 @@ namespace EthanTheHero
                 {
                     myAnim.SetTrigger(attack02);
                     atkButtonClickedOnAtk01 = false;
-                    SoundLibrary.Instance.PlayLightAttack();
                 }
                 else if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !atkButtonClickedOnAtk01)
                 {
@@ -147,7 +145,6 @@ namespace EthanTheHero
                 {
                     myAnim.SetTrigger(attack03);
                     atkButtonClickedOnAtk02 = false;
-                    SoundLibrary.Instance.PlayHeavyAttack();
                 }
                 else if (myAnim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !atkButtonClickedOnAtk02)
                 {
@@ -197,6 +194,21 @@ namespace EthanTheHero
                 if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
                     myBody.linearVelocity = new Vector2(-basicAttack03Power, myBody.linearVelocity.y);
             }
+        }
+
+        #endregion
+
+        #region SOUND
+        /**
+         *  Metody publiczne do wykorzystania jako trigger w animacji
+         */
+        public void LightAttackSound()
+        {
+            SoundLibrary.Instance.PlayLightAttack();
+        }
+        public void HeavyAttackSound()
+        {
+            SoundLibrary.Instance.PlayHeavyAttack();
         }
 
         #endregion

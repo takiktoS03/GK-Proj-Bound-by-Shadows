@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostMat
-  m_Shader: {fileID: -6465566751694194690, guid: 3ad9a131d5091704781041eaf352d6dd, type: 3}
+  m_Name: DoorDissolve_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: bc29a0d6b149c3343b292ab4bb5517da, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -18,25 +18,12 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses:
-  - MOTIONVECTORS
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Emission:
-        m_Texture: {fileID: 2800000, guid: 2c24f53de8d10b74b984bc0972675e02, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cc35a033fc350ac47abb564d9d30def3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -54,16 +41,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EmissionIntensity: 0.05
-    - _Intensity: 6.05
-    - _QueueControl: 0
-    - _QueueOffset: 0
+    - _Dissolve: 0.521
+    - _Edge_Width: 0.05
+    - _Fresnel: 0
+    - _Fresnel_Power: 3
+    - _Noise_Scale: 25
+    - _UseOriginalAlpha: 1
     m_Colors:
-    - _Color: {r: 1.4980392, g: 0, b: 1.4727253, a: 1}
-    - _EmissionColor: {r: 0, g: 0.10339078, b: 2.9960785, a: 1}
+    - _Edge_Color: {r: 47.93726, g: 6.2036457, b: 0, a: 1}
+    - _Fresnel_Color: {r: 1.066038, g: 1.91152, b: 2, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2547106459345441694
+--- !u!114 &8262750531887715868
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

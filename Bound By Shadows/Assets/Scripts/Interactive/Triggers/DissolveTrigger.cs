@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class DissolveTrigger : MonoBehaviour
@@ -10,16 +11,26 @@ public class DissolveTrigger : MonoBehaviour
     [HideInInspector] public bool triggered = false;
 
     private DissolveEffect effect;
+    private ShadowCaster2D shadowCaster;
 
     void Awake()
     {
         effect = GetComponent<DissolveEffect>();
+        shadowCaster = GetComponent<ShadowCaster2D>();
+        shadowCaster.enabled = false;
+    }
+
+    private void Start()
+    {
+        effect.UpdateMaterial(invert ? 1f : 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.CompareTag("Player") || triggered) return;
         triggered = true;
+
+        shadowCaster.enabled = true;
 
         effect.PlayDissolve(duration, invert);
     }

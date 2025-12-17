@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 583ae744ed72c0446ac1b2e468bd5f37
+guid: ccc5ff8c58e24f247b35e422ed4cc090
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 430365579752536593
-    second: Platform1_Mask_0
+      213: -2060061156955451908
+    second: Platform-SHORT2_NormalMap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Platform1_Mask_0
+      name: Platform-SHORT2_NormalMap_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
+        width: 256
         height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11a74b0f637f8f500800000000000000
-      internalID: 430365579752536593
+      spriteID: cfd071cda413963e0800000000000000
+      internalID: -2060061156955451908
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Platform1_Mask_0: 430365579752536593
+      Platform-SHORT2_NormalMap_0: -2060061156955451908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -48,7 +48,7 @@ public class DissolveEffect : MonoBehaviour
         onComplete?.Invoke();
     }
 
-    private void UpdateMaterial(float value)
+    public void UpdateMaterial(float value)
     {
         sr.GetPropertyBlock(mpb);
         mpb.SetFloat(DissolveID, value);

@@ -96,7 +96,7 @@ public class SoundLibrary : MonoBehaviour
     public void PlayBarrel() => AudioManager.Instance.PlaySFX(destroyBarrelSound, 0.6f);
 
     /// @brief Odtwarza dźwięk lekkiego ataku.
-    public void PlayLightAttack() => AudioManager.Instance.PlaySFX(lightAttackSound);
+    public void PlayLightAttack() => AudioManager.Instance.PlaySFX(lightAttackSound, 0.8f);
 
     /// @brief Odtwarza dźwięk ciężkiego ataku.
     public void PlayHeavyAttack() => AudioManager.Instance.PlaySFX(heavyAttackSound);

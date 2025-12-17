@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class FresnelTrigger : MonoBehaviour
@@ -20,9 +21,7 @@ public class FresnelTrigger : MonoBehaviour
     }
     void Start()
     {
-        sr.GetPropertyBlock(mpb);
-        mpb.SetFloat(FresnelID, 0);
-        sr.SetPropertyBlock(mpb);
+        UpdateMaterial(0f);
     }
 
     public void PulseFresnel()
@@ -36,10 +35,7 @@ public class FresnelTrigger : MonoBehaviour
 
     IEnumerator PulseRoutine()
     {
-        // set to 1
-        sr.GetPropertyBlock(mpb);
-        mpb.SetFloat(FresnelID, 1f);
-        sr.SetPropertyBlock(mpb);
+        UpdateMaterial(1f);
 
         yield return new WaitForSeconds(holdTime);
 
@@ -48,13 +44,17 @@ public class FresnelTrigger : MonoBehaviour
         {
             t += Time.deltaTime;
             float v = Mathf.Lerp(1f, 0f, t / fadeDuration);
-            sr.GetPropertyBlock(mpb);
-            mpb.SetFloat(FresnelID, v);
-            sr.SetPropertyBlock(mpb);
+            UpdateMaterial(v);
             yield return null;
         }
 
-        mpb.SetFloat(FresnelID, 0f);
+        UpdateMaterial(0f);
+    }
+
+    private void UpdateMaterial(float value)
+    {
+        sr.GetPropertyBlock(mpb);
+        mpb.SetFloat(FresnelID, value);
         sr.SetPropertyBlock(mpb);
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
  *
  * Obsługuje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu,
  * powrót do menu głównego oraz ekran końca gry. Blokuje czas gry i interakcje
- * UI w odpowiednich momentach. Działa tylko w scenie `"Level 1 - Cave"`.
+ * UI w odpowiednich momentach.
  *
  * @author Julia Bigaj
  */
@@ -43,11 +43,6 @@ public class PauseMenu : MonoBehaviour
      */
     void Update()
     {
-        //string sceneName = SceneManager.GetActiveScene().name;
-        //if (sceneName == "MainMenu" || sceneName == "BootScene")
-        //    return;
-
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isGameOver)
