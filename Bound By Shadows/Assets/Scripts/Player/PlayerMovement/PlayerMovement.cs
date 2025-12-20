@@ -203,16 +203,36 @@ namespace EthanTheHero
             canDash = false;
             isDashing = true;
 
+            // 1. Określamy kierunek (w prawo lub lewo na podstawie skali)
+            Vector2 direction = new Vector2(transform.localScale.x > 0 ? 1f : -1f, 0f);
+            float dashDistance = data.dashPower * data.dashingTime;
+
+            // 2. RAYCAST: Dodaj tutaj warstwę beczki! 
+            // Zakładam, że chcesz użyć 'groundLayer' lub 'wallLayer', ale beczka jest na 'Interaction'.
+            // Najlepiej dopisz w polach klasy: [SerializeField] private LayerMask interactionLayer;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, dashDistance, groundLayer | wallLayer);
+
+            float actualDashTime = data.dashingTime;
+
+            // 3. LOGIKA ZATRZYMANIA: Jeśli wykryto przeszkodę, obliczamy czas do uderzenia
+            if (hit.collider != null)
+            {
+                // Obliczamy czas, po jakim uderzymy w obiekt (czas = droga / prędkość)
+                actualDashTime = hit.distance / data.dashPower;
+            }
+
             SoundLibrary.Instance.PlayDash();
 
             float originalGravity = myBody.gravityScale;
             myBody.gravityScale = 0f;
 
-            Vector2 dashDir = new Vector2(transform.localScale.x, 0f);
-            myBody.linearVelocity = dashDir * data.dashPower;
+            // Start ruchu
+            myBody.linearVelocity = direction * data.dashPower;
 
-            yield return new WaitForSeconds(data.dashingTime);
+            // Czekamy tyle, ile wyliczył Raycast (zamiast sztywnego data.dashingTime)
+            yield return new WaitForSeconds(actualDashTime);
 
+            // Stop ruchu
             myBody.linearVelocity = Vector2.zero;
             myBody.gravityScale = originalGravity;
             isDashing = false;

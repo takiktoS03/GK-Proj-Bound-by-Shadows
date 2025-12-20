@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 406001094517502889, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6ee7295ca88a11f49a5c7299c9f56103, type: 2}
+    - target: {fileID: 2023387172206147392, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6ee7295ca88a11f49a5c7299c9f56103, type: 2}
     - target: {fileID: 2949536448734561830, guid: df2ab1312b6a7b149894431cfd37af0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.59285927
