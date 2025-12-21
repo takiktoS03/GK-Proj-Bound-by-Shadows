@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HotbarSlot : MonoBehaviour
 {
     public Image icon;
+    public TextMeshProUGUI countObjectsText;
+    public int slotIndex;
 
     private ItemSO assignedItem;
 
@@ -12,6 +15,7 @@ public class HotbarSlot : MonoBehaviour
     private void Start()
     {
         icon.enabled = false;
+        countObjectsText.gameObject.SetActive(false);
     }
 
     public void SetItem(ItemSO item)
@@ -19,6 +23,9 @@ public class HotbarSlot : MonoBehaviour
         assignedItem = item;
         icon.sprite = item.icon;
         icon.enabled = true;
+        UpdateCount();
+
+        HotbarData.Instance.SetItem(slotIndex, item);
     }
 
     public void OnClick()
@@ -30,5 +37,19 @@ public class HotbarSlot : MonoBehaviour
 
         // czy?cimy wybór (opcjonalnie)
         Inventory.Instance.selectedItemForHotbar = null;
+    }
+
+    public void UpdateCount()
+    {
+        if (assignedItem == null)
+        {
+            countObjectsText.gameObject.SetActive(false);
+            return;
+        }
+
+        int count = Inventory.Instance.GetItemCount(assignedItem);
+
+        countObjectsText.text = count.ToString();
+        countObjectsText.gameObject.SetActive(count > 1);
     }
 }

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Letter1
   m_EditorClassIdentifier: 
   itemName: Letter
-  icon: {fileID: 5668723071718756358, guid: 8ed438ffff9d2be4e8f514159dae0609, type: 3}
+  icon: {fileID: 21300000, guid: caf68dacbed008e4aaf7367e041db9ed, type: 3}
   itemType: 0
-  description: Letter
   healAmount: 0
   letterText: 
   hasTextPreview: 0
   textPreview: 
   hasImagePreview: 1
   imagePreview: {fileID: -656627006676614036, guid: b7e4b827e80c64e47ad1c90fdd011312, type: 3}
+  canBeInHotbar: 0

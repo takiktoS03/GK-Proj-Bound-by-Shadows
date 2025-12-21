@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public System.Action OnInventoryChanged;
+
     public static Inventory Instance;
 
     [Header("UI")]
@@ -35,26 +37,25 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemSO itemSO, int quantity)
     {
-        // je?li item ju? istnieje ? zwi?ksz ilo??
-        // LISTY nie mog? si? stackowa?
         if (itemSO.itemType != ItemType.Letter)
         {
-            // je?li item ju? istnieje ? zwi?ksz quantity
             foreach (var stack in items)
             {
                 if (stack.item == itemSO)
                 {
                     stack.quantity += quantity;
                     UpdateUI();
+                    OnInventoryChanged?.Invoke();
+                    RefreshHotbar();
                     return;
                 }
             }
         }
 
-        // je?li to list albo nowy item ? dodaj jako osobny wpis
         items.Add(new ItemStack(itemSO, quantity));
         UpdateUI();
-
+        OnInventoryChanged?.Invoke();
+        RefreshHotbar();
     }
     public void ShowPreview(ItemSO item)
     {
@@ -149,6 +150,30 @@ public class Inventory : MonoBehaviour
 
             // powi?zanie slota z danym itemem
             slot.GetComponent<InventoryItemSlot>().Init(stack);
+        }
+    }
+
+    public int GetItemCount(ItemSO item)
+    {
+        int total = 0;
+
+        foreach (var stack in items)
+        {
+            if (stack.item == item)
+            {
+                total += stack.quantity;
+            }
+        }
+
+        return total;
+    }
+
+    private void RefreshHotbar()
+    {
+        foreach (var slot in hotbarSlots)
+        {
+            if (slot != null)
+                slot.UpdateCount();
         }
     }
 }
