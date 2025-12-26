@@ -12,6 +12,11 @@ public class HotbarSlot : MonoBehaviour
 
     public bool IsEmpty => assignedItem == null;
 
+    public bool HasItem(ItemSO item)
+    {
+        return assignedItem == item;
+    }
+
     private void Start()
     {
         icon.enabled = false;
@@ -51,5 +56,12 @@ public class HotbarSlot : MonoBehaviour
 
         countObjectsText.text = count.ToString();
         countObjectsText.gameObject.SetActive(count > 1);
+    }
+
+    public void Clear()
+    {
+        assignedItem = null;
+        icon.enabled = false;
+        countObjectsText.gameObject.SetActive(false);
     }
 }

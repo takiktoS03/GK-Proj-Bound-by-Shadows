@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+//using static System.Net.Mime.MediaTypeNames;
 
 public class Inventory : MonoBehaviour
 {
@@ -134,22 +135,21 @@ public class Inventory : MonoBehaviour
 
     public void UpdateUI()
     {
-
         // usu? stare sloty
         foreach (Transform child in slotsParent)
             Destroy(child.gameObject);
 
-        // dodaj nowe sloty
+        // zbuduj UI od nowa
         foreach (var stack in items)
         {
-            GameObject slot = Instantiate(slotPrefab, slotsParent);
+            GameObject slotGO = Instantiate(slotPrefab, slotsParent);
 
-            // ustawianie ikony i licznika
-            slot.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
-            slot.transform.Find("Count").GetComponent<TMPro.TextMeshProUGUI>().text = stack.quantity.ToString();
+            // ustaw ikon? i licznik (nazwy dzieci musz? si? zgadza? z prefabem)
+            slotGO.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
+            slotGO.transform.Find("Count").GetComponent<TMPro.TextMeshProUGUI>().text = stack.quantity.ToString();
 
-            // powi?zanie slota z danym itemem
-            slot.GetComponent<InventoryItemSlot>().Init(stack);
+            // podepnij dane do slota (to masz w InventoryItemSlot)
+            slotGO.GetComponent<InventoryItemSlot>().Init(stack);
         }
     }
 
@@ -174,6 +174,56 @@ public class Inventory : MonoBehaviour
         {
             if (slot != null)
                 slot.UpdateCount();
+        }
+    }
+
+    public bool ConsumeItem(ItemSO item, int amount = 1)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].item != item)
+                continue;
+
+            if (items[i].quantity < amount)
+                return false;
+
+            items[i].quantity -= amount;
+
+            // je?li po zu?yciu mamy 0 ? usu? z listy i wyczy?? hotbar
+            if (items[i].quantity <= 0)
+            {
+                ItemSO removedItem = items[i].item;
+                items.RemoveAt(i);
+                ClearItemFromHotbar(removedItem);
+            }
+
+            // od?wie? UI i hotbar
+            UpdateUI();
+            RefreshHotbar();
+            OnInventoryChanged?.Invoke();
+
+            return true; 
+        }
+
+        return false; // nie znaleziono itemu
+    }
+
+
+    public void ClearItemFromHotbar(ItemSO item)
+    {
+        for (int i = 0; i < HotbarData.Instance.items.Length; i++)
+        {
+            if (HotbarData.Instance.items[i] == item)
+            {
+                HotbarData.Instance.SetItem(i, null);
+            }
+        }
+        foreach (var slot in hotbarSlots)
+        {
+            if (slot != null && slot.HasItem(item))
+            {
+                slot.Clear();
+            }
         }
     }
 }

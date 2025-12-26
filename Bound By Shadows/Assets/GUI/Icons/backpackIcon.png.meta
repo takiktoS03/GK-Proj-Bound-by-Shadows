@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 5cbecb19f5244044dade6c938e6c8ca2
+guid: fd6d8c0f5b201774abef6d234bec8b18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7952758836970473385
-    second: pouchIcon_0
+      213: -5852942964140228350
+    second: backpackIcon_0
   - first:
-      213: -2013336955662155292
-    second: pouchIcon_1
+      213: 7664187319345065720
+    second: backpackIcon_1
+  - first:
+      213: -4019295265314440187
+    second: backpackIcon_2
+  - first:
+      213: -3938750720506352365
+    second: backpackIcon_3
+  - first:
+      213: -7996960753325537275
+    second: backpackIcon_4
+  - first:
+      213: 1176377172003159885
+    second: backpackIcon_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pouchIcon_0
+      name: backpackIcon_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 352
-        height: 370
+        x: 75
+        y: 763
+        width: 284
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 758b60a29ff12a190800000000000000
-      internalID: -7952758836970473385
+      spriteID: 201ccc3626b26cea0800000000000000
+      internalID: -5852942964140228350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pouchIcon_1
+      name: backpackIcon_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 330
-        width: 191
-        height: 110
+        x: 122
+        y: 505
+        width: 660
+        height: 355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e14798b4b03f04e0800000000000000
-      internalID: -2013336955662155292
+      spriteID: 8fead95a2c9ac5a60800000000000000
+      internalID: 7664187319345065720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backpackIcon_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 763
+        width: 285
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50cf58750489838c0800000000000000
+      internalID: -4019295265314440187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backpackIcon_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 107
+        width: 50
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31da76d861fb659c0800000000000000
+      internalID: -3938750720506352365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backpackIcon_4
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 47
+        width: 660
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5088a478096150190800000000000000
+      internalID: -7996960753325537275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backpackIcon_5
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 107
+        width: 49
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f70232ec4535010800000000000000
+      internalID: 1176377172003159885
       vertices: []
       indices: 
       edges: []
@@ -160,8 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pouchIcon_0: -7952758836970473385
-      pouchIcon_1: -2013336955662155292
+      backpackIcon_0: -5852942964140228350
+      backpackIcon_1: 7664187319345065720
+      backpackIcon_2: -4019295265314440187
+      backpackIcon_3: -3938750720506352365
+      backpackIcon_4: -7996960753325537275
+      backpackIcon_5: 1176377172003159885
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
