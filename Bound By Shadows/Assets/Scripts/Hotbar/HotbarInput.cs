@@ -30,8 +30,12 @@ public class HotbarInput : MonoBehaviour
 
         switch (item.itemType)
         {
-            case ItemType.Potion:
+            case ItemType.HealPotion:
                 UsePotion(item);
+                break;
+
+            case ItemType.StaminaPotion:
+                UseStaminaPotion(item);
                 break;
 
             default:
@@ -59,6 +63,22 @@ public class HotbarInput : MonoBehaviour
         }
 
         playerHealth.Heal(potion.healAmount);
+    }
+
+    private void UseStaminaPotion(ItemSO potion)
+    {
+        PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+
+        if (playerHealth == null)
+            return;
+
+        // najpierw sprawdzamy i zu?ywamy item
+        bool consumed = Inventory.Instance.ConsumeItem(potion, 1);
+        if (!consumed)
+            return;
+
+        // potem regenerujemy stamin?
+        playerHealth.HealStamina(potion.staminaAmount);
     }
 
 }

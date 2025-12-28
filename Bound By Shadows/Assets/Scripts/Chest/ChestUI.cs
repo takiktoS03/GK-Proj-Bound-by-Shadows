@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+//using static System.Net.Mime.MediaTypeNames;
 
 public class ChestUI : MonoBehaviour
 {
@@ -45,17 +46,25 @@ public class ChestUI : MonoBehaviour
     {
         if (currentChest == null) return;
 
-        // Usu? stare sloty
+        // usu? stare sloty
         foreach (Transform child in slotParent)
             Destroy(child.gameObject);
 
-        // Dodaj nowe sloty
-        for (int i = 0; i < currentChest.items.Count; i++)
+        // dodaj nowe sloty
+        foreach (var stack in currentChest.items)
         {
-            var stack = currentChest.items[i];
             GameObject slot = Instantiate(slotPrefab, slotParent);
 
-            slot.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
+            // ikonka
+            slot.transform.Find("Icon")
+                .GetComponent<Image>().sprite = stack.item.icon;
+
+            // ilo??
+            var countText = slot.transform.Find("Count")
+                .GetComponent<TextMeshProUGUI>();
+
+            countText.text = stack.quantity.ToString();
+            countText.gameObject.SetActive(stack.quantity > 1);
         }
     }
 

@@ -25,6 +25,23 @@ public class HotbarSlot : MonoBehaviour
 
     public void SetItem(ItemSO item)
     {
+
+        foreach (var slot in FindObjectsOfType<HotbarSlot>())
+        {
+            if (slot != this && slot.HasItem(item))
+            {
+                slot.Clear();
+            }
+        }
+
+        for (int i = 0; i < HotbarData.Instance.items.Length; i++)
+        {
+            if (HotbarData.Instance.items[i] == item)
+            {
+                HotbarData.Instance.SetItem(i, null);
+            }
+        }
+
         assignedItem = item;
         icon.sprite = item.icon;
         icon.enabled = true;

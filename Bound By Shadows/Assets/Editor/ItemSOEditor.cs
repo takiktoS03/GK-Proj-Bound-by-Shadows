@@ -40,7 +40,7 @@ public class ItemSOEditor : Editor
         // =============================================
         //                POTION
         // =============================================
-        else if (item.itemType == ItemType.Potion)
+        else if (item.itemType == ItemType.HealPotion)
         {
             EditorGUILayout.LabelField("Potion Settings", EditorStyles.boldLabel);
 
@@ -53,6 +53,26 @@ public class ItemSOEditor : Editor
             item.textPreview = EditorGUILayout.TextArea(item.textPreview, GUILayout.Height(60));
 
             // Potion NIE MA obrazka preview
+            item.hasImagePreview = false;
+            item.imagePreview = null;
+        }
+
+        // =============================================
+        //           STAMINA POTION
+        // =============================================
+        else if (item.itemType == ItemType.StaminaPotion)
+        {
+            EditorGUILayout.LabelField("Stamina Potion Settings", EditorStyles.boldLabel);
+
+            // Stamina Amount
+            item.staminaAmount = EditorGUILayout.IntField("Stamina Amount", item.staminaAmount);
+
+            // Text Preview
+            item.hasTextPreview = true;
+            EditorGUILayout.LabelField("Text Preview:");
+            item.textPreview = EditorGUILayout.TextArea(item.textPreview, GUILayout.Height(60));
+
+            // Brak image preview
             item.hasImagePreview = false;
             item.imagePreview = null;
         }

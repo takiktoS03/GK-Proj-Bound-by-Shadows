@@ -3,7 +3,8 @@ using UnityEngine;
 public enum ItemType
 {
     Letter,
-    Potion,
+    HealPotion,
+    StaminaPotion,
     Key,
     Other
 }
@@ -17,6 +18,9 @@ public class ItemSO : ScriptableObject
 
     // Dodatkowe dane – np. dla mikstur
     public int healAmount;
+
+    // dodatkowe dane dla staminy
+    public int staminaAmount;
 
     // Dodatkowe dane dla listu
     [TextArea(5, 10)]
