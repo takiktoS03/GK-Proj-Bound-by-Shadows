@@ -46,6 +46,9 @@ TagManager:
   - name: Background
     uniqueID: 2667432411
     locked: 0
+  - name: BackWall
+    uniqueID: 1905747699
+    locked: 0
   - name: Lava
     uniqueID: 88538199
     locked: 0

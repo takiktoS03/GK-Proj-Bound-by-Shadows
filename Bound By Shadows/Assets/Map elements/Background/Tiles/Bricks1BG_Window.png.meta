@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1c5083c5fb1b0f40b9161d7679c6a4e
+guid: f2f716f1b9ecd4b48bd3125a74706ebb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4783541382768867625
-    second: Bricks1BG_0
+      213: -4787565127975687910
+    second: Bricks1BG_Window_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bricks1BG_0
+      name: Bricks1BG_Window_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929b1581b8d826240800000000000000
-      internalID: 4783541382768867625
+      spriteID: a1926f7b1e62f8db0800000000000000
+      internalID: -4787565127975687910
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e165edbacd9af9249a5b7c8cc02b92a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bricks1BG_0: 4783541382768867625
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

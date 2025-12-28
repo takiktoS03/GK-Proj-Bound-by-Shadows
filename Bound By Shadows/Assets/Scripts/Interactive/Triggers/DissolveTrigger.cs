@@ -17,7 +17,10 @@ public class DissolveTrigger : MonoBehaviour
     {
         effect = GetComponent<DissolveEffect>();
         shadowCaster = GetComponent<ShadowCaster2D>();
-        shadowCaster.enabled = false;
+        if (shadowCaster != null)
+        {
+            shadowCaster.enabled = false;
+        }
     }
 
     private void Start()
@@ -30,7 +33,10 @@ public class DissolveTrigger : MonoBehaviour
         if (!col.CompareTag("Player") || triggered) return;
         triggered = true;
 
-        shadowCaster.enabled = true;
+        if (shadowCaster != null)
+        {
+            shadowCaster.enabled = true;
+        }
 
         effect.PlayDissolve(duration, invert);
     }
