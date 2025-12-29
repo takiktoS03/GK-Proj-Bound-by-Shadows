@@ -13,6 +13,6 @@ AssetOrigin:
   serializedVersion: 1
   productId: 239154
   packageName: MicroBar - Animated Health Bar Framework
-  packageVersion: 2.5.2
-  assetPath: Assets/Microlight/MicroBar/Scripts/Animations/Structs/AnimationInfo.cs
-  uploadId: 736164
+  packageVersion: 2.5.4
+  assetPath: Assets/MicroBar/Scripts/Animations/Structs/AnimationInfo.cs
+  uploadId: 817760

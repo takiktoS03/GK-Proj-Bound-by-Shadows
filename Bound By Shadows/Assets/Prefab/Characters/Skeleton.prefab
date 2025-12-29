@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fa305bbc1fc1cee4bb32302b595bbcc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -249,7 +249,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: fa305bbc1fc1cee4bb32302b595bbcc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -393,7 +393,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c5c71ce0da0fdfe47b0fb9d64f31c43e, type: 3}
   m_Color: {r: 1, g: 0.2, b: 0.20784314, a: 1}
@@ -414,9 +414,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4841527315304281849}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 10
+  m_SortingOrder: 2
   m_SortAtRoot: 0
 --- !u!1 &5279595509254943234
 GameObject:
@@ -494,7 +494,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 34ba8c01ac70d1c418c6a92d71972fc9, type: 3}
   m_Color: {r: 0.30980393, g: 0.29803923, b: 0.29803923, a: 0.5019608}
@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 4354458363220043251}
   - component: {fileID: 2254057416518948912}
   - component: {fileID: 6050392024949498573}
-  - component: {fileID: -645137929261518041}
   - component: {fileID: 3145956241996614867}
   m_Layer: 9
   m_Name: Skeleton
@@ -593,9 +592,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 198711937
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1708997961419951014, guid: 4a388764bbd67834f826ba3422645118, type: 3}
+  m_Sprite: {fileID: -1510828076388047741, guid: d421c6866696d3e46a5c4552d78a130a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -701,7 +700,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.69, y: 4.1}
+    oldSize: {x: 2.69, y: 4.42}
     newSize: {x: 2.71, y: 3.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -780,103 +779,6 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!82 &-645137929261518041
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615542976669200990}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 165a83c89869ea049b785233f0ca2afe, type: 3}
-  m_Resource: {fileID: 8300000, guid: 165a83c89869ea049b785233f0ca2afe, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 7
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &3145956241996614867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,7 +818,7 @@ Transform:
   m_GameObject: {fileID: 6468837472154033592}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 4.39, z: 0}
+  m_LocalPosition: {x: -0.35, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1016,7 +918,7 @@ SortingGroup:
   m_GameObject: {fileID: 6468837472154033592}
   m_Enabled: 1
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_SortAtRoot: 0
 --- !u!1 &6641254185020940018
@@ -1095,7 +997,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1592404637
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: c5c71ce0da0fdfe47b0fb9d64f31c43e, type: 3}
   m_Color: {r: 1, g: 0.2, b: 0.20784314, a: 1}
@@ -1116,7 +1018,7 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6641254185020940018}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1592404637
+  m_SortingLayer: 10
+  m_SortingOrder: 4
   m_SortAtRoot: 0

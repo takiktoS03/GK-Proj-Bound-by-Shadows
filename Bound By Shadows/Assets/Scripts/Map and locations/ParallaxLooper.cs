@@ -4,98 +4,104 @@ using System.Collections.Generic;
 public class ParallaxLooper : MonoBehaviour
 {
     [System.Serializable]
-    public class ParallaxLayer
+    public class Layer
     {
-        public string name = "Nazwa Warstwy";
+        public string name = "Warstwa";
         public Transform rootObject;
-        [Range(0f, 1f)] public float parallaxMultiplier;
+        [Range(0f, 1f)] public float parallaxSpeed;
 
-        // Zmienne prywatne do obsługi logiki tej konkretnej warstwy
-        [HideInInspector] public Transform[] segments;
-        [HideInInspector] public float spriteWidth;
+        // --- Zmienne wewnętrzne ---
+        [HideInInspector] public List<Transform> pieces = new List<Transform>();
+        [HideInInspector] public float pieceWidth;
+        [HideInInspector] public float totalChainWidth;
     }
 
-    [Header("Ustawienia Ogólne")]
     public Transform cameraTransform;
-    public float bufferPercent = 0.01f;
-
-    [Header("Lista Warstw")]
-    public List<ParallaxLayer> layers = new List<ParallaxLayer>();
+    [Tooltip("Ile dodatkowych ekranów zapasu generować po bokach? (Zalecane 1.0 = 100% szerokości ekranu)")]
+    public float bufferMultiplier = 1.0f;
+    public List<Layer> layers = new List<Layer>();
 
     private Vector3 lastCameraPosition;
+    private float widthToCover;
 
     void Start()
     {
-        if (cameraTransform == null)
-            cameraTransform = Camera.main.transform;
-
+        if (cameraTransform == null) cameraTransform = Camera.main.transform;
         lastCameraPosition = cameraTransform.position;
 
-        // Inicjalizacja każdej warstwy z listy
+        // Szerokość ekranu w jednostkach świata gry (World Units)
+        float screenHeightWorld = 2f * Camera.main.orthographicSize;
+        float screenWidthWorld = screenHeightWorld * Camera.main.aspect;
+        widthToCover = screenWidthWorld * bufferMultiplier;
+
         foreach (var layer in layers)
         {
             SetupLayer(layer);
         }
     }
 
-    void SetupLayer(ParallaxLayer layer)
+    void SetupLayer(Layer layer)
     {
         if (layer.rootObject == null) return;
-
         SpriteRenderer sr = layer.rootObject.GetComponent<SpriteRenderer>();
-        if (sr == null)
+
+        layer.pieceWidth = sr.bounds.size.x;
+        layer.pieces.Clear();
+        layer.pieces.Add(layer.rootObject);
+
+        // Ile kopii potrzebujemy na JEDNĄ stronę, aby pokryć połowę żądanej szerokości
+        int clonesPerSide = Mathf.CeilToInt((widthToCover * 0.5f) / layer.pieceWidth);
+
+        // Generowanie klonów
+        for (int i = 1; i <= clonesPerSide; i++)
         {
-            Debug.LogError($"Warstwa {layer.name} nie ma SpriteRenderera!");
-            return;
+            Transform left = Instantiate(layer.rootObject, layer.rootObject.parent);
+            left.position = layer.rootObject.position + Vector3.left * (layer.pieceWidth * i);
+            layer.pieces.Add(left);
+
+            Transform right = Instantiate(layer.rootObject, layer.rootObject.parent);
+            right.position = layer.rootObject.position + Vector3.right * (layer.pieceWidth * i);
+            layer.pieces.Add(right);
         }
 
-        layer.spriteWidth = sr.bounds.size.x;
-
-        layer.segments = new Transform[2];
-        layer.segments[0] = layer.rootObject;
-
-        Transform clone = Instantiate(layer.rootObject, layer.rootObject.parent);
-        clone.position = layer.rootObject.position + Vector3.right * layer.spriteWidth;
-
-        layer.segments[1] = clone;
+        // Całkowita szerokość łańcucha (liczba wszystkich elementów * szerokość jednego)
+        layer.totalChainWidth = layer.pieces.Count * layer.pieceWidth;
     }
 
     void LateUpdate()
     {
-        Vector3 delta = cameraTransform.position - lastCameraPosition;
-        lastCameraPosition = cameraTransform.position;
+        float deltaX = cameraTransform.position.x - lastCameraPosition.x;
 
         foreach (var layer in layers)
         {
-            MoveLayer(layer, delta);
+            MoveLayerX(layer, deltaX);
         }
+
+        lastCameraPosition = cameraTransform.position;
     }
 
-    void MoveLayer(ParallaxLayer layer, Vector3 delta)
+    void MoveLayerX(Layer layer, float deltaX)
     {
-        if (layer.rootObject == null) return;
+        float moveAmount = deltaX * layer.parallaxSpeed;
+        float threshold = layer.totalChainWidth / 2f; // Połowa długości łańcucha
 
-        foreach (Transform segment in layer.segments)
+        foreach (Transform piece in layer.pieces)
         {
-            segment.position += delta * layer.parallaxMultiplier;
-        }
+            // Ruch na X
+            Vector3 pos = piece.position;
+            pos.x += moveAmount;
+            piece.position = pos;
 
-        // Logika nieskończonego przewijania (check bounds)
-        float buffer = layer.spriteWidth * bufferPercent;
+            // Zapętlanie (Przeskok)
+            float dist = piece.position.x - cameraTransform.position.x;
 
-        foreach (Transform segment in layer.segments)
-        {
-            float distance = cameraTransform.position.x - segment.position.x;
+            // Jeśli element wyjechał za daleko w lewo -> przenieś na prawy koniec łańcucha
+            if (dist < -threshold)
+                piece.position += Vector3.right * layer.totalChainWidth;
 
-            if (distance > layer.spriteWidth + buffer)
-            {
-                // Przesuwamy w prawo o 2 szerokości (bo mamy 2 segmenty)
-                segment.position += Vector3.right * layer.spriteWidth * 2;
-            }
-            else if (distance < -layer.spriteWidth - buffer)
-            {
-                segment.position -= Vector3.right * layer.spriteWidth * 2;
-            }
+            // Jeśli element wyjechał za daleko w prawo -> przenieś na lewy koniec łańcucha
+            else if (dist > threshold)
+                piece.position -= Vector3.right * layer.totalChainWidth;
         }
     }
 }

@@ -375,7 +375,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -210.27, y: 49.09, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2119995436237816029}
@@ -397,25 +397,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
-  bufferPercent: 0.01
+  bufferMultiplier: 1
   layers:
   - name: 
     rootObject: {fileID: 2119995436237816029}
-    parallaxMultiplier: 0.1
-    segments: []
-    spriteWidth: 0
+    parallaxSpeed: 0.1
+    pieces: []
+    pieceWidth: 0
+    totalChainWidth: 0
   - name: 
     rootObject: {fileID: 8611340470637488538}
-    parallaxMultiplier: 0.3
-    segments: []
-    spriteWidth: 0
+    parallaxSpeed: 0.15
+    pieces: []
+    pieceWidth: 0
+    totalChainWidth: 0
   - name: 
     rootObject: {fileID: 1509615527244552948}
-    parallaxMultiplier: 0.5
-    segments: []
-    spriteWidth: 0
+    parallaxSpeed: 0.2
+    pieces: []
+    pieceWidth: 0
+    totalChainWidth: 0
   - name: 
     rootObject: {fileID: 8896462774609785221}
-    parallaxMultiplier: 0.8
-    segments: []
-    spriteWidth: 0
+    parallaxSpeed: 0.25
+    pieces: []
+    pieceWidth: 0
+    totalChainWidth: 0
