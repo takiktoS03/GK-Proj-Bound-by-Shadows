@@ -46,10 +46,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Dissolve: 1
-    - _Edge_Width: 0.03
+    - _Edge_Width: 0.04
     - _Fresnel: 0
     - _Fresnel_Power: 3
-    - _Noise_Scale: 60
+    - _Noise_Scale: 110
     - _UseOriginalAlpha: 1
     m_Colors:
     - _Edge_Color: {r: 95.87452, g: 0, b: 0, a: 1}

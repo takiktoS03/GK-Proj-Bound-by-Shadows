@@ -77,7 +77,7 @@ public class PlayerHealth : Health
     {
         playerMovement.enabled = false;
         anim.SetTrigger("Death");
-        anim.SetTrigger("DeathEnded");
+        //anim.SetTrigger("DeathEnded");
         StartCoroutine(FindFirstObjectByType<PauseMenu>().ShowGameOver());
     }
 

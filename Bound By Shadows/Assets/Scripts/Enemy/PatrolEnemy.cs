@@ -34,8 +34,6 @@ public class PatrolEnemy : MonoBehaviour
     private void Awake()
     {
         initScale = enemy.localScale;
-        //anim = GetComponentInChildren<Animator>();
-        //rb = GetComponent<Rigidbody2D>();
     }
 
     /** @brief Zatrzymuje animację obiektu */
@@ -86,7 +84,7 @@ public class PatrolEnemy : MonoBehaviour
 
         idleTimer += Time.deltaTime;
         
-        if(idleTimer > idleDuration)
+        if (idleTimer > idleDuration)
         {
             movingLeft = !movingLeft;
             idleTimer = 0;

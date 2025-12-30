@@ -14,6 +14,8 @@ public class LocationRevealer : MonoBehaviour
 {
     /// @brief Obiekt, który zostanie ujawniony po wejściu gracza w trigger (np. ukryta ścieżka).
     public GameObject hiddenLocation;
+    /// @brief Obiekt, który będzie usunięty po wejściu gracza w trigger (np. tło).
+    public GameObject activeLocation;
 
     /**
      * @brief Wykrywany jest gracz wchodzący w trigger — ujawnienie ukrytej lokalizacji.
@@ -23,6 +25,7 @@ public class LocationRevealer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Destroy(activeLocation);
             hiddenLocation.SetActive(true);
         }
     }

@@ -80,6 +80,7 @@ public class MeleeEnemy : MonoBehaviour
     private IEnumerator DamagePlayer()
     {
         isAttacking = true;
+        anim.ResetTrigger("Hurt");
         anim.SetTrigger("Attack");
 
         if (patrolEnemy != null)
@@ -92,12 +93,14 @@ public class MeleeEnemy : MonoBehaviour
 
     public void onEnemyDeath()
     {
+        GetComponentInParent<PatrolEnemy>().enabled = false;
         this.enabled = false;
-        // anim.SetTrigger("Die");
+        anim.SetTrigger("Death");
         dissolveEffect.PlayDissolve(2f, true, () =>
         {
             Destroy(gameObject);
-        });
+        },
+        1.2f);
     }
 
 }

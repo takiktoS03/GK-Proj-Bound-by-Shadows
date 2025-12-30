@@ -127,6 +127,10 @@ PrefabInstance:
       propertyPath: simpleBar._adaptiveColor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2402976365768445042, guid: ba3b211e36162b241b530c48c889c138, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -289379152601194012, guid: 366501a7296d2a944a94975ee1b705da, type: 3}
     - target: {fileID: 3322797874092925040, guid: ba3b211e36162b241b530c48c889c138, type: 3}
       propertyPath: m_Color.g
       value: 0.19999999
@@ -141,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5001824821451783673, guid: ba3b211e36162b241b530c48c889c138, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5001824821451783673, guid: ba3b211e36162b241b530c48c889c138, type: 3}
       propertyPath: m_LocalRotation.w
@@ -175,54 +179,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+    - target: {fileID: 6815466251092608037, guid: ba3b211e36162b241b530c48c889c138, type: 3}
+      propertyPath: m_labelHash
+      value: 0.0000009919072
       objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+    - target: {fileID: 6815466251092608037, guid: ba3b211e36162b241b530c48c889c138, type: 3}
+      propertyPath: m_SpriteHash
+      value: 206267916
       objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 331616831412430356}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onEnemyDeath
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MeleeEnemy, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050392024949498573, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+    - target: {fileID: 6815466251092608037, guid: ba3b211e36162b241b530c48c889c138, type: 3}
+      propertyPath: m_CategoryHash
+      value: 3.6413044e-16
       objectReference: {fileID: 0}
     - target: {fileID: 7321484333050501608, guid: ba3b211e36162b241b530c48c889c138, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.42
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3b211e36162b241b530c48c889c138, type: 3}
---- !u!114 &331616831412430356 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4354458363220043251, guid: ba3b211e36162b241b530c48c889c138, type: 3}
-  m_PrefabInstance: {fileID: 4103912922337854439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 725c4d9c1d1ca784fa1110d95df87ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &8881251094173679260 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4878680287419055483, guid: ba3b211e36162b241b530c48c889c138, type: 3}

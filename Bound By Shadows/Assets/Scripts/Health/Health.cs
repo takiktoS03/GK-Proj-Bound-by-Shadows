@@ -1,5 +1,6 @@
-﻿using System.Collections;
-using Microlight.MicroBar;
+﻿using Microlight.MicroBar;
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 /**
@@ -62,7 +63,8 @@ public class Health : MonoBehaviour
             healthBar.UpdateBar(currentHealth);
         if (currentHealth > 0 && !dead)
         {
-            anim.SetTrigger("Hurt");
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+                anim.SetTrigger("Hurt");
         }
         else
         {
