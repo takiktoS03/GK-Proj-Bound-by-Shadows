@@ -16,9 +16,9 @@ MonoBehaviour:
   icon: {fileID: 5405339164117955393, guid: b29aebfa121eaaf4b8eafef0d7d7016d, type: 3}
   itemType: 2
   healAmount: 0
-  staminaAmount: 0
+  staminaAmount: 30
   letterText: 
-  hasTextPreview: 0
+  hasTextPreview: 1
   textPreview: 
   hasImagePreview: 0
   imagePreview: {fileID: 0}
