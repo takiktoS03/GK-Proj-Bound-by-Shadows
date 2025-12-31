@@ -19,7 +19,8 @@ MonoBehaviour:
   staminaAmount: 0
   letterText: 
   hasTextPreview: 1
-  textPreview: zxc
+  textPreview: "Mikstura, kt\xF3ra po wypiciu nieznacznie podnosi tw\xF3j poziom
+    zdrowia"
   hasImagePreview: 0
   imagePreview: {fileID: 0}
   canBeInHotbar: 1

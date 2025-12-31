@@ -2,20 +2,37 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+/**
+ * @class ParticleSystem2DEditor
+ * @brief Custom Inspector dla klasy ParticleSystem2D.
+ *
+ * Skrypt rozszerza Inspector systemu cz?steczek 2D o obs?ug? presetów,
+ * kopii roboczej ustawie? (working copy) oraz parametrów renderowania.
+ * Zapobiega resetowaniu ustawie? podczas edycji w edytorze.
+ *
+ * @author Julia Bigaj
+ */
 [CustomEditor(typeof(ParticleSystem2D))]
 public class ParticleSystem2DEditor : Editor
 {
-    private Editor workingCopyEditor;
-    // private ParticleEffectPreset lastPreset = null;
 
+    private Editor workingCopyEditor;
+
+    /**
+     * @brief Rysuje niestandardowy interfejs Inspector.
+     *
+     * Obs?uguje:
+     * - ustawienia renderowania
+     * - wybór presetu
+     * - tworzenie nowego presetu
+     * - edycj? kopii roboczej presetu
+     */
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
         ParticleSystem2D ps = (ParticleSystem2D)target;
 
-        // ----------------------------
-        // RENDERING
-        // ----------------------------
+        // --- Rendering ---
         var layers = SortingLayer.layers.Select(l => l.name).ToArray();
         SerializedProperty sortingLayerProp = serializedObject.FindProperty("sortingLayer");
         SerializedProperty orderProp = serializedObject.FindProperty("orderInLayer");
@@ -32,9 +49,7 @@ public class ParticleSystem2DEditor : Editor
 
         EditorGUILayout.Space();
 
-        // ----------------------------
-        // PRESET
-        // ----------------------------
+        // --- Preset ---
         SerializedProperty presetProp = serializedObject.FindProperty("preset");
 
         EditorGUILayout.LabelField("Preset", EditorStyles.boldLabel);
@@ -45,7 +60,6 @@ public class ParticleSystem2DEditor : Editor
             false
         );
 
-        // Flaga wykrywaj?ca, czy u?ytkownik zmieni? referencj? do Assetu Presetu
         bool presetAssetReferenceChanged = newPresetObj != presetProp.objectReferenceValue;
 
         if (presetAssetReferenceChanged)
@@ -56,24 +70,19 @@ public class ParticleSystem2DEditor : Editor
 
         ParticleEffectPreset currentPresetAsset = presetProp.objectReferenceValue as ParticleEffectPreset;
 
-        // ==========================================================
-        // LOGIKA PERSYSTENCJI (Klucz do rozwi?zania problemu resetu)
-        // ==========================================================
-
+        // Synchronizacja kopii roboczej z assetem presetu
         if (presetAssetReferenceChanged)
         {
-            // KROK 1: Je?li Asset Presetu zosta? zmieniony, nadpisujemy Working Copy
             if (currentPresetAsset != null)
             {
                 if (ps.overridePresetData == null)
                 {
                     ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
                 }
-                // ZAWSZE kopiujemy z nowego Assetu do Working Copy
                 ps.overridePresetData.CopyFrom(currentPresetAsset);
                 EditorUtility.SetDirty(ps);
             }
-            else // U?ytkownik ustawi? Preset na null
+            else
             {
                 ps.overridePresetData = null;
             }
@@ -81,9 +90,6 @@ public class ParticleSystem2DEditor : Editor
             GUI.FocusControl(null);
             Repaint();
         }
-        // KROK 2: Je?li Asset Presetu istnieje, ale Working Copy jest null
-        // (np. po za?adowaniu sceny lub ponownym klikni?ciu w hierarchii), utwórz kopi?.
-        // Dzi?ki temu, je?li ps.overridePresetData ISTNIEJE (trzymaj?c Twoje zmiany), ten blok si? NIE WYKONA.
         else if (currentPresetAsset != null && ps.overridePresetData == null)
         {
             ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
@@ -96,9 +102,6 @@ public class ParticleSystem2DEditor : Editor
 
         EditorGUILayout.Space();
 
-        // ---------------------------------------------
-        // CREATE NEW PRESET
-        // ---------------------------------------------
         if (GUILayout.Button("Create New Preset"))
         {
             string folderPath = "Assets/Presets";
@@ -121,18 +124,14 @@ public class ParticleSystem2DEditor : Editor
                 AssetDatabase.CreateAsset(newFile, path);
                 AssetDatabase.SaveAssets();
 
-                // Ustaw nowo utworzony Asset jako Preset File
                 presetProp.objectReferenceValue = newFile;
                 serializedObject.ApplyModifiedProperties();
 
-                // Zaktualizuj Working Copy nowymi danymi
                 if (ps.overridePresetData == null)
                 {
                     ps.overridePresetData = ScriptableObject.CreateInstance<ParticleEffectPreset>();
                 }
                 ps.overridePresetData.CopyFrom(newFile);
-
-                // USUNI?TO: lastPreset = newFile;
 
                 Selection.activeObject = newFile;
             }
@@ -140,9 +139,6 @@ public class ParticleSystem2DEditor : Editor
 
         EditorGUILayout.Space();
 
-        // ---------------------------------------------
-        // WORKING COPY
-        // ---------------------------------------------
         if (ps.overridePresetData != null)
         {
             EditorGUILayout.LabelField("Preset Settings (Working Copy)", EditorStyles.boldLabel);
@@ -150,12 +146,10 @@ public class ParticleSystem2DEditor : Editor
             if (workingCopyEditor == null || workingCopyEditor.target != ps.overridePresetData)
                 workingCopyEditor = CreateEditor(ps.overridePresetData);
 
-            // To pozwala edytowa? tylko KOPI? ustawie?
             workingCopyEditor.OnInspectorGUI();
 
             EditorGUILayout.Space();
 
-            // Tutaj mo?esz doda? przycisk "Resetuj do Presetu"
             GUI.color = Color.yellow;
             if (GUILayout.Button("Reset Settings to Preset Default"))
             {
@@ -173,6 +167,12 @@ public class ParticleSystem2DEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 
+    /**
+     * @brief Aktualizuje wszystkie obiekty ParticleSystem2D w scenie
+     * korzystaj?ce z danego presetu.
+     *
+     * @param preset Preset, którego zmiany maj? zosta? zastosowane
+     */
     private void UpdateAllSceneObjectsUsingPreset(ParticleEffectPreset preset)
     {
         var all = Object.FindObjectsByType<ParticleSystem2D>(FindObjectsSortMode.None);

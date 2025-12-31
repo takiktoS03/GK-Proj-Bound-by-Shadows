@@ -1,6 +1,15 @@
 using UnityEngine;
 using System.Reflection;
 
+/**
+ * @class ParticleEffectPreset
+ * @brief Preset efektu cz?steczek oparty o ScriptableObject.
+ *
+ * Przechowuje komplet ustawie? systemu cz?steczek,
+ * które mog? by? wspó?dzielone pomi?dzy obiektami w scenie.
+ *
+ * @author Julia Bigaj
+ */
 [CreateAssetMenu(fileName = "ParticleEffectPreset", menuName = "Particles/Effect Preset")]
 public class ParticleEffectPreset : ScriptableObject
 {
@@ -40,9 +49,23 @@ public class ParticleEffectPreset : ScriptableObject
     public ParticleCollisionMode collisionMode = ParticleCollisionMode.Stop;
     public LayerMask collisionMask = ~0;
 
+    /**
+     * @brief Kopiuje dane z innego presetu.
+     *
+     * @param other Preset ?ród?owy
+     */
     public void CopyFrom(ParticleEffectPreset other) => CopyFromPreset(other);
+
+    /**
+     * @brief Kopiuje dane presetu do systemu cz?steczek.
+     *
+     * @param system Docelowy system cz?steczek
+     */
     public void CopyTo(ParticleSystem2D system) => CopyToSystem(system);
 
+    /**
+     * @brief Inicjalizuje domy?lne warto?ci gradientów i krzywych.
+     */
     private void OnEnable()
     {
         if (colorOverLifetime == null || colorOverLifetime.colorKeys.Length == 0)
@@ -66,21 +89,35 @@ public class ParticleEffectPreset : ScriptableObject
         if (alphaOverLifetime == null || alphaOverLifetime.keys.Length == 0)
             alphaOverLifetime = AnimationCurve.Linear(0, 1, 1, 0);
     }
+
+
     public void CopyFromPreset(ParticleEffectPreset other)
     {
         CopyFieldsFrom(other, this);
     }
+
 
     public void CopyToSystem(ParticleSystem2D system)
     {
         CopyFieldsFrom(this, system);
     }
 
+    /**
+     * @brief Kopiuje dane z systemu cz?steczek do presetu.
+     *
+     * @param sys System cz?steczek
+     */
     public void CopyFromSystem(ParticleSystem2D sys)
     {
         CopyFieldsFrom(sys, this);
     }
 
+    /**
+     * @brief Kopiuje dane z jednego obiektu do drugiego.
+     *
+     * @param source Obiekt ?ród?owy
+     * @param target Obiekt docelowy
+     */
     private static void CopyFieldsFrom(object source, object target)
     {
         var flags = BindingFlags.Public | BindingFlags.Instance;
