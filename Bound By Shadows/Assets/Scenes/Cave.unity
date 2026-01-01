@@ -366,6 +366,118 @@ Transform:
   - {fileID: 339981137}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84980320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
+  m_Name: MysteriiousFog
+  m_EditorClassIdentifier: 
+  particleMaterial: {fileID: 2100000, guid: a801912be7a9efd4ab8b5896d4073f80, type: 2}
+  particleSprite: {fileID: -733884204631058468, guid: 3802fcd13f6e96a488cebcdeaca6ea97, type: 3}
+  particleSize: 1
+  emissionRate: 30
+  particleLifetime: 5
+  minSpeed: 0.1
+  maxSpeed: 0.3
+  directionAngle: 0
+  spread: 30
+  emissionShape: 3
+  emissionRadius: 1
+  emissionArea: {x: 1, y: 1}
+  colorOverLifetime:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.5668886, b: 0, a: 1}
+    key2: {r: 1, g: 0, b: 0.8072939, a: 0}
+    key3: {r: 1, g: 1, b: 1, a: 0}
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 33153
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  scaleOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  alphaOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.5063354
+      outSlope: 0.5063354
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9874878
+      value: 0.5
+      inSlope: 0.5063354
+      outSlope: 0.5063354
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enableGravity: 0
+  gravity: {x: 0, y: 0}
+  airResistance: 0.98
+  bounceFactor: 0
+  wind: {x: 0.1, y: 0.1}
+  useCollision: 0
+  collisionMode: 1
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!4 &89892468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3641118456510433715, guid: 77eec52cbf9f9034f9f8b6a7bc84cf3e, type: 3}
@@ -705,6 +817,118 @@ MonoBehaviour:
   nextSceneName: Dungeon
   fadeDuration: 2
   instantCut: 0
+--- !u!114 &214594144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
+  m_Name: LightRain
+  m_EditorClassIdentifier: 
+  particleMaterial: {fileID: 2100000, guid: 982504780716f9b41a7aa9f8b3958ef1, type: 2}
+  particleSprite: {fileID: -6830152201372448578, guid: 04f3659e6b7bd664585dedae9aca020b, type: 3}
+  particleSize: 1
+  emissionRate: 100
+  particleLifetime: 3
+  minSpeed: 0.5
+  maxSpeed: 1
+  directionAngle: -90
+  spread: 100
+  emissionShape: 1
+  emissionRadius: 10
+  emissionArea: {x: 4, y: 1}
+  colorOverLifetime:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  scaleOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  alphaOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: -1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enableGravity: 1
+  gravity: {x: 0, y: -9.81}
+  airResistance: 0.99
+  bounceFactor: 0.1
+  wind: {x: 1, y: 0}
+  useCollision: 1
+  collisionMode: 2
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 6135
 --- !u!1 &234290498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,230 +1588,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &329555104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: LightRain
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 982504780716f9b41a7aa9f8b3958ef1, type: 2}
-  particleSprite: {fileID: -6830152201372448578, guid: 04f3659e6b7bd664585dedae9aca020b, type: 3}
-  particleSize: 1
-  emissionRate: 5
-  particleLifetime: 3
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: -90
-  spread: 100
-  emissionShape: 1
-  emissionRadius: 10
-  emissionArea: {x: 8, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 1
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.99
-  bounceFactor: 0.1
-  wind: {x: 1, y: 0}
-  useCollision: 1
-  collisionMode: 2
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 6135
---- !u!114 &337472581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 0.08025527, g: 1, b: 0, a: 1}
-    key1: {r: 0.04065053, g: 0.3207547, b: 0, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 0}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &339276992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8554588007567329462, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
@@ -2266,7 +2266,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3641118456510433715, guid: 77eec52cbf9f9034f9f8b6a7bc84cf3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -186.01
+      value: -189.2
       objectReference: {fileID: 0}
     - target: {fileID: 3641118456510433715, guid: 77eec52cbf9f9034f9f8b6a7bc84cf3e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18352,118 +18352,6 @@ Transform:
   - {fileID: 1322201931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &436881939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.9424448, b: 0, a: 1}
-    key1: {r: 0.32156864, g: 0.2642462, b: 0, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 0}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &447565688
 GameObject:
   m_ObjectHideFlags: 0
@@ -18685,7 +18573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &463730392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18802,7 +18690,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 80
   preset: {fileID: 11400000, guid: 654ed292abd8278478097d86d17bf8d9, type: 2}
-  overridePresetData: {fileID: 1258319512}
+  overridePresetData: {fileID: 84980320}
 --- !u!4 &463730393
 Transform:
   m_ObjectHideFlags: 0
@@ -19293,7 +19181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 15353502525987412, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 95.66396
+      value: 95.663734
       objectReference: {fileID: 0}
     - target: {fileID: 123751680587542643, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_IsActive
@@ -19361,7 +19249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1911112395556396144, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.0000025629997
       objectReference: {fileID: 0}
     - target: {fileID: 2019409948077137317, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -19697,7 +19585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8554588007567329462, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8703790195679133483, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_Name
@@ -21159,124 +21047,12 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 644840766}
+  overridePresetData: {fileID: 0}
 --- !u!4 &643728973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3641118456510433715, guid: 77eec52cbf9f9034f9f8b6a7bc84cf3e, type: 3}
   m_PrefabInstance: {fileID: 1027231738}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &644840766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.50048995, b: 0, a: 1}
-    key1: {r: 0.32156864, g: 0.17627867, b: 0, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 0}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &648839240
 GameObject:
   m_ObjectHideFlags: 0
@@ -22076,118 +21852,6 @@ Transform:
   - {fileID: 1644681305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &880461218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 0, g: 0.8317747, b: 1, a: 1}
-    key1: {r: 0, g: 0.29330316, b: 0.32156864, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 0}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &887363137
 GameObject:
   m_ObjectHideFlags: 0
@@ -23478,7 +23142,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 1274738732}
+  overridePresetData: {fileID: 0}
 --- !u!1001 &936404067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23780,11 +23444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -141
+      value: -223.3
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 261.3
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24236,7 +23900,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 880461218}
+  overridePresetData: {fileID: 0}
 --- !u!1 &1045501033
 GameObject:
   m_ObjectHideFlags: 0
@@ -24253,7 +23917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1045501034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24370,7 +24034,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 100
   preset: {fileID: 11400000, guid: d865dc946c2b7ec42a19374f78219ce3, type: 2}
-  overridePresetData: {fileID: 1933277604}
+  overridePresetData: {fileID: 1409487512}
 --- !u!4 &1045501035
 Transform:
   m_ObjectHideFlags: 0
@@ -25450,7 +25114,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 436881939}
+  overridePresetData: {fileID: 0}
 --- !u!4 &1232361699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3641118456510433715, guid: 77eec52cbf9f9034f9f8b6a7bc84cf3e, type: 3}
@@ -25626,7 +25290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1258319512
+--- !u!114 &1279824710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25636,137 +25300,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: MysteriiousFog
+  m_Name: Smoke
   m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: a801912be7a9efd4ab8b5896d4073f80, type: 2}
-  particleSprite: {fileID: -733884204631058468, guid: 3802fcd13f6e96a488cebcdeaca6ea97, type: 3}
+  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
+  particleSprite: {fileID: -4736338417329451054, guid: 2235c84077a3805408604424cc586be1, type: 3}
   particleSize: 1
-  emissionRate: 20
-  particleLifetime: 2
-  minSpeed: 0.3
-  maxSpeed: 1
-  directionAngle: 0
-  spread: 30
-  emissionShape: 3
-  emissionRadius: 1
-  emissionArea: {x: 1, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 0.73879695, g: 1, b: 0.5707547, a: 1}
-    key1: {r: 1, g: 0.6588858, b: 0.10849059, a: 1}
-    key2: {r: 1, g: 0, b: 0.09262037, a: 0}
-    key3: {r: 1, g: 1, b: 1, a: 0}
-    key4: {r: 1, g: 1, b: 1, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 65535
-    ctime4: 65535
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.19978918
-      outSlope: 0.19978918
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.99160767
-      value: 0.19811249
-      inSlope: 0.19978918
-      outSlope: 0.19978918
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: 0}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 2, y: 1}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1274738732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
+  emissionRate: 30
+  particleLifetime: 5
   minSpeed: 0.5
-  maxSpeed: 1
+  maxSpeed: 1.5
   directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
+  spread: 70
+  emissionShape: 1
+  emissionRadius: 1
+  emissionArea: {x: 40, y: 1}
   colorOverLifetime:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0.79645824, a: 1}
-    key1: {r: 0.32156864, g: 0, b: 0.21968232, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
+    key0: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    key1: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -25774,7 +25326,7 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 65535
-    ctime2: 65535
+    ctime2: 0
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -25820,22 +25372,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0.010284424
+      value: 0.15030289
+      inSlope: -0.14672504
+      outSlope: -0.14672504
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
+      time: 1.011322
+      value: 0.0034255981
+      inSlope: -0.14672504
+      outSlope: -0.14672504
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -25844,7 +25396,7 @@ MonoBehaviour:
   gravity: {x: 0, y: -9.81}
   airResistance: 0.98
   bounceFactor: 0
-  wind: {x: 1, y: 0}
+  wind: {x: 1, y: 1}
   useCollision: 0
   collisionMode: 1
   collisionMask:
@@ -25877,7 +25429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1322201931
 Transform:
   m_ObjectHideFlags: 0
@@ -26009,7 +25561,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 80
   preset: {fileID: 11400000, guid: 13d726f3a9c89ae4b9f2e2be5d8ad1c8, type: 2}
-  overridePresetData: {fileID: 1596971435}
+  overridePresetData: {fileID: 1279824710}
 --- !u!1 &1331390755
 GameObject:
   m_ObjectHideFlags: 0
@@ -26299,7 +25851,119 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 337472581}
+  overridePresetData: {fileID: 0}
+--- !u!114 &1409487512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
+  m_Name: Fog
+  m_EditorClassIdentifier: 
+  particleMaterial: {fileID: 2100000, guid: a801912be7a9efd4ab8b5896d4073f80, type: 2}
+  particleSprite: {fileID: -733884204631058468, guid: 3802fcd13f6e96a488cebcdeaca6ea97, type: 3}
+  particleSize: 2.2
+  emissionRate: 25
+  particleLifetime: 5
+  minSpeed: 0.1
+  maxSpeed: 0.3
+  directionAngle: 0
+  spread: 30
+  emissionShape: 3
+  emissionRadius: 1
+  emissionArea: {x: 40, y: 1}
+  colorOverLifetime:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  scaleOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  alphaOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.051584706
+      outSlope: 0.051584706
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.97924805
+      value: 0.05051422
+      inSlope: 0.051584706
+      outSlope: 0.051584706
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enableGravity: 0
+  gravity: {x: 0, y: 0}
+  airResistance: 0.98
+  bounceFactor: 0
+  wind: {x: 0.3, y: 0}
+  useCollision: 0
+  collisionMode: 2
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1412754079
 GameObject:
   m_ObjectHideFlags: 0
@@ -26648,7 +26312,7 @@ MonoBehaviour:
   orderInLayer: 0
   maxParticles: 20
   preset: {fileID: 11400000, guid: 133b026d33f69c74f8cd0c3bcd5f84b4, type: 2}
-  overridePresetData: {fileID: 1595941245}
+  overridePresetData: {fileID: 0}
 --- !u!1 &1441920845
 GameObject:
   m_ObjectHideFlags: 0
@@ -29231,230 +28895,6 @@ SortingGroup:
   m_SortingLayer: 10
   m_SortingOrder: 1
   m_SortAtRoot: 0
---- !u!114 &1595941245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fire
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: 22cd44416dffe1b47a4f9f4cbe107423, type: 2}
-  particleSprite: {fileID: -5267533772929800274, guid: ef5b00154bc9be44bb4b4ed65c9db995, type: 3}
-  particleSize: 0.02
-  emissionRate: 20
-  particleLifetime: 1
-  minSpeed: 0.5
-  maxSpeed: 1
-  directionAngle: 90
-  spread: 20
-  emissionShape: 0
-  emissionRadius: 0.3
-  emissionArea: {x: 2, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
-    key1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
-    key2: {r: 1, g: 0.56404424, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.0083351135
-      value: 0.5047188
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 0}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1596971435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Smoke
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: d7c96dfe5d5c95a4e8e11b4188b10df4, type: 2}
-  particleSprite: {fileID: -4736338417329451054, guid: 2235c84077a3805408604424cc586be1, type: 3}
-  particleSize: 1
-  emissionRate: 20
-  particleLifetime: 5
-  minSpeed: 0.5
-  maxSpeed: 1.5
-  directionAngle: 90
-  spread: 70
-  emissionShape: 1
-  emissionRadius: 1
-  emissionArea: {x: 40, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
-    key1: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.010284424
-      value: 0.15030289
-      inSlope: -0.14672504
-      outSlope: -0.14672504
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.011322
-      value: 0.0034255981
-      inSlope: -0.14672504
-      outSlope: -0.14672504
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: -9.81}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 1, y: 1}
-  useCollision: 0
-  collisionMode: 1
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &1616020459
 GameObject:
   m_ObjectHideFlags: 0
@@ -33090,118 +32530,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1933277604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e843b27b1948f49bb419c7085a6d55, type: 3}
-  m_Name: Fog
-  m_EditorClassIdentifier: 
-  particleMaterial: {fileID: 2100000, guid: a801912be7a9efd4ab8b5896d4073f80, type: 2}
-  particleSprite: {fileID: -733884204631058468, guid: 3802fcd13f6e96a488cebcdeaca6ea97, type: 3}
-  particleSize: 2.2
-  emissionRate: 20
-  particleLifetime: 4
-  minSpeed: 0.1
-  maxSpeed: 0.3
-  directionAngle: 0
-  spread: 30
-  emissionShape: 3
-  emissionRadius: 1
-  emissionArea: {x: 40, y: 1}
-  colorOverLifetime:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  scaleOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  alphaOverLifetime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0.051584706
-      outSlope: 0.051584706
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.97924805
-      value: 0.05051422
-      inSlope: 0.051584706
-      outSlope: 0.051584706
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  enableGravity: 0
-  gravity: {x: 0, y: 0}
-  airResistance: 0.98
-  bounceFactor: 0
-  wind: {x: 0.3, y: 0}
-  useCollision: 0
-  collisionMode: 2
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &1937268800
 GameObject:
   m_ObjectHideFlags: 0
@@ -33552,7 +32880,7 @@ Transform:
   m_GameObject: {fileID: 2026520832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -92.83, y: -24.62, z: 0.07645168}
+  m_LocalPosition: {x: -92.83, y: -25, z: 0.07645168}
   m_LocalScale: {x: 9.229, y: 9.229, z: 9.229}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33651,7 +32979,7 @@ Transform:
   m_GameObject: {fileID: 2062254479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.41, y: 13.3, z: 0}
+  m_LocalPosition: {x: -12.74, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33771,9 +33099,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   sortingLayer: Effect
   orderInLayer: 0
-  maxParticles: 10
+  maxParticles: 300
   preset: {fileID: 11400000, guid: 30ecb06756552124a90157580f875068, type: 2}
-  overridePresetData: {fileID: 329555104}
+  overridePresetData: {fileID: 214594144}
 --- !u!1 &2067531724
 GameObject:
   m_ObjectHideFlags: 0

@@ -114,7 +114,7 @@ public class ParticleSystem2D : MonoBehaviour
     [Header("Speed")]
     public float minSpeed = 1f;
     public float maxSpeed = 3f;
-    public float directionAngle = 90f; // 90 degress top
+    public float directionAngle = 90f;
     public float spread = 30f;
 
     [Header("Emission shape")]
@@ -208,6 +208,7 @@ public class ParticleSystem2D : MonoBehaviour
      */
     void Update()
     {
+        updateTimer.Restart();
 
         if (isRebuilding) return;
 
@@ -304,7 +305,7 @@ public class ParticleSystem2D : MonoBehaviour
                                 break;
 
                             case ParticleCollisionMode.None:
-                            default
+                            default:
                                 break;
                         }
                     }
@@ -333,6 +334,8 @@ public class ParticleSystem2D : MonoBehaviour
 
         updateTimer.Stop();
         double ms = updateTimer.Elapsed.TotalMilliseconds;
+
+        UnityEngine.Debug.Log($"Frame: {Time.frameCount} | Update: {ms:F4} ms | Particles: {aliveCount}");
 
         logIndex++;
         
@@ -524,7 +527,7 @@ public class ParticleSystem2D : MonoBehaviour
 
         if (fpsTimer >= 1f)
         {
-            //UnityEngine.Debug.Log($"FPS: {frameCount}");
+            UnityEngine.Debug.Log($"FPS: {frameCount}");
             fpsTimer = 0f;
             frameCount = 0;
         }
