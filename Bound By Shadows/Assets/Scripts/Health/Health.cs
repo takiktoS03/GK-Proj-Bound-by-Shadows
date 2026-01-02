@@ -56,8 +56,10 @@ public class Health : MonoBehaviour
         {
             return false;
         }
-        StartCoroutine(DamageCooldownCoroutine());
-
+        if (damageCooldown > 0)
+        {
+            StartCoroutine(DamageCooldownCoroutine());
+        }
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, startingHealth);
         if (healthBar != null)
             healthBar.UpdateBar(currentHealth);

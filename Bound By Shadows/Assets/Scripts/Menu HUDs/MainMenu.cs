@@ -20,9 +20,9 @@ public class MainMenu : MonoBehaviour
      */
     public void StartNewGame()
     {
-        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
-        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
     }
 
     /**
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
         //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
     }
 

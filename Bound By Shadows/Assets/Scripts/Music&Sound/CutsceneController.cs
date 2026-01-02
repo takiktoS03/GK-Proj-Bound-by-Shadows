@@ -29,6 +29,8 @@ public class CutsceneController : MonoBehaviour
     public string nextSceneName;   // Scena do załadowania po cutscence
     public Image displayImage;     // UI Image na Canvasie
     public float fadeDuration = 1f; // Czas przenikania między obrazkami
+    public KeyCode skipKey = KeyCode.Space;
+    public bool skippable = true;
 
     private AudioSource voiceSource;
 
@@ -57,34 +59,41 @@ public class CutsceneController : MonoBehaviour
     {
         foreach (var slide in slides)
         {
-            // Konfiguracja
+            // Konfiguracja obrazka
             displayImage.rectTransform.localScale = Vector3.one;
             if (slide.image != null)
                 displayImage.sprite = slide.image;            
 
             if (!string.IsNullOrEmpty(slide.subtitle))
             {
-                DialogManager.Instance.Show(slide.subtitle, slide.duration);
+                DialogManager.Instance.Show(slide.subtitle, slide.duration, DialogType.Cutscene);
+            }
+            else
+            {   
+                DialogManager.Instance.Clear(DialogType.Cutscene);
             }
 
-            // Wyświetlenie obrazu i dźwięku
+            // Fade In
             yield return displayImage.DOFade(1f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
+
+            // Wyświetlenie obrazu z zoomem
             float waitTime = CalculateSlideDuration(slide);
             if (slide.enableZoom)
             {
                 float zoomTime = waitTime + fadeDuration;
                 displayImage.rectTransform.DOScale(slide.zoomScale, zoomTime).SetEase(Ease.InOutSine);
             }
+            // Odegranie dźwięku ze slajdu
             if (slide.voice != null)
             {
                 AudioManager.Instance.PlaySFX(slide.voice);
             }
-            yield return new WaitForSeconds(waitTime);
+            yield return StartCoroutine(DialogManager.Instance.WaitOrSkip(slide.duration, skippable, skipKey));
 
-
+            // Fade Out
             yield return displayImage.DOFade(0f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
         }
-
+        DialogManager.Instance.Clear(DialogType.Cutscene);
         GameManager.Instance.LoadLevel(nextSceneName);
     }
 

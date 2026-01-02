@@ -9,6 +9,11 @@ public class DialogTrigger : MonoBehaviour
     [System.Serializable]
     public class DialogLine
     {
+        [Header("Speaker Info")]
+        public string speakerName;
+        public Sprite portrait;
+
+        [Header("Content")]
         [TextArea] public string text;
         public float duration = 3f;
         public AudioClip voice;
@@ -18,9 +23,10 @@ public class DialogTrigger : MonoBehaviour
     public List<DialogLine> lines = new List<DialogLine>();
 
     [Header("Options")]
-    public int textUIType;
+    public DialogType dialogType = DialogType.MainDialog;
     public bool skippable = true;
     public bool destroyAfter = true;
+    public KeyCode skipKey = KeyCode.Space;
 
     [Header("Blocking Settings")]
     public bool blockMovement = true;
@@ -36,19 +42,14 @@ public class DialogTrigger : MonoBehaviour
     public Transform player;
 
     private PlayerControlManager controlManager;
-    private KeyCode skipKey = KeyCode.Space;
-    private bool skipPressed = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
 
         SoundLibrary.Instance.StopSteps();
-
         controlManager = other.GetComponent<PlayerControlManager>();
-
         controlManager.LockControls(blockMovement, blockAnimation, blockAttacks, blockWallSliding);
-
         StartCoroutine(DialogSequence());
     }
 
@@ -60,50 +61,14 @@ public class DialogTrigger : MonoBehaviour
     {
         foreach (var line in lines)
         {
-            DialogManager.Instance.Show(line.text, line.duration, textUIType);
+            DialogManager.Instance.Show(line, dialogType);
             AudioManager.Instance.PlaySFX(line.voice);
-
-            yield return StartCoroutine(WaitOrSkip(line.duration));
+            yield return StartCoroutine(DialogManager.Instance.WaitOrSkip(line.duration, skippable, skipKey));
         }
 
-        if (restoreControlsAfter)
-        {
-            controlManager.UnlockControls();
-        }
-
-
-        if (ghost != null)
-        {
-            ghost.GetComponent<GhostMovement>().player = player;
-        }
-
-        if (destroyAfter)
-            Destroy(gameObject);
-    }
-
-    /**
-     * @brief Pozwala na pominięcie dialogu za pomocą klawisza, lub normalne odtworzenie
-     * 
-     * @param time Czas pojedynczego dialogu
-     */
-    private IEnumerator WaitOrSkip(float t)
-    {
-        skipPressed = false;
-        float timer = 0f;
-
-        while (timer < t)
-        {
-            if (skippable && !skipPressed && Input.GetKeyDown(skipKey))
-            {
-                skipPressed = true;
-                DialogManager.Instance.Clear();
-                AudioManager.Instance.StopSFX();
-                break;
-            }
-
-            timer += Time.deltaTime;
-            yield return null;
-        }
-        yield return null;
+        DialogManager.Instance.Clear(dialogType);
+        if (restoreControlsAfter) controlManager.UnlockControls();
+        if (ghost != null) ghost.GetComponent<GhostMovement>().player = player;
+        if (destroyAfter) Destroy(gameObject);
     }
 }
