@@ -24,7 +24,7 @@ public class HotbarInput : MonoBehaviour
 
         if (item == null)
         {
-            UnityEngine.Debug.Log($"Slot {index + 1} is empty");
+            //UnityEngine.Debug.Log($"Slot {index + 1} is empty");
             return;
         }
 
@@ -39,7 +39,7 @@ public class HotbarInput : MonoBehaviour
                 break;
 
             default:
-                UnityEngine.Debug.Log($"{item.itemName} cannot be used");
+                //UnityEngine.Debug.Log($"{item.itemName} cannot be used");
                 break;
         }
     }
@@ -50,7 +50,7 @@ public class HotbarInput : MonoBehaviour
 
         if (playerHealth == null)
         {
-            UnityEngine.Debug.LogError("PlayerHealth not found!");
+            //UnityEngine.Debug.LogError("PlayerHealth not found!");
             return;
         }
 
@@ -58,7 +58,7 @@ public class HotbarInput : MonoBehaviour
 
         if (!consumed)
         {
-            UnityEngine.Debug.Log("No potion left");
+            //UnityEngine.Debug.Log("No potion left");
             return;
         }
 

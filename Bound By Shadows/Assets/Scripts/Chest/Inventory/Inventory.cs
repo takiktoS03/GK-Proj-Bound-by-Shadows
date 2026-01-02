@@ -119,7 +119,7 @@ public class Inventory : MonoBehaviour
             return;
 
         selectedItemForHotbar = item;
-        Debug.Log("Selected for hotbar: " + item.itemName);
+        //Debug.Log("Selected for hotbar: " + item.itemName);
     }
 
     public void ShowEthan()

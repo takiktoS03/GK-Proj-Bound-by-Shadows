@@ -19,7 +19,8 @@ MonoBehaviour:
   staminaAmount: 30
   letterText: 
   hasTextPreview: 1
-  textPreview: 
+  textPreview: "\u017B\xF3\u0142ta ciecz, dzi\u0119ki kt\xF3rej doznajesz nag\u0142ego
+    przyp\u0142ywu si\u0142y"
   hasImagePreview: 0
   imagePreview: {fileID: 0}
   canBeInHotbar: 1

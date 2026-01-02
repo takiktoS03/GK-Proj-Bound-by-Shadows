@@ -10,8 +10,16 @@ using UnityEngine;
 using UnityEngine.Jobs;
 using UnityEngine.Scripting;
 
+/**
+ * @enum EmissionShape
+ * @brief Okre?la kszta?t obszaru emisji cz?steczek.
+ */
 public enum EmissionShape { Point, Line, Circle, Area }
 
+/**
+ * @struct ParticleData
+ * @brief Struktura przechowuj?ca dane pojedynczej cz?steczki.
+ */
 public struct ParticleData
 {
     public Vector2 position;
@@ -21,6 +29,11 @@ public struct ParticleData
     public float age;
     public int alive; 
 }
+
+/**
+ * @enum ParticleCollisionMode
+ * @brief Typ reakcji cz?steczki na kolizj?.
+ */
 public enum ParticleCollisionMode
 {
     None,       // brak kolizji
@@ -30,6 +43,10 @@ public enum ParticleCollisionMode
     Slide       // ?lizganie po powierzchni
 }
 
+/**
+ * @struct ParticleUpdateJob
+ * @brief Job odpowiedzialny za aktualizacj? fizyki cz?steczek.
+ */
 [BurstCompile]
 public struct ParticleUpdateJob : IJobParallelForTransform
 {
@@ -41,6 +58,12 @@ public struct ParticleUpdateJob : IJobParallelForTransform
     public float bounceFactor;
     public Vector2 wind;
 
+    /**
+    * @brief Aktualizuje pozycj? i pr?dko?? cz?steczki.
+    *
+    * @param index Indeks cz?steczki
+    * @param transform Transform przypisany do cz?steczki
+    */
     public void Execute(int index, TransformAccess transform)
     {
         ParticleData p = particles[index];
@@ -69,11 +92,18 @@ public struct ParticleUpdateJob : IJobParallelForTransform
 
     }
 }
+
+/**
+ * @class ParticleSystem2D
+ * @brief W?asny system cz?steczek 2D oparty o Job System.
+ *
+ * Skrypt obs?uguje emisj?, fizyk?, kolizje, renderowanie
+ * oraz prac? z presetami efektów cz?steczek.
+ *
+ * @author Julia Bigaj
+ */
 public class ParticleSystem2D : MonoBehaviour
 {
-    //[Header("Typ dzwieku")]
-    //public ParticleEffectType effectType = ParticleEffectType.RainDrops;
-
     [Header("Basic parameters")]
     public Material particleMaterial;
     public Sprite particleSprite;
@@ -84,7 +114,7 @@ public class ParticleSystem2D : MonoBehaviour
     [Header("Speed")]
     public float minSpeed = 1f;
     public float maxSpeed = 3f;
-    public float directionAngle = 90f; // 90 degress top
+    public float directionAngle = 90f;
     public float spread = 30f;
 
     [Header("Emission shape")]
@@ -141,6 +171,13 @@ public class ParticleSystem2D : MonoBehaviour
     private int frameCount = 0;
     private int logIndex = 0;
 
+    // =======================
+    // Unity lifecycle
+    // =======================
+
+    /**
+     * @brief Inicjalizuje system cz?steczek oraz preset.
+     */
     void Start()
     {
         
@@ -155,17 +192,25 @@ public class ParticleSystem2D : MonoBehaviour
 
     }
 
+    /**
+    * @brief Zwalnia pami?? NativeArray oraz Job Systemu.
+    */
     private void OnDestroy()
     {
         if (particleArray.IsCreated) particleArray.Dispose();
         if (transformArray.isCreated) transformArray.Dispose();
     }
+
+    /**
+     * @brief G?ówna p?tla aktualizacji systemu cz?steczek.
+     *
+     * Odpowiada za emisj?, fizyk?, kolizje oraz rendering.
+     */
     void Update()
     {
+        updateTimer.Restart();
 
         if (isRebuilding) return;
-
-        //updateTimer.Restart();
 
         float dt = Time.deltaTime;
 
@@ -261,7 +306,6 @@ public class ParticleSystem2D : MonoBehaviour
 
                             case ParticleCollisionMode.None:
                             default:
-                                // nic nie robimy
                                 break;
                         }
                     }
@@ -291,14 +335,18 @@ public class ParticleSystem2D : MonoBehaviour
         updateTimer.Stop();
         double ms = updateTimer.Elapsed.TotalMilliseconds;
 
-        logIndex++;
-        //UnityEngine.Debug.Log($"[{logIndex}] Jobified Update time: {ms:F4} ms | Particles: {aliveCount}");
+        UnityEngine.Debug.Log($"Frame: {Time.frameCount} | Update: {ms:F4} ms | Particles: {aliveCount}");
 
+        logIndex++;
+        
         FPSCounter();
     }
+
+    /**
+     * @brief Rysuje Gizmosy obszaru emisji w edytorze.
+     */
     void OnDrawGizmos()
     {
-        // ?ród?o danych do Gizmo
         EmissionShape shape;
         float radius;
         Vector2 area;
@@ -343,6 +391,9 @@ public class ParticleSystem2D : MonoBehaviour
         }
     }
 
+    /**
+     * @brief Inicjalizuje dane cz?steczek oraz obiekty renderuj?ce.
+     */
     void InitializeParticleData()
     {
         particleArray = new NativeArray<ParticleData>(maxParticles, Allocator.Persistent);
@@ -353,7 +404,6 @@ public class ParticleSystem2D : MonoBehaviour
         // --- CREATE OR FIND PARTICLE ROOT ---
         if (particleRoot == null)
         {
-            // Try to find existing child (important when entering Play mode)
             var existing = transform.Find("Particles (Children)");
             if (existing != null)
             {
@@ -392,6 +442,10 @@ public class ParticleSystem2D : MonoBehaviour
             freeIndices.Push(i);
         }
     }
+
+    /**
+     * @brief Emisja pojedynczej cz?steczki.
+     */
     void EmitParticle()
     {
         if (freeIndices.Count == 0) return;
@@ -420,6 +474,11 @@ public class ParticleSystem2D : MonoBehaviour
         sr.transform.localScale = Vector3.one * particleSize;
     }
 
+    /**
+     * @brief Oblicza pozycj? startow? cz?steczki.
+     *
+     * @return Pozycja emisji cz?steczki
+     */
     Vector2 GetEmissionPosition()
     {
         Vector2 pos = transform.position;
@@ -449,18 +508,18 @@ public class ParticleSystem2D : MonoBehaviour
         }
     }
 
-    //public void ApplyPreset()
-    //{
-    //    if (preset != null)
-    //        preset.CopyTo(this);
-    //}
-
+    /**
+     * @brief Aplikuje ustawienia z presetu roboczego.
+     */
     public void ApplyPresetFromOverride()
     {
         if (overridePresetData != null)
             overridePresetData.CopyTo(this);
     }
-    
+
+    /**
+     * @brief Prosty licznik FPS (debug).
+     */
     void FPSCounter()
     {
         fpsTimer += Time.deltaTime;
@@ -468,7 +527,7 @@ public class ParticleSystem2D : MonoBehaviour
 
         if (fpsTimer >= 1f)
         {
-            //UnityEngine.Debug.Log($"FPS: {frameCount}");
+            UnityEngine.Debug.Log($"FPS: {frameCount}");
             fpsTimer = 0f;
             frameCount = 0;
         }

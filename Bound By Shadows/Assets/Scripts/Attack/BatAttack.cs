@@ -41,7 +41,7 @@ public class BatAttack : MonoBehaviour
     void TriggerAttack()
     {
         canAttack = false;
-        animator.SetTrigger("attack");
+        animator.SetTrigger("Attack");
         Invoke(nameof(ResetCooldown), attackCooldown);
     }
 

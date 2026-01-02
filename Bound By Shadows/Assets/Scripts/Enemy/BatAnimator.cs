@@ -35,7 +35,7 @@ public class BatAnimator : MonoBehaviour
 
     public void PlayHurt()
     {
-        animator.SetTrigger("hurt");
+        animator.SetTrigger("Hurt");
     }
 
     public void PlayDie()
