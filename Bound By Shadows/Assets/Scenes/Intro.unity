@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 9146467950509815353, guid: 9c5707fb9dcef4c4b8b1f36f63e24acd, type: 3}
       propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 1c7abfb7c9af3e049946198e3e1afdfe, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -427,6 +427,8 @@ MonoBehaviour:
   nextSceneName: Cave
   displayImage: {fileID: 1989102112}
   fadeDuration: 0.5
+  skipKey: 32
+  skippable: 1
   slides:
   - image: {fileID: 4345251304254751243, guid: 6894e2517fa6eea4890675d309cec8dd, type: 3}
     subtitle: "Spada\u0142em \u2014 to jedyna rzecz, jak\u0105 pami\u0119tam. Ka\u017Cda
@@ -468,7 +470,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659335858}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c7abfb7c9af3e049946198e3e1afdfe, type: 3}
