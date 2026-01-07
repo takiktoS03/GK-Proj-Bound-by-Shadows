@@ -25,11 +25,38 @@ public class Inventory : MonoBehaviour
     [Header("Hotbar")]
     public HotbarSlot[] hotbarSlots;
 
+    [Header("Preview Hotbar")]
+    public GameObject previewHotbarRoot;
+
     [HideInInspector]
     public ItemSO selectedItemForHotbar;
 
 
     private List<ItemStack> items = new List<ItemStack>();
+
+    public void BindUI(
+    Transform slotsParent,
+    GameObject slotPrefab,
+    Image previewImage,
+    TextMeshProUGUI previewText,
+    GameObject previewImageEthan,
+    Button showCharacterButton,
+    HotbarSlot[] hotbarSlots,
+    GameObject previewHotbarRoot
+)
+    {
+        this.slotsParent = slotsParent;
+        this.slotPrefab = slotPrefab;
+        this.previewImage = previewImage;
+        this.previewText = previewText;
+        this.previewImageEthan = previewImageEthan;
+        this.showCharacterButton = showCharacterButton;
+        this.hotbarSlots = hotbarSlots;
+        this.previewHotbarRoot = previewHotbarRoot;
+
+        UpdateUI();
+        RefreshHotbar();
+    }
 
     private void Awake()
     {
@@ -60,56 +87,39 @@ public class Inventory : MonoBehaviour
     }
     public void ShowPreview(ItemSO item)
     {
+        bool isLetter = item.itemType == ItemType.Letter;
 
-        if (item.itemType == ItemType.Letter)
-        {
-            if (previewImageEthan != null)
-                previewImageEthan.SetActive(false);
-        }
-        else
-        {
-            // dla reszty itemów bohater zostaje
-            if (previewImageEthan != null)
-                previewImageEthan.SetActive(true);
-        }
+        // POSTA?
+        if (previewImageEthan != null)
+            previewImageEthan.SetActive(!isLetter);
 
-        // Reset preview UI
+        // HOTBAR PRZY POSTACI
+        if (previewHotbarRoot != null)
+            previewHotbarRoot.SetActive(!isLetter);
+
+        // reset preview
         previewImage.gameObject.SetActive(false);
         previewText.gameObject.SetActive(false);
 
-        // Je?li ma tekst
         if (item.hasTextPreview)
         {
             previewText.text = item.textPreview;
             previewText.gameObject.SetActive(true);
 
-            // ukryj obrazek
             var c = previewImage.color;
             c.a = 0f;
             previewImage.color = c;
         }
-        // Je?li ma obrazek
         else if (item.hasImagePreview)
         {
             previewImage.sprite = item.imagePreview;
             previewImage.preserveAspect = true;
 
-            // poka? obrazek
             var c = previewImage.color;
-            c.a = 1f;       // ALFA = 100%
+            c.a = 1f;
             previewImage.color = c;
 
             previewImage.gameObject.SetActive(true);
-        }
-        else
-        {
-            previewText.text = "Brak podgl?du";
-            previewText.gameObject.SetActive(true);
-
-            // ukryj obrazek
-            var c = previewImage.color;
-            c.a = 0f;
-            previewImage.color = c;
         }
     }
 
@@ -129,8 +139,9 @@ public class Inventory : MonoBehaviour
         previewText.gameObject.SetActive(false);
 
         // poka? bohatera
-        if (previewImageEthan != null)
+        if (previewImageEthan != null && previewHotbarRoot != null)
             previewImageEthan.SetActive(true);
+            previewHotbarRoot.SetActive(true);
     }
 
     public void UpdateUI()

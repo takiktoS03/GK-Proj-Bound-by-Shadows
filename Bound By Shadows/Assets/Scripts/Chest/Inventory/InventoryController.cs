@@ -2,13 +2,28 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    public GameObject inventoryPanel; // przeci?gasz tu InventoryPanel
+    public static InventoryController Instance { get; private set; }
+
+    private GameObject inventoryPanel;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     private bool isOpen = false;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            bool open = !inventoryPanel.activeSelf;
+            inventoryPanel.SetActive(open);
             ToggleInventory();
         }
     }
@@ -23,4 +38,11 @@ public class InventoryController : MonoBehaviour
         else
             Time.timeScale = 1f; // normalnie
     }
+
+    public void SetInventoryPanel(GameObject panel)
+    {
+        inventoryPanel = panel;
+        inventoryPanel.SetActive(false);
+    }
+
 }

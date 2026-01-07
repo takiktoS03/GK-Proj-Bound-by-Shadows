@@ -32,17 +32,8 @@ public class CutsceneController : MonoBehaviour
     public KeyCode skipKey = KeyCode.Space;
     public bool skippable = true;
 
-    private AudioSource voiceSource;
-
     [Header("Content")]
     public List<CutsceneSlide> slides = new List<CutsceneSlide>();
-
-    private void Awake()
-    {
-        voiceSource = GetComponent<AudioSource>();
-        voiceSource.playOnAwake = false;
-        voiceSource.loop = false;
-    }
 
     private void Start()
     {
@@ -62,16 +53,7 @@ public class CutsceneController : MonoBehaviour
             // Konfiguracja obrazka
             displayImage.rectTransform.localScale = Vector3.one;
             if (slide.image != null)
-                displayImage.sprite = slide.image;            
-
-            if (!string.IsNullOrEmpty(slide.subtitle))
-            {
-                DialogManager.Instance.Show(slide.subtitle, slide.duration, DialogType.Cutscene);
-            }
-            else
-            {   
-                DialogManager.Instance.Clear(DialogType.Cutscene);
-            }
+                displayImage.sprite = slide.image;
 
             // Fade In
             yield return displayImage.DOFade(1f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
@@ -88,8 +70,13 @@ public class CutsceneController : MonoBehaviour
             {
                 AudioManager.Instance.PlaySFX(slide.voice);
             }
-            yield return StartCoroutine(DialogManager.Instance.WaitOrSkip(slide.duration, skippable, skipKey));
-
+            // Wyświetlenie tekstu z DialogManagera
+            if (!string.IsNullOrEmpty(slide.subtitle))
+            {
+                DialogManager.Instance.Show(slide.subtitle, waitTime, DialogType.Cutscene);
+            }
+            yield return StartCoroutine(DialogManager.Instance.WaitOrSkip(waitTime, skippable, skipKey));
+            DialogManager.Instance.Clear(DialogType.Cutscene);
             // Fade Out
             yield return displayImage.DOFade(0f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
         }
