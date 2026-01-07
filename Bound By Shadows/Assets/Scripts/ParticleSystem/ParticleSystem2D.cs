@@ -335,7 +335,7 @@ public class ParticleSystem2D : MonoBehaviour
         updateTimer.Stop();
         double ms = updateTimer.Elapsed.TotalMilliseconds;
 
-        UnityEngine.Debug.Log($"Frame: {Time.frameCount} | Update: {ms:F4} ms | Particles: {aliveCount}");
+        //UnityEngine.Debug.Log($"Frame: {Time.frameCount} | Update: {ms:F4} ms | Particles: {aliveCount}");
 
         logIndex++;
         
@@ -527,7 +527,7 @@ public class ParticleSystem2D : MonoBehaviour
 
         if (fpsTimer >= 1f)
         {
-            UnityEngine.Debug.Log($"FPS: {frameCount}");
+            //UnityEngine.Debug.Log($"FPS: {frameCount}");
             fpsTimer = 0f;
             frameCount = 0;
         }

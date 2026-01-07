@@ -22,8 +22,10 @@ public class MainMenu : MonoBehaviour
     {
         //SceneManager.LoadScene("Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
-        SceneManager.LoadScene("AbilityCutScene", LoadSceneMode.Single);
-        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        //SceneManager.LoadScene("AbilityCutScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        //SceneManager.LoadScene("DungeonSecondFloor", LoadSceneMode.Single);
+        //SceneManager.LoadScene("test", LoadSceneMode.Single);
     }
 
     /**

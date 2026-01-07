@@ -15,10 +15,8 @@ public class Chest : MonoBehaviour
 
         SoundLibrary.Instance.PlayChest();
 
-        // wywo?aj animacj?
         GetComponent<Animator>().SetTrigger("Open");
 
-        // poka? UI skrzynki
         ChestUI.Instance.Show(this);
     }
 

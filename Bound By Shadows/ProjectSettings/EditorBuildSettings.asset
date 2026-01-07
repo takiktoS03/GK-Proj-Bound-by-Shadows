@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AbilityCutScene.unity
     guid: 8af879862cead9942bc256fa48d2666e
+  - enabled: 1
+    path: Assets/Scenes/test.unity
+    guid: 9bbc0d320f4c0754db2b4b770a8d89fe
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
