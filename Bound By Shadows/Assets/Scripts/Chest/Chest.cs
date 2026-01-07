@@ -20,6 +20,13 @@ public class Chest : MonoBehaviour
         ChestUI.Instance.Show(this);
     }
 
+    public void CloseChest()
+    {
+        isOpened = false;
+
+        ChestUI.Instance.Hide();
+    }
+
     public void TakeItem(int index)
     {
         ItemStack stack = items[index];

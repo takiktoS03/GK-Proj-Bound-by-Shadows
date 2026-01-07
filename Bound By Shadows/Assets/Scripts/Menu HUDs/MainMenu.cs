@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
         //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
+        //SceneManager.LoadScene("DungeonSeconFloor", LoadSceneMode.Single);
     }
 
     /**
