@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using EthanTheHero;
+﻿using EthanTheHero;
 using Microlight.MicroBar;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 /**
@@ -27,11 +28,18 @@ public class PlayerHealth : Health
     /// @brief Czas między regeneracjami staminy.
     [SerializeField] private float staminaRegenTimeRate = 1f;
 
+    [Header("Damage Effects")]
+    [SerializeField] private Volume damageVolume;
+    [SerializeField] private CameraController cameraShake;
+    [SerializeField] private float effectDuration = 2f;
+    [SerializeField] private float maxShakeMagnitude = 0.3f;
     [SerializeField] private LightColorChange ghostLight;
 
     /// @brief Aktualna ilość staminy (dostępna tylko do odczytu).
     [HideInInspector] public float currentStamina { get; private set; }
     private PlayerMovement playerMovement;
+    private PlayerAttackMethod playerAttack;
+    private Coroutine damageEffectCoroutine;
 
     /**
      * Inicjalizuje zdrowie i staminy oraz komponent ruchu.
@@ -43,6 +51,8 @@ public class PlayerHealth : Health
         healthBar.Initialize(startingHealth);
         staminaBar.Initialize(startingStamina);
         playerMovement = GetComponent<PlayerMovement>();
+        playerAttack = GetComponent<PlayerAttackMethod>();
+        if (damageVolume != null) damageVolume.weight = 0;
     }
 
     /**
@@ -60,13 +70,72 @@ public class PlayerHealth : Health
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(20);
+            TakeDamage(50);
             TakeStamina(20);
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            Heal(20);
-            HealStamina(20);
+            Heal(100);
+            HealStamina(100);
+        }
+    }
+
+    /**
+     * Odbieranie HP wraz z zaimplementowanym dźwiękiem.
+     */
+    public override bool TakeDamage(float amount)
+    {
+        if (base.TakeDamage(amount))
+        {
+            SoundLibrary.Instance.PlayHurt();
+            if (ghostLight != null)
+            {
+                ghostLight.SetDanger();
+            }
+
+            float damagePercent = Mathf.Clamp01(amount / startingHealth);
+
+            if (damageEffectCoroutine != null) StopCoroutine(damageEffectCoroutine);
+            damageEffectCoroutine = StartCoroutine(HandleDamageEffects(damagePercent));
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private IEnumerator HandleDamageEffects(float intensityPrct)
+    {
+        float shakeStrength = maxShakeMagnitude * Mathf.Clamp(intensityPrct, 0.2f, 1f);
+        if (cameraShake != null) StartCoroutine(cameraShake.Shake(0.3f, shakeStrength));
+
+        // Obsługa Post-processingu (rozmycie/kolory)
+        if (damageVolume != null)
+        {
+            float targetWeight = Mathf.Clamp01(intensityPrct * 2f); // Mnożnik x2, żeby nawet małe uderzenia były widoczne
+            float timer = 0f;
+
+            // Faza 1: Szybkie wejście efektu (uderzenie)
+            while (timer < 0.1f)
+            {
+                timer += Time.deltaTime;
+                damageVolume.weight = Mathf.Lerp(0f, targetWeight, timer / 0.1f);
+                yield return null;
+            }
+
+            // Faza 2: Powolne wygaszanie przez resztę czasu
+            timer = 0f;
+            float duration = effectDuration - 0.1f;
+
+            while (timer < duration)
+            {
+                timer += Time.deltaTime;
+                // Płynne zejście do zera
+                damageVolume.weight = Mathf.Lerp(targetWeight, 0f, timer / duration);
+                yield return null;
+            }
+
+            damageVolume.weight = 0f;
         }
     }
 
@@ -101,24 +170,6 @@ public class PlayerHealth : Health
     //}
 
     /**
-     * Odbieranie HP wraz z zaimplementowanym dźwiękiem.
-     */
-    public override bool TakeDamage(float amount)
-    {
-        if (base.TakeDamage(amount))
-        {
-            SoundLibrary.Instance.PlayHurt();
-            if (ghostLight != null)
-            {
-                ghostLight.SetDanger();
-            }
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
      * Lepsza wersja odzyskiwania staminy.
      */
     public void HealStamina(float amount)
@@ -144,7 +195,7 @@ public class PlayerHealth : Health
     {
         while (true)
         {
-            if (!playerMovement.isDashing && currentStamina < startingStamina)
+            if (!playerMovement.isDashing && !playerAttack.IsAttacking && currentStamina < startingStamina)
             {
                 HealStamina(staminaRegenRate);
             }

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 198711937
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b93d9e3f7f4635e408499305584c2c3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +285,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 198711937
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cc35a033fc350ac47abb564d9d30def3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 1
-  m_ApplyToSortingLayers: dbc9fd9e
+  m_ApplyToSortingLayers: f3669771dbc9fd9e
   m_LightCookieSprite: {fileID: 21300000, guid: 6ed1ab14a9b43c045a582ffd6e5d6874, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -423,5 +423,5 @@ MonoBehaviour:
     m_Bits: 4096
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 960
+    m_Bits: 2240
   abilityCooldown: 3

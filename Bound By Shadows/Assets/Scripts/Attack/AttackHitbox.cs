@@ -5,7 +5,7 @@
  * @class AttackHitbox
  * @brief Odpowiada za detekcję kolizji i zadawanie obrażeń.
  *
- * Tworzony dynamicznie prefab hitboxa, który sprawdza kolizję z przeciwnikiem.
+ * Tworzy dynamicznie prefab hitboxa, który sprawdza kolizję z przeciwnikiem.
  * Gdy wykryje obiekt z komponentem Health, zadaje mu obrażenia.
  *
  * @author Filip Kudła

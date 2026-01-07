@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 
 /**
@@ -34,6 +35,28 @@ public class CameraController : MonoBehaviour
         targetPosition = new Vector3(player.position.x + lookAhead, Mathf.Abs(player.position.y - transform.position.y) > jumpHeight ? player.position.y : transform.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * cameraSpeed);
         lookAhead = Mathf.Lerp(lookAhead, aheadDistance * player.localScale.x, Time.deltaTime * cameraSpeed);
+    }
+
+
+    public IEnumerator Shake(float duration, float magnitude)
+    {
+        Vector3 originalPos = transform.localPosition;
+        this.enabled = false;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        this.enabled = true;
+        transform.localPosition = originalPos;
     }
 
 }

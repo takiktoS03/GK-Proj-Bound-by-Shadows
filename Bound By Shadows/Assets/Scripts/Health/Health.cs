@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
             healthBar.UpdateBar(currentHealth);
         if (currentHealth > 0 && !dead)
         {
-            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                 anim.SetTrigger("Hurt");
         }
         else

@@ -20,19 +20,16 @@ public class LightColorChange : MonoBehaviour
     }
 
     /// <summary>
-    /// Wywoływane przy otrzymaniu obrażeń.
-    /// Ustawia czerwony kolor + włącza flickering + resetuje timer.
+    /// Inicjuje stan zagrożenia (zmiana koloru na czerwony).
+    /// Przerywa poprzednie animacje, aby uniknąć konfliktu interpolacji.
     /// </summary>
     public void SetDanger()
     {
-        // natychmiast przerwij zmianę koloru
         if (changeRoutine != null)
             StopCoroutine(changeRoutine);
 
-        // natychmiast ustaw pulsujący czerwony
         changeRoutine = StartCoroutine(ChangeColor(dangerColor));
 
-        // reset timera
         if (dangerRoutine != null)
             StopCoroutine(dangerRoutine);
 
@@ -40,18 +37,16 @@ public class LightColorChange : MonoBehaviour
     }
 
     /// <summary>
-    /// Timer odpowiadający za powrót do normalnego koloru po określonym czasie bez obrażeń.
+    /// Odmierza czas trwania efektu wizualnego, a następnie przywraca stan domyślny.
     /// </summary>
     private IEnumerator DangerStateTimer()
     {
         yield return new WaitForSeconds(dangerDuration);
-
-        // po czasie wraca do normy
         SetNormal();
     }
 
     /// <summary>
-    /// Powrót do normalnego koloru.
+    /// Przywraca stan normalny (kolor bazowy).
     /// </summary>
     public void SetNormal()
     {
@@ -65,7 +60,7 @@ public class LightColorChange : MonoBehaviour
     }
 
     /// <summary>
-    /// Płynna interpolacja koloru.
+    /// Realizuje płynną interpolację (Lerp) koloru światła w pętli klatek.
     /// </summary>
     private IEnumerator ChangeColor(Color target)
     {

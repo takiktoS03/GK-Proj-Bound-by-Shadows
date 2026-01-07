@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "BootScene")
         {
-            LoadLevel("MainMenu");            
+            LoadLevel("MainMenu");
         }
     }
 

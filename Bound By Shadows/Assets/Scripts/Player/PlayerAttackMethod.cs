@@ -41,6 +41,24 @@ namespace EthanTheHero
         private const string attack03 = "Attack03";
         private const string notAttacking = "NotAttacking";
 
+        /**
+         * @brief Zwraca true, jeśli gracz jest w trakcie dowolnej animacji ataku.
+         * Wykorzystuje zdefiniowane stałe nazwy animacji.
+         */
+        public bool IsAttacking
+        {
+            get
+            {
+                // Pobieramy informacje o obecnym stanie warstwy 0
+                var stateInfo = myAnim.GetCurrentAnimatorStateInfo(0);
+
+                // Sprawdzamy, czy obecna animacja to którykolwiek z ataków
+                return stateInfo.IsName(attack01) ||
+                       stateInfo.IsName(attack02) ||
+                       stateInfo.IsName(attack03);
+            }
+        }
+
         #endregion
 
         /**
@@ -178,20 +196,20 @@ namespace EthanTheHero
         {
             if (transform.localScale.x > 0)
             {
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack01))
                     myBody.linearVelocity = new Vector2(basicAttack01Power, myBody.linearVelocity.y);
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack02))
                     myBody.linearVelocity = new Vector2(basicAttack02Power, myBody.linearVelocity.y);
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack03))
                     myBody.linearVelocity = new Vector2(basicAttack03Power, myBody.linearVelocity.y);
             }
             else
             {
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack01))
                     myBody.linearVelocity = new Vector2(-basicAttack01Power, myBody.linearVelocity.y);
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack02))
                     myBody.linearVelocity = new Vector2(-basicAttack02Power, myBody.linearVelocity.y);
-                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
+                if (myAnim.GetCurrentAnimatorStateInfo(0).IsName(attack03))
                     myBody.linearVelocity = new Vector2(-basicAttack03Power, myBody.linearVelocity.y);
             }
         }

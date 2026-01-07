@@ -34,27 +34,32 @@ public class DissolveEffect : MonoBehaviour
         float from = invert ? 1f : 0f;
         float to = invert ? 0f : 1f;
 
+        // Oczekiwanie przez opcjonalny czas opóźnienia przed rozpoczęciem efektu
         yield return new WaitForSeconds(prepTime);
 
         while (t < duration)
         {
             t += Time.deltaTime;
+            // Interpolacja liniowa na podstawie upływu czasu
             float v = Mathf.Lerp(from, to, t / duration);
             UpdateMaterial(v);
             yield return null;
         }
 
-        // Ustawienie wartości końcowej dla pewności
+        // Ustawienie wartości końcowej, aby wyeliminować błędy zaokrągleń czasu
         UpdateMaterial(to);
 
-        // Wywołanie akcji po zakończeniu (jeśli istnieje)
+        // Wywołanie opcjonalnej akcji zwrotnej (np. usunięcia obiektu) po zakończeniu animacji
         onComplete?.Invoke();
     }
 
     public void UpdateMaterial(float value)
     {
+        // Pobranie aktualnego bloku właściwości z renderera (optymalizacja pamięci)
         sr.GetPropertyBlock(mpb);
+        // Ustawienie wartości float dla parametru shadera o zhashowanym ID
         mpb.SetFloat(DissolveID, value);
+        // Przypisanie zaktualizowanego bloku właściwości z powrotem do komponentu SpriteRenderer
         sr.SetPropertyBlock(mpb);
     }
 }

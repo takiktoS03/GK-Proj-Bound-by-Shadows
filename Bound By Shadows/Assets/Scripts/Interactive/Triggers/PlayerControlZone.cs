@@ -29,7 +29,7 @@ public class PlayerControlZone : MonoBehaviour
             }
             else
             {
-                controlManager.LockControls(blockMovement, blockAnimation, blockAttacks, blockWallSliding);
+                controlManager.LockControls(blockMovement, blockWallSliding, blockAttacks, blockAnimation);
             }
         }
 

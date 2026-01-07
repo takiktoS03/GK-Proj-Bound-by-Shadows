@@ -11,7 +11,6 @@ public class PlayerControlManager : MonoBehaviour
 
     private void Awake()
     {
-        // Pobieramy referencje automatycznie na starcie
         movement = GetComponent<PlayerMovement>();
         anim = GetComponent<PlayerAnimation>();
         attackMethod = GetComponent<PlayerAttackMethod>();
@@ -22,7 +21,7 @@ public class PlayerControlManager : MonoBehaviour
     /// <summary>
     /// Blokuje sterowanie gracza, resetuje fizykę i animacje do Idle.
     /// </summary>
-    public void LockControls(bool blockMove, bool blockAnim, bool blockAttack, bool blockWallSlide)
+    public void LockControls(bool blockMove, bool blockWallSlide, bool blockAttack, bool blockAnim)
     {
         if (blockMove && movement != null)
         {
@@ -43,7 +42,7 @@ public class PlayerControlManager : MonoBehaviour
         if (blockAnim)
         {
             if (anim != null) anim.enabled = false;
-            ResetAnimator();
+            PlayIdle();
         }
     }
 
@@ -55,14 +54,14 @@ public class PlayerControlManager : MonoBehaviour
         if (movement != null)
         {
             movement.enabled = true;
-            movement.wallSlidingEnabled = true; // Zakładamy, że domyślnie chcemy to włączyć
+            movement.wallSlidingEnabled = true;
         }
 
         if (attackMethod != null) attackMethod.enabled = true;
         if (anim != null) anim.enabled = true;
     }
 
-    private void ResetAnimator()
+    private void PlayIdle()
     {
         if (animator != null)
         {

@@ -10,7 +10,7 @@
  *
  * @author Filip Kudła
  */
-public class PatrolEnemy : MonoBehaviour
+public class PatrolEnemy : MonoBehaviour, IEnemyMovement
 {
     [Header ("Patrol Points")]
     [SerializeField] private Transform leftEdge;
@@ -36,23 +36,9 @@ public class PatrolEnemy : MonoBehaviour
         initScale = enemy.localScale;
     }
 
-    /** @brief Zatrzymuje animację obiektu */
-    private void OnDisable()
-    {
-        if (anim != null)
-        {
-            anim.SetBool("Moving", false);
-        }
-    }
-
     /** @brief Obsługuje logikę patrolowania i zmianę kierunku */
     private void Update()
     {
-        if (enemy == null) // poprawka, gdy przeciwnik zginie
-        {
-            Destroy(gameObject);
-            return;
-        }
         if (movingLeft)
         {
             if(enemy.position.x > leftEdge.position.x)
@@ -77,6 +63,13 @@ public class PatrolEnemy : MonoBehaviour
         }
     }
 
+    public void SetMovementEnabled(bool isEnabled)
+    {
+        this.enabled = isEnabled;
+        if (!isEnabled && anim != null)
+            anim.SetBool("Moving", false);
+    }
+
     /** @brief Zatrzymuje ruch i odlicza czas przed zmianą kierunku */
     private void ChangeDirection()
     {
@@ -98,7 +91,6 @@ public class PatrolEnemy : MonoBehaviour
     private void MoveInDirection(int direction)
     {
         anim.SetBool("Moving", true);
-        //idleTimer = 0;
 
         //Facing in direction
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);

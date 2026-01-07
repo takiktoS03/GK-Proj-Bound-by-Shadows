@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: d593caba-d951-4340-bcca-320ce85c8402
+  uniqueId: 5d9864f1-151a-4704-81cf-5e22ce956ce5
 --- !u!114 &1610109051652021392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +350,10 @@ MonoBehaviour:
   startingStamina: 200
   staminaRegenRate: 1
   staminaRegenTimeRate: 1
+  damageVolume: {fileID: 0}
+  cameraShake: {fileID: 0}
+  effectDuration: 2
+  maxShakeMagnitude: 0.4
   ghostLight: {fileID: 0}
 --- !u!114 &9159904690550617788
 MonoBehaviour:

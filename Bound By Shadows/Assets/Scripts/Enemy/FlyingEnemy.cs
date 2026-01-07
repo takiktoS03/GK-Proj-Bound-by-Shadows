@@ -1,0 +1,149 @@
+﻿using UnityEngine;
+
+public class FlyingEnemy : MonoBehaviour, IEnemyMovement
+{
+    [Header("References")]
+    [SerializeField] private Transform enemy;
+    [SerializeField] private Transform player;
+
+    [Header("Patrol Settings")]
+    [SerializeField] private bool useTransforms = false; // Czy używać punktów A i B?
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
+    [SerializeField] private float patrolWidth = 6f; // Jeśli nie używamy punktów, latamy lewo-prawo o tyle jednostek
+    [SerializeField] private float patrolSpeed = 2f;
+
+    [Header("Sinusoidal Movement (Idle)")]
+    [SerializeField] private float waveAmplitude = 0.5f;
+    [SerializeField] private float waveFrequency = 2f;
+
+    [Header("Chase Settings")]
+    [SerializeField] private float chaseSpeed = 3.5f;
+    [SerializeField] private float detectionRange = 5f;
+    [SerializeField] private float stopDistance = 1.0f;
+
+    private Vector3 startPosition;
+    private Vector3 targetPatrolPoint;
+    private bool movingToB = true; // lub w prawo
+    private float sinTime;
+    private bool canMove = true;
+    private Vector3 initialScale;
+
+    private void Start()
+    {
+        startPosition = transform.position;
+
+        if (enemy != null)
+            initialScale = enemy.localScale;
+
+        if (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+        }
+        RecalculatePatrolTarget();
+    }
+
+    private void Update()
+    {
+        if (!canMove || enemy == null) return;
+
+        if (player == null) return;
+
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distToPlayer < detectionRange)
+        {
+            ChasePlayer(distToPlayer);
+        }
+        else
+        {
+            Patrol();
+        }
+    }
+
+    private void Patrol()
+    {
+        // Wyznaczanie celu (A/B lub lewo/prawo od startu)
+        Vector3 target = targetPatrolPoint;
+
+        // Utrzymuj stałą wysokość Y (sinusoida startowa + wave)
+        sinTime += Time.deltaTime * waveFrequency;
+        float waveY = Mathf.Sin(sinTime) * waveAmplitude;
+
+        // Celujemy w X celu, ale Y modyfikujemy falą
+        Vector3 moveTarget = new Vector3(target.x, startPosition.y + waveY, transform.position.z);
+
+        transform.position = Vector2.MoveTowards(transform.position, moveTarget, patrolSpeed * Time.deltaTime);
+
+        HandleRotation(moveTarget.x);
+
+        if (Mathf.Abs(transform.position.x - target.x) < 0.2f)
+        {
+            movingToB = !movingToB;
+            RecalculatePatrolTarget();
+        }
+    }
+
+    private void RecalculatePatrolTarget()
+    {
+        if (useTransforms && pointA != null && pointB != null)
+        {
+            targetPatrolPoint = movingToB ? pointB.position : pointA.position;
+        }
+        else
+        {
+            // Patrol względem punktu startowego
+            float offset = movingToB ? patrolWidth : -patrolWidth;
+            targetPatrolPoint = startPosition + Vector3.right * offset;
+        }
+    }
+
+    private void ChasePlayer(float distance)
+    {
+        HandleRotation(player.position.x);
+
+        // Jeśli jesteśmy dalej niż dystans ataku -> lecimy do gracza
+        if (distance > stopDistance)
+        {
+            // Podążamy bezpośrednio do pozycji gracza (także w osi Y)
+            transform.position = Vector2.MoveTowards(transform.position, player.position, chaseSpeed * Time.deltaTime);
+        }
+        // Jeśli distance <= stopDistance, skrypt po prostu przestaje przesuwać transform.
+        // Wtedy MeleeEnemy (który jest na dziecku) wykryje gracza swoim BoxCastem i odpali atak.
+    }
+
+    private void HandleRotation(float targetX)
+    {
+        if (enemy == null) return;
+
+        float direction = targetX - transform.position.x;
+        if (Mathf.Abs(direction) < 0.1f) return; // Martwa strefa
+        float targetScaleX = (direction > 0) ? -1f : 1f; // sprite domyślnie obrócony w lewo
+        enemy.localScale = new Vector3(Mathf.Abs(initialScale.x) * targetScaleX, initialScale.y, initialScale.z);
+    }
+
+    // Implementacja interfejsu IEnemyMovement
+    public void SetMovementEnabled(bool isEnabled)
+    {
+        canMove = isEnabled;
+    }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
+
+        if (!useTransforms)
+        {
+            Vector3 center = Application.isPlaying ? startPosition : transform.position;
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(center + Vector3.left * patrolWidth, center + Vector3.right * patrolWidth);
+        }
+    }
+#endif
+}

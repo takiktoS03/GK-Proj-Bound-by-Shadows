@@ -66,13 +66,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EmissionIntensity: 1.3
+    - _EmissionIntensity: 3
     - _Intensity: 4.55
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 2.6744711, g: 0, b: 2.9960783, a: 1}
-    - _EmissionColor: {r: 4, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.19785437, g: 5.9921575, b: 0.5304984, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5895131918901859203

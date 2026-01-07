@@ -49,7 +49,7 @@ public class DialogTrigger : MonoBehaviour
 
         SoundLibrary.Instance.StopSteps();
         controlManager = other.GetComponent<PlayerControlManager>();
-        controlManager.LockControls(blockMovement, blockAnimation, blockAttacks, blockWallSliding);
+        controlManager.LockControls(blockMovement, blockWallSliding, blockAttacks, blockAnimation);
         StartCoroutine(DialogSequence());
     }
 
