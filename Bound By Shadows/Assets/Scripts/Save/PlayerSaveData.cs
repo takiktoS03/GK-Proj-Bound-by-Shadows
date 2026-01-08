@@ -40,11 +40,13 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
     public object CaptureState()
     {
         var health = GetComponent<Health>();
-        return JsonUtility.ToJson(new PlayerData
+
+        Debug.Log($"[SAVE] HP = {health.CurrentHealth}");
+
+        return new PlayerData
         {
-            //hp = health.currentHealth
-            // level = ... // można dodać inne dane
-        });
+            hp = health.CurrentHealth
+        };
     }
 
 
@@ -58,6 +60,8 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
 
         string json = state as string;
         var data = JsonUtility.FromJson<PlayerData>(json);
+
+        Debug.Log($"[LOAD] HP = {data.hp}");
 
         var health = GetComponent<Health>();
         health.SetBarsValue(data.hp);

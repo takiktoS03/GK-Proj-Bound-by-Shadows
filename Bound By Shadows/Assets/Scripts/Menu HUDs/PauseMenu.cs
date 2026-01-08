@@ -76,8 +76,14 @@ public class PauseMenu : MonoBehaviour
      */
     public void LoadGame()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SaveSystem.LoadCurrentScene();
+
+        pauseMenuUI.SetActive(false);
+        gameOverUI.SetActive(false);
+
+        Time.timeScale = 1f;
+        isPaused = false;
+        isGameOver = false;
     }
 
     /**
@@ -87,7 +93,10 @@ public class PauseMenu : MonoBehaviour
      */
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        Time.timeScale = 1f;
+        isPaused = false;
+        isGameOver = false;
+
         SaveSystem.LoadCurrentScene();
     }
 

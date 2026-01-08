@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
     private bool dead = false;
     protected bool canTakeDamage = true;
 
+    public float CurrentHealth => currentHealth;
+
     /**
      * Inicjalizuje komponenty i pasek zdrowia.
      */
@@ -100,12 +102,10 @@ public class Health : MonoBehaviour
      */
     public virtual void SetBarsValue(float value)
     {
-        Debug.Log(value);
         currentHealth = Mathf.Clamp(value, 0, startingHealth);
 
         if (healthBar != null)
         {
-            healthBar.Initialize(currentHealth);
             healthBar.UpdateBar(currentHealth);
         }
     }

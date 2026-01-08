@@ -118,7 +118,10 @@ public static class SaveSystem
                     stateDict[s.GetType().ToString()] = state;
             }
 
-            string jsonState = JsonUtility.ToJson(new SerializationWrapper());
+            var wrapper = new SerializationWrapper();
+            wrapper.data = stateDict;
+
+            string jsonState = JsonUtility.ToJson(wrapper);
 
             save.objects.Add(new ObjectSaveEntry
             {
@@ -175,6 +178,12 @@ public static class SaveSystem
         }
 
         Debug.Log("[LOAD] Wczytano grę.");
+    }
+
+    public static void DeleteSave()
+    {
+        if (File.Exists(filePath))
+            File.Delete(filePath);
     }
 }
 
