@@ -347,6 +347,31 @@ namespace EthanTheHero
                 myBody.AddForce(-tangent * slideForce, ForceMode2D.Force);
             }
         }
+        public void ResetAfterLoad()
+        {
+            isDashing = false;
+            wallJump = false;
+            wallSliding = false;
+
+            canDash = true;
+
+            grounded = true;
+            lastOnGroundTime = 0.1f;
+
+            myBody.simulated = true;
+            myBody.bodyType = RigidbodyType2D.Dynamic;
+            myBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            myBody.linearVelocity = Vector2.zero;
+            myBody.angularVelocity = 0f;
+
+            if (myAnim != null)
+            {
+                myAnim.Rebind();
+                myAnim.Update(0f);
+            }
+        }
+
         #endregion
     }
 }

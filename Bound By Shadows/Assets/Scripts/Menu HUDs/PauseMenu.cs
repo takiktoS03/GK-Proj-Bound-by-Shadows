@@ -84,6 +84,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         isGameOver = false;
+        UIStateManager.isUIOpen = false;
     }
 
     /**

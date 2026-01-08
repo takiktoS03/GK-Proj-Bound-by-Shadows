@@ -66,6 +66,19 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
         var health = GetComponent<Health>();
         health.SetBarsValue(data.hp);
 
+        var movement = GetComponent<EthanTheHero.PlayerMovement>();
+        if (movement != null)
+        {
+            movement.ResetAfterLoad();
+        }
+
+        var playerHealth = GetComponent<PlayerHealth>();
+
+        if (playerHealth != null)
+        {
+            playerHealth.Revive();
+        }
+
         // Można odtworzyć więcej: poziom, statystyki, itp.
     }
 }

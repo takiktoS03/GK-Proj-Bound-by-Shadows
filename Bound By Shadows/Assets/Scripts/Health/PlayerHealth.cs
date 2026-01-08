@@ -202,5 +202,19 @@ public class PlayerHealth : Health
             yield return new WaitForSeconds(staminaRegenTimeRate);
         }
     }
+    public override void Revive()
+    {
+        base.Revive();
+
+        if (playerMovement != null)
+            playerMovement.enabled = true;
+
+        if (anim != null)
+        {
+            anim.Rebind();
+            anim.Update(0f);
+        }
+    }
+
 }
 

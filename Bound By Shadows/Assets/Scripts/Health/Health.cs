@@ -122,5 +122,11 @@ public class Health : MonoBehaviour
         canTakeDamage = true;
         anim.SetTrigger("HurtEnded");
     }
+    public virtual void Revive()
+    {
+        dead = false;
+        canTakeDamage = true;
+    }
+
 }
 
