@@ -30,6 +30,15 @@ public class SaveableObject : MonoBehaviour
      */
     public string UniqueId => uniqueId;
 
+    /**
+     * @brief Gwarantuje, że obiekt zawsze ma przypisany identyfikator po załadowaniu.
+     */
+    private void Awake()
+    {
+        if (string.IsNullOrEmpty(uniqueId))
+            uniqueId = Guid.NewGuid().ToString();
+    }
+
 #if UNITY_EDITOR
     /**
      * @brief Weryfikuje poprawność ID w edytorze Unity.
@@ -62,14 +71,5 @@ public class SaveableObject : MonoBehaviour
         return true;
     }
 #endif
-
-    /**
-     * @brief Gwarantuje, że obiekt zawsze ma przypisany identyfikator po załadowaniu.
-     */
-    private void Awake()
-    {
-        if (string.IsNullOrEmpty(uniqueId))
-            uniqueId = Guid.NewGuid().ToString();
-    }
 }
 

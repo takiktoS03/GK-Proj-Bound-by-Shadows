@@ -175,6 +175,12 @@ public static class SaveSystem
                     s.RestoreState(wrapper.data[key]);
                 }
             }
+
+            foreach (var enemy in GameObject.FindObjectsOfType<FlyingEnemy>())
+            {
+                enemy.OnGameLoaded();
+            }
+
         }
 
         Debug.Log("[LOAD] Wczytano grę.");

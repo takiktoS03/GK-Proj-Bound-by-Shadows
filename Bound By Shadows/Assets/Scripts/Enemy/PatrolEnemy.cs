@@ -99,5 +99,14 @@ public class PatrolEnemy : MonoBehaviour, IEnemyMovement
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed, enemy.position.y, enemy.position.z);
         //rb.MovePosition(new Vector2(transform.position.x + Time.deltaTime * direction * speed, transform.position.y));
     }
+    public void OnGameLoaded()
+    {
+        idleTimer = 0f;
+        movingLeft = false;
+
+        if (anim != null)
+            anim.SetBool("Moving", false);
+    }
+
 }
 

@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     public void StartNewGame()
     {
         SaveSystem.DeleteSave();
+        DestroyedRegistry.Clear();
         SceneManager.LoadScene("Cave", LoadSceneMode.Single);
         //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
         //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
@@ -47,6 +48,8 @@ public class MainMenu : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        DestroyedRegistry.Load();
 
         SaveSystem.LoadCurrentScene();
     }

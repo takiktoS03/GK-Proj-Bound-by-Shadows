@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour, IEnemyMovement
 {
@@ -7,10 +8,10 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
     [SerializeField] private Transform player;
 
     [Header("Patrol Settings")]
-    [SerializeField] private bool useTransforms = false; // Czy używać punktów A i B?
+    [SerializeField] private bool useTransforms = false;
     [SerializeField] private Transform pointA;
     [SerializeField] private Transform pointB;
-    [SerializeField] private float patrolWidth = 6f; // Jeśli nie używamy punktów, latamy lewo-prawo o tyle jednostek
+    [SerializeField] private float patrolWidth = 6f;
     [SerializeField] private float patrolSpeed = 2f;
 
     [Header("Sinusoidal Movement (Idle)")]
@@ -24,10 +25,11 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
 
     private Vector3 startPosition;
     private Vector3 targetPatrolPoint;
-    private bool movingToB = true; // lub w prawo
+    private bool movingToB = true;
     private float sinTime;
     private bool canMove = true;
     private Vector3 initialScale;
+    private Rigidbody2D rb;
 
     private void Start()
     {
@@ -60,6 +62,11 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
         {
             Patrol();
         }
+    }
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Patrol()
@@ -128,6 +135,34 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
     {
         canMove = isEnabled;
     }
+
+    public void ResetAfterLoad()
+    {
+        canMove = true;
+        sinTime = 0f;
+
+        startPosition = transform.position;
+        RecalculatePatrolTarget();
+
+        StartCoroutine(EnableMovementNextFrame());
+    }
+
+    private IEnumerator EnableMovementNextFrame()
+    {
+        yield return null;
+        canMove = true;
+    }
+    public void OnGameLoaded()
+    {
+        startPosition = transform.position;
+
+        sinTime = 0f;
+        canMove = true;
+
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
+
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2723025740229541272}
   - component: {fileID: 4297617746898934239}
+  - component: {fileID: 535016315500617988}
+  - component: {fileID: -4353087339783641280}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Untagged
@@ -53,6 +55,31 @@ MonoBehaviour:
   anim: {fileID: 8881251094173679260}
   speed: 3
   idleDuration: 1
+--- !u!114 &535016315500617988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292434057752346175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 4be461d7-5f91-4fd0-8494-75d0d1ac9135
+--- !u!114 &-4353087339783641280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292434057752346175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e39f47bdf8ad3a4cbde08e0554779cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3965377274771030365
 GameObject:
   m_ObjectHideFlags: 0

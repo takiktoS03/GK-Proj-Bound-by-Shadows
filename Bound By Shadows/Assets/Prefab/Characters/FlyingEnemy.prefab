@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5970767848880347489}
   - component: {fileID: 9197688574950114155}
+  - component: {fileID: -3511380399140885366}
+  - component: {fileID: -4143027332852031985}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: Untagged
@@ -57,6 +59,31 @@ MonoBehaviour:
   chaseSpeed: 3.5
   detectionRange: 4
   stopDistance: 1
+--- !u!114 &-3511380399140885366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513496546909957140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 5e5fa2f6-9aff-43fe-832c-54c457705769
+--- !u!114 &-4143027332852031985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513496546909957140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e39f47bdf8ad3a4cbde08e0554779cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5395586844012922779
 PrefabInstance:
   m_ObjectHideFlags: 0
