@@ -7,21 +7,21 @@ public class LevelTrigger : MonoBehaviour
 
     [Header("Transition Settings")]
     public float fadeDuration = 1.0f;
+    public KeyCode key = KeyCode.F;         // klawisz aktywacji
+    public bool automaticTransition = false;  // brak potrzeby wciskania klawisza
+
     [Tooltip("Natychmiastowe przejście (bez fade)?")]
     public bool instantCut = false;
 
-    private bool triggered = false;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (triggered) return;
-
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            triggered = true;
-            
-            float duration = instantCut ? 0f : fadeDuration;
-            GameManager.Instance.LoadLevel(nextSceneName, duration);
+            if (automaticTransition || Input.GetKey(key))
+            {
+                float duration = instantCut ? 0f : fadeDuration;
+                GameManager.Instance.LoadLevel(nextSceneName, duration);
+            }
         }
     }
 }
