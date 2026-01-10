@@ -141,8 +141,8 @@ GameObject:
   - component: {fileID: 59172548}
   - component: {fileID: 59172552}
   - component: {fileID: 59172551}
-  - component: {fileID: 59172550}
   - component: {fileID: 59172549}
+  - component: {fileID: 59172550}
   m_Layer: 0
   m_Name: Lantern_2
   m_TagString: Untagged
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -230,9 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 2
   torchLight: {fileID: 59172549}
-  orderIndex: -1
 --- !u!61 &59172551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,8 +318,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1294,100 +1292,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &214533686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 214533687}
-  - component: {fileID: 214533689}
-  - component: {fileID: 214533688}
-  m_Layer: 0
-  m_Name: NextLevel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &214533687
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214533686}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125.66213, y: 14.681, z: 0.13124488}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1856794020}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &214533688
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214533686}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
-  m_EdgeRadius: 0
---- !u!114 &214533689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214533686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 159e9d92cc25bc041a7a04b0b0234c0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: Dungeon
-  fadeDuration: 2
-  instantCut: 0
 --- !u!114 &214594144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1988,7 +1892,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -2235,9 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 0
   torchLight: {fileID: 344227819}
-  orderIndex: -1
 --- !u!61 &344227816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2325,8 +2227,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2382,7 +2284,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -18675,8 +18577,8 @@ GameObject:
   - component: {fileID: 447565689}
   - component: {fileID: 447565693}
   - component: {fileID: 447565692}
-  - component: {fileID: 447565691}
   - component: {fileID: 447565690}
+  - component: {fileID: 447565691}
   m_Layer: 0
   m_Name: Lantern_1
   m_TagString: Untagged
@@ -18727,7 +18629,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -18764,9 +18666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 1
   torchLight: {fileID: 447565690}
-  orderIndex: -1
 --- !u!61 &447565692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18854,8 +18754,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19508,11 +19408,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -16.00409
+      value: -15.417182
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 418.18985
+      value: 416.71802
       objectReference: {fileID: 0}
     - target: {fileID: 357001221752108529, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_SizeDelta.x
@@ -20256,8 +20156,8 @@ GameObject:
   - component: {fileID: 606477811}
   - component: {fileID: 606477815}
   - component: {fileID: 606477814}
-  - component: {fileID: 606477813}
   - component: {fileID: 606477812}
+  - component: {fileID: 606477813}
   m_Layer: 0
   m_Name: Lantern_4
   m_TagString: Untagged
@@ -20308,7 +20208,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -20345,9 +20245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 4
   torchLight: {fileID: 606477812}
-  orderIndex: -1
 --- !u!61 &606477814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20435,8 +20333,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -20641,20 +20539,30 @@ Transform:
   - {fileID: 1058931875}
   - {fileID: 606477811}
   - {fileID: 1459746079}
+  - {fileID: 2085693695}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &615227831
-SortingGroup:
+--- !u!114 &615227831
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615227829}
   m_Enabled: 1
-  m_SortingLayerID: -1446907827
-  m_SortingLayer: 5
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7ba67e7d8a89f4594fa7e9fd41bd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torches:
+  - {fileID: 447565691}
+  - {fileID: 606477813}
+  - {fileID: 344227815}
+  - {fileID: 1459746081}
+  - {fileID: 1058931877}
+  - {fileID: 59172550}
+  objectToDisappear: {fileID: 2085693694}
+  resetDelay: 1
 --- !u!1 &618453912
 GameObject:
   m_ObjectHideFlags: 0
@@ -21058,7 +20966,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -21410,7 +21318,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -22068,7 +21976,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -24186,11 +24094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.6
+      value: -10.26
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 261.33
+      value: 242.71
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25040,8 +24948,8 @@ GameObject:
   - component: {fileID: 1058931875}
   - component: {fileID: 1058931879}
   - component: {fileID: 1058931878}
-  - component: {fileID: 1058931877}
   - component: {fileID: 1058931876}
+  - component: {fileID: 1058931877}
   m_Layer: 0
   m_Name: Lantern_3
   m_TagString: Untagged
@@ -25092,7 +25000,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -25129,9 +25037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 3
   torchLight: {fileID: 1058931876}
-  orderIndex: -1
 --- !u!61 &1058931878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25219,8 +25125,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -26716,7 +26622,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -28209,8 +28115,8 @@ GameObject:
   - component: {fileID: 1459746079}
   - component: {fileID: 1459746083}
   - component: {fileID: 1459746082}
-  - component: {fileID: 1459746081}
   - component: {fileID: 1459746080}
+  - component: {fileID: 1459746081}
   m_Layer: 0
   m_Name: Lantern_5
   m_TagString: Untagged
@@ -28261,7 +28167,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -28298,9 +28204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de350df37c9292c43926c1a0efd35370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchID: 5
   torchLight: {fileID: 1459746080}
-  orderIndex: -1
 --- !u!61 &1459746082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28388,8 +28292,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446907827
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 9120274773078298782, guid: dbc662a804ab2db4aa79057fff70241b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -28413,7 +28317,7 @@ GameObject:
   - component: {fileID: 1495108789}
   - component: {fileID: 1495108792}
   - component: {fileID: 1495108791}
-  - component: {fileID: 1495108790}
+  - component: {fileID: 1495108795}
   - component: {fileID: 1495108794}
   - component: {fileID: 1495108793}
   m_Layer: 0
@@ -28438,23 +28342,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1856794020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1495108790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495108788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0fa9d22e45465d4c8a9ac7522fa49a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPoint: {fileID: 214533687}
-  key: 102
-  automaticTeleport: 0
-  fadeIn: 1
-  fadeOut: 0
 --- !u!61 &1495108791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28583,6 +28470,23 @@ MonoBehaviour:
   duration: 1
   invert: 0
   triggered: 0
+--- !u!114 &1495108795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495108788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159e9d92cc25bc041a7a04b0b0234c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: Dungeon
+  fadeDuration: 2
+  key: 102
+  automaticTransition: 0
+  instantCut: 0
 --- !u!1 &1542721563
 GameObject:
   m_ObjectHideFlags: 0
@@ -31075,37 +30979,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e76c477cf94574a43a14683917a0a40d, type: 3}
---- !u!1 &1649832913
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1649832914}
-  m_Layer: 0
-  m_Name: Torches
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1649832914
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649832913}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1720862980}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720862979
 GameObject:
   m_ObjectHideFlags: 0
@@ -31136,8 +31009,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 872052531}
-  - {fileID: 1649832914}
-  - {fileID: 2085693695}
   - {fileID: 1887677150}
   m_Father: {fileID: 514703160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33638,7 +33509,6 @@ Transform:
   - {fileID: 2145709568}
   - {fileID: 474677564}
   - {fileID: 1495108789}
-  - {fileID: 214533687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861817141
@@ -34671,8 +34541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7ba67e7d8a89f4594fa7e9fd41bd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctOrder: 010000000400000000000000050000000300000002000000
-  objectToAppear: {fileID: 2085693694}
+  torches: []
+  objectToDisappear: {fileID: 0}
+  resetDelay: 0.5
 --- !u!4 &2016962909
 Transform:
   m_ObjectHideFlags: 0
@@ -34747,7 +34618,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapQuality: 0
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
   m_ShadowIntensity: 0.75
@@ -35550,14 +35421,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085693694}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -21.845098, y: -52.08261, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -26.445099, y: 18.237411, z: -0.0370634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1616020460}
   - {fileID: 674425935}
-  m_Father: {fileID: 1720862980}
+  m_Father: {fileID: 615227830}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!61 &2085693696
 BoxCollider2D:

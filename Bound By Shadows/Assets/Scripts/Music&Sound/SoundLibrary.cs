@@ -108,7 +108,7 @@ public class SoundLibrary : MonoBehaviour
     public void PlayStone() => AudioManager.Instance.PlaySFX(moveStoneSound);
 
     /// @brief Odtwarza dźwięk zapalania pochodni.
-    public void PlayTorch() => AudioManager.Instance.PlaySFX(torchLightSound);
+    public void PlayTorch() => AudioManager.Instance.PlaySFX(torchLightSound, 0.7f);
 
     /// @brief Odtwarza dźwięk rozwiązania puzzli.
     public void PlayPuzzleSolved() => AudioManager.Instance.PlaySFX(puzzleSolvedSound);

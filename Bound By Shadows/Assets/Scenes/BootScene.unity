@@ -670,6 +670,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  previewHotbarRoot: {fileID: 0}
   selectedItemForHotbar: {fileID: 0}
 --- !u!114 &304634887
 MonoBehaviour:
