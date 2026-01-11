@@ -33,6 +33,9 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
 
     private void Start()
     {
+        // USUNĄŁEM kod od Health. Nietoperz nie powinien sam nasłuchiwać śmierci.
+        // Od tego jest MeleeEnemy.
+
         startPosition = transform.position;
 
         if (enemy != null)
@@ -163,7 +166,45 @@ public class FlyingEnemy : MonoBehaviour, IEnemyMovement
             rb.linearVelocity = Vector2.zero;
     }
 
+    public void OnDeath()
+    {
+        if (!canMove) return; // Zapobiega wielokrotnemu wywołaniu
 
+        canMove = false; // Zatrzymuje pętlę Update (ruch)
+
+        // 1. Wyłącz fizykę, żeby nie popychał gracza
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.simulated = false; // Wyłącza kolizje i fizykę Rigidbody
+        }
+
+        // 2. Wyłącz collidery (żeby gracz nie otrzymywał obrażeń wchodząc w "trupa")
+        foreach (var col in GetComponentsInChildren<Collider2D>())
+        {
+            col.enabled = false;
+        }
+
+        // 3. Wyłącz skrypty ataku na dzieciach (np. MeleeEnemy)
+        foreach (Transform child in transform)
+        {
+            // Wyłącza wszystkie skrypty MonoBehaviour na dzieciach
+            foreach (var component in child.GetComponents<MonoBehaviour>())
+            {
+                component.enabled = false;
+            }
+        }
+
+        // Obsługa zapisu (Twoja oryginalna logika)
+        var saveable = GetComponent<SaveableObject>();
+        if (saveable != null)
+        {
+            DestroyedRegistry.MarkDestroyed(saveable.UniqueId);
+        }
+
+        // Zniszcz obiekt (ewentualnie z opóźnieniem dla animacji: Destroy(gameObject, 1f));
+        Destroy(gameObject);
+    }
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {

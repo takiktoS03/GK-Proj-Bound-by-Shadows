@@ -417,9 +417,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1890319837868340751}
-        m_TargetAssemblyTypeName: MeleeEnemy, Assembly-CSharp
-        m_MethodName: onEnemyDeath
+      - m_Target: {fileID: 9197688574950114155, guid: 1c18c9158199c9e468bfd5329781b5f1, type: 3}
+        m_TargetAssemblyTypeName: FlyingEnemy, Assembly-CSharp
+        m_MethodName: OnDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

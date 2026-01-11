@@ -70,11 +70,13 @@ public class Health : MonoBehaviour
             if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                 anim.SetTrigger("Hurt");
         }
-        else
+
+        if (currentHealth <= 0 && !dead)
         {
-            Die();
             dead = true;
+            Die(); // tylko sygnał
         }
+
 
         return true;
     }

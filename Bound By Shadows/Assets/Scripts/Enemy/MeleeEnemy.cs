@@ -31,6 +31,17 @@ public class MeleeEnemy : MonoBehaviour
     private enum DefaultFacingDirection { Right, Left }
     private bool isAttacking;
 
+    // Dodaj to do MeleeEnemy.cs
+    private void Start()
+    {
+        // Szukamy zdrowia na tym samym obiekcie (bo MeleeEnemy i Health są sąsiadami)
+        var health = GetComponent<Health>();
+
+        if (health != null)
+        {
+            health.onDeath.AddListener(OnEnemyDeath);
+        }
+    }
     /** @brief Inicjalizacja referencji do komponentów */
     private void Awake()
     {
@@ -44,7 +55,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (isAttacking) return;
 
-        bool playerDetected = PlayerInSight();        
+        bool playerDetected = PlayerInSight();
 
         if (enemyMovement != null)
         {
@@ -98,7 +109,7 @@ public class MeleeEnemy : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(origin, boxCollider.bounds.size);
-        
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(boxCollider.bounds.center, origin);
     }
@@ -119,17 +130,60 @@ public class MeleeEnemy : MonoBehaviour
         isAttacking = false;
     }
 
-    public void onEnemyDeath()
+    public void OnEnemyDeath()
     {
-        enemyMovement.SetMovementEnabled(false);
-        this.enabled = false;
-        anim.SetTrigger("Death");
-        dissolveEffect.PlayDissolve(2f, true, () =>
+        // 1. ZATRZYMANIE RUCHU (Rodzic)
+        if (enemyMovement != null)
         {
-            Destroy(gameObject);
-            Destroy(transform.parent.gameObject);
-        },
-        prepDissolveTime);
-    }
+            enemyMovement.SetMovementEnabled(false);
+        }
 
+        // Wyłączamy logikę ataku
+        this.enabled = false;
+
+        // 2. ZATRZYMANIE ANIMACJI
+        if (anim != null)
+        {
+            // Resetujemy ewentualne flagi ruchu/ataku
+            anim.SetBool("Moving", false);
+            anim.ResetTrigger("Attack"); // Przerywamy atak jeśli trwał
+            anim.SetTrigger("Death");
+        }
+
+        // 3. ZATRZYMANIE FIZYKI
+        var rb = GetComponentInParent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll; // Zatrzymuje w miejscu
+        }
+
+        // 4. ZAPISYWANIE
+        var saveable = GetComponentInParent<SaveableObject>();
+        if (saveable != null)
+        {
+            DestroyedRegistry.MarkDestroyed(saveable.UniqueId);
+        }
+
+        // 5. EFEKT DISSOLVE
+        var dissolve = GetComponentInChildren<DissolveEffect>();
+        if (dissolve == null) dissolve = GetComponent<DissolveEffect>();
+
+        if (dissolve != null)
+        {
+            // Opóźnienie 1.0f pozwala animacji "Death" odegrać się w pełni
+            dissolve.PlayDissolve(2f, true, () =>
+            {
+                if (transform.parent != null) Destroy(transform.parent.gameObject);
+                else Destroy(gameObject);
+            },
+            1.0f);
+        }
+        else
+        {
+            Destroy(transform.parent != null ? transform.parent.gameObject : gameObject, 3f);
+        }
+    }
 }

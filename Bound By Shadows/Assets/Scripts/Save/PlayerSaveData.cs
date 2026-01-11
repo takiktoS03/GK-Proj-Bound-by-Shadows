@@ -74,10 +74,11 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
 
         var playerHealth = GetComponent<PlayerHealth>();
 
-        if (playerHealth != null)
+        if (playerHealth != null && data.hp > 0)
         {
             playerHealth.Revive();
         }
+
 
         // Można odtworzyć więcej: poziom, statystyki, itp.
     }

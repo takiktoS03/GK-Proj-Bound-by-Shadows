@@ -35,6 +35,7 @@ public class MainMenu : MonoBehaviour
      */
     public void LoadGame()
     {
+        DestroyedRegistry.Load();
         SceneManager.sceneLoaded += OnSceneLoaded;
         //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
         SceneManager.LoadScene("Cave", LoadSceneMode.Single);
@@ -48,8 +49,6 @@ public class MainMenu : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-
-        DestroyedRegistry.Load();
 
         SaveSystem.LoadCurrentScene();
     }

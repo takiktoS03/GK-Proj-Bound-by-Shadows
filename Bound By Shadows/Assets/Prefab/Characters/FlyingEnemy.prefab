@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 5e5fa2f6-9aff-43fe-832c-54c457705769
+  uniqueId: aa66068b-4ee2-4e84-83b8-96b131925702
 --- !u!114 &-4143027332852031985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 1148994052276352959, guid: 1b1aae31c20f9a34cba6669f03046b0d, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3513496546909957140}
     - target: {fileID: 4461763850298588823, guid: 1b1aae31c20f9a34cba6669f03046b0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.48

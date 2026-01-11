@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 /**
  * @class PauseMenu
  * @brief Zarządza stanem pauzy i końca gry w trakcie rozgrywki.
- *
- * Obsługuje wstrzymywanie i wznawianie gry, zapisywanie/wczytywanie stanu,
- * powrót do menu głównego oraz ekran końca gry. Blokuje czas gry i interakcje
- * UI w odpowiednich momentach.
- *
- * @author Julia Bigaj
  */
 public class PauseMenu : MonoBehaviour
 {
@@ -26,6 +20,13 @@ public class PauseMenu : MonoBehaviour
     /// @brief Czy gra jest aktualnie zapauzowana.
     public static bool isPaused = false;
 
+    /// @brief Flaga informująca nową scenę, że ma wczytać zapis po starcie.
+    public static bool isReloading = false;
+
+    [Header("Loading Screen")]
+    // Przypisz tu ten czarny Panel, który stworzyłeś
+    [SerializeField] private GameObject loadingOverlay;
+
     /**
      * @brief Inicjalizacja stanu gry i UI przy starcie.
      */
@@ -36,6 +37,21 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         isGameOver = false;
         Time.timeScale = 1f;
+
+        // POPRAWKA: Sprawdzamy, czy scena została załadowana przez przycisk "Wczytaj" (Restart)
+        if (isReloading)
+        {
+            if (loadingOverlay != null) loadingOverlay.SetActive(true);
+
+            isReloading = false;
+            StartCoroutine(LoadAfterOneFrame());
+        }
+        else
+        {
+            // Jeśli to zwykłe wejście do poziomu (New Game / przejście z innego poziomu):
+            // Wyłącz czarny ekran natychmiast
+            if (loadingOverlay != null) loadingOverlay.SetActive(false);
+        }
     }
 
     /**
@@ -47,12 +63,6 @@ public class PauseMenu : MonoBehaviour
         {
             if (isGameOver)
                 return;
-
-            //if (ChestPanelManager.Instance != null && ChestPanelManager.Instance.IsChestOpen())
-            //{
-            //    ChestPanelManager.Instance.CloseChest();
-            //    return;
-            //}
 
             if (isPaused)
                 Resume();
@@ -71,36 +81,41 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
+    // USUNIĘTO: OnEnable, OnDisable i OnSceneLoaded - nie są potrzebne w tej klasie
+    // i powodowały problemy przy restarcie tej samej sceny.
+
     /**
      * @brief Wczytuje bieżącą scenę i odtwarza zapisany stan.
      */
     public void LoadGame()
     {
-        SaveSystem.LoadCurrentScene();
-
-        pauseMenuUI.SetActive(false);
-        gameOverUI.SetActive(false);
-
         Time.timeScale = 1f;
         isPaused = false;
         isGameOver = false;
         UIStateManager.isUIOpen = false;
+
+        gameOverUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        // Ustawiamy flagę, żeby po załadowaniu sceny Start() wiedział, że ma wczytać save
+        //isReloading = true;
+        DestroyedRegistry.Load();
+
+        // 3. Ustawiamy flagę, że jesteśmy w trakcie przeładowania zapisu
+        isReloading = true;
+
+        // 4. Przeładowujemy scenę. To sprawi, że wszystkie potwory zrespawnują się jako "żywe".
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //StartCoroutine(LoadGameRoutine());
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    /**
-     * @brief Callback wykonywany po zakończeniu ładowania sceny – uruchamia system zapisu.
-     * @param scene Nowo załadowana scena.
-     * @param mode Tryb ładowania sceny.
-     */
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private IEnumerator LoadGameRoutine()
     {
-        Time.timeScale = 1f;
-        isPaused = false;
-        isGameOver = false;
-
+        // 1 klatka – żeby scena się w pełni zainicjalizowała
+        yield return null;
+        DestroyedRegistry.Load();
         SaveSystem.LoadCurrentScene();
     }
-
     /**
      * @brief Wstrzymuje grę i aktywuje menu pauzy.
      */
@@ -124,6 +139,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         isGameOver = false;
+        isReloading = false; // Resetujemy flagę na wszelki wypadek
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -137,7 +153,6 @@ public class PauseMenu : MonoBehaviour
 
     /**
      * @brief Coroutine wyświetlająca ekran końca gry po krótkim opóźnieniu.
-     * @return Enumerator dla StartCoroutine.
      */
     public IEnumerator ShowGameOver()
     {
@@ -152,5 +167,19 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
         isGameOver = true;
     }
-}
+    private IEnumerator LoadAfterOneFrame()
+    {
+        yield return new WaitForSeconds(1f);
 
+        // Ładujemy dane (przesuwamy postać)
+        DestroyedRegistry.Load();
+        SaveSystem.LoadCurrentScene();
+
+        // Czekamy jeszcze jedną klatkę, aby kamera zdążyła przeskoczyć za graczem
+        yield return null;
+
+        // TERAZ odsłaniamy widok - gracz jest już na miejscu
+        if (loadingOverlay != null)
+            loadingOverlay.SetActive(false);
+    }
+}

@@ -89,12 +89,21 @@ public static class SaveSystem
      * - Dla każdego zapamiętuje: pozycję, rotację, aktywność oraz dane komponentów `ISaveable`.
      * - Zapisuje wynik do pliku w formacie JSON.
      */
+    // W pliku SaveSystem.cs
+
     public static void SaveCurrentScene()
     {
+        // 1. NAJWAŻNIEJSZE: Zapisz listę zabitych wrogów do PlayerPrefs
+        DestroyedRegistry.Save();
+
         var save = new SceneSave();
 
-        foreach (var so in GameObject.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None))
+        foreach (var so in GameObject.FindObjectsOfType<SaveableObject>())
         {
+            // Jeśli obiekt jest oznaczony jako zniszczony, nie zapisujemy jego pozycji (bo i tak ma zniknąć)
+            if (DestroyedRegistry.IsDestroyed(so.UniqueId))
+                continue;
+
             var t = so.transform;
 
             var transformData = new ObjectSaveData
@@ -132,58 +141,75 @@ public static class SaveSystem
         }
 
         File.WriteAllText(filePath, JsonUtility.ToJson(save, true));
-        Debug.Log("[SAVE] Zapisano grę.");
+        Debug.Log("[SAVE] Zapisano grę oraz rejestr śmierci.");
     }
 
-    /**
-     * @brief Wczytuje stan sceny z pliku zapisu.
-     *
-     * @details
-     * - Wczytuje plik JSON.
-     * - Dla każdego `SaveableObject` na scenie odtwarza:
-     *   - pozycję, rotację, aktywność,
-     *   - stan komponentów `ISaveable` z użyciem `RestoreState`.
-     */
     public static void LoadCurrentScene()
     {
+        // 1. NAJWAŻNIEJSZE: Najpierw wczytaj listę trupów
+        DestroyedRegistry.Load();
+
         if (!File.Exists(filePath)) return;
 
         var json = File.ReadAllText(filePath);
         var save = JsonUtility.FromJson<SceneSave>(json);
 
-        foreach (var so in GameObject.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None))
+        // Znajdź wszystkich SaveableObject na scenie
+        foreach (var so in GameObject.FindObjectsOfType<SaveableObject>())
         {
+            // 2. SPRAWDŹ CZY OBIEKT POWINIEN BYĆ MARTWY
+            // Jeśli ID jest w rejestrze zniszczonych, natychmiast go wyłączamy i pomijamy resztę
+            if (DestroyedRegistry.IsDestroyed(so.UniqueId))
+            {
+                so.gameObject.SetActive(false);
+                continue;
+            }
+
             var entry = save.objects.FirstOrDefault(e => e.id == so.UniqueId);
             if (entry == null) continue;
 
-            // Odtwarzanie transformacji
-            var t = so.transform;
+            // --- POPRAWKA FIZYKI ---
             var data = entry.transform;
-            t.position = new Vector3(data.posX, data.posY, data.posZ);
-            t.eulerAngles = new Vector3(data.rotX, data.rotY, data.rotZ);
+            Vector3 targetPosition = new Vector3(data.posX, data.posY, data.posZ);
+            Quaternion targetRotation = Quaternion.Euler(data.rotX, data.rotY, data.rotZ);
+
+            var t = so.transform;
+            t.position = targetPosition;
+            t.rotation = targetRotation;
             so.gameObject.SetActive(data.isActive);
 
-            // Odtwarzanie komponentów ISaveable
-            var saveables = so.GetComponents<ISaveable>();
-            var wrapper = JsonUtility.FromJson<SerializationWrapper>(entry.customJson);
-
-            foreach (var s in saveables)
+            Rigidbody2D rb = so.GetComponent<Rigidbody2D>();
+            if (rb != null)
             {
-                var key = s.GetType().ToString();
-                if (wrapper.data.ContainsKey(key))
+                rb.position = targetPosition;
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.Sleep();
+            }
+            Physics2D.SyncTransforms();
+
+            var saveables = so.GetComponents<ISaveable>();
+            if (!string.IsNullOrEmpty(entry.customJson))
+            {
+                var wrapper = JsonUtility.FromJson<SerializationWrapper>(entry.customJson);
+                foreach (var s in saveables)
                 {
-                    s.RestoreState(wrapper.data[key]);
+                    var key = s.GetType().ToString();
+                    if (wrapper.data.ContainsKey(key))
+                    {
+                        s.RestoreState(wrapper.data[key]);
+                    }
                 }
             }
 
-            foreach (var enemy in GameObject.FindObjectsOfType<FlyingEnemy>())
+            // Reset logiki wrogów
+            foreach (var enemy in so.GetComponents<FlyingEnemy>())
             {
                 enemy.OnGameLoaded();
             }
-
         }
 
-        Debug.Log("[LOAD] Wczytano grę.");
+        Debug.Log("[LOAD] Wczytano grę i usunięto martwych wrogów.");
     }
 
     public static void DeleteSave()
