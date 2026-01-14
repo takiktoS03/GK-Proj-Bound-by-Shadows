@@ -23,7 +23,7 @@ public class ChestUI : MonoBehaviour
     private void Update()
     {
         // Naci?ni?cie F podczas otwartej skrzyni = Take All + zamknij
-        if (chestPanel.activeSelf && Input.GetKeyDown(KeyCode.F))
+        if (IsOpen && Input.GetKeyDown(KeyCode.F))
         {
             TakeAll();
             Hide();

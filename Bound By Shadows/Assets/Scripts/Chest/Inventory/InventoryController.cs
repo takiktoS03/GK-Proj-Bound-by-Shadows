@@ -22,8 +22,8 @@ public class InventoryController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            bool open = !inventoryPanel.activeSelf;
-            inventoryPanel.SetActive(open);
+            //bool open = inventoryPanel.activeSelf;
+            //inventoryPanel.SetActive(open);
             ToggleInventory();
         }
     }
@@ -33,10 +33,7 @@ public class InventoryController : MonoBehaviour
         isOpen = !isOpen;
         inventoryPanel.SetActive(isOpen);
 
-        if (isOpen)
-            Time.timeScale = 0f; // pauza
-        else
-            Time.timeScale = 1f; // normalnie
+        Time.timeScale = isOpen ? 0f : 1f;
     }
 
     public void SetInventoryPanel(GameObject panel)

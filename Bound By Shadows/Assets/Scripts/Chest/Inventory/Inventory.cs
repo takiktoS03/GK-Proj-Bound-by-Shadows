@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 //using static System.Net.Mime.MediaTypeNames;
 
 public class Inventory : MonoBehaviour
@@ -65,6 +66,8 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemSO itemSO, int quantity)
     {
+        Debug.Log($"AddItem CALLED: {itemSO.itemName} x{quantity}");
+
         if (itemSO.itemType != ItemType.Letter)
         {
             foreach (var stack in items)
@@ -146,6 +149,12 @@ public class Inventory : MonoBehaviour
 
     public void UpdateUI()
     {
+
+        if (slotsParent == null)
+        {
+            Debug.LogError("Inventory UpdateUI: slotsParent is NULL");
+            return;
+        }
         // usu? stare sloty
         foreach (Transform child in slotsParent)
             Destroy(child.gameObject);
@@ -162,6 +171,8 @@ public class Inventory : MonoBehaviour
             // podepnij dane do slota (to masz w InventoryItemSlot)
             slotGO.GetComponent<InventoryItemSlot>().Init(stack);
         }
+
+
     }
 
     public int GetItemCount(ItemSO item)

@@ -22,7 +22,7 @@ public class Chest : MonoBehaviour
 
     public void CloseChest()
     {
-        isOpened = false;
+        isOpened = true;
 
         ChestUI.Instance.Hide();
     }
@@ -40,14 +40,17 @@ public class Chest : MonoBehaviour
 
     public void TakeAll()
     {
+        Debug.Log("Chest.TakeAll CALLED");
+
         foreach (var stack in items)
         {
+            Debug.Log("Chest.TakeAll CALLED");
             Inventory.Instance.AddItem(stack.item, stack.quantity);
         }
 
         items.Clear();
-
-        ChestUI.Instance.UpdateUI();
+        CloseChest();
+        //ChestUI.Instance.UpdateUI();
     }
 
 }

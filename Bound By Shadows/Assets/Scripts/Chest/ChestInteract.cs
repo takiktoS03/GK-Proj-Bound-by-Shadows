@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class ChestInteract : MonoBehaviour
 {
-    public static bool IsChestOpen { get; private set; }
-
     private Chest chest;
     private bool playerInRange;
-    private bool isOpen;
+    //private bool isOpen;
 
     private void Start()
     {
@@ -15,7 +13,7 @@ public class ChestInteract : MonoBehaviour
 
     private void Update()
     {
-        if (!playerInRange)
+        if(!playerInRange)
             return;
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -26,19 +24,16 @@ public class ChestInteract : MonoBehaviour
 
     private void ToggleChest()
     {
-        isOpen = !isOpen;
-
-        if (isOpen)
+        if (!chest.isOpened)
         {
             chest.OpenChest();
             Time.timeScale = 0f;
-            IsChestOpen = true;
         }
         else
         {
-            chest.CloseChest();
+            chest.TakeAll();
+            //chest.CloseChest();
             Time.timeScale = 1f;
-            IsChestOpen = false;
         }
     }
 
