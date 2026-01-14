@@ -23153,11 +23153,11 @@ PrefabInstance:
     - target: {fileID: 1610109051652021392, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1464270952}
     - target: {fileID: 1610109051652021392, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2070921746}
     - target: {fileID: 1610109051652021392, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: cameraShake
       value: 
@@ -23626,11 +23626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.454962
+      value: -15.394403
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 416.79178
+      value: 416.67252
       objectReference: {fileID: 0}
     - target: {fileID: 1845188015475443283, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26938,6 +26938,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1464270952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4018607495518303961, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
+  m_PrefabInstance: {fileID: 1040080206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da2f98b89e85d4daf792708bdc0f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1495108788
 GameObject:
   m_ObjectHideFlags: 0
@@ -34040,6 +34051,17 @@ Transform:
   - {fileID: 887363138}
   m_Father: {fileID: 514703160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2070921746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3622278423361416969, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
+  m_PrefabInstance: {fileID: 1040080206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09da2f98b89e85d4daf792708bdc0f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085693694
 GameObject:
   m_ObjectHideFlags: 0
