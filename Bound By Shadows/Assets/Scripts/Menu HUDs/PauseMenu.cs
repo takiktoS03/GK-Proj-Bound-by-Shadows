@@ -39,19 +39,19 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         // POPRAWKA: Sprawdzamy, czy scena została załadowana przez przycisk "Wczytaj" (Restart)
-        if (isReloading)
-        {
-            if (loadingOverlay != null) loadingOverlay.SetActive(true);
+        //if (isReloading)
+        //{
+        //    if (loadingOverlay != null) loadingOverlay.SetActive(true);
 
-            isReloading = false;
-            StartCoroutine(LoadAfterOneFrame());
-        }
-        else
-        {
-            // Jeśli to zwykłe wejście do poziomu (New Game / przejście z innego poziomu):
-            // Wyłącz czarny ekran natychmiast
-            if (loadingOverlay != null) loadingOverlay.SetActive(false);
-        }
+        //    isReloading = false;
+        //    StartCoroutine(LoadAfterOneFrame());
+        //}
+        //else
+        //{
+        //    // Jeśli to zwykłe wejście do poziomu (New Game / przejście z innego poziomu):
+        //    // Wyłącz czarny ekran natychmiast
+        //    if (loadingOverlay != null) loadingOverlay.SetActive(false);
+        //}
     }
 
     /**
@@ -102,11 +102,7 @@ public class PauseMenu : MonoBehaviour
 
         // 3. Ustawiamy flagę, że jesteśmy w trakcie przeładowania zapisu
         isReloading = true;
-
-        // 4. Przeładowujemy scenę. To sprawi, że wszystkie potwory zrespawnują się jako "żywe".
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //StartCoroutine(LoadGameRoutine());
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameManager.Instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator LoadGameRoutine()

@@ -14,7 +14,6 @@ using System.Linq;
  *
  * @author Filip Kudła
  */
-
 public static class SaveSystem
 {
     /// @brief Pełna ścieżka do pliku zapisu.
@@ -89,11 +88,8 @@ public static class SaveSystem
      * - Dla każdego zapamiętuje: pozycję, rotację, aktywność oraz dane komponentów `ISaveable`.
      * - Zapisuje wynik do pliku w formacie JSON.
      */
-    // W pliku SaveSystem.cs
-
     public static void SaveCurrentScene()
     {
-        // 1. NAJWAŻNIEJSZE: Zapisz listę zabitych wrogów do PlayerPrefs
         DestroyedRegistry.Save();
 
         var save = new SceneSave();
@@ -141,12 +137,10 @@ public static class SaveSystem
         }
 
         File.WriteAllText(filePath, JsonUtility.ToJson(save, true));
-        Debug.Log("[SAVE] Zapisano grę oraz rejestr śmierci.");
     }
 
     public static void LoadCurrentScene()
     {
-        // 1. NAJWAŻNIEJSZE: Najpierw wczytaj listę trupów
         DestroyedRegistry.Load();
 
         if (!File.Exists(filePath)) return;
@@ -201,15 +195,7 @@ public static class SaveSystem
                     }
                 }
             }
-
-            // Reset logiki wrogów
-            foreach (var enemy in so.GetComponents<FlyingEnemy>())
-            {
-                enemy.OnGameLoaded();
-            }
         }
-
-        Debug.Log("[LOAD] Wczytano grę i usunięto martwych wrogów.");
     }
 
     public static void DeleteSave()

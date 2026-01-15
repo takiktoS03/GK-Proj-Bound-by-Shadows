@@ -1,42 +1,27 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
-[System.Serializable]
-public class SpiderWebData
-{
-    public bool destroyed;
-}
 
-public class SpiderWeb : MonoBehaviour, ISaveable
+public class SpiderWeb : MonoBehaviour
 {
-    [Header("Uderzenia potrzebne do zniszczenia")]
+    [Header("Ustawienia")]
     public int hitsToBreak = 3;
+    public float hitCooldown = 0.1f;
 
     private int currentHits = 0;
+    private float lastHitTime = 0f;
     private SpriteRenderer sr;
-    private bool destroyed = false;
-    private Collider2D col;
-    private Animator anim;
     private SaveableObject saveId;
 
     void Awake()
     {
         saveId = GetComponent<SaveableObject>();
-
-        if (saveId != null && DestroyedRegistry.IsDestroyed(saveId.UniqueId))
-        {
-            gameObject.SetActive(false);
-            return;
-        }
-
         sr = GetComponent<SpriteRenderer>();
-        col = GetComponent<Collider2D>();
-        anim = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!destroyed && other.CompareTag("PlayerAttack"))
+        if (other.CompareTag("PlayerAttack") && Time.time > lastHitTime + hitCooldown)
         {
             Hit();
         }
@@ -44,58 +29,20 @@ public class SpiderWeb : MonoBehaviour, ISaveable
 
     void Hit()
     {
-        currentHits++;
+        lastHitTime = Time.time;
 
-        float newAlpha = Mathf.Lerp(
-            0f,
-            1f,
-            (hitsToBreak - currentHits) / (float)hitsToBreak
-        );
+        currentHits++;
+        float healthPercentage = (float)(hitsToBreak - currentHits) / hitsToBreak;
 
         var c = sr.color;
-        c.a = newAlpha;
+        // Mathf.Clamp zapewnia, że alpha nie zejdzie poniżej 0 przy ostatnim ciosie
+        c.a = Mathf.Clamp01(healthPercentage);
         sr.color = c;
 
         if (currentHits >= hitsToBreak)
         {
-            destroyed = true;
-
-            if (saveId != null)
-            {
-                DestroyedRegistry.MarkDestroyed(saveId.UniqueId);
-                DestroyedRegistry.Save();
-            }
-
-            var anim = GetComponent<Animator>();
-            if (anim != null)
-                anim.SetTrigger("Destroy");
-
-            gameObject.SetActive(false);
-        }
-
-    }
-
-    // ================= SAVE SYSTEM =================
-
-    public object CaptureState()
-    {
-        return new SpiderWebData
-        {
-            destroyed = destroyed
-        };
-    }
-
-    public void RestoreState(object state)
-    {
-        string json = state as string;
-        var data = JsonUtility.FromJson<SpiderWebData>(json);
-
-        destroyed = data.destroyed;
-
-        if (destroyed)
-        {
-            gameObject.SetActive(false);
-            return;
+            DestroyedRegistry.MarkDestroyed(saveId.UniqueId);
+            Destroy(gameObject);
         }
     }
 }

@@ -159,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 59172547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.37, y: -1.07, z: -0.0370634}
+  m_LocalPosition: {x: 1.04, y: -1.07, z: -0.0370634}
   m_LocalScale: {x: 1.1503, y: 1.1503, z: 1.1503}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -964,17 +964,18 @@ MonoBehaviour:
   lines:
   - speakerName: 
     portrait: {fileID: 0}
-    text: "HINT: U\u017Cyj A i D do poruszania si\u0119 oraz SPACE do skakania"
+    text: "U\u017Cyj A i D do poruszania si\u0119, F do interakcji oraz SPACE do
+      skakania"
     duration: 3
     voice: {fileID: 0}
-  dialogType: 0
+  dialogType: 3
   skippable: 0
   destroyAfter: 1
   skipKey: 32
-  blockMovement: 1
-  blockAnimation: 1
-  blockAttacks: 1
-  blockWallSliding: 0
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
   restoreControlsAfter: 1
   ghost: {fileID: 0}
   player: {fileID: 0}
@@ -1649,6 +1650,22 @@ PrefabInstance:
     - target: {fileID: 91552089395983941, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
       propertyPath: uniqueId
       value: 83ca6b29-cf2a-43ef-8ee2-f1cd66b54f4b
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2242746447728583907, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -18478,7 +18495,7 @@ Transform:
   m_GameObject: {fileID: 447565688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.75, y: -1.07, z: -0.0370634}
+  m_LocalPosition: {x: -0.98, y: -1.07, z: -0.0370634}
   m_LocalScale: {x: 1.1503, y: 1.1503, z: 1.1503}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19256,8 +19273,8 @@ MonoBehaviour:
   lines:
   - speakerName: 
     portrait: {fileID: 0}
-    text: "Ukryte przej\u015Bcie? Mo\u017Ce sp\xF3rbuje wej\u015B\u0107 tam"
-    duration: 2
+    text: "Ukryte przej\u015Bcie? Mo\u017Ce spr\xF3buje tam wej\u015B\u0107"
+    duration: 3
     voice: {fileID: 8300000, guid: f4a8ce9afa323274f8a4945e5e313f3c, type: 3}
   dialogType: 1
   skippable: 0
@@ -19345,7 +19362,7 @@ Transform:
   m_GameObject: {fileID: 606477810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.21, y: -1.07, z: -0.0370634}
+  m_LocalPosition: {x: 5.12, y: -1.07, z: -0.0370634}
   m_LocalScale: {x: 1.1503, y: 1.1503, z: 1.1503}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19725,8 +19742,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7ba67e7d8a89f4594fa7e9fd41bd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torches: []
-  objectToDisappear: {fileID: 0}
+  torches:
+  - {fileID: 447565691}
+  - {fileID: 606477813}
+  - {fileID: 344227815}
+  - {fileID: 1459746081}
+  - {fileID: 1058931877}
+  - {fileID: 59172550}
+  objectToDisappear: {fileID: 2085693694}
   resetDelay: 0.5
 --- !u!1001 &616150217
 PrefabInstance:
@@ -20387,6 +20410,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 872052531}
     m_Modifications:
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1333375768895979532, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2242746447728583907, guid: 328ce77b8d5b4254caa0925e2d9311b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3111525
@@ -20723,7 +20758,7 @@ Transform:
   m_GameObject: {fileID: 796631819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.39, y: 1.35, z: 0}
+  m_LocalPosition: {x: 0.96, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20744,17 +20779,17 @@ MonoBehaviour:
   lines:
   - speakerName: 
     portrait: {fileID: 0}
-    text: "HINT: U\u017Cyj LPM, aby zaatakowa\u0107"
+    text: "U\u017Cyj LPM, aby zaatakowa\u0107"
     duration: 3
     voice: {fileID: 0}
-  dialogType: 0
+  dialogType: 3
   skippable: 0
   destroyAfter: 1
   skipKey: 32
-  blockMovement: 1
-  blockAnimation: 1
-  blockAttacks: 1
-  blockWallSliding: 0
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
   restoreControlsAfter: 1
   ghost: {fileID: 0}
   player: {fileID: 0}
@@ -20802,7 +20837,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 7}
+  m_Size: {x: 5, y: 7}
   m_EdgeRadius: 0
 --- !u!1001 &796975736
 PrefabInstance:
@@ -21403,17 +21438,17 @@ MonoBehaviour:
   lines:
   - speakerName: 
     portrait: {fileID: 0}
-    text: "HINT: Wci\u015Bnij W, aby u\u017Cy\u0107 dash"
+    text: "Wci\u015Bnij W, aby u\u017Cy\u0107 dash"
     duration: 3
     voice: {fileID: 0}
-  dialogType: 0
+  dialogType: 3
   skippable: 0
   destroyAfter: 1
   skipKey: 32
-  blockMovement: 1
-  blockAnimation: 1
-  blockAttacks: 1
-  blockWallSliding: 0
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
   restoreControlsAfter: 1
   ghost: {fileID: 0}
   player: {fileID: 0}
@@ -22166,6 +22201,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 59, y: -8, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 21, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -22366,15 +22411,25 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 61, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 77
+  - m_RefCount: 79
     m_Data: {fileID: 11400000, guid: fa15b11258bfe3e48a373a1f0dad7a17, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 77
+  - m_RefCount: 79
     m_Data: {fileID: 21300000, guid: c0cfa846b033b0c4c9c81856f53a734b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 77
+  - m_RefCount: 79
     m_Data:
       e00: 1
       e01: 0
@@ -22393,13 +22448,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 77
+  - m_RefCount: 79
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: -12, z: 0}
-  m_Size: {x: 60, y: 12, z: 1}
+  m_Size: {x: 62, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -23192,11 +23247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.62
+      value: -215.66
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 261.99
+      value: 255.05
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23626,11 +23681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.394403
+      value: -15.417816
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 416.67252
+      value: 416.71756
       objectReference: {fileID: 0}
     - target: {fileID: 1845188015475443283, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -23990,7 +24045,7 @@ Transform:
   m_GameObject: {fileID: 1058931874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.46, y: -1.07, z: -0.0370634}
+  m_LocalPosition: {x: 3.08, y: -1.07, z: -0.0370634}
   m_LocalScale: {x: 1.1503, y: 1.1503, z: 1.1503}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24382,6 +24437,22 @@ PrefabInstance:
     - target: {fileID: 3324636016644323568, guid: c5513e5f147fb7b46aa8baf72e93e028, type: 3}
       propertyPath: m_Name
       value: Web3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431776160571645824, guid: c5513e5f147fb7b46aa8baf72e93e028, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431776160571645824, guid: c5513e5f147fb7b46aa8baf72e93e028, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187590656048615351, guid: c5513e5f147fb7b46aa8baf72e93e028, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9187590656048615351, guid: c5513e5f147fb7b46aa8baf72e93e028, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32252,10 +32323,10 @@ MonoBehaviour:
   lines:
   - speakerName: 
     portrait: {fileID: 0}
-    text: "~Ciekawo wygl\u0105daj\u0105ce grzyby"
+    text: "~Ciekawie wygl\u0105daj\u0105ce grzyby"
     duration: 3
     voice: {fileID: 8300000, guid: 2dae584961da9fd4c88f664f24962161, type: 3}
-  dialogType: 0
+  dialogType: 1
   skippable: 0
   destroyAfter: 1
   skipKey: 32
@@ -33163,6 +33234,114 @@ MonoBehaviour:
   collisionMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &2003328722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003328723}
+  - component: {fileID: 2003328725}
+  - component: {fileID: 2003328724}
+  m_Layer: 11
+  m_Name: hintInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2003328723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003328722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 210.58, y: -11.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067531725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003328724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003328722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bd95c77f52d02438562392f51a7d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: 
+    portrait: {fileID: 0}
+    text: "Wci\u015Bnij F, aby zapali\u0107 pochodnie"
+    duration: 3
+    voice: {fileID: 0}
+  dialogType: 3
+  skippable: 0
+  destroyAfter: 1
+  skipKey: 32
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
+  restoreControlsAfter: 1
+  ghost: {fileID: 0}
+  player: {fileID: 0}
+--- !u!61 &2003328725
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003328722}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5, y: 0.6710129}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2, y: 8.342026}
+  m_EdgeRadius: 0
 --- !u!1 &2016962907
 GameObject:
   m_ObjectHideFlags: 0
@@ -34049,6 +34228,7 @@ Transform:
   - {fileID: 171937211}
   - {fileID: 796631820}
   - {fileID: 887363138}
+  - {fileID: 2003328723}
   m_Father: {fileID: 514703160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2070921746 stripped

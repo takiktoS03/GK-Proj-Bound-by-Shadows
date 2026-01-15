@@ -40,26 +40,18 @@ public class SaveableObject : MonoBehaviour
     /**
      * @brief Gwarantuje, że obiekt zawsze ma przypisany identyfikator po załadowaniu.
      */
-    // W pliku SaveableObject.cs
-
     private void Awake()
     {
-        // 1. DLA GRACZA: Wymuszamy stałe ID
+        // DLA GRACZA: Wymuszamy stałe ID
         if (gameObject.CompareTag("Player"))
         {
             uniqueId = "Ethan-The-Hero-Unique-ID";
         }
 
-        // 2. DLA INNYCH OBIEKTÓW: Jeśli ID puste, generuj losowe
+        // DLA INNYCH OBIEKTÓW: Jeśli ID puste, generuj losowe
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();
-        }
-
-        // Obsługa zniszczonych obiektów (Twoja istniejąca logika)
-        if (DestroyedRegistry.IsDestroyed(UniqueId))
-        {
-            gameObject.SetActive(false);
         }
     }
 

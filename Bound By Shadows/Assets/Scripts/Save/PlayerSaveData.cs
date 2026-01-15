@@ -41,8 +41,6 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
     {
         var health = GetComponent<Health>();
 
-        Debug.Log($"[SAVE] HP = {health.CurrentHealth}");
-
         return new PlayerData
         {
             hp = health.CurrentHealth
@@ -56,12 +54,8 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
      */
     public void RestoreState(object state)
     {
-        Debug.Log("[RESTORE] RestoreState zostało wywołane");
-
         string json = state as string;
         var data = JsonUtility.FromJson<PlayerData>(json);
-
-        Debug.Log($"[LOAD] HP = {data.hp}");
 
         var health = GetComponent<Health>();
         health.SetBarsValue(data.hp);

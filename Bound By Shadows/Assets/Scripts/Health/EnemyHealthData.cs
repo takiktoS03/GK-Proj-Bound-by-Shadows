@@ -40,11 +40,7 @@ public class EnemyHealthSaveData : MonoBehaviour, ISaveable
         string json = state as string;
         var data = JsonUtility.FromJson<EnemyHealthData>(json);
 
-        if (data.hp <= 0)
-            return;
-
-        health.SetBarsValue(Mathf.Max(1, data.hp));
-        health.Revive();
+        health.SetBarsValue(data.hp);
 
     }
 }
