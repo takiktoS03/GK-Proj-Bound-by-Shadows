@@ -68,11 +68,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha_Threshold: 0.5
-    - _Dissolve: 0.66
+    - _Dissolve: 0.484
     - _Edge_Width: 0.02
     - _Fresnel: 0
     - _Fresnel_Power: 3
-    - _Noise_Scale: 30
+    - _Noise_Scale: 20
     - _QueueControl: 0
     - _QueueOffset: 0
     - _UseOriginalAlpha: 0
