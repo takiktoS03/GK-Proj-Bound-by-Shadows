@@ -28,14 +28,12 @@ public class Health : MonoBehaviour
 
     [Header("Event activate on Death")]
     public UnityEngine.Events.UnityEvent onDeath;
-    protected float currentHealth;
+    public float currentHealth;
     protected Animator anim;
     protected SpriteRenderer spriteRend;
 
     private bool dead = false;
     protected bool canTakeDamage = true;
-
-    public float CurrentHealth => currentHealth;
 
     /**
      * Inicjalizuje komponenty i pasek zdrowia.
@@ -107,7 +105,7 @@ public class Health : MonoBehaviour
     /**
      * Ustawia konkretną wartość na pasku zdrowia.
      */
-    public virtual void SetBarsValue(float value)
+    public virtual void SetHealth(float value)
     {
         currentHealth = Mathf.Clamp(value, 0, startingHealth);
 
@@ -129,11 +127,10 @@ public class Health : MonoBehaviour
         canTakeDamage = true;
         anim.SetTrigger("HurtEnded");
     }
-    public virtual void Revive()
-    {
-        dead = false;
-        canTakeDamage = true;
-    }
-
+    //public virtual void Revive()
+    //{
+    //    dead = false;
+    //    canTakeDamage = true;
+    //}
 }
 

@@ -1,7 +1,8 @@
-﻿using System.IO;
-using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
  * @class SaveSystem
@@ -16,192 +17,205 @@ using System.Linq;
  */
 public static class SaveSystem
 {
-    /// @brief Pełna ścieżka do pliku zapisu.
     private static readonly string filePath = Path.Combine(Application.persistentDataPath, "save.json");
+    public static bool loadOnSceneStart = false;
+    public static bool restorePlayerPositionOnLoad = false;
 
-    // ====================== KLASY DANYCH ======================
+    // ================== STRUKTURY DANYCH ==================
 
-    /**
-     * @class SaveEntry
-     * @brief (Nieużywana) Struktura zapisu jednego obiektu z danymi jako JSON.
-     */
     [System.Serializable]
-    public class SaveEntry
+    public class GameSaveData
+    {
+        public string lastSceneName;
+        public ObjectSaveData globalPlayerData;
+        public List<SceneSaveData> scenes = new List<SceneSaveData>();
+    }
+
+    [System.Serializable]
+    public class SceneSaveData
+    {
+        public string sceneName;
+        public List<string> destroyedObjectIds = new List<string>();
+        public List<ObjectSaveData> activeObjects = new List<ObjectSaveData>();
+    }
+
+    [System.Serializable]
+    public class ObjectSaveData
     {
         public string id;
-        public string jsonData;
-        public string type;
+        public Vector3 position;
+        public Vector3 rotation; // Euler angles
+        public string customJsonData; // Dane z ISaveable
     }
 
-    /**
-     * @class SaveData
-     * @brief (Nieużywana) Lista wpisów `SaveEntry` — używana w alternatywnym podejściu.
-     */
     [System.Serializable]
-    public class SaveData
+    private class SaveableDataWrapper
     {
-        public List<SaveEntry> entries = new List<SaveEntry>();
+        public List<string> keys = new List<string>();
+        public List<string> values = new List<string>();
     }
 
-    /**
-     * @class SceneSave
-     * @brief Główna struktura przechowująca dane wszystkich zapisywanych obiektów sceny.
-     */
-    [System.Serializable]
-    private class SceneSave
-    {
-        public List<ObjectSaveEntry> objects = new List<ObjectSaveEntry>();
-    }
+    // ================== GŁÓWNE METODY ==================
 
-    /**
-     * @class ObjectSaveData
-     * @brief Zapis pozycji, rotacji i stanu aktywności obiektu.
-     */
-    [System.Serializable]
-    private class ObjectSaveData
-    {
-        public float posX, posY, posZ;
-        public float rotX, rotY, rotZ;
-        public bool isActive;
-    }
-
-    /**
-     * @class ObjectSaveEntry
-     * @brief Zapis jednego obiektu sceny.
-     * @details Zawiera ID, dane transformacji i serializowane dane komponentów `ISaveable`.
-     */
-    [System.Serializable]
-    private class ObjectSaveEntry
-    {
-        public string id;
-        public ObjectSaveData transform;
-        public string customJson;
-    }
-
-    // ====================== METODY GŁÓWNE ======================
-
-    /**
-     * @brief Zapisuje stan aktualnie załadowanej sceny do pliku.
-     *
-     * @details
-     * - Zbiera wszystkie `SaveableObject` w scenie.
-     * - Dla każdego zapamiętuje: pozycję, rotację, aktywność oraz dane komponentów `ISaveable`.
-     * - Zapisuje wynik do pliku w formacie JSON.
-     */
     public static void SaveCurrentScene()
     {
-        DestroyedRegistry.Save();
+        GameSaveData gameData = LoadFile();
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        gameData.lastSceneName = currentSceneName;
 
-        var save = new SceneSave();
-
-        foreach (var so in GameObject.FindObjectsOfType<SaveableObject>())
+        // Tworzenie danych dla aktualnej sceny
+        SceneSaveData sceneData = gameData.scenes.FirstOrDefault(s => s.sceneName == currentSceneName);
+        if (sceneData != null)
         {
-            // Jeśli obiekt jest oznaczony jako zniszczony, nie zapisujemy jego pozycji (bo i tak ma zniknąć)
-            if (DestroyedRegistry.IsDestroyed(so.UniqueId))
-                continue;
+            gameData.scenes.Remove(sceneData); // Usuwamy stare dane tej sceny
+        }
+        sceneData = new SceneSaveData { sceneName = currentSceneName };
 
-            var t = so.transform;
+        // Zbieranie wszystkich SaveableObject
+        var allSaveables = Object.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None);
 
-            var transformData = new ObjectSaveData
+        foreach (var so in allSaveables)
+        {
+            var objData = CreateObjectSaveData(so);
+            if (so.CompareTag("Player"))
             {
-                posX = t.position.x,
-                posY = t.position.y,
-                posZ = t.position.z,
-                rotX = t.eulerAngles.x,
-                rotY = t.eulerAngles.y,
-                rotZ = t.eulerAngles.z,
-                isActive = so.gameObject.activeSelf
-            };
-
-            // Serializacja komponentów ISaveable
-            var saveables = so.GetComponents<ISaveable>();
-            Dictionary<string, object> stateDict = new();
-            foreach (var s in saveables)
-            {
-                var state = s.CaptureState();
-                if (state != null)
-                    stateDict[s.GetType().ToString()] = state;
+                gameData.globalPlayerData = objData;
             }
-
-            var wrapper = new SerializationWrapper();
-            wrapper.data = stateDict;
-
-            string jsonState = JsonUtility.ToJson(wrapper);
-
-            save.objects.Add(new ObjectSaveEntry
+            else
             {
-                id = so.UniqueId,
-                transform = transformData,
-                customJson = jsonState
-            });
+                sceneData.activeObjects.Add(objData);
+            }
         }
 
-        File.WriteAllText(filePath, JsonUtility.ToJson(save, true));
+        // Zapis ID obiektów, które powinny być zniszczone
+        sceneData.destroyedObjectIds = new List<string>(SessionDestroyedRegistry.GetDestroyedIds(currentSceneName));
+
+        gameData.scenes.Add(sceneData);
+        string json = JsonUtility.ToJson(gameData, true);
+        File.WriteAllText(filePath, json);
     }
 
     public static void LoadCurrentScene()
     {
-        DestroyedRegistry.Load();
-
         if (!File.Exists(filePath)) return;
 
-        var json = File.ReadAllText(filePath);
-        var save = JsonUtility.FromJson<SceneSave>(json);
+        GameSaveData gameData = LoadFile();
+        string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Znajdź wszystkich SaveableObject na scenie
-        foreach (var so in GameObject.FindObjectsOfType<SaveableObject>())
+        if (gameData.globalPlayerData != null)
         {
-            // 2. SPRAWDŹ CZY OBIEKT POWINIEN BYĆ MARTWY
-            // Jeśli ID jest w rejestrze zniszczonych, natychmiast go wyłączamy i pomijamy resztę
-            if (DestroyedRegistry.IsDestroyed(so.UniqueId))
+            // Szukamy gracza na scenie
+            var playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null && playerObj.TryGetComponent<SaveableObject>(out var playerSo))
             {
-                so.gameObject.SetActive(false);
+                RestoreObjectState(playerSo, gameData.globalPlayerData, restorePlayerPositionOnLoad);
+            }
+        }
+
+        SceneSaveData sceneData = gameData.scenes.FirstOrDefault(s => s.sceneName == currentSceneName);
+        if (sceneData == null) return;
+
+        // Rejestr sesji (żeby kolejne zapisy pamiętały co było zniszczone)
+        SessionDestroyedRegistry.SetDestroyedIds(currentSceneName, sceneData.destroyedObjectIds);
+
+        var allSaveables = Object.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None);
+        foreach (var so in allSaveables)
+        {
+            if (so.CompareTag("Player")) continue;
+
+            if (sceneData.destroyedObjectIds.Contains(so.UniqueId))
+            {
+                Object.Destroy(so.gameObject);
                 continue;
             }
 
-            var entry = save.objects.FirstOrDefault(e => e.id == so.UniqueId);
-            if (entry == null) continue;
-
-            // --- POPRAWKA FIZYKI ---
-            var data = entry.transform;
-            Vector3 targetPosition = new Vector3(data.posX, data.posY, data.posZ);
-            Quaternion targetRotation = Quaternion.Euler(data.rotX, data.rotY, data.rotZ);
-
-            var t = so.transform;
-            t.position = targetPosition;
-            t.rotation = targetRotation;
-            so.gameObject.SetActive(data.isActive);
-
-            Rigidbody2D rb = so.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            var savedObj = sceneData.activeObjects.FirstOrDefault(x => x.id == so.UniqueId);
+            if (savedObj != null)
             {
-                rb.position = targetPosition;
-                rb.linearVelocity = Vector2.zero;
-                rb.angularVelocity = 0f;
-                rb.Sleep();
+                RestoreObjectState(so, savedObj, true);
             }
-            Physics2D.SyncTransforms();
+        }
 
-            var saveables = so.GetComponents<ISaveable>();
-            if (!string.IsNullOrEmpty(entry.customJson))
+        restorePlayerPositionOnLoad = false;
+    }
+
+    // ================== METODY POMOCNICZE ==================
+
+    private static ObjectSaveData CreateObjectSaveData(SaveableObject so)
+    {
+        var objData = new ObjectSaveData
+        {
+            id = so.UniqueId,
+            position = so.transform.position,
+            rotation = so.transform.eulerAngles
+        };
+
+        var components = so.GetComponents<ISaveable>();
+        var wrapper = new SaveableDataWrapper();
+        foreach (var saveable in components)
+        {
+            var data = saveable.CaptureState();
+            if (data != null)
             {
-                var wrapper = JsonUtility.FromJson<SerializationWrapper>(entry.customJson);
-                foreach (var s in saveables)
-                {
-                    var key = s.GetType().ToString();
-                    if (wrapper.data.ContainsKey(key))
-                    {
-                        s.RestoreState(wrapper.data[key]);
-                    }
-                }
+                wrapper.keys.Add(saveable.GetType().ToString());
+                wrapper.values.Add(JsonUtility.ToJson(data));
+            }
+        }
+        objData.customJsonData = JsonUtility.ToJson(wrapper);
+        return objData;
+    }
+
+    /// <summary>
+    /// Przywraca stan obiektu.
+    /// </summary>
+    /// <param name="so">Obiekt docelowy</param>
+    /// <param name="data">Dane z pliku</param>
+    /// <param name="restoreTransform">Czy przywracać pozycję i rotację?</param>
+    private static void RestoreObjectState(SaveableObject so, ObjectSaveData data, bool restoreTransform)
+    {
+        if (restoreTransform)
+        {
+            so.transform.position = data.position;
+            so.transform.eulerAngles = data.rotation;
+
+            //if (so.TryGetComponent<Rigidbody2D>(out var rb))
+            //{
+            //    rb.linearVelocity = Vector2.zero;
+            //    rb.angularVelocity = 0f;
+            //    rb.position = data.position;
+            //}
+        }
+
+        // Przywracanie ISaveable
+        if (!string.IsNullOrEmpty(data.customJsonData))
+        {
+            var wrapper = JsonUtility.FromJson<SaveableDataWrapper>(data.customJsonData);
+            var components = so.GetComponents<ISaveable>();
+
+            for (int i = 0; i < wrapper.keys.Count; i++)
+            {
+                string typeName = wrapper.keys[i];
+                string jsonState = wrapper.values[i];
+
+                // Znajdź odpowiedni komponent i wczytaj
+                var comp = components.FirstOrDefault(c => c.GetType().ToString() == typeName);
+                if (comp != null) comp.RestoreState(jsonState);
             }
         }
     }
 
-    public static void DeleteSave()
+    private static GameSaveData LoadFile()
     {
-        if (File.Exists(filePath))
-            File.Delete(filePath);
+        if (!File.Exists(filePath)) return new GameSaveData();
+        return JsonUtility.FromJson<GameSaveData>(File.ReadAllText(filePath));
+    }
+
+    public static string GetLastSavedScene()
+    {
+        if (!File.Exists(filePath)) return "";
+
+        GameSaveData data = LoadFile();
+        return data.lastSceneName;
     }
 }
 

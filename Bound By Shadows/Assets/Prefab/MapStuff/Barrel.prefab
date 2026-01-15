@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 406001094517502889}
   - component: {fileID: 3793345143068605288}
   - component: {fileID: 5216185959666604291}
-  - component: {fileID: 5936397543325964157}
   - component: {fileID: 1278648466085487780}
   - component: {fileID: 4192666487767627776}
   m_Layer: 11
@@ -215,18 +214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 1874be80-c893-4e7f-be2d-ce071a55ce8e
---- !u!114 &5936397543325964157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5298639091059354902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3266ab39075e66643a627f06e9b29751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1278648466085487780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +244,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  currentHealth: 0
 --- !u!114 &4192666487767627776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +286,7 @@ MonoBehaviour:
     m_TrimEdge: 0.15
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.06
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.15
   m_PreviousEdgeProcessing: 1

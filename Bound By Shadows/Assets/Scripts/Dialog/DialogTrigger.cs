@@ -3,6 +3,7 @@ using EthanTheHero;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogTrigger : MonoBehaviour
 {
@@ -33,13 +34,11 @@ public class DialogTrigger : MonoBehaviour
     public bool blockAnimation = true;
     public bool blockAttacks = true;
     public bool blockWallSliding = true;
-
     [Tooltip("Czy odblokować sterowanie natychmiast po zakończeniu dialogu?")]
     public bool restoreControlsAfter = true;
 
-    [Header("Optional references")]
-    public Transform ghost;
-    public Transform player;
+    [Header("Events")]
+    public UnityEvent onDialogEnd;
 
     private PlayerControlManager controlManager;
 
@@ -67,8 +66,11 @@ public class DialogTrigger : MonoBehaviour
         }
 
         DialogManager.Instance.Clear(dialogType);
+        if (onDialogEnd != null)
+        {
+            onDialogEnd.Invoke();
+        }
         if (restoreControlsAfter) controlManager.UnlockControls();
-        if (ghost != null) ghost.GetComponent<GhostMovement>().player = player;
         if (destroyAfter) Destroy(gameObject);
     }
 }

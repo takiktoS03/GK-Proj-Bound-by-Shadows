@@ -2211,6 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1363498088}
   loadingBar: {fileID: 0}
+  targetSpawnId: 
 --- !u!114 &1979687517
 MonoBehaviour:
   m_ObjectHideFlags: 0

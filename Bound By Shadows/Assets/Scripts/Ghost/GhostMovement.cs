@@ -14,7 +14,7 @@ public class GhostMovement : MonoBehaviour
 {
     [Header("Follow Player")]
     [Tooltip("Jeśli ustawione, duszek będzie podążać za graczem. Jeśli nie, będzie tylko falować.")]
-    public Transform player;
+    [SerializeField] private Transform player;
 
     public Vector3 offset = new Vector3(1f, 1f, 0f);
     private Vector3 initialOffset;
@@ -26,6 +26,7 @@ public class GhostMovement : MonoBehaviour
 
     [Header("Movement")]
     public float smoothSpeed = 2f;
+    public bool isFollowingPlayer = false;
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class GhostMovement : MonoBehaviour
         float floatY = Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
 
         // Tryb 1: Brak gracza -> tylko unoszenie się
-        if (player == null)
+        if (player == null || !isFollowingPlayer)
         {
             // Dodanie efektu falowania w osi Y
             Vector3 floatingPos = transform.position;
@@ -59,5 +60,15 @@ public class GhostMovement : MonoBehaviour
         Vector3 desiredPos = player.position + currentOffset + new Vector3(0, floatY, 0);
 
         transform.position = Vector3.Lerp(transform.position, desiredPos, Time.deltaTime * smoothSpeed);
+    }
+
+    public void FollowUnlocked()
+    {
+        isFollowingPlayer = true;
+    }
+
+    public void FollowLocked()
+    {
+        isFollowingPlayer = false;
     }
 }

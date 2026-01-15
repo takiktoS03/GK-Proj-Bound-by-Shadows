@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2723025740229541272}
   - component: {fileID: 4297617746898934239}
   - component: {fileID: 535016315500617988}
-  - component: {fileID: -4353087339783641280}
+  - component: {fileID: 5054645541732568550}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Untagged
@@ -67,8 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 6de1bf47-efc0-4a92-805c-eba8df4acc90
---- !u!114 &-4353087339783641280
+  uniqueId: 869e0fe5-88e4-4798-9a87-c00845f72811
+--- !u!114 &5054645541732568550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12,6 +12,7 @@
 public class Barrel : MonoBehaviour
 {
     private Animator anim;
+    private SaveableObject saveable;
 
     /**
      * @brief Inicjalizuje komponent Animator przypisany do beczki.
@@ -21,6 +22,7 @@ public class Barrel : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
+        saveable = GetComponent<SaveableObject>();
     }
 
     /** do przerobienia
@@ -42,8 +44,8 @@ public class Barrel : MonoBehaviour
         anim.SetTrigger("Destroy");
 
         // Zapis stanu
-        var saveable = GetComponent<SaveableObject>();
-        BarrelSaveData.RegisterDestroyedBarrel(saveable.UniqueId);
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        SessionDestroyedRegistry.MarkAsDestroyed(sceneName, saveable.UniqueId);
 
         Destroy(gameObject, 0.9f);
     }

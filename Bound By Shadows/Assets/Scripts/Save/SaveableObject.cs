@@ -30,13 +30,6 @@ public class SaveableObject : MonoBehaviour
      */
     public string UniqueId => uniqueId;
 
-    private void Start()
-    {
-        if (DestroyedRegistry.IsDestroyed(UniqueId))
-        {
-            gameObject.SetActive(false);
-        }
-    }
     /**
      * @brief Gwarantuje, że obiekt zawsze ma przypisany identyfikator po załadowaniu.
      */

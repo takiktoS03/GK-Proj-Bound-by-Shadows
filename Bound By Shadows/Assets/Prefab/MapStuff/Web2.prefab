@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsToBreak: 3
+  hitCooldown: 0.2
 --- !u!114 &-8575539877098879558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +209,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 1454ca04-4e42-4f7c-80be-26efb508e3e4
+  uniqueId: 7330850c-46c9-4711-96c9-14e9ca1d085e

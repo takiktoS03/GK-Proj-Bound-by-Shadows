@@ -17,7 +17,8 @@ public class WorldScanner : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
-    [Header("Cooldown")]
+    [Header("Ability Settings")]
+    [SerializeField] private bool isAbilityUnlocked = false;
     public float abilityCooldown = 5f;
 
     private float scanRadius = 0f;
@@ -35,7 +36,7 @@ public class WorldScanner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (isAbilityUnlocked && Input.GetKeyDown(KeyCode.Q))
         {
             TryActivateScan();
         }
@@ -47,6 +48,16 @@ public class WorldScanner : MonoBehaviour
         {
             ScanStep();
         }
+    }
+
+    public void UnlockAbility()
+    {
+        isAbilityUnlocked = true;
+    }
+
+    public void LockAbility()
+    {
+        isAbilityUnlocked = false;
     }
 
     void TryActivateScan()

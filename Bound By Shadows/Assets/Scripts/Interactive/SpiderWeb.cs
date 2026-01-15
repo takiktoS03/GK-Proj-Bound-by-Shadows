@@ -11,11 +11,11 @@ public class SpiderWeb : MonoBehaviour
     private int currentHits = 0;
     private float lastHitTime = 0f;
     private SpriteRenderer sr;
-    private SaveableObject saveId;
+    private SaveableObject saveable;
 
     void Awake()
     {
-        saveId = GetComponent<SaveableObject>();
+        saveable = GetComponent<SaveableObject>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -41,7 +41,8 @@ public class SpiderWeb : MonoBehaviour
 
         if (currentHits >= hitsToBreak)
         {
-            DestroyedRegistry.MarkDestroyed(saveId.UniqueId);
+            string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            SessionDestroyedRegistry.MarkAsDestroyed(sceneName, saveable.UniqueId);
             Destroy(gameObject);
         }
     }

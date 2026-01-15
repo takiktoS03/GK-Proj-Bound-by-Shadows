@@ -13,49 +13,39 @@ using System.Collections;
  */
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private string firstLevelSceneName = "DungeonSecondFloor";
+    // Intro Cave Dungeon DungeonSecondFloor AbilityCutScene
+
     /**
      * @brief Rozpoczyna nową grę, ładując scenę wprowadzającą.
-     *
-     * Zamiast poziomu głównego ładowana jest scena `"Intro"`.
      */
     public void StartNewGame()
     {
-        SaveSystem.DeleteSave();
-        DestroyedRegistry.Clear();
-        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
-        //SceneManager.LoadScene("Intro", LoadSceneMode.Single);
-        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
-        //SceneManager.LoadScene("DungeonSecondFloor", LoadSceneMode.Single);
+        SaveSystem.loadOnSceneStart = false;
+        SessionDestroyedRegistry.Clear();
+        GameManager.Instance.LoadLevel(firstLevelSceneName);
     }
 
     /**
-     * @brief Wczytuje grę i ustawia callback na zakończenie ładowania sceny.
+     * @brief Wczytuje grę
      *
-     * Po załadowaniu sceny `"Level 1 - Cave"` następuje automatyczne wywołanie systemu zapisu.
+     * Po załadowaniu sceny następuje automatyczne wywołanie systemu zapisu w GameManager
      */
     public void LoadGame()
     {
-        DestroyedRegistry.Load();
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        //SceneManager.LoadScene("Dungeon", LoadSceneMode.Single);
-        SceneManager.LoadScene("Cave", LoadSceneMode.Single);
-    }
-
-    /**
-     * @brief Callback wywoływany po załadowaniu sceny – inicjalizuje system zapisu.
-     * @param scene Obiekt reprezentujący nowo załadowaną scenę.
-     * @param mode Tryb ładowania sceny (Single/Additive).
-     */
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-
-        SaveSystem.LoadCurrentScene();
+        string sceneToLoad = SaveSystem.GetLastSavedScene();
+        if (string.IsNullOrEmpty(sceneToLoad))
+        {
+            Debug.LogWarning("Brak zapisu gry!");
+            return;
+        }
+        SaveSystem.loadOnSceneStart = true;
+        SaveSystem.restorePlayerPositionOnLoad = true;
+        GameManager.Instance.LoadLevel(sceneToLoad);
     }
 
     /**
      * @brief Zamyka aplikację.
-     *
      */
     public void QuitGame()
     {

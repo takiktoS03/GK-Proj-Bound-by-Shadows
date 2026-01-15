@@ -42,7 +42,7 @@ public class CutsceneController : MonoBehaviour
             displayImage.color = new Color(1, 1, 1, 0);
             displayImage.enabled = true;
         }
-
+        SoundLibrary.Instance.StopSteps();
         StartCoroutine(PlaySequence());
     }
 
@@ -81,6 +81,8 @@ public class CutsceneController : MonoBehaviour
             yield return displayImage.DOFade(0f, fadeDuration).SetEase(Ease.Linear).WaitForCompletion();
         }
         DialogManager.Instance.Clear(DialogType.Cutscene);
+        SaveSystem.restorePlayerPositionOnLoad = true;
+        SaveSystem.loadOnSceneStart = true;
         GameManager.Instance.LoadLevel(nextSceneName);
     }
 

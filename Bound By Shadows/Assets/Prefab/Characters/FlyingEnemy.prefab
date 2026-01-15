@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5970767848880347489}
   - component: {fileID: 9197688574950114155}
   - component: {fileID: -3511380399140885366}
-  - component: {fileID: -4143027332852031985}
+  - component: {fileID: 2396361131190971583}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: Untagged
@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700128e87fe58046ab5d25cb60b1e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueId: 0e0058a0-910c-4c30-a68f-836f012f13b7
---- !u!114 &-4143027332852031985
+  uniqueId: f85db152-5dcd-4011-a3c5-154cf6c0ef51
+--- !u!114 &2396361131190971583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

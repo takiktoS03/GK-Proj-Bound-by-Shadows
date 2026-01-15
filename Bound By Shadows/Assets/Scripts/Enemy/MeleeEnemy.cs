@@ -127,7 +127,8 @@ public class MeleeEnemy : MonoBehaviour
         var saveable = GetComponentInParent<SaveableObject>();
         if (saveable != null)
         {
-            DestroyedRegistry.MarkDestroyed(saveable.UniqueId);
+            string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            SessionDestroyedRegistry.MarkAsDestroyed(sceneName, saveable.UniqueId);
         }
         dissolveEffect.PlayDissolve(2f, true, () =>
         {

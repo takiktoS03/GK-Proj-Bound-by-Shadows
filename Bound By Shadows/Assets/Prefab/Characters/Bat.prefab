@@ -429,6 +429,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  currentHealth: 0
 --- !u!114 &7104656718659070412
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -37,22 +37,6 @@ public class PatrolEnemy : MonoBehaviour, IEnemyMovement
         initScale = enemy.localScale;
     }
 
-    private void Start()
-    {
-        var health = GetComponentInChildren<Health>();
-
-        // 2. Jeśli znaleźliśmy, automatycznie dopisujemy naszą metodę do listy zdarzeń
-        if (health != null)
-        {
-            // To jest to samo co "Plusik" w Inspectorze, ale robione przez kod
-            health.onDeath.AddListener(OnEnemyDeath);
-        }
-        else
-        {
-            Debug.LogWarning($"Szkielet {name} nie ma komponentu Health w dzieciach!");
-        }
-    }
-
     /** @brief Obsługuje logikę patrolowania i zmianę kierunku */
     private void Update()
     {
@@ -128,48 +112,5 @@ public class PatrolEnemy : MonoBehaviour, IEnemyMovement
 
         if (anim != null)
             anim.SetBool("Moving", false);
-    }
-    public void OnEnemyDeath()
-    {
-        isDead = true;
-        this.enabled = false;
-
-        if (anim != null)
-        {
-            anim.SetBool("Moving", false);
-            anim.SetTrigger("Death");
-        }
-
-        var rb = GetComponentInParent<Rigidbody2D>();
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
-
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-            rb.bodyType = RigidbodyType2D.Kinematic;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
-
-        var saveable = GetComponent<SaveableObject>();
-        if (saveable == null) saveable = GetComponentInParent<SaveableObject>();
-        if (saveable != null) DestroyedRegistry.MarkDestroyed(saveable.UniqueId);
-
-        var dissolve = GetComponentInChildren<DissolveEffect>();
-        if (dissolve == null) dissolve = GetComponent<DissolveEffect>();
-
-        if (dissolve != null)
-        {
-            dissolve.PlayDissolve(2f, true, () =>
-            {
-                if (transform.parent != null) Destroy(transform.parent.gameObject);
-                else Destroy(gameObject);
-            },
-            1f);
-        }
-        else
-        {
-            Destroy(transform.parent != null ? transform.parent.gameObject : gameObject, 3f);
-        }
     }
 }

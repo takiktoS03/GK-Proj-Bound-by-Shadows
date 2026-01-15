@@ -181,13 +181,14 @@ public class PlayerHealth : Health
     /**
      * Ustawia wartość pasków zdrowia i staminy.
      */
-    public override void SetBarsValue(float value)
+    public void SetStamina(float amount)
     {
-        base.SetBarsValue(value);
-        staminaBar.Initialize(currentStamina);
-        staminaBar.UpdateBar(currentStamina);
+        currentStamina = Mathf.Clamp(amount, 0, startingStamina);
+        if (staminaBar != null)
+        {
+            staminaBar.UpdateBar(currentStamina);
+        }
     }
-
     /**
      * Coroutine odpowiedzialna za automatyczną regenerację staminy.
      */
@@ -202,19 +203,5 @@ public class PlayerHealth : Health
             yield return new WaitForSeconds(staminaRegenTimeRate);
         }
     }
-    public override void Revive()
-    {
-        base.Revive();
-
-        if (playerMovement != null)
-            playerMovement.enabled = true;
-
-        if (anim != null)
-        {
-            anim.Rebind();
-            anim.Update(0f);
-        }
-    }
-
 }
 

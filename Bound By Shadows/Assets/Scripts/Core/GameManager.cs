@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public CanvasGroup fadeScreen;
     public Slider loadingBar;
 
+    [HideInInspector] public string targetSpawnId;
+    [HideInInspector] public bool IsLoading { get; private set; }
+
     private void Awake()
     {
         if (Instance != null)
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         if (loadingBar != null) loadingBar.gameObject.SetActive(false);
+        if (fadeScreen != null) fadeScreen.alpha = 0f;
     }
 
     private void Start()
@@ -32,6 +36,47 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (SaveSystem.loadOnSceneStart)
+        {
+            SaveSystem.LoadCurrentScene();
+            SaveSystem.loadOnSceneStart = false;
+        }
+        if (!string.IsNullOrEmpty(targetSpawnId))
+        {
+            MovePlayerToSpawnPoint(targetSpawnId);
+            targetSpawnId = null;
+        }
+    }
+
+    private void MovePlayerToSpawnPoint(string spawnId)
+    {
+        SpawnPoint[] points = FindObjectsByType<SpawnPoint>(FindObjectsSortMode.None);
+        foreach (var point in points)
+        {
+            if (point.spawnID == spawnId)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    player.transform.position = point.transform.position;
+                }
+                break;
+            }
+        }
+    }
+
     /// <summary>
     /// Główna metoda do zmiany sceny.
     /// </summary>
@@ -39,14 +84,16 @@ public class GameManager : MonoBehaviour
     /// <param name="fadeDuration">Czas ściemniania (domyślnie 1s)</param>
     public void LoadLevel(string sceneName, float fadeDuration = 1.0f)
     {
+        if (IsLoading) return;
         StartCoroutine(LoadSceneRoutine(sceneName, fadeDuration));
     }
 
     private IEnumerator LoadSceneRoutine(string sceneName, float fadeDuration)
     {
+        IsLoading = true;
         fadeScreen.blocksRaycasts = true; // Blokuje kliknięcia
 
-        yield return FadeIn(fadeDuration).WaitForCompletion();
+        yield return FadeIn(fadeDuration).SetUpdate(true).WaitForCompletion();
 
         if (loadingBar != null) loadingBar.gameObject.SetActive(true);
 
@@ -62,7 +109,7 @@ public class GameManager : MonoBehaviour
 
         // Chwila na "dobicie" paska do końca
         if (loadingBar != null) loadingBar.value = 1f;
-        yield return new WaitForSeconds(0.1f); // Krótka pauza bezpieczeństwa
+        yield return new WaitForSeconds(0.2f);
 
         operation.allowSceneActivation = true;
 
@@ -71,13 +118,15 @@ public class GameManager : MonoBehaviour
 
         if (loadingBar != null) loadingBar.gameObject.SetActive(false);
 
-        yield return FadeOut(fadeDuration).WaitForCompletion();
+        yield return FadeOut(fadeDuration).SetUpdate(true).WaitForCompletion();
         fadeScreen.blocksRaycasts = false;
+        IsLoading = false;
     }
 
+
+    // Fade'y zwracają animację, żeby można było na nią czekać
     public Tween FadeOut(float fadeDuration = 1.0f)
     {
-        // Zwraca animację, żeby można było na nią czekać
         return fadeScreen.DOFade(0f, fadeDuration).SetUpdate(true);
     }
 
