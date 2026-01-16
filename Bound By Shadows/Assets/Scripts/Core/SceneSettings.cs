@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 
+/**
+ * Skrypt sceny zarządzający ustawieniami dźwięku tła,
+ * w szczególności odtwarzaniem muzyki dla danej lokacji.
+ *
+ * @author Filip Kudła
+ */
 public class SceneSettings : MonoBehaviour
 {
     [Header("Music Settings")]

@@ -1,6 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+/**
+ * Skrypt obsługujący specjalną umiejętność miecza,
+ * tymczasowo zwiększającą obrażenia oraz zmieniającą wygląd broni.
+ *
+ * @author Filip Kudła
+ */
+
 public class SwordAbilityController : MonoBehaviour
 {
     [Header("Ustawienia Umiejętności")]

@@ -1,15 +1,8 @@
 ﻿using UnityEngine;
 
 /**
- * @class SpikesTrap
- * @brief Pułapka kolców zadająca obrażenia i odpychająca gracza po wejściu w trigger.
- *
- * Po kolizji z graczem:
- * - zadaje określoną liczbę obrażeń,
- * - anuluje jego bieżący ruch,
- * - odpycha go w kierunku od centrum kolców.
- *
- * Wymaga komponentu `Rigidbody2D` na graczu i skryptu `Health`.
+ * Skrypt obsługujący pułapkę kolców, która zadaje obrażenia i odpycha gracza
+ * po wejściu w jej obszar kolizji.
  *
  * @author Filip Kudła
  */

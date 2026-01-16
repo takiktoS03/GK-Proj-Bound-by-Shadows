@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
 /**
- * @class PlayerSaveData
- * @brief Klasa odpowiedzialna za zapis i odczyt stanu gracza.
+ * Skrypt odpowiedzialny za zapis i odczyt stanu gracza,
+ * w tym zdrowia i staminy, w systemie zapisu gry.
  *
- * Implementuje interfejs `ISaveable`, integrując się z globalnym systemem zapisu gry.
- * Pobiera i przywraca stan komponentu `PlayerHealth` przypisanego do gracza.
- *
- * @author Filip Kudła
+ * @author Julia Bigaj
  */
+
 public class PlayerSaveData : MonoBehaviour, ISaveable
 {
     [System.Serializable]
@@ -16,8 +14,6 @@ public class PlayerSaveData : MonoBehaviour, ISaveable
     {
         public float hp;
         public float stamina;
-        // public float[] position; 
-        // public int xp;
     }
 
     private PlayerHealth playerHealth;

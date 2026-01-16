@@ -315,6 +315,7 @@ MonoBehaviour:
   floatAmplitude: 0.5
   floatFrequency: 1
   smoothSpeed: 2
+  isFollowingPlayer: 0
 --- !u!1 &5794558657346354841
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,4 +425,5 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 2240
-  abilityCooldown: 3
+  isAbilityUnlocked: 0
+  abilityCooldown: 6

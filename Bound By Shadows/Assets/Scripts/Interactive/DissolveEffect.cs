@@ -2,6 +2,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+/**
+ * Skrypt realizujący efekt dissolve (rozpuszczania / pojawiania się obiektu)
+ * przy użyciu parametru shadera i płynnej animacji w czasie.
+ *
+ * @author Filip Kudła
+ */
 [RequireComponent(typeof(SpriteRenderer))]
 public class DissolveEffect : MonoBehaviour
 {
@@ -15,13 +21,6 @@ public class DissolveEffect : MonoBehaviour
         mpb = new MaterialPropertyBlock();
     }
 
-    /// <summary>
-    /// Uruchamia efekt dissolve (rozpuszczanie lub pojawianie się obiektu) z shadera.
-    /// </summary>
-    /// <param name="duration">Czas trwania</param>
-    /// <param name="invert">True: 1->0 (znikanie), False: 0->1 (pojawianie)</param>
-    /// <param name="onComplete">Opcjonalna akcja do wykonania po zakończeniu (np. Destroy)</param>
-    /// <param name="prepTime">Opcjonalny czas trwania zanim efekt się zacznie wykonywać</param>
     public void PlayDissolve(float duration, bool invert, System.Action onComplete = null, float prepTime = 0f)
     {
         StopAllCoroutines();

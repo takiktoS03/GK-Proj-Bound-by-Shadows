@@ -1,6 +1,12 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Skrypt obsługujący logikę skrzyni, w tym jej otwieranie,
+ * przechowywanie przedmiotów oraz przekazywanie ich do ekwipunku gracza.
+ *
+ * @author Julia Bigaj
+ */
 public class Chest : MonoBehaviour
 {
     public List<ItemStack> items;

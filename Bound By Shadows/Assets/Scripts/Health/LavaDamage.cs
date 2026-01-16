@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 
 /**
- * @class LavaDamage
- * @brief Skrypt zadający obrażenia graczowi przy kontakcie z lawą.
- *
- * Po wejściu w strefę lawy, odejmuje graczowi określoną ilość zdrowia i odrzuca go.
+ * Skrypt zadający okresowe obrażenia obiektowi przebywającemu w obszarze lawy.
+ * Wykorzystuje interwał czasowy, aby zapobiec ciągłemu zadawaniu obrażeń.
  *
  * @author Filip Kudła
  */
+
 public class LavaDamage : MonoBehaviour
 {
     /// @brief Ilość obrażeń zadanych przez lawę.

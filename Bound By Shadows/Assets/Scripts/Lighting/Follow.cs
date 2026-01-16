@@ -1,6 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/**
+ * Skrypt umożliwiający płynne podążanie obiektu za wskazanym celem z zadanym offsetem.
+ * Stosowany m.in. do świateł, efektów lub obiektów pomocniczych.
+ *
+ * @author Filip Kudła
+ */
 public class Follow : MonoBehaviour
 {
     public Transform objectToFollow;

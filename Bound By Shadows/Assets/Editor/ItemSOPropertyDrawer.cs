@@ -1,6 +1,13 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
+
+/**
+ * Niestandardowy PropertyDrawer dla typu ItemSO,
+ * umożliwiający tworzenie nowych assetów ItemSO bezpośrednio z poziomu Inspector’a.
+ *
+ * @author Julia Bigaj
+ */
 [CustomPropertyDrawer(typeof(ItemSO))]
 public class ItemSOPropertyDrawer : PropertyDrawer
 {
@@ -36,7 +43,7 @@ public class ItemSOPropertyDrawer : PropertyDrawer
         {
             if (IsNewListItem(property))
             {
-                // Zostawiamy puste � poprawne zachowanie
+                // Zostawiamy puste — poprawne zachowanie
             }
         }
 

@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
 /**
- * @class AxeTrap
- * @brief Obsługuje ruchome pułapki typu wahadłowy topór.
+ * Skrypt odpowiedzialny za pułapkę topora poruszającego się ruchem wahadłowym,
+ * który zadaje obrażenia graczowi po kolizji.
  *
- * Topór porusza się jak fizyczne wahadło (z tłumieniem) pomiędzy dwoma wychyleniami.
- * Po kolizji z graczem zadaje obrażenia.
- *
- * @author Filip Kudla
+ * @author Filip Kudła
  */
+
 public class AxeTrap : MonoBehaviour
 {
     /** @brief Maksymalny kąt wychylenia (w stopniach) od pionu. */
@@ -26,9 +24,9 @@ public class AxeTrap : MonoBehaviour
     /** @brief Współczynnik tłumienia wahadła (1 = brak tłumienia). */
     [SerializeField] private float damping = 0.95f;
 
-    private float currentAngle;              ///< Aktualny kąt wychylenia (w radianach).
-    private float angularVelocity = 0f;      ///< Prędkość kątowa wahadła.
-    private Vector3 pivotPosition;           ///< Stała pozycja punktu zawieszenia (pivot).
+    private float currentAngle;
+    private float angularVelocity = 0f;
+    private Vector3 pivotPosition;
 
     /**
      * @brief Ustawia początkowy kąt i pozycję pivotu.

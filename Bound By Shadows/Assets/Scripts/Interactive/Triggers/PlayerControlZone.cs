@@ -1,5 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * Skrypt zarządzający blokowaniem lub odblokowywaniem kontroli gracza
+ * po wejściu w określoną strefę na scenie.
+ *
+ * @author Filip Kudła
+ */
 public class PlayerControlZone : MonoBehaviour
 {
     [System.Serializable]

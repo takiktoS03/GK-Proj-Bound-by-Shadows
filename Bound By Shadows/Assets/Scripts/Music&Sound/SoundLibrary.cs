@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 
 /**
- * @class SoundLibrary
- * @brief Centralna biblioteka efektów dźwiękowych w grze.
+ * Centralna biblioteka efektów dźwiękowych używanych w grze.
+ * Udostępnia uproszczone metody do odtwarzania konkretnych dźwięków
+ * związanych z postacią, otoczeniem oraz elementami rozgrywki.
  *
- * Implementuje wzorzec singletonu. Udostępnia metody (publiczne API) do odtwarzania konkretnych efektów dźwiękowych,
- * takich jak ataki, otwieranie skrzyni, dźwięki łamigłówek czy kroki bohatera.
- * Używa AudioManagera do odgrywania dźwięków.
+ * Klasa pełni rolę warstwy pośredniej pomiędzy logiką gry
+ * a systemem AudioManager, porządkując dostęp do efektów dźwiękowych
+ * i ułatwiając ich późniejszą rozbudowę lub modyfikację.
  *
- * @author Filip Kudła
+ * @author Julia Bigaj
  */
+
 public class SoundLibrary : MonoBehaviour
 {
     /// @brief Instancja singletonu SoundLibrary.
@@ -74,8 +76,6 @@ public class SoundLibrary : MonoBehaviour
     }
 
     // --- Skrócone metody do efektów dźwiękowych ---
-
-    // Jednorazowe
 
     /// @brief Odtwarza dźwięk otwierania skrzyni.
     public void PlayChest() => AudioManager.Instance.PlaySFX(chestOpenSound);

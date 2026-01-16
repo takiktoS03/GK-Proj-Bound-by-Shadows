@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,15 +11,21 @@ using UnityEngine.Jobs;
 using UnityEngine.Scripting;
 
 /**
- * @enum EmissionShape
- * @brief Okre?la kszta?t obszaru emisji cz?steczek.
+ * Autorski system cząsteczek 2D oparty o Unity Job System i Burst Compiler.
+ * Skrypt odpowiada za tworzenie, aktualizację oraz renderowanie cząsteczek
+ * z uwzględnieniem fizyki (grawitacja, opór powietrza, wiatr), kolizji 2D
+ * oraz animacji właściwości w czasie życia cząsteczki.
+ *
+ * System obsługuje różne kształty emisji (punkt, linia, okrąg, obszar),
+ * umożliwia konfigurację kolorów, skali i przezroczystości w czasie
+ * oraz współpracuje z presetami efektów cząsteczek.
+ * Został zaprojektowany z myślą o wydajności i łatwej rozbudowie.
+ *
+ * @author Julia Bigaj
  */
+
 public enum EmissionShape { Point, Line, Circle, Area }
 
-/**
- * @struct ParticleData
- * @brief Struktura przechowuj?ca dane pojedynczej cz?steczki.
- */
 public struct ParticleData
 {
     public Vector2 position;
@@ -36,11 +42,11 @@ public struct ParticleData
  */
 public enum ParticleCollisionMode
 {
-    None,       // brak kolizji
-    Stop,       // zatrzymanie na powierzchni
-    Bounce,     // odbicie
-    Stick,      // przyklejenie si?
-    Slide       // ?lizganie po powierzchni
+    None,
+    Stop,     
+    Bounce,  
+    Stick,     
+    Slide       
 }
 
 /**
@@ -98,7 +104,7 @@ public struct ParticleUpdateJob : IJobParallelForTransform
  * @brief W?asny system cz?steczek 2D oparty o Job System.
  *
  * Skrypt obs?uguje emisj?, fizyk?, kolizje, renderowanie
- * oraz prac? z presetami efekt�w cz?steczek.
+ * oraz prac? z presetami efektów cz?steczek.
  *
  * @author Julia Bigaj
  */
@@ -157,7 +163,7 @@ public class ParticleSystem2D : MonoBehaviour
 
     private Transform particleRoot;
 
-    // JOB SYSTEM � dane
+    // JOB SYSTEM – dane
     private NativeArray<ParticleData> particleArray;
     private TransformAccessArray transformArray;
     private SpriteRenderer[] spriteRenderers;
@@ -193,7 +199,7 @@ public class ParticleSystem2D : MonoBehaviour
     }
 
     /**
-    * @brief Zwalnia pami?? NativeArray oraz Job Systemu.
+    * @brief Zwalnia pamiec NativeArray oraz Job Systemu.
     */
     private void OnDestroy()
     {
@@ -202,9 +208,9 @@ public class ParticleSystem2D : MonoBehaviour
     }
 
     /**
-     * @brief G?�wna p?tla aktualizacji systemu cz?steczek.
+     * @brief Glówna petla aktualizacji systemu czasteczek.
      *
-     * Odpowiada za emisj?, fizyk?, kolizje oraz rendering.
+     * Odpowiada za emisje, fizyke, kolizje oraz rendering.
      */
     void Update()
     {
@@ -298,8 +304,8 @@ public class ParticleSystem2D : MonoBehaviour
                                 {
                                     Vector2 n = hit.normal.normalized;
                                     Vector2 v = p.velocity;
-                                    Vector2 vn = Vector2.Dot(v, n) * n; // prostopadla
-                                    Vector2 vt = v - vn;                // styczna
+                                    Vector2 vn = Vector2.Dot(v, n) * n;
+                                    Vector2 vt = v - vn;
                                     p.velocity = vt;
                                 }
                                 break;

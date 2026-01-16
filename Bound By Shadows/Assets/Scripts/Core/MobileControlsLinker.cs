@@ -2,6 +2,12 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/**
+ * Skrypt odpowiedzialny za obsługę i podpinanie mobilnych kontrolek UI
+ * do gracza po załadowaniu sceny.
+ *
+ * @author Julia Bigaj
+ */
 public class MobileControlsLinker : MonoBehaviour
 {
     [Header("Setup")]

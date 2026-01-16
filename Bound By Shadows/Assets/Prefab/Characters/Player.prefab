@@ -318,8 +318,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationKey: 114
-  abilityDuration: 10
-  cooldownDuration: 5
+  abilityDuration: 6
+  cooldownDuration: 15
   damageBonus: 0.15
   buffColor: {r: 0, g: 7.9999995, b: 0.56470674, a: 1}
   intensity: 5
@@ -369,7 +369,7 @@ MonoBehaviour:
   currentHealth: 0
   staminaBar: {fileID: 0}
   startingStamina: 200
-  staminaRegenRate: 1
+  staminaRegenRate: 2
   staminaRegenTimeRate: 1
   damageVolume: {fileID: 0}
   cameraShake: {fileID: 0}

@@ -1,5 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
+
+/**
+ * Skrypt realizujący pulsowanie światła poprzez cykliczne zmiany intensywności i zasięgu.
+ * Używany do podkreślenia dynamicznych lub magicznych elementów sceny.
+ *
+ * @author Filip Kudła
+ */
 
 public class Pulse : MonoBehaviour
 {

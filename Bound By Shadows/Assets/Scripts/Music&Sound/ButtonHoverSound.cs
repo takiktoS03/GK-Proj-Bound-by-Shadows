@@ -2,15 +2,16 @@
 using UnityEngine.EventSystems;
 
 /**
- * @class ButtonHoverSound
- * @brief Odtwarza dźwięk najechania na przycisk w interfejsie użytkownika.
+ * Skrypt obsługujący dźwięk najechania kursorem na przyciski interfejsu użytkownika.
+ * Reaguje na zdarzenie wejścia wskaźnika myszy na element UI
+ * i odtwarza przypisany efekt dźwiękowy typu „hover”.
  *
- * Implementuje interfejs `IPointerEnterHandler`, aby reagować na zdarzenie najechania kursorem na element UI.
- * Przy wejściu kursora na przycisk odtwarzany jest przypisany dźwięk typu "hover".
- * Źródło dźwięku (`AudioSource`) wyszukiwane jest dynamicznie w scenie przy starcie.
+ * Wykorzystywany w menu oraz interfejsach gry w celu poprawy
+ * informacji zwrotnej dla użytkownika.
  *
  * @author Julia Bigaj
  */
+
 public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
 {
     /// @brief Dźwięk odtwarzany przy najechaniu na przycisk.
@@ -24,7 +25,6 @@ public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
      */
     void Start()
     {
-        // Szuka AudioSource w obiekcie nadrzędnym (np. Menu lub MainMenu)
         audioSource = FindFirstObjectByType<AudioSource>();
     }
 

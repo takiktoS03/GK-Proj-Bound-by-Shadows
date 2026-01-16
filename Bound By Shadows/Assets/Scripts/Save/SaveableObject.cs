@@ -6,18 +6,12 @@ using UnityEditor;
 #endif
 
 /**
- * @class SaveableObject
- * @brief Przypisuje unikalny identyfikator (`UniqueId`) do obiektu gry, aby umożliwić jego zapis i odtworzenie.
+ * Skrypt nadający obiektom unikalny identyfikator, umożliwiający ich zapis
+ * i poprawne odtworzenie w systemie zapisu gry.
  *
- * Klasa ta zapewnia, że każdy obiekt w scenie posiada unikalny identyfikator, który może być wykorzystany
- * w systemie zapisu stanu gry. Jeśli identyfikator nie jest unikalny, zostaje wygenerowany nowy.
- * Działa tylko w edytorze Unity — podczas działania gry identyfikator nie jest zmieniany.
- *
- * @note Współpracuje z interfejsem `ISaveable`.
- * @note `DisallowMultipleComponent` gwarantuje, że komponent nie zostanie dodany wielokrotnie do jednego obiektu.
- *
- * @author Filip Kudła
+ * @author Julia Bigaj
  */
+
 [DisallowMultipleComponent]
 public class SaveableObject : MonoBehaviour
 {
@@ -35,13 +29,11 @@ public class SaveableObject : MonoBehaviour
      */
     private void Awake()
     {
-        // DLA GRACZA: Wymuszamy stałe ID
         if (gameObject.CompareTag("Player"))
         {
             uniqueId = "Ethan-The-Hero-Unique-ID";
         }
 
-        // DLA INNYCH OBIEKTÓW: Jeśli ID puste, generuj losowe
         if (string.IsNullOrEmpty(uniqueId))
         {
             uniqueId = System.Guid.NewGuid().ToString();

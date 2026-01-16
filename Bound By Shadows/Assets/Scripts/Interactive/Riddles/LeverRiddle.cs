@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
-
 /**
- * @class LeverRiddle
- * @brief Sprawdza poprawność ułożenia dźwigni i aktywuje ukrytą platformę.
- *
- * Gdy dźwignie zostaną ustawione w odpowiedniej kombinacji, aktywuje ukryte kafelki (np. kamień, most).
+ * Skrypt sprawdzający poprawność ustawienia dźwigni w zagadce
+ * i aktywujący ukryty element po spełnieniu warunku.
  *
  * @author Filip Kudła
  */
+
 public class LeverRiddle : MonoBehaviour
 {
     /// @brief Obiekt z ukrytymi kafelkami do aktywacji.

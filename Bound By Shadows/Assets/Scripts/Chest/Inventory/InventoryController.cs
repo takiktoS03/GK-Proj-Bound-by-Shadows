@@ -1,5 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * Skrypt kontrolujący otwieranie i zamykanie ekwipunku
+ * oraz zarządzający stanem pauzy gry.
+ *
+ * @author Julia Bigaj
+ */
 public class InventoryController : MonoBehaviour
 {
     public static InventoryController Instance { get; private set; }

@@ -4,11 +4,8 @@ using UnityEditor;
 using UnityEngine;
 
 /**
- * @class Health
- * @brief Bazowa klasa obsługująca zdrowie dla wszelkich istot w grze.
- *
- * Oferuje podstawową logikę odbierania/leczenia obrażeń, obsługę nieśmiertelności oraz pasek zdrowia.
- * Może być dziedziczona przez inne klasy (np. `PlayerHealth`, `EnemyHealth`).
+ * Bazowa klasa obsługująca zdrowie obiektów w grze, w tym otrzymywanie obrażeń,
+ * leczenie oraz obsługę śmierci i paska zdrowia.
  *
  * @author Filip Kudła
  */
@@ -28,7 +25,7 @@ public class Health : MonoBehaviour
 
     [Header("Event activate on Death")]
     public UnityEngine.Events.UnityEvent onDeath;
-    public float currentHealth;
+    [SerializeField] public float currentHealth;
     protected Animator anim;
     protected SpriteRenderer spriteRend;
 
@@ -73,13 +70,6 @@ public class Health : MonoBehaviour
             dead = true;
             Die();
         }
-
-        //if (currentHealth <= 0 && !dead)
-        //{
-        //    dead = true;
-        //    Die(); // tylko sygnał
-        //}
-
 
         return true;
     }
@@ -127,10 +117,5 @@ public class Health : MonoBehaviour
         canTakeDamage = true;
         anim.SetTrigger("HurtEnded");
     }
-    //public virtual void Revive()
-    //{
-    //    dead = false;
-    //    canTakeDamage = true;
-    //}
 }
 

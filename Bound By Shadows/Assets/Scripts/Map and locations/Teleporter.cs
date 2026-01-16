@@ -2,17 +2,13 @@
 using System.Collections;
 using UnityEngine;
 
-
 /**
- * @class Teleporter
- * @brief Obsługuje teleportacje gracza do wskazanego miejsca.
- * 
- * Przemieszcza transform gracza do zadanego miejsca docelowego.
- * Używane do przechodzenia do innych pomieszczeń i lokalizacji w obrębie jednej sceny.
- * Podczas przejścia zatrzymuje kamerę, robi fade out fade in, po czym ją włącza.
- * 
+ * Skrypt obsługujący teleportację gracza do wyznaczonego punktu,
+ * wraz z płynnym przejściem wizualnym kamery.
+ *
  * @author Filip Kudła
  */
+
 public class Teleporter : MonoBehaviour
 {
     [Header("Teleport parameters")]

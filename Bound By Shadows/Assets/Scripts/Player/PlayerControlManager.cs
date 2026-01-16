@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using EthanTheHero;
 
+/**
+ * Skrypt zarządzający blokowaniem i odblokowywaniem sterowania graczem,
+ * wykorzystywany podczas animacji, umiejętności i zdarzeń specjalnych.
+ *
+ * @author Filip Kudła
+ */
 public class PlayerControlManager : MonoBehaviour
 {
     private PlayerMovement movement;
@@ -18,15 +24,12 @@ public class PlayerControlManager : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    /// <summary>
-    /// Blokuje sterowanie gracza, resetuje fizykę i animacje do Idle.
-    /// </summary>
     public void LockControls(bool blockMove, bool blockWallSlide, bool blockAttack, bool blockAnim)
     {
         if (blockMove && movement != null)
         {
             movement.enabled = false;
-            if (rb != null) rb.linearVelocity = Vector2.zero; // Zatrzymanie w miejscu
+            if (rb != null) rb.linearVelocity = Vector2.zero;
         }
 
         if (blockWallSlide && movement != null)
@@ -45,10 +48,6 @@ public class PlayerControlManager : MonoBehaviour
             PlayIdle();
         }
     }
-
-    /// <summary>
-    /// Przywraca sterowanie.
-    /// </summary>
     public void UnlockControls()
     {
         if (movement != null)

@@ -3,9 +3,6 @@ using UnityEditor;
 using UnityEngine;
 
 /**
- * @class ParticleSystem2DEditor
- * @brief Custom Inspector dla klasy ParticleSystem2D.
- *
  * Skrypt rozszerza Inspector systemu cz?steczek 2D o obs?ug? presetów,
  * kopii roboczej ustawie? (working copy) oraz parametrów renderowania.
  * Zapobiega resetowaniu ustawie? podczas edycji w edytorze.

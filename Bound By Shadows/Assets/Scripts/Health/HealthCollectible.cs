@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 
 /**
- * @class HealthCollectible
- * @brief Skrypt odpowiedzialny za przedmiot przywracający zdrowie graczowi.
- *
- * Po zebraniu przez gracza, przywraca określoną ilość zdrowia i usuwa się ze sceny.
+ * Skrypt przedmiotu kolekcjonerskiego, który po podniesieniu
+ * przywraca graczowi określoną ilość zdrowia.
  *
  * @author Filip Kudła
  */
+
 public class HealthCollectible : MonoBehaviour
 {
     /// @brief Ilość zdrowia do przywrócenia.

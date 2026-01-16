@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/**
+ * Skrypt realizujący umiejętność skanowania otoczenia, wykrywając ukryte obiekty
+ * i aktywując efekty wizualne w zasięgu skanu.
+ *
+ * @author Filip Kudła
+ */
 public class WorldScanner : MonoBehaviour
 {
     [Header("Scan Settings")]

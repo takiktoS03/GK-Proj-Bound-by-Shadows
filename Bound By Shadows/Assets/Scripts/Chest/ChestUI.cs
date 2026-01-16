@@ -1,8 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 //using static System.Net.Mime.MediaTypeNames;
 
+/**
+ * Skrypt zarządzający interfejsem skrzyni, wyświetlający jej zawartość
+ * oraz umożliwiający zabranie przedmiotów.
+ *
+ * @author Julia Bigaj
+ */
 public class ChestUI : MonoBehaviour
 {
     public static ChestUI Instance;

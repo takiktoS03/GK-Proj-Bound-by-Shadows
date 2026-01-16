@@ -2,6 +2,13 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/**
+ * Skrypt uruchamiający efekt dissolve obiektu po wejściu gracza w trigger.
+ * Może opcjonalnie aktywować cienie i zapobiega wielokrotnemu uruchomieniu efektu.
+ *
+ * @author Filip Kudła
+ */
+
 [RequireComponent(typeof(SpriteRenderer))]
 public class DissolveTrigger : MonoBehaviour
 {

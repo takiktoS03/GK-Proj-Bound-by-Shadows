@@ -1,5 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
+
+/**
+ * Skrypt odpowiadający za migotanie światła poprzez losowe zmiany jego intensywności w czasie.
+ * Wykorzystywany do nadania klimatu pochodniom i innym źródłom światła.
+ *
+ * @author Filip Kudła
+ */
 
 public class Flickering : MonoBehaviour
 {

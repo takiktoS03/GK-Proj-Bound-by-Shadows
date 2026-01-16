@@ -1,6 +1,12 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
+/**
+ * Niestandardowy edytor Inspector dla obiektu ItemSO,
+ * umożliwiający dynamiczne wyświetlanie pól w zależności od typu przedmiotu.
+ *
+ * @author Julia Bigaj
+ */
 [CustomEditor(typeof(ItemSO))]
 public class ItemSOEditor : Editor
 {
@@ -19,7 +25,7 @@ public class ItemSOEditor : Editor
 
         EditorGUILayout.Space(10);
 
-        // ?? R�?NE POLA W ZALE?NO?CI OD TYPU ITEMU
+        // ?? RÓ?NE POLA W ZALE?NO?CI OD TYPU ITEMU
 
         // =============================================
         //                LETTER
@@ -32,7 +38,7 @@ public class ItemSOEditor : Editor
             EditorGUILayout.LabelField("Image Preview:");
             item.imagePreview = (Sprite)EditorGUILayout.ObjectField(item.imagePreview, typeof(Sprite), false);
 
-            // blokujemy tekstowe preview � wy??czone ca?kowicie
+            // blokujemy tekstowe preview – wy??czone ca?kowicie
             item.hasTextPreview = false;
             item.textPreview = "";
         }

@@ -1,18 +1,23 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Skrypt dodany do projektu z Asset Store z paczki EthanTheHero (autor: Twelve).
+ * Odpowiada za podstawowy system ataku gracza, w tym 3-atakowe combo,
+ * obsługę animacji ataku oraz przesunięcie postaci podczas wykonywania ciosów.
+ *
+ * Modyfikacje wprowadzone w projekcie:
+ * - dostosowanie obsługi wejścia (PC + mobile),
+ * - dodanie blokad ataku przy otwartym UI, pauzie i innych stanach gracza,
+ * - integracja z dodatkowymi systemami gry (UIStateManager, PauseMenu),
+ * - drobne zmiany logiczne i porządkowe w kodzie.
+ *
+ * @author Twelve (oryginał), modyfikacje: Filip Kudła
+ */
+
 namespace EthanTheHero
 {
-    /**
-     * @class PlayerAttackMethod
-     * @brief Obsługuje podstawowy system ataku postaci gracza (combo 3-atakowe).
-     *
-     * Umożliwia wykonywanie sekwencyjnych ataków (combo), reagując na kliknięcia myszy
-     * w odpowiednim czasie trwania animacji. Obsługuje również dźwięki i przesunięcia gracza
-     * podczas ataku.
-     *
-     * Używa animatora oraz komponentów PlayerMovement i Rigidbody2D.
-     */
+
     public class PlayerAttackMethod : MonoBehaviour
     {
         #region FIELD
@@ -128,7 +133,7 @@ namespace EthanTheHero
                 // Na PC/Edytorze liczy się Myszka LUB przycisk UI (do testów)
                 isAttackInput = Input.GetMouseButtonDown(0) || attackRequested;
             }
-            // Start combo
+
             if (isAttackInput && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack01")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack02")
                 && !myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03") && playerMv.grounded)

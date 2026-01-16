@@ -1,7 +1,13 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Skrypt obsługujący przypisywanie przedmiotów do slotów hotbara z poziomu UI.
+ * Zapewnia synchronizację danych hotbara z zawartością ekwipunku.
+ *
+ * @author Julia Bigaj
+ */
 public class HotbarSlot : MonoBehaviour
 {
     public Image icon;
@@ -57,7 +63,7 @@ public class HotbarSlot : MonoBehaviour
 
         SetItem(selected);
 
-        // czy?cimy wyb�r (opcjonalnie)
+        // czy?cimy wybór (opcjonalnie)
         Inventory.Instance.selectedItemForHotbar = null;
     }
 

@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/**
+ * Centralny menedżer gry odpowiedzialny za ładowanie scen,
+ * przejścia wizualne oraz ustawianie pozycji gracza po zmianie sceny.
+ *
+ * @author Filip Kudła
+ */
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }

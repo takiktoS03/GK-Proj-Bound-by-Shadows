@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 
+/**
+ * Skrypt dodany do projektu z Asset Store z paczki EthanTheHero (autor: Twelve).
+ * ScriptableObject przechowujący dane konfiguracyjne ruchu gracza,
+ * takie jak prędkość biegu, skok, dash oraz interakcje ze ścianami.
+ *
+ * Modyfikacje wprowadzone w projekcie:
+ * - rozszerzenie danych o koszt staminy dla dasza,
+ * - dostosowanie parametrów do aktualnego balansu rozgrywki,
+ * - uporządkowanie i opisanie pól konfiguracyjnych.
+ *
+ * @author Twelve (oryginał), modyfikacje: Julia Bigaj
+ */
+
 namespace EthanTheHero
 {
-    /**
-     * @class PlayerMovementData
-     * @brief ScriptableObject przechowujący dane konfiguracyjne ruchu gracza.
-     *
-     * Zawiera ustawienia prędkości biegu, przyspieszenia, skoku, daszu oraz interakcji ze ścianami.
-     * Obliczenia siły przyspieszenia i wytracania prędkości wykonywane są automatycznie w metodzie `OnValidate()`.
-     * Umożliwia łatwe dostosowanie balansu postaci bez modyfikacji kodu.
-     */
+
     [CreateAssetMenu(menuName = "Player Movement Data")]
     public class PlayerMovementData : ScriptableObject
     {

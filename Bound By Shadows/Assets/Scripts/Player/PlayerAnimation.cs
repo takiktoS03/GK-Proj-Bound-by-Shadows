@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Skrypt dodany do projektu z Asset Store z paczki EthanTheHero (autor: Twelve).
+ * Odpowiada za sterowanie animacjami gracza na podstawie jego ruchu,
+ * stanu fizyki oraz akcji takich jak bieg, skok, dash i wall slide.
+ *
+ * Modyfikacje wprowadzone w projekcie:
+ * - dostosowanie parametrów animatora do aktualnej logiki gracza,
+ * - integracja z dodatkowymi systemami (np. dash, wall jump),
+ * - uporządkowanie i rozbudowa logiki animacji,
+ * - usunięcie testowych wywołań animacji z klawiatury.
+ *
+ * @author Twelve (oryginał), modyfikacje: Filip Kudła
+ */
+
 namespace EthanTheHero
 {
-    /**
-     * @class PlayerAnimation
-     * @brief Steruje animacjami gracza na podstawie jego stanu ruchu i fizyki.
-     *
-     * Komunikuje się z komponentem Animator, by dynamicznie ustawiać animacje biegu, skoku, dasza,
-     * zsuwania się po ścianie i innych zachowań. Pobiera dane z klas `PlayerMovement`, `Rigidbody2D` i `PlayerAttackMethod`.
-     *
-     * Obsługuje również logikę sprawdzania zakończenia animacji przejścia oraz może być rozszerzony o animacje obrażeń i śmierci.
-     */
     public class PlayerAnimation : MonoBehaviour
     {
         #region FIELD
@@ -58,10 +63,8 @@ namespace EthanTheHero
         {
             #region IDLE & RUN
 
-            // Ustaw animację biegu na podstawie ruchu poziomego
             myAnim.SetFloat(speed, Mathf.Abs(playerMv.move.x));
 
-            // Sprawdza i aktualizuje, czy przejście Run→Idle się zakończyło
             if (myAnim.GetCurrentAnimatorStateInfo(0).IsName("RunIdleTrans"))
             {
                 runIdleIsPlayying = true;

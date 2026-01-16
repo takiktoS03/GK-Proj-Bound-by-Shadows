@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/**
+ * Skrypt pochodzący z Asset Store (autor: Fenerax Studios).
+ * Implementuje wirtualny joystick obsługujący dotyk, przeciąganie oraz różne tryby osi sterowania.
+ */
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public float Horizontal { get { return (snapX) ? SnapFloat(input.x, AxisOptions.Horizontal) : input.x; } }

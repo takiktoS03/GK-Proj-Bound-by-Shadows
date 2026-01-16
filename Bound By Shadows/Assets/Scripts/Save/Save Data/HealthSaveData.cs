@@ -1,4 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
+
+/**
+ * Skrypt umożliwiający zapis i przywracanie poziomu zdrowia obiektów
+ * korzystających z komponentu Health.
+ *
+ * @author Julia Bigaj
+ */
 
 public class HealthSaveData : MonoBehaviour, ISaveable
 {

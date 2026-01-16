@@ -3,17 +3,15 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 /**
- * @class MainMenu
- * @brief Obsługuje przyciski menu głównego: rozpoczęcie gry, wczytanie stanu i wyjście.
- *
- * Klasa odpowiada za przechodzenie do odpowiednich scen oraz inicjalizację systemu zapisu
- * podczas wczytywania gry. Umożliwia również zakończenie działania aplikacji.
+ * Skrypt obsługujący logikę menu głównego gry, w tym rozpoczęcie nowej gry,
+ * wczytanie zapisu oraz wyjście z aplikacji.
  *
  * @author Julia Bigaj
  */
+
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private string firstLevelSceneName = "Dungeon";
+    [SerializeField] private string firstLevelSceneName = "Intro";
     // Intro Cave Dungeon DungeonSecondFloor AbilityCutScene
 
     /**
@@ -36,7 +34,6 @@ public class MainMenu : MonoBehaviour
         string sceneToLoad = SaveSystem.GetLastSavedScene();
         if (string.IsNullOrEmpty(sceneToLoad))
         {
-            Debug.LogWarning("Brak zapisu gry!");
             return;
         }
         SaveSystem.loadOnSceneStart = true;

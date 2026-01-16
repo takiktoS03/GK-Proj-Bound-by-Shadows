@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/**
+ * Skrypt zarządzający pojedynczą pochodnią, umożliwiający jej zapalenie
+ * przez gracza oraz komunikację z menedżerem zagadki.
+ *
+ * @author Filip Kudła
+ */
 public class TorchController : MonoBehaviour
 {
     [Header("Komponenty")]

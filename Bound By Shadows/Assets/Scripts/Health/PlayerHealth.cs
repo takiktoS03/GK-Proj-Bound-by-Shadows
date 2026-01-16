@@ -3,14 +3,9 @@ using Microlight.MicroBar;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-
 /**
- * @class PlayerHealth
- * @brief Klasa zarządzająca zdrowiem i wytrzymałością gracza.
- *
- * Dziedziczy po klasie `Health` i rozszerza ją o obsługę paska staminy, jej zużywania i regeneracji.
- * Integruje się z paskami zdrowia i staminy z Microlight.MicroBar, a także zatrzymuje ruch gracza po śmierci.
+ * Skrypt zarządzający zdrowiem i staminą gracza, rozszerzający bazową klasę Health.
+ * Odpowiada za efekty obrażeń, regenerację staminy oraz obsługę śmierci gracza.
  *
  * @author Filip Kudła
  */
@@ -66,19 +61,19 @@ public class PlayerHealth : Health
     /**
     * Diagnostyczne skróty T/R do testowania staminy/leczenia.
     */
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(50);
-            TakeStamina(20);
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Heal(100);
-            HealStamina(100);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.T))
+    //    {
+    //        TakeDamage(50);
+    //        TakeStamina(20);
+    //    }
+    //    else if (Input.GetKeyDown(KeyCode.R))
+    //    {
+    //        Heal(100);
+    //        HealStamina(100);
+    //    }
+    //}
 
     /**
      * Odbieranie HP wraz z zaimplementowanym dźwiękiem.

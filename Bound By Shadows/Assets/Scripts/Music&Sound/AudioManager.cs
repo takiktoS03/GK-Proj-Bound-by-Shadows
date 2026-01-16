@@ -1,14 +1,26 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
+/**
+ * Skrypt zarządzający globalnym systemem dźwięku w grze.
+ * Odpowiada za odtwarzanie muzyki, jednorazowych efektów dźwiękowych
+ * oraz zapętlonych efektów (np. kroki postaci).
+ *
+ * Implementuje wzorzec singletonu oraz obsługuje płynne przejścia
+ * pomiędzy utworami muzycznymi (crossfade) z wykorzystaniem biblioteki DOTween.
+ * Stanowi centralny punkt dostępu do dźwięku dla pozostałych systemów gry.
+ *
+ * @author Filip Kudła
+ */
+
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
     [Header("Audio Sources")]
-    public AudioSource musicSource; // zapętlona muzyka
-    public AudioSource sfxSource;   // krótkie efekty dźwiękowe
-    public AudioSource sfxLoopSource;   // zapętlone efekty
+    public AudioSource musicSource;
+    public AudioSource sfxSource;
+    public AudioSource sfxLoopSource;
 
     private void Awake()
     {
@@ -22,11 +34,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip, float volume = 1f)
     {
-        // Nie resetujemy muzyki która już gra
         if (musicSource.clip == clip && musicSource.isPlaying)
             return;
 
-        // Płynne przejście (Crossfade)
         Sequence s = DOTween.Sequence();
         s.Append(musicSource.DOFade(0f, 0.5f));
         s.AppendCallback(() =>
@@ -57,7 +67,6 @@ public class AudioManager : MonoBehaviour
 
     public void StartLoopingSFX(AudioClip clip, float volume = 1f)
     {
-        // Nie resetujemy dźwięku która już gra
         if (sfxLoopSource.isPlaying && sfxLoopSource.clip == clip) 
             return;
 

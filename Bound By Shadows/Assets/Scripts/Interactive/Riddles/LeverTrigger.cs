@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
 /**
- * @class LeverTrigger
- * @brief Obsługuje interakcję gracza z dźwignią i zmienia jej stan.
+ * Skrypt obsługujący interakcję gracza z pojedynczą dźwignią
+ * oraz przełączanie jej stanu wraz z animacją i dźwiękiem.
  *
- * Gracz może aktywować lub dezaktywować dźwignię po naciśnięciu klawisza F, jeśli znajduje się w zasięgu.
- * Dźwignia uruchamia animację i dźwięk oraz przekazuje informację do skryptu zagadki.
- *
- * @author Julia Bigaj
+ * @author Filip Kudła
  */
+
 public class LeverTrigger : MonoBehaviour
 {
     /// @brief Animator przypisany do dźwigni (obsługuje stan On/Off).

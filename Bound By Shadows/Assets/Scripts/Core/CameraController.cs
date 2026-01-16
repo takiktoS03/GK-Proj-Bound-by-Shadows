@@ -1,13 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-
 /**
- * @class CameraController
- * @brief Klasa odpowiadająca za płynne podążanie kamery za graczem.
- * 
- * Kamera przewiduje ruch gracza w poziomie (look ahead) oraz dynamicznie reaguje na pionowe przemieszczenia (skoki).
- * 
+ * Skrypt odpowiadający za płynne podążanie kamery za graczem
+ * z lekkim wyprzedzeniem ruchu i reakcją na skoki.
+ *
  * @author Filip Kudła
  */
 public class CameraController : MonoBehaviour

@@ -1,7 +1,13 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+/**
+ * Skrypt pojedynczego slotu w ekwipunku, obsługujący kliknięcie
+ * oraz wybór przedmiotu do podglądu lub hotbara.
+ *
+ * @author Julia Bigaj
+ */
 public class InventoryItemSlot : MonoBehaviour
 {
     private ItemStack itemStack;

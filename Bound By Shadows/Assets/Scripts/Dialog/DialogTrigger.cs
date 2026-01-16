@@ -5,6 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/**
+ * Skrypt uruchamiający sekwencję dialogową po wejściu gracza w trigger,
+ * blokujący sterowanie i odtwarzający kolejne linie dialogu.
+ *
+ * @author Filip Kudła
+ */
+
 public class DialogTrigger : MonoBehaviour
 {
     [System.Serializable]

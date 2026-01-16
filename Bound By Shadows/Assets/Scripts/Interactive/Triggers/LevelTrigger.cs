@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * Skrypt odpowiedzialny za przejście gracza do innej sceny
+ * z obsługą zapisu stanu gry i efektu przejścia.
+ *
+ * @author Filip Kudła
+ */
 public class LevelTrigger : MonoBehaviour
 {
     [Header("Target Scene Options")]

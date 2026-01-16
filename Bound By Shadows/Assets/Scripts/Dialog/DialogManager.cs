@@ -5,6 +5,12 @@ using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+/**
+ * Skrypt zarządzający wyświetlaniem dialogów w grze, obsługujący różne typy wiadomości
+ * oraz efekt pisania tekstu (typewriter).
+ *
+ * @author Filip Kudła
+ */
 
 /**
  * 0 – dialogi fabularne NPC (dół ekranu)

@@ -2,12 +2,9 @@
 using UnityEngine;
 
 /**
- * @class AttackController
- * @brief Klasa odpowiedzialna za zarządzanie atakiem postaci (tworzeniem hitboxów, cooldownem).
- * 
- * Wykorzystywana razem z obiektami typu AttackData, zawiera logikę instancjowania prefabów ataku
- * oraz obsługę czasu odnowienia między atakami.
- * 
+ * Skrypt odpowiedzialny za wykonywanie ataków postaci, w tym tworzenie hitboxów
+ * oraz obsługę cooldownu pomiędzy kolejnymi atakami.
+ *
  * @author Filip Kudła
  */
 public class AttackController : MonoBehaviour

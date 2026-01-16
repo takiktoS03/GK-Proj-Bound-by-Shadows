@@ -4,6 +4,17 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Skrypt odpowiedzialny za odtwarzanie sekwencji przerywników filmowych (cutscenek).
+ * Zarządza wyświetlaniem slajdów, animacjami przejść (fade, zoom),
+ * odtwarzaniem narracji dźwiękowej oraz napisów dialogowych.
+ *
+ * Umożliwia pomijanie cutscenek, automatyczne dopasowanie czasu slajdu
+ * do długości nagrania audio oraz przejście do kolejnej sceny po zakończeniu sekwencji.
+ * Integruje się z systemami dialogów, zapisu gry oraz zarządzania scenami.
+ *
+ * @author Filip Kudła
+ */
 public class CutsceneController : MonoBehaviour
 {
     [System.Serializable]
@@ -26,9 +37,9 @@ public class CutsceneController : MonoBehaviour
     }
 
     [Header("Configuration")]
-    public string nextSceneName;   // Scena do załadowania po cutscence
-    public Image displayImage;     // UI Image na Canvasie
-    public float fadeDuration = 1f; // Czas przenikania między obrazkami
+    public string nextSceneName; 
+    public Image displayImage;
+    public float fadeDuration = 1f;
     public KeyCode skipKey = KeyCode.Space;
     public bool skippable = true;
 
@@ -86,7 +97,6 @@ public class CutsceneController : MonoBehaviour
         GameManager.Instance.LoadLevel(nextSceneName);
     }
 
-    // Pomocnicza funkcja do liczenia czasu
     private float CalculateSlideDuration(CutsceneSlide slide)
     {
         if (slide.autoDurationByAudio && slide.voice != null)

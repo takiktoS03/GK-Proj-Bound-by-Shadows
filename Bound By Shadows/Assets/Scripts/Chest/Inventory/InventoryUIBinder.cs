@@ -1,7 +1,13 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Skrypt łączący komponenty interfejsu ekwipunku z logiką systemu Inventory.
+ * Odpowiada za inicjalizację UI po uruchomieniu sceny.
+ *
+ * @author Julia Bigaj
+ */
 public class InventoryUIBinder : MonoBehaviour
 {
     public Transform slotsParent;

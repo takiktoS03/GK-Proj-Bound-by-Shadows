@@ -1,12 +1,7 @@
 ﻿using UnityEngine;
-
-
 /**
- * @class PatrolEnemy
- * @brief Skrypt odpowiedzialny za patrolowanie przeciwnika między dwoma punktami.
- *
- * Przeciwnik przemieszcza się w lewo i prawo między dwoma granicami.
- * Zatrzymuje się na chwilę na krańcach i zmienia kierunek.
+ * Skrypt odpowiedzialny za patrolowanie przeciwnika między dwoma punktami
+ * oraz zmianę kierunku po osiągnięciu granicy.
  *
  * @author Filip Kudła
  */

@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 
 /**
- * @class AttackData
- * @brief ScriptableObject przechowujące dane dotyczące ataku.
- *
  * Ten obiekt zawiera informacje o nazwie ataku, jego obrażeniach,
  * sile odrzutu, czasie odnowienia, oraz prefabie hitboxa i czasie jego trwania.
  * Używany w systemie walki do konfiguracji poszczególnych ataków.

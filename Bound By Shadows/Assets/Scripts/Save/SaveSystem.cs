@@ -5,16 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
- * @class SaveSystem
- * @brief Statyczna klasa odpowiedzialna za zapis i odczyt stanu sceny w grze.
+ * Główny system odpowiedzialny za zapisywanie i wczytywanie stanu gry
+ * oraz zarządzanie danymi obiektów i scen.
  *
- * System opiera się na serializacji danych transformacji (pozycja, rotacja, aktywność)
- * oraz na interfejsie `ISaveable`, dzięki któremu można przechować i przywrócić dowolne dane komponentów.
- *
- * @details Zapis przechowywany jest w formacie JSON w lokalizacji `Application.persistentDataPath/save.json`.
- *
- * @author Filip Kudła
+ * @author Julia Bigaj
  */
+
 public static class SaveSystem
 {
     private static readonly string filePath = Path.Combine(Application.persistentDataPath, "save.json");
@@ -44,8 +40,8 @@ public static class SaveSystem
     {
         public string id;
         public Vector3 position;
-        public Vector3 rotation; // Euler angles
-        public string customJsonData; // Dane z ISaveable
+        public Vector3 rotation;
+        public string customJsonData;
     }
 
     [System.Serializable]
@@ -63,15 +59,13 @@ public static class SaveSystem
         string currentSceneName = SceneManager.GetActiveScene().name;
         gameData.lastSceneName = currentSceneName;
 
-        // Tworzenie danych dla aktualnej sceny
         SceneSaveData sceneData = gameData.scenes.FirstOrDefault(s => s.sceneName == currentSceneName);
         if (sceneData != null)
         {
-            gameData.scenes.Remove(sceneData); // Usuwamy stare dane tej sceny
+            gameData.scenes.Remove(sceneData);
         }
         sceneData = new SceneSaveData { sceneName = currentSceneName };
 
-        // Zbieranie wszystkich SaveableObject
         var allSaveables = Object.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None);
 
         foreach (var so in allSaveables)
@@ -87,7 +81,6 @@ public static class SaveSystem
             }
         }
 
-        // Zapis ID obiektów, które powinny być zniszczone
         sceneData.destroyedObjectIds = new List<string>(SessionDestroyedRegistry.GetDestroyedIds(currentSceneName));
 
         gameData.scenes.Add(sceneData);
@@ -104,7 +97,6 @@ public static class SaveSystem
 
         if (gameData.globalPlayerData != null)
         {
-            // Szukamy gracza na scenie
             var playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null && playerObj.TryGetComponent<SaveableObject>(out var playerSo))
             {
@@ -115,7 +107,6 @@ public static class SaveSystem
         SceneSaveData sceneData = gameData.scenes.FirstOrDefault(s => s.sceneName == currentSceneName);
         if (sceneData == null) return;
 
-        // Rejestr sesji (żeby kolejne zapisy pamiętały co było zniszczone)
         SessionDestroyedRegistry.SetDestroyedIds(currentSceneName, sceneData.destroyedObjectIds);
 
         var allSaveables = Object.FindObjectsByType<SaveableObject>(FindObjectsSortMode.None);
@@ -165,28 +156,14 @@ public static class SaveSystem
         return objData;
     }
 
-    /// <summary>
-    /// Przywraca stan obiektu.
-    /// </summary>
-    /// <param name="so">Obiekt docelowy</param>
-    /// <param name="data">Dane z pliku</param>
-    /// <param name="restoreTransform">Czy przywracać pozycję i rotację?</param>
     private static void RestoreObjectState(SaveableObject so, ObjectSaveData data, bool restoreTransform)
     {
         if (restoreTransform)
         {
             so.transform.position = data.position;
             so.transform.eulerAngles = data.rotation;
-
-            //if (so.TryGetComponent<Rigidbody2D>(out var rb))
-            //{
-            //    rb.linearVelocity = Vector2.zero;
-            //    rb.angularVelocity = 0f;
-            //    rb.position = data.position;
-            //}
         }
 
-        // Przywracanie ISaveable
         if (!string.IsNullOrEmpty(data.customJsonData))
         {
             var wrapper = JsonUtility.FromJson<SaveableDataWrapper>(data.customJsonData);
@@ -197,7 +174,6 @@ public static class SaveSystem
                 string typeName = wrapper.keys[i];
                 string jsonState = wrapper.values[i];
 
-                // Znajdź odpowiedni komponent i wczytaj
                 var comp = components.FirstOrDefault(c => c.GetType().ToString() == typeName);
                 if (comp != null) comp.RestoreState(jsonState);
             }

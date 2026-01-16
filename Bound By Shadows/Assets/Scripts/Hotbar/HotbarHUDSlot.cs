@@ -1,7 +1,12 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/**
+ * Skrypt aktualizujący wygląd pojedynczego slotu hotbara w interfejsie użytkownika.
+ * Wyświetla ikonę przedmiotu oraz jego ilość w ekwipunku.
+ *
+ * @author Julia Bigaj
+ */
 public class HotbarHUDSlot : MonoBehaviour
 {
     public int slotIndex;

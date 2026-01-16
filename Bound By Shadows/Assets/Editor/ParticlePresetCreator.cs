@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEditor;
 /**
- * @class ParticlePresetCreator
- * @brief Narz?dzie edytora do tworzenia presetów efektów cz?steczek.
- *
  * Skrypt dodaje opcj? do menu Unity umo?liwiaj?c? utworzenie nowego
  * assetu ParticleEffectPreset w wybranej lokalizacji projektu.
  *

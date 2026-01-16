@@ -1,6 +1,12 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using UnityEngine;
 
+/**
+ * Skrypt obsługujący używanie przedmiotów z hotbara za pomocą klawiszy numerycznych.
+ * Wywołuje odpowiednią akcję w zależności od typu wybranego przedmiotu.
+ *
+ * @author Julia Bigaj
+ */
 public class HotbarInput : MonoBehaviour
 {
     private void Update()

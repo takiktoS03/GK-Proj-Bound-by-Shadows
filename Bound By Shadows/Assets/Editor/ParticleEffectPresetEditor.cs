@@ -2,9 +2,6 @@ using UnityEditor;
 using UnityEngine;
 
 /**
- * @class ParticleEffectPresetEditor
- * @brief Custom Inspector dla klasy ParticleEffectPreset.
- *
  * Skrypt odpowiada za niestandardowe rysowanie inspektora presetu cz?steczek.
  * Dynamicznie wy?wietla pola emisji (promie? lub obszar) w zale?no?ci
  * od wybranego typu emisji.

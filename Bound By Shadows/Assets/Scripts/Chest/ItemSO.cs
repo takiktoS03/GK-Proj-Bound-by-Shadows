@@ -1,4 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
+/**
+ * ScriptableObject reprezentujący przedmiot w grze wraz z jego danymi
+ * oraz dodatkowymi informacjami wykorzystywanymi w ekwipunku i hotbarze.
+ *
+ * @author Julia Bigaj
+ */
 
 public enum ItemType
 {
@@ -16,7 +22,7 @@ public class ItemSO : ScriptableObject
     public Sprite icon;
     public ItemType itemType;
 
-    // Dodatkowe dane � np. dla mikstur
+    // Dodatkowe dane – np. dla mikstur
     public int healAmount;
 
     // dodatkowe dane dla staminy

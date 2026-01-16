@@ -1,6 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
+
+/**
+ * Skrypt sterujący krótkim efektem wizualnym Fresnela na obiekcie,
+ * wykorzystywanym jako podświetlenie lub sygnał interakcji.
+ *
+ * @author Filip Kudła
+ */
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class FresnelTrigger : MonoBehaviour

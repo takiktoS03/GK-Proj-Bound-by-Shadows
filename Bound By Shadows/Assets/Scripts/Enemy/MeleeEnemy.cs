@@ -2,11 +2,9 @@
 using UnityEngine;
 
 /**
- * @class MeleeEnemy
- * @brief Skrypt przeciwnika atakującego wręcz, wykrywającego gracza za pomocą BoxCast.
+ * Skrypt przeciwnika walczącego wręcz, wykrywającego gracza w zasięgu
+ * i wykonującego atak z animacją oraz cooldownem.
  *
- * Przeciwnik patroluje do momentu wykrycia gracza, a następnie wykonuje animację ataku z określonym cooldownem.
- * 
  * @author Filip Kudła
  */
 public class MeleeEnemy : MonoBehaviour

@@ -2,6 +2,12 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/**
+ * Skrypt sterujący zmianą koloru światła w zależności od stanu (normalny / zagrożenie).
+ * Wykorzystuje płynną interpolację koloru oraz czasowe efekty wizualne.
+ *
+ * @author Filip Kudła
+ */
 public class LightColorChange : MonoBehaviour
 {
     public Light2D light2D;
@@ -19,10 +25,6 @@ public class LightColorChange : MonoBehaviour
             light2D = GetComponent<Light2D>();
     }
 
-    /// <summary>
-    /// Inicjuje stan zagrożenia (zmiana koloru na czerwony).
-    /// Przerywa poprzednie animacje, aby uniknąć konfliktu interpolacji.
-    /// </summary>
     public void SetDanger()
     {
         if (changeRoutine != null)
@@ -36,18 +38,12 @@ public class LightColorChange : MonoBehaviour
         dangerRoutine = StartCoroutine(DangerStateTimer());
     }
 
-    /// <summary>
-    /// Odmierza czas trwania efektu wizualnego, a następnie przywraca stan domyślny.
-    /// </summary>
     private IEnumerator DangerStateTimer()
     {
         yield return new WaitForSeconds(dangerDuration);
         SetNormal();
     }
 
-    /// <summary>
-    /// Przywraca stan normalny (kolor bazowy).
-    /// </summary>
     public void SetNormal()
     {
         if (dangerRoutine != null)
@@ -58,10 +54,6 @@ public class LightColorChange : MonoBehaviour
 
         changeRoutine = StartCoroutine(ChangeColor(normalColor));
     }
-
-    /// <summary>
-    /// Realizuje płynną interpolację (Lerp) koloru światła w pętli klatek.
-    /// </summary>
     private IEnumerator ChangeColor(Color target)
     {
         while (light2D.color != target)

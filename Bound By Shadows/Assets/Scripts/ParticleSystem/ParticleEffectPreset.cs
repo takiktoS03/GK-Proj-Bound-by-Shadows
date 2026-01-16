@@ -1,15 +1,19 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Reflection;
 
 /**
- * @class ParticleEffectPreset
- * @brief Preset efektu cz?steczek oparty o ScriptableObject.
+ * Autorski preset efektu cząsteczek oparty o ScriptableObject.
+ * Skrypt przechowuje kompletną konfigurację systemu cząsteczek,
+ * w tym parametry emisji, fizyki, kolizji oraz wyglądu cząsteczek.
  *
- * Przechowuje komplet ustawie? systemu cz?steczek,
- * kt�re mog? by? wsp�?dzielone pomi?dzy obiektami w scenie.
+ * Presety umożliwiają łatwe tworzenie, edycję i ponowne użycie efektów
+ * wizualnych w różnych miejscach projektu bez duplikowania danych.
+ * Klasa wspiera kopiowanie ustawień pomiędzy presetami
+ * oraz bezpośrednią synchronizację z systemem cząsteczek.
  *
  * @author Julia Bigaj
  */
+
 [CreateAssetMenu(fileName = "ParticleEffectPreset", menuName = "Particles/Effect Preset")]
 public class ParticleEffectPreset : ScriptableObject
 {
@@ -52,7 +56,7 @@ public class ParticleEffectPreset : ScriptableObject
     /**
      * @brief Kopiuje dane z innego presetu.
      *
-     * @param other Preset ?r�d?owy
+     * @param other Preset ?ród?owy
      */
     public void CopyFrom(ParticleEffectPreset other) => CopyFromPreset(other);
 
@@ -64,7 +68,7 @@ public class ParticleEffectPreset : ScriptableObject
     public void CopyTo(ParticleSystem2D system) => CopyToSystem(system);
 
     /**
-     * @brief Inicjalizuje domy?lne warto?ci gradient�w i krzywych.
+     * @brief Inicjalizuje domy?lne warto?ci gradientów i krzywych.
      */
     private void OnEnable()
     {
@@ -115,7 +119,7 @@ public class ParticleEffectPreset : ScriptableObject
     /**
      * @brief Kopiuje dane z jednego obiektu do drugiego.
      *
-     * @param source Obiekt ?r�d?owy
+     * @param source Obiekt ?ród?owy
      * @param target Obiekt docelowy
      */
     private static void CopyFieldsFrom(object source, object target)

@@ -3,14 +3,12 @@ using TMPro;
 using UnityEngine.EventSystems;
 
 /**
- * @class ButtonHoverUnderline
- * @brief Dodaje i usuwa podkreślenie tekstu przycisku podczas najechania kursorem myszy.
+ * Skrypt odpowiedzialny za wizualne podkreślenie tekstu przycisku
+ * po najechaniu kursorem myszy w interfejsie użytkownika.
  *
- * Skrypt wykorzystuje interfejsy `IPointerEnterHandler` i `IPointerExitHandler`, aby reagować na zdarzenia
- * interfejsu użytkownika i umożliwiać wizualne wyróżnienie aktywnego elementu.
- *
- * Autor: Julia Bigaj
+ * @author Julia Bigaj
  */
+
 public class ButtonHoverUnderline : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     /// @brief Referencja do komponentu tekstowego (TextMeshProUGUI), który będzie podkreślany.

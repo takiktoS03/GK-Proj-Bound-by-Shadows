@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Skrypt zarządzający zagadką pochodni, sprawdzający kolejność ich aktywacji
+ * oraz obsługujący poprawne rozwiązanie lub reset zagadki.
+ *
+ * @author Filip Kudła
+ */
 public class TorchPuzzleManager : MonoBehaviour
 {
     [Header("Konfiguracja")]

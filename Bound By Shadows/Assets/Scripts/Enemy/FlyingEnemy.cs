@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+/**
+ * Skrypt obsługujący latającego przeciwnika, który patroluje obszar
+ * i przechodzi w tryb pościgu po wykryciu gracza.
+ *
+ * @author Filip Kudła
+ */
 public class FlyingEnemy : MonoBehaviour, IEnemyMovement
 {
     [Header("References")]

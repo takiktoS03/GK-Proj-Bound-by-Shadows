@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+/**
+ * Skrypt odpowiedzialny za efekt paralaksy tła, polegający na przesuwaniu
+ * wielu warstw w zależności od ruchu kamery.
+ *
+ * @author Filip Kudła
+ */
+
 public class ParallaxLooper : MonoBehaviour
 {
     [System.Serializable]

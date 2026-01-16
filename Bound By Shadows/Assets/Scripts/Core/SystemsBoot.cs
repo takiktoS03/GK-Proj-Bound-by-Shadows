@@ -1,5 +1,11 @@
 ﻿using UnityEngine;
 
+/**
+ * Skrypt inicjalizujący globalne systemy gry,
+ * zapewniający ich istnienie pomiędzy zmianami scen.
+ *
+ * @author Filip Kudła
+ */
 public class SystemsBoot : MonoBehaviour
 {
     private static bool exists = false;

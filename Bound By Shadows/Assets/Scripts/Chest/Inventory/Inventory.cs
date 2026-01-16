@@ -1,11 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
-//using static System.Net.Mime.MediaTypeNames;
 
+
+/**
+ * Główny skrypt zarządzający ekwipunkiem gracza, przechowujący przedmioty
+ * oraz synchronizujący ich stan z interfejsem i hotbarem.
+ *
+ * @author Julia Bigaj
+ */
 public class Inventory : MonoBehaviour
 {
     public System.Action OnInventoryChanged;
@@ -92,15 +97,12 @@ public class Inventory : MonoBehaviour
     {
         bool isLetter = item.itemType == ItemType.Letter;
 
-        // POSTA?
         if (previewImageEthan != null)
             previewImageEthan.SetActive(!isLetter);
 
-        // HOTBAR PRZY POSTACI
         if (previewHotbarRoot != null)
             previewHotbarRoot.SetActive(!isLetter);
 
-        // reset preview
         previewImage.gameObject.SetActive(false);
         previewText.gameObject.SetActive(false);
 
@@ -137,11 +139,9 @@ public class Inventory : MonoBehaviour
 
     public void ShowEthan()
     {
-        // schowaj list
         previewImage.gameObject.SetActive(false);
         previewText.gameObject.SetActive(false);
 
-        // poka? bohatera
         if (previewImageEthan != null && previewHotbarRoot != null)
             previewImageEthan.SetActive(true);
             previewHotbarRoot.SetActive(true);
@@ -155,16 +155,13 @@ public class Inventory : MonoBehaviour
             Debug.LogError("Inventory UpdateUI: slotsParent is NULL");
             return;
         }
-        // usu? stare sloty
         foreach (Transform child in slotsParent)
             Destroy(child.gameObject);
 
-        // zbuduj UI od nowa
         foreach (var stack in items)
         {
             GameObject slotGO = Instantiate(slotPrefab, slotsParent);
 
-            // ustaw ikon? i licznik (nazwy dzieci musz? si? zgadza? z prefabem)
             slotGO.transform.Find("Icon").GetComponent<Image>().sprite = stack.item.icon;
             slotGO.transform.Find("Count").GetComponent<TMPro.TextMeshProUGUI>().text = stack.quantity.ToString();
 
@@ -211,7 +208,6 @@ public class Inventory : MonoBehaviour
 
             items[i].quantity -= amount;
 
-            // je?li po zu?yciu mamy 0 ? usu? z listy i wyczy?? hotbar
             if (items[i].quantity <= 0)
             {
                 ItemSO removedItem = items[i].item;
@@ -219,7 +215,6 @@ public class Inventory : MonoBehaviour
                 ClearItemFromHotbar(removedItem);
             }
 
-            // od?wie? UI i hotbar
             UpdateUI();
             RefreshHotbar();
             OnInventoryChanged?.Invoke();
@@ -227,7 +222,7 @@ public class Inventory : MonoBehaviour
             return true; 
         }
 
-        return false; // nie znaleziono itemu
+        return false;
     }
 
 

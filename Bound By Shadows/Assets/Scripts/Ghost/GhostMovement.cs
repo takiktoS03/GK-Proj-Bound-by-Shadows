@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 
 /**
- * @class GhostMovement
- * @brief Łączy pływanie duszka i opcjonalne śledzenie gracza.
+ * Skrypt odpowiadający za płynny ruch duszka, łączący efekt unoszenia się
+ * oraz opcjonalne podążanie za graczem.
  *
- * - Jeśli player == null duszek tylko unosi się sinusoidalnie
- * - Jeśli player != null dodatkowo podąża za graczem 
- * 
  * @author Filip Kudła
  */
 

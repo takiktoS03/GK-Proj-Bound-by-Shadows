@@ -2,6 +2,22 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/**
+ * Skrypt dodany do projektu z Asset Store z paczki EthanTheHero (autor: Twelve).
+ * Odpowiada za pełną logikę ruchu gracza, w tym poruszanie się,
+ * skok, dash, wall slide, wall jump oraz interakcję z podłożem.
+ *
+ * Modyfikacje wprowadzone w projekcie:
+ * - rozszerzenie obsługi sterowania o urządzenia mobilne (joystick),
+ * - integracja systemu staminy i kosztów dasha,
+ * - dodanie obsługi nachylonych powierzchni (slopes),
+ * - rozbudowana detekcja podłoża i ścian,
+ * - integracja z systemami UI, animacji i dźwięku,
+ * - uporządkowanie oraz rozbudowa logiki ruchu.
+ *
+ * @author Twelve (oryginał), modyfikacje: Julia Bigaj
+ */
+
 namespace EthanTheHero
 {
     public class PlayerMovement : MonoBehaviour
@@ -81,10 +97,10 @@ namespace EthanTheHero
             // === INPUT (PC + MOBILE) ===
             float inputX = Input.GetAxisRaw("Horizontal");
             dashButtonPressed = Input.GetKeyDown(KeyCode.W) || mobileDashRequest;
-            mobileDashRequest = false; // reset flagi
+            mobileDashRequest = false;
 
             jumpButtonPressed = Input.GetButtonDown("Jump") || mobileJumpRequest;
-            mobileJumpRequest = false; // reset flagi
+            mobileJumpRequest = false;
 
             // Ruch (Joystick - nadpisuje klawiaturę, jeśli jest używany)
             if (joystick != null)
@@ -124,33 +140,26 @@ namespace EthanTheHero
                 myAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack03"))
                 return;
 
-            // === ground check ===
             bool boxGrounded = Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0, groundLayer);
 
-            // dokładniejsze info o gruncie
-            GetGroundInfo(); // ustawia groundNormal, slopeAngle, hasGroundSupport
+            GetGroundInfo();
             grounded = boxGrounded || hasGroundSupport;
 
             if (grounded)
             {
                 lastOnGroundTime = 0.1f;
-                // myBody.AddForce(Vector2.down * 10f, ForceMode2D.Force);
             }
 
             myBody.gravityScale = 1f;
 
-            // Ruch poziomy
             if (!wallSliding)
                 run(1);
 
-            // Zjeżdżanie tylko na zbyt stromych
             HandleSlopeSliding();
 
-            // Dźwięki
             if (grounded && Mathf.Abs(move.x) > 0.1f) SoundLibrary.Instance.StartSteps();
             else SoundLibrary.Instance.StopSteps();
 
-            // Wall slide
             WallSlidngMechanic();
 
             Vector2 worldVel = (transform.position - lastPosition) / Time.fixedDeltaTime;
@@ -184,7 +193,6 @@ namespace EthanTheHero
             float speedDif = targetSpeed - myBody.linearVelocity.x;
             float movement = speedDif * accelRate;
 
-            // ⭐ Wybór kierunku ruchu
             Vector2 moveDir;
 
             if (grounded && slopeAngle < maxSlopeAngle)
@@ -192,7 +200,6 @@ namespace EthanTheHero
             else
                 moveDir = Vector2.right;
 
-            // ⭐ Ruch po stoku
             myBody.AddForce(moveDir * movement, ForceMode2D.Force);
         }
         #endregion
@@ -288,7 +295,6 @@ namespace EthanTheHero
             transform.localScale = scale;
         }
 
-        // ===  dokładniejsze próbkowanie gruntu ===
         private void GetGroundInfo()
         {
             Vector2 capsuleSize = new Vector2(groundCheckSize.x, Mathf.Max(groundCheckSize.y, 0.10f));
@@ -329,13 +335,8 @@ namespace EthanTheHero
             slopeAngle = 0f;
         }
 
-        // === Slope / Wall detection based on ground normal ===
-        //private bool IsWallSurface => groundNormal.y < 0.1f && Mathf.Abs(groundNormal.x) > 0.7f;
-        //private bool IsSlopeSurface => groundNormal.y >= 0.1f;
-
         private Vector2 GetSlopeTangent() => new Vector2(groundNormal.y, -groundNormal.x).normalized;
 
-        // === ślizg tylko na zbyt stromych ===
         private void HandleSlopeSliding()
         {
             if (!grounded) return;

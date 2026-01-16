@@ -3,9 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /**
- * @class PauseMenu
- * @brief Zarządza stanem pauzy i końca gry w trakcie rozgrywki.
+ * Skrypt zarządzający pauzą gry oraz ekranem końca gry,
+ * kontrolujący stan czasu, UI oraz podstawowe akcje gracza.
+ *
+ * @author Julia Bigaj
  */
+
 public class PauseMenu : MonoBehaviour
 {
     /// @brief Panel UI menu pauzy.

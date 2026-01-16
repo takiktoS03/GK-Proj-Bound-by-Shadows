@@ -1,5 +1,10 @@
-using UnityEngine;
-
+﻿using UnityEngine;
+/**
+ * Skrypt umożliwiający graczowi interakcję ze skrzynią
+ * po wejściu w jej obszar i naciśnięciu klawisza akcji.
+ *
+ * @author Julia Bigaj
+ */
 public class ChestInteract : MonoBehaviour
 {
     private Chest chest;

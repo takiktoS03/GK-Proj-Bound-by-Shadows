@@ -2,14 +2,12 @@
 using TMPro;
 
 /**
- * @class DoorTrigger
- * @brief Skrypt obsługujący teleportację gracza po naciśnięciu klawisza, gdy znajduje się przy drzwiach.
+ * Skrypt obsługujący interakcję z drzwiami, umożliwiający teleportację gracza
+ * po naciśnięciu klawisza oraz zmianę wyglądu drzwi.
  *
- * Po wejściu gracza w obszar drzwi, pojawia się tekst podpowiedzi.
- * Jeśli gracz naciśnie F, gracz zostaje teleportowany, a drzwi zmieniają wygląd.
- * 
  * @author Julia Bigaj
  */
+
 public class DoorTrigger : MonoBehaviour
 {
     [Tooltip("Obiekt z tekstem podpowiedzi")]

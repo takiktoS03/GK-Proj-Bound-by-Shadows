@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+/**
+ * Skrypt obsługujący niszczenie pajęczyny po kilku uderzeniach gracza,
+ * wraz z wizualnym zmniejszaniem jej widoczności.
+ *
+ * @author Julia Bigaj
+ */
 
 public class SpiderWeb : MonoBehaviour
 {
@@ -35,7 +40,6 @@ public class SpiderWeb : MonoBehaviour
         float healthPercentage = (float)(hitsToBreak - currentHits) / hitsToBreak;
 
         var c = sr.color;
-        // Mathf.Clamp zapewnia, że alpha nie zejdzie poniżej 0 przy ostatnim ciosie
         c.a = Mathf.Clamp01(healthPercentage);
         sr.color = c;
 

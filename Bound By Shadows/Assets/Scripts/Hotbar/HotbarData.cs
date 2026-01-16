@@ -1,5 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
+/**
+ * Skrypt przechowujący dane hotbara, czyli przypisane przedmioty do slotów.
+ * Umożliwia globalny dostęp do aktualnego stanu paska szybkiego użycia.
+ *
+ * @author Julia Bigaj
+ */
 public class HotbarData : MonoBehaviour
 {
     public static HotbarData Instance;

@@ -1,9 +1,12 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+/**
+ * Klasa przechowująca informacje o zniszczonych obiektach w trakcie jednej sesji gry,
+ * wykorzystywana przez system zapisu.
+ *
+ * @author Julia Bigaj
+ */
 
-// Ta klasa trzyma informacje o zniszczonych obiektach TYLKO w trakcie dzia?ania gry.
-// Przy zapisie (Save) dane st?d w?druj? do pliku.
-// Przy wczytaniu (Load) dane z pliku w?druj? tutaj.
 public static class SessionDestroyedRegistry
 {
     private static Dictionary<string, HashSet<string>> destroyedMap = new Dictionary<string, HashSet<string>>();
