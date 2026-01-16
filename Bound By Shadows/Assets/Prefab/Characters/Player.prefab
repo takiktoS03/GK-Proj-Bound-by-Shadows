@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3184223936600210405}
   - component: {fileID: 8278582998100109552}
   - component: {fileID: 6113517013151042809}
+  - component: {fileID: 4795275626224426512}
   - component: {fileID: 1700515417596625695}
   - component: {fileID: 4673829404147529751}
   - component: {fileID: 1610109051652021392}
@@ -303,6 +304,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackHitboxSpawnPoint: {fileID: 8669166929241957394}
+  damageMultiplier: 1
+--- !u!114 &4795275626224426512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923658221193279267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf579edab012f9d46b3422e921fae172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationKey: 114
+  abilityDuration: 10
+  cooldownDuration: 5
+  damageBonus: 0.15
+  buffColor: {r: 0, g: 7.9999995, b: 0.56470674, a: 1}
+  intensity: 5
 --- !u!114 &1700515417596625695
 MonoBehaviour:
   m_ObjectHideFlags: 0

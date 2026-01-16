@@ -13,7 +13,7 @@ using System.Collections;
  */
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private string firstLevelSceneName = "DungeonSecondFloor";
+    [SerializeField] private string firstLevelSceneName = "Dungeon";
     // Intro Cave Dungeon DungeonSecondFloor AbilityCutScene
 
     /**

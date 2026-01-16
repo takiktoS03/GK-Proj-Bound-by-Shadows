@@ -15,8 +15,9 @@ public class AttackController : MonoBehaviour
     /**
      * @brief Punkt w którym pojawi się hitbox ataku.
      */
-    [Header ("Lista Spawn-Pointów Ataków Postaci")]
+    [Header ("Ustawienia Ataku Postaci")]
     [SerializeField] private Transform attackHitboxSpawnPoint;
+    public float damageMultiplier = 1.0f;
 
     private bool canAttack = true;
 
@@ -53,7 +54,7 @@ public class AttackController : MonoBehaviour
         hitboxObj.transform.localScale = scale;
 
         AttackHitbox hitbox = hitboxObj.GetComponent<AttackHitbox>();
-        hitbox.Init(data.damage, data.knockback, gameObject);
+        hitbox.Init(data.damage * damageMultiplier, data.knockback, gameObject);
         Destroy(hitboxObj, data.duration);
     }
 

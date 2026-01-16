@@ -865,8 +865,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &171937213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -912,6 +913,115 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
+--- !u!1 &201329701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201329702}
+  - component: {fileID: 201329704}
+  - component: {fileID: 201329703}
+  m_Layer: 11
+  m_Name: hintInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201329702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201329701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 125.76, y: 6.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067531725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201329703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201329701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bd95c77f52d02438562392f51a7d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: 
+    portrait: {fileID: 0}
+    text: "Wci\u015Bnij F, aby u\u017Cy\u0107 klawisza interakcji"
+    duration: 3
+    voice: {fileID: 0}
+  dialogType: 3
+  skippable: 0
+  destroyAfter: 1
+  skipKey: 32
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
+  restoreControlsAfter: 1
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &201329704
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201329701}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5, y: 0.6710129}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2, y: 8.342026}
   m_EdgeRadius: 0
 --- !u!1 &209377913
 GameObject:
@@ -18500,6 +18610,7 @@ MonoBehaviour:
   floatAmplitude: 0.25
   floatFrequency: 1
   smoothSpeed: 2
+  isFollowingPlayer: 0
 --- !u!1 &474677563
 GameObject:
   m_ObjectHideFlags: 0
@@ -18948,8 +19059,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &577635544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20342,8 +20454,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &796631822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21001,8 +21114,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &887363140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22567,6 +22681,115 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5970767848880347489, guid: 1c18c9158199c9e468bfd5329781b5f1, type: 3}
   m_PrefabInstance: {fileID: 694951864}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &990507839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990507840}
+  - component: {fileID: 990507842}
+  - component: {fileID: 990507841}
+  m_Layer: 11
+  m_Name: hintBuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990507840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990507839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.97, y: 10.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2067531725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990507841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990507839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bd95c77f52d02438562392f51a7d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: 
+    portrait: {fileID: 0}
+    text: "U\u017Cyj R, aby tymczasowo zwi\u0119kszy\u0107 si\u0142e ataku!"
+    duration: 3
+    voice: {fileID: 0}
+  dialogType: 3
+  skippable: 0
+  destroyAfter: 1
+  skipKey: 32
+  blockMovement: 0
+  blockAnimation: 0
+  blockAttacks: 0
+  blockWallSliding: 1
+  restoreControlsAfter: 1
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &990507842
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990507839}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5, y: 7}
+  m_EdgeRadius: 0
 --- !u!1001 &1003493780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22686,11 +22909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.03
+      value: -223.77
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 258
+      value: 260.51
       objectReference: {fileID: 0}
     - target: {fileID: 8125952753413563186, guid: a786fbb8a715bae48a20aa2a61c14f11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22896,11 +23119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.417419
+      value: -15.454529
       objectReference: {fileID: 0}
     - target: {fileID: 227508530248826999, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 416.71747
+      value: 416.79138
       objectReference: {fileID: 0}
     - target: {fileID: 1845188015475443283, guid: eee9ef4f6a8902548b80d1b67f1bc8ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26205,6 +26428,7 @@ MonoBehaviour:
   key: 102
   automaticTransition: 0
   instantCut: 0
+  destroyAfter: 0
 --- !u!1 &1542721563
 GameObject:
   m_ObjectHideFlags: 0
@@ -29021,8 +29245,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1887677149
 GameObject:
   m_ObjectHideFlags: 0
@@ -29865,7 +30090,7 @@ GameObject:
   - component: {fileID: 2003328725}
   - component: {fileID: 2003328724}
   m_Layer: 11
-  m_Name: hintInteraction
+  m_Name: hintTorches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29913,8 +30138,9 @@ MonoBehaviour:
   blockAttacks: 0
   blockWallSliding: 1
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2003328725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30847,6 +31073,8 @@ Transform:
   - {fileID: 171937211}
   - {fileID: 796631820}
   - {fileID: 887363138}
+  - {fileID: 990507840}
+  - {fileID: 201329702}
   - {fileID: 2003328723}
   m_Father: {fileID: 514703160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31361,8 +31589,9 @@ MonoBehaviour:
   blockAttacks: 1
   blockWallSliding: 0
   restoreControlsAfter: 1
-  ghost: {fileID: 0}
-  player: {fileID: 0}
+  onDialogEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2136721135
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\player\\playercontrolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontrolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\interactive\\triggers\\leveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive\\triggers\\leveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\menu huds\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\menu huds\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\save\\savesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\enemy\\meleeenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\meleeenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\enemy\\patrolenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\patrolenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\save\\savesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save\\savesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|c:\\users\\admin\\desktop\\gk-proj-bound-by-shadows\\bound by shadows\\assets\\scripts\\interactive\\triggers\\playercontrolzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive\\triggers\\playercontrolzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\enemy\\flyingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\flyingenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\menu huds\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu huds\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\save\\saveableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save\\saveableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\save\\isaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save\\isaveable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\assets\\scripts\\interactive\\spiderweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A4F6C6A-EA64-AF2F-6BBA-099350DDA121}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive\\spiderweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\PlayerSaveData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Save\\PlayerSaveData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\EnemyHealthData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Health\\EnemyHealthData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\DestroyedRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Save\\DestroyedRegistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,31 +62,152 @@
       "DocumentGroups": [
         {
           "DockedWidth": 239,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ISaveable.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\ISaveable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\ISaveable.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\ISaveable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save\\ISaveable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T17:04:22.711Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerSaveData.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\PlayerSaveData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\PlayerSaveData.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\PlayerSaveData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save\\PlayerSaveData.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T16:27:26.475Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SpiderWeb.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\SpiderWeb.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive\\SpiderWeb.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\SpiderWeb.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactive\\SpiderWeb.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T15:10:31.19Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyHealthData.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\EnemyHealthData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\EnemyHealthData.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\EnemyHealthData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health\\EnemyHealthData.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T11:38:08.229Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MeleeEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\MeleeEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\MeleeEnemy.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\MeleeEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\MeleeEnemy.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAADwv4oAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T18:15:42.796Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Health.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health\\Health.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAjwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T18:15:19.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:48:01.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatrolEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\PatrolEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\PatrolEnemy.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\PatrolEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\PatrolEnemy.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAADwv3EAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T14:14:03.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SaveableObject.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\SaveableObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\SaveableObject.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\SaveableObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save\\SaveableObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:45:43.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FlyingEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\FlyingEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\FlyingEnemy.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Enemy\\FlyingEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\FlyingEnemy.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwDEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:34:26.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DestroyedRegistry.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\DestroyedRegistry.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\DestroyedRegistry.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\DestroyedRegistry.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save\\DestroyedRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T14:25:28.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\PauseMenu.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAuwKsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T19:09:12.85Z"
             },
             {
               "$type": "Document",
@@ -64,62 +217,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\SaveSystem.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Save\\SaveSystem.cs",
               "RelativeToolTip": "Assets\\Scripts\\Save\\SaveSystem.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAowPkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAqwL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T16:44:44.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerControlZone.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\Triggers\\PlayerControlZone.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive\\Triggers\\PlayerControlZone.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\Triggers\\PlayerControlZone.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interactive\\Triggers\\PlayerControlZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T16:30:06.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerControlManager.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerControlManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerControlManager.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Player\\PlayerControlManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerControlManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T16:02:34.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LevelTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\Triggers\\LevelTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive\\Triggers\\LevelTrigger.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Interactive\\Triggers\\LevelTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interactive\\Triggers\\LevelTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T16:02:16.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\GK-Proj-Bound-by-Shadows\\Bound By Shadows\\Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Menu HUDs\\MainMenu.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T20:16:43.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-08T18:49:16.896Z"
             }
           ]
         }
